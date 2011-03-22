@@ -8,7 +8,7 @@
 /**La linea de codigo de justo debajo hay que sustituirla por el nombre del paquete
  * donde se meta este fichero .java
 */
-package pruebamysql; //Cambia "pruebamysql" por el nombre de tu paquete
+package centro_medico; //Cambia "pruebamysql" por el nombre de tu paquete
 
 import java.sql.*;
 import java.util.ArrayList;
