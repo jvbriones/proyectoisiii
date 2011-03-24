@@ -1,8 +1,9 @@
-package pruebamysql;
+package centro_medico;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Iterator;
+import pruebamysql.BaseDatos;
 
 /**
  *
@@ -90,10 +91,10 @@ public class PruebaMySQL {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    //public static void main(String[] args) {
         // TODO code application logic here
         //prueba1();
-        prueba2();
-    }
+     //   prueba2();
+    //}
 
 }

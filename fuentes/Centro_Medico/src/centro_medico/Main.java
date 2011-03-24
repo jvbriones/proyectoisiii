@@ -4,6 +4,10 @@
  */
 
 package centro_medico;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import pruebamysql.BaseDatos;
 
 /**
  *
@@ -14,8 +18,47 @@ public class Main {
     /**
      * @param args the command line arguments
      */
+
+        public static void prueba2(){
+        BaseDatos bd = new BaseDatos();  //Creamos el objeto conectar a la base de datos y realizar las consultas
+        ArrayList<ArrayList<String> > resultado = new ArrayList(); //Almacenara la tabla con los resultados
+                                                                   //de la consulta
+
+        String user = new String("paciente"); //Variables para almacenar el usuario y contraseña
+        String pass = new String("paciente");
+
+        //Conectamos con la base de datos "centroMedico", con el usuario "paciente" y contraseña "paciente"
+        bd.ConectarBD("217.216.97.75", "centroMedico", user, pass);
+
+        //Realizamos la consutla que nos muestre todo el contenido de la tabla "pacientes"
+        resultado=bd.RealizarConsulta("Select * from pacientes");
+
+        //Mostramos el resultado de la consulta, que consistira en recorrer un ArrayList de ArrayList
+        //de String
+        int cont=1; //Variable que va contando el numero de tupla
+        for(Iterator i=resultado.iterator(); i.hasNext();){ //Iteramos sobre el ArrayList de ArrayList
+            System.out.println("Tupla "+cont);
+
+            ArrayList<String> aux=new ArrayList();  //Creamos una ArrayList de String auxiliar
+            aux=(ArrayList<String>)i.next();    //Obtenemos en "aux" el ArrayList de String que contendra una tupla
+
+            for(Iterator j=aux.iterator(); j.hasNext();){  //Para cada elemento de la tupla, lo mostramos
+                System.out.print((String)j.next()+", ");
+            }
+
+            System.out.println();
+            System.out.println();
+
+            cont++;
+        }
+
+        //Cerramos la conexion a la base de datos
+        bd.DesconectarBD();
+    }
+
     public static void main(String[] args) {
         // TODO code application logic here
+         prueba2();
         Intro a = new Intro();
         a.setVisible(true);
     }
