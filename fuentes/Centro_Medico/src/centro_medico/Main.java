@@ -19,6 +19,46 @@ public class Main {
      * @param args the command line arguments
      */
 
+        public static void prueba1(){
+        try{
+            // Inicializamos el driver de MySQL
+            Class.forName("com.mysql.jdbc.Driver");
+
+            // Conectamos con la base de datos
+            String user = new String("paciente");
+            String pass = new String("paciente");
+            Connection conex = DriverManager.getConnection("jdbc:mysql://localhost/centroMedico",user,pass);
+
+            System.out.println("Se ha conectado correctamente a la base de datos como \"root\".\n");
+
+            // Se crea un Statement, para realizar la consulta
+            Statement s = conex.createStatement();
+
+            // Se realiza la consulta. Los resultados se guardan en el
+            // ResultSet rs
+            // executeQuery no vale para insert, update, delete, etc..
+            // solo para consultas
+            ResultSet rs = s.executeQuery("Select * from pacientes");
+            //ResultSet rs = s.executeQuery("Select * from agentes");
+
+             while (rs.next()){
+                 System.out.println("DNI: "+rs.getString("DNI"));
+                 System.out.println("nombre: "+rs.getString("nombre"));
+                 System.out.println("Apellidos: "+rs.getString("apellidos"));
+                 System.out.println();
+             }
+
+            //Cerramos el Statement
+            s.close();
+
+            //Cerramos la conexion a la BD
+            conex.close();
+
+        }catch(Exception e){
+            System.out.println("No se pudo conectar a la base de datos.");
+        }
+        }
+
         public static void prueba2(){
         BaseDatos bd = new BaseDatos();  //Creamos el objeto conectar a la base de datos y realizar las consultas
         ArrayList<ArrayList<String> > resultado = new ArrayList(); //Almacenara la tabla con los resultados
@@ -28,7 +68,7 @@ public class Main {
         String pass = new String("paciente");
 
         //Conectamos con la base de datos "centroMedico", con el usuario "paciente" y contraseña "paciente"
-        bd.ConectarBD("217.216.97.75", "centroMedico", user, pass);
+        bd.ConectarBD("localhost", "centroMedico", user, pass);
 
         //Realizamos la consutla que nos muestre todo el contenido de la tabla "pacientes"
         resultado=bd.RealizarConsulta("Select * from pacientes");
@@ -58,9 +98,10 @@ public class Main {
 
     public static void main(String[] args) {
         // TODO code application logic here
+         //prueba1();
          prueba2();
-        Intro a = new Intro();
-        a.setVisible(true);
+        //Intro a = new Intro();
+        //a.setVisible(true);
     }
 
 }
