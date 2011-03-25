@@ -160,7 +160,7 @@ public class Intro extends javax.swing.JFrame {
         String nombre = jTextFieldUsuario.getText();
         String contrasenia = new String(jPasswordField1.getPassword());
         if(nombre.equals("Admin") && contrasenia.equals("Admin") ){
-            UI_Principal_Administrador a = new UI_Principal_Administrador(nombre,"Administrador");
+            UI_Administrador a = new UI_Administrador(nombre,"Administrador");
             a.setVisible(true);
             this.setVisible(false);
         }

@@ -68,7 +68,7 @@ public class Main {
         String pass = new String("paciente");
 
         //Conectamos con la base de datos "centroMedico", con el usuario "paciente" y contraseña "paciente"
-        bd.ConectarBD("localhost", "centroMedico", user, pass);
+        bd.ConectarBD("217.216.97.75", "centroMedico", user, pass);
 
         //Realizamos la consutla que nos muestre todo el contenido de la tabla "pacientes"
         resultado=bd.RealizarConsulta("Select * from pacientes");
