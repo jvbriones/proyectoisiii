@@ -1,7 +1,11 @@
 /*
  * Main.java
  *
- * Más información y descripción del Copyright.
+ * Informacion:
+ * Clase main bla bla bla..
+ *
+ * Proyecto ISIII UGR 10/11
+ * Grupo M_1.2
  *
  */
 
@@ -22,8 +26,8 @@ public class Main {
 */
     public static void main(String[] args) {
      
-        //Intro a = new Intro();
-        //a.setVisible(true);
+        Intro a = new Intro();
+        a.setVisible(true);
     }
 
 }
