@@ -13,8 +13,6 @@
 package centro_medico.BaseDatos;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @version     datos de la versión (numero y fecha)
@@ -23,8 +21,8 @@ import java.util.List;
 
 public class Jdbc {
 
-    private ResultSet resultado;
-    private Connection conexion;     // almacena la conexion con la base de datos
+    private Connection conexion;    // almacena la conexion con la base de datos
+    private ResultSet resultado;    // almacena el resultado de las consultas
 
 
     /* Conectar con la base de datos
@@ -49,100 +47,45 @@ public class Jdbc {
             e.printStackTrace();
         }
     }
-    
-    /* Realizar una consulta generica (cualquier consulta tipo Select de MySQL)
+
+    /* Realizar comandos que MODIFIQUEN el contenido de la BD (INSERT,UPDATE,DELETE..)
      *
-     * @query: Consulta que se quiere hacer a la base de datos
+     * @query: Comando que se quiere realizar a la base de datos
      *
-     * @return Matriz de resultados que contiene las tuplas con los resultados de la consulta
-     *
-     * Esta funcion unicamente acepta consultas del tipo "Select"
-     * y devuelve un ArrayList de ArrayList de String que contiene toda la tabla
-     * que obtenemos como resultado de realizar la consulta "query".
-     * Se puede entender como que devuelve una matriz de String, pero representada como
-     * un ArrayList de ArrayList de String.
+     * Esta funcion devolverá error en si no se puede realizar la operación
      *
      */
-    public ArrayList RealizarConsulta(String query){
-        ArrayList<ArrayList<String> > matriz = new ArrayList(); //Matriz que contendra las tuplas
-        int numeroCampos;                                       //Contendra el numero de campos de una tupla
-
-        try{
-            //Creamos el statement para pasarle y ejecutar la consulta SQL
+                //No se que nombre es más apropiado!!
+    public void consultaUpdate(String SqlCmd) { 
+        try {
             Statement st = conexion.createStatement();
-
-            //Ejecutamos la consulta y obtenemos el resultado en el resultset
-            ResultSet rs = st.executeQuery(query);
-            //Aqui obtenemos los metadatos del resultset
-            //Esto se hace para obtener valores como numero de columnas de tupla (numero de campos), etc...
-            ResultSetMetaData rsmd = rs.getMetaData();
-
-            //Aqui obtenemos el numero de columnas de una tupla
-            numeroCampos = rsmd.getColumnCount();
-
-            //Recorremos cada tupla resultante de ejecutar la consulta en "rs"
-            while(rs.next()){
-                ArrayList<String> tupla=new ArrayList();    //Creamos un ArrayList "tupla"
-
-                for(int i=1; i<=numeroCampos; i++){     //Damos al ArrayList "tupla" con el contenido de cada campo
-                    tupla.add(rs.getString(i));
-                }
-
-                matriz.add(tupla);              //Añadimos el ArrayList "tupla" al ArrayList "matriz"
-            }
-
-            st.close(); //Hay que cerrar el statement
-        }
-        catch(Exception e){
-        }
-
-        return matriz;
-    }
-
-
-    public void UpdateCommand(String SqlCmd) {
-        try {
-            Statement sentencia = conexion.createStatement();
-            sentencia.executeUpdate(SqlCmd);
+            st.executeUpdate(SqlCmd);
+            //st.close(); //Hay que cerrar el statement
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public String EjecutarConsulta(String SqlCmd) throws SQLException {
-        String consulta = null;
+    /* Realizar comandos consultores tipo Select
+     *
+     * @query: Consulta que se quiere realizar a la base de datos
+     * @return resultado: ResulSet con el resultado de la consulta
+     *
+     * Esta funcion devolverá error en si no se puede realizar la operación
+     *
+     */
+                //No se que nombre es más apropiado!!
+    public ResultSet consultaSelect(String SqlCmd) throws SQLException {
         try {
-            //Hacemos la consulta
-            Statement sentencia = conexion.createStatement();
-            resultado = sentencia.executeQuery(SqlCmd);
-            while(resultado.next())
-            {
-                consulta = resultado.getString(1);
-            }
+            //Ejecutamos la consulta y obtenemos el resultado en el ResultSet 'resultado'
+            Statement st = conexion.createStatement();
+            resultado = st.executeQuery(SqlCmd);
+            //st.close(); //Hay que cerrar el statement
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return consulta;
+        return resultado;
     }
-
-    public List EjecutarConsultaID(String SqlCmd) throws SQLException {
-
-         List listaId = new ArrayList();
-
-        try {
-            //Hacemos la consulta
-            Statement sentencia = conexion.createStatement();
-            resultado = sentencia.executeQuery(SqlCmd);
-            while(resultado.next())
-            {
-                listaId.add(resultado.getString(1));
-            }
-        } catch (Exception e) {
-            e.printStackTrace(); ///POR AQUI PUEDE PETAR///
-        }
-        return listaId;
-    }
-
 
     /* Desconectar de la base de datos
      *
@@ -157,5 +100,6 @@ public class Jdbc {
             e.printStackTrace();
         }
     }
+
 }
 

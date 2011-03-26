@@ -1,8 +1,13 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * Paciente.java
+ *
+ * Informacion:
+ * Clase encargada de modelizar a los pacientes
+ *
+ * Proyecto ISIII UGR 10/11
+ * Grupo M_1.2
+ *
  */
-
 package centro_medico;
 
 import java.sql.SQLException;
@@ -10,15 +15,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
- * @author pyrus
+ * @version     datos de la versión (numero y fecha)
+ * @author      Sub_Equipo1
  */
 
 public class Paciente {
 
-    List IdContacto = new ArrayList();
+   String dni;
+   String nombre;
+   String apellidos;
+   String domicilio;
+   String telefono;
+   String email;
+   String fechaNacimiento;
+   String lugarNacimiento;
+   String fotografia; //ya veremos como hacemos esto..
 
-    Defensa(List Contactos){
+
+   List Citas = new ArrayList();
+
+    Paciente(){
         IdContacto = Contactos;
     }
     public String obtenerId(int i){
