@@ -48,11 +48,13 @@ public class Intro extends javax.swing.JFrame {
         setTitle("Centro Salud");
         setBackground(new java.awt.Color(255, 204, 102));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setLocation(new java.awt.Point(400, 200));
+        setLocation(new java.awt.Point(400, 170));
         setMinimumSize(new java.awt.Dimension(470, 430));
         setResizable(false);
+        setSize(new java.awt.Dimension(475, 430));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.setPreferredSize(new java.awt.Dimension(350, 277));
 
         jLabelContrasenia.setText("Contraseña:");
@@ -64,9 +66,9 @@ public class Intro extends javax.swing.JFrame {
         jLabelCentroMedico.setFont(new java.awt.Font("Lucida Grande", 1, 14));
         jLabelCentroMedico.setText("Centro Médico");
 
-        jButtonEntrar.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jButtonEntrar.setFont(new java.awt.Font("Lucida Grande", 1, 18));
         jButtonEntrar.setForeground(new java.awt.Color(255, 153, 0));
-        jButtonEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesIntro/Entrar.png"))); // NOI18N
+        jButtonEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/centro_medico/Imagenes/Intro/Entrar.png"))); // NOI18N
         jButtonEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonEntrarActionPerformed(evt);
@@ -81,7 +83,7 @@ public class Intro extends javax.swing.JFrame {
         });
 
         jLabelError.setForeground(new java.awt.Color(255, 0, 51));
-        jLabelError.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesIntro/Error.png"))); // NOI18N
+        jLabelError.setIcon(new javax.swing.ImageIcon(getClass().getResource("/centro_medico/Imagenes/Intro/Error.png"))); // NOI18N
         jLabelError.setText("Usuario o contraseña erróneos");
 
         org.jdesktop.layout.GroupLayout jPanel1Layout = new org.jdesktop.layout.GroupLayout(jPanel1);
@@ -89,36 +91,38 @@ public class Intro extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanel1Layout.createSequentialGroup()
-                .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                    .add(jPanel1Layout.createSequentialGroup()
-                        .add(87, 87, 87)
-                        .add(jLabelUsuario1)
-                        .add(44, 44, 44))
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .add(jLabelContrasenia)
-                        .add(30, 30, 30)))
+                .add(63, 63, 63)
                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jTextFieldUsuario, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jPasswordField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(153, Short.MAX_VALUE))
+                    .add(jPanel1Layout.createSequentialGroup()
+                        .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                            .add(jPanel1Layout.createSequentialGroup()
+                                .add(9, 9, 9)
+                                .add(jLabelUsuario1)
+                                .add(44, 44, 44))
+                            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .add(jLabelContrasenia)
+                                .add(30, 30, 30)))
+                        .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jTextFieldUsuario, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(jPasswordField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 66, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 122, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(jLabelCentroMedico)
+                        .add(79, 79, 79))
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 91, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(jLabelError)))
+                .addContainerGap(80, Short.MAX_VALUE))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(200, Short.MAX_VALUE)
-                .add(jLabelCentroMedico)
-                .add(166, 166, 166))
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(171, Short.MAX_VALUE)
+                .addContainerGap(145, Short.MAX_VALUE)
                 .add(jButtonEntrar)
-                .add(134, 134, 134))
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(147, Short.MAX_VALUE)
-                .add(jLabelError)
-                .add(109, 109, 109))
+                .add(138, 138, 138))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanel1Layout.createSequentialGroup()
-                .add(20, 20, 20)
+                .addContainerGap()
                 .add(jLabelCentroMedico)
                 .add(18, 18, 18)
                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
@@ -130,15 +134,15 @@ public class Intro extends javax.swing.JFrame {
                     .add(jPasswordField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jLabelError)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 13, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jButtonEntrar)
-                .add(9, 9, 9))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 470, 240));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 450, 230));
 
-        jLabelIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesIntro/Logo-Centro-Medico.png"))); // NOI18N
-        getContentPane().add(jLabelIcono, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 20, -1, 163));
+        jLabelIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/centro_medico/Imagenes/Intro/Logo-Centro-Medico.png"))); // NOI18N
+        getContentPane().add(jLabelIcono, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 140, 163));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -155,7 +159,9 @@ public class Intro extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jPasswordField1KeyPressed
 
-
+    /**
+     * Comprueba que los datos de acceso correspondan a algún usuario
+     */
     private void ComprobarAcceso(){
         String nombre = jTextFieldUsuario.getText();
         String contrasenia = new String(jPasswordField1.getPassword());
@@ -172,13 +178,13 @@ public class Intro extends javax.swing.JFrame {
     /**
     * @param args the command line arguments
     */
-   /* public static void main(String args[]) {
+    public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Intro().setVisible(true);
             }
         });
-    }*/
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonEntrar;
