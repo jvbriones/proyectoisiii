@@ -1,5 +1,6 @@
 /*
- * Main.java
+ * Main.java //ESTA CLASE NO NECESARIAMENTE HA DE LLAMARSE MAIN, DE HECHO CONFUNDE
+ * //REALMENTE SOLO DEBERIA DE HABER UN MAIN EN TODO EL PROGRAMA NO? NO ESTOY SEGURO..
  *
  * Informacion:
  * Clase main bla bla bla..
@@ -24,10 +25,10 @@ public class Main {
 
 /* Un comentario de implemantación de la clase.
 */
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
      
         Intro a = new Intro();
         a.setVisible(true);
-    }
+    }*/
 
 }
