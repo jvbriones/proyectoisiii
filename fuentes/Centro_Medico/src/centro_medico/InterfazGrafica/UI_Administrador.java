@@ -1427,11 +1427,11 @@ public class UI_Administrador extends javax.swing.JFrame {
         }
 
         /**Si ha nacido en el año actual, hay que ver que el mes no sea mayor que el actual*/
+        /**Si ha nacido en el año y mes actual, hay que comprobar que el dia sea menor que el actual*/
         if(anio == Calendar.YEAR){
             if(mes > Calendar.MONTH){
                 return false;
-            }
-            else{/**Si ha nacido en el año y mes actual, hay que comprobar que el dia sea menor que el actual*/
+            } else{
                 if(dia > Calendar.DAY_OF_MONTH){
                     return false;
                 }
@@ -1442,8 +1442,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         if(mes%2 == 0){
             if((mes == 2) && (dia >29)){
                 return false;
-            }
-            else{
+            }else{
                 if(dia > 30){
                     return false;
                 }
