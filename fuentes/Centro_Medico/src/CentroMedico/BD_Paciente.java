@@ -11,7 +11,7 @@
  */
 package CentroMedico;
 
-import CentroMedico.BaseDatos.*;
+import BaseDatos.*;
 import java.sql.*;
 
 

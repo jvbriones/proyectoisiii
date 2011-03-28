@@ -9,7 +9,7 @@
  * Created on 16-mar-2011, 18:27:18
  */
 
-package CentroMedico.Interfaz;
+package Interfaz;
 
 import CentroMedico.InterfazGrafica.Ayuda;
 import java.awt.Image;
