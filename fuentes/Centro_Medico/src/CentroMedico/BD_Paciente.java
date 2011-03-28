@@ -9,9 +9,9 @@
  * Grupo M_1.2
  *
  */
-package centro_medico;
+package CentroMedico;
 
-import centro_medico.BaseDatos.*;
+import CentroMedico.BaseDatos.*;
 import java.sql.*;
 
 

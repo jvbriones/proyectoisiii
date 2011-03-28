@@ -9,7 +9,7 @@
  * Created on 16-mar-2011, 18:27:18
  */
 
-package centro_medico.InterfazGrafica;
+package CentroMedico.InterfazGrafica;
 
 import java.awt.Image;
 import java.util.Calendar;

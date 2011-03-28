@@ -10,7 +10,7 @@
  *
  */
 
-package centro_medico.BaseDatos;
+package CentroMedico.BaseDatos;
 
 import java.sql.*;
 

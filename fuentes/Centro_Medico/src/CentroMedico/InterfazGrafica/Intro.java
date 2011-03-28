@@ -9,7 +9,7 @@
  * Created on 19-mar-2011, 18:22:02
  */
 
-package centro_medico.InterfazGrafica;
+package CentroMedico.InterfazGrafica;
 
 import java.awt.Toolkit;
 

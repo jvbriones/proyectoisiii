@@ -8,7 +8,7 @@
  * Grupo M_1.2
  *
  */
-package centro_medico;
+package CentroMedico;
 
 import java.io.*;
 
@@ -67,7 +67,7 @@ public class Gestor_Pacientes {
  * 
  ****/
 
-public static void main(String args[]) {
+/*public void main(String args[]) {
 
     BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
@@ -98,6 +98,6 @@ public static void main(String args[]) {
         System.err.println(Exception);
     }
 
-}
+}*/
 
 }

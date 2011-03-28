@@ -9,7 +9,7 @@
  *
  */
 
-package centro_medico;
+package CentroMedico;
 
 /**
  * @version     datos de la versión (numero y fecha)
