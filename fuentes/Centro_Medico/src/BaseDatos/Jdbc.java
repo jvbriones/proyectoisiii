@@ -36,12 +36,12 @@ public class Jdbc {
      *
      */
 
-    public void doConnection(String host,String baseDatos,String usuario,String password){
+    public void doConnection(String Host,String BaseDatos,String Usuario,String Password){
         try {
             //Cargar el driver para Bases de Datos MySql
             Class.forName("com.mysql.jdbc.Driver");
             //Establecemos la conexion con la base de datos
-            conexion = DriverManager.getConnection("jdbc:mysql://"+host+"/"+baseDatos,usuario,password);
+            conexion = DriverManager.getConnection("jdbc:mysql://"+Host+"/"+BaseDatos,Usuario,Password);
 
         } catch (Exception e) {
             e.printStackTrace();

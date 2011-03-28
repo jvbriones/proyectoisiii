@@ -11,7 +11,7 @@
 
 package Interfaz;
 
-import CentroMedico.InterfazGrafica.Ayuda;
+import Interfaz.Ayuda;
 import java.awt.Image;
 import java.util.Calendar;
 import javax.swing.ImageIcon;
