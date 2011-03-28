@@ -28,10 +28,10 @@ public class BD_Paciente {
 
 
     //Sentencia Modificadora
-    void almacenaPaciente(Paciente paci) {
+    void almacenaPaciente(Paciente Paci) {
 
-        String dnei=paci.getDni();
-        String nom=paci.getNombre();
+        String dnei=Paci.getDni();
+        String nom=Paci.getNombre();
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
@@ -42,11 +42,13 @@ public class BD_Paciente {
 
     //Sentencia Consultora-->Hay que procesar el ResultSet
 
-    /*public Paciente buscarPaciente(String dnei) throws SQLException{
+    //He cambiado dnie por Dni, ya que con la D mayúscula no debería haber confusión
+
+    /*public Paciente buscarPaciente(String Dni) throws SQLException{
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
-        String Consulta = "SELECT * FROM Pacientes WHERE DNI =" + dnei;
+        String Consulta = "SELECT * FROM Pacientes WHERE DNI =" + Dni;
         ResultSet rs = conexion.consultaSelect(Consulta);
 
         rs.next(); //Avanza al primer elemento devuelto.

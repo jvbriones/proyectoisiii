@@ -30,9 +30,9 @@ public class Paciente {
    private Medico medico=null;
    private Citas cita=null;*/
 
-    Paciente(String dnei,String nom) {
-        dni=dnei;
-        nombre=nom;
+    Paciente(String Dni,String Nom) {
+        dni=Dni;
+        nombre=Nom;
         //etc..
         //medico=null;
         //cita=null;
@@ -46,19 +46,19 @@ public class Paciente {
         return  this.nombre;
      }
     
-    void setDni(String d){
-        dni=d;
+    void setDni(String Dni){
+        dni=Dni;
     }
 
-    void setNombre(String n){
-        nombre=n;
+    void setNombre(String Nom){
+        nombre=Nom;
     }
 
-   /* void estableceMedico(Medico med){     //Esto son posibles operaciones
-        medico=med;
+   /* void estableceMedico(Medico Med){     //Esto son posibles operaciones
+        medico=Med;
     }*/
 
-    /*void quitaMedico(Medico med) {        
+    /*void quitaMedico(Medico Med) {
         medico=null;
     }*/
 

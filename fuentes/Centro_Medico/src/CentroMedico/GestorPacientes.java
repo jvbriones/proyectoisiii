@@ -17,7 +17,7 @@ import java.io.*;
  * @author      Sub_Equipo1
  */
 
-public class Gestor_Pacientes {
+public class GestorPacientes {
 
 
     BD_Paciente bd_paciente=new BD_Paciente();
@@ -30,15 +30,15 @@ public class Gestor_Pacientes {
      * @param bla bla
      *
      */
- public void altaPaciente (String dni,String nombre)throws Exception {
+ public void altaPaciente (String Dni,String Nombre)throws Exception {
 
-        Paciente nuevoPaciente=new Paciente(dni,nombre);
+        Paciente nuevoPaciente=new Paciente(Dni,Nombre);
         bd_paciente.almacenaPaciente(nuevoPaciente);
 
     }
 
- public void buscarPaciente (String dni)throws Exception {
-        //bd_paciente.buscarPaciente(dni);
+ public void buscarPaciente (String Dni)throws Exception {
+        //bd_paciente.buscarPaciente(Dni);
 
     }
 
@@ -49,7 +49,7 @@ public class Gestor_Pacientes {
      * @param bla bla
      *
      */
-/* public void modificarPaciente(String dni, String nombre) throws Exception{
+/* public void modificarPaciente(String Dni, String Nombre) throws Exception{
 
         Modifica
         y Guarda otra vez el paciente en la BD.

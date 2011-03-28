@@ -35,9 +35,9 @@ public abstract class Personal {
     * Mirar codigo del Medico
     */
 
-    Personal(String dnei,String nom) {
-        dni=dnei;
-        nombre=nom;
+    Personal(String Dni,String Nom) {
+        dni=Dni;
+        nombre=Nom;
         //etc..
         //turno=null;
     }
@@ -50,11 +50,11 @@ public abstract class Personal {
      return  this.nombre;
      }
     
-    void setDni(String d){
-        dni=d;
+    void setDni(String Dni){
+        dni=Dni;
     }
-    void setNombre(String n){
-        nombre=n;
+    void setNombre(String Nom){
+        nombre=Nom;
     }
                                         //Posibles metodos
     //abstract double NoseMeOcure();
@@ -64,8 +64,8 @@ public abstract class Personal {
 
             //Porque una cosa en comun serian las citas asignadas, pero no todo el personal tiene..
 
-   /* void estableceTurno(Turno tur){
-        turno=tur;
+   /* void estableceTurno(Turno Tur){
+        turno=Tur;
     }*/
 
     //etc

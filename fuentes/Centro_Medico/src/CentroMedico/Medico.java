@@ -20,8 +20,8 @@ public class Medico extends Personal{
   // private List Citas = null;
  //El modelado está fatal,han puesto que solo tienen citas los medicos,cuando los especialistas tb tienen..
 
-   Medico(String dnei,String nom){
-     super(dnei,nom);
+   Medico(String Dni,String Nom){
+     super(Dni,Nom);
     // Citas=null;
    }
 
