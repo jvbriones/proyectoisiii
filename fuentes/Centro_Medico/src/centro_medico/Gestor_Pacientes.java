@@ -67,7 +67,7 @@ public class Gestor_Pacientes {
  * 
  ****/
 
-public void main(String args[]) {
+public static void main(String args[]) {
 
     BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
