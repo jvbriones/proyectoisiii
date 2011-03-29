@@ -1,0 +1,40 @@
+
+Te doy las sentencias ordenadas cronológicamente,
+puede que no sean definitivas.. pero son buenas aproximaciones o eso creo porque tampoco me acuerdo muy bien..
+
+********Validacion Usuario:
+Select dni from Usuarios where contraseña=cod_val
+
+*********Alta personal:
+Select dni from Personal where Dni=dni
+Insert Into Personal Values (campos de la tabla=datos)
+
+********Alta cita Online =Alta cita
+	
+*******Consultar_cita_Online=Consultar_cita
+	
+*******ConsultarDatosPersonals
+Select * from Usuarios where Dni=dni
+
+********Cancelar_cita
+UPDATE CITAS SET(Estado=false) Where DniPaciente=dni
+
+********Cancelar_cita_online=Cancelar_cita
+	
+TENEIS UN CONTRATO ALTA_HORARIO() que no tiene diagrama ,supongo que es alta_Turno()
+
+Inser Into Turnos Values(campos de la tabla=datos_turno)
+
+********Consultar_Turno
+SELECT * FROM Turno Where Dni=dni
+
+*******Modificar_Turno
+UPDATE TURNOS SET(campos=datos_nuevos) Where Dni=dni
+
+FALTAN LAS SENTENCIAS DE LAS ESTADISTICAS
+MAÑANA LO MIRAMOS EN PRACTICAS
+
+
+
+	
+	
