@@ -61,7 +61,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
@@ -80,24 +80,26 @@
                               <Component id="jTextFieldUsuario" min="-2" max="-2" attributes="0"/>
                               <Component id="jPasswordField1" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="88" max="-2" attributes="0"/>
+                          <EmptySpace pref="31" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="144" max="-2" attributes="0"/>
-                          <Component id="jLabelCentroMedico" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="21" pref="21" max="21" attributes="0"/>
+                                  <Component id="jButtonEntrar" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jLabelError" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="113" max="-2" attributes="0"/>
-                          <Component id="jLabelError" min="-2" max="-2" attributes="0"/>
-                      </Group>
                   </Group>
-                  <EmptySpace pref="58" max="32767" attributes="0"/>
+                  <EmptySpace pref="36" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="149" max="32767" attributes="0"/>
-                  <Component id="jButtonEntrar" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
+                  <EmptySpace pref="182" max="32767" attributes="0"/>
+                  <Component id="jLabelCentroMedico" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -106,7 +108,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabelCentroMedico" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabelUsuario1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextFieldUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -116,7 +118,7 @@
                       <Component id="jLabelContrasenia" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jPasswordField1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                   <Component id="jLabelError" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jButtonEntrar" min="-2" max="-2" attributes="0"/>
@@ -158,7 +160,7 @@
               <Color blue="0" green="99" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/CentroMedico/Imagenes/Intro/Entrar.png"/>
+              <Image iconType="3" name="/Imagenes/Intro/Entrar.png"/>
             </Property>
           </Properties>
           <Events>
@@ -179,7 +181,7 @@
               <Color blue="33" green="0" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/CentroMedico/Imagenes/Intro/Error.png"/>
+              <Image iconType="3" name="/Imagenes/Intro/Error.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Usuario o contrase&#xf1;a err&#xf3;neos"/>
           </Properties>
@@ -189,7 +191,7 @@
     <Component class="javax.swing.JLabel" name="jLabelIcono">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/CentroMedico/Imagenes/Intro/Logo-Centro-Medico.png"/>
+          <Image iconType="3" name="/Imagenes/Intro/Logo-Centro-Medico.png"/>
         </Property>
       </Properties>
       <Constraints>

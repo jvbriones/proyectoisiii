@@ -171,7 +171,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabelCentroMedico.setText("Centro médico");
 
-        jLabelIconoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CentroMedico/Imagenes/Principal/Inicio-Desactivado.png"))); // NOI18N
+        jLabelIconoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Inicio-Desactivado.png"))); // NOI18N
         jLabelIconoInicio.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelIconoInicioMouseClicked(evt);
@@ -186,7 +186,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabelInicio.setText("Inicio");
 
-        jLabelIconoAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CentroMedico/Imagenes/Principal/Ayuda-Desactivado.png"))); // NOI18N
+        jLabelIconoAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Ayuda-Desactivado.png"))); // NOI18N
         jLabelIconoAyuda.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelIconoAyudaMouseClicked(evt);
@@ -199,7 +199,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
 
-        jLabelIconoSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CentroMedico/Imagenes/Principal/Salir-Desactivado.png"))); // NOI18N
+        jLabelIconoSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Salir-Desactivado.png"))); // NOI18N
         jLabelIconoSalir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelIconoSalirMouseClicked(evt);
@@ -248,14 +248,14 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabelIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CentroMedico/Imagenes/Intro/Logo-Centro-Medico.png"))); // NOI18N
+        jLabelIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Logo-Centro-Medico.png"))); // NOI18N
 
         ZonaTrabajo.setMinimumSize(new java.awt.Dimension(902, 520));
         ZonaTrabajo.setPreferredSize(new java.awt.Dimension(912, 530));
 
         jPanelPrincipal.setPreferredSize(new java.awt.Dimension(901, 531));
 
-        jButtonEstadPersTipo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CentroMedico/Imagenes/Principal/Tipo.png"))); // NOI18N
+        jButtonEstadPersTipo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo.png"))); // NOI18N
 
         jLabelEstadPersTipo1.setText("Estad. Pers. Tipo");
 
@@ -263,9 +263,9 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabelEstadPersFecha1.setText("Estad. Pers. Fecha");
 
-        jButtonEstadPersFecha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CentroMedico/Imagenes/Principal/Fecha.png"))); // NOI18N
+        jButtonEstadPersFecha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Fecha.png"))); // NOI18N
 
-        jButtonGestionarPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CentroMedico/Imagenes/Principal/Paciente.png"))); // NOI18N
+        jButtonGestionarPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Paciente.png"))); // NOI18N
         jButtonGestionarPaciente.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonGestionarPacienteMouseClicked(evt);
@@ -277,7 +277,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
 
-        jButtonGestionarPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CentroMedico/Imagenes/Principal/Personal.png"))); // NOI18N
+        jButtonGestionarPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Personal.png"))); // NOI18N
         jButtonGestionarPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonGestionarPersonalMouseClicked(evt);
@@ -289,9 +289,9 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
 
-        jButtonEstadCitas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CentroMedico/Imagenes/Principal/Citas.png"))); // NOI18N
+        jButtonEstadCitas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Citas.png"))); // NOI18N
 
-        jButtonGestionarTurno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CentroMedico/Imagenes/Principal/Turno.png"))); // NOI18N
+        jButtonGestionarTurno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Turno.png"))); // NOI18N
 
         jLabelGestionarTurno1.setText("Gestionar Turno");
 
@@ -301,7 +301,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabelGestionarCita1.setText("Gestionar Cita");
 
-        jButtonGestionarCita.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CentroMedico/Imagenes/Principal/Cita.png"))); // NOI18N
+        jButtonGestionarCita.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Cita.png"))); // NOI18N
 
         org.jdesktop.layout.GroupLayout jPanelPrincipalLayout = new org.jdesktop.layout.GroupLayout(jPanelPrincipal);
         jPanelPrincipal.setLayout(jPanelPrincipalLayout);
@@ -348,10 +348,10 @@ public class UI_Administrador extends javax.swing.JFrame {
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelPrincipalLayout.createSequentialGroup()
                 .add(29, 29, 29)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadPersTipo, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadCitas, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadPersFecha, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE))
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadPersTipo, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadCitas, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadPersFecha, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelEstadCitas1)
@@ -360,18 +360,18 @@ public class UI_Administrador extends javax.swing.JFrame {
                     .add(jLabelGestionarCita1))
                 .add(45, 45, 45)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jButtonGestionarTurno, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
-                    .add(jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
-                    .add(jButtonGestionarPersonal, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE))
+                    .add(jButtonGestionarTurno, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
+                    .add(jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
+                    .add(jButtonGestionarPersonal, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelGestionarPaciente3)
                     .add(jLabelGestionarTurno1)
                     .add(jLabelGestionarPersonal1))
-                .add(85, 85, 85))
+                .add(89, 89, 89))
         );
 
-        jPanelPrincipal.setBounds(1, 0, 900, 530);
+        jPanelPrincipal.setBounds(1, 10, 900, 520);
         ZonaTrabajo.add(jPanelPrincipal, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarPaciente.setPreferredSize(new java.awt.Dimension(901, 531));
@@ -1055,16 +1055,17 @@ public class UI_Administrador extends javax.swing.JFrame {
                     .add(jLabelIconoInicio)
                     .add(jLabelInicio, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 44, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .add(40, 40, 40)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                    .add(jLabelIconoAyuda, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(jLabelAyuda, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE))
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jLabelIconoAyuda)
-                    .add(jLabelAyuda, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 44, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(35, 35, 35)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jLabelIconoSalir)
                     .add(layout.createSequentialGroup()
-                        .add(18, 18, 18)
+                        .add(35, 35, 35)
+                        .add(jLabelIconoSalir))
+                    .add(layout.createSequentialGroup()
+                        .add(43, 43, 43)
                         .add(jLabelSalir)))
-                .add(103, 103, 103)
+                .add(105, 105, 105)
                 .add(jPanelUsuario, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
             .add(layout.createSequentialGroup()
                 .add(13, 13, 13)
@@ -1085,18 +1086,19 @@ public class UI_Administrador extends javax.swing.JFrame {
                         .add(8, 8, 8)
                         .add(jLabelInicio))
                     .add(layout.createSequentialGroup()
-                        .add(55, 55, 55)
-                        .add(jLabelIconoAyuda, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(8, 8, 8)
-                        .add(jLabelAyuda))
+                        .add(30, 30, 30)
+                        .add(jPanelUsuario, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                     .add(layout.createSequentialGroup()
                         .add(58, 58, 58)
-                        .add(jLabelIconoSalir, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(8, 8, 8)
-                        .add(jLabelSalir))
-                    .add(layout.createSequentialGroup()
-                        .add(30, 30, 30)
-                        .add(jPanelUsuario, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(layout.createSequentialGroup()
+                                .add(jLabelIconoAyuda, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(jLabelAyuda))
+                            .add(layout.createSequentialGroup()
+                                .add(jLabelIconoSalir, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 47, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(jLabelSalir)))))
                 .add(18, 18, 18)
                 .add(ZonaTrabajo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 550, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
@@ -1106,32 +1108,32 @@ public class UI_Administrador extends javax.swing.JFrame {
     
     private void jLabelIconoInicioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoInicioMouseEntered
         // TODO add your handling code here:
-        jLabelIconoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CentroMedico/Imagenes/Principal/Inicio-Activado.png"))); // NOI18N
+        jLabelIconoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Inicio-Activado.png"))); // NOI18N
     }//GEN-LAST:event_jLabelIconoInicioMouseEntered
 
     private void jLabelIconoInicioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoInicioMouseExited
         // TODO add your handling code here:
-        jLabelIconoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CentroMedico/Imagenes/Principal/Inicio-Desactivado.png"))); // NOI18N
+        jLabelIconoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Inicio-Desactivado.png"))); // NOI18N
     }//GEN-LAST:event_jLabelIconoInicioMouseExited
 
     private void jLabelIconoAyudaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoAyudaMouseExited
         // TODO add your handling code here:
-        jLabelIconoAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CentroMedico/Imagenes/Principal/Ayuda-Desactivado.png"))); // NOI18N
+        jLabelIconoAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Ayuda-Desactivado.png"))); // NOI18N
     }//GEN-LAST:event_jLabelIconoAyudaMouseExited
 
     private void jLabelIconoAyudaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoAyudaMouseEntered
         // TODO add your handling code here:
-        jLabelIconoAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CentroMedico/Imagenes/Principal/Ayuda-Activado.png"))); // NOI18N
+        jLabelIconoAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Ayuda-Activado.png"))); // NOI18N
     }//GEN-LAST:event_jLabelIconoAyudaMouseEntered
 
     private void jLabelIconoSalirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoSalirMouseExited
         // TODO add your handling code here:
-        jLabelIconoSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CentroMedico/Imagenes/Principal/Salir-Desactivado.png"))); // NOI18N
+        jLabelIconoSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Salir-Desactivado.png"))); // NOI18N
     }//GEN-LAST:event_jLabelIconoSalirMouseExited
 
     private void jLabelIconoSalirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoSalirMouseEntered
         // TODO add your handling code here:
-        jLabelIconoSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CentroMedico/Imagenes/Principal/Salir-Activado.png"))); // NOI18N
+        jLabelIconoSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Salir-Activado.png"))); // NOI18N
     }//GEN-LAST:event_jLabelIconoSalirMouseEntered
 
     private void jLabelIconoSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoSalirMouseClicked
@@ -1665,13 +1667,13 @@ public class UI_Administrador extends javax.swing.JFrame {
     }
 
 
-    /**
-    * @param args the command line arguments
+ 
+ //    @param args the command line arguments
     
-    public static void main(String args[]) {
+ /*   public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new UI_Administrador().setVisible(true);
+                new UI_Administrador("Administrador","Admin").setVisible(true);
             }
         });
     }

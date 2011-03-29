@@ -63,12 +63,12 @@ public class Intro extends javax.swing.JFrame {
 
         jTextFieldUsuario.setColumns(10);
 
-        jLabelCentroMedico.setFont(new java.awt.Font("Lucida Grande", 1, 14));
+        jLabelCentroMedico.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabelCentroMedico.setText("Centro Médico");
 
         jButtonEntrar.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jButtonEntrar.setForeground(new java.awt.Color(255, 153, 0));
-        jButtonEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CentroMedico/Imagenes/Intro/Entrar.png"))); // NOI18N
+        jButtonEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Entrar.png"))); // NOI18N
         jButtonEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonEntrarActionPerformed(evt);
@@ -83,7 +83,7 @@ public class Intro extends javax.swing.JFrame {
         });
 
         jLabelError.setForeground(new java.awt.Color(255, 0, 51));
-        jLabelError.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CentroMedico/Imagenes/Intro/Error.png"))); // NOI18N
+        jLabelError.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Error.png"))); // NOI18N
         jLabelError.setText("Usuario o contraseña erróneos");
 
         org.jdesktop.layout.GroupLayout jPanel1Layout = new org.jdesktop.layout.GroupLayout(jPanel1);
@@ -105,19 +105,20 @@ public class Intro extends javax.swing.JFrame {
                         .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(jTextFieldUsuario, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(jPasswordField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 88, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 31, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 144, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(jLabelCentroMedico)
-                        .add(79, 79, 79))
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 113, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(jLabelError)))
-                .addContainerGap(58, Short.MAX_VALUE))
+                        .add(56, 56, 56)
+                        .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jPanel1Layout.createSequentialGroup()
+                                .add(21, 21, 21)
+                                .add(jButtonEntrar))
+                            .add(jLabelError))
+                        .add(79, 79, 79)))
+                .addContainerGap(36, Short.MAX_VALUE))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(149, Short.MAX_VALUE)
-                .add(jButtonEntrar)
-                .add(134, 134, 134))
+                .addContainerGap(182, Short.MAX_VALUE)
+                .add(jLabelCentroMedico)
+                .add(162, 162, 162))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -132,7 +133,7 @@ public class Intro extends javax.swing.JFrame {
                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelContrasenia)
                     .add(jPasswordField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(6, 6, 6)
                 .add(jLabelError)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jButtonEntrar)
@@ -141,7 +142,7 @@ public class Intro extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 450, 230));
 
-        jLabelIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CentroMedico/Imagenes/Intro/Logo-Centro-Medico.png"))); // NOI18N
+        jLabelIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Logo-Centro-Medico.png"))); // NOI18N
         getContentPane().add(jLabelIcono, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 140, 163));
 
         pack();
