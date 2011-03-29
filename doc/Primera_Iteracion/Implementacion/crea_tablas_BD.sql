@@ -25,13 +25,25 @@ Hora DATE,
 Estado BOOLEAN,
 DniAdministrativoCita VARCHAR2(9) NOT NULL,
 PRIMARY KEY (DniPaciente, DniMedico),
-FOREIGN KEY (DniAdministrativoCita) REFERENCES Administrativos(DniAdministrativo)
+FOREIGN KEY (DniPaciente) REFERENCES Paciente(Dni),
+FOREIGN KEY (DniMedico) REFERENCES Medicos(Dni),
+FOREIGN KEY (DniAdministrativoCita) REFERENCES Administrativos(Dni),
 );
 
+/* Esta tabla sobraría, si nos ceñimos al modelo ER */
 CREATE TABLE Personal(
 Dni VARCHAR2(9) NOT NULL,
-Tipo VARCHAR2(20) NOT NULL,
-IdTurno INT NOT NULL,
+Nombre VARCHAR2(200) NOT NULL,
+Apellidos VARCHAR2(200) NOT NULL,
+Contrasena VARCHAR2(20) NOT NULL,
+Direccion VARCHAR2(200) NOT NULL,
+CorreoElectronico VARCHAR2(200),
+Telefono VARCHAR2(20),
+FechaNacimiento DATE,
+LugarNacimiento VARCHAR2(200),
+Fotografia IMAGE,
+/* Tipo VARCHAR2(20) NOT NULL, */
+/* El campo tipo sobra en el diagrama de clases de diseño, y aqui... hay que ver primero como haremos el modelo ER */
 PRIMARY KEY (Dni)
 );
 
@@ -111,20 +123,27 @@ PRIMARY KEY (Dni)
 );
 
 CREATE TABLE Turnos(
-Dni VARCHAR2(9) NOT NULL,
+/* Dni VARCHAR2(9) NOT NULL, */
+Id INT NOT NULL, /* Identificador de turno */
 Fecha DATE, /*El tipo Date guarda también la hora*/
 Hora DATE,
-PRIMARY KEY (Dni)
+PRIMARY KEY (Id)
 );
 
 CREATE TABLE PersonalTrabajaEnTurno(
 DniPersonal VARCHAR2(9) NOT NULL,
-DniTurno VARCHAR2(9) NOT NULL,
-PRIMARY KEY (DniPersonal, DniTurno)
+/*DniTurno VARCHAR2(9) NOT NULL,*/
+IdTurno INT NOT NULL, /* Identificador de turno */
+PRIMARY KEY (DniPersonal, IdTurno),
+FOREIGN KEY (DniPersonal) REFERENCES Personal(Dni),
+FOREIGN KEY (IdTurno) REFERENCES Turnos(IdTurno)
 );
 
 CREATE TABLE AdministrativoAsignaTurno(
 DniAdministrativo VARCHAR2(9) NOT NULL,
-DniTurno VARCHAR2(9) NOT NULL,
-PRIMARY KEY (DniAdministrativo, DniTurno)
+/*DniTurno VARCHAR2(9) NOT NULL,*/
+IdTurno INT NOT NULL, /* Identificador de turno */
+PRIMARY KEY (DniAdministrativo, IdTurno)
+FOREIGN KEY (DniAdministrativo) REFERENCES Administrativos(Dni),
+FOREIGN KEY (IdTurno) REFERENCES Turnos(IdTurno)
 );
