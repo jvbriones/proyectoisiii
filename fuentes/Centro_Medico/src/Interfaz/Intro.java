@@ -171,6 +171,11 @@ public class Intro extends javax.swing.JFrame {
             a.setVisible(true);
             this.setVisible(false);
         }
+        else if(nombre.equals("Paci") && contrasenia.equals("Paci")){
+            UI_Paciente p = new UI_Paciente(nombre,"Paciente");
+            p.setVisible(true);
+            this.setVisible(false);
+        }
         else{
             Toolkit.getDefaultToolkit().beep();
             jLabelError.setVisible(true);
