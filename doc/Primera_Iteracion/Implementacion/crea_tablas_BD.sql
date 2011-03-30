@@ -3,13 +3,19 @@ José Peso Buendía
 
 Creación de Tablas de la BBDD
 */
+CREATE TABLE Usuarios(
+Dni VARCHAR2(9) NOT NULL,
+Tipo VARCHAR2(20) NOT NULL,
+PRIMARY KEY (Dni)
+);
+
 CREATE TABLE Pacientes(
 Dni VARCHAR2(9) NOT NULL,
 Nombre VARCHAR2(200) NOT NULL,
 Apellidos VARCHAR2(200) NOT NULL,
 Contrasena VARCHAR2(20) NOT NULL,
 Direccion VARCHAR2(200) NOT NULL,
-CorreoElectronico VARCHAR2(200),
+Email VARCHAR2(200),
 Telefono VARCHAR2(20),
 FechaNacimiento DATE,
 LugarNacimiento VARCHAR2(200),
@@ -33,17 +39,7 @@ FOREIGN KEY (DniAdministrativoCita) REFERENCES Administrativos(Dni),
 /* Esta tabla sobraría, si nos ceñimos al modelo ER */
 CREATE TABLE Personal(
 Dni VARCHAR2(9) NOT NULL,
-Nombre VARCHAR2(200) NOT NULL,
-Apellidos VARCHAR2(200) NOT NULL,
-Contrasena VARCHAR2(20) NOT NULL,
-Direccion VARCHAR2(200) NOT NULL,
-CorreoElectronico VARCHAR2(200),
-Telefono VARCHAR2(20),
-FechaNacimiento DATE,
-LugarNacimiento VARCHAR2(200),
-Fotografia IMAGE,
-/* Tipo VARCHAR2(20) NOT NULL, */
-/* El campo tipo sobra en el diagrama de clases de diseño, y aqui... hay que ver primero como haremos el modelo ER */
+Tipo VARCHAR2(20) NOT NULL,
 PRIMARY KEY (Dni)
 );
 
@@ -53,12 +49,11 @@ Nombre VARCHAR2(200) NOT NULL,
 Apellidos VARCHAR2(200) NOT NULL,
 Contrasena VARCHAR2(20) NOT NULL,
 Direccion VARCHAR2(200) NOT NULL,
-CorreoElectronico VARCHAR2(200),
+Email VARCHAR2(200),
 Telefono VARCHAR2(20),
 FechaNacimiento DATE,
 LugarNacimiento VARCHAR2(200),
 Fotografia IMAGE,
-Puesto VARCHAR2(200),
 PRIMARY KEY (Dni)
 );
 
@@ -68,12 +63,11 @@ Nombre VARCHAR2(200) NOT NULL,
 Apellidos VARCHAR2(200) NOT NULL,
 Contrasena VARCHAR2(20) NOT NULL,
 Direccion VARCHAR2(200) NOT NULL,
-CorreoElectronico VARCHAR2(200),
+Email VARCHAR2(200),
 Telefono VARCHAR2(20),
 FechaNacimiento DATE,
 LugarNacimiento VARCHAR2(200),
 Fotografia IMAGE,
-Puesto VARCHAR2(200),
 PRIMARY KEY (Dni)
 );
 
@@ -83,12 +77,11 @@ Nombre VARCHAR2(200) NOT NULL,
 Apellidos VARCHAR2(200) NOT NULL,
 Contrasena VARCHAR2(20) NOT NULL,
 Direccion VARCHAR2(200) NOT NULL,
-CorreoElectronico VARCHAR2(200),
+Email VARCHAR2(200),
 Telefono VARCHAR2(20),
 FechaNacimiento DATE,
 LugarNacimiento VARCHAR2(200),
 Fotografia IMAGE,
-Puesto VARCHAR2(200),
 PRIMARY KEY (Dni)
 );
 
@@ -98,12 +91,11 @@ Nombre VARCHAR2(200) NOT NULL,
 Apellidos VARCHAR2(200) NOT NULL,
 Contrasena VARCHAR2(20) NOT NULL,
 Direccion VARCHAR2(200) NOT NULL,
-CorreoElectronico VARCHAR2(200),
+Email VARCHAR2(200),
 Telefono VARCHAR2(20),
 FechaNacimiento DATE,
 LugarNacimiento VARCHAR2(200),
 Fotografia IMAGE,
-Puesto VARCHAR2(200),
 PRIMARY KEY (Dni)
 );
 
@@ -113,12 +105,11 @@ Nombre VARCHAR2(200) NOT NULL,
 Apellidos VARCHAR2(200) NOT NULL,
 Contrasena VARCHAR2(20) NOT NULL,
 Direccion VARCHAR2(200) NOT NULL,
-CorreoElectronico VARCHAR2(200),
+Email VARCHAR2(200),
 Telefono VARCHAR2(20),
 FechaNacimiento DATE,
 LugarNacimiento VARCHAR2(200),
 Fotografia IMAGE,
-Puesto VARCHAR2(200),
 PRIMARY KEY (Dni)
 );
 
