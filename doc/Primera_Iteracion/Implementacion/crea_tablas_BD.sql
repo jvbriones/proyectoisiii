@@ -5,12 +5,6 @@ Creación de Tablas de la BBDD
 */
 CREATE TABLE Usuarios(
 Dni VARCHAR2(9) NOT NULL,
-Tipo VARCHAR2(20) NOT NULL,
-PRIMARY KEY (Dni)
-);
-
-CREATE TABLE Pacientes(
-Dni VARCHAR2(9) NOT NULL,
 Nombre VARCHAR2(200) NOT NULL,
 Apellidos VARCHAR2(200) NOT NULL,
 Contrasena VARCHAR2(20) NOT NULL,
@@ -20,6 +14,12 @@ Telefono VARCHAR2(20),
 FechaNacimiento DATE,
 LugarNacimiento VARCHAR2(200),
 Fotografia IMAGE,
+TipoUsuario VARCHAR2(20) NOT NULL,
+PRIMARY KEY (Dni)
+);
+
+CREATE TABLE Pacientes(
+Dni VARCHAR2(9) NOT NULL,
 PRIMARY KEY (Dni)
 );
 
@@ -33,83 +33,38 @@ DniAdministrativoCita VARCHAR2(9) NOT NULL,
 PRIMARY KEY (DniPaciente, DniMedico),
 FOREIGN KEY (DniPaciente) REFERENCES Paciente(Dni),
 FOREIGN KEY (DniMedico) REFERENCES Medicos(Dni),
-FOREIGN KEY (DniAdministrativoCita) REFERENCES Administrativos(Dni),
+FOREIGN KEY (DniAdministrativoCita) REFERENCES Administrativos(Dni)
 );
 
 /* Esta tabla sobraría, si nos ceñimos al modelo ER */
 CREATE TABLE Personal(
 Dni VARCHAR2(9) NOT NULL,
-Tipo VARCHAR2(20) NOT NULL,
+TipoPersonal VARCHAR2(20) NOT NULL,
 PRIMARY KEY (Dni)
 );
 
 CREATE TABLE Administrativos(
 Dni VARCHAR2(9) NOT NULL,
-Nombre VARCHAR2(200) NOT NULL,
-Apellidos VARCHAR2(200) NOT NULL,
-Contrasena VARCHAR2(20) NOT NULL,
-Direccion VARCHAR2(200) NOT NULL,
-Email VARCHAR2(200),
-Telefono VARCHAR2(20),
-FechaNacimiento DATE,
-LugarNacimiento VARCHAR2(200),
-Fotografia IMAGE,
 PRIMARY KEY (Dni)
 );
 
 CREATE TABLE Medicos(
 Dni VARCHAR2(9) NOT NULL,
-Nombre VARCHAR2(200) NOT NULL,
-Apellidos VARCHAR2(200) NOT NULL,
-Contrasena VARCHAR2(20) NOT NULL,
-Direccion VARCHAR2(200) NOT NULL,
-Email VARCHAR2(200),
-Telefono VARCHAR2(20),
-FechaNacimiento DATE,
-LugarNacimiento VARCHAR2(200),
-Fotografia IMAGE,
 PRIMARY KEY (Dni)
 );
 
 CREATE TABLE Analistas(
 Dni VARCHAR2(9) NOT NULL,
-Nombre VARCHAR2(200) NOT NULL,
-Apellidos VARCHAR2(200) NOT NULL,
-Contrasena VARCHAR2(20) NOT NULL,
-Direccion VARCHAR2(200) NOT NULL,
-Email VARCHAR2(200),
-Telefono VARCHAR2(20),
-FechaNacimiento DATE,
-LugarNacimiento VARCHAR2(200),
-Fotografia IMAGE,
 PRIMARY KEY (Dni)
 );
 
 CREATE TABLE Radiologos(
 Dni VARCHAR2(9) NOT NULL,
-Nombre VARCHAR2(200) NOT NULL,
-Apellidos VARCHAR2(200) NOT NULL,
-Contrasena VARCHAR2(20) NOT NULL,
-Direccion VARCHAR2(200) NOT NULL,
-Email VARCHAR2(200),
-Telefono VARCHAR2(20),
-FechaNacimiento DATE,
-LugarNacimiento VARCHAR2(200),
-Fotografia IMAGE,
 PRIMARY KEY (Dni)
 );
 
 CREATE TABLE Farmaceuticos(
 Dni VARCHAR2(9) NOT NULL,
-Nombre VARCHAR2(200) NOT NULL,
-Apellidos VARCHAR2(200) NOT NULL,
-Contrasena VARCHAR2(20) NOT NULL,
-Direccion VARCHAR2(200) NOT NULL,
-Email VARCHAR2(200),
-Telefono VARCHAR2(20),
-FechaNacimiento DATE,
-LugarNacimiento VARCHAR2(200),
-Fotografia IMAGE,
 PRIMARY KEY (Dni)
 );
 
