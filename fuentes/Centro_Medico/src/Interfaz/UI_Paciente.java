@@ -294,13 +294,13 @@ public class UI_Paciente extends javax.swing.JFrame {
             .add(jPanelPrincipalLayout.createSequentialGroup()
                 .add(29, 29, 29)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE))
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelGestionarPaciente3)
                     .add(jLabelGestionarCita1))
-                .add(319, 319, 319))
+                .add(320, 320, 320))
         );
 
         jPanelPrincipal.setBounds(1, 0, 900, 530);
@@ -451,7 +451,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jPanelGestionarPacienteLayout.setHorizontalGroup(
             jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarPacienteLayout.createSequentialGroup()
-                .addContainerGap(112, Short.MAX_VALUE)
+                .addContainerGap(111, Short.MAX_VALUE)
                 .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelGestionarPacienteLayout.createSequentialGroup()
                         .add(99, 99, 99)
@@ -577,7 +577,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                         .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(jLabelFotoPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(jLabelFotografiaPaciente))))
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
 
         jPanelGestionarPaciente.setBounds(1, 0, 900, 530);
@@ -664,7 +664,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jPanelGestionarCitaOnlineAlta.add(jButtonMasDiaFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 332, 50, 40));
 
         jButtonAltaCita.setText("Alta");
-        jPanelGestionarCitaOnlineAlta.add(jButtonAltaCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 490, 93, 39));
+        jPanelGestionarCitaOnlineAlta.add(jButtonAltaCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 460, 93, 39));
 
         jButtonMenosDiaFecha.setText("-");
         jButtonMenosDiaFecha.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -714,7 +714,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonLimpiarCitaActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jButtonLimpiarCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 490, -1, 39));
+        jPanelGestionarCitaOnlineAlta.add(jButtonLimpiarCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 460, -1, 39));
 
         jButtonMasHora.setText("+");
         jButtonMasHora.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -822,7 +822,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jTextAreaInfo1.setBackground(new java.awt.Color(255, 204, 102));
         jTextAreaInfo1.setColumns(17);
         jTextAreaInfo1.setEditable(false);
-        jTextAreaInfo1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jTextAreaInfo1.setFont(new java.awt.Font("Lucida Grande", 0, 18));
         jTextAreaInfo1.setRows(3);
         jTextAreaInfo1.setText("Tiene 4 opciones para realizar con la cita online: \nSi desea pedir una cita, dale a \"Alta\". \nEn cambio, si desea ver la cita que tiene, dale a \"Consultar\". \nPor otro lado, si desea modificar la cita que tiene, dale a \"Modificar\". \nPor último, si desea cancelar la cita que tiene asignada, dale a \"Cancelar\".");
         jScrollPane2.setViewportView(jTextAreaInfo1);

@@ -164,6 +164,31 @@ public class UI_Administrador extends javax.swing.JFrame {
         jRadioButtonMedico = new javax.swing.JRadioButton();
         jPanelGestionarTurno = new javax.swing.JPanel();
         jPanelGestionarCita = new javax.swing.JPanel();
+        jTextFieldMesCita = new javax.swing.JTextField();
+        jButtonMenosAnioFechaCita = new javax.swing.JButton();
+        jButtonMasAnioFechaCita = new javax.swing.JButton();
+        jTextFieldAnioCita = new javax.swing.JTextField();
+        jLabelFechaCita = new javax.swing.JLabel();
+        jTextFieldDiaCita = new javax.swing.JTextField();
+        jButtonMasMesFechaCita = new javax.swing.JButton();
+        jButtonMasDiaFechaCita = new javax.swing.JButton();
+        jButtonAltaCita = new javax.swing.JButton();
+        jButtonMenosDiaFechaCita = new javax.swing.JButton();
+        jButtonMenosMesFechaCita = new javax.swing.JButton();
+        jTextFieldDNIGestionarCita = new javax.swing.JTextField();
+        jLabelDNIGestionarCita = new javax.swing.JLabel();
+        jButtonLimpiarCita = new javax.swing.JButton();
+        jButtonMasHoraCita = new javax.swing.JButton();
+        jButtonMasMinutoCita = new javax.swing.JButton();
+        jTextFieldHoraCita = new javax.swing.JTextField();
+        jTextFieldMinutoCita = new javax.swing.JTextField();
+        jButtonMenosHoraCita = new javax.swing.JButton();
+        jButtonMenosMinutoCita = new javax.swing.JButton();
+        jLabelHoraCita = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextAreaInfo = new javax.swing.JTextArea();
+        jLabelGestionarPaciente5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jPanelEstadPersTipo = new javax.swing.JPanel();
         jPanelEstadPersFecha = new javax.swing.JPanel();
         jPanelEstadCitas = new javax.swing.JPanel();
@@ -327,6 +352,11 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabelGestionarCita1.setText("Gestionar Cita");
 
         jButtonGestionarCita.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Cita.png"))); // NOI18N
+        jButtonGestionarCita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonGestionarCitaMouseClicked(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout jPanelPrincipalLayout = new org.jdesktop.layout.GroupLayout(jPanelPrincipal);
         jPanelPrincipal.setLayout(jPanelPrincipalLayout);
@@ -341,7 +371,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jLabelEstadPersTipo1)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 99, Short.MAX_VALUE)
                 .add(jLabelGestionarCita1)
-                .add(103, 103, 103))
+                .add(104, 104, 104))
             .add(jPanelPrincipalLayout.createSequentialGroup()
                 .add(39, 39, 39)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -393,7 +423,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                     .add(jLabelGestionarPaciente3)
                     .add(jLabelGestionarTurno1)
                     .add(jLabelGestionarPersonal1))
-                .add(90, 90, 90))
+                .add(101, 101, 101))
         );
 
         jPanelPrincipal.setBounds(1, 10, 900, 520);
@@ -1080,18 +1110,301 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarTurno.setBounds(0, 0, 100, 100);
         ZonaTrabajo.add(jPanelGestionarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        jTextFieldMesCita.setEditable(false);
+        jTextFieldMesCita.setText("1");
+        jTextFieldMesCita.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldMesCitaActionPerformed(evt);
+            }
+        });
+
+        jButtonMenosAnioFechaCita.setText("-");
+        jButtonMenosAnioFechaCita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMenosAnioFechaCitaMouseClicked(evt);
+            }
+        });
+        jButtonMenosAnioFechaCita.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMenosAnioFechaCitaActionPerformed(evt);
+            }
+        });
+
+        jButtonMasAnioFechaCita.setText("+");
+        jButtonMasAnioFechaCita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMasAnioFechaCitaMouseClicked(evt);
+            }
+        });
+        jButtonMasAnioFechaCita.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMasAnioFechaCitaActionPerformed(evt);
+            }
+        });
+
+        jTextFieldAnioCita.setText("1950");
+        jTextFieldAnioCita.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldAnioCitaActionPerformed(evt);
+            }
+        });
+
+        jLabelFechaCita.setText("Fecha cita");
+
+        jTextFieldDiaCita.setEditable(false);
+        jTextFieldDiaCita.setText("1");
+
+        jButtonMasMesFechaCita.setText("+");
+        jButtonMasMesFechaCita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMasMesFechaCitaMouseClicked(evt);
+            }
+        });
+        jButtonMasMesFechaCita.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMasMesFechaCitaActionPerformed(evt);
+            }
+        });
+
+        jButtonMasDiaFechaCita.setText("+");
+        jButtonMasDiaFechaCita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMasDiaFechaCitaMouseClicked(evt);
+            }
+        });
+        jButtonMasDiaFechaCita.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMasDiaFechaCitaActionPerformed(evt);
+            }
+        });
+
+        jButtonAltaCita.setText("Alta");
+
+        jButtonMenosDiaFechaCita.setText("-");
+        jButtonMenosDiaFechaCita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMenosDiaFechaCitaMouseClicked(evt);
+            }
+        });
+        jButtonMenosDiaFechaCita.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMenosDiaFechaCitaActionPerformed(evt);
+            }
+        });
+
+        jButtonMenosMesFechaCita.setText("-");
+        jButtonMenosMesFechaCita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMenosMesFechaCitaMouseClicked(evt);
+            }
+        });
+        jButtonMenosMesFechaCita.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMenosMesFechaCitaActionPerformed(evt);
+            }
+        });
+
+        jLabelDNIGestionarCita.setText("DNI");
+
+        jButtonLimpiarCita.setText("Limpiar");
+        jButtonLimpiarCita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonLimpiarCitaMouseClicked(evt);
+            }
+        });
+        jButtonLimpiarCita.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLimpiarCitaActionPerformed(evt);
+            }
+        });
+
+        jButtonMasHoraCita.setText("+");
+        jButtonMasHoraCita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMasHoraCitaMouseClicked(evt);
+            }
+        });
+        jButtonMasHoraCita.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMasHoraCitaActionPerformed(evt);
+            }
+        });
+
+        jButtonMasMinutoCita.setText("+");
+        jButtonMasMinutoCita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMasMinutoCitaMouseClicked(evt);
+            }
+        });
+        jButtonMasMinutoCita.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMasMinutoCitaActionPerformed(evt);
+            }
+        });
+
+        jTextFieldHoraCita.setEditable(false);
+        jTextFieldHoraCita.setText("1");
+
+        jTextFieldMinutoCita.setEditable(false);
+        jTextFieldMinutoCita.setText("1");
+        jTextFieldMinutoCita.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldMinutoCitaActionPerformed(evt);
+            }
+        });
+
+        jButtonMenosHoraCita.setText("-");
+        jButtonMenosHoraCita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMenosHoraCitaMouseClicked(evt);
+            }
+        });
+        jButtonMenosHoraCita.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMenosHoraCitaActionPerformed(evt);
+            }
+        });
+
+        jButtonMenosMinutoCita.setText("-");
+        jButtonMenosMinutoCita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMenosMinutoCitaMouseClicked(evt);
+            }
+        });
+        jButtonMenosMinutoCita.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMenosMinutoCitaActionPerformed(evt);
+            }
+        });
+
+        jLabelHoraCita.setText("Hora cita");
+
+        jTextAreaInfo.setBackground(new java.awt.Color(255, 204, 102));
+        jTextAreaInfo.setColumns(17);
+        jTextAreaInfo.setEditable(false);
+        jTextAreaInfo.setFont(new java.awt.Font("Lucida Grande", 0, 18));
+        jTextAreaInfo.setRows(3);
+        jTextAreaInfo.setText("Introduce el DNI del paciente, la fecha y una hora para solicitar una cita.\nEn cambio, si desea consultar una cita, introduce solamente el DNI.");
+        jScrollPane1.setViewportView(jTextAreaInfo);
+
+        jLabelGestionarPaciente5.setFont(new java.awt.Font("Lucida Grande", 1, 48));
+        jLabelGestionarPaciente5.setText("Gestionar Cita Online");
+
+        jLabel4.setText("_____________________________________________________________________________");
+
         org.jdesktop.layout.GroupLayout jPanelGestionarCitaLayout = new org.jdesktop.layout.GroupLayout(jPanelGestionarCita);
         jPanelGestionarCita.setLayout(jPanelGestionarCitaLayout);
         jPanelGestionarCitaLayout.setHorizontalGroup(
             jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 100, Short.MAX_VALUE)
+            .add(jPanelGestionarCitaLayout.createSequentialGroup()
+                .addContainerGap(61, Short.MAX_VALUE)
+                .add(jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarCitaLayout.createSequentialGroup()
+                        .add(jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 780, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(jPanelGestionarCitaLayout.createSequentialGroup()
+                                .add(294, 294, 294)
+                                .add(jLabelDNIGestionarCita)
+                                .add(18, 18, 18)
+                                .add(jTextFieldDNIGestionarCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 95, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                        .add(60, 60, 60))
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarCitaLayout.createSequentialGroup()
+                        .add(jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jLabel4)
+                            .add(jLabelGestionarPaciente5))
+                        .add(174, 174, 174))))
+            .add(jPanelGestionarCitaLayout.createSequentialGroup()
+                .add(160, 160, 160)
+                .add(jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jPanelGestionarCitaLayout.createSequentialGroup()
+                        .add(37, 37, 37)
+                        .add(jLabelFechaCita)
+                        .add(334, 334, 334)
+                        .add(jLabelHoraCita))
+                    .add(jPanelGestionarCitaLayout.createSequentialGroup()
+                        .add(jButtonMasDiaFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(jButtonMasMesFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(jButtonMasAnioFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(263, 263, 263)
+                        .add(jButtonMasHoraCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(6, 6, 6)
+                        .add(jButtonMasMinutoCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jPanelGestionarCitaLayout.createSequentialGroup()
+                        .add(10, 10, 10)
+                        .add(jTextFieldDiaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 33, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(17, 17, 17)
+                        .add(jTextFieldMesCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 33, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(7, 7, 7)
+                        .add(jTextFieldAnioCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(273, 273, 273)
+                        .add(jTextFieldHoraCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 33, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(17, 17, 17)
+                        .add(jTextFieldMinutoCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 33, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jPanelGestionarCitaLayout.createSequentialGroup()
+                        .add(jButtonMenosDiaFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(jButtonMenosMesFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(jButtonMenosAnioFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(263, 263, 263)
+                        .add(jButtonMenosHoraCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(6, 6, 6)
+                        .add(jButtonMenosMinutoCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(222, Short.MAX_VALUE))
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarCitaLayout.createSequentialGroup()
+                .addContainerGap(341, Short.MAX_VALUE)
+                .add(jButtonLimpiarCita)
+                .add(39, 39, 39)
+                .add(jButtonAltaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 93, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(337, 337, 337))
         );
         jPanelGestionarCitaLayout.setVerticalGroup(
             jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 100, Short.MAX_VALUE)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarCitaLayout.createSequentialGroup()
+                .addContainerGap(40, Short.MAX_VALUE)
+                .add(jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jPanelGestionarCitaLayout.createSequentialGroup()
+                        .add(50, 50, 50)
+                        .add(jLabel4))
+                    .add(jLabelGestionarPaciente5))
+                .add(18, 18, 18)
+                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(31, 31, 31)
+                .add(jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jPanelGestionarCitaLayout.createSequentialGroup()
+                        .add(6, 6, 6)
+                        .add(jLabelDNIGestionarCita))
+                    .add(jTextFieldDNIGestionarCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jLabelFechaCita)
+                    .add(jLabelHoraCita))
+                .add(7, 7, 7)
+                .add(jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jButtonMasDiaFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jButtonMasMesFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jButtonMasAnioFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jButtonMasHoraCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jButtonMasMinutoCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jTextFieldDiaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jTextFieldMesCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jTextFieldAnioCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jTextFieldHoraCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jTextFieldMinutoCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(2, 2, 2)
+                .add(jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jButtonMenosDiaFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jButtonMenosMesFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jButtonMenosAnioFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jButtonMenosHoraCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jButtonMenosMinutoCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(13, 13, 13)
+                .add(jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jButtonLimpiarCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 39, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jButtonAltaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 39, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(35, 35, 35))
         );
 
-        jPanelGestionarCita.setBounds(0, 0, 100, 100);
+        jPanelGestionarCita.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelGestionarCita, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         org.jdesktop.layout.GroupLayout jPanelEstadPersTipoLayout = new org.jdesktop.layout.GroupLayout(jPanelEstadPersTipo);
@@ -1485,6 +1798,222 @@ public class UI_Administrador extends javax.swing.JFrame {
         jTextFieldFechaNacimientoAnioPersonal.setText(numString);
     }//GEN-LAST:event_jButtonMenosAnioPersonalMouseClicked
 
+    private void jTextFieldMesCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMesCitaActionPerformed
+        // TODO add your handling code here:
+}//GEN-LAST:event_jTextFieldMesCitaActionPerformed
+
+    private void jButtonMenosAnioFechaCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosAnioFechaCitaMouseClicked
+        // TODO add your handling code here:
+        int num = 0;
+        num = Integer.parseInt(jTextFieldAnioCita.getText());
+
+        if(num > 1900)
+            num --;
+
+        String numString;
+        numString = String.valueOf(num);
+        jTextFieldAnioCita.setText(numString);
+}//GEN-LAST:event_jButtonMenosAnioFechaCitaMouseClicked
+
+    private void jButtonMenosAnioFechaCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosAnioFechaCitaActionPerformed
+        // TODO add your handling code here:
+}//GEN-LAST:event_jButtonMenosAnioFechaCitaActionPerformed
+
+    private void jButtonMasAnioFechaCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasAnioFechaCitaMouseClicked
+        // TODO add your handling code here:
+        int num = 0;
+        int anioActual = 0;
+
+        num = Integer.parseInt(jTextFieldAnioCita.getText());
+
+        Calendar fechaActual = Calendar.getInstance();
+        anioActual = fechaActual.get(Calendar.YEAR);
+
+        if(num < anioActual)
+            num ++;
+
+        String numString;
+        numString = String.valueOf(num);
+        jTextFieldAnioCita.setText(numString);
+}//GEN-LAST:event_jButtonMasAnioFechaCitaMouseClicked
+
+    private void jButtonMasAnioFechaCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasAnioFechaCitaActionPerformed
+        // TODO add your handling code here:
+}//GEN-LAST:event_jButtonMasAnioFechaCitaActionPerformed
+
+    private void jTextFieldAnioCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldAnioCitaActionPerformed
+        // TODO add your handling code here:
+}//GEN-LAST:event_jTextFieldAnioCitaActionPerformed
+
+    private void jButtonMasMesFechaCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasMesFechaCitaMouseClicked
+        // TODO add your handling code here:
+        int num = 0;
+
+        num = Integer.parseInt(jTextFieldMesCita.getText());
+
+        if(num < 12)
+            num ++;
+
+        String numString;
+        numString = String.valueOf(num);
+        jTextFieldMesCita.setText(numString);
+}//GEN-LAST:event_jButtonMasMesFechaCitaMouseClicked
+
+    private void jButtonMasMesFechaCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasMesFechaCitaActionPerformed
+        // TODO add your handling code here:
+}//GEN-LAST:event_jButtonMasMesFechaCitaActionPerformed
+
+    private void jButtonMasDiaFechaCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasDiaFechaCitaMouseClicked
+        // TODO add your handling code here:
+        int num = 0;
+
+        num = Integer.parseInt(jTextFieldDiaCita.getText());
+
+        if(num < 31)
+            num ++;
+
+        String numString;
+        numString = String.valueOf(num);
+        jTextFieldDiaCita.setText(numString);
+}//GEN-LAST:event_jButtonMasDiaFechaCitaMouseClicked
+
+    private void jButtonMasDiaFechaCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasDiaFechaCitaActionPerformed
+        // TODO add your handling code here:
+}//GEN-LAST:event_jButtonMasDiaFechaCitaActionPerformed
+
+    private void jButtonMenosDiaFechaCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosDiaFechaCitaMouseClicked
+        // TODO add your handling code here:
+        int num = 0;
+
+        num = Integer.parseInt(jTextFieldDiaCita.getText());
+
+        if(num > 1)
+            num --;
+
+        String numString;
+        numString = String.valueOf(num);
+        jTextFieldDiaCita.setText(numString);
+}//GEN-LAST:event_jButtonMenosDiaFechaCitaMouseClicked
+
+    private void jButtonMenosDiaFechaCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosDiaFechaCitaActionPerformed
+        // TODO add your handling code here:
+}//GEN-LAST:event_jButtonMenosDiaFechaCitaActionPerformed
+
+    private void jButtonMenosMesFechaCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosMesFechaCitaMouseClicked
+        // TODO add your handling code here:
+        int num = 0;
+
+        num = Integer.parseInt(jTextFieldMesCita.getText());
+
+        if(num > 1)
+            num --;
+
+        String numString;
+        numString = String.valueOf(num);
+        jTextFieldMesCita.setText(numString);
+}//GEN-LAST:event_jButtonMenosMesFechaCitaMouseClicked
+
+    private void jButtonMenosMesFechaCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosMesFechaCitaActionPerformed
+        // TODO add your handling code here:
+}//GEN-LAST:event_jButtonMenosMesFechaCitaActionPerformed
+
+    private void jButtonLimpiarCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonLimpiarCitaMouseClicked
+        // TODO add your handling code here:
+        limpiarFormulario("GestionarCitaOnline");
+}//GEN-LAST:event_jButtonLimpiarCitaMouseClicked
+
+    private void jButtonLimpiarCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimpiarCitaActionPerformed
+        // TODO add your handling code here:
+}//GEN-LAST:event_jButtonLimpiarCitaActionPerformed
+
+    private void jButtonMasHoraCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasHoraCitaMouseClicked
+        // TODO add your handling code here:
+        int hora = 0;
+
+        hora = Integer.parseInt(jTextFieldHoraCita.getText());
+
+        if(hora < 24){
+            hora ++;
+        }else{
+            hora = 0;
+        }
+
+        String numString;
+        numString = String.valueOf(hora);
+        jTextFieldHoraCita.setText(numString);
+}//GEN-LAST:event_jButtonMasHoraCitaMouseClicked
+
+    private void jButtonMasHoraCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasHoraCitaActionPerformed
+        // TODO add your handling code here:
+}//GEN-LAST:event_jButtonMasHoraCitaActionPerformed
+
+    private void jButtonMasMinutoCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasMinutoCitaMouseClicked
+        // TODO add your handling code here:
+        int minuto = 0;
+
+        minuto = Integer.parseInt(jTextFieldMinutoCita.getText());
+
+        if(minuto < 60)
+            minuto ++;
+
+        String numString;
+        numString = String.valueOf(minuto);
+        jTextFieldMinutoCita.setText(numString);
+}//GEN-LAST:event_jButtonMasMinutoCitaMouseClicked
+
+    private void jButtonMasMinutoCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasMinutoCitaActionPerformed
+        // TODO add your handling code here:
+}//GEN-LAST:event_jButtonMasMinutoCitaActionPerformed
+
+    private void jTextFieldMinutoCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMinutoCitaActionPerformed
+        // TODO add your handling code here:
+}//GEN-LAST:event_jTextFieldMinutoCitaActionPerformed
+
+    private void jButtonMenosHoraCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosHoraCitaMouseClicked
+        // TODO add your handling code here:
+        int hora = 0;
+
+        hora = Integer.parseInt(jTextFieldHoraCita.getText());
+
+        if(hora > 0){
+            hora --;
+        }else{
+            hora = 24;
+        }
+
+        String numString;
+        numString = String.valueOf(hora);
+        jTextFieldHoraCita.setText(numString);
+}//GEN-LAST:event_jButtonMenosHoraCitaMouseClicked
+
+    private void jButtonMenosHoraCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosHoraCitaActionPerformed
+        // TODO add your handling code here:
+}//GEN-LAST:event_jButtonMenosHoraCitaActionPerformed
+
+    private void jButtonMenosMinutoCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosMinutoCitaMouseClicked
+        // TODO add your handling code here:
+        int minuto = 0;
+
+        minuto = Integer.parseInt(jTextFieldMinutoCita.getText());
+
+        if(minuto > 0)
+            minuto --;
+
+        String numString;
+        numString = String.valueOf(minuto);
+        jTextFieldMinutoCita.setText(numString);
+}//GEN-LAST:event_jButtonMenosMinutoCitaMouseClicked
+
+    private void jButtonMenosMinutoCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosMinutoCitaActionPerformed
+        // TODO add your handling code here:
+}//GEN-LAST:event_jButtonMenosMinutoCitaActionPerformed
+
+    private void jButtonGestionarCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGestionarCitaMouseClicked
+        // TODO add your handling code here:
+        mostrarPanel("GestionarCita");
+
+    }//GEN-LAST:event_jButtonGestionarCitaMouseClicked
+
 
     /*Comprueba que la fecha introducida es correcta
      * 
@@ -1560,18 +2089,22 @@ public class UI_Administrador extends javax.swing.JFrame {
      *
      *@param persona, string que indica si se trata del formulario de Paciente o Personal
      */
-    private void limpiarFormulario(String persona){
+    private void limpiarFormulario(String formulario){
 
         String diaActual;
         String mesActual;
         String anioActual;
+        String horaActual;
+        String minutoActual;
 
         Calendar fechaActual = Calendar.getInstance();
         diaActual = Integer.toString(fechaActual.get(Calendar.DATE));
         mesActual = Integer.toString(fechaActual.get(Calendar.MONTH));
         anioActual = Integer.toString(fechaActual.get(Calendar.YEAR));
+        horaActual = Integer.toString(fechaActual.get(Calendar.HOUR));
+        minutoActual = Integer.toString(fechaActual.get(Calendar.MINUTE));
 
-        if(persona.equals("GestionarPaciente")){
+        if(formulario.equals("GestionarPaciente")){
             jTextFieldNombrePaciente.setText("");
             jTextFieldApellidosPaciente.setText("");
             jTextFieldDNIPaciente.setText("");
@@ -1586,7 +2119,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             jLabelFotoPaciente.setIcon(null);
         }
 
-        if(persona.equals("GestionarPersonal")){
+        if(formulario.equals("GestionarPersonal")){
             jTextFieldNombrePersonal.setText("");
             jTextFieldApellidosPersonal.setText("");
             jTextFieldDNIPersonal.setText("");
@@ -1599,6 +2132,15 @@ public class UI_Administrador extends javax.swing.JFrame {
             jTextFieldFechaNacimientoMesPersonal.setText(mesActual);
             jTextFieldFechaNacimientoAnioPersonal.setText(anioActual);
             jLabelFotoPersonal.setIcon(null);
+        }
+
+         if(formulario.equals("GestionarCitaOnline")){
+            jTextFieldDNIGestionarCita.setText("");
+            jTextFieldDiaCita.setText(diaActual);
+            jTextFieldMesCita.setText(mesActual);
+            jTextFieldAnioCita.setText(anioActual);
+            jTextFieldHoraCita.setText(mesActual);
+            jTextFieldMinutoCita.setText(mesActual);
         }
     }
 
@@ -1921,6 +2463,7 @@ public class UI_Administrador extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLayeredPane ZonaTrabajo;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton jButtonAltaCita;
     private javax.swing.JButton jButtonAltaPaciente;
     private javax.swing.JButton jButtonAltaPersonal;
     private javax.swing.JButton jButtonConsultarPaciente;
@@ -1934,29 +2477,44 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JButton jButtonGestionarPaciente;
     private javax.swing.JButton jButtonGestionarPersonal;
     private javax.swing.JButton jButtonGestionarTurno;
+    private javax.swing.JButton jButtonLimpiarCita;
     private javax.swing.JButton jButtonLimpiarPaciente;
     private javax.swing.JButton jButtonLimpiarPersonal;
+    private javax.swing.JButton jButtonMasAnioFechaCita;
     private javax.swing.JButton jButtonMasAnioPaciente;
     private javax.swing.JButton jButtonMasAnioPersonal;
+    private javax.swing.JButton jButtonMasDiaFechaCita;
     private javax.swing.JButton jButtonMasDiaPaciente;
     private javax.swing.JButton jButtonMasDiaPersonal;
+    private javax.swing.JButton jButtonMasHoraCita;
+    private javax.swing.JButton jButtonMasMesFechaCita;
     private javax.swing.JButton jButtonMasMesPaciente;
     private javax.swing.JButton jButtonMasMesPersonal;
+    private javax.swing.JButton jButtonMasMinutoCita;
+    private javax.swing.JButton jButtonMenosAnioFechaCita;
     private javax.swing.JButton jButtonMenosAnioPaciente;
     private javax.swing.JButton jButtonMenosAnioPersonal;
+    private javax.swing.JButton jButtonMenosDiaFechaCita;
     private javax.swing.JButton jButtonMenosDiaPaciente;
     private javax.swing.JButton jButtonMenosDiaPersonal;
+    private javax.swing.JButton jButtonMenosHoraCita;
+    private javax.swing.JButton jButtonMenosMesFechaCita;
     private javax.swing.JButton jButtonMenosMesPaciente;
     private javax.swing.JButton jButtonMenosMesPersonal;
+    private javax.swing.JButton jButtonMenosMinutoCita;
+    private javax.swing.JButton jButtonPedirAltaCita;
+    private javax.swing.JButton jButtonPedirAltaCita1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabelApellidosPaciente;
     private javax.swing.JLabel jLabelApellidosPersonal;
     private javax.swing.JLabel jLabelAyuda;
     private javax.swing.JLabel jLabelCentroMedico;
     private javax.swing.JLabel jLabelContraseniaPaciente;
     private javax.swing.JLabel jLabelContraseniaPersonal;
+    private javax.swing.JLabel jLabelDNIGestionarCita;
     private javax.swing.JLabel jLabelDNIPaciente;
     private javax.swing.JLabel jLabelDNIPersonal;
     private javax.swing.JLabel jLabelDireccionPaciente;
@@ -1966,6 +2524,7 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelEstadCitas1;
     private javax.swing.JLabel jLabelEstadPersFecha1;
     private javax.swing.JLabel jLabelEstadPersTipo1;
+    private javax.swing.JLabel jLabelFechaCita;
     private javax.swing.JLabel jLabelFechaNacimiento2;
     private javax.swing.JLabel jLabelFechaNacimientoPaciente;
     private javax.swing.JLabel jLabelFotoPaciente;
@@ -1976,8 +2535,10 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelGestionarPaciente2;
     private javax.swing.JLabel jLabelGestionarPaciente3;
     private javax.swing.JLabel jLabelGestionarPaciente4;
+    private javax.swing.JLabel jLabelGestionarPaciente5;
     private javax.swing.JLabel jLabelGestionarPersonal1;
     private javax.swing.JLabel jLabelGestionarTurno1;
+    private javax.swing.JLabel jLabelHoraCita;
     private javax.swing.JLabel jLabelIcono;
     private javax.swing.JLabel jLabelIconoAyuda;
     private javax.swing.JLabel jLabelIconoInicio;
@@ -1999,6 +2560,8 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelEstadPersFecha;
     private javax.swing.JPanel jPanelEstadPersTipo;
     private javax.swing.JPanel jPanelGestionarCita;
+    private javax.swing.JPanel jPanelGestionarCitaOnline;
+    private javax.swing.JPanel jPanelGestionarCitaOnline1;
     private javax.swing.JPanel jPanelGestionarPaciente;
     private javax.swing.JPanel jPanelGestionarPersonal;
     private javax.swing.JPanel jPanelGestionarTurno;
@@ -2008,12 +2571,17 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButtonFarmaceutico;
     private javax.swing.JRadioButton jRadioButtonMedico;
     private javax.swing.JRadioButton jRadioButtonRadiologo;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextAreaInfo;
+    private javax.swing.JTextField jTextFieldAnioCita;
     private javax.swing.JTextField jTextFieldApellidosPaciente;
     private javax.swing.JTextField jTextFieldApellidosPersonal;
     private javax.swing.JTextField jTextFieldContraseniaPaciente;
     private javax.swing.JTextField jTextFieldContraseniaPersonal;
+    private javax.swing.JTextField jTextFieldDNIGestionarCita;
     private javax.swing.JTextField jTextFieldDNIPaciente;
     private javax.swing.JTextField jTextFieldDNIPersonal;
+    private javax.swing.JTextField jTextFieldDiaCita;
     private javax.swing.JTextField jTextFieldDireccionPaciente;
     private javax.swing.JTextField jTextFieldDireccionPersonal;
     private javax.swing.JTextField jTextFieldEmailPaciente;
@@ -2024,8 +2592,11 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldFechaNacimientoDiaPersonal;
     private javax.swing.JTextField jTextFieldFechaNacimientoMesPaciente;
     private javax.swing.JTextField jTextFieldFechaNacimientoMesPersonal;
+    private javax.swing.JTextField jTextFieldHoraCita;
     private javax.swing.JTextField jTextFieldLugarNacimientoPaciente;
     private javax.swing.JTextField jTextFieldLugarNacimientoPersonal;
+    private javax.swing.JTextField jTextFieldMesCita;
+    private javax.swing.JTextField jTextFieldMinutoCita;
     private javax.swing.JTextField jTextFieldNombrePaciente;
     private javax.swing.JTextField jTextFieldNombrePersonal;
     private javax.swing.JTextField jTextFieldTelefonoPaciente;
