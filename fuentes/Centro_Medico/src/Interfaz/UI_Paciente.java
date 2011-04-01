@@ -109,8 +109,6 @@ public class UI_Paciente extends javax.swing.JFrame {
         jButtonAltaCita = new javax.swing.JButton();
         jButtonMenosDiaFecha = new javax.swing.JButton();
         jButtonMenosMesFecha = new javax.swing.JButton();
-        jTextFieldDNIPacienteCitaAlta = new javax.swing.JTextField();
-        jLabelDNIPacienteCita = new javax.swing.JLabel();
         jLabelGestionarPaciente2 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jButtonLimpiarCita = new javax.swing.JButton();
@@ -294,8 +292,8 @@ public class UI_Paciente extends javax.swing.JFrame {
             .add(jPanelPrincipalLayout.createSequentialGroup()
                 .add(29, 29, 29)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE))
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelGestionarPaciente3)
@@ -314,15 +312,30 @@ public class UI_Paciente extends javax.swing.JFrame {
         jLabelGestionarPaciente4.setText("Gestionar Paciente");
 
         jTextFieldNombrePaciente.setEditable(false);
+        jTextFieldNombrePaciente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldNombrePacienteKeyTyped(evt);
+            }
+        });
 
         jLabelFotoPaciente.setBackground(new java.awt.Color(255, 255, 255));
         jLabelFotoPaciente.setForeground(new java.awt.Color(255, 255, 255));
 
         jTextFieldTelefonoPaciente.setEditable(false);
+        jTextFieldTelefonoPaciente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldTelefonoPacienteKeyTyped(evt);
+            }
+        });
 
         jLabelContraseniaPaciente.setText("Contraseña");
 
         jTextFieldDNIPaciente.setEditable(false);
+        jTextFieldDNIPaciente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldDNIPacienteKeyTyped(evt);
+            }
+        });
 
         jLabelNombrePaciente.setText("Nombre");
 
@@ -331,6 +344,11 @@ public class UI_Paciente extends javax.swing.JFrame {
         jLabelDNIPaciente.setText("DNI");
 
         jTextFieldLugarNacimientoPaciente.setEditable(false);
+        jTextFieldLugarNacimientoPaciente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldLugarNacimientoPacienteKeyTyped(evt);
+            }
+        });
 
         jLabelTelefonoPaciente.setText("Teléfono");
 
@@ -362,6 +380,11 @@ public class UI_Paciente extends javax.swing.JFrame {
         jLabelApellidosPaciente.setText("Apellidos");
 
         jTextFieldApellidosPaciente.setEditable(false);
+        jTextFieldApellidosPaciente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldApellidosPacienteKeyTyped(evt);
+            }
+        });
 
         jButtonMasDiaPaciente.setText("+");
         jButtonMasDiaPaciente.setEnabled(false);
@@ -405,6 +428,11 @@ public class UI_Paciente extends javax.swing.JFrame {
         jLabelEmailPaciente.setText("Email");
 
         jTextFieldDireccionPaciente.setEditable(false);
+        jTextFieldDireccionPaciente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldDireccionPacienteKeyTyped(evt);
+            }
+        });
 
         jTextFieldFechaNacimientoDiaPaciente.setEditable(false);
         jTextFieldFechaNacimientoDiaPaciente.setText("1");
@@ -423,6 +451,11 @@ public class UI_Paciente extends javax.swing.JFrame {
         });
 
         jTextFieldEmailPaciente.setEditable(false);
+        jTextFieldEmailPaciente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldEmailPacienteKeyTyped(evt);
+            }
+        });
 
         jTextFieldFechaNacimientoAnioPaciente.setEditable(false);
         jTextFieldFechaNacimientoAnioPaciente.setText("1950");
@@ -452,69 +485,72 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarPacienteLayout.createSequentialGroup()
                 .addContainerGap(111, Short.MAX_VALUE)
-                .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanelGestionarPacienteLayout.createSequentialGroup()
-                        .add(99, 99, 99)
+                .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarPacienteLayout.createSequentialGroup()
                         .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jLabel3)
                             .add(jPanelGestionarPacienteLayout.createSequentialGroup()
-                                .add(1, 1, 1)
-                                .add(jLabelGestionarPaciente4))))
+                                .add(99, 99, 99)
+                                .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(jLabel3)
+                                    .add(jPanelGestionarPacienteLayout.createSequentialGroup()
+                                        .add(1, 1, 1)
+                                        .add(jLabelGestionarPaciente4))))
+                            .add(jPanelGestionarPacienteLayout.createSequentialGroup()
+                                .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(jLabelFechaNacimientoPaciente)
+                                    .add(jPanelGestionarPacienteLayout.createSequentialGroup()
+                                        .add(jButtonMasDiaPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .add(jButtonMasMesPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .add(jButtonMasAnioPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                    .add(jPanelGestionarPacienteLayout.createSequentialGroup()
+                                        .add(10, 10, 10)
+                                        .add(jTextFieldFechaNacimientoDiaPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 33, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .add(17, 17, 17)
+                                        .add(jTextFieldFechaNacimientoMesPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 33, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .add(7, 7, 7)
+                                        .add(jTextFieldFechaNacimientoAnioPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                    .add(jPanelGestionarPacienteLayout.createSequentialGroup()
+                                        .add(jButtonMenosDiaPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .add(jButtonMenosMesPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .add(jButtonMenosAnioPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                                .add(215, 215, 215)
+                                .add(jLabelFotografiaPaciente)
+                                .add(34, 34, 34)
+                                .add(jLabelFotoPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 130, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                            .add(jPanelGestionarPacienteLayout.createSequentialGroup()
+                                .add(jTextFieldDireccionPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 370, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(40, 40, 40)
+                                .add(jTextFieldEmailPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 289, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                            .add(jPanelGestionarPacienteLayout.createSequentialGroup()
+                                .add(jLabelDireccionPaciente)
+                                .add(350, 350, 350)
+                                .add(jLabelEmailPaciente))
+                            .add(jPanelGestionarPacienteLayout.createSequentialGroup()
+                                .add(jLabelNombrePaciente)
+                                .add(200, 200, 200)
+                                .add(jLabelApellidosPaciente)
+                                .add(291, 291, 291)
+                                .add(jLabelDNIPaciente))
+                            .add(jPanelGestionarPacienteLayout.createSequentialGroup()
+                                .add(jTextFieldNombrePaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 210, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(40, 40, 40)
+                                .add(jTextFieldApellidosPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 290, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(60, 60, 60)
+                                .add(jTextFieldDNIPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 95, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                        .add(90, 90, 90))
                     .add(jPanelGestionarPacienteLayout.createSequentialGroup()
                         .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jLabelFechaNacimientoPaciente)
-                            .add(jPanelGestionarPacienteLayout.createSequentialGroup()
-                                .add(jButtonMasDiaPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .add(jButtonMasMesPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .add(jButtonMasAnioPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                            .add(jPanelGestionarPacienteLayout.createSequentialGroup()
-                                .add(10, 10, 10)
-                                .add(jTextFieldFechaNacimientoDiaPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 33, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .add(17, 17, 17)
-                                .add(jTextFieldFechaNacimientoMesPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 33, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .add(7, 7, 7)
-                                .add(jTextFieldFechaNacimientoAnioPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                            .add(jPanelGestionarPacienteLayout.createSequentialGroup()
-                                .add(jButtonMenosDiaPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .add(jButtonMenosMesPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .add(jButtonMenosAnioPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                        .add(215, 215, 215)
-                        .add(jLabelFotografiaPaciente)
-                        .add(34, 34, 34)
-                        .add(jLabelFotoPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 130, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanelGestionarPacienteLayout.createSequentialGroup()
-                        .add(jLabelTelefonoPaciente)
-                        .add(165, 165, 165)
-                        .add(jLabelContraseniaPaciente)
-                        .add(109, 109, 109)
-                        .add(jLabelLugarNacimientoPaciente))
-                    .add(jPanelGestionarPacienteLayout.createSequentialGroup()
-                        .add(jTextFieldTelefonoPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 130, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(90, 90, 90)
-                        .add(jTextFieldContraseniaPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(70, 70, 70)
-                        .add(jTextFieldLugarNacimientoPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 300, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanelGestionarPacienteLayout.createSequentialGroup()
-                        .add(jTextFieldDireccionPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 370, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(40, 40, 40)
-                        .add(jTextFieldEmailPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 289, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanelGestionarPacienteLayout.createSequentialGroup()
-                        .add(jLabelDireccionPaciente)
-                        .add(350, 350, 350)
-                        .add(jLabelEmailPaciente))
-                    .add(jPanelGestionarPacienteLayout.createSequentialGroup()
-                        .add(jLabelNombrePaciente)
-                        .add(200, 200, 200)
-                        .add(jLabelApellidosPaciente)
-                        .add(291, 291, 291)
-                        .add(jLabelDNIPaciente))
-                    .add(jPanelGestionarPacienteLayout.createSequentialGroup()
-                        .add(jTextFieldNombrePaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 210, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(40, 40, 40)
-                        .add(jTextFieldApellidosPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 290, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(60, 60, 60)
-                        .add(jTextFieldDNIPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 95, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .add(89, 89, 89))
+                            .add(jLabelTelefonoPaciente)
+                            .add(jTextFieldTelefonoPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 130, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .add(63, 63, 63)
+                        .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jLabelLugarNacimientoPaciente)
+                            .add(jTextFieldLugarNacimientoPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 300, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jTextFieldContraseniaPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(jLabelContraseniaPaciente))
+                        .add(107, 107, 107))))
         );
         jPanelGestionarPacienteLayout.setVerticalGroup(
             jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -543,16 +579,19 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jTextFieldDireccionPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jTextFieldEmailPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(26, 26, 26)
-                .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jLabelTelefonoPaciente)
-                    .add(jLabelContraseniaPaciente)
-                    .add(jLabelLugarNacimientoPaciente))
-                .add(4, 4, 4)
-                .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jTextFieldTelefonoPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jTextFieldContraseniaPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jTextFieldLugarNacimientoPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(30, 30, 30)
+                .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(jPanelGestionarPacienteLayout.createSequentialGroup()
+                        .add(jLabelTelefonoPaciente)
+                        .add(4, 4, 4)
+                        .add(jTextFieldTelefonoPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jPanelGestionarPacienteLayout.createSequentialGroup()
+                        .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(jLabelLugarNacimientoPaciente)
+                            .add(jLabelContraseniaPaciente))
+                        .add(4, 4, 4)
+                        .add(jTextFieldLugarNacimientoPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jTextFieldContraseniaPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelGestionarPacienteLayout.createSequentialGroup()
@@ -577,7 +616,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                         .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(jLabelFotoPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(jLabelFotografiaPaciente))))
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
         jPanelGestionarPaciente.setBounds(1, 0, 900, 530);
@@ -594,7 +633,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jTextFieldMesCitaActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jTextFieldMesCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(219, 372, 33, -1));
+        jPanelGestionarCitaOnlineAlta.add(jTextFieldMesCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 340, 33, -1));
 
         jButtonMenosAnioPersonal.setText("-");
         jButtonMenosAnioPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -607,7 +646,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonMenosAnioPersonalActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jButtonMenosAnioPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(259, 402, 50, 40));
+        jPanelGestionarCitaOnlineAlta.add(jButtonMenosAnioPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 370, 50, 40));
 
         jButtonMasAnioFecha.setText("+");
         jButtonMasAnioFecha.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -620,7 +659,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonMasAnioFechaActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jButtonMasAnioFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(259, 332, 50, 40));
+        jPanelGestionarCitaOnlineAlta.add(jButtonMasAnioFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 50, 40));
 
         jTextFieldAnioCita.setText("1950");
         jTextFieldAnioCita.addActionListener(new java.awt.event.ActionListener() {
@@ -628,14 +667,14 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jTextFieldAnioCitaActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jTextFieldAnioCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(259, 372, 50, -1));
+        jPanelGestionarCitaOnlineAlta.add(jTextFieldAnioCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 340, 50, -1));
 
         jLabelFecha.setText("Fecha cita");
-        jPanelGestionarCitaOnlineAlta.add(jLabelFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(196, 309, -1, -1));
+        jPanelGestionarCitaOnlineAlta.add(jLabelFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, -1, -1));
 
         jTextFieldDiaCita.setEditable(false);
         jTextFieldDiaCita.setText("1");
-        jPanelGestionarCitaOnlineAlta.add(jTextFieldDiaCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 372, 33, -1));
+        jPanelGestionarCitaOnlineAlta.add(jTextFieldDiaCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, 33, -1));
 
         jButtonMasMesFecha.setText("+");
         jButtonMasMesFecha.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -648,7 +687,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonMasMesFechaActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jButtonMasMesFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(209, 332, 50, 40));
+        jPanelGestionarCitaOnlineAlta.add(jButtonMasMesFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 300, 50, 40));
 
         jButtonMasDiaFecha.setText("+");
         jButtonMasDiaFecha.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -661,7 +700,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonMasDiaFechaActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jButtonMasDiaFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 332, 50, 40));
+        jPanelGestionarCitaOnlineAlta.add(jButtonMasDiaFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, 50, 40));
 
         jButtonAltaCita.setText("Alta");
         jPanelGestionarCitaOnlineAlta.add(jButtonAltaCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 460, 93, 39));
@@ -677,7 +716,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonMenosDiaFechaActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jButtonMenosDiaFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 402, 50, 40));
+        jPanelGestionarCitaOnlineAlta.add(jButtonMenosDiaFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, 50, 40));
 
         jButtonMenosMesFecha.setText("-");
         jButtonMenosMesFecha.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -690,11 +729,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonMenosMesFechaActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jButtonMenosMesFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(209, 402, 50, 40));
-        jPanelGestionarCitaOnlineAlta.add(jTextFieldDNIPacienteCitaAlta, new org.netbeans.lib.awtextra.AbsoluteConstraints(396, 261, 95, -1));
-
-        jLabelDNIPacienteCita.setText("DNI");
-        jPanelGestionarCitaOnlineAlta.add(jLabelDNIPacienteCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(354, 267, -1, -1));
+        jPanelGestionarCitaOnlineAlta.add(jButtonMenosMesFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 370, 50, 40));
 
         jLabelGestionarPaciente2.setFont(new java.awt.Font("Lucida Grande", 1, 48));
         jLabelGestionarPaciente2.setText("Gestionar Cita Online");
@@ -727,7 +762,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonMasHoraActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jButtonMasHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(572, 332, 50, 40));
+        jPanelGestionarCitaOnlineAlta.add(jButtonMasHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 300, 50, 40));
 
         jButtonMasMinuto.setText("+");
         jButtonMasMinuto.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -740,11 +775,11 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonMasMinutoActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jButtonMasMinuto, new org.netbeans.lib.awtextra.AbsoluteConstraints(628, 332, 50, 40));
+        jPanelGestionarCitaOnlineAlta.add(jButtonMasMinuto, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 300, 50, 40));
 
         jTextFieldHoraCita.setEditable(false);
         jTextFieldHoraCita.setText("1");
-        jPanelGestionarCitaOnlineAlta.add(jTextFieldHoraCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(582, 372, 33, -1));
+        jPanelGestionarCitaOnlineAlta.add(jTextFieldHoraCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 33, -1));
 
         jTextFieldMinutoCita.setEditable(false);
         jTextFieldMinutoCita.setText("1");
@@ -753,7 +788,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jTextFieldMinutoCitaActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jTextFieldMinutoCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(632, 372, 33, -1));
+        jPanelGestionarCitaOnlineAlta.add(jTextFieldMinutoCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 340, 33, -1));
 
         jButtonMenosHora.setText("-");
         jButtonMenosHora.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -766,7 +801,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonMenosHoraActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jButtonMenosHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(572, 402, 50, 40));
+        jPanelGestionarCitaOnlineAlta.add(jButtonMenosHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 370, 50, 40));
 
         jButtonMenosMinuto.setText("-");
         jButtonMenosMinuto.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -779,10 +814,10 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonMenosMinutoActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jButtonMenosMinuto, new org.netbeans.lib.awtextra.AbsoluteConstraints(628, 402, 50, 40));
+        jPanelGestionarCitaOnlineAlta.add(jButtonMenosMinuto, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 370, 50, 40));
 
         jLabelHoraCita.setText("Hora cita");
-        jPanelGestionarCitaOnlineAlta.add(jLabelHoraCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(593, 309, -1, -1));
+        jPanelGestionarCitaOnlineAlta.add(jLabelHoraCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 280, -1, -1));
 
         jTextAreaInfo.setBackground(new java.awt.Color(255, 204, 102));
         jTextAreaInfo.setColumns(17);
@@ -1234,6 +1269,81 @@ public class UI_Paciente extends javax.swing.JFrame {
         mostrarPanel("GestionarCitaOnlineAlta");
     }//GEN-LAST:event_jButtonPedirAltaCitaMouseClicked
 
+    private void jTextFieldTelefonoPacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldTelefonoPacienteKeyTyped
+        // TODO add your handling code here:
+
+        /**Comprobamos que no se teclee una letra*/
+        char teclaPresionada = evt.getKeyChar();
+        if(Character.isDigit(teclaPresionada) == false)
+            evt.consume();
+    }//GEN-LAST:event_jTextFieldTelefonoPacienteKeyTyped
+
+    private void jTextFieldNombrePacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldNombrePacienteKeyTyped
+        // TODO add your handling code here:
+
+        /**Comprobamos que no se teclee un número*/
+        char teclaPresionada = evt.getKeyChar();
+        if(Character.isDigit(teclaPresionada) == true)
+            evt.consume();
+}//GEN-LAST:event_jTextFieldNombrePacienteKeyTyped
+
+    private void jTextFieldDNIPacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldDNIPacienteKeyTyped
+        // TODO add your handling code here:
+
+        /**Limitamos a que el DNI siempre sea correcto sintácticamente*/
+        char teclaPresionada = evt.getKeyChar();
+
+        if(jTextFieldDNIPaciente.getText().length() < 8)
+            if(Character.isDigit(teclaPresionada) == false)
+                evt.consume();
+
+        if(jTextFieldDNIPaciente.getText().length() == 8)
+            if(Character.isDigit(teclaPresionada) == true){
+                evt.consume();
+            }else if(Character.isLowerCase(teclaPresionada)){
+                jTextFieldDNIPaciente.setText(jTextFieldDNIPaciente.getText().toUpperCase());
+            }
+
+        if(jTextFieldDNIPaciente.getText().length() > 8)
+            evt.consume();
+}//GEN-LAST:event_jTextFieldDNIPacienteKeyTyped
+
+    private void jTextFieldApellidosPacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldApellidosPacienteKeyTyped
+        // TODO add your handling code here:
+
+        /**Comprobamos que no se teclee un número*/
+        char teclaPresionada = evt.getKeyChar();
+        if(Character.isDigit(teclaPresionada) == true)
+            evt.consume();
+}//GEN-LAST:event_jTextFieldApellidosPacienteKeyTyped
+
+    private void jTextFieldDireccionPacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldDireccionPacienteKeyTyped
+        // TODO add your handling code here:
+
+        /**Comprobamos que no se teclee un número*/
+        char teclaPresionada = evt.getKeyChar();
+        if(Character.isDigit(teclaPresionada) == true)
+            evt.consume();
+}//GEN-LAST:event_jTextFieldDireccionPacienteKeyTyped
+
+    private void jTextFieldEmailPacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldEmailPacienteKeyTyped
+        // TODO add your handling code here:
+
+        /**Comprobamos que no se teclee un número*/
+        char teclaPresionada = evt.getKeyChar();
+        if(Character.isDigit(teclaPresionada) == true)
+            evt.consume();
+}//GEN-LAST:event_jTextFieldEmailPacienteKeyTyped
+
+    private void jTextFieldLugarNacimientoPacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldLugarNacimientoPacienteKeyTyped
+        // TODO add your handling code here:
+
+        /**Comprobamos que no se teclee un número*/
+        char teclaPresionada = evt.getKeyChar();
+        if(Character.isDigit(teclaPresionada) == true)
+            evt.consume();
+}//GEN-LAST:event_jTextFieldLugarNacimientoPacienteKeyTyped
+
 
     /*Comprueba que la fecha introducida es correcta
      * 
@@ -1339,7 +1449,6 @@ public class UI_Paciente extends javax.swing.JFrame {
         }
 
         if(persona.equals("GestionarCitaOnlineAlta")){
-            jTextFieldDNIPacienteCitaAlta.setText("");
             jTextFieldDiaCita.setText(diaActual);
             jTextFieldMesCita.setText(mesActual);
             jTextFieldAnioCita.setText(anioActual);
@@ -1514,7 +1623,6 @@ public class UI_Paciente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelCentroMedico;
     private javax.swing.JLabel jLabelContraseniaPaciente;
     private javax.swing.JLabel jLabelDNIPaciente;
-    private javax.swing.JLabel jLabelDNIPacienteCita;
     private javax.swing.JLabel jLabelDireccionPaciente;
     private javax.swing.JLabel jLabelEmailPaciente;
     private javax.swing.JLabel jLabelFecha;
@@ -1552,7 +1660,6 @@ public class UI_Paciente extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldApellidosPaciente;
     private javax.swing.JTextField jTextFieldContraseniaPaciente;
     private javax.swing.JTextField jTextFieldDNIPaciente;
-    private javax.swing.JTextField jTextFieldDNIPacienteCitaAlta;
     private javax.swing.JTextField jTextFieldDiaCita;
     private javax.swing.JTextField jTextFieldDireccionPaciente;
     private javax.swing.JTextField jTextFieldEmailPaciente;

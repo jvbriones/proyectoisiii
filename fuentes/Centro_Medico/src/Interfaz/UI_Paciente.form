@@ -263,8 +263,8 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButtonGestionarCita" alignment="1" pref="157" max="32767" attributes="1"/>
-                          <Component id="jButtonGestionarPaciente" alignment="1" pref="157" max="32767" attributes="1"/>
+                          <Component id="jButtonGestionarCita" alignment="1" pref="156" max="32767" attributes="1"/>
+                          <Component id="jButtonGestionarPaciente" alignment="1" pref="156" max="32767" attributes="1"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -327,84 +327,91 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace pref="111" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="1" pref="1" max="1" attributes="0"/>
-                                      <Component id="jLabelGestionarPaciente4" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="1" pref="1" max="1" attributes="0"/>
+                                              <Component id="jLabelGestionarPaciente4" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabelFechaNacimientoPaciente" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jButtonMasDiaPaciente" min="-2" pref="50" max="-2" attributes="0"/>
+                                              <Component id="jButtonMasMesPaciente" min="-2" pref="50" max="-2" attributes="0"/>
+                                              <Component id="jButtonMasAnioPaciente" min="-2" pref="50" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="10" pref="10" max="10" attributes="0"/>
+                                              <Component id="jTextFieldFechaNacimientoDiaPaciente" min="-2" pref="33" max="-2" attributes="0"/>
+                                              <EmptySpace min="17" pref="17" max="17" attributes="0"/>
+                                              <Component id="jTextFieldFechaNacimientoMesPaciente" min="-2" pref="33" max="-2" attributes="0"/>
+                                              <EmptySpace min="7" pref="7" max="7" attributes="0"/>
+                                              <Component id="jTextFieldFechaNacimientoAnioPaciente" min="-2" pref="50" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jButtonMenosDiaPaciente" min="-2" pref="50" max="-2" attributes="0"/>
+                                              <Component id="jButtonMenosMesPaciente" min="-2" pref="50" max="-2" attributes="0"/>
+                                              <Component id="jButtonMenosAnioPaciente" min="-2" pref="50" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="215" max="-2" attributes="0"/>
+                                      <Component id="jLabelFotografiaPaciente" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                      <Component id="jLabelFotoPaciente" min="-2" pref="130" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jTextFieldDireccionPaciente" min="-2" pref="370" max="-2" attributes="0"/>
+                                      <EmptySpace min="40" pref="40" max="40" attributes="0"/>
+                                      <Component id="jTextFieldEmailPaciente" min="-2" pref="289" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabelDireccionPaciente" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="350" pref="350" max="350" attributes="0"/>
+                                      <Component id="jLabelEmailPaciente" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabelNombrePaciente" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="200" pref="200" max="200" attributes="0"/>
+                                      <Component id="jLabelApellidosPaciente" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="291" pref="291" max="291" attributes="0"/>
+                                      <Component id="jLabelDNIPaciente" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jTextFieldNombrePaciente" min="-2" pref="210" max="-2" attributes="0"/>
+                                      <EmptySpace min="40" pref="40" max="40" attributes="0"/>
+                                      <Component id="jTextFieldApellidosPaciente" min="-2" pref="290" max="-2" attributes="0"/>
+                                      <EmptySpace min="60" pref="60" max="60" attributes="0"/>
+                                      <Component id="jTextFieldDNIPaciente" min="-2" pref="95" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
+                              <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabelFechaNacimientoPaciente" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jButtonMasDiaPaciente" min="-2" pref="50" max="-2" attributes="0"/>
-                                      <Component id="jButtonMasMesPaciente" min="-2" pref="50" max="-2" attributes="0"/>
-                                      <Component id="jButtonMasAnioPaciente" min="-2" pref="50" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="10" attributes="0"/>
-                                      <Component id="jTextFieldFechaNacimientoDiaPaciente" min="-2" pref="33" max="-2" attributes="0"/>
-                                      <EmptySpace min="17" pref="17" max="17" attributes="0"/>
-                                      <Component id="jTextFieldFechaNacimientoMesPaciente" min="-2" pref="33" max="-2" attributes="0"/>
-                                      <EmptySpace min="7" pref="7" max="7" attributes="0"/>
-                                      <Component id="jTextFieldFechaNacimientoAnioPaciente" min="-2" pref="50" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jButtonMenosDiaPaciente" min="-2" pref="50" max="-2" attributes="0"/>
-                                      <Component id="jButtonMenosMesPaciente" min="-2" pref="50" max="-2" attributes="0"/>
-                                      <Component id="jButtonMenosAnioPaciente" min="-2" pref="50" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="jLabelTelefonoPaciente" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldTelefonoPaciente" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="215" max="-2" attributes="0"/>
-                              <Component id="jLabelFotografiaPaciente" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                              <Component id="jLabelFotoPaciente" min="-2" pref="130" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabelTelefonoPaciente" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="165" pref="165" max="165" attributes="0"/>
-                              <Component id="jLabelContraseniaPaciente" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="109" pref="109" max="109" attributes="0"/>
-                              <Component id="jLabelLugarNacimientoPaciente" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jTextFieldTelefonoPaciente" min="-2" pref="130" max="-2" attributes="0"/>
-                              <EmptySpace min="90" pref="90" max="90" attributes="0"/>
-                              <Component id="jTextFieldContraseniaPaciente" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="70" pref="70" max="70" attributes="0"/>
-                              <Component id="jTextFieldLugarNacimientoPaciente" min="-2" pref="300" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jTextFieldDireccionPaciente" min="-2" pref="370" max="-2" attributes="0"/>
-                              <EmptySpace min="40" pref="40" max="40" attributes="0"/>
-                              <Component id="jTextFieldEmailPaciente" min="-2" pref="289" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabelDireccionPaciente" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="350" pref="350" max="350" attributes="0"/>
-                              <Component id="jLabelEmailPaciente" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabelNombrePaciente" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="200" pref="200" max="200" attributes="0"/>
-                              <Component id="jLabelApellidosPaciente" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="291" pref="291" max="291" attributes="0"/>
-                              <Component id="jLabelDNIPaciente" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jTextFieldNombrePaciente" min="-2" pref="210" max="-2" attributes="0"/>
-                              <EmptySpace min="40" pref="40" max="40" attributes="0"/>
-                              <Component id="jTextFieldApellidosPaciente" min="-2" pref="290" max="-2" attributes="0"/>
-                              <EmptySpace min="60" pref="60" max="60" attributes="0"/>
-                              <Component id="jTextFieldDNIPaciente" min="-2" pref="95" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabelLugarNacimientoPaciente" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldLugarNacimientoPaciente" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jTextFieldContraseniaPaciente" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelContraseniaPaciente" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -441,17 +448,22 @@
                           <Component id="jTextFieldDireccionPaciente" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextFieldEmailPaciente" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabelTelefonoPaciente" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelContraseniaPaciente" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelLugarNacimientoPaciente" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="4" pref="4" max="4" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jTextFieldTelefonoPaciente" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextFieldContraseniaPaciente" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextFieldLugarNacimientoPaciente" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jLabelTelefonoPaciente" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="4" pref="4" max="4" attributes="0"/>
+                              <Component id="jTextFieldTelefonoPaciente" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelLugarNacimientoPaciente" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelContraseniaPaciente" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="4" pref="4" max="4" attributes="0"/>
+                              <Component id="jTextFieldLugarNacimientoPaciente" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jTextFieldContraseniaPaciente" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -484,7 +496,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="56" max="32767" attributes="0"/>
+                      <EmptySpace pref="52" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -507,6 +519,9 @@
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldNombrePacienteKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelFotoPaciente">
               <Properties>
@@ -522,6 +537,9 @@
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldTelefonoPacienteKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelContraseniaPaciente">
               <Properties>
@@ -532,6 +550,9 @@
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldDNIPacienteKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelNombrePaciente">
               <Properties>
@@ -552,6 +573,9 @@
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldLugarNacimientoPacienteKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelTelefonoPaciente">
               <Properties>
@@ -596,6 +620,9 @@
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldApellidosPacienteKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButtonMasDiaPaciente">
               <Properties>
@@ -636,6 +663,9 @@
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldDireccionPacienteKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldFechaNacimientoDiaPaciente">
               <Properties>
@@ -657,6 +687,9 @@
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldEmailPacienteKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldFechaNacimientoAnioPaciente">
               <Properties>
@@ -717,7 +750,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="219" y="372" width="33" height="-1"/>
+                  <AbsoluteConstraints x="220" y="340" width="33" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -731,7 +764,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="259" y="402" width="50" height="40"/>
+                  <AbsoluteConstraints x="260" y="370" width="50" height="40"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -745,7 +778,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="259" y="332" width="50" height="40"/>
+                  <AbsoluteConstraints x="260" y="300" width="50" height="40"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -758,7 +791,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="259" y="372" width="50" height="-1"/>
+                  <AbsoluteConstraints x="260" y="340" width="50" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -768,7 +801,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="196" y="309" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="200" y="280" width="-1" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -779,7 +812,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="169" y="372" width="33" height="-1"/>
+                  <AbsoluteConstraints x="170" y="340" width="33" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -793,7 +826,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="209" y="332" width="50" height="40"/>
+                  <AbsoluteConstraints x="210" y="300" width="50" height="40"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -807,7 +840,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="159" y="332" width="50" height="40"/>
+                  <AbsoluteConstraints x="160" y="300" width="50" height="40"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -831,7 +864,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="159" y="402" width="50" height="40"/>
+                  <AbsoluteConstraints x="160" y="370" width="50" height="40"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -845,24 +878,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="209" y="402" width="50" height="40"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextFieldDNIPacienteCitaAlta">
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="396" y="261" width="95" height="-1"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabelDNIPacienteCita">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="DNI"/>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="354" y="267" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="210" y="370" width="50" height="40"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -913,7 +929,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="572" y="332" width="50" height="40"/>
+                  <AbsoluteConstraints x="570" y="300" width="50" height="40"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -927,7 +943,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="628" y="332" width="50" height="40"/>
+                  <AbsoluteConstraints x="630" y="300" width="50" height="40"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -938,7 +954,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="582" y="372" width="33" height="-1"/>
+                  <AbsoluteConstraints x="580" y="340" width="33" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -952,7 +968,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="632" y="372" width="33" height="-1"/>
+                  <AbsoluteConstraints x="630" y="340" width="33" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -966,7 +982,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="572" y="402" width="50" height="40"/>
+                  <AbsoluteConstraints x="570" y="370" width="50" height="40"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -980,7 +996,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="628" y="402" width="50" height="40"/>
+                  <AbsoluteConstraints x="630" y="370" width="50" height="40"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -990,7 +1006,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="593" y="309" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="590" y="280" width="-1" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
