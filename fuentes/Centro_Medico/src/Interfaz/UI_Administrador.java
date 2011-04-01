@@ -226,8 +226,18 @@ public class UI_Administrador extends javax.swing.JFrame {
         jButtonAltaCita = new javax.swing.JButton();
         jButtonConsultarCita = new javax.swing.JButton();
         jPanelEstadPersTipo = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabelEstadPersTipo = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTextEstadisticas = new javax.swing.JTextArea();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jPanelEstadPersFecha = new javax.swing.JPanel();
         jPanelEstadCitas = new javax.swing.JPanel();
+        jLabelIconoImprimir = new javax.swing.JLabel();
+        jLabelIconoGuardarPDF = new javax.swing.JLabel();
+        jLabelImprimir = new javax.swing.JLabel();
+        jLabelGuardarPDF = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 204, 102));
@@ -253,11 +263,11 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jLabelIconoInicio);
-        jLabelIconoInicio.setBounds(420, 70, 44, 47);
+        jLabelIconoInicio.setBounds(410, 70, 44, 47);
 
         jLabelInicio.setText("Inicio");
         getContentPane().add(jLabelInicio);
-        jLabelInicio.setBounds(420, 120, 44, 16);
+        jLabelInicio.setBounds(410, 120, 44, 16);
 
         jLabelIconoAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Ayuda-Desactivado.png"))); // NOI18N
         jLabelIconoAyuda.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -342,6 +352,11 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelPrincipal.setPreferredSize(new java.awt.Dimension(901, 531));
 
         jButtonEstadPersTipo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo.png"))); // NOI18N
+        jButtonEstadPersTipo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonEstadPersTipoMouseClicked(evt);
+            }
+        });
 
         jLabelEstadPersTipo1.setText("Estad. Pers. Tipo");
 
@@ -1443,7 +1458,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jTextAreaInfoConsulta.setText("Introduce el DNI del paciente, la fecha y una hora para solicitar una cita.\nEn cambio, si desea consultar una cita, introduce solamente el DNI.");
         jScrollPane1.setViewportView(jTextAreaInfoConsulta);
 
-        jLabelGestionarPaciente5.setFont(new java.awt.Font("Lucida Grande", 1, 48));
+        jLabelGestionarPaciente5.setFont(new java.awt.Font("Lucida Grande", 1, 48)); // NOI18N
         jLabelGestionarPaciente5.setText("Gestionar Cita Online");
 
         jLabel4.setText("_____________________________________________________________________________");
@@ -1453,7 +1468,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jTextAreaInfoCitaOnline.setBackground(new java.awt.Color(255, 204, 102));
         jTextAreaInfoCitaOnline.setColumns(17);
         jTextAreaInfoCitaOnline.setEditable(false);
-        jTextAreaInfoCitaOnline.setFont(new java.awt.Font("Lucida Grande", 0, 18));
+        jTextAreaInfoCitaOnline.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jTextAreaInfoCitaOnline.setRows(3);
         jTextAreaInfoCitaOnline.setText("Estás consultando una cita, si modificas algún campo, dale a \"guardar\".\nSi lo que quieres es borrarla, dale a \"cancelar\".");
         jScrollPane2.setViewportView(jTextAreaInfoCitaOnline);
@@ -1590,18 +1605,41 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarCita.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelGestionarCita, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        org.jdesktop.layout.GroupLayout jPanelEstadPersTipoLayout = new org.jdesktop.layout.GroupLayout(jPanelEstadPersTipo);
-        jPanelEstadPersTipo.setLayout(jPanelEstadPersTipoLayout);
-        jPanelEstadPersTipoLayout.setHorizontalGroup(
-            jPanelEstadPersTipoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 100, Short.MAX_VALUE)
-        );
-        jPanelEstadPersTipoLayout.setVerticalGroup(
-            jPanelEstadPersTipoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 100, Short.MAX_VALUE)
-        );
+        jPanelEstadPersTipo.setMaximumSize(new java.awt.Dimension(901, 531));
+        jPanelEstadPersTipo.setPreferredSize(new java.awt.Dimension(901, 531));
+        jPanelEstadPersTipo.setSize(new java.awt.Dimension(901, 531));
+        jPanelEstadPersTipo.setLayout(null);
 
-        jPanelEstadPersTipo.setBounds(0, 0, 100, 100);
+        jLabel6.setText("____________________________________________________________________________________________________________");
+        jPanelEstadPersTipo.add(jLabel6);
+        jLabel6.setBounds(80, 100, 770, 20);
+
+        jLabelEstadPersTipo.setFont(new java.awt.Font("Lucida Grande", 1, 48)); // NOI18N
+        jLabelEstadPersTipo.setText("Estadísticas Personal por Tipo");
+        jPanelEstadPersTipo.add(jLabelEstadPersTipo);
+        jLabelEstadPersTipo.setBounds(80, 50, 752, 58);
+
+        jTextEstadisticas.setBackground(new java.awt.Color(255, 204, 102));
+        jTextEstadisticas.setColumns(17);
+        jTextEstadisticas.setEditable(false);
+        jTextEstadisticas.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jTextEstadisticas.setRows(3);
+        jScrollPane5.setViewportView(jTextEstadisticas);
+
+        jPanelEstadPersTipo.add(jScrollPane5);
+        jScrollPane5.setBounds(260, 160, 349, 327);
+
+        jLabel7.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel7.setText("DNI");
+        jPanelEstadPersTipo.add(jLabel7);
+        jLabel7.setBounds(510, 140, 45, 16);
+
+        jLabel8.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel8.setText("Fecha");
+        jPanelEstadPersTipo.add(jLabel8);
+        jLabel8.setBounds(330, 140, 40, 17);
+
+        jPanelEstadPersTipo.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelEstadPersTipo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         org.jdesktop.layout.GroupLayout jPanelEstadPersFechaLayout = new org.jdesktop.layout.GroupLayout(jPanelEstadPersFecha);
@@ -1634,6 +1672,44 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         getContentPane().add(ZonaTrabajo);
         ZonaTrabajo.setBounds(13, 185, 920, 550);
+
+        jLabelIconoImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Imprimir.png"))); // NOI18N
+        jLabelIconoImprimir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelIconoImprimirMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelIconoImprimirMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabelIconoImprimirMouseEntered(evt);
+            }
+        });
+        getContentPane().add(jLabelIconoImprimir);
+        jLabelIconoImprimir.setBounds(310, 100, 60, 50);
+
+        jLabelIconoGuardarPDF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/GuardarPDF.png"))); // NOI18N
+        jLabelIconoGuardarPDF.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelIconoGuardarPDFMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelIconoGuardarPDFMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabelIconoGuardarPDFMouseEntered(evt);
+            }
+        });
+        getContentPane().add(jLabelIconoGuardarPDF);
+        jLabelIconoGuardarPDF.setBounds(210, 100, 54, 50);
+
+        jLabelImprimir.setText("Imprimir");
+        getContentPane().add(jLabelImprimir);
+        jLabelImprimir.setBounds(310, 160, 60, 16);
+
+        jLabelGuardarPDF.setText("GuardarPDF");
+        getContentPane().add(jLabelGuardarPDF);
+        jLabelGuardarPDF.setBounds(200, 160, 80, 16);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -2650,6 +2726,35 @@ public class UI_Administrador extends javax.swing.JFrame {
         mostrarPanel("GestionarTurno");
     }//GEN-LAST:event_jButtonGestionarTurnoMouseClicked
 
+    private void jButtonEstadPersTipoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonEstadPersTipoMouseClicked
+        // TODO add your handling code here:
+        mostrarPanel("EstadPersTipo");
+    }//GEN-LAST:event_jButtonEstadPersTipoMouseClicked
+
+    private void jLabelIconoImprimirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoImprimirMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabelIconoImprimirMouseClicked
+
+    private void jLabelIconoImprimirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoImprimirMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabelIconoImprimirMouseExited
+
+    private void jLabelIconoImprimirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoImprimirMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabelIconoImprimirMouseEntered
+
+    private void jLabelIconoGuardarPDFMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoGuardarPDFMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabelIconoGuardarPDFMouseClicked
+
+    private void jLabelIconoGuardarPDFMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoGuardarPDFMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabelIconoGuardarPDFMouseExited
+
+    private void jLabelIconoGuardarPDFMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoGuardarPDFMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabelIconoGuardarPDFMouseEntered
+
 
     /*Comprueba que la fecha introducida es correcta
      * 
@@ -2819,6 +2924,10 @@ public class UI_Administrador extends javax.swing.JFrame {
 
             jLabelInicio.setVisible(false);
             jLabelIconoInicio.setVisible(false);
+            jLabelImprimir.setVisible(false);
+            jLabelGuardarPDF.setVisible(false);
+            jLabelIconoImprimir.setVisible(false);
+            jLabelIconoGuardarPDF.setVisible(false);
 
             /**Hacemos visible el panel seleccionado*/
             jPanelPrincipal.setVisible(true);
@@ -2915,6 +3024,10 @@ public class UI_Administrador extends javax.swing.JFrame {
             /**Hacemos visible el botón jLabelIconoInicio*/
             jLabelInicio.setVisible(true);
             jLabelIconoInicio.setVisible(true);
+            jLabelImprimir.setVisible(true);
+            jLabelGuardarPDF.setVisible(true);
+            jLabelIconoImprimir.setVisible(true);
+            jLabelIconoGuardarPDF.setVisible(true);
 
             /**Hacemos visible el panel seleccionado*/
             jPanelPrincipal.setVisible(false);
@@ -3202,6 +3315,9 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabelApellidosPaciente;
     private javax.swing.JLabel jLabelApellidosPersonal;
     private javax.swing.JLabel jLabelAyuda;
@@ -3218,6 +3334,7 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelEmailPersonal;
     private javax.swing.JLabel jLabelEstadCitas1;
     private javax.swing.JLabel jLabelEstadPersFecha1;
+    private javax.swing.JLabel jLabelEstadPersTipo;
     private javax.swing.JLabel jLabelEstadPersTipo1;
     private javax.swing.JLabel jLabelFechaCita;
     private javax.swing.JLabel jLabelFechaNacimiento2;
@@ -3235,12 +3352,16 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelGestionarPaciente6;
     private javax.swing.JLabel jLabelGestionarPersonal1;
     private javax.swing.JLabel jLabelGestionarTurno1;
+    private javax.swing.JLabel jLabelGuardarPDF;
     private javax.swing.JLabel jLabelHoraCita;
     private javax.swing.JLabel jLabelHoraTurno;
     private javax.swing.JLabel jLabelIcono;
     private javax.swing.JLabel jLabelIconoAyuda;
+    private javax.swing.JLabel jLabelIconoGuardarPDF;
+    private javax.swing.JLabel jLabelIconoImprimir;
     private javax.swing.JLabel jLabelIconoInicio;
     private javax.swing.JLabel jLabelIconoSalir;
+    private javax.swing.JLabel jLabelImprimir;
     private javax.swing.JLabel jLabelInfoFotoPaciente;
     private javax.swing.JLabel jLabelInfoFotoPersonal;
     private javax.swing.JLabel jLabelInicio;
@@ -3271,10 +3392,12 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTextArea jTextAreaInfoCitaOnline;
     private javax.swing.JTextArea jTextAreaInfoConsulta;
     private javax.swing.JTextArea jTextAreaInfoConsultaTurno;
     private javax.swing.JTextArea jTextAreaInfoTurno;
+    private javax.swing.JTextArea jTextEstadisticas;
     private javax.swing.JTextField jTextFieldAnioCita;
     private javax.swing.JTextField jTextFieldAnioTurno;
     private javax.swing.JTextField jTextFieldApellidosPaciente;
