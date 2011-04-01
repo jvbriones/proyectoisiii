@@ -45,6 +45,15 @@ public class UI_Administrador extends javax.swing.JFrame {
         buttonGroup1.add(jRadioButtonMedico);
         buttonGroup1.add(jRadioButtonRadiologo);
         jRadioButtonAnalista.setSelected(true);
+
+        if(tipoUsuario.equals("Paciente"))
+            jLabelTipoUsuarioIdentificado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo-Usuario-Paciente.png"))); // NOI18N
+        if(tipoUsuario.equals("Administrador"))
+            jLabelTipoUsuarioIdentificado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo-Usuario-Administrador.png"))); // NOI18N
+        if(tipoUsuario.equals("Personal"))
+            jLabelTipoUsuarioIdentificado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo-Usuario-Personal.png"))); // NOI18N
+
+
     }
 
     /** This method is called from within the constructor to
@@ -64,10 +73,15 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabelIconoSalir = new javax.swing.JLabel();
         jLabelAyuda = new javax.swing.JLabel();
         jLabelSalir = new javax.swing.JLabel();
+        jLabelIconoImprimir = new javax.swing.JLabel();
+        jLabelIconoGuardarPDF = new javax.swing.JLabel();
+        jLabelImprimir = new javax.swing.JLabel();
+        jLabelGuardarPDF = new javax.swing.JLabel();
         jPanelUsuario = new javax.swing.JPanel();
         jLabelUsuario = new javax.swing.JLabel();
         jLabelTipoUsuario = new javax.swing.JLabel();
         jLabelNombreUsuario = new javax.swing.JLabel();
+        jLabelTipoUsuarioIdentificado = new javax.swing.JLabel();
         jLabelIcono = new javax.swing.JLabel();
         ZonaTrabajo = new javax.swing.JLayeredPane();
         jPanelPrincipal = new javax.swing.JPanel();
@@ -229,15 +243,47 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabelEstadPersTipo = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTextEstadisticas = new javax.swing.JTextArea();
+        jTextEstadPersTipo = new javax.swing.JTextArea();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jPanelEstadPersFecha = new javax.swing.JPanel();
+        jLabelEstadPersFecha = new javax.swing.JLabel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTextEstdPersFecha = new javax.swing.JTextArea();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
         jPanelEstadCitas = new javax.swing.JPanel();
-        jLabelIconoImprimir = new javax.swing.JLabel();
-        jLabelIconoGuardarPDF = new javax.swing.JLabel();
-        jLabelImprimir = new javax.swing.JLabel();
-        jLabelGuardarPDF = new javax.swing.JLabel();
+        jButtonMenosMesEstadCitasInicial = new javax.swing.JButton();
+        jButtonConsultarEstadCitas = new javax.swing.JButton();
+        jButtonMenosDiaEstadCitasInicial = new javax.swing.JButton();
+        jButtonMenosAnioEstadCitasInicial = new javax.swing.JButton();
+        jButtonMasAnioEstadCitasInicial = new javax.swing.JButton();
+        jTextFieldAnioEstadCitasInicial = new javax.swing.JTextField();
+        jLabelFechaCita1 = new javax.swing.JLabel();
+        jTextFieldDiaEstadCitasInicial = new javax.swing.JTextField();
+        jButtonMasMesEstadCitasInicial = new javax.swing.JButton();
+        jButtonMasDiaEstadCitasInicial = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
+        jLabelEstadCitas = new javax.swing.JLabel();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jTextAreaInfoEstadCitas = new javax.swing.JTextArea();
+        jTextFieldMesEstadCitasInicial = new javax.swing.JTextField();
+        jButtonMenosMesEstadCitasFinal = new javax.swing.JButton();
+        jButtonMenosDiaEstadCitasFinal = new javax.swing.JButton();
+        jButtonMenosAnioEstadCitasFinal = new javax.swing.JButton();
+        jButtonMasAnioEstadCitasFinal = new javax.swing.JButton();
+        jTextFieldAnioEstadCitasFinal = new javax.swing.JTextField();
+        jLabelFechaCita2 = new javax.swing.JLabel();
+        jTextFieldDiaEstadCitasFinal = new javax.swing.JTextField();
+        jButtonMasMesEstadCitasFinal = new javax.swing.JButton();
+        jButtonMasDiaEstadCitasFinal = new javax.swing.JButton();
+        jTextFieldMesEstadCitasFinal = new javax.swing.JTextField();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jTextAreaEstadCitas = new javax.swing.JTextArea();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 204, 102));
@@ -307,40 +353,65 @@ public class UI_Administrador extends javax.swing.JFrame {
         getContentPane().add(jLabelSalir);
         jLabelSalir.setBounds(590, 120, 27, 16);
 
+        jLabelIconoImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Imprimir-Desactivado.png"))); // NOI18N
+        jLabelIconoImprimir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelIconoImprimirMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelIconoImprimirMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabelIconoImprimirMouseEntered(evt);
+            }
+        });
+        getContentPane().add(jLabelIconoImprimir);
+        jLabelIconoImprimir.setBounds(310, 100, 60, 50);
+
+        jLabelIconoGuardarPDF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/GuardarPDF-Desactivado.png"))); // NOI18N
+        jLabelIconoGuardarPDF.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelIconoGuardarPDFMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelIconoGuardarPDFMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabelIconoGuardarPDFMouseEntered(evt);
+            }
+        });
+        getContentPane().add(jLabelIconoGuardarPDF);
+        jLabelIconoGuardarPDF.setBounds(210, 100, 54, 50);
+
+        jLabelImprimir.setText("Imprimir");
+        getContentPane().add(jLabelImprimir);
+        jLabelImprimir.setBounds(310, 160, 60, 16);
+
+        jLabelGuardarPDF.setText("GuardarPDF");
+        getContentPane().add(jLabelGuardarPDF);
+        jLabelGuardarPDF.setBounds(200, 160, 80, 16);
+
         jPanelUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jPanelUsuario.setLayout(null);
 
         jLabelUsuario.setText("Usuario:");
+        jPanelUsuario.add(jLabelUsuario);
+        jLabelUsuario.setBounds(90, 0, 52, 16);
 
         jLabelTipoUsuario.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelTipoUsuario.setText("Tipo Usuario");
+        jPanelUsuario.add(jLabelTipoUsuario);
+        jLabelTipoUsuario.setBounds(90, 30, 120, 16);
 
         jLabelNombreUsuario.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelNombreUsuario.setText("Nombre");
-
-        org.jdesktop.layout.GroupLayout jPanelUsuarioLayout = new org.jdesktop.layout.GroupLayout(jPanelUsuario);
-        jPanelUsuario.setLayout(jPanelUsuarioLayout);
-        jPanelUsuarioLayout.setHorizontalGroup(
-            jPanelUsuarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelUsuarioLayout.createSequentialGroup()
-                .add(jPanelUsuarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jLabelUsuario)
-                    .add(jLabelTipoUsuario)
-                    .add(jLabelNombreUsuario))
-                .addContainerGap(69, Short.MAX_VALUE))
-        );
-        jPanelUsuarioLayout.setVerticalGroup(
-            jPanelUsuarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelUsuarioLayout.createSequentialGroup()
-                .add(jLabelUsuario)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jLabelTipoUsuario)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jLabelNombreUsuario)
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jPanelUsuario.add(jLabelNombreUsuario);
+        jLabelNombreUsuario.setBounds(90, 60, 120, 16);
+        jPanelUsuario.add(jLabelTipoUsuarioIdentificado);
+        jLabelTipoUsuarioIdentificado.setBounds(10, 10, 70, 70);
 
         getContentPane().add(jPanelUsuario);
-        jPanelUsuario.setBounds(728, 47, 157, 86);
+        jPanelUsuario.setBounds(665, 47, 220, 90);
 
         jLabelIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Logo-Centro-Medico.png"))); // NOI18N
         getContentPane().add(jLabelIcono);
@@ -349,6 +420,8 @@ public class UI_Administrador extends javax.swing.JFrame {
         ZonaTrabajo.setMinimumSize(new java.awt.Dimension(902, 520));
         ZonaTrabajo.setPreferredSize(new java.awt.Dimension(912, 530));
 
+        jPanelPrincipal.setMaximumSize(new java.awt.Dimension(901, 531));
+        jPanelPrincipal.setMinimumSize(new java.awt.Dimension(901, 531));
         jPanelPrincipal.setPreferredSize(new java.awt.Dimension(901, 531));
 
         jButtonEstadPersTipo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo.png"))); // NOI18N
@@ -365,6 +438,11 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabelEstadPersFecha1.setText("Estad. Pers. Fecha");
 
         jButtonEstadPersFecha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Fecha.png"))); // NOI18N
+        jButtonEstadPersFecha.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonEstadPersFechaMouseClicked(evt);
+            }
+        });
 
         jButtonGestionarPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Paciente.png"))); // NOI18N
         jButtonGestionarPaciente.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -391,6 +469,11 @@ public class UI_Administrador extends javax.swing.JFrame {
         });
 
         jButtonEstadCitas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Citas.png"))); // NOI18N
+        jButtonEstadCitas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonEstadCitasMouseClicked(evt);
+            }
+        });
 
         jButtonGestionarTurno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Turno.png"))); // NOI18N
         jButtonGestionarTurno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -427,7 +510,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jLabelEstadPersTipo1)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 98, Short.MAX_VALUE)
                 .add(jLabelGestionarCita1)
-                .add(104, 104, 104))
+                .add(105, 105, 105))
             .add(jPanelPrincipalLayout.createSequentialGroup()
                 .add(39, 39, 39)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -479,7 +562,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                     .add(jLabelGestionarPaciente3)
                     .add(jLabelGestionarTurno1)
                     .add(jLabelGestionarPersonal1))
-                .add(111, 111, 111))
+                .add(112, 112, 112))
         );
 
         jPanelPrincipal.setBounds(1, 0, 900, 530);
@@ -1458,7 +1541,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jTextAreaInfoConsulta.setText("Introduce el DNI del paciente, la fecha y una hora para solicitar una cita.\nEn cambio, si desea consultar una cita, introduce solamente el DNI.");
         jScrollPane1.setViewportView(jTextAreaInfoConsulta);
 
-        jLabelGestionarPaciente5.setFont(new java.awt.Font("Lucida Grande", 1, 48)); // NOI18N
+        jLabelGestionarPaciente5.setFont(new java.awt.Font("Lucida Grande", 1, 48));
         jLabelGestionarPaciente5.setText("Gestionar Cita Online");
 
         jLabel4.setText("_____________________________________________________________________________");
@@ -1468,7 +1551,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jTextAreaInfoCitaOnline.setBackground(new java.awt.Color(255, 204, 102));
         jTextAreaInfoCitaOnline.setColumns(17);
         jTextAreaInfoCitaOnline.setEditable(false);
-        jTextAreaInfoCitaOnline.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jTextAreaInfoCitaOnline.setFont(new java.awt.Font("Lucida Grande", 0, 18));
         jTextAreaInfoCitaOnline.setRows(3);
         jTextAreaInfoCitaOnline.setText("Estás consultando una cita, si modificas algún campo, dale a \"guardar\".\nSi lo que quieres es borrarla, dale a \"cancelar\".");
         jScrollPane2.setViewportView(jTextAreaInfoCitaOnline);
@@ -1608,108 +1691,411 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelEstadPersTipo.setMaximumSize(new java.awt.Dimension(901, 531));
         jPanelEstadPersTipo.setPreferredSize(new java.awt.Dimension(901, 531));
         jPanelEstadPersTipo.setSize(new java.awt.Dimension(901, 531));
-        jPanelEstadPersTipo.setLayout(null);
 
         jLabel6.setText("____________________________________________________________________________________________________________");
-        jPanelEstadPersTipo.add(jLabel6);
-        jLabel6.setBounds(80, 100, 770, 20);
 
-        jLabelEstadPersTipo.setFont(new java.awt.Font("Lucida Grande", 1, 48)); // NOI18N
+        jLabelEstadPersTipo.setFont(new java.awt.Font("Lucida Grande", 1, 48));
         jLabelEstadPersTipo.setText("Estadísticas Personal por Tipo");
-        jPanelEstadPersTipo.add(jLabelEstadPersTipo);
-        jLabelEstadPersTipo.setBounds(80, 50, 752, 58);
 
-        jTextEstadisticas.setBackground(new java.awt.Color(255, 204, 102));
-        jTextEstadisticas.setColumns(17);
-        jTextEstadisticas.setEditable(false);
-        jTextEstadisticas.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jTextEstadisticas.setRows(3);
-        jScrollPane5.setViewportView(jTextEstadisticas);
+        jTextEstadPersTipo.setBackground(new java.awt.Color(255, 204, 102));
+        jTextEstadPersTipo.setColumns(17);
+        jTextEstadPersTipo.setEditable(false);
+        jTextEstadPersTipo.setFont(new java.awt.Font("Lucida Grande", 0, 18));
+        jTextEstadPersTipo.setRows(3);
+        jScrollPane5.setViewportView(jTextEstadPersTipo);
 
-        jPanelEstadPersTipo.add(jScrollPane5);
-        jScrollPane5.setBounds(260, 160, 349, 327);
-
-        jLabel7.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Lucida Grande", 0, 14));
         jLabel7.setText("DNI");
-        jPanelEstadPersTipo.add(jLabel7);
-        jLabel7.setBounds(510, 140, 45, 16);
 
-        jLabel8.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Lucida Grande", 0, 14));
         jLabel8.setText("Fecha");
-        jPanelEstadPersTipo.add(jLabel8);
-        jLabel8.setBounds(330, 140, 40, 17);
+
+        org.jdesktop.layout.GroupLayout jPanelEstadPersTipoLayout = new org.jdesktop.layout.GroupLayout(jPanelEstadPersTipo);
+        jPanelEstadPersTipo.setLayout(jPanelEstadPersTipoLayout);
+        jPanelEstadPersTipoLayout.setHorizontalGroup(
+            jPanelEstadPersTipoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanelEstadPersTipoLayout.createSequentialGroup()
+                .add(80, 80, 80)
+                .add(jPanelEstadPersTipoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jLabelEstadPersTipo)
+                    .add(jLabel6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 770, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+            .add(jPanelEstadPersTipoLayout.createSequentialGroup()
+                .add(330, 330, 330)
+                .add(jLabel8)
+                .add(140, 140, 140)
+                .add(jLabel7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 45, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+            .add(jPanelEstadPersTipoLayout.createSequentialGroup()
+                .add(260, 260, 260)
+                .add(jScrollPane5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 349, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanelEstadPersTipoLayout.setVerticalGroup(
+            jPanelEstadPersTipoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanelEstadPersTipoLayout.createSequentialGroup()
+                .add(50, 50, 50)
+                .add(jPanelEstadPersTipoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jLabelEstadPersTipo)
+                    .add(jPanelEstadPersTipoLayout.createSequentialGroup()
+                        .add(50, 50, 50)
+                        .add(jLabel6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .add(20, 20, 20)
+                .add(jPanelEstadPersTipoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jLabel8)
+                    .add(jLabel7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(3, 3, 3)
+                .add(jScrollPane5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 327, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+        );
 
         jPanelEstadPersTipo.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelEstadPersTipo, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        jPanelEstadPersFecha.setMaximumSize(new java.awt.Dimension(901, 531));
+        jPanelEstadPersFecha.setMinimumSize(new java.awt.Dimension(901, 531));
+        jPanelEstadPersFecha.setPreferredSize(new java.awt.Dimension(901, 531));
+
+        jLabelEstadPersFecha.setFont(new java.awt.Font("Lucida Grande", 1, 48)); // NOI18N
+        jLabelEstadPersFecha.setText("Estadísticas Personal por Fecha");
+
+        jTextEstdPersFecha.setBackground(new java.awt.Color(255, 204, 102));
+        jTextEstdPersFecha.setColumns(17);
+        jTextEstdPersFecha.setEditable(false);
+        jTextEstdPersFecha.setFont(new java.awt.Font("Lucida Grande", 0, 18));
+        jTextEstdPersFecha.setRows(3);
+        jScrollPane6.setViewportView(jTextEstdPersFecha);
+
+        jLabel9.setText("_________________________________________________________________________________________________________________");
+
+        jLabel10.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel10.setText("Fecha");
+
+        jLabel11.setFont(new java.awt.Font("Lucida Grande", 0, 14));
+        jLabel11.setText("Horas trabajadas");
+
+        jLabel12.setFont(new java.awt.Font("Lucida Grande", 0, 14));
+        jLabel12.setText("DNI");
 
         org.jdesktop.layout.GroupLayout jPanelEstadPersFechaLayout = new org.jdesktop.layout.GroupLayout(jPanelEstadPersFecha);
         jPanelEstadPersFecha.setLayout(jPanelEstadPersFechaLayout);
         jPanelEstadPersFechaLayout.setHorizontalGroup(
             jPanelEstadPersFechaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 100, Short.MAX_VALUE)
+            .add(jPanelEstadPersFechaLayout.createSequentialGroup()
+                .add(70, 70, 70)
+                .add(jPanelEstadPersFechaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jLabelEstadPersFecha)
+                    .add(jLabel9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 800, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+            .add(jPanelEstadPersFechaLayout.createSequentialGroup()
+                .add(270, 270, 270)
+                .add(jLabel10)
+                .add(120, 120, 120)
+                .add(jLabel12, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 45, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(65, 65, 65)
+                .add(jLabel11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+            .add(jPanelEstadPersFechaLayout.createSequentialGroup()
+                .add(210, 210, 210)
+                .add(jScrollPane6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 470, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
         jPanelEstadPersFechaLayout.setVerticalGroup(
             jPanelEstadPersFechaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 100, Short.MAX_VALUE)
+            .add(jPanelEstadPersFechaLayout.createSequentialGroup()
+                .add(50, 50, 50)
+                .add(jPanelEstadPersFechaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jLabelEstadPersFecha)
+                    .add(jPanelEstadPersFechaLayout.createSequentialGroup()
+                        .add(40, 40, 40)
+                        .add(jLabel9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .add(30, 30, 30)
+                .add(jPanelEstadPersFechaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jLabel10)
+                    .add(jLabel12, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabel11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(3, 3, 3)
+                .add(jScrollPane6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 327, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanelEstadPersFecha.setBounds(0, 0, 100, 100);
+        jPanelEstadPersFecha.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelEstadPersFecha, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        org.jdesktop.layout.GroupLayout jPanelEstadCitasLayout = new org.jdesktop.layout.GroupLayout(jPanelEstadCitas);
-        jPanelEstadCitas.setLayout(jPanelEstadCitasLayout);
-        jPanelEstadCitasLayout.setHorizontalGroup(
-            jPanelEstadCitasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 100, Short.MAX_VALUE)
-        );
-        jPanelEstadCitasLayout.setVerticalGroup(
-            jPanelEstadCitasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 100, Short.MAX_VALUE)
-        );
+        jPanelEstadCitas.setMaximumSize(new java.awt.Dimension(901, 531));
+        jPanelEstadCitas.setMinimumSize(new java.awt.Dimension(901, 531));
+        jPanelEstadCitas.setSize(new java.awt.Dimension(901, 531));
+        jPanelEstadCitas.setLayout(null);
 
-        jPanelEstadCitas.setBounds(0, 0, 100, 100);
+        jButtonMenosMesEstadCitasInicial.setText("-");
+        jButtonMenosMesEstadCitasInicial.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMenosMesEstadCitasInicialMouseClicked(evt);
+            }
+        });
+        jButtonMenosMesEstadCitasInicial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMenosMesEstadCitasInicialActionPerformed(evt);
+            }
+        });
+        jPanelEstadCitas.add(jButtonMenosMesEstadCitasInicial);
+        jButtonMenosMesEstadCitasInicial.setBounds(160, 350, 50, 40);
+
+        jButtonConsultarEstadCitas.setText("Consultar");
+        jButtonConsultarEstadCitas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonConsultarEstadCitasMouseClicked(evt);
+            }
+        });
+        jPanelEstadCitas.add(jButtonConsultarEstadCitas);
+        jButtonConsultarEstadCitas.setBounds(390, 470, 93, 39);
+
+        jButtonMenosDiaEstadCitasInicial.setText("-");
+        jButtonMenosDiaEstadCitasInicial.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMenosDiaEstadCitasInicialMouseClicked(evt);
+            }
+        });
+        jButtonMenosDiaEstadCitasInicial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMenosDiaEstadCitasInicialActionPerformed(evt);
+            }
+        });
+        jPanelEstadCitas.add(jButtonMenosDiaEstadCitasInicial);
+        jButtonMenosDiaEstadCitasInicial.setBounds(110, 350, 50, 40);
+
+        jButtonMenosAnioEstadCitasInicial.setText("-");
+        jButtonMenosAnioEstadCitasInicial.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMenosAnioEstadCitasInicialMouseClicked(evt);
+            }
+        });
+        jButtonMenosAnioEstadCitasInicial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMenosAnioEstadCitasInicialActionPerformed(evt);
+            }
+        });
+        jPanelEstadCitas.add(jButtonMenosAnioEstadCitasInicial);
+        jButtonMenosAnioEstadCitasInicial.setBounds(210, 350, 50, 40);
+
+        jButtonMasAnioEstadCitasInicial.setText("+");
+        jButtonMasAnioEstadCitasInicial.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMasAnioEstadCitasInicialMouseClicked(evt);
+            }
+        });
+        jButtonMasAnioEstadCitasInicial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMasAnioEstadCitasInicialActionPerformed(evt);
+            }
+        });
+        jPanelEstadCitas.add(jButtonMasAnioEstadCitasInicial);
+        jButtonMasAnioEstadCitasInicial.setBounds(210, 280, 50, 40);
+
+        jTextFieldAnioEstadCitasInicial.setEditable(false);
+        jTextFieldAnioEstadCitasInicial.setText("1950");
+        jTextFieldAnioEstadCitasInicial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldAnioEstadCitasInicialActionPerformed(evt);
+            }
+        });
+        jPanelEstadCitas.add(jTextFieldAnioEstadCitasInicial);
+        jTextFieldAnioEstadCitasInicial.setBounds(210, 320, 50, 28);
+
+        jLabelFechaCita1.setText("Fecha inicial");
+        jPanelEstadCitas.add(jLabelFechaCita1);
+        jLabelFechaCita1.setBounds(150, 260, 78, 16);
+
+        jTextFieldDiaEstadCitasInicial.setEditable(false);
+        jTextFieldDiaEstadCitasInicial.setText("1");
+        jPanelEstadCitas.add(jTextFieldDiaEstadCitasInicial);
+        jTextFieldDiaEstadCitasInicial.setBounds(120, 320, 33, 28);
+
+        jButtonMasMesEstadCitasInicial.setText("+");
+        jButtonMasMesEstadCitasInicial.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMasMesEstadCitasInicialMouseClicked(evt);
+            }
+        });
+        jButtonMasMesEstadCitasInicial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMasMesEstadCitasInicialActionPerformed(evt);
+            }
+        });
+        jPanelEstadCitas.add(jButtonMasMesEstadCitasInicial);
+        jButtonMasMesEstadCitasInicial.setBounds(160, 280, 50, 40);
+
+        jButtonMasDiaEstadCitasInicial.setText("+");
+        jButtonMasDiaEstadCitasInicial.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMasDiaEstadCitasInicialMouseClicked(evt);
+            }
+        });
+        jButtonMasDiaEstadCitasInicial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMasDiaEstadCitasInicialActionPerformed(evt);
+            }
+        });
+        jPanelEstadCitas.add(jButtonMasDiaEstadCitasInicial);
+        jButtonMasDiaEstadCitasInicial.setBounds(110, 280, 50, 40);
+
+        jLabel13.setText("_____________________________________________________________________________");
+        jPanelEstadCitas.add(jLabel13);
+        jLabel13.setBounds(180, 70, 539, 16);
+
+        jLabelEstadCitas.setFont(new java.awt.Font("Lucida Grande", 1, 48));
+        jLabelEstadCitas.setText("Estadísticas citas");
+        jPanelEstadCitas.add(jLabelEstadCitas);
+        jLabelEstadCitas.setBounds(237, 20, 426, 58);
+
+        jTextAreaInfoEstadCitas.setBackground(new java.awt.Color(255, 204, 102));
+        jTextAreaInfoEstadCitas.setColumns(17);
+        jTextAreaInfoEstadCitas.setEditable(false);
+        jTextAreaInfoEstadCitas.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jTextAreaInfoEstadCitas.setRows(3);
+        jTextAreaInfoEstadCitas.setText("Para obtener estadísticas de las citas solicitadas por pacientes en el centro de salud, \nelija dos fechas y se obtendrá una tabla con las estadísticas de las citas entre dichas \nfechas.");
+        jScrollPane8.setViewportView(jTextAreaInfoEstadCitas);
+
+        jPanelEstadCitas.add(jScrollPane8);
+        jScrollPane8.setBounds(60, 100, 780, 70);
+
+        jTextFieldMesEstadCitasInicial.setEditable(false);
+        jTextFieldMesEstadCitasInicial.setText("1");
+        jTextFieldMesEstadCitasInicial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldMesEstadCitasInicialActionPerformed(evt);
+            }
+        });
+        jPanelEstadCitas.add(jTextFieldMesEstadCitasInicial);
+        jTextFieldMesEstadCitasInicial.setBounds(170, 320, 33, 28);
+
+        jButtonMenosMesEstadCitasFinal.setText("-");
+        jButtonMenosMesEstadCitasFinal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMenosMesEstadCitasFinalMouseClicked(evt);
+            }
+        });
+        jButtonMenosMesEstadCitasFinal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMenosMesEstadCitasFinalActionPerformed(evt);
+            }
+        });
+        jPanelEstadCitas.add(jButtonMenosMesEstadCitasFinal);
+        jButtonMenosMesEstadCitasFinal.setBounds(670, 350, 50, 40);
+
+        jButtonMenosDiaEstadCitasFinal.setText("-");
+        jButtonMenosDiaEstadCitasFinal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMenosDiaEstadCitasFinalMouseClicked(evt);
+            }
+        });
+        jButtonMenosDiaEstadCitasFinal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMenosDiaEstadCitasFinalActionPerformed(evt);
+            }
+        });
+        jPanelEstadCitas.add(jButtonMenosDiaEstadCitasFinal);
+        jButtonMenosDiaEstadCitasFinal.setBounds(620, 350, 50, 40);
+
+        jButtonMenosAnioEstadCitasFinal.setText("-");
+        jButtonMenosAnioEstadCitasFinal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMenosAnioEstadCitasFinalMouseClicked(evt);
+            }
+        });
+        jButtonMenosAnioEstadCitasFinal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMenosAnioEstadCitasFinalActionPerformed(evt);
+            }
+        });
+        jPanelEstadCitas.add(jButtonMenosAnioEstadCitasFinal);
+        jButtonMenosAnioEstadCitasFinal.setBounds(720, 350, 50, 40);
+
+        jButtonMasAnioEstadCitasFinal.setText("+");
+        jButtonMasAnioEstadCitasFinal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMasAnioEstadCitasFinalMouseClicked(evt);
+            }
+        });
+        jButtonMasAnioEstadCitasFinal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMasAnioEstadCitasFinalActionPerformed(evt);
+            }
+        });
+        jPanelEstadCitas.add(jButtonMasAnioEstadCitasFinal);
+        jButtonMasAnioEstadCitasFinal.setBounds(720, 280, 50, 40);
+
+        jTextFieldAnioEstadCitasFinal.setEditable(false);
+        jTextFieldAnioEstadCitasFinal.setText("1950");
+        jTextFieldAnioEstadCitasFinal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldAnioEstadCitasFinalActionPerformed(evt);
+            }
+        });
+        jPanelEstadCitas.add(jTextFieldAnioEstadCitasFinal);
+        jTextFieldAnioEstadCitasFinal.setBounds(720, 320, 50, 28);
+
+        jLabelFechaCita2.setText("Fecha final");
+        jPanelEstadCitas.add(jLabelFechaCita2);
+        jLabelFechaCita2.setBounds(660, 260, 68, 16);
+
+        jTextFieldDiaEstadCitasFinal.setEditable(false);
+        jTextFieldDiaEstadCitasFinal.setText("1");
+        jPanelEstadCitas.add(jTextFieldDiaEstadCitasFinal);
+        jTextFieldDiaEstadCitasFinal.setBounds(630, 320, 33, 28);
+
+        jButtonMasMesEstadCitasFinal.setText("+");
+        jButtonMasMesEstadCitasFinal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMasMesEstadCitasFinalMouseClicked(evt);
+            }
+        });
+        jButtonMasMesEstadCitasFinal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMasMesEstadCitasFinalActionPerformed(evt);
+            }
+        });
+        jPanelEstadCitas.add(jButtonMasMesEstadCitasFinal);
+        jButtonMasMesEstadCitasFinal.setBounds(670, 280, 50, 40);
+
+        jButtonMasDiaEstadCitasFinal.setText("+");
+        jButtonMasDiaEstadCitasFinal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMasDiaEstadCitasFinalMouseClicked(evt);
+            }
+        });
+        jButtonMasDiaEstadCitasFinal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMasDiaEstadCitasFinalActionPerformed(evt);
+            }
+        });
+        jPanelEstadCitas.add(jButtonMasDiaEstadCitasFinal);
+        jButtonMasDiaEstadCitasFinal.setBounds(620, 280, 50, 40);
+
+        jTextFieldMesEstadCitasFinal.setEditable(false);
+        jTextFieldMesEstadCitasFinal.setText("1");
+        jTextFieldMesEstadCitasFinal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldMesEstadCitasFinalActionPerformed(evt);
+            }
+        });
+        jPanelEstadCitas.add(jTextFieldMesEstadCitasFinal);
+        jTextFieldMesEstadCitasFinal.setBounds(680, 320, 33, 28);
+
+        jTextAreaEstadCitas.setBackground(new java.awt.Color(255, 204, 102));
+        jTextAreaEstadCitas.setColumns(20);
+        jTextAreaEstadCitas.setEditable(false);
+        jTextAreaEstadCitas.setRows(5);
+        jScrollPane7.setViewportView(jTextAreaEstadCitas);
+
+        jPanelEstadCitas.add(jScrollPane7);
+        jScrollPane7.setBounds(315, 224, 244, 240);
+
+        jLabel14.setText("Fecha");
+        jPanelEstadCitas.add(jLabel14);
+        jLabel14.setBounds(335, 201, 36, 16);
+
+        jLabel15.setText("Nº de citas");
+        jPanelEstadCitas.add(jLabel15);
+        jLabel15.setBounds(469, 201, 69, 16);
+
+        jPanelEstadCitas.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelEstadCitas, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         getContentPane().add(ZonaTrabajo);
         ZonaTrabajo.setBounds(13, 185, 920, 550);
-
-        jLabelIconoImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Imprimir.png"))); // NOI18N
-        jLabelIconoImprimir.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabelIconoImprimirMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabelIconoImprimirMouseExited(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabelIconoImprimirMouseEntered(evt);
-            }
-        });
-        getContentPane().add(jLabelIconoImprimir);
-        jLabelIconoImprimir.setBounds(310, 100, 60, 50);
-
-        jLabelIconoGuardarPDF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/GuardarPDF.png"))); // NOI18N
-        jLabelIconoGuardarPDF.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabelIconoGuardarPDFMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabelIconoGuardarPDFMouseExited(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabelIconoGuardarPDFMouseEntered(evt);
-            }
-        });
-        getContentPane().add(jLabelIconoGuardarPDF);
-        jLabelIconoGuardarPDF.setBounds(210, 100, 54, 50);
-
-        jLabelImprimir.setText("Imprimir");
-        getContentPane().add(jLabelImprimir);
-        jLabelImprimir.setBounds(310, 160, 60, 16);
-
-        jLabelGuardarPDF.setText("GuardarPDF");
-        getContentPane().add(jLabelGuardarPDF);
-        jLabelGuardarPDF.setBounds(200, 160, 80, 16);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -2737,10 +3123,12 @@ public class UI_Administrador extends javax.swing.JFrame {
 
     private void jLabelIconoImprimirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoImprimirMouseExited
         // TODO add your handling code here:
+        jLabelIconoImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Imprimir-Desactivado.png"))); // NOI18N
     }//GEN-LAST:event_jLabelIconoImprimirMouseExited
 
     private void jLabelIconoImprimirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoImprimirMouseEntered
         // TODO add your handling code here:
+        jLabelIconoImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Imprimir-Activado.png"))); // NOI18N
     }//GEN-LAST:event_jLabelIconoImprimirMouseEntered
 
     private void jLabelIconoGuardarPDFMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoGuardarPDFMouseClicked
@@ -2749,11 +3137,287 @@ public class UI_Administrador extends javax.swing.JFrame {
 
     private void jLabelIconoGuardarPDFMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoGuardarPDFMouseExited
         // TODO add your handling code here:
+        jLabelIconoGuardarPDF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/GuardarPDF-Desactivado.png"))); // NOI18N
     }//GEN-LAST:event_jLabelIconoGuardarPDFMouseExited
 
     private void jLabelIconoGuardarPDFMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoGuardarPDFMouseEntered
         // TODO add your handling code here:
+        jLabelIconoGuardarPDF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/GuardarPDF-Activado.png"))); // NOI18N
     }//GEN-LAST:event_jLabelIconoGuardarPDFMouseEntered
+
+    private void jButtonEstadPersFechaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonEstadPersFechaMouseClicked
+        // TODO add your handling code here:
+        mostrarPanel("EstadPersFecha");
+    }//GEN-LAST:event_jButtonEstadPersFechaMouseClicked
+
+    private void jButtonMenosMesEstadCitasInicialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosMesEstadCitasInicialMouseClicked
+        // TODO add your handling code here:
+
+        int num = 0;
+        int anioActual;
+
+        num = Integer.parseInt(jTextFieldMesEstadCitasInicial.getText());
+
+        if(num > 1)
+            num --;
+
+        String numString;
+        numString = String.valueOf(num);
+        jTextFieldMesEstadCitasInicial.setText(numString);
+    }//GEN-LAST:event_jButtonMenosMesEstadCitasInicialMouseClicked
+
+    private void jButtonMenosMesEstadCitasInicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosMesEstadCitasInicialActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMenosMesEstadCitasInicialActionPerformed
+
+    private void jButtonConsultarEstadCitasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarEstadCitasMouseClicked
+        // TODO add your handling code here:
+
+        jTextAreaEstadCitas.setText(null);
+        jLabelImprimir.setVisible(true);
+        jLabelGuardarPDF.setVisible(true);
+        jLabelIconoImprimir.setVisible(true);
+        jLabelIconoGuardarPDF.setVisible(true);
+    }//GEN-LAST:event_jButtonConsultarEstadCitasMouseClicked
+
+    private void jButtonMenosDiaEstadCitasInicialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosDiaEstadCitasInicialMouseClicked
+        // TODO add your handling code here:
+
+        int num = 0;
+        int anioActual;
+
+        num = Integer.parseInt(jTextFieldDiaEstadCitasInicial.getText());
+
+        if(num > 1)
+            num --;
+
+        String numString;
+        numString = String.valueOf(num);
+        jTextFieldDiaEstadCitasInicial.setText(numString);
+    }//GEN-LAST:event_jButtonMenosDiaEstadCitasInicialMouseClicked
+
+    private void jButtonMenosDiaEstadCitasInicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosDiaEstadCitasInicialActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMenosDiaEstadCitasInicialActionPerformed
+
+    private void jButtonMenosAnioEstadCitasInicialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosAnioEstadCitasInicialMouseClicked
+        // TODO add your handling code here:
+
+        int num = 0;
+
+        num = Integer.parseInt(jTextFieldAnioEstadCitasInicial.getText());
+
+        if(num > 1900)
+            num --;
+
+        String numString;
+        numString = String.valueOf(num);
+        jTextFieldAnioEstadCitasInicial.setText(numString);
+    }//GEN-LAST:event_jButtonMenosAnioEstadCitasInicialMouseClicked
+
+    private void jButtonMenosAnioEstadCitasInicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosAnioEstadCitasInicialActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMenosAnioEstadCitasInicialActionPerformed
+
+    private void jButtonMasAnioEstadCitasInicialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasAnioEstadCitasInicialMouseClicked
+        // TODO add your handling code here:
+
+        int num = 0;
+        int anioActual;
+
+        num = Integer.parseInt(jTextFieldAnioEstadCitasInicial.getText());
+
+        Calendar fechaActual = Calendar.getInstance();
+        anioActual = fechaActual.get(Calendar.YEAR);
+
+        if(num < anioActual)
+            num ++;
+
+        String numString;
+        numString = String.valueOf(num);
+        jTextFieldAnioEstadCitasInicial.setText(numString);
+    }//GEN-LAST:event_jButtonMasAnioEstadCitasInicialMouseClicked
+
+    private void jButtonMasAnioEstadCitasInicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasAnioEstadCitasInicialActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMasAnioEstadCitasInicialActionPerformed
+
+    private void jTextFieldAnioEstadCitasInicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldAnioEstadCitasInicialActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldAnioEstadCitasInicialActionPerformed
+
+    private void jButtonMasMesEstadCitasInicialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasMesEstadCitasInicialMouseClicked
+        // TODO add your handling code here:
+
+        int num = 0;
+
+        num = Integer.parseInt(jTextFieldMesEstadCitasInicial.getText());
+
+        if(num < 12)
+            num ++;
+
+        String numString;
+        numString = String.valueOf(num);
+        jTextFieldMesEstadCitasInicial.setText(numString);
+    }//GEN-LAST:event_jButtonMasMesEstadCitasInicialMouseClicked
+
+    private void jButtonMasMesEstadCitasInicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasMesEstadCitasInicialActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMasMesEstadCitasInicialActionPerformed
+
+    private void jButtonMasDiaEstadCitasInicialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasDiaEstadCitasInicialMouseClicked
+        // TODO add your handling code here:
+
+        int num = 0;
+
+        num = Integer.parseInt(jTextFieldDiaEstadCitasInicial.getText());
+
+        if(num < 31)
+            num ++;
+
+        String numString;
+        numString = String.valueOf(num);
+        jTextFieldDiaEstadCitasInicial.setText(numString);
+    }//GEN-LAST:event_jButtonMasDiaEstadCitasInicialMouseClicked
+
+    private void jButtonMasDiaEstadCitasInicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasDiaEstadCitasInicialActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMasDiaEstadCitasInicialActionPerformed
+
+    private void jTextFieldMesEstadCitasInicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMesEstadCitasInicialActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldMesEstadCitasInicialActionPerformed
+
+    private void jButtonMenosMesEstadCitasFinalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosMesEstadCitasFinalMouseClicked
+        // TODO add your handling code here:
+
+        int num = 0;
+
+        num = Integer.parseInt(jTextFieldMesEstadCitasFinal.getText());
+
+        if(num > 1)
+            num --;
+
+        String numString;
+        numString = String.valueOf(num);
+        jTextFieldMesEstadCitasFinal.setText(numString);
+    }//GEN-LAST:event_jButtonMenosMesEstadCitasFinalMouseClicked
+
+    private void jButtonMenosMesEstadCitasFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosMesEstadCitasFinalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMenosMesEstadCitasFinalActionPerformed
+
+    private void jButtonMenosDiaEstadCitasFinalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosDiaEstadCitasFinalMouseClicked
+        // TODO add your handling code here:
+
+        int num = 0;
+
+        num = Integer.parseInt(jTextFieldDiaEstadCitasFinal.getText());
+
+        if(num > 1)
+            num --;
+
+        String numString;
+        numString = String.valueOf(num);
+        jTextFieldDiaEstadCitasFinal.setText(numString);
+    }//GEN-LAST:event_jButtonMenosDiaEstadCitasFinalMouseClicked
+
+    private void jButtonMenosDiaEstadCitasFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosDiaEstadCitasFinalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMenosDiaEstadCitasFinalActionPerformed
+
+    private void jButtonMenosAnioEstadCitasFinalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosAnioEstadCitasFinalMouseClicked
+        // TODO add your handling code here:
+
+        int num = 0;
+
+        num = Integer.parseInt(jTextFieldAnioEstadCitasFinal.getText());
+
+        if(num > 1900)
+            num --;
+
+        String numString;
+        numString = String.valueOf(num);
+        jTextFieldAnioEstadCitasFinal.setText(numString);
+    }//GEN-LAST:event_jButtonMenosAnioEstadCitasFinalMouseClicked
+
+    private void jButtonMenosAnioEstadCitasFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosAnioEstadCitasFinalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMenosAnioEstadCitasFinalActionPerformed
+
+    private void jButtonMasAnioEstadCitasFinalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasAnioEstadCitasFinalMouseClicked
+        // TODO add your handling code here:
+
+        int num = 0;
+        int anioActual;
+
+        num = Integer.parseInt(jTextFieldAnioEstadCitasFinal.getText());
+
+        Calendar fechaActual = Calendar.getInstance();
+        anioActual = fechaActual.get(Calendar.YEAR);
+
+        if(num < anioActual)
+            num ++;
+
+        String numString;
+        numString = String.valueOf(num);
+        jTextFieldAnioEstadCitasFinal.setText(numString);
+    }//GEN-LAST:event_jButtonMasAnioEstadCitasFinalMouseClicked
+
+    private void jButtonMasAnioEstadCitasFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasAnioEstadCitasFinalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMasAnioEstadCitasFinalActionPerformed
+
+    private void jTextFieldAnioEstadCitasFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldAnioEstadCitasFinalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldAnioEstadCitasFinalActionPerformed
+
+    private void jButtonMasMesEstadCitasFinalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasMesEstadCitasFinalMouseClicked
+        // TODO add your handling code here:
+
+        int num = 0;
+
+        num = Integer.parseInt(jTextFieldMesEstadCitasFinal.getText());
+
+        if(num < 12)
+            num ++;
+
+        String numString;
+        numString = String.valueOf(num);
+        jTextFieldMesEstadCitasFinal.setText(numString);
+    }//GEN-LAST:event_jButtonMasMesEstadCitasFinalMouseClicked
+
+    private void jButtonMasMesEstadCitasFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasMesEstadCitasFinalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMasMesEstadCitasFinalActionPerformed
+
+    private void jButtonMasDiaEstadCitasFinalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasDiaEstadCitasFinalMouseClicked
+        // TODO add your handling code here:
+
+        int num = 0;
+
+        num = Integer.parseInt(jTextFieldDiaEstadCitasFinal.getText());
+
+        if(num < 31)
+            num ++;
+
+        String numString;
+        numString = String.valueOf(num);
+        jTextFieldDiaEstadCitasFinal.setText(numString);
+    }//GEN-LAST:event_jButtonMasDiaEstadCitasFinalMouseClicked
+
+    private void jButtonMasDiaEstadCitasFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasDiaEstadCitasFinalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMasDiaEstadCitasFinalActionPerformed
+
+    private void jTextFieldMesEstadCitasFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMesEstadCitasFinalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldMesEstadCitasFinalActionPerformed
+
+    private void jButtonEstadCitasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonEstadCitasMouseClicked
+        // TODO add your handling code here:
+        mostrarPanel("EstadCitas");
+    }//GEN-LAST:event_jButtonEstadCitasMouseClicked
 
 
     /*Comprueba que la fecha introducida es correcta
@@ -2837,7 +3501,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         String anioActual;
         String horaActual;
         String minutoActual;
-
+        
         Calendar fechaActual = Calendar.getInstance();
         diaActual = Integer.toString(fechaActual.get(Calendar.DATE));
         mesActual = Integer.toString(fechaActual.get(Calendar.MONTH));
@@ -2910,6 +3574,24 @@ public class UI_Administrador extends javax.swing.JFrame {
             jButtonConsultarTurno.setVisible(true);
             jTextAreaInfoConsultaTurno.setVisible(true);
             jTextAreaInfoTurno.setVisible(false);
+        }
+
+        if(formulario.equals("GestionarCita")){
+            jTextFieldDNIGestionarCita.setText(null);
+            jTextFieldDiaCita.setText(diaActual);
+            jTextFieldMesCita.setText(mesActual);
+            jTextFieldAnioCita.setText(anioActual);
+            jTextFieldHoraCita.setText(horaActual);
+            jTextFieldMinutoCita.setText(minutoActual);
+        }
+
+        if(formulario.equals("EstadCitas")){
+            jTextFieldDiaEstadCitasInicial.setText(diaActual);
+            jTextFieldDiaEstadCitasFinal.setText(diaActual);
+            jTextFieldMesEstadCitasInicial.setText(mesActual);
+            jTextFieldMesEstadCitasFinal.setText(mesActual);
+            jTextFieldAnioEstadCitasInicial.setText(anioActual);
+            jTextFieldAnioEstadCitasFinal.setText(anioActual);
         }
     }
 
@@ -2989,9 +3671,13 @@ public class UI_Administrador extends javax.swing.JFrame {
             /**Limpiamos posibles datos introducidos anteriormente*/
             limpiarFormulario("EstadPersFecha");
 
-            /**Hacemos visible el botón jLabelIconoInicio*/
+            /**Hacemos visible botones Imprimir, PDF e Inicio*/
             jLabelInicio.setVisible(true);
             jLabelIconoInicio.setVisible(true);
+            jLabelImprimir.setVisible(true);
+            jLabelGuardarPDF.setVisible(true);
+            jLabelIconoImprimir.setVisible(true);
+            jLabelIconoGuardarPDF.setVisible(true);
 
             /**Hacemos visible el panel seleccionado*/
             jPanelPrincipal.setVisible(false);
@@ -3021,7 +3707,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             /**Limpiamos posibles datos introducidos anteriormente*/
             limpiarFormulario("EstadPersTipo");
 
-            /**Hacemos visible el botón jLabelIconoInicio*/
+            /**Hacemos visible botones Imprimir, PDF e Inicio*/
             jLabelInicio.setVisible(true);
             jLabelIconoInicio.setVisible(true);
             jLabelImprimir.setVisible(true);
@@ -3258,6 +3944,7 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JButton jButtonAltaTurno;
     private javax.swing.JButton jButtonCancelarCita;
     private javax.swing.JButton jButtonConsultarCita;
+    private javax.swing.JButton jButtonConsultarEstadCitas;
     private javax.swing.JButton jButtonConsultarPaciente;
     private javax.swing.JButton jButtonConsultarPersonal;
     private javax.swing.JButton jButtonConsultarTurno;
@@ -3278,32 +3965,44 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JButton jButtonLimpiarPaciente;
     private javax.swing.JButton jButtonLimpiarPersonal;
     private javax.swing.JButton jButtonLimpiarTurno;
+    private javax.swing.JButton jButtonMasAnioEstadCitasFinal;
+    private javax.swing.JButton jButtonMasAnioEstadCitasInicial;
     private javax.swing.JButton jButtonMasAnioFechaCita;
     private javax.swing.JButton jButtonMasAnioFechaTurno;
     private javax.swing.JButton jButtonMasAnioPaciente;
     private javax.swing.JButton jButtonMasAnioPersonal;
+    private javax.swing.JButton jButtonMasDiaEstadCitasFinal;
+    private javax.swing.JButton jButtonMasDiaEstadCitasInicial;
     private javax.swing.JButton jButtonMasDiaFechaCita;
     private javax.swing.JButton jButtonMasDiaFechaTurno;
     private javax.swing.JButton jButtonMasDiaPaciente;
     private javax.swing.JButton jButtonMasDiaPersonal;
     private javax.swing.JButton jButtonMasHoraCita;
     private javax.swing.JButton jButtonMasHoraTurno;
+    private javax.swing.JButton jButtonMasMesEstadCitasFinal;
+    private javax.swing.JButton jButtonMasMesEstadCitasInicial;
     private javax.swing.JButton jButtonMasMesFechaCita;
     private javax.swing.JButton jButtonMasMesFechaTurno;
     private javax.swing.JButton jButtonMasMesPaciente;
     private javax.swing.JButton jButtonMasMesPersonal;
     private javax.swing.JButton jButtonMasMinutoCita;
     private javax.swing.JButton jButtonMasMinutoTurno;
+    private javax.swing.JButton jButtonMenosAnioEstadCitasFinal;
+    private javax.swing.JButton jButtonMenosAnioEstadCitasInicial;
     private javax.swing.JButton jButtonMenosAnioFechaCita;
     private javax.swing.JButton jButtonMenosAnioFechaTurno;
     private javax.swing.JButton jButtonMenosAnioPaciente;
     private javax.swing.JButton jButtonMenosAnioPersonal;
+    private javax.swing.JButton jButtonMenosDiaEstadCitasFinal;
+    private javax.swing.JButton jButtonMenosDiaEstadCitasInicial;
     private javax.swing.JButton jButtonMenosDiaFechaCita;
     private javax.swing.JButton jButtonMenosDiaFechaTurno;
     private javax.swing.JButton jButtonMenosDiaPaciente;
     private javax.swing.JButton jButtonMenosDiaPersonal;
     private javax.swing.JButton jButtonMenosHoraCita;
     private javax.swing.JButton jButtonMenosHoraTurno;
+    private javax.swing.JButton jButtonMenosMesEstadCitasFinal;
+    private javax.swing.JButton jButtonMenosMesEstadCitasInicial;
     private javax.swing.JButton jButtonMenosMesFechaCita;
     private javax.swing.JButton jButtonMenosMesFechaTurno;
     private javax.swing.JButton jButtonMenosMesPaciente;
@@ -3311,6 +4010,12 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JButton jButtonMenosMinutoCita;
     private javax.swing.JButton jButtonMenosMinutoTurno;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -3318,6 +4023,7 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelApellidosPaciente;
     private javax.swing.JLabel jLabelApellidosPersonal;
     private javax.swing.JLabel jLabelAyuda;
@@ -3332,11 +4038,15 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelDireccionPersonal;
     private javax.swing.JLabel jLabelEmailPaciente;
     private javax.swing.JLabel jLabelEmailPersonal;
+    private javax.swing.JLabel jLabelEstadCitas;
     private javax.swing.JLabel jLabelEstadCitas1;
+    private javax.swing.JLabel jLabelEstadPersFecha;
     private javax.swing.JLabel jLabelEstadPersFecha1;
     private javax.swing.JLabel jLabelEstadPersTipo;
     private javax.swing.JLabel jLabelEstadPersTipo1;
     private javax.swing.JLabel jLabelFechaCita;
+    private javax.swing.JLabel jLabelFechaCita1;
+    private javax.swing.JLabel jLabelFechaCita2;
     private javax.swing.JLabel jLabelFechaNacimiento2;
     private javax.swing.JLabel jLabelFechaNacimientoPaciente;
     private javax.swing.JLabel jLabelFechaTurno;
@@ -3374,6 +4084,7 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelTelefonoPaciente;
     private javax.swing.JLabel jLabelTelefonoPersonal;
     private javax.swing.JLabel jLabelTipoUsuario;
+    private javax.swing.JLabel jLabelTipoUsuarioIdentificado;
     private javax.swing.JLabel jLabelUsuario;
     private javax.swing.JPanel jPanelEstadCitas;
     private javax.swing.JPanel jPanelEstadPersFecha;
@@ -3393,12 +4104,20 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JTextArea jTextAreaEstadCitas;
     private javax.swing.JTextArea jTextAreaInfoCitaOnline;
     private javax.swing.JTextArea jTextAreaInfoConsulta;
     private javax.swing.JTextArea jTextAreaInfoConsultaTurno;
+    private javax.swing.JTextArea jTextAreaInfoEstadCitas;
     private javax.swing.JTextArea jTextAreaInfoTurno;
-    private javax.swing.JTextArea jTextEstadisticas;
+    private javax.swing.JTextArea jTextEstadPersTipo;
+    private javax.swing.JTextArea jTextEstdPersFecha;
     private javax.swing.JTextField jTextFieldAnioCita;
+    private javax.swing.JTextField jTextFieldAnioEstadCitasFinal;
+    private javax.swing.JTextField jTextFieldAnioEstadCitasInicial;
     private javax.swing.JTextField jTextFieldAnioTurno;
     private javax.swing.JTextField jTextFieldApellidosPaciente;
     private javax.swing.JTextField jTextFieldApellidosPersonal;
@@ -3409,6 +4128,8 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldDNIPaciente;
     private javax.swing.JTextField jTextFieldDNIPersonal;
     private javax.swing.JTextField jTextFieldDiaCita;
+    private javax.swing.JTextField jTextFieldDiaEstadCitasFinal;
+    private javax.swing.JTextField jTextFieldDiaEstadCitasInicial;
     private javax.swing.JTextField jTextFieldDiaTurno;
     private javax.swing.JTextField jTextFieldDireccionPaciente;
     private javax.swing.JTextField jTextFieldDireccionPersonal;
@@ -3425,6 +4146,8 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldLugarNacimientoPaciente;
     private javax.swing.JTextField jTextFieldLugarNacimientoPersonal;
     private javax.swing.JTextField jTextFieldMesCita;
+    private javax.swing.JTextField jTextFieldMesEstadCitasFinal;
+    private javax.swing.JTextField jTextFieldMesEstadCitasInicial;
     private javax.swing.JTextField jTextFieldMesTurno;
     private javax.swing.JTextField jTextFieldMinutoCita;
     private javax.swing.JTextField jTextFieldMinutoTurno;
