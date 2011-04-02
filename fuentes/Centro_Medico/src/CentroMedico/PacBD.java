@@ -54,11 +54,39 @@ public class PacBD {
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
-        String Consulta = "INSERT INTO Pacientes VALUES "+dni+","+nombre+","+apellidos+","+direccion+","+email+","+contrasena+","+telefono+","+fecNac+","+lugarNac+","+foto+","+tipo;
+        String Consulta = "INSERT INTO Pacientes VALUES Dni="+dni+",Nombre="+nombre+",Apellidos="+apellidos+",Direccion="+direccion+",Email="+email+",Contrasena="+contrasena+",Telefono="+telefono+",FechaNacimiento="+fecNac+",LugarNacimiento="+lugarNac+",Fotografia="+foto+",TipoUsuario="+tipo;
         conexion.consultaUpdate(Consulta);
         conexion.closeConnection();
         
     }
 
 
+    public Usuario obtenerPaciente(String Dni) throws SQLException {
+
+        Paciente paciente;
+
+        Jdbc conexion = new Jdbc();
+        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        String Consulta = "SELECT * FROM Pacientes WHERE Dni="+Dni;
+        ResultSet rs = conexion.consultaSelect(Consulta);
+        if(rs.next()) {
+            String dni=rs.getString("Dni");
+            String nombre=rs.getString("Nombre");
+            String apellidos=rs.getString("Apellidos");
+            String direccion=rs.getString("Direccion");
+            String email=rs.getString("Email");
+            String contrasena=rs.getString("Contrasena");
+            String telefono=rs.getString("Telefono"); //Estos campos han de coincidir exactamente con los de la tabla Usuarios en la BD
+            Date fecNac=rs.getDate("FechaNacimiento");//Si el Telefono es un Entero en la BD, aqui tendria que ser getInt("Telefono")
+            String lugarNac=rs.getString("LugarNacimiento");
+            String foto=rs.getString("Fotografia");
+
+            paciente = new Paciente(dni, nombre, apellidos, direccion, email, contrasena, telefono, fecNac, lugarNac, foto);
+        }
+        else{
+            paciente= null;
+        }
+        conexion.closeConnection();
+        return paciente;
+    }
 }

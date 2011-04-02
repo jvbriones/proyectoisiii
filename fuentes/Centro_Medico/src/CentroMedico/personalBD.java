@@ -37,7 +37,7 @@ public class personalBD {
         return existe;
     }
 
-        public void almacenarPersonal(Personal personal) {
+    public void almacenarPersonal(Personal personal) {
         String dni=personal.getDni();
         String nombre=personal.getNombre();
         String apellidos=personal.getApellidos();
