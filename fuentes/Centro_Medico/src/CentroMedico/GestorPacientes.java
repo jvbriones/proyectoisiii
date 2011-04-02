@@ -20,7 +20,7 @@ import java.io.*;
 public class GestorPacientes {
 
 
-    BD_Paciente bd_paciente=new BD_Paciente();
+    PacBD bd_paciente=new PacBD();
 
 
 /* Funcion encargada de solicitar el alta de un nuevo paciente

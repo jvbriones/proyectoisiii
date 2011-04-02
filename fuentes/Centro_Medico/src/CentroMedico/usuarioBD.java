@@ -19,7 +19,7 @@ import java.awt.*;
  * @version     v1.0    01/04/2011
  * @author      Sub_Equipo1
  */
-public class UsuarioBD {
+public class usuarioBD {
 
     public Boolean validacion(String Dni, String Pass) throws SQLException {
 
