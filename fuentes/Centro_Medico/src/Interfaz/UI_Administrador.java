@@ -46,6 +46,14 @@ public class UI_Administrador extends javax.swing.JFrame {
         buttonGroup1.add(jRadioButtonRadiologo);
         jRadioButtonAnalista.setSelected(true);
 
+        /**Enlazamos grupo botones de GestionarTurno*/
+        buttonGroup2.add(jRadioButtonManiana);
+        buttonGroup2.add(jRadioButtonTarde);
+        buttonGroup2.add(jRadioButtonNoche);
+        jRadioButtonManiana.setSelected(true);
+
+
+        /**Cargamos las imágenes de cada tipo de usuario al loguearse*/
         if(tipoUsuario.equals("Paciente"))
             jLabelTipoUsuarioIdentificado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo-Usuario-Paciente.png"))); // NOI18N
         if(tipoUsuario.equals("Administrador"))
@@ -66,6 +74,7 @@ public class UI_Administrador extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
         jLabelCentroMedico = new javax.swing.JLabel();
         jLabelIconoInicio = new javax.swing.JLabel();
         jLabelInicio = new javax.swing.JLabel();
@@ -180,34 +189,42 @@ public class UI_Administrador extends javax.swing.JFrame {
         jButtonGuardarPersonal = new javax.swing.JButton();
         jPanelGestionarTurno = new javax.swing.JPanel();
         jButtonConsultarTurno = new javax.swing.JButton();
-        jButtonMenosDiaFechaTurno = new javax.swing.JButton();
+        jButtonMenosDiaFechaInicioTurno = new javax.swing.JButton();
         jButtonAltaTurno = new javax.swing.JButton();
-        jButtonMenosMesFechaTurno = new javax.swing.JButton();
+        jButtonMenosMesFechaInicioTurno = new javax.swing.JButton();
         jButtonGuardarTurno = new javax.swing.JButton();
-        jButtonMasHoraTurno = new javax.swing.JButton();
         jButtonLimpiarTurno = new javax.swing.JButton();
         jLabelDNITurno = new javax.swing.JLabel();
         jTextFieldDNIGestionarTurno = new javax.swing.JTextField();
-        jTextFieldMinutoTurno = new javax.swing.JTextField();
-        jTextFieldHoraTurno = new javax.swing.JTextField();
-        jButtonMasMinutoTurno = new javax.swing.JButton();
-        jButtonMenosHoraTurno = new javax.swing.JButton();
-        jButtonMenosMinutoTurno = new javax.swing.JButton();
-        jLabelHoraTurno = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextAreaInfoConsultaTurno = new javax.swing.JTextArea();
-        jButtonMenosAnioFechaTurno = new javax.swing.JButton();
+        jButtonMenosAnioFechaInicioTurno = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextAreaInfoTurno = new javax.swing.JTextArea();
-        jTextFieldMesTurno = new javax.swing.JTextField();
-        jTextFieldAnioTurno = new javax.swing.JTextField();
-        jButtonMasAnioFechaTurno = new javax.swing.JButton();
+        jTextFieldMesInicioTurno = new javax.swing.JTextField();
+        jTextFieldAnioInicioTurno = new javax.swing.JTextField();
+        jButtonMasAnioFechaInicioTurno = new javax.swing.JButton();
         jLabelGestionarPaciente6 = new javax.swing.JLabel();
-        jTextFieldDiaTurno = new javax.swing.JTextField();
-        jLabelFechaTurno = new javax.swing.JLabel();
-        jButtonMasDiaFechaTurno = new javax.swing.JButton();
+        jTextFieldDiaInicioTurno = new javax.swing.JTextField();
+        jLabelFechaInicioTurno = new javax.swing.JLabel();
+        jButtonMasDiaFechaInicioTurno = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        jButtonMasMesFechaTurno = new javax.swing.JButton();
+        jButtonMasMesFechaInicioTurno = new javax.swing.JButton();
+        jButtonMenosDiaFechaFinTurno = new javax.swing.JButton();
+        jButtonMenosMesFechaFinTurno = new javax.swing.JButton();
+        jButtonMenosAnioFechaFinTurno = new javax.swing.JButton();
+        jTextFieldMesFinTurno = new javax.swing.JTextField();
+        jTextFieldAnioFinTurno = new javax.swing.JTextField();
+        jButtonMasAnioFechaFinTurno = new javax.swing.JButton();
+        jTextFieldDiaFinTurno = new javax.swing.JTextField();
+        jLabelFechaFinTurno = new javax.swing.JLabel();
+        jButtonMasDiaFechaFinTurno = new javax.swing.JButton();
+        jButtonMasMesFechaFinTurno = new javax.swing.JButton();
+        jLabelTurnoTrabajo = new javax.swing.JLabel();
+        jRadioButtonManiana = new javax.swing.JRadioButton();
+        jRadioButtonTarde = new javax.swing.JRadioButton();
+        jRadioButtonNoche = new javax.swing.JRadioButton();
+        jButtonBajaTurno = new javax.swing.JButton();
         jPanelGestionarCita = new javax.swing.JPanel();
         jButtonGuardarCita = new javax.swing.JButton();
         jTextFieldDNIGestionarCitaPaciente = new javax.swing.JTextField();
@@ -1091,19 +1108,19 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarTurno.add(jButtonConsultarTurno);
         jButtonConsultarTurno.setBounds(520, 440, 93, 39);
 
-        jButtonMenosDiaFechaTurno.setText("-");
-        jButtonMenosDiaFechaTurno.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButtonMenosDiaFechaInicioTurno.setText("-");
+        jButtonMenosDiaFechaInicioTurno.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMenosDiaFechaTurnoMouseClicked(evt);
+                jButtonMenosDiaFechaInicioTurnoMouseClicked(evt);
             }
         });
-        jButtonMenosDiaFechaTurno.addActionListener(new java.awt.event.ActionListener() {
+        jButtonMenosDiaFechaInicioTurno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMenosDiaFechaTurnoActionPerformed(evt);
+                jButtonMenosDiaFechaInicioTurnoActionPerformed(evt);
             }
         });
-        jPanelGestionarTurno.add(jButtonMenosDiaFechaTurno);
-        jButtonMenosDiaFechaTurno.setBounds(150, 380, 50, 40);
+        jPanelGestionarTurno.add(jButtonMenosDiaFechaInicioTurno);
+        jButtonMenosDiaFechaInicioTurno.setBounds(100, 380, 50, 40);
 
         jButtonAltaTurno.setText("Alta");
         jButtonAltaTurno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1114,19 +1131,19 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarTurno.add(jButtonAltaTurno);
         jButtonAltaTurno.setBounds(400, 440, 93, 39);
 
-        jButtonMenosMesFechaTurno.setText("-");
-        jButtonMenosMesFechaTurno.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButtonMenosMesFechaInicioTurno.setText("-");
+        jButtonMenosMesFechaInicioTurno.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMenosMesFechaTurnoMouseClicked(evt);
+                jButtonMenosMesFechaInicioTurnoMouseClicked(evt);
             }
         });
-        jButtonMenosMesFechaTurno.addActionListener(new java.awt.event.ActionListener() {
+        jButtonMenosMesFechaInicioTurno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMenosMesFechaTurnoActionPerformed(evt);
+                jButtonMenosMesFechaInicioTurnoActionPerformed(evt);
             }
         });
-        jPanelGestionarTurno.add(jButtonMenosMesFechaTurno);
-        jButtonMenosMesFechaTurno.setBounds(200, 380, 50, 40);
+        jPanelGestionarTurno.add(jButtonMenosMesFechaInicioTurno);
+        jButtonMenosMesFechaInicioTurno.setBounds(150, 380, 50, 40);
 
         jButtonGuardarTurno.setText("Guardar");
         jButtonGuardarTurno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1136,20 +1153,6 @@ public class UI_Administrador extends javax.swing.JFrame {
         });
         jPanelGestionarTurno.add(jButtonGuardarTurno);
         jButtonGuardarTurno.setBounds(400, 440, 93, 39);
-
-        jButtonMasHoraTurno.setText("+");
-        jButtonMasHoraTurno.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMasHoraTurnoMouseClicked(evt);
-            }
-        });
-        jButtonMasHoraTurno.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMasHoraTurnoActionPerformed(evt);
-            }
-        });
-        jPanelGestionarTurno.add(jButtonMasHoraTurno);
-        jButtonMasHoraTurno.setBounds(570, 310, 50, 40);
 
         jButtonLimpiarTurno.setText("Limpiar");
         jButtonLimpiarTurno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1177,91 +1180,30 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarTurno.add(jTextFieldDNIGestionarTurno);
         jTextFieldDNIGestionarTurno.setBounds(390, 250, 95, 28);
 
-        jTextFieldMinutoTurno.setEditable(false);
-        jTextFieldMinutoTurno.setText("1");
-        jTextFieldMinutoTurno.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldMinutoTurnoActionPerformed(evt);
-            }
-        });
-        jPanelGestionarTurno.add(jTextFieldMinutoTurno);
-        jTextFieldMinutoTurno.setBounds(630, 350, 33, 28);
-
-        jTextFieldHoraTurno.setEditable(false);
-        jTextFieldHoraTurno.setText("1");
-        jPanelGestionarTurno.add(jTextFieldHoraTurno);
-        jTextFieldHoraTurno.setBounds(580, 350, 33, 28);
-
-        jButtonMasMinutoTurno.setText("+");
-        jButtonMasMinutoTurno.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMasMinutoTurnoMouseClicked(evt);
-            }
-        });
-        jButtonMasMinutoTurno.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMasMinutoTurnoActionPerformed(evt);
-            }
-        });
-        jPanelGestionarTurno.add(jButtonMasMinutoTurno);
-        jButtonMasMinutoTurno.setBounds(620, 310, 50, 40);
-
-        jButtonMenosHoraTurno.setText("-");
-        jButtonMenosHoraTurno.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMenosHoraTurnoMouseClicked(evt);
-            }
-        });
-        jButtonMenosHoraTurno.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMenosHoraTurnoActionPerformed(evt);
-            }
-        });
-        jPanelGestionarTurno.add(jButtonMenosHoraTurno);
-        jButtonMenosHoraTurno.setBounds(570, 380, 50, 40);
-
-        jButtonMenosMinutoTurno.setText("-");
-        jButtonMenosMinutoTurno.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMenosMinutoTurnoMouseClicked(evt);
-            }
-        });
-        jButtonMenosMinutoTurno.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMenosMinutoTurnoActionPerformed(evt);
-            }
-        });
-        jPanelGestionarTurno.add(jButtonMenosMinutoTurno);
-        jButtonMenosMinutoTurno.setBounds(620, 380, 50, 40);
-
-        jLabelHoraTurno.setText("Hora turno");
-        jPanelGestionarTurno.add(jLabelHoraTurno);
-        jLabelHoraTurno.setBounds(580, 290, 70, 16);
-
         jTextAreaInfoConsultaTurno.setBackground(new java.awt.Color(255, 204, 102));
         jTextAreaInfoConsultaTurno.setColumns(17);
         jTextAreaInfoConsultaTurno.setEditable(false);
         jTextAreaInfoConsultaTurno.setFont(new java.awt.Font("Lucida Grande", 0, 18));
         jTextAreaInfoConsultaTurno.setRows(3);
-        jTextAreaInfoConsultaTurno.setText("Introduce el DNI del personal, una fecha y las horas que trabaja el personal\npara guardar su turno. \nSi introduces un DNI y una fecha, se puede saber las horas que trabaja dicho\npersonal.");
+        jTextAreaInfoConsultaTurno.setText("Introduce el DNI del personal, una fecha y las horas que trabaja el personal para guardar\nsu turno. Si introduces un DNI y pulsas consultar se sabe el turno del DNI.");
         jScrollPane3.setViewportView(jTextAreaInfoConsultaTurno);
 
         jPanelGestionarTurno.add(jScrollPane3);
         jScrollPane3.setBounds(60, 110, 780, 120);
 
-        jButtonMenosAnioFechaTurno.setText("-");
-        jButtonMenosAnioFechaTurno.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButtonMenosAnioFechaInicioTurno.setText("-");
+        jButtonMenosAnioFechaInicioTurno.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMenosAnioFechaTurnoMouseClicked(evt);
+                jButtonMenosAnioFechaInicioTurnoMouseClicked(evt);
             }
         });
-        jButtonMenosAnioFechaTurno.addActionListener(new java.awt.event.ActionListener() {
+        jButtonMenosAnioFechaInicioTurno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMenosAnioFechaTurnoActionPerformed(evt);
+                jButtonMenosAnioFechaInicioTurnoActionPerformed(evt);
             }
         });
-        jPanelGestionarTurno.add(jButtonMenosAnioFechaTurno);
-        jButtonMenosAnioFechaTurno.setBounds(250, 380, 50, 40);
+        jPanelGestionarTurno.add(jButtonMenosAnioFechaInicioTurno);
+        jButtonMenosAnioFechaInicioTurno.setBounds(200, 380, 50, 40);
 
         jTextAreaInfoTurno.setBackground(new java.awt.Color(255, 204, 102));
         jTextAreaInfoTurno.setColumns(17);
@@ -1274,85 +1216,228 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarTurno.add(jScrollPane4);
         jScrollPane4.setBounds(60, 110, 780, 120);
 
-        jTextFieldMesTurno.setEditable(false);
-        jTextFieldMesTurno.setText("1");
-        jTextFieldMesTurno.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldMesInicioTurno.setEditable(false);
+        jTextFieldMesInicioTurno.setText("1");
+        jTextFieldMesInicioTurno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldMesTurnoActionPerformed(evt);
+                jTextFieldMesInicioTurnoActionPerformed(evt);
             }
         });
-        jPanelGestionarTurno.add(jTextFieldMesTurno);
-        jTextFieldMesTurno.setBounds(210, 350, 33, 28);
+        jPanelGestionarTurno.add(jTextFieldMesInicioTurno);
+        jTextFieldMesInicioTurno.setBounds(160, 350, 33, 28);
 
-        jTextFieldAnioTurno.setEditable(false);
-        jTextFieldAnioTurno.setText("1950");
-        jTextFieldAnioTurno.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldAnioInicioTurno.setEditable(false);
+        jTextFieldAnioInicioTurno.setText("1950");
+        jTextFieldAnioInicioTurno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldAnioTurnoActionPerformed(evt);
+                jTextFieldAnioInicioTurnoActionPerformed(evt);
             }
         });
-        jPanelGestionarTurno.add(jTextFieldAnioTurno);
-        jTextFieldAnioTurno.setBounds(250, 350, 50, 28);
+        jPanelGestionarTurno.add(jTextFieldAnioInicioTurno);
+        jTextFieldAnioInicioTurno.setBounds(200, 350, 50, 28);
 
-        jButtonMasAnioFechaTurno.setText("+");
-        jButtonMasAnioFechaTurno.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButtonMasAnioFechaInicioTurno.setText("+");
+        jButtonMasAnioFechaInicioTurno.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMasAnioFechaTurnoMouseClicked(evt);
+                jButtonMasAnioFechaInicioTurnoMouseClicked(evt);
             }
         });
-        jButtonMasAnioFechaTurno.addActionListener(new java.awt.event.ActionListener() {
+        jButtonMasAnioFechaInicioTurno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMasAnioFechaTurnoActionPerformed(evt);
+                jButtonMasAnioFechaInicioTurnoActionPerformed(evt);
             }
         });
-        jPanelGestionarTurno.add(jButtonMasAnioFechaTurno);
-        jButtonMasAnioFechaTurno.setBounds(250, 310, 50, 40);
+        jPanelGestionarTurno.add(jButtonMasAnioFechaInicioTurno);
+        jButtonMasAnioFechaInicioTurno.setBounds(200, 310, 50, 40);
 
         jLabelGestionarPaciente6.setFont(new java.awt.Font("Lucida Grande", 1, 48));
         jLabelGestionarPaciente6.setText("Gestionar Turno");
         jPanelGestionarTurno.add(jLabelGestionarPaciente6);
         jLabelGestionarPaciente6.setBounds(260, 20, 405, 58);
 
-        jTextFieldDiaTurno.setEditable(false);
-        jTextFieldDiaTurno.setText("1");
-        jPanelGestionarTurno.add(jTextFieldDiaTurno);
-        jTextFieldDiaTurno.setBounds(160, 350, 33, 28);
+        jTextFieldDiaInicioTurno.setEditable(false);
+        jTextFieldDiaInicioTurno.setText("1");
+        jPanelGestionarTurno.add(jTextFieldDiaInicioTurno);
+        jTextFieldDiaInicioTurno.setBounds(110, 350, 33, 28);
 
-        jLabelFechaTurno.setText("Fecha turno");
-        jPanelGestionarTurno.add(jLabelFechaTurno);
-        jLabelFechaTurno.setBounds(190, 290, 74, 16);
+        jLabelFechaInicioTurno.setText("Fecha inicio");
+        jPanelGestionarTurno.add(jLabelFechaInicioTurno);
+        jLabelFechaInicioTurno.setBounds(140, 290, 75, 16);
 
-        jButtonMasDiaFechaTurno.setText("+");
-        jButtonMasDiaFechaTurno.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButtonMasDiaFechaInicioTurno.setText("+");
+        jButtonMasDiaFechaInicioTurno.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMasDiaFechaTurnoMouseClicked(evt);
+                jButtonMasDiaFechaInicioTurnoMouseClicked(evt);
             }
         });
-        jButtonMasDiaFechaTurno.addActionListener(new java.awt.event.ActionListener() {
+        jButtonMasDiaFechaInicioTurno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMasDiaFechaTurnoActionPerformed(evt);
+                jButtonMasDiaFechaInicioTurnoActionPerformed(evt);
             }
         });
-        jPanelGestionarTurno.add(jButtonMasDiaFechaTurno);
-        jButtonMasDiaFechaTurno.setBounds(150, 310, 50, 40);
+        jPanelGestionarTurno.add(jButtonMasDiaFechaInicioTurno);
+        jButtonMasDiaFechaInicioTurno.setBounds(100, 310, 50, 40);
 
         jLabel5.setText("_____________________________________________________________________________");
         jPanelGestionarTurno.add(jLabel5);
         jLabel5.setBounds(180, 70, 539, 16);
 
-        jButtonMasMesFechaTurno.setText("+");
-        jButtonMasMesFechaTurno.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButtonMasMesFechaInicioTurno.setText("+");
+        jButtonMasMesFechaInicioTurno.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMasMesFechaTurnoMouseClicked(evt);
+                jButtonMasMesFechaInicioTurnoMouseClicked(evt);
             }
         });
-        jButtonMasMesFechaTurno.addActionListener(new java.awt.event.ActionListener() {
+        jButtonMasMesFechaInicioTurno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMasMesFechaTurnoActionPerformed(evt);
+                jButtonMasMesFechaInicioTurnoActionPerformed(evt);
             }
         });
-        jPanelGestionarTurno.add(jButtonMasMesFechaTurno);
-        jButtonMasMesFechaTurno.setBounds(200, 310, 50, 40);
+        jPanelGestionarTurno.add(jButtonMasMesFechaInicioTurno);
+        jButtonMasMesFechaInicioTurno.setBounds(150, 310, 50, 40);
+
+        jButtonMenosDiaFechaFinTurno.setText("-");
+        jButtonMenosDiaFechaFinTurno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMenosDiaFechaFinTurnoMouseClicked(evt);
+            }
+        });
+        jButtonMenosDiaFechaFinTurno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMenosDiaFechaFinTurnoActionPerformed(evt);
+            }
+        });
+        jPanelGestionarTurno.add(jButtonMenosDiaFechaFinTurno);
+        jButtonMenosDiaFechaFinTurno.setBounds(360, 380, 50, 40);
+
+        jButtonMenosMesFechaFinTurno.setText("-");
+        jButtonMenosMesFechaFinTurno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMenosMesFechaFinTurnoMouseClicked(evt);
+            }
+        });
+        jButtonMenosMesFechaFinTurno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMenosMesFechaFinTurnoActionPerformed(evt);
+            }
+        });
+        jPanelGestionarTurno.add(jButtonMenosMesFechaFinTurno);
+        jButtonMenosMesFechaFinTurno.setBounds(410, 380, 50, 40);
+
+        jButtonMenosAnioFechaFinTurno.setText("-");
+        jButtonMenosAnioFechaFinTurno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMenosAnioFechaFinTurnoMouseClicked(evt);
+            }
+        });
+        jButtonMenosAnioFechaFinTurno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMenosAnioFechaFinTurnoActionPerformed(evt);
+            }
+        });
+        jPanelGestionarTurno.add(jButtonMenosAnioFechaFinTurno);
+        jButtonMenosAnioFechaFinTurno.setBounds(460, 380, 50, 40);
+
+        jTextFieldMesFinTurno.setEditable(false);
+        jTextFieldMesFinTurno.setText("1");
+        jTextFieldMesFinTurno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldMesFinTurnoActionPerformed(evt);
+            }
+        });
+        jPanelGestionarTurno.add(jTextFieldMesFinTurno);
+        jTextFieldMesFinTurno.setBounds(420, 350, 33, 28);
+
+        jTextFieldAnioFinTurno.setEditable(false);
+        jTextFieldAnioFinTurno.setText("1950");
+        jTextFieldAnioFinTurno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldAnioFinTurnoActionPerformed(evt);
+            }
+        });
+        jPanelGestionarTurno.add(jTextFieldAnioFinTurno);
+        jTextFieldAnioFinTurno.setBounds(460, 350, 50, 28);
+
+        jButtonMasAnioFechaFinTurno.setText("+");
+        jButtonMasAnioFechaFinTurno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMasAnioFechaFinTurnoMouseClicked(evt);
+            }
+        });
+        jButtonMasAnioFechaFinTurno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMasAnioFechaFinTurnoActionPerformed(evt);
+            }
+        });
+        jPanelGestionarTurno.add(jButtonMasAnioFechaFinTurno);
+        jButtonMasAnioFechaFinTurno.setBounds(460, 310, 50, 40);
+
+        jTextFieldDiaFinTurno.setEditable(false);
+        jTextFieldDiaFinTurno.setText("1");
+        jPanelGestionarTurno.add(jTextFieldDiaFinTurno);
+        jTextFieldDiaFinTurno.setBounds(370, 350, 33, 28);
+
+        jLabelFechaFinTurno.setText("Fecha fin");
+        jPanelGestionarTurno.add(jLabelFechaFinTurno);
+        jLabelFechaFinTurno.setBounds(400, 290, 74, 16);
+
+        jButtonMasDiaFechaFinTurno.setText("+");
+        jButtonMasDiaFechaFinTurno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMasDiaFechaFinTurnoMouseClicked(evt);
+            }
+        });
+        jButtonMasDiaFechaFinTurno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMasDiaFechaFinTurnoActionPerformed(evt);
+            }
+        });
+        jPanelGestionarTurno.add(jButtonMasDiaFechaFinTurno);
+        jButtonMasDiaFechaFinTurno.setBounds(360, 310, 50, 40);
+
+        jButtonMasMesFechaFinTurno.setText("+");
+        jButtonMasMesFechaFinTurno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMasMesFechaFinTurnoMouseClicked(evt);
+            }
+        });
+        jButtonMasMesFechaFinTurno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMasMesFechaFinTurnoActionPerformed(evt);
+            }
+        });
+        jPanelGestionarTurno.add(jButtonMasMesFechaFinTurno);
+        jButtonMasMesFechaFinTurno.setBounds(410, 310, 50, 40);
+
+        jLabelTurnoTrabajo.setText("Turno de trabajo");
+        jPanelGestionarTurno.add(jLabelTurnoTrabajo);
+        jLabelTurnoTrabajo.setBounds(610, 290, 110, 16);
+
+        jRadioButtonManiana.setText("Mañana (8h-16h)");
+        jPanelGestionarTurno.add(jRadioButtonManiana);
+        jRadioButtonManiana.setBounds(600, 320, 150, 23);
+
+        jRadioButtonTarde.setText("Tarde (16h-24h)");
+        jRadioButtonTarde.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonTardeActionPerformed(evt);
+            }
+        });
+        jPanelGestionarTurno.add(jRadioButtonTarde);
+        jRadioButtonTarde.setBounds(600, 350, 150, 23);
+
+        jRadioButtonNoche.setText("Noche (24h-8h)");
+        jPanelGestionarTurno.add(jRadioButtonNoche);
+        jRadioButtonNoche.setBounds(600, 380, 150, 23);
+
+        jButtonBajaTurno.setText("Baja");
+        jButtonBajaTurno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonBajaTurnoMouseClicked(evt);
+            }
+        });
+        jPanelGestionarTurno.add(jButtonBajaTurno);
+        jButtonBajaTurno.setBounds(640, 440, 93, 39);
 
         jPanelGestionarTurno.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelGestionarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -1420,6 +1505,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarCita.add(jButtonAltaCita);
         jButtonAltaCita.setBounds(400, 440, 93, 39);
 
+        jButtonConsultarCita.setText("Consulta");
         jButtonConsultarCita.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonConsultarCitaMouseClicked(evt);
@@ -1752,7 +1838,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jTextAreaInfoCitaOnline.setBackground(new java.awt.Color(255, 204, 102));
         jTextAreaInfoCitaOnline.setColumns(17);
         jTextAreaInfoCitaOnline.setEditable(false);
-        jTextAreaInfoCitaOnline.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jTextAreaInfoCitaOnline.setFont(new java.awt.Font("Lucida Grande", 0, 18));
         jTextAreaInfoCitaOnline.setRows(3);
         jTextAreaInfoCitaOnline.setText("Introduce el DNI del paciente y pulse en la opción que desee");
         jScrollPaneElegirCita.setViewportView(jTextAreaInfoCitaOnline);
@@ -2891,6 +2977,10 @@ public class UI_Administrador extends javax.swing.JFrame {
         /**Mostramos el botón guardar paciente y ocultamos el de alta */
         jButtonGuardarPaciente.setVisible(true);
         jButtonAltaPaciente.setVisible(false);
+
+        jLabelContraseniaPaciente.setVisible(true);
+        jTextFieldContraseniaPaciente.setVisible(true);
+
     }//GEN-LAST:event_jButtonConsultarPacienteMouseClicked
 
     private void jButtonGuardarPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGuardarPacienteActionPerformed
@@ -2903,6 +2993,9 @@ public class UI_Administrador extends javax.swing.JFrame {
         /**Mostramos el botón guardar paciente y ocultamos el de alta */
         jButtonGuardarPersonal.setVisible(true);
         jButtonAltaPersonal.setVisible(false);
+
+        jLabelContraseniaPersonal.setVisible(true);
+        jTextFieldContraseniaPersonal.setVisible(true);
 }//GEN-LAST:event_jButtonConsultarPersonalMouseClicked
 
     private void jButtonAltaCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAltaCitaMouseClicked
@@ -2913,6 +3006,9 @@ public class UI_Administrador extends javax.swing.JFrame {
         jTextFieldDNIGestionarCitaPaciente.setVisible(false);
         jLabelDNIGestionarCitaMedico.setVisible(false);
         jTextFieldDNIGestionarCitaMedico.setVisible(false);
+        jButtonAceptarCita.setVisible(true);
+        jButtonAltaCita.setVisible(false);
+        jButtonConsultarCita.setVisible(false);
 }//GEN-LAST:event_jButtonAltaCitaMouseClicked
 
     private void jButtonGuardarCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarCitaMouseClicked
@@ -2951,75 +3047,54 @@ public class UI_Administrador extends javax.swing.JFrame {
         jButtonAltaTurno.setVisible(false);
         jTextAreaInfoConsultaTurno.setVisible(false);
         jTextAreaInfoTurno.setVisible(true);
+        jButtonBajaTurno.setVisible(true);
     }//GEN-LAST:event_jButtonConsultarTurnoMouseClicked
 
-    private void jButtonMenosDiaFechaTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosDiaFechaTurnoMouseClicked
+    private void jButtonMenosDiaFechaInicioTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosDiaFechaInicioTurnoMouseClicked
         // TODO add your handling code here:
 
         int num = 0;
 
-        num = Integer.parseInt(jTextFieldDiaTurno.getText());
+        num = Integer.parseInt(jTextFieldDiaInicioTurno.getText());
 
         if(num > 1)
             num --;
 
         String numString;
         numString = String.valueOf(num);
-        jTextFieldDiaTurno.setText(numString);
-    }//GEN-LAST:event_jButtonMenosDiaFechaTurnoMouseClicked
+        jTextFieldDiaInicioTurno.setText(numString);
+    }//GEN-LAST:event_jButtonMenosDiaFechaInicioTurnoMouseClicked
 
-    private void jButtonMenosDiaFechaTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosDiaFechaTurnoActionPerformed
+    private void jButtonMenosDiaFechaInicioTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosDiaFechaInicioTurnoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMenosDiaFechaTurnoActionPerformed
+    }//GEN-LAST:event_jButtonMenosDiaFechaInicioTurnoActionPerformed
 
     private void jButtonAltaTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAltaTurnoMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonAltaTurnoMouseClicked
 
-    private void jButtonMenosMesFechaTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosMesFechaTurnoMouseClicked
+    private void jButtonMenosMesFechaInicioTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosMesFechaInicioTurnoMouseClicked
         // TODO add your handling code here:
 
         int num = 0;
 
-        num = Integer.parseInt(jTextFieldMesTurno.getText());
+        num = Integer.parseInt(jTextFieldMesInicioTurno.getText());
 
         if(num > 1)
             num --;
 
         String numString;
         numString = String.valueOf(num);
-        jTextFieldMesTurno.setText(numString);
-    }//GEN-LAST:event_jButtonMenosMesFechaTurnoMouseClicked
+        jTextFieldMesInicioTurno.setText(numString);
+    }//GEN-LAST:event_jButtonMenosMesFechaInicioTurnoMouseClicked
 
-    private void jButtonMenosMesFechaTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosMesFechaTurnoActionPerformed
+    private void jButtonMenosMesFechaInicioTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosMesFechaInicioTurnoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMenosMesFechaTurnoActionPerformed
+    }//GEN-LAST:event_jButtonMenosMesFechaInicioTurnoActionPerformed
 
     private void jButtonGuardarTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarTurnoMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonGuardarTurnoMouseClicked
-
-    private void jButtonMasHoraTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasHoraTurnoMouseClicked
-        // TODO add your handling code here:
-
-        int hora = 0;
-
-        hora = Integer.parseInt(jTextFieldHoraTurno.getText());
-
-        if(hora < 24){
-            hora ++;
-        }else{
-            hora = 1;
-        }
-
-        String numString;
-        numString = String.valueOf(hora);
-        jTextFieldHoraTurno.setText(numString);
-    }//GEN-LAST:event_jButtonMasHoraTurnoMouseClicked
-
-    private void jButtonMasHoraTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasHoraTurnoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMasHoraTurnoActionPerformed
 
     private void jButtonLimpiarTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonLimpiarTurnoMouseClicked
         // TODO add your handling code here:
@@ -3033,7 +3108,7 @@ public class UI_Administrador extends javax.swing.JFrame {
     private void jTextFieldDNIGestionarTurnoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldDNIGestionarTurnoKeyTyped
         // TODO add your handling code here:
 
-                /**Limitamos a que el DNI siempre sea correcto sintácticamente*/
+        /**Limitamos a que el DNI siempre sea correcto sintácticamente*/
         char teclaPresionada = evt.getKeyChar();
 
         if(jTextFieldDNIGestionarTurno.getText().length() < 8)
@@ -3051,107 +3126,39 @@ public class UI_Administrador extends javax.swing.JFrame {
             evt.consume();
     }//GEN-LAST:event_jTextFieldDNIGestionarTurnoKeyTyped
 
-    private void jTextFieldMinutoTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMinutoTurnoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldMinutoTurnoActionPerformed
-
-    private void jButtonMasMinutoTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasMinutoTurnoMouseClicked
-        // TODO add your handling code here:
-
-        int minuto = 0;
-
-        minuto = Integer.parseInt(jTextFieldMinutoTurno.getText());
-
-        if(minuto < 60)
-            minuto ++;
-        else
-            minuto = 0;
-
-        String numString;
-        numString = String.valueOf(minuto);
-        jTextFieldMinutoTurno.setText(numString);
-    }//GEN-LAST:event_jButtonMasMinutoTurnoMouseClicked
-
-    private void jButtonMasMinutoTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasMinutoTurnoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMasMinutoTurnoActionPerformed
-
-    private void jButtonMenosHoraTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosHoraTurnoMouseClicked
-        // TODO add your handling code here:
-
-        int hora = 0;
-
-        hora = Integer.parseInt(jTextFieldHoraTurno.getText());
-
-        if(hora > 1){
-            hora --;
-        }else{
-            hora = 24;
-        }
-
-        String numString;
-        numString = String.valueOf(hora);
-        jTextFieldHoraTurno.setText(numString);
-    }//GEN-LAST:event_jButtonMenosHoraTurnoMouseClicked
-
-    private void jButtonMenosHoraTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosHoraTurnoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMenosHoraTurnoActionPerformed
-
-    private void jButtonMenosMinutoTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosMinutoTurnoMouseClicked
-        // TODO add your handling code here:
-
-        int minuto = 0;
-
-        minuto = Integer.parseInt(jTextFieldMinutoTurno.getText());
-
-        if(minuto > 0)
-            minuto --;
-        else
-            minuto = 60;
-
-        String numString;
-        numString = String.valueOf(minuto);
-        jTextFieldMinutoTurno.setText(numString);
-    }//GEN-LAST:event_jButtonMenosMinutoTurnoMouseClicked
-
-    private void jButtonMenosMinutoTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosMinutoTurnoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMenosMinutoTurnoActionPerformed
-
-    private void jButtonMenosAnioFechaTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosAnioFechaTurnoMouseClicked
+    private void jButtonMenosAnioFechaInicioTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosAnioFechaInicioTurnoMouseClicked
         // TODO add your handling code here:
 
         int num = 0;
-        num = Integer.parseInt(jTextFieldAnioTurno.getText());
+        num = Integer.parseInt(jTextFieldAnioInicioTurno.getText());
 
         if(num > 1900)
             num --;
 
         String numString;
         numString = String.valueOf(num);
-        jTextFieldAnioTurno.setText(numString);
-    }//GEN-LAST:event_jButtonMenosAnioFechaTurnoMouseClicked
+        jTextFieldAnioInicioTurno.setText(numString);
+    }//GEN-LAST:event_jButtonMenosAnioFechaInicioTurnoMouseClicked
 
-    private void jButtonMenosAnioFechaTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosAnioFechaTurnoActionPerformed
+    private void jButtonMenosAnioFechaInicioTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosAnioFechaInicioTurnoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMenosAnioFechaTurnoActionPerformed
+    }//GEN-LAST:event_jButtonMenosAnioFechaInicioTurnoActionPerformed
 
-    private void jTextFieldMesTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMesTurnoActionPerformed
+    private void jTextFieldMesInicioTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMesInicioTurnoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldMesTurnoActionPerformed
+    }//GEN-LAST:event_jTextFieldMesInicioTurnoActionPerformed
 
-    private void jTextFieldAnioTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldAnioTurnoActionPerformed
+    private void jTextFieldAnioInicioTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldAnioInicioTurnoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldAnioTurnoActionPerformed
+    }//GEN-LAST:event_jTextFieldAnioInicioTurnoActionPerformed
 
-    private void jButtonMasAnioFechaTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasAnioFechaTurnoMouseClicked
+    private void jButtonMasAnioFechaInicioTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasAnioFechaInicioTurnoMouseClicked
         // TODO add your handling code here:
 
         int num = 0;
         int anioActual = 0;
 
-        num = Integer.parseInt(jTextFieldAnioTurno.getText());
+        num = Integer.parseInt(jTextFieldAnioInicioTurno.getText());
 
         Calendar fechaActual = Calendar.getInstance();
         anioActual = fechaActual.get(Calendar.YEAR);
@@ -3161,50 +3168,50 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         String numString;
         numString = String.valueOf(num);
-        jTextFieldAnioTurno.setText(numString);
-    }//GEN-LAST:event_jButtonMasAnioFechaTurnoMouseClicked
+        jTextFieldAnioInicioTurno.setText(numString);
+    }//GEN-LAST:event_jButtonMasAnioFechaInicioTurnoMouseClicked
 
-    private void jButtonMasAnioFechaTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasAnioFechaTurnoActionPerformed
+    private void jButtonMasAnioFechaInicioTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasAnioFechaInicioTurnoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMasAnioFechaTurnoActionPerformed
+    }//GEN-LAST:event_jButtonMasAnioFechaInicioTurnoActionPerformed
 
-    private void jButtonMasDiaFechaTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasDiaFechaTurnoMouseClicked
+    private void jButtonMasDiaFechaInicioTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasDiaFechaInicioTurnoMouseClicked
         // TODO add your handling code here:
 
         int num = 0;
 
-        num = Integer.parseInt(jTextFieldDiaTurno.getText());
+        num = Integer.parseInt(jTextFieldDiaInicioTurno.getText());
 
         if(num < 31)
             num ++;
 
         String numString;
         numString = String.valueOf(num);
-        jTextFieldDiaTurno.setText(numString);
-    }//GEN-LAST:event_jButtonMasDiaFechaTurnoMouseClicked
+        jTextFieldDiaInicioTurno.setText(numString);
+    }//GEN-LAST:event_jButtonMasDiaFechaInicioTurnoMouseClicked
 
-    private void jButtonMasDiaFechaTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasDiaFechaTurnoActionPerformed
+    private void jButtonMasDiaFechaInicioTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasDiaFechaInicioTurnoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMasDiaFechaTurnoActionPerformed
+    }//GEN-LAST:event_jButtonMasDiaFechaInicioTurnoActionPerformed
 
-    private void jButtonMasMesFechaTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasMesFechaTurnoMouseClicked
+    private void jButtonMasMesFechaInicioTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasMesFechaInicioTurnoMouseClicked
         // TODO add your handling code here:
 
         int num = 0;
 
-        num = Integer.parseInt(jTextFieldMesTurno.getText());
+        num = Integer.parseInt(jTextFieldMesInicioTurno.getText());
 
         if(num < 12)
             num ++;
 
         String numString;
         numString = String.valueOf(num);
-        jTextFieldMesTurno.setText(numString);
-    }//GEN-LAST:event_jButtonMasMesFechaTurnoMouseClicked
+        jTextFieldMesInicioTurno.setText(numString);
+    }//GEN-LAST:event_jButtonMasMesFechaInicioTurnoMouseClicked
 
-    private void jButtonMasMesFechaTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasMesFechaTurnoActionPerformed
+    private void jButtonMasMesFechaInicioTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasMesFechaInicioTurnoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMasMesFechaTurnoActionPerformed
+    }//GEN-LAST:event_jButtonMasMesFechaInicioTurnoActionPerformed
 
     private void jButtonGestionarTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGestionarTurnoMouseClicked
         // TODO add your handling code here:
@@ -3520,6 +3527,23 @@ public class UI_Administrador extends javax.swing.JFrame {
 
     private void jTextFieldDNIGestionarCitaMedicoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldDNIGestionarCitaMedicoKeyTyped
         // TODO add your handling code here:
+        
+        /**Limitamos a que el DNI siempre sea correcto sintácticamente*/
+        char teclaPresionada = evt.getKeyChar();
+
+        if(jTextFieldDNIGestionarCitaMedico.getText().length() < 8)
+            if(Character.isDigit(teclaPresionada) == false)
+                evt.consume();
+
+        if(jTextFieldDNIGestionarCitaMedico.getText().length() == 8)
+            if(Character.isDigit(teclaPresionada) == true){
+                evt.consume();
+                }else if(Character.isLowerCase(teclaPresionada)){
+                    jTextFieldDNIGestionarCitaMedico.setText(jTextFieldDNIGestionarCitaMedico.getText().toUpperCase());
+                }
+
+        if(jTextFieldDNIGestionarCitaMedico.getText().length() > 8)
+            evt.consume();
     }//GEN-LAST:event_jTextFieldDNIGestionarCitaMedicoKeyTyped
 
     private void jButtonAceptarCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAceptarCitaMouseClicked
@@ -3529,6 +3553,70 @@ public class UI_Administrador extends javax.swing.JFrame {
     private void jButtonConsultarCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultarCitaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonConsultarCitaActionPerformed
+
+    private void jButtonMenosDiaFechaFinTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosDiaFechaFinTurnoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMenosDiaFechaFinTurnoMouseClicked
+
+    private void jButtonMenosDiaFechaFinTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosDiaFechaFinTurnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMenosDiaFechaFinTurnoActionPerformed
+
+    private void jButtonMenosMesFechaFinTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosMesFechaFinTurnoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMenosMesFechaFinTurnoMouseClicked
+
+    private void jButtonMenosMesFechaFinTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosMesFechaFinTurnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMenosMesFechaFinTurnoActionPerformed
+
+    private void jButtonMenosAnioFechaFinTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosAnioFechaFinTurnoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMenosAnioFechaFinTurnoMouseClicked
+
+    private void jButtonMenosAnioFechaFinTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosAnioFechaFinTurnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMenosAnioFechaFinTurnoActionPerformed
+
+    private void jTextFieldMesFinTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMesFinTurnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldMesFinTurnoActionPerformed
+
+    private void jTextFieldAnioFinTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldAnioFinTurnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldAnioFinTurnoActionPerformed
+
+    private void jButtonMasAnioFechaFinTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasAnioFechaFinTurnoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMasAnioFechaFinTurnoMouseClicked
+
+    private void jButtonMasAnioFechaFinTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasAnioFechaFinTurnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMasAnioFechaFinTurnoActionPerformed
+
+    private void jButtonMasDiaFechaFinTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasDiaFechaFinTurnoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMasDiaFechaFinTurnoMouseClicked
+
+    private void jButtonMasDiaFechaFinTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasDiaFechaFinTurnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMasDiaFechaFinTurnoActionPerformed
+
+    private void jButtonMasMesFechaFinTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasMesFechaFinTurnoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMasMesFechaFinTurnoMouseClicked
+
+    private void jButtonMasMesFechaFinTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasMesFechaFinTurnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMasMesFechaFinTurnoActionPerformed
+
+    private void jRadioButtonTardeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonTardeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonTardeActionPerformed
+
+    private void jButtonBajaTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonBajaTurnoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonBajaTurnoMouseClicked
 
 
     /*Comprueba que la fecha introducida es correcta
@@ -3667,11 +3755,9 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         if(formulario.equals("GestionarTurno")){
             jTextFieldDNIGestionarTurno.setText("");
-            jTextFieldDiaTurno.setText(diaActual);
-            jTextFieldMesTurno.setText(mesActual);
-            jTextFieldAnioTurno.setText(anioActual);
-            jTextFieldHoraTurno.setText(horaActual);
-            jTextFieldMinutoTurno.setText(minutoActual);
+            jTextFieldDiaInicioTurno.setText(diaActual);
+            jTextFieldMesInicioTurno.setText(mesActual);
+            jTextFieldAnioInicioTurno.setText(anioActual);
             jScrollPane3.setVisible(true);
             jScrollPane4.setVisible(false);
             jButtonGuardarTurno.setVisible(false);
@@ -3900,6 +3986,8 @@ public class UI_Administrador extends javax.swing.JFrame {
             jLabelIconoInicio.setVisible(true);
             jButtonGuardarPaciente.setVisible(false);
             jButtonAltaPaciente.setVisible(true);
+            jTextFieldContraseniaPaciente.setVisible(false);
+            jLabelContraseniaPaciente.setVisible(false);
 
 
             /**Hacemos visible el panel seleccionado*/
@@ -3935,6 +4023,8 @@ public class UI_Administrador extends javax.swing.JFrame {
             jLabelIconoInicio.setVisible(true);
             jButtonGuardarPersonal.setVisible(false);
             jButtonAltaPersonal.setVisible(true);
+            jTextFieldContraseniaPersonal.setVisible(false);
+            jLabelContraseniaPersonal.setVisible(false);
 
 
             /**Hacemos visible el panel seleccionado*/
@@ -3967,6 +4057,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             /**Hacemos visible el botón jLabelIconoInicio*/
             jLabelInicio.setVisible(true);
             jLabelIconoInicio.setVisible(true);
+            jButtonBajaTurno.setVisible(false);
 
             /**Hacemos visible el panel seleccionado*/
             jPanelPrincipal.setVisible(false);
@@ -4051,11 +4142,13 @@ public class UI_Administrador extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLayeredPane ZonaTrabajo;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JButton jButtonAceptarCita;
     private javax.swing.JButton jButtonAltaCita;
     private javax.swing.JButton jButtonAltaPaciente;
     private javax.swing.JButton jButtonAltaPersonal;
     private javax.swing.JButton jButtonAltaTurno;
+    private javax.swing.JButton jButtonBajaTurno;
     private javax.swing.JButton jButtonCancelarCita;
     private javax.swing.JButton jButtonConsultarCita;
     private javax.swing.JButton jButtonConsultarEstadCitas;
@@ -4082,47 +4175,49 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JButton jButtonMasAnioEstadCitasFinal;
     private javax.swing.JButton jButtonMasAnioEstadCitasInicial;
     private javax.swing.JButton jButtonMasAnioFechaCita;
-    private javax.swing.JButton jButtonMasAnioFechaTurno;
+    private javax.swing.JButton jButtonMasAnioFechaFinTurno;
+    private javax.swing.JButton jButtonMasAnioFechaInicioTurno;
     private javax.swing.JButton jButtonMasAnioPaciente;
     private javax.swing.JButton jButtonMasAnioPersonal;
     private javax.swing.JButton jButtonMasDiaEstadCitasFinal;
     private javax.swing.JButton jButtonMasDiaEstadCitasInicial;
     private javax.swing.JButton jButtonMasDiaFechaCita;
-    private javax.swing.JButton jButtonMasDiaFechaTurno;
+    private javax.swing.JButton jButtonMasDiaFechaFinTurno;
+    private javax.swing.JButton jButtonMasDiaFechaInicioTurno;
     private javax.swing.JButton jButtonMasDiaPaciente;
     private javax.swing.JButton jButtonMasDiaPersonal;
     private javax.swing.JButton jButtonMasHoraCita;
-    private javax.swing.JButton jButtonMasHoraTurno;
     private javax.swing.JButton jButtonMasMesEstadCitasFinal;
     private javax.swing.JButton jButtonMasMesEstadCitasInicial;
     private javax.swing.JButton jButtonMasMesFechaCita;
-    private javax.swing.JButton jButtonMasMesFechaTurno;
+    private javax.swing.JButton jButtonMasMesFechaFinTurno;
+    private javax.swing.JButton jButtonMasMesFechaInicioTurno;
     private javax.swing.JButton jButtonMasMesPaciente;
     private javax.swing.JButton jButtonMasMesPersonal;
     private javax.swing.JButton jButtonMasMinutoCita;
-    private javax.swing.JButton jButtonMasMinutoTurno;
     private javax.swing.JButton jButtonMenosAnioEstadCitasFinal;
     private javax.swing.JButton jButtonMenosAnioEstadCitasInicial;
     private javax.swing.JButton jButtonMenosAnioFechaCita;
-    private javax.swing.JButton jButtonMenosAnioFechaTurno;
+    private javax.swing.JButton jButtonMenosAnioFechaFinTurno;
+    private javax.swing.JButton jButtonMenosAnioFechaInicioTurno;
     private javax.swing.JButton jButtonMenosAnioPaciente;
     private javax.swing.JButton jButtonMenosAnioPersonal;
     private javax.swing.JButton jButtonMenosDiaEstadCitasFinal;
     private javax.swing.JButton jButtonMenosDiaEstadCitasInicial;
     private javax.swing.JButton jButtonMenosDiaFechaCita;
-    private javax.swing.JButton jButtonMenosDiaFechaTurno;
+    private javax.swing.JButton jButtonMenosDiaFechaFinTurno;
+    private javax.swing.JButton jButtonMenosDiaFechaInicioTurno;
     private javax.swing.JButton jButtonMenosDiaPaciente;
     private javax.swing.JButton jButtonMenosDiaPersonal;
     private javax.swing.JButton jButtonMenosHoraCita;
-    private javax.swing.JButton jButtonMenosHoraTurno;
     private javax.swing.JButton jButtonMenosMesEstadCitasFinal;
     private javax.swing.JButton jButtonMenosMesEstadCitasInicial;
     private javax.swing.JButton jButtonMenosMesFechaCita;
-    private javax.swing.JButton jButtonMenosMesFechaTurno;
+    private javax.swing.JButton jButtonMenosMesFechaFinTurno;
+    private javax.swing.JButton jButtonMenosMesFechaInicioTurno;
     private javax.swing.JButton jButtonMenosMesPaciente;
     private javax.swing.JButton jButtonMenosMesPersonal;
     private javax.swing.JButton jButtonMenosMinutoCita;
-    private javax.swing.JButton jButtonMenosMinutoTurno;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -4162,9 +4257,10 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelFechaCita;
     private javax.swing.JLabel jLabelFechaCita1;
     private javax.swing.JLabel jLabelFechaCita2;
+    private javax.swing.JLabel jLabelFechaFinTurno;
+    private javax.swing.JLabel jLabelFechaInicioTurno;
     private javax.swing.JLabel jLabelFechaNacimiento2;
     private javax.swing.JLabel jLabelFechaNacimientoPaciente;
-    private javax.swing.JLabel jLabelFechaTurno;
     private javax.swing.JLabel jLabelFotoPaciente;
     private javax.swing.JLabel jLabelFotoPersonal;
     private javax.swing.JLabel jLabelFotografiaPaciente;
@@ -4183,7 +4279,6 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelGestionarTurno1;
     private javax.swing.JLabel jLabelGuardarPDF;
     private javax.swing.JLabel jLabelHoraCita;
-    private javax.swing.JLabel jLabelHoraTurno;
     private javax.swing.JLabel jLabelIcono;
     private javax.swing.JLabel jLabelIconoAyuda;
     private javax.swing.JLabel jLabelIconoGuardarPDF;
@@ -4204,6 +4299,7 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelTelefonoPersonal;
     private javax.swing.JLabel jLabelTipoUsuario;
     private javax.swing.JLabel jLabelTipoUsuarioIdentificado;
+    private javax.swing.JLabel jLabelTurnoTrabajo;
     private javax.swing.JLabel jLabelUsuario;
     private javax.swing.JList jList1;
     private javax.swing.JPanel jPanelEstadCitas;
@@ -4220,8 +4316,11 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelUsuario;
     private javax.swing.JRadioButton jRadioButtonAnalista;
     private javax.swing.JRadioButton jRadioButtonFarmaceutico;
+    private javax.swing.JRadioButton jRadioButtonManiana;
     private javax.swing.JRadioButton jRadioButtonMedico;
+    private javax.swing.JRadioButton jRadioButtonNoche;
     private javax.swing.JRadioButton jRadioButtonRadiologo;
+    private javax.swing.JRadioButton jRadioButtonTarde;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
@@ -4240,7 +4339,8 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldAnioCita;
     private javax.swing.JTextField jTextFieldAnioEstadCitasFinal;
     private javax.swing.JTextField jTextFieldAnioEstadCitasInicial;
-    private javax.swing.JTextField jTextFieldAnioTurno;
+    private javax.swing.JTextField jTextFieldAnioFinTurno;
+    private javax.swing.JTextField jTextFieldAnioInicioTurno;
     private javax.swing.JTextField jTextFieldApellidosPaciente;
     private javax.swing.JTextField jTextFieldApellidosPersonal;
     private javax.swing.JTextField jTextFieldContraseniaPaciente;
@@ -4253,7 +4353,8 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldDiaCita;
     private javax.swing.JTextField jTextFieldDiaEstadCitasFinal;
     private javax.swing.JTextField jTextFieldDiaEstadCitasInicial;
-    private javax.swing.JTextField jTextFieldDiaTurno;
+    private javax.swing.JTextField jTextFieldDiaFinTurno;
+    private javax.swing.JTextField jTextFieldDiaInicioTurno;
     private javax.swing.JTextField jTextFieldDireccionPaciente;
     private javax.swing.JTextField jTextFieldDireccionPersonal;
     private javax.swing.JTextField jTextFieldEmailPaciente;
@@ -4265,15 +4366,14 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldFechaNacimientoMesPaciente;
     private javax.swing.JTextField jTextFieldFechaNacimientoMesPersonal;
     private javax.swing.JTextField jTextFieldHoraCita;
-    private javax.swing.JTextField jTextFieldHoraTurno;
     private javax.swing.JTextField jTextFieldLugarNacimientoPaciente;
     private javax.swing.JTextField jTextFieldLugarNacimientoPersonal;
     private javax.swing.JTextField jTextFieldMesCita;
     private javax.swing.JTextField jTextFieldMesEstadCitasFinal;
     private javax.swing.JTextField jTextFieldMesEstadCitasInicial;
-    private javax.swing.JTextField jTextFieldMesTurno;
+    private javax.swing.JTextField jTextFieldMesFinTurno;
+    private javax.swing.JTextField jTextFieldMesInicioTurno;
     private javax.swing.JTextField jTextFieldMinutoCita;
-    private javax.swing.JTextField jTextFieldMinutoTurno;
     private javax.swing.JTextField jTextFieldNombrePaciente;
     private javax.swing.JTextField jTextFieldNombrePersonal;
     private javax.swing.JTextField jTextFieldTelefonoPaciente;

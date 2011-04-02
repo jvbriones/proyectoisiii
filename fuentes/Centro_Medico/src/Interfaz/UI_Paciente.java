@@ -97,7 +97,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jTextFieldContraseniaPaciente = new javax.swing.JTextField();
         jButtonMasMesPaciente = new javax.swing.JButton();
         jLabelFechaNacimientoPaciente = new javax.swing.JLabel();
-        jPanelGestionarCitaOnlineAlta = new javax.swing.JPanel();
+        jPanelConsultarCitaOnline = new javax.swing.JPanel();
         jTextFieldMesCita = new javax.swing.JTextField();
         jButtonMenosAnioPersonal = new javax.swing.JButton();
         jButtonMasAnioFecha = new javax.swing.JButton();
@@ -106,7 +106,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jTextFieldDiaCita = new javax.swing.JTextField();
         jButtonMasMesFecha = new javax.swing.JButton();
         jButtonMasDiaFecha = new javax.swing.JButton();
-        jButtonAltaCita = new javax.swing.JButton();
+        jButtonModificarCitaOnline = new javax.swing.JButton();
         jButtonMenosDiaFecha = new javax.swing.JButton();
         jButtonMenosMesFecha = new javax.swing.JButton();
         jLabelGestionarPaciente2 = new javax.swing.JLabel();
@@ -121,15 +121,29 @@ public class UI_Paciente extends javax.swing.JFrame {
         jLabelHoraCita = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextAreaInfo = new javax.swing.JTextArea();
+        jButtonLimpiarCita1 = new javax.swing.JButton();
+        jLabelFecha1 = new javax.swing.JLabel();
+        jLabelFecha2 = new javax.swing.JLabel();
+        jTextFieldDNIMedico = new javax.swing.JTextField();
+        jTextFieldDNIPacienteCita = new javax.swing.JTextField();
         jPanelGestionarCitaOnline = new javax.swing.JPanel();
-        jButtonPedirAltaCita = new javax.swing.JButton();
         jLabelGestionarPaciente5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButtonCancelarCita = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextAreaInfo1 = new javax.swing.JTextArea();
-        jButtonConsultarCita1 = new javax.swing.JButton();
+        jPanelAltaCita = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jButtonAceptarCita = new javax.swing.JButton();
+        jPanelBotones = new javax.swing.JPanel();
+        jButtonCancelarCita = new javax.swing.JButton();
         jButtonModificarCita = new javax.swing.JButton();
+        jButtonConsultarCita1 = new javax.swing.JButton();
+        jButtonPedirAltaCita = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 204, 102));
@@ -298,7 +312,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelGestionarPaciente3)
                     .add(jLabelGestionarCita1))
-                .add(320, 320, 320))
+                .add(330, 330, 330))
         );
 
         jPanelPrincipal.setBounds(1, 0, 900, 530);
@@ -622,9 +636,9 @@ public class UI_Paciente extends javax.swing.JFrame {
         jPanelGestionarPaciente.setBounds(1, 0, 900, 530);
         ZonaTrabajo.add(jPanelGestionarPaciente, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jPanelGestionarCitaOnlineAlta.setMinimumSize(new java.awt.Dimension(901, 510));
-        jPanelGestionarCitaOnlineAlta.setPreferredSize(new java.awt.Dimension(901, 531));
-        jPanelGestionarCitaOnlineAlta.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanelConsultarCitaOnline.setMinimumSize(new java.awt.Dimension(901, 510));
+        jPanelConsultarCitaOnline.setPreferredSize(new java.awt.Dimension(901, 531));
+        jPanelConsultarCitaOnline.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTextFieldMesCita.setEditable(false);
         jTextFieldMesCita.setText("1");
@@ -633,7 +647,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jTextFieldMesCitaActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jTextFieldMesCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 340, 33, -1));
+        jPanelConsultarCitaOnline.add(jTextFieldMesCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 360, 33, -1));
 
         jButtonMenosAnioPersonal.setText("-");
         jButtonMenosAnioPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -646,7 +660,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonMenosAnioPersonalActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jButtonMenosAnioPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 370, 50, 40));
+        jPanelConsultarCitaOnline.add(jButtonMenosAnioPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 390, 50, 40));
 
         jButtonMasAnioFecha.setText("+");
         jButtonMasAnioFecha.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -659,7 +673,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonMasAnioFechaActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jButtonMasAnioFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 50, 40));
+        jPanelConsultarCitaOnline.add(jButtonMasAnioFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, 50, 40));
 
         jTextFieldAnioCita.setText("1950");
         jTextFieldAnioCita.addActionListener(new java.awt.event.ActionListener() {
@@ -667,14 +681,14 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jTextFieldAnioCitaActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jTextFieldAnioCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 340, 50, -1));
+        jPanelConsultarCitaOnline.add(jTextFieldAnioCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 360, 50, -1));
 
         jLabelFecha.setText("Fecha cita");
-        jPanelGestionarCitaOnlineAlta.add(jLabelFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, -1, -1));
+        jPanelConsultarCitaOnline.add(jLabelFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, -1, -1));
 
         jTextFieldDiaCita.setEditable(false);
         jTextFieldDiaCita.setText("1");
-        jPanelGestionarCitaOnlineAlta.add(jTextFieldDiaCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, 33, -1));
+        jPanelConsultarCitaOnline.add(jTextFieldDiaCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, 33, -1));
 
         jButtonMasMesFecha.setText("+");
         jButtonMasMesFecha.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -687,7 +701,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonMasMesFechaActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jButtonMasMesFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 300, 50, 40));
+        jPanelConsultarCitaOnline.add(jButtonMasMesFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 320, 50, 40));
 
         jButtonMasDiaFecha.setText("+");
         jButtonMasDiaFecha.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -700,10 +714,10 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonMasDiaFechaActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jButtonMasDiaFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, 50, 40));
+        jPanelConsultarCitaOnline.add(jButtonMasDiaFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 50, 40));
 
-        jButtonAltaCita.setText("Alta");
-        jPanelGestionarCitaOnlineAlta.add(jButtonAltaCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 460, 93, 39));
+        jButtonModificarCitaOnline.setText("Modificar");
+        jPanelConsultarCitaOnline.add(jButtonModificarCitaOnline, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 460, 93, 39));
 
         jButtonMenosDiaFecha.setText("-");
         jButtonMenosDiaFecha.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -716,7 +730,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonMenosDiaFechaActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jButtonMenosDiaFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, 50, 40));
+        jPanelConsultarCitaOnline.add(jButtonMenosDiaFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 390, 50, 40));
 
         jButtonMenosMesFecha.setText("-");
         jButtonMenosMesFecha.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -729,14 +743,14 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonMenosMesFechaActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jButtonMenosMesFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 370, 50, 40));
+        jPanelConsultarCitaOnline.add(jButtonMenosMesFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 390, 50, 40));
 
         jLabelGestionarPaciente2.setFont(new java.awt.Font("Lucida Grande", 1, 48));
         jLabelGestionarPaciente2.setText("Gestionar Cita Online");
-        jPanelGestionarCitaOnlineAlta.add(jLabelGestionarPaciente2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, -1, -1));
+        jPanelConsultarCitaOnline.add(jLabelGestionarPaciente2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, -1, -1));
 
         jLabel2.setText("_____________________________________________________________________________");
-        jPanelGestionarCitaOnlineAlta.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, -1, -1));
+        jPanelConsultarCitaOnline.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, -1, -1));
 
         jButtonLimpiarCita.setText("Limpiar");
         jButtonLimpiarCita.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -749,7 +763,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonLimpiarCitaActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jButtonLimpiarCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 460, -1, 39));
+        jPanelConsultarCitaOnline.add(jButtonLimpiarCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 460, -1, 39));
 
         jButtonMasHora.setText("+");
         jButtonMasHora.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -762,7 +776,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonMasHoraActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jButtonMasHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 300, 50, 40));
+        jPanelConsultarCitaOnline.add(jButtonMasHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 320, 50, 40));
 
         jButtonMasMinuto.setText("+");
         jButtonMasMinuto.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -775,11 +789,11 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonMasMinutoActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jButtonMasMinuto, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 300, 50, 40));
+        jPanelConsultarCitaOnline.add(jButtonMasMinuto, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 320, 50, 40));
 
         jTextFieldHoraCita.setEditable(false);
         jTextFieldHoraCita.setText("1");
-        jPanelGestionarCitaOnlineAlta.add(jTextFieldHoraCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 33, -1));
+        jPanelConsultarCitaOnline.add(jTextFieldHoraCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 360, 33, -1));
 
         jTextFieldMinutoCita.setEditable(false);
         jTextFieldMinutoCita.setText("1");
@@ -788,7 +802,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jTextFieldMinutoCitaActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jTextFieldMinutoCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 340, 33, -1));
+        jPanelConsultarCitaOnline.add(jTextFieldMinutoCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 360, 33, -1));
 
         jButtonMenosHora.setText("-");
         jButtonMenosHora.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -801,7 +815,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonMenosHoraActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jButtonMenosHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 370, 50, 40));
+        jPanelConsultarCitaOnline.add(jButtonMenosHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 390, 50, 40));
 
         jButtonMenosMinuto.setText("-");
         jButtonMenosMinuto.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -814,35 +828,60 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonMenosMinutoActionPerformed(evt);
             }
         });
-        jPanelGestionarCitaOnlineAlta.add(jButtonMenosMinuto, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 370, 50, 40));
+        jPanelConsultarCitaOnline.add(jButtonMenosMinuto, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 390, 50, 40));
 
         jLabelHoraCita.setText("Hora cita");
-        jPanelGestionarCitaOnlineAlta.add(jLabelHoraCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 280, -1, -1));
+        jPanelConsultarCitaOnline.add(jLabelHoraCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 300, -1, -1));
 
         jTextAreaInfo.setBackground(new java.awt.Color(255, 204, 102));
         jTextAreaInfo.setColumns(17);
         jTextAreaInfo.setEditable(false);
         jTextAreaInfo.setFont(new java.awt.Font("Lucida Grande", 0, 18));
         jTextAreaInfo.setRows(3);
-        jTextAreaInfo.setText("Estás socilictando una cita online, asegúrate de elegir una fecha y una hora para la cita ");
+        jTextAreaInfo.setText("Estás consultando una cita online, si modificas algún campo dale a \"Guardar\" \nSi deseas cancelar dicha cita dale a \"Cancelar\"");
         jScrollPane1.setViewportView(jTextAreaInfo);
 
-        jPanelGestionarCitaOnlineAlta.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 780, 120));
+        jPanelConsultarCitaOnline.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 780, 120));
 
-        jPanelGestionarCitaOnlineAlta.setBounds(0, 0, 901, 531);
-        ZonaTrabajo.add(jPanelGestionarCitaOnlineAlta, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jButtonLimpiarCita1.setText("Cancelar");
+        jButtonLimpiarCita1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonLimpiarCita1MouseClicked(evt);
+            }
+        });
+        jButtonLimpiarCita1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLimpiarCita1ActionPerformed(evt);
+            }
+        });
+        jPanelConsultarCitaOnline.add(jButtonLimpiarCita1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 460, -1, 39));
+
+        jLabelFecha1.setText("DNI Paciente");
+        jPanelConsultarCitaOnline.add(jLabelFecha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, -1, -1));
+
+        jLabelFecha2.setText("DNI Médico");
+        jPanelConsultarCitaOnline.add(jLabelFecha2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 260, -1, -1));
+
+        jTextFieldDNIMedico.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldDNIMedicoKeyTyped(evt);
+            }
+        });
+        jPanelConsultarCitaOnline.add(jTextFieldDNIMedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 250, 90, -1));
+
+        jTextFieldDNIPacienteCita.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldDNIPacienteCitaKeyTyped(evt);
+            }
+        });
+        jPanelConsultarCitaOnline.add(jTextFieldDNIPacienteCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 90, -1));
+
+        jPanelConsultarCitaOnline.setBounds(0, 0, 901, 531);
+        ZonaTrabajo.add(jPanelConsultarCitaOnline, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarCitaOnline.setMinimumSize(new java.awt.Dimension(901, 510));
         jPanelGestionarCitaOnline.setPreferredSize(new java.awt.Dimension(901, 531));
         jPanelGestionarCitaOnline.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButtonPedirAltaCita.setText("Alta");
-        jButtonPedirAltaCita.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonPedirAltaCitaMouseClicked(evt);
-            }
-        });
-        jPanelGestionarCitaOnline.add(jButtonPedirAltaCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, 93, 39));
 
         jLabelGestionarPaciente5.setFont(new java.awt.Font("Lucida Grande", 1, 48));
         jLabelGestionarPaciente5.setText("Gestionar Cita Online");
@@ -850,9 +889,6 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jLabel4.setText("_____________________________________________________________________________");
         jPanelGestionarCitaOnline.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, -1, -1));
-
-        jButtonCancelarCita.setText("Cancelar");
-        jPanelGestionarCitaOnline.add(jButtonCancelarCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 310, 93, 39));
 
         jTextAreaInfo1.setBackground(new java.awt.Color(255, 204, 102));
         jTextAreaInfo1.setColumns(17);
@@ -864,11 +900,118 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jPanelGestionarCitaOnline.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 780, 120));
 
-        jButtonConsultarCita1.setText("Consultar");
-        jPanelGestionarCitaOnline.add(jButtonConsultarCita1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 310, 93, 39));
+        jList1.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane3.setViewportView(jList1);
+
+        jLabel1.setText("Fecha");
+
+        jLabel5.setText("Hora");
+
+        jLabel6.setText("DNI Médico");
+
+        jLabel7.setText("DNI Paciente");
+
+        jButtonAceptarCita.setText("Aceptar");
+        jButtonAceptarCita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonAceptarCitaMouseClicked(evt);
+            }
+        });
+
+        org.jdesktop.layout.GroupLayout jPanelAltaCitaLayout = new org.jdesktop.layout.GroupLayout(jPanelAltaCita);
+        jPanelAltaCita.setLayout(jPanelAltaCitaLayout);
+        jPanelAltaCitaLayout.setHorizontalGroup(
+            jPanelAltaCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanelAltaCitaLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(jPanelAltaCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jPanelAltaCitaLayout.createSequentialGroup()
+                        .add(jPanelAltaCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jScrollPane3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
+                            .add(jPanelAltaCitaLayout.createSequentialGroup()
+                                .add(jLabel1)
+                                .add(81, 81, 81)
+                                .add(jLabel5)
+                                .add(94, 94, 94)
+                                .add(jLabel6)
+                                .add(78, 78, 78)
+                                .add(jLabel7)))
+                        .addContainerGap())
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelAltaCitaLayout.createSequentialGroup()
+                        .add(jButtonAceptarCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 93, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(222, 222, 222))))
+        );
+        jPanelAltaCitaLayout.setVerticalGroup(
+            jPanelAltaCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanelAltaCitaLayout.createSequentialGroup()
+                .add(jPanelAltaCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jLabel1)
+                    .add(jLabel6)
+                    .add(jLabel5)
+                    .add(jLabel7))
+                .add(4, 4, 4)
+                .add(jScrollPane3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 121, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(jButtonAceptarCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 39, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanelGestionarCitaOnline.add(jPanelAltaCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, 540, 200));
+
+        jButtonCancelarCita.setText("Cancelar");
 
         jButtonModificarCita.setText("Modificar");
-        jPanelGestionarCitaOnline.add(jButtonModificarCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 310, 93, 39));
+        jButtonModificarCita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonModificarCitaMouseClicked(evt);
+            }
+        });
+
+        jButtonConsultarCita1.setText("Consultar");
+        jButtonConsultarCita1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonConsultarCita1MouseClicked(evt);
+            }
+        });
+
+        jButtonPedirAltaCita.setText("Alta");
+        jButtonPedirAltaCita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonPedirAltaCitaMouseClicked(evt);
+            }
+        });
+
+        org.jdesktop.layout.GroupLayout jPanelBotonesLayout = new org.jdesktop.layout.GroupLayout(jPanelBotones);
+        jPanelBotones.setLayout(jPanelBotonesLayout);
+        jPanelBotonesLayout.setHorizontalGroup(
+            jPanelBotonesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelBotonesLayout.createSequentialGroup()
+                .add(36, 36, 36)
+                .add(jButtonPedirAltaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 93, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(54, 54, 54)
+                .add(jButtonConsultarCita1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 93, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 62, Short.MAX_VALUE)
+                .add(jButtonModificarCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 93, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(56, 56, 56)
+                .add(jButtonCancelarCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 93, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanelBotonesLayout.setVerticalGroup(
+            jPanelBotonesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelBotonesLayout.createSequentialGroup()
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(jPanelBotonesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jButtonCancelarCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 39, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jButtonPedirAltaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 39, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jButtonConsultarCita1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 39, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jButtonModificarCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 39, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        jPanelGestionarCitaOnline.add(jPanelBotones, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 580, 60));
 
         jPanelGestionarCitaOnline.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelGestionarCitaOnline, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -1266,7 +1409,9 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void jButtonPedirAltaCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonPedirAltaCitaMouseClicked
         // TODO add your handling code here:
-        mostrarPanel("GestionarCitaOnlineAlta");
+        jPanelAltaCita.setVisible(true);
+        jPanelBotones.setVisible(false);
+
     }//GEN-LAST:event_jButtonPedirAltaCitaMouseClicked
 
     private void jTextFieldTelefonoPacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldTelefonoPacienteKeyTyped
@@ -1319,20 +1464,10 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void jTextFieldDireccionPacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldDireccionPacienteKeyTyped
         // TODO add your handling code here:
-
-        /**Comprobamos que no se teclee un número*/
-        char teclaPresionada = evt.getKeyChar();
-        if(Character.isDigit(teclaPresionada) == true)
-            evt.consume();
 }//GEN-LAST:event_jTextFieldDireccionPacienteKeyTyped
 
     private void jTextFieldEmailPacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldEmailPacienteKeyTyped
         // TODO add your handling code here:
-
-        /**Comprobamos que no se teclee un número*/
-        char teclaPresionada = evt.getKeyChar();
-        if(Character.isDigit(teclaPresionada) == true)
-            evt.consume();
 }//GEN-LAST:event_jTextFieldEmailPacienteKeyTyped
 
     private void jTextFieldLugarNacimientoPacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldLugarNacimientoPacienteKeyTyped
@@ -1343,6 +1478,70 @@ public class UI_Paciente extends javax.swing.JFrame {
         if(Character.isDigit(teclaPresionada) == true)
             evt.consume();
 }//GEN-LAST:event_jTextFieldLugarNacimientoPacienteKeyTyped
+
+    private void jButtonLimpiarCita1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonLimpiarCita1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonLimpiarCita1MouseClicked
+
+    private void jButtonLimpiarCita1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimpiarCita1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonLimpiarCita1ActionPerformed
+
+    private void jTextFieldDNIPacienteCitaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldDNIPacienteCitaKeyTyped
+        // TODO add your handling code here:
+
+        /**Limitamos a que el DNI siempre sea correcto sintácticamente*/
+        char teclaPresionada = evt.getKeyChar();
+
+        if(jTextFieldDNIPacienteCita.getText().length() < 8)
+            if(Character.isDigit(teclaPresionada) == false)
+                evt.consume();
+
+        if(jTextFieldDNIPacienteCita.getText().length() == 8)
+            if(Character.isDigit(teclaPresionada) == true){
+                evt.consume();
+            }else if(Character.isLowerCase(teclaPresionada)){
+                jTextFieldDNIPacienteCita.setText(jTextFieldDNIPacienteCita.getText().toUpperCase());
+            }
+
+        if(jTextFieldDNIPacienteCita.getText().length() > 8)
+            evt.consume();
+    }//GEN-LAST:event_jTextFieldDNIPacienteCitaKeyTyped
+
+    private void jTextFieldDNIMedicoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldDNIMedicoKeyTyped
+        // TODO add your handling code here:
+
+        /**Limitamos a que el DNI siempre sea correcto sintácticamente*/
+        char teclaPresionada = evt.getKeyChar();
+
+        if(jTextFieldDNIMedico.getText().length() < 8)
+            if(Character.isDigit(teclaPresionada) == false)
+                evt.consume();
+
+        if(jTextFieldDNIMedico.getText().length() == 8)
+            if(Character.isDigit(teclaPresionada) == true){
+                evt.consume();
+            }else if(Character.isLowerCase(teclaPresionada)){
+                jTextFieldDNIMedico.setText(jTextFieldDNIMedico.getText().toUpperCase());
+            }
+
+        if(jTextFieldDNIMedico.getText().length() > 8)
+            evt.consume();
+    }//GEN-LAST:event_jTextFieldDNIMedicoKeyTyped
+
+    private void jButtonAceptarCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAceptarCitaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAceptarCitaMouseClicked
+
+    private void jButtonConsultarCita1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarCita1MouseClicked
+        // TODO add your handling code here:
+        mostrarPanel("ConsultarCitaOnline");
+    }//GEN-LAST:event_jButtonConsultarCita1MouseClicked
+
+    private void jButtonModificarCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonModificarCitaMouseClicked
+        // TODO add your handling code here:
+        mostrarPanel("ConsultarCitaOnline");
+    }//GEN-LAST:event_jButtonModificarCitaMouseClicked
 
 
     /*Comprueba que la fecha introducida es correcta
@@ -1473,14 +1672,14 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelPrincipal.setVisible(true);
             jPanelGestionarPaciente.setVisible(false);
             jPanelGestionarCitaOnline.setVisible(false);
-            jPanelGestionarCitaOnlineAlta.setVisible(false);
+            jPanelConsultarCitaOnline.setVisible(false);
 
 
             /**Activamos el marco*/
             jPanelPrincipal.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
             jPanelGestionarPaciente.setBorder(null);
             jPanelGestionarCitaOnline.setBorder(null);
-            jPanelGestionarCitaOnlineAlta.setBorder(null);
+            jPanelConsultarCitaOnline.setBorder(null);
         }
 
         if(panel.equals("GestionarPaciente")){
@@ -1493,14 +1692,14 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelPrincipal.setVisible(false);
             jPanelGestionarPaciente.setVisible(true);
             jPanelGestionarCitaOnline.setVisible(false);
-            jPanelGestionarCitaOnlineAlta.setVisible(false);
+            jPanelConsultarCitaOnline.setVisible(false);
 
 
             /**Activamos el marco*/
             jPanelPrincipal.setBorder(null);
             jPanelGestionarPaciente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
             jPanelGestionarCitaOnline.setBorder(null);
-            jPanelGestionarCitaOnlineAlta.setBorder(null);
+            jPanelConsultarCitaOnline.setBorder(null);
         }
 
         if(panel.equals("GestionarCitaOnline")){
@@ -1508,25 +1707,28 @@ public class UI_Paciente extends javax.swing.JFrame {
             /**Hacemos visible el botón jLabelIconoInicio*/
             jLabelInicio.setVisible(true);
             jLabelIconoInicio.setVisible(true);
+            jPanelAltaCita.setVisible(false);
+            jPanelBotones.setVisible(true);
+
 
             /**Hacemos visible el panel seleccionado*/
             jPanelPrincipal.setVisible(false);
             jPanelGestionarPaciente.setVisible(false);
             jPanelGestionarCitaOnline.setVisible(true);
-            jPanelGestionarCitaOnlineAlta.setVisible(false);
+            jPanelConsultarCitaOnline.setVisible(false);
 
 
             /**Activamos el marco*/
             jPanelPrincipal.setBorder(null);
             jPanelGestionarPaciente.setBorder(null);
             jPanelGestionarCitaOnline.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-            jPanelGestionarCitaOnlineAlta.setBorder(null);
+            jPanelConsultarCitaOnline.setBorder(null);
         }
 
-        if(panel.equals("GestionarCitaOnlineAlta")){
+        if(panel.equals("ConsultarCitaOnline")){
 
             /**Limpiamos posibles datos introducidos anteriormente*/
-            limpiarFormulario("GestionarCitaOnlineAlta");
+            limpiarFormulario("ConsultarCitaOnline");
 
             /**Hacemos visible el botón jLabelIconoInicio*/
             jLabelInicio.setVisible(true);
@@ -1536,14 +1738,14 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelPrincipal.setVisible(false);
             jPanelGestionarPaciente.setVisible(false);
             jPanelGestionarCitaOnline.setVisible(false);
-            jPanelGestionarCitaOnlineAlta.setVisible(true);
+            jPanelConsultarCitaOnline.setVisible(true);
 
 
             /**Activamos el marco*/
             jPanelPrincipal.setBorder(null);
             jPanelGestionarPaciente.setBorder(null);
             jPanelGestionarCitaOnline.setBorder(null);
-            jPanelGestionarCitaOnlineAlta.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+            jPanelConsultarCitaOnline.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         }
 
 
@@ -1591,12 +1793,13 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLayeredPane ZonaTrabajo;
-    private javax.swing.JButton jButtonAltaCita;
+    private javax.swing.JButton jButtonAceptarCita;
     private javax.swing.JButton jButtonCancelarCita;
     private javax.swing.JButton jButtonConsultarCita1;
     private javax.swing.JButton jButtonGestionarCita;
     private javax.swing.JButton jButtonGestionarPaciente;
     private javax.swing.JButton jButtonLimpiarCita;
+    private javax.swing.JButton jButtonLimpiarCita1;
     private javax.swing.JButton jButtonMasAnioFecha;
     private javax.swing.JButton jButtonMasAnioPaciente;
     private javax.swing.JButton jButtonMasDiaFecha;
@@ -1614,10 +1817,15 @@ public class UI_Paciente extends javax.swing.JFrame {
     private javax.swing.JButton jButtonMenosMesPaciente;
     private javax.swing.JButton jButtonMenosMinuto;
     private javax.swing.JButton jButtonModificarCita;
+    private javax.swing.JButton jButtonModificarCitaOnline;
     private javax.swing.JButton jButtonPedirAltaCita;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabelApellidosPaciente;
     private javax.swing.JLabel jLabelAyuda;
     private javax.swing.JLabel jLabelCentroMedico;
@@ -1626,6 +1834,8 @@ public class UI_Paciente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelDireccionPaciente;
     private javax.swing.JLabel jLabelEmailPaciente;
     private javax.swing.JLabel jLabelFecha;
+    private javax.swing.JLabel jLabelFecha1;
+    private javax.swing.JLabel jLabelFecha2;
     private javax.swing.JLabel jLabelFechaNacimientoPaciente;
     private javax.swing.JLabel jLabelFotoPaciente;
     private javax.swing.JLabel jLabelFotografiaPaciente;
@@ -1647,19 +1857,25 @@ public class UI_Paciente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelTelefonoPaciente;
     private javax.swing.JLabel jLabelTipoUsuario;
     private javax.swing.JLabel jLabelUsuario;
+    private javax.swing.JList jList1;
+    private javax.swing.JPanel jPanelAltaCita;
+    private javax.swing.JPanel jPanelBotones;
+    private javax.swing.JPanel jPanelConsultarCitaOnline;
     private javax.swing.JPanel jPanelGestionarCitaOnline;
-    private javax.swing.JPanel jPanelGestionarCitaOnlineAlta;
     private javax.swing.JPanel jPanelGestionarPaciente;
     private javax.swing.JPanel jPanelPrincipal;
     private javax.swing.JPanel jPanelUsuario;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea jTextAreaInfo;
     private javax.swing.JTextArea jTextAreaInfo1;
     private javax.swing.JTextField jTextFieldAnioCita;
     private javax.swing.JTextField jTextFieldApellidosPaciente;
     private javax.swing.JTextField jTextFieldContraseniaPaciente;
+    private javax.swing.JTextField jTextFieldDNIMedico;
     private javax.swing.JTextField jTextFieldDNIPaciente;
+    private javax.swing.JTextField jTextFieldDNIPacienteCita;
     private javax.swing.JTextField jTextFieldDiaCita;
     private javax.swing.JTextField jTextFieldDireccionPaciente;
     private javax.swing.JTextField jTextFieldEmailPaciente;
