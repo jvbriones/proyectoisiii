@@ -167,18 +167,5 @@ public class Usuario {
        this.Tipo=Tipo;
     }
 
-    
-
-   /*
-    * OPTIMIZADO
-    * 
-    * Metodos que aparecen en el diagrama de secuencias.
-    * 
-    * 
-    */
-
-
-
-
 
 }

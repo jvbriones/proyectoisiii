@@ -19,8 +19,10 @@ import java.sql.SQLException;
  */
 public class GestorUsuarios {
 
-    private Usuario user=new Usuario();
-    usuarioBD usuario_bd=new usuarioBD();
+    private Usuario user = null;
+    UsuarioBD usuario_bd = new UsuarioBD();
+
+
 
     /* Función encargada de la validación de un usuario a través de su contraseña.
      *
@@ -28,19 +30,29 @@ public class GestorUsuarios {
      * @param Pass: Contraseña del usuario
      *
      */
-    public Boolean validacionUsuario(String Dni, String Pass) throw Exception throws SQLException{
+    public Boolean validacionUsuario(String Dni, String Pass) throws SQLException, Exception {
         Boolean acceso;
-        acceso=usuarioBD.validacion(Dni, Pass);
+        acceso=usuario_bd.validacion(Dni, Pass);
 
         if(!acceso) {
             throw new Exception("Usuario o contraseña erroneos");
         }
         else {
-            user=usuarioBD.obtenerUsuario(Dni);
+            user=usuario_bd.obtenerUsuario(Dni);
         }
 
         return acceso;
 
     }
+
+    modificarDatosPersonalesAdmin()
+
+    modificarDatosPersonales()
+
+    consultarDatosPersonalesAdmin()
+
+    consultarDatosPersonales()
+
+
 
 }

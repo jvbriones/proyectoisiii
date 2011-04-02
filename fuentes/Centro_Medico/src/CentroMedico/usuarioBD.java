@@ -1,5 +1,5 @@
 /*
- * usuarioBD.java
+ * UsuarioBD.java
  *
  * Informacion:
  * Clase encargada de comunicarse con la Capa de la BD para
@@ -19,7 +19,7 @@ import java.awt.*;
  * @version     v1.0    01/04/2011
  * @author      Sub_Equipo1
  */
-public class usuarioBD {
+public class UsuarioBD {
 
     public Boolean validacion(String Dni, String Pass) throws SQLException {
 
@@ -54,12 +54,12 @@ public class usuarioBD {
             String direccion=rs.getString("Direccion");
             String email=rs.getString("Email");
             String contrasena=rs.getString("Contrasena");
-            String telefono=rs.getString("Telefono");
-            Date fecNac=rs.getDate("FechaNacimiento");
+            String telefono=rs.getString("Telefono"); //Estos campos han de coincidir exactamente con los de la tabla Usuarios en la BD
+            Date fecNac=rs.getDate("FechaNacimiento");//Si el Telefono es un Entero en la BD, aqui tendria que ser getInt("Telefono")
             String lugarNac=rs.getString("LugarNacimiento");
-            Image foto=null;//rs.get.getImage("Fotografia");
+            String foto=rs.getString("Fotografia");
             String tipo=rs.getString("TipoUsuario");
-
+ 
             user = new Usuario(dni, nombre, apellidos, direccion, email, contrasena, telefono, fecNac, lugarNac, foto, tipo);
         }
         else{
