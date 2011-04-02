@@ -1,13 +1,19 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * Radiologo.java
+ *
+ * Informacion:
+ * Clase encargada de modelizar al Radiologo
+ *
+ * Proyecto ISIII UGR 10/11
+ * Grupo M_1.2
+ *
  */
 
 package CentroMedico;
 
 /**
- *
- * @author pyrus
+ * @version     1.0     02/04/2011
+ * @author      Sub_Equipo1
  */
 public class Radiologo {
 

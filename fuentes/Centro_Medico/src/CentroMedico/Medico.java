@@ -2,7 +2,7 @@
  * Personal.java
  *
  * Informacion:
- * Clase encargada de modelizar al personal del Centro Medico
+ * Clase encargada de modelizar al Medico
  *
  * Proyecto ISIII UGR 10/11
  * Grupo M_1.2
@@ -12,7 +12,7 @@
 package CentroMedico;
 
 /**
- * @version     datos de la versión (numero y fecha)
+ * @version     1.0     02/04/2011
  * @author      Sub_Equipo1
  */
 public class Medico extends Personal{

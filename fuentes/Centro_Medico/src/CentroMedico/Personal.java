@@ -9,7 +9,6 @@
  *
  */
 
-
 package CentroMedico;
 
 import java.util.*;
@@ -18,9 +17,9 @@ import java.util.*;
  * @version     1.0     02/04/2011
  * @author      Sub_Equipo1
  */
+
 public class Personal extends Usuario{
 
-    //private String DNI;  //No es necesario, se obtiene de Usuario
     private String TipoPersonal;
    
 

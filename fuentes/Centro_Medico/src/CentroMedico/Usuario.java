@@ -9,16 +9,15 @@
  *
  */
 
-
 package CentroMedico;
 
 import java.util.*;
-import java.awt.*;
 
 /**
  * @version     v1.0    01/04/2011
  * @author      Sub_Equipo1
  */
+
 public class Usuario {
 
     private String DNI;
@@ -32,7 +31,6 @@ public class Usuario {
     private String LugarNac;
     private String Foto; //ya veremos como hacemos lo de la foto..
     private String Tipo;
-
 
     /*
      *
@@ -109,11 +107,11 @@ public class Usuario {
 
     String getLugarNacimiento(){
         return  LugarNac;
-     }
+    }
 
     String getFotografia(){
         return  Foto;
-     }
+    }
 
      String getTipo(){
         return Tipo;
@@ -131,25 +129,25 @@ public class Usuario {
 
     void  setNombre(String Nombre){
         this.Nombre=Nombre;
-     }
+    }
     void  setApellidos(String Apellidos){
         this.Apellidos=Apellidos;
     }
 
     void  setDireccion(String Direccion){
         this.Direccion=Direccion;
-     }
+    }
     void  setEmail(String Email){
         this.Email=Email;
     }
 
     void  setContrasena(String Contrasena){
         this.Contrasena=Contrasena;
-     }
+    }
 
     void  setTelefono(String Telefono){
         this.Telefono=Telefono;
-     }
+    }
 
     void  setFechaNacimiento(Date FecNac){
         this.FecNac=FecNac;
@@ -157,11 +155,11 @@ public class Usuario {
 
     void  setLugarNacimiento(String LugarNac){
         this.LugarNac=LugarNac;
-     }
+    }
 
     void  setFotografia(String Foto){
        this.Foto=Foto;
-     }
+    }
 
     void  setTipo(String Tipo){
        this.Tipo=Tipo;
