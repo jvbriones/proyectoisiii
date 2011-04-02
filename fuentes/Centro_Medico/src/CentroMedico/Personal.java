@@ -12,63 +12,117 @@
 package CentroMedico;
 
 /**
- * @version     datos de la versión (numero y fecha)
+ * @version     1.0 02/04/2011
  * @author      Sub_Equipo1
  */
-public abstract class Personal {
+public abstract class Personal extends Usuario{
 
-   private String dni;
-   private String nombre;
-   private String apellidos;
-   private String domicilio;
-   private String telefono;
-   private String email;
-   private String fechaNacimiento; //Seria de tipo Date pero me pitaba..
-   private String lugarNacimiento;
-   private String fotografia; //ya veremos como hacemos esto..
-   //private Turno turno=null;
+    //private String DNI;  //No es necesario, se obtiene de Usuario
+    private String Tipo;
+   
 
+    Personal(String Dni,String Nombre,String Apellidos,String Direccion,String Email,String Contraseña,
+            String Telefono,Date FecNac,String LugarNac,String Foto,String TipoUsuario,String TipoPersonal) {
 
-
-   /**
-    *Este constructor es llamado por el constructor de los medicos,especialistas,etc..
-    * Mirar codigo del Medico
-    */
-
-    Personal(String Dni,String Nom) {
-        dni=Dni;
-        nombre=Nom;
-        //etc..
-        //turno=null;
-    }
+        super(Dni,Nombre,Apellidos,Direccion,Email,Contraseña,Telefono,FecNac,LugarNac,Foto);
+        Tipo=TipoPersonal;
+    }    
 
     String getDni(){
-        return this.dni;
+        return super.DNI;
     }
 
     String getNombre(){
-     return  this.nombre;
+        return  super.Nombre;
+     }
+    String getApellidos(){
+        return super.Apellidos;
+    }
+
+    String getDireccion(){
+        return  super.Direccion;
+     }
+    String getEmail(){
+        return super.Email;
+    }
+
+    String getTelefono(){
+        return  super.Telefono;
+     }
+    String getFechaNacimiento(){
+        return super.FecNac;
+    }
+
+    String getLugarNacimiento(){
+        return  super.LugarNac;
+     }  
+
+    String getFotografia(){
+        return  super.Foto;
+     }
+     String getTipoUsuario(){
+        return super.Tipo;
+    }    
+    String getContraseña(){
+        return  super.Contraseña;
      }
     
+    //Funcion Optimizada
+     String getTipoPersonal(){
+        return  Tipo;
+     }
+
+
+    /*          Código Optimizado.
+     *
+     * Funciones para Establecer los atributos.
+     *
+     */
+
     void setDni(String Dni){
-        dni=Dni;
+        super.DNI=Dni;
     }
-    void setNombre(String Nom){
-        nombre=Nom;
+
+    void  setNombre(String Nombre){
+       super.Nombre=Nombre;
+     }
+    void  setApellidos(String Apellidos){
+        super.Apellidos=Apellidos;
     }
-                                        //Posibles metodos
-    //abstract double NoseMeOcure();
-            //Estoy empezando a pensar que si no tienen un metodo abstracto en comun..
-            //Es porque no deberia estar representado así, quizas en vez de ser
-            //una generalizacion deberian de estar en un paquete, y cada uno por su cuenta.
 
-            //Porque una cosa en comun serian las citas asignadas, pero no todo el personal tiene..
+    void  setDireccion(String Direccion){
+        super.Direccion=Direccion;
+     }
+    void  setEmail(String Email){
+       super.Email=Email;
+    }
 
-   /* void estableceTurno(Turno Tur){
-        turno=Tur;
-    }*/
+    void  setTelefono(String Telefono){
+        super.Telefono=Telefono;
+     }
+    void  setFechaNacimiento(Date FecNac){
+        super.FecNac=FecNac;
+    }
 
-    //etc
+    void  setLugarNacimiento(String LugarNac){
+        super.LugarNac=LugarNac;
+     }
+
+    void  setFotografia(String Foto){
+       super.Fotografia=Foto;
+     }
+
+    void  setTipoUsuario(String TipoUsuario){
+       super.Tipo=TipoUsuario;
+    }
+
+    void  setContraseña(String Contraseña){
+       super.Contraseña=Contraseña;
+     }
+
+    void  setTipoUsuario(String TipoPersonal){
+        Tipo=TipoPersonal;
+    }
 
 
 }
