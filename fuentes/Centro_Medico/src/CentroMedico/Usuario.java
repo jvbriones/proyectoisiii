@@ -21,18 +21,24 @@ import java.awt.*;
  */
 public class Usuario {
 
+    private String DNI;
     private String Nombre;
     private String Apellidos;
-    private String DNI;
     private String Direccion;
     private String Email;
     private String Contrasena;
     private String Telefono;
     private Date FecNac;
     private String LugarNac;
-    private Image Foto;
+    private String Foto; //ya veremos como hacemos lo de la foto..
     private String Tipo;
 
+
+    /*
+     *
+     * Constructores
+     *
+     */
     public Usuario(){
         this.DNI=null;
         this.Nombre=null;
@@ -47,7 +53,9 @@ public class Usuario {
         this.Tipo=null;
     }
 
-    public Usuario(String Dni, String Nombre, String Apellidos, String Direccion, String Email, String Contrasena, String Telefono, Date FecNac, String LugarNac, Image Foto, String Tipo){
+    public Usuario(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
+            String Contrasena, String Telefono, Date FecNac, String LugarNac, String Foto, String Tipo){
+        
         this.DNI=Dni;
         this.Nombre=Nombre;
         this.Apellidos=Apellidos;
@@ -60,5 +68,117 @@ public class Usuario {
         this.Foto=Foto;
         this.Tipo=Tipo;
     }
+
+    /*
+     * 
+     * Metodos Consultores
+     *
+     */
+    
+    String getDni(){
+        return DNI;
+    }
+
+    String getNombre(){
+        return  Nombre;
+     }
+
+    String getApellidos(){
+        return Apellidos;
+    }
+
+    String getDireccion(){
+        return  Direccion;
+     }
+
+    String getEmail(){
+        return Email;
+    }
+
+    String getContrasena(){
+        return  Contrasena;
+     }
+
+    String getTelefono(){
+        return  Telefono;
+     }
+
+    Date getFechaNacimiento(){
+        return FecNac;
+    }
+
+    String getLugarNacimiento(){
+        return  LugarNac;
+     }
+
+    String getFotografia(){
+        return  Foto;
+     }
+
+     String getTipo(){
+        return Tipo;
+    }
+
+     /*
+      *
+      * Metodos Asignadores
+      *
+      */
+
+    void setDni(String Dni){
+        this.DNI=Dni;
+    }
+
+    void  setNombre(String Nombre){
+        this.Nombre=Nombre;
+     }
+    void  setApellidos(String Apellidos){
+        this.Apellidos=Apellidos;
+    }
+
+    void  setDireccion(String Direccion){
+        this.Direccion=Direccion;
+     }
+    void  setEmail(String Email){
+        this.Email=Email;
+    }
+
+    void  setContrasena(String Contrasena){
+        this.Contrasena=Contrasena;
+     }
+
+    void  setTelefono(String Telefono){
+        this.Telefono=Telefono;
+     }
+
+    void  setFechaNacimiento(Date FecNac){
+        this.FecNac=FecNac;
+    }
+
+    void  setLugarNacimiento(String LugarNac){
+        this.LugarNac=LugarNac;
+     }
+
+    void  setFotografia(String Foto){
+       this.Foto=Foto;
+     }
+
+    void  setTipo(String Tipo){
+       this.Tipo=Tipo;
+    }
+
+    
+
+   /*
+    * OPTIMIZADO
+    * 
+    * Metodos que aparecen en el diagrama de secuencias.
+    * 
+    * 
+    */
+
+
+
+
 
 }
