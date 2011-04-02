@@ -22,29 +22,43 @@ import java.sql.*;
 public class PacBD {
 
 
-    //TENEMOS QUE MIRAR COMO HACEMOS LAS CONEXIONES A LA BASE DE DATOS
-    //Si hacemos una por cada consulta o usamos lo del pool de conexiones.
-    //El profesor me dijo que es el pool es lo suyo
-    //De momento conectamos y desconectamos por cada consulta.
-
-
-        //prueba...
-    void almacenaPaciente(Paciente Paci) {
-
-        String dnei=Paci.getDni();
-        String nom=Paci.getNombre();
+    public Boolean existePaciente(String Dni) throws SQLException {
+        Boolean existe;
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
-        String Consulta = "INSERT INTO Pacientes (dni,nombre) VALUES ('"+dnei+"','"+nom+"' )";
-        conexion.consultaUpdate(Consulta);
+        String Consulta = "SELECT Dni FROM Pacientes WHERE Dni="+Dni;
+        ResultSet rs = conexion.consultaSelect(Consulta);
+        if(rs.next()) {
+            existe=true;
+        }
+        else {
+            existe=false;
+        }
         conexion.closeConnection();
+        return existe;
     }
 
-   
+    public void almacenarPaciente(Paciente Paciente) {
+        String dni=Paciente.getDni();
+        String nombre=Paciente.getNombre();
+        String apellidos=Paciente.getApellidos();
+        String direccion=Paciente.getDireccion();
+        String email=Paciente.getEmail();
+        String contrasena=Paciente.getContrasena();
+        String telefono=Paciente.getTelefono();
+        Date fecNac=(Date) Paciente.getFechaNacimiento();
+        String lugarNac=Paciente.getLugarNacimiento();
+        String foto=Paciente.getFotografia();
+        String tipo=Paciente.getTipo();
 
-
-
+        Jdbc conexion = new Jdbc();
+        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        String Consulta = "INSERT INTO Pacientes VALUES "+dni+","+nombre+","+apellidos+","+direccion+","+email+","+contrasena+","+telefono+","+fecNac+","+lugarNac+","+foto+","+tipo;
+        conexion.consultaUpdate(Consulta);
+        conexion.closeConnection();
+        
+    }
 
 
 }
