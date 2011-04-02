@@ -13,6 +13,7 @@ package CentroMedico;
 
 import BaseDatos.*;
 import java.sql.*;
+import java.util.ArrayList;
 
 
 /**
@@ -20,28 +21,6 @@ import java.sql.*;
  * @author      Sub_Equipo1
  */
 public class citasBD {
-    public Turno obtenerTurno(String Dni) throws SQLException {
-
-        Turno Turno;
-
-        Jdbc conexion = new Jdbc();
-        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
-        String Consulta = "SELECT * FROM Turnos WHERE Turnos.Dni="+Dni;
-        ResultSet rs = conexion.consultaSelect(Consulta);
-        if(rs.next()) {
-            String dni=rs.getString("Dni");
-            Date fechaInicio=rs.getDate("FechaInicio");
-            Date fechaFin=rs.getDate("FechaFin");
-            String tipo=rs.getString("Tipo");
-
-            Turno = new Turno(dni, fechaInicio, fechaFin, tipo);
-        }
-        else{
-            Turno= null;
-        }
-        conexion.closeConnection();
-        return Turno;
-    }
 
     public Boolean existeCita(String Dni) throws SQLException {
         Boolean existe;
@@ -84,8 +63,8 @@ public class citasBD {
         String Consulta = "SELECT * FROM Citas WHERE DniPaciente="+Dni;
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
-            String dni=rs.getString("Dni");
-            String dniM=rs.getString("DniM");
+            String dni=rs.getString("DniPaciente");
+            String dniM=rs.getString("DniMedico");
             Date fecha=rs.getDate("Fecha");
             Boolean estado=rs.getBoolean("Estado");
 
@@ -96,5 +75,29 @@ public class citasBD {
         }
         conexion.closeConnection();
         return cita;
+    }
+
+    public ArrayList EstadisticasCitas(Date fecha_inicio, Date fecha_fin) throws SQLException {
+        ArrayList datosAdmin = new ArrayList();
+
+        Jdbc conexion = new Jdbc();
+        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        String Consulta = "SELECT * FROM Citas WHERE "+fecha_inicio+"<Fecha AND Fecha<"+fecha_fin;
+        ResultSet rs = conexion.consultaSelect(Consulta);
+        while(rs.next()) {
+            String dni=rs.getString("DniPaciente");
+            String dniM=rs.getString("DniMedico");
+            Date fecha=rs.getDate("Fecha");
+            Boolean estado=rs.getBoolean("Estado");
+            String dniA=rs.getString("DniAdministrativoCita");
+
+            datosAdmin.add(dni);
+            datosAdmin.add(dniM);
+            datosAdmin.add(fecha);
+            datosAdmin.add(estado);
+            datosAdmin.add(dniA);
+
+        }
+        return datosAdmin;
     }
 }

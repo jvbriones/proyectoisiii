@@ -68,4 +68,42 @@ public class usuarioBD {
         conexion.closeConnection();
         return user;
     }
+
+    public void almacenarUsuario(Usuario user) {
+        String dni=user.getDni();
+        String nombre=user.getNombre();
+        String apellidos=user.getApellidos();
+        String direccion=user.getDireccion();
+        String email=user.getEmail();
+        String contrasena=user.getContrasena();
+        String telefono=user.getTelefono();
+        Date fecNac=(Date) user.getFechaNacimiento();
+        String lugarNac=user.getLugarNacimiento();
+        String foto=user.getFotografia();
+        String tipo=user.getTipo();
+
+        Jdbc conexion = new Jdbc();
+        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        String Consulta = "UPDATE Usuarios SET Dni="+dni+",Nombre="+nombre+",Apellidos="+apellidos+",Direccion="+direccion+",Email="+email+",Contrasena="+contrasena+",Telefono="+telefono+",FechaNacimiento="+fecNac+",LugarNacimiento="+lugarNac+",Fotografia="+foto+",TipoUsuario="+tipo+" WHERE Dni="+dni;
+        conexion.consultaUpdate(Consulta);
+        conexion.closeConnection();
+
+    }
+
+    public Boolean existeUsuario(String Dni) throws SQLException {
+        Boolean existe;
+
+        Jdbc conexion = new Jdbc();
+        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        String Consulta = "SELECT Dni FROM Usuarios WHERE Dni="+Dni;
+        ResultSet rs = conexion.consultaSelect(Consulta);
+        if(rs.next()) {
+            existe=true;
+        }
+        else {
+            existe=false;
+        }
+        conexion.closeConnection();
+        return existe;
+    }
 }

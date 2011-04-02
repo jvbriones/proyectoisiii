@@ -13,6 +13,7 @@ package CentroMedico;
 
 import BaseDatos.*;
 import java.sql.*;
+import java.util.ArrayList;
 
 
 /**
@@ -131,4 +132,23 @@ public class turnoBD {
         return Turno;
     }
 
+
+    public ArrayList ConsultarTurnos(Date fecha) throws SQLException {
+
+        ArrayList datos=new ArrayList();
+
+        Jdbc conexion = new Jdbc();
+        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        String Consulta = "SELECT Dni, Fecha FROM Turno WHERE "+fecha+"=Fecha";
+        ResultSet rs = conexion.consultaSelect(Consulta);
+        while(rs.next()) {
+            String dni=rs.getString("Dni");
+            Date fechaAux=rs.getDate("Fecha");
+
+            datos.add(fechaAux);
+            datos.add(dni);
+
+        }
+        return datos;
+    }
 }
