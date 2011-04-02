@@ -15,7 +15,7 @@ package BaseDatos;
 import java.sql.*;
 
 /**
- * @version     datos de la versión (numero y fecha)
+ * @version     1.0     02/04/2011
  * @author      Sub_Equipo1
  */
 
@@ -55,7 +55,7 @@ public class Jdbc {
      * Esta funcion devolverá error en si no se puede realizar la operación
      *
      */
-                //No se que nombre es más apropiado!!
+
     public void consultaUpdate(String SqlCmd) { 
         try {
             Statement st = conexion.createStatement();
@@ -74,7 +74,7 @@ public class Jdbc {
      * Esta funcion devolverá error en si no se puede realizar la operación
      *
      */
-                //No se que nombre es más apropiado!!
+    
     public ResultSet consultaSelect(String SqlCmd) throws SQLException {
         try {
             //Ejecutamos la consulta y obtenemos el resultado en el ResultSet 'resultado'
