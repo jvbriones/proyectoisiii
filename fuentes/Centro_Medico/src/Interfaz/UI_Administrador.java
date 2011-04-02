@@ -209,6 +209,18 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jButtonMasMesFechaTurno = new javax.swing.JButton();
         jPanelGestionarCita = new javax.swing.JPanel();
+        jButtonGuardarCita = new javax.swing.JButton();
+        jTextFieldDNIGestionarCitaPaciente = new javax.swing.JTextField();
+        jLabelDNIGestionarCita = new javax.swing.JLabel();
+        jButtonLimpiarCita = new javax.swing.JButton();
+        jLabelGestionarPaciente5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jButtonCancelarCita = new javax.swing.JButton();
+        jButtonAltaCita = new javax.swing.JButton();
+        jButtonConsultarCita = new javax.swing.JButton();
+        jLabelDNIGestionarCitaMedico = new javax.swing.JLabel();
+        jTextFieldDNIGestionarCitaMedico = new javax.swing.JTextField();
+        jPanelGestionarCitaFecha = new javax.swing.JPanel();
         jTextFieldMesCita = new javax.swing.JTextField();
         jButtonMenosAnioFechaCita = new javax.swing.JButton();
         jButtonMasAnioFechaCita = new javax.swing.JButton();
@@ -217,12 +229,9 @@ public class UI_Administrador extends javax.swing.JFrame {
         jTextFieldDiaCita = new javax.swing.JTextField();
         jButtonMasMesFechaCita = new javax.swing.JButton();
         jButtonMasDiaFechaCita = new javax.swing.JButton();
-        jButtonGuardarCita = new javax.swing.JButton();
         jButtonMenosDiaFechaCita = new javax.swing.JButton();
         jButtonMenosMesFechaCita = new javax.swing.JButton();
-        jTextFieldDNIGestionarCita = new javax.swing.JTextField();
-        jLabelDNIGestionarCita = new javax.swing.JLabel();
-        jButtonLimpiarCita = new javax.swing.JButton();
+        jPanelGestionarCitaHora = new javax.swing.JPanel();
         jButtonMasHoraCita = new javax.swing.JButton();
         jButtonMasMinutoCita = new javax.swing.JButton();
         jTextFieldHoraCita = new javax.swing.JTextField();
@@ -230,15 +239,16 @@ public class UI_Administrador extends javax.swing.JFrame {
         jButtonMenosHoraCita = new javax.swing.JButton();
         jButtonMenosMinutoCita = new javax.swing.JButton();
         jLabelHoraCita = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextAreaInfoConsulta = new javax.swing.JTextArea();
-        jLabelGestionarPaciente5 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jButtonCancelarCita = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
+        jPanelGestionarCitaAlta = new javax.swing.JPanel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList();
+        jLabelGestionarCitaAltaDNIPaciente = new javax.swing.JLabel();
+        jLabelGestionarCitaAltaDNIMedico = new javax.swing.JLabel();
+        jLabelGestionarCitaAltaHora = new javax.swing.JLabel();
+        jLabelGestionarCitaAltaFecha = new javax.swing.JLabel();
+        jScrollPaneElegirCita = new javax.swing.JScrollPane();
         jTextAreaInfoCitaOnline = new javax.swing.JTextArea();
-        jButtonAltaCita = new javax.swing.JButton();
-        jButtonConsultarCita = new javax.swing.JButton();
+        jButtonAceptarCita = new javax.swing.JButton();
         jPanelEstadPersTipo = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabelEstadPersTipo = new javax.swing.JLabel();
@@ -508,7 +518,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jLabelEstadPersFecha1)
                 .add(106, 106, 106)
                 .add(jLabelEstadPersTipo1)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 98, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 97, Short.MAX_VALUE)
                 .add(jLabelGestionarCita1)
                 .add(105, 105, 105))
             .add(jPanelPrincipalLayout.createSequentialGroup()
@@ -542,10 +552,10 @@ public class UI_Administrador extends javax.swing.JFrame {
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelPrincipalLayout.createSequentialGroup()
                 .add(29, 29, 29)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadPersTipo, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadCitas, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadPersFecha, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE))
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadPersTipo, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadCitas, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadPersFecha, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelEstadCitas1)
@@ -1351,6 +1361,89 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarCita.setMinimumSize(new java.awt.Dimension(901, 531));
         jPanelGestionarCita.setPreferredSize(new java.awt.Dimension(901, 531));
         jPanelGestionarCita.setSize(new java.awt.Dimension(901, 531));
+        jPanelGestionarCita.setLayout(null);
+
+        jButtonGuardarCita.setText("Guardar");
+        jButtonGuardarCita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonGuardarCitaMouseClicked(evt);
+            }
+        });
+        jPanelGestionarCita.add(jButtonGuardarCita);
+        jButtonGuardarCita.setBounds(400, 440, 93, 39);
+
+        jTextFieldDNIGestionarCitaPaciente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldDNIGestionarCitaPacienteKeyTyped(evt);
+            }
+        });
+        jPanelGestionarCita.add(jTextFieldDNIGestionarCitaPaciente);
+        jTextFieldDNIGestionarCitaPaciente.setBounds(250, 220, 95, 28);
+
+        jLabelDNIGestionarCita.setText("DNI Paciente");
+        jPanelGestionarCita.add(jLabelDNIGestionarCita);
+        jLabelDNIGestionarCita.setBounds(160, 230, 90, 16);
+
+        jButtonLimpiarCita.setText("Limpiar");
+        jButtonLimpiarCita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonLimpiarCitaMouseClicked(evt);
+            }
+        });
+        jButtonLimpiarCita.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLimpiarCitaActionPerformed(evt);
+            }
+        });
+        jPanelGestionarCita.add(jButtonLimpiarCita);
+        jButtonLimpiarCita.setBounds(280, 440, 91, 39);
+
+        jLabelGestionarPaciente5.setFont(new java.awt.Font("Lucida Grande", 1, 48));
+        jLabelGestionarPaciente5.setText("Gestionar Cita Online");
+        jPanelGestionarCita.add(jLabelGestionarPaciente5);
+        jLabelGestionarPaciente5.setBounds(180, 20, 532, 58);
+
+        jLabel4.setText("_____________________________________________________________________________");
+        jPanelGestionarCita.add(jLabel4);
+        jLabel4.setBounds(180, 70, 539, 16);
+
+        jButtonCancelarCita.setText("Cancelar");
+        jPanelGestionarCita.add(jButtonCancelarCita);
+        jButtonCancelarCita.setBounds(520, 440, 93, 39);
+
+        jButtonAltaCita.setText("Alta");
+        jButtonAltaCita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonAltaCitaMouseClicked(evt);
+            }
+        });
+        jPanelGestionarCita.add(jButtonAltaCita);
+        jButtonAltaCita.setBounds(400, 440, 93, 39);
+
+        jButtonConsultarCita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonConsultarCitaMouseClicked(evt);
+            }
+        });
+        jButtonConsultarCita.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonConsultarCitaActionPerformed(evt);
+            }
+        });
+        jPanelGestionarCita.add(jButtonConsultarCita);
+        jButtonConsultarCita.setBounds(520, 440, 93, 39);
+
+        jLabelDNIGestionarCitaMedico.setText("DNI Médico");
+        jPanelGestionarCita.add(jLabelDNIGestionarCitaMedico);
+        jLabelDNIGestionarCitaMedico.setBounds(460, 230, 80, 16);
+
+        jTextFieldDNIGestionarCitaMedico.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldDNIGestionarCitaMedicoKeyTyped(evt);
+            }
+        });
+        jPanelGestionarCita.add(jTextFieldDNIGestionarCitaMedico);
+        jTextFieldDNIGestionarCitaMedico.setBounds(570, 220, 95, 28);
 
         jTextFieldMesCita.setEditable(false);
         jTextFieldMesCita.setText("1");
@@ -1421,13 +1514,6 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
 
-        jButtonGuardarCita.setText("Guardar");
-        jButtonGuardarCita.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonGuardarCitaMouseClicked(evt);
-            }
-        });
-
         jButtonMenosDiaFechaCita.setText("-");
         jButtonMenosDiaFechaCita.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1452,25 +1538,57 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
 
-        jTextFieldDNIGestionarCita.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldDNIGestionarCitaKeyTyped(evt);
-            }
-        });
+        org.jdesktop.layout.GroupLayout jPanelGestionarCitaFechaLayout = new org.jdesktop.layout.GroupLayout(jPanelGestionarCitaFecha);
+        jPanelGestionarCitaFecha.setLayout(jPanelGestionarCitaFechaLayout);
+        jPanelGestionarCitaFechaLayout.setHorizontalGroup(
+            jPanelGestionarCitaFechaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanelGestionarCitaFechaLayout.createSequentialGroup()
+                .add(30, 30, 30)
+                .add(jPanelGestionarCitaFechaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jPanelGestionarCitaFechaLayout.createSequentialGroup()
+                        .add(40, 40, 40)
+                        .add(jLabelFechaCita))
+                    .add(jPanelGestionarCitaFechaLayout.createSequentialGroup()
+                        .add(jButtonMasDiaFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(jButtonMasMesFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(jButtonMasAnioFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jPanelGestionarCitaFechaLayout.createSequentialGroup()
+                        .add(10, 10, 10)
+                        .add(jTextFieldDiaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 33, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(17, 17, 17)
+                        .add(jTextFieldMesCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 33, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(7, 7, 7)
+                        .add(jTextFieldAnioCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jPanelGestionarCitaFechaLayout.createSequentialGroup()
+                        .add(jButtonMenosDiaFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(jButtonMenosMesFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(jButtonMenosAnioFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(30, Short.MAX_VALUE))
+        );
+        jPanelGestionarCitaFechaLayout.setVerticalGroup(
+            jPanelGestionarCitaFechaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanelGestionarCitaFechaLayout.createSequentialGroup()
+                .add(10, 10, 10)
+                .add(jLabelFechaCita)
+                .add(4, 4, 4)
+                .add(jPanelGestionarCitaFechaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jButtonMasDiaFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jButtonMasMesFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jButtonMasAnioFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(jPanelGestionarCitaFechaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jTextFieldDiaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jTextFieldMesCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jTextFieldAnioCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(2, 2, 2)
+                .add(jPanelGestionarCitaFechaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jButtonMenosDiaFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jButtonMenosMesFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jButtonMenosAnioFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
-        jLabelDNIGestionarCita.setText("DNI");
-
-        jButtonLimpiarCita.setText("Limpiar");
-        jButtonLimpiarCita.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonLimpiarCitaMouseClicked(evt);
-            }
-        });
-        jButtonLimpiarCita.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonLimpiarCitaActionPerformed(evt);
-            }
-        });
+        jPanelGestionarCita.add(jPanelGestionarCitaFecha);
+        jPanelGestionarCitaFecha.setBounds(130, 270, 210, 150);
 
         jButtonMasHoraCita.setText("+");
         jButtonMasHoraCita.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1533,157 +1651,123 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabelHoraCita.setText("Hora cita");
 
-        jTextAreaInfoConsulta.setBackground(new java.awt.Color(255, 204, 102));
-        jTextAreaInfoConsulta.setColumns(17);
-        jTextAreaInfoConsulta.setEditable(false);
-        jTextAreaInfoConsulta.setFont(new java.awt.Font("Lucida Grande", 0, 18));
-        jTextAreaInfoConsulta.setRows(3);
-        jTextAreaInfoConsulta.setText("Introduce el DNI del paciente, la fecha y una hora para solicitar una cita.\nEn cambio, si desea consultar una cita, introduce solamente el DNI.");
-        jScrollPane1.setViewportView(jTextAreaInfoConsulta);
+        org.jdesktop.layout.GroupLayout jPanelGestionarCitaHoraLayout = new org.jdesktop.layout.GroupLayout(jPanelGestionarCitaHora);
+        jPanelGestionarCitaHora.setLayout(jPanelGestionarCitaHoraLayout);
+        jPanelGestionarCitaHoraLayout.setHorizontalGroup(
+            jPanelGestionarCitaHoraLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanelGestionarCitaHoraLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(jPanelGestionarCitaHoraLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jPanelGestionarCitaHoraLayout.createSequentialGroup()
+                        .add(20, 20, 20)
+                        .add(jLabelHoraCita))
+                    .add(jPanelGestionarCitaHoraLayout.createSequentialGroup()
+                        .add(jButtonMasHoraCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                        .add(jButtonMasMinutoCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jPanelGestionarCitaHoraLayout.createSequentialGroup()
+                        .add(10, 10, 10)
+                        .add(jTextFieldHoraCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 33, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(17, 17, 17)
+                        .add(jTextFieldMinutoCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 33, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jPanelGestionarCitaHoraLayout.createSequentialGroup()
+                        .add(jButtonMenosHoraCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                        .add(jButtonMenosMinutoCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanelGestionarCitaHoraLayout.setVerticalGroup(
+            jPanelGestionarCitaHoraLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanelGestionarCitaHoraLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(jLabelHoraCita)
+                .add(4, 4, 4)
+                .add(jPanelGestionarCitaHoraLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jButtonMasHoraCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jButtonMasMinutoCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(jPanelGestionarCitaHoraLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jTextFieldHoraCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jTextFieldMinutoCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(2, 2, 2)
+                .add(jPanelGestionarCitaHoraLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jButtonMenosHoraCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jButtonMenosMinutoCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
-        jLabelGestionarPaciente5.setFont(new java.awt.Font("Lucida Grande", 1, 48));
-        jLabelGestionarPaciente5.setText("Gestionar Cita Online");
+        jPanelGestionarCita.add(jPanelGestionarCitaHora);
+        jPanelGestionarCitaHora.setBounds(550, 260, 130, 160);
 
-        jLabel4.setText("_____________________________________________________________________________");
+        jList1.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane9.setViewportView(jList1);
 
-        jButtonCancelarCita.setText("Cancelar");
+        jLabelGestionarCitaAltaDNIPaciente.setText("DNI Paciente");
+
+        jLabelGestionarCitaAltaDNIMedico.setText("DNI Médico");
+
+        jLabelGestionarCitaAltaHora.setText("Hora");
+
+        jLabelGestionarCitaAltaFecha.setText("Fecha");
+
+        org.jdesktop.layout.GroupLayout jPanelGestionarCitaAltaLayout = new org.jdesktop.layout.GroupLayout(jPanelGestionarCitaAlta);
+        jPanelGestionarCitaAlta.setLayout(jPanelGestionarCitaAltaLayout);
+        jPanelGestionarCitaAltaLayout.setHorizontalGroup(
+            jPanelGestionarCitaAltaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanelGestionarCitaAltaLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(jPanelGestionarCitaAltaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jScrollPane9, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarCitaAltaLayout.createSequentialGroup()
+                        .add(jLabelGestionarCitaAltaFecha, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 53, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(18, 18, 18)
+                        .add(jLabelGestionarCitaAltaHora, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 53, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(41, 41, 41)
+                        .add(jLabelGestionarCitaAltaDNIMedico, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 90, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(18, 18, 18)
+                        .add(jLabelGestionarCitaAltaDNIPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 90, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(17, 17, 17)))
+                .addContainerGap())
+        );
+        jPanelGestionarCitaAltaLayout.setVerticalGroup(
+            jPanelGestionarCitaAltaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarCitaAltaLayout.createSequentialGroup()
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(jPanelGestionarCitaAltaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jLabelGestionarCitaAltaHora)
+                    .add(jLabelGestionarCitaAltaFecha)
+                    .add(jLabelGestionarCitaAltaDNIMedico)
+                    .add(jLabelGestionarCitaAltaDNIPaciente))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jScrollPane9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 173, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jPanelGestionarCita.add(jPanelGestionarCitaAlta);
+        jPanelGestionarCitaAlta.setBounds(210, 190, 440, 230);
 
         jTextAreaInfoCitaOnline.setBackground(new java.awt.Color(255, 204, 102));
         jTextAreaInfoCitaOnline.setColumns(17);
         jTextAreaInfoCitaOnline.setEditable(false);
-        jTextAreaInfoCitaOnline.setFont(new java.awt.Font("Lucida Grande", 0, 18));
+        jTextAreaInfoCitaOnline.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jTextAreaInfoCitaOnline.setRows(3);
-        jTextAreaInfoCitaOnline.setText("Estás consultando una cita, si modificas algún campo, dale a \"guardar\".\nSi lo que quieres es borrarla, dale a \"cancelar\".");
-        jScrollPane2.setViewportView(jTextAreaInfoCitaOnline);
+        jTextAreaInfoCitaOnline.setText("Introduce el DNI del paciente y pulse en la opción que desee");
+        jScrollPaneElegirCita.setViewportView(jTextAreaInfoCitaOnline);
 
-        jButtonAltaCita.setText("Alta");
-        jButtonAltaCita.addMouseListener(new java.awt.event.MouseAdapter() {
+        jPanelGestionarCita.add(jScrollPaneElegirCita);
+        jScrollPaneElegirCita.setBounds(60, 110, 780, 70);
+
+        jButtonAceptarCita.setText("Aceptar");
+        jButtonAceptarCita.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonAltaCitaMouseClicked(evt);
+                jButtonAceptarCitaMouseClicked(evt);
             }
         });
-
-        jButtonConsultarCita.setText("Consultar");
-        jButtonConsultarCita.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonConsultarCitaMouseClicked(evt);
-            }
-        });
-
-        org.jdesktop.layout.GroupLayout jPanelGestionarCitaLayout = new org.jdesktop.layout.GroupLayout(jPanelGestionarCita);
-        jPanelGestionarCita.setLayout(jPanelGestionarCitaLayout);
-        jPanelGestionarCitaLayout.setHorizontalGroup(
-            jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelGestionarCitaLayout.createSequentialGroup()
-                .add(180, 180, 180)
-                .add(jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jLabelGestionarPaciente5)
-                    .add(jLabel4)))
-            .add(jPanelGestionarCitaLayout.createSequentialGroup()
-                .add(60, 60, 60)
-                .add(jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 780, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 780, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-            .add(jPanelGestionarCitaLayout.createSequentialGroup()
-                .add(350, 350, 350)
-                .add(jLabelDNIGestionarCita)
-                .add(16, 16, 16)
-                .add(jTextFieldDNIGestionarCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 95, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-            .add(jPanelGestionarCitaLayout.createSequentialGroup()
-                .add(190, 190, 190)
-                .add(jLabelFechaCita)
-                .add(337, 337, 337)
-                .add(jLabelHoraCita))
-            .add(jPanelGestionarCitaLayout.createSequentialGroup()
-                .add(150, 150, 150)
-                .add(jButtonMasDiaFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(jButtonMasMesFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(jButtonMasAnioFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(270, 270, 270)
-                .add(jButtonMasHoraCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(jButtonMasMinutoCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-            .add(jPanelGestionarCitaLayout.createSequentialGroup()
-                .add(160, 160, 160)
-                .add(jTextFieldDiaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 33, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(17, 17, 17)
-                .add(jTextFieldMesCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 33, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(7, 7, 7)
-                .add(jTextFieldAnioCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(280, 280, 280)
-                .add(jTextFieldHoraCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 33, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(17, 17, 17)
-                .add(jTextFieldMinutoCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 33, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-            .add(jPanelGestionarCitaLayout.createSequentialGroup()
-                .add(150, 150, 150)
-                .add(jButtonMenosDiaFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(jButtonMenosMesFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(jButtonMenosAnioFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(270, 270, 270)
-                .add(jButtonMenosHoraCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(jButtonMenosMinutoCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-            .add(jPanelGestionarCitaLayout.createSequentialGroup()
-                .add(280, 280, 280)
-                .add(jButtonLimpiarCita)
-                .add(29, 29, 29)
-                .add(jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jButtonAltaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 93, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButtonGuardarCita))
-                .add(27, 27, 27)
-                .add(jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jButtonConsultarCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 93, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButtonCancelarCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 93, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-        );
-        jPanelGestionarCitaLayout.setVerticalGroup(
-            jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelGestionarCitaLayout.createSequentialGroup()
-                .add(20, 20, 20)
-                .add(jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jLabelGestionarPaciente5)
-                    .add(jPanelGestionarCitaLayout.createSequentialGroup()
-                        .add(50, 50, 50)
-                        .add(jLabel4)))
-                .add(24, 24, 24)
-                .add(jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(20, 20, 20)
-                .add(jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanelGestionarCitaLayout.createSequentialGroup()
-                        .add(10, 10, 10)
-                        .add(jLabelDNIGestionarCita))
-                    .add(jTextFieldDNIGestionarCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(12, 12, 12)
-                .add(jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jLabelFechaCita)
-                    .add(jLabelHoraCita))
-                .add(4, 4, 4)
-                .add(jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jButtonMasDiaFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButtonMasMesFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButtonMasAnioFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButtonMasHoraCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButtonMasMinutoCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jTextFieldDiaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jTextFieldMesCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jTextFieldAnioCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jTextFieldHoraCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jTextFieldMinutoCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(2, 2, 2)
-                .add(jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jButtonMenosDiaFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButtonMenosMesFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButtonMenosAnioFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButtonMenosHoraCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButtonMenosMinutoCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(20, 20, 20)
-                .add(jPanelGestionarCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jButtonLimpiarCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 39, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButtonAltaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 39, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButtonGuardarCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 39, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButtonConsultarCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 39, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButtonCancelarCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 39, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-        );
+        jPanelGestionarCita.add(jButtonAceptarCita);
+        jButtonAceptarCita.setBounds(400, 440, 93, 39);
 
         jPanelGestionarCita.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelGestionarCita, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -1752,7 +1836,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelEstadPersFecha.setMinimumSize(new java.awt.Dimension(901, 531));
         jPanelEstadPersFecha.setPreferredSize(new java.awt.Dimension(901, 531));
 
-        jLabelEstadPersFecha.setFont(new java.awt.Font("Lucida Grande", 1, 48)); // NOI18N
+        jLabelEstadPersFecha.setFont(new java.awt.Font("Lucida Grande", 1, 48));
         jLabelEstadPersFecha.setText("Estadísticas Personal por Fecha");
 
         jTextEstdPersFecha.setBackground(new java.awt.Color(255, 204, 102));
@@ -1764,7 +1848,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabel9.setText("_________________________________________________________________________________________________________________");
 
-        jLabel10.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Lucida Grande", 0, 14));
         jLabel10.setText("Fecha");
 
         jLabel11.setFont(new java.awt.Font("Lucida Grande", 0, 14));
@@ -1943,7 +2027,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jTextAreaInfoEstadCitas.setBackground(new java.awt.Color(255, 204, 102));
         jTextAreaInfoEstadCitas.setColumns(17);
         jTextAreaInfoEstadCitas.setEditable(false);
-        jTextAreaInfoEstadCitas.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jTextAreaInfoEstadCitas.setFont(new java.awt.Font("Lucida Grande", 0, 18));
         jTextAreaInfoEstadCitas.setRows(3);
         jTextAreaInfoEstadCitas.setText("Para obtener estadísticas de las citas solicitadas por pacientes en el centro de salud, \nelija dos fechas y se obtendrá una tabla con las estadísticas de las citas entre dichas \nfechas.");
         jScrollPane8.setViewportView(jTextAreaInfoEstadCitas);
@@ -2659,7 +2743,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
     private void jButtonGestionarCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGestionarCitaMouseClicked
         // TODO add your handling code here:
-        mostrarPanel("GestionarCita");
+        mostrarPanel("GestionarCitaOnline");
     }//GEN-LAST:event_jButtonGestionarCitaMouseClicked
 
     private void jTextFieldTelefonoPacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldTelefonoPacienteKeyTyped
@@ -2780,26 +2864,26 @@ public class UI_Administrador extends javax.swing.JFrame {
             evt.consume();
     }//GEN-LAST:event_jTextFieldLugarNacimientoPersonalKeyTyped
 
-    private void jTextFieldDNIGestionarCitaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldDNIGestionarCitaKeyTyped
+    private void jTextFieldDNIGestionarCitaPacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldDNIGestionarCitaPacienteKeyTyped
         // TODO add your handling code here:
 
         /**Limitamos a que el DNI siempre sea correcto sintácticamente*/
         char teclaPresionada = evt.getKeyChar();
 
-        if(jTextFieldDNIGestionarCita.getText().length() < 8)
+        if(jTextFieldDNIGestionarCitaPaciente.getText().length() < 8)
             if(Character.isDigit(teclaPresionada) == false)
                 evt.consume();
 
-        if(jTextFieldDNIGestionarCita.getText().length() == 8)
+        if(jTextFieldDNIGestionarCitaPaciente.getText().length() == 8)
             if(Character.isDigit(teclaPresionada) == true){
                 evt.consume();
                 }else if(Character.isLowerCase(teclaPresionada)){
-                    jTextFieldDNIGestionarCita.setText(jTextFieldDNIGestionarCita.getText().toUpperCase());
+                    jTextFieldDNIGestionarCitaPaciente.setText(jTextFieldDNIGestionarCitaPaciente.getText().toUpperCase());
                 }
 
-        if(jTextFieldDNIGestionarCita.getText().length() > 8)
+        if(jTextFieldDNIGestionarCitaPaciente.getText().length() > 8)
             evt.consume();
-    }//GEN-LAST:event_jTextFieldDNIGestionarCitaKeyTyped
+    }//GEN-LAST:event_jTextFieldDNIGestionarCitaPacienteKeyTyped
 
     private void jButtonConsultarPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarPacienteMouseClicked
         // TODO add your handling code here:
@@ -2823,6 +2907,12 @@ public class UI_Administrador extends javax.swing.JFrame {
 
     private void jButtonAltaCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAltaCitaMouseClicked
         // TODO add your handling code here:
+        jTextAreaInfoCitaOnline.setText("Elija la cita que mejor le convenga");
+        jPanelGestionarCitaAlta.setVisible(true);
+        jLabelDNIGestionarCita.setVisible(false);
+        jTextFieldDNIGestionarCitaPaciente.setVisible(false);
+        jLabelDNIGestionarCitaMedico.setVisible(false);
+        jTextFieldDNIGestionarCitaMedico.setVisible(false);
 }//GEN-LAST:event_jButtonAltaCitaMouseClicked
 
     private void jButtonGuardarCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarCitaMouseClicked
@@ -2834,13 +2924,22 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         /**Mostramos el botón guardar y ocultamos el de alta, así como paneles de texto */
         jButtonGuardarCita.setVisible(true);
+        jButtonLimpiarCita.setVisible(true);
         jButtonCancelarCita.setVisible(true);
-        jTextAreaInfoConsulta.setVisible(false);
-        jTextAreaInfoCitaOnline.setVisible(true);
+        jTextAreaInfoCitaOnline.setText("Estás consultando una cita, puedes guardar los cambios o cancelarla");
         jButtonConsultarCita.setVisible(false);
         jButtonAltaCita.setVisible(false);
-        jScrollPane1.setVisible(false);
-        jScrollPane2.setVisible(true);
+
+
+        /**Mostramos los botones de fecha y hora  */
+        jPanelGestionarCitaFecha.setVisible(true);
+        jPanelGestionarCitaHora.setVisible(true);
+        
+        /**Mostramos el campo DNI de médico*/
+        jLabelDNIGestionarCitaMedico.setVisible(true);
+        jTextFieldDNIGestionarCitaMedico.setVisible(true);
+
+
 }//GEN-LAST:event_jButtonConsultarCitaMouseClicked
 
     private void jButtonConsultarTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarTurnoMouseClicked
@@ -3419,6 +3518,18 @@ public class UI_Administrador extends javax.swing.JFrame {
         mostrarPanel("EstadCitas");
     }//GEN-LAST:event_jButtonEstadCitasMouseClicked
 
+    private void jTextFieldDNIGestionarCitaMedicoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldDNIGestionarCitaMedicoKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldDNIGestionarCitaMedicoKeyTyped
+
+    private void jButtonAceptarCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAceptarCitaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAceptarCitaMouseClicked
+
+    private void jButtonConsultarCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultarCitaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonConsultarCitaActionPerformed
+
 
     /*Comprueba que la fecha introducida es correcta
      * 
@@ -3544,20 +3655,14 @@ public class UI_Administrador extends javax.swing.JFrame {
         }
 
          if(formulario.equals("GestionarCitaOnline")){
-            jTextFieldDNIGestionarCita.setText("");
+            jTextFieldDNIGestionarCitaPaciente.setText("");
+            jTextFieldDNIGestionarCitaMedico.setText("");
             jTextFieldDiaCita.setText(diaActual);
             jTextFieldMesCita.setText(mesActual);
             jTextFieldAnioCita.setText(anioActual);
             jTextFieldHoraCita.setText(horaActual);
             jTextFieldMinutoCita.setText(minutoActual);
-            jScrollPane1.setVisible(true);
-            jScrollPane2.setVisible(false);
-            jButtonGuardarCita.setVisible(false);
-            jButtonCancelarCita.setVisible(false);
-            jButtonAltaCita.setVisible(true);
-            jButtonConsultarCita.setVisible(true);
-            jTextAreaInfoConsulta.setVisible(true);
-            jTextAreaInfoCitaOnline.setVisible(false);
+
         }
 
         if(formulario.equals("GestionarTurno")){
@@ -3577,7 +3682,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         }
 
         if(formulario.equals("GestionarCita")){
-            jTextFieldDNIGestionarCita.setText(null);
+            jTextFieldDNIGestionarCitaMedico.setText(null);
             jTextFieldDiaCita.setText(diaActual);
             jTextFieldMesCita.setText(mesActual);
             jTextFieldAnioCita.setText(anioActual);
@@ -3738,10 +3843,10 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         }
 
-        if(panel.equals("GestionarCita")){
+        if(panel.equals("GestionarCitaOnline")){
 
             /**Limpiamos posibles datos introducidos anteriormente*/
-            limpiarFormulario("GestionarCita");
+            limpiarFormulario("GestionarCitaOnline");
 
             /**Hacemos visible los botones y jtextarea pertinentes*/
             jLabelInicio.setVisible(true);
@@ -3749,11 +3854,19 @@ public class UI_Administrador extends javax.swing.JFrame {
             jButtonGuardarCita.setVisible(false);
             jButtonCancelarCita.setVisible(false);
             jButtonConsultarCita.setVisible(true);
-            jScrollPane1.setVisible(true);
-            jScrollPane2.setVisible(false);
-            jTextAreaInfoConsulta.setVisible(true);
-            jTextAreaInfoCitaOnline.setVisible(false);
-            
+            jButtonLimpiarCita.setVisible(false);
+            jButtonAceptarCita.setVisible(false);
+            jButtonAltaCita.setVisible(true);
+            jPanelGestionarCitaAlta.setVisible(false);
+            jPanelGestionarCitaHora.setVisible(false);
+            jPanelGestionarCitaFecha.setVisible(false);
+            jLabelDNIGestionarCitaMedico.setVisible(false);
+            jTextFieldDNIGestionarCitaMedico.setVisible(false);
+            jTextFieldDNIGestionarCitaPaciente.setVisible(true);
+            jLabelDNIGestionarCita.setVisible(true);
+            jTextAreaInfoCitaOnline.setText("Introduce el DNI del paciente y pulse en la opción que desee");
+
+
             /**Hacemos visible el panel seleccionado*/
             jPanelPrincipal.setVisible(false);
             jPanelEstadCitas.setVisible(false);
@@ -3938,6 +4051,7 @@ public class UI_Administrador extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLayeredPane ZonaTrabajo;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton jButtonAceptarCita;
     private javax.swing.JButton jButtonAltaCita;
     private javax.swing.JButton jButtonAltaPaciente;
     private javax.swing.JButton jButtonAltaPersonal;
@@ -4031,6 +4145,7 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelContraseniaPaciente;
     private javax.swing.JLabel jLabelContraseniaPersonal;
     private javax.swing.JLabel jLabelDNIGestionarCita;
+    private javax.swing.JLabel jLabelDNIGestionarCitaMedico;
     private javax.swing.JLabel jLabelDNIPaciente;
     private javax.swing.JLabel jLabelDNIPersonal;
     private javax.swing.JLabel jLabelDNITurno;
@@ -4055,6 +4170,10 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelFotografiaPaciente;
     private javax.swing.JLabel jLabelFotografiaPersonal;
     private javax.swing.JLabel jLabelGestionarCita1;
+    private javax.swing.JLabel jLabelGestionarCitaAltaDNIMedico;
+    private javax.swing.JLabel jLabelGestionarCitaAltaDNIPaciente;
+    private javax.swing.JLabel jLabelGestionarCitaAltaFecha;
+    private javax.swing.JLabel jLabelGestionarCitaAltaHora;
     private javax.swing.JLabel jLabelGestionarPaciente2;
     private javax.swing.JLabel jLabelGestionarPaciente3;
     private javax.swing.JLabel jLabelGestionarPaciente4;
@@ -4086,10 +4205,14 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelTipoUsuario;
     private javax.swing.JLabel jLabelTipoUsuarioIdentificado;
     private javax.swing.JLabel jLabelUsuario;
+    private javax.swing.JList jList1;
     private javax.swing.JPanel jPanelEstadCitas;
     private javax.swing.JPanel jPanelEstadPersFecha;
     private javax.swing.JPanel jPanelEstadPersTipo;
     private javax.swing.JPanel jPanelGestionarCita;
+    private javax.swing.JPanel jPanelGestionarCitaAlta;
+    private javax.swing.JPanel jPanelGestionarCitaFecha;
+    private javax.swing.JPanel jPanelGestionarCitaHora;
     private javax.swing.JPanel jPanelGestionarPaciente;
     private javax.swing.JPanel jPanelGestionarPersonal;
     private javax.swing.JPanel jPanelGestionarTurno;
@@ -4099,17 +4222,16 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButtonFarmaceutico;
     private javax.swing.JRadioButton jRadioButtonMedico;
     private javax.swing.JRadioButton jRadioButtonRadiologo;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
+    private javax.swing.JScrollPane jScrollPaneElegirCita;
     private javax.swing.JTextArea jTextAreaEstadCitas;
     private javax.swing.JTextArea jTextAreaInfoCitaOnline;
-    private javax.swing.JTextArea jTextAreaInfoConsulta;
     private javax.swing.JTextArea jTextAreaInfoConsultaTurno;
     private javax.swing.JTextArea jTextAreaInfoEstadCitas;
     private javax.swing.JTextArea jTextAreaInfoTurno;
@@ -4123,7 +4245,8 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldApellidosPersonal;
     private javax.swing.JTextField jTextFieldContraseniaPaciente;
     private javax.swing.JTextField jTextFieldContraseniaPersonal;
-    private javax.swing.JTextField jTextFieldDNIGestionarCita;
+    private javax.swing.JTextField jTextFieldDNIGestionarCitaMedico;
+    private javax.swing.JTextField jTextFieldDNIGestionarCitaPaciente;
     private javax.swing.JTextField jTextFieldDNIGestionarTurno;
     private javax.swing.JTextField jTextFieldDNIPaciente;
     private javax.swing.JTextField jTextFieldDNIPersonal;
