@@ -76,7 +76,7 @@ FOREIGN KEY (Dni) REFERENCES Personal(Dni) ON DELETE CASCADE,
 
 CREATE TABLE Turnos(
 /* Dni VARCHAR2(9) NOT NULL, */
-Id NUMBER NOT NULL, /* Identificador de turno */
+Dni VARCHAR2(9) NOT NULL, /* Identificador de turno */
 Tipo VARCHAR2(20) NOT NULL,
 FechaInicio DATE,
 FechaFin DATE,
@@ -86,17 +86,17 @@ PRIMARY KEY (Id)
 CREATE TABLE PersonalTrabajaEnTurno(
 DniPersonal VARCHAR2(9) NOT NULL,
 /*DniTurno VARCHAR2(9) NOT NULL,*/
-IdTurno NUMBER NOT NULL, /* Identificador de turno */
-PRIMARY KEY (DniPersonal, IdTurno),
+DniTurno VARCHAR2(9) NOT NULL, /* Identificador de turno */
+PRIMARY KEY (DniPersonal, DniTurno),
 FOREIGN KEY (DniPersonal) REFERENCES Personal(Dni),
-FOREIGN KEY (IdTurno) REFERENCES Turnos(IdTurno)
+FOREIGN KEY (DniTurno) REFERENCES Turnos(DniTurno)
 );
 
 CREATE TABLE AdministrativoAsignaTurno(
 DniAdministrativo VARCHAR2(9) NOT NULL,
 /*DniTurno VARCHAR2(9) NOT NULL,*/
-IdTurno NUMBER NOT NULL, /* Identificador de turno */
-PRIMARY KEY (DniAdministrativo, IdTurno)
+DniTurno VARCHAR2(9) NOT NULL, /* Identificador de turno */
+PRIMARY KEY (DniAdministrativo, DniTurno)
 FOREIGN KEY (DniAdministrativo) REFERENCES Administrativos(Dni),
-FOREIGN KEY (IdTurno) REFERENCES Turnos(IdTurno)
+FOREIGN KEY (DniTurno) REFERENCES Turnos(DniTurno)
 );
