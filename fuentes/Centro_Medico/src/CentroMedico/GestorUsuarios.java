@@ -8,19 +8,20 @@
  * Grupo M_1.2
  *
  */
+
 package CentroMedico;
 
-import java.io.*;
 import java.sql.SQLException;
 
 /**
- * @version     v1.0    01/04/2011
+ * @version     1.0    02/04/2011
  * @author      Sub_Equipo1
  */
+
 public class GestorUsuarios {
 
     private Usuario user = null;
-    UsuarioBD usuario_bd = new UsuarioBD();
+    usuarioBD usuario_bd = new usuarioBD();
 
 
 
@@ -45,13 +46,13 @@ public class GestorUsuarios {
 
     }
 
-    modificarDatosPersonalesAdmin()
+   /* modificarDatosPersonalesAdmin()
 
     modificarDatosPersonales()
 
     consultarDatosPersonalesAdmin()
 
-    consultarDatosPersonales()
+    consultarDatosPersonales()*/
 
 
 

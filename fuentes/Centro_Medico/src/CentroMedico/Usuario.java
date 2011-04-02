@@ -29,7 +29,7 @@ public class Usuario {
     private String Telefono;
     private Date FecNac;
     private String LugarNac;
-    private String Foto; //ya veremos como hacemos lo de la foto..
+    private String Foto;
     private String Tipo;
 
     /*
@@ -37,20 +37,7 @@ public class Usuario {
      * Constructores
      *
      */
-    public Usuario(){
-        this.DNI=null;
-        this.Nombre=null;
-        this.Apellidos=null;
-        this.Direccion=null;
-        this.Email=null;
-        this.Contrasena=null;
-        this.Telefono=null;
-        this.FecNac=null;
-        this.LugarNac=null;
-        this.Foto=null;
-        this.Tipo=null;
-    }
-
+   
     public Usuario(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
             String Contrasena, String Telefono, Date FecNac, String LugarNac, String Foto, String Tipo){
         

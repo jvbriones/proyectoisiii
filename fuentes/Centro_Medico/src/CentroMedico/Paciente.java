@@ -21,10 +21,18 @@ import java.util.*;
 public class Paciente extends Usuario {
   
 
+
+    public Paciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
+            String Contrasena, String Telefono, Date FecNac, String LugarNac, String Foto){
+
+        super(Dni, Nombre, Apellidos, Direccion, Email, Contrasena, Telefono, FecNac, LugarNac, Foto, "Paciente");
+    }
+
     public Paciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
             String Contrasena, String Telefono, Date FecNac, String LugarNac, String Foto, String Tipo){
 
         super(Dni, Nombre, Apellidos, Direccion, Email, Contrasena, Telefono, FecNac, LugarNac, Foto, Tipo);
-    }
+    }    
+    
 
 }

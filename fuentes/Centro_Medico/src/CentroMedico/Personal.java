@@ -23,12 +23,13 @@ public class Personal extends Usuario{
     private String TipoPersonal;
    
 
-    public Personal(String Dni,String Nombre,String Apellidos,String Direccion,String Email,String Contrasena,
-            String Telefono,Date FecNac,String LugarNac,String Foto,String TipoUsuario,String TipoPersonal) {
+    public Personal(String Dni, String Nombre, String Apellidos, String Direccion, String Email, String Contrasena,
+            String Telefono, Date FecNac, String LugarNac, String Foto, String TipoPersonal) {
 
-        super(Dni,Nombre,Apellidos,Direccion,Email,Contrasena,Telefono,FecNac,LugarNac,Foto,TipoUsuario);
+        super(Dni, Nombre, Apellidos, Direccion, Email, Contrasena, Telefono, FecNac, LugarNac, Foto, "Personal");
         this.TipoPersonal=TipoPersonal;
-    }
+    }    
+    
 
     String getTipoPersonal(){
         return  this.TipoPersonal;
@@ -37,7 +38,6 @@ public class Personal extends Usuario{
     void setTipoPersonal(String TipoPer){
         this.TipoPersonal=TipoPer;
      }
-
    
 
 }
