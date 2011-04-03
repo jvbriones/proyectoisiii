@@ -61,7 +61,7 @@ public class PacBD {
     }
 
 
-    public Usuario obtenerPaciente(String Dni) throws SQLException {
+    public Paciente obtenerPaciente(String Dni) throws SQLException {
 
         Paciente paciente;
 

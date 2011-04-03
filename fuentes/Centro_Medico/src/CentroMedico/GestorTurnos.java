@@ -20,10 +20,7 @@ import java.text.SimpleDateFormat;
  * @author      Sub_Equipo1
  */
 public class GestorTurnos {
-    GestorTurnos(){
-
-    }
-
+    
     public String altaTurno(String tipo)throws SQLException {
         String exito=new String();
         turnoBD bd_turno=new turnoBD();
