@@ -2,7 +2,7 @@
  * GestorTurnos.java
  *
  * Informacion:
- * Clase encargada de operar con los turno establecidos en el centro medico en asignados al personal.
+ * Clase encargada de operar con los turno establecidos en el centro medico y asignados al personal
  *
  * Proyecto ISIII UGR 10/11
  * Grupo M_1.2
@@ -101,6 +101,7 @@ public class GestorTurnos {
 
         if(existe){
             turnoBD bd_turno=new turnoBD();
+            // Esta variable es necesario tenerla para convertir tipo "Date" a String
             SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
 
             bd_turno.modificaTurno(Dni,fechaInicio,fechaFin,tipo);
@@ -114,8 +115,40 @@ public class GestorTurnos {
         return exito;
     }
 
-    public Turno consultarTurnoPersonal(String Dni){
+    public String consultarTurnoPersonal(String Dni) throws SQLException{
+        String exito=new String();
+        GestorPersonal gestorPers=new GestorPersonal();
+        boolean existe;
+
+        existe=gestorPers.existePersonal(Dni);
+
+        if(existe){
+            turnoBD bd_turno=new turnoBD();
+            boolean existe2;
+
+            existe2=bd_turno.existeTurno(Dni);
+
+            if(existe2){
+                Turno turno;
+                SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
+                
+                turno=bd_turno.obtenerTurno(Dni);
+                String fechaI=new String(sdf.format(turno.getFechaInicio()));
+                String tipo=new String(turno.getTipoTurno());
+                String fechaF=new String(sdf.format(turno.getFechaFin()));
+
+                exito="El turno es desde el día "+fechaI+" hasta "+fechaF;
+                exito+=", del tipo "+tipo;
+            }
+            else{
+                exito="El usuario "+Dni+" no tiene ningun turno asignado";
+            }
+        }
+        else{
+            exito="No existe ningún usuario con dni "+Dni;
+        }
         
+        return exito;
     }
 
     //public ArrayList EstadisticasPersonalFecha(fecha){}
