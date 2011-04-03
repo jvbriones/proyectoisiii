@@ -32,7 +32,7 @@ public class PacBD {
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, user, pass);
-        String Consulta = "SELECT Dni FROM Pacientes WHERE Dni="+Dni;
+        String Consulta = "SELECT Dni FROM Pacientes WHERE Dni='"+Dni+"'";
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
             existe=true;
@@ -59,7 +59,7 @@ public class PacBD {
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "INSERT INTO Pacientes VALUES Dni="+dni+",Nombre="+nombre+",Apellidos="+apellidos+",Direccion="+direccion+",Email="+email+",Contrasena="+contrasena+",Telefono="+telefono+",FechaNacimiento="+fecNac+",LugarNacimiento="+lugarNac+",Fotografia="+foto+",TipoUsuario="+tipo;
+        String Consulta = "INSERT INTO Pacientes VALUES Dni='"+dni+"',Nombre='"+nombre+"',Apellidos='"+apellidos+"',Direccion='"+direccion+"',Email='"+email+"',Contrasena='"+contrasena+"',Telefono='"+telefono+"',FechaNacimiento="+fecNac+",LugarNacimiento='"+lugarNac+"',Fotografia='"+foto+"',TipoUsuario='"+tipo+"'";
         conexion.consultaUpdate(Consulta);
         conexion.closeConnection();
         
@@ -72,7 +72,7 @@ public class PacBD {
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "SELECT * FROM Pacientes WHERE Dni="+Dni;
+        String Consulta = "SELECT * FROM Pacientes WHERE Dni='"+Dni+"'";
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
             String dni=rs.getString("Dni");

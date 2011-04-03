@@ -31,7 +31,7 @@ public class personalBD {
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "SELECT Dni FROM Personal WHERE Dni="+Dni;
+        String Consulta = "SELECT Dni FROM Personal WHERE Dni='"+Dni+"'";
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
             existe=true;
@@ -58,7 +58,7 @@ public class personalBD {
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "INSERT INTO Personal VALUES "+dni+","+nombre+","+apellidos+","+direccion+","+email+","+contrasena+","+telefono+","+fecNac+","+lugarNac+","+foto+","+tipo;
+        String Consulta = "INSERT INTO Personal VALUES '"+dni+"','"+nombre+"','"+apellidos+"','"+direccion+"','"+email+"','"+contrasena+"','"+telefono+"',"+fecNac+",'"+lugarNac+"','"+foto+"','"+tipo+"'";
         conexion.consultaUpdate(Consulta);
         conexion.closeConnection();
 
