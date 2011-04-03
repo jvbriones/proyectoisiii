@@ -21,11 +21,9 @@ import java.util.Date;
 
 public class GestorPersonal {
 
-
-    personalBD bd_personal=new personalBD();
-
     public Boolean altaPersonal(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, String Foto, String TipoUsuario) throws SQLException {
         Boolean existe;
+        personalBD bd_personal=new personalBD();
         String Datos;
 
         existe=bd_personal.existePersonal(Dni);
@@ -63,6 +61,8 @@ public class GestorPersonal {
 
     public Boolean existePersonal(String Dni) throws SQLException {
         Boolean existe;
+        personalBD bd_personal=new personalBD();
+        
         existe=bd_personal.existePersonal(Dni);
         return existe;
     }

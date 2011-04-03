@@ -21,11 +21,9 @@ import java.util.Date;
 
 public class GestorPacientes {
 
-
-    PacBD bd_paciente=new PacBD();
-
     public Boolean altaPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, String Foto, String TipoUsuario) throws SQLException {
         Boolean existe;
+        PacBD bd_paciente=new PacBD();
         String Datos;
 
         existe=bd_paciente.existePaciente(Dni);
