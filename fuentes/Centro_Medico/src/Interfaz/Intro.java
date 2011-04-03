@@ -182,7 +182,6 @@ public class Intro extends javax.swing.JFrame {
         String contrasenia = new String(jPasswordField1.getPassword());
         boolean tieneAcceso = false;
         GestorUsuarios gesUsu = new GestorUsuarios();
-        String nombreUsu = gesUsu.consultarDatosPersonales();
 
         try {
             tieneAcceso = gesUsu.validacionUsuario(nombre, contrasenia);
@@ -192,6 +191,7 @@ public class Intro extends javax.swing.JFrame {
 
 
         if(tieneAcceso){
+            String nombreUsu = gesUsu.consultarDatosPersonales();
             UI_Administrador uiAdmin = new UI_Administrador(nombreUsu,"Administrador");
             uiAdmin.setVisible(true);
             this.setVisible(false);
