@@ -13,7 +13,7 @@ Email VARCHAR2(200),
 Telefono VARCHAR2(20),
 FechaNacimiento DATE,
 LugarNacimiento VARCHAR2(200),
-Fotografia IMAGE,
+Fotografia VARCHAR2(200),
 TipoUsuario VARCHAR2(20) NOT NULL,
 PRIMARY KEY (Dni)
 );
@@ -27,12 +27,11 @@ FOREIGN KEY (Dni) REFERENCES Usuarios(Dni) ON DELETE CASCADE,
 CREATE TABLE Citas(
 DniPaciente VARCHAR2(9) NOT NULL,
 DniMedico VARCHAR2(9) NOT NULL,
-Fecha DATE, /*El tipo Date guarda también la hora*/
-Hora DATE,
+Fecha DATE,
 Estado BOOLEAN,
 DniAdministrativoCita VARCHAR2(9) NOT NULL,
 PRIMARY KEY (DniPaciente, DniMedico),
-FOREIGN KEY (DniPaciente) REFERENCES Paciente(Dni),
+FOREIGN KEY (DniPaciente) REFERENCES Pacientes(Dni),
 FOREIGN KEY (DniMedico) REFERENCES Medicos(Dni),
 FOREIGN KEY (DniAdministrativoCita) REFERENCES Administrativos(Dni)
 );
