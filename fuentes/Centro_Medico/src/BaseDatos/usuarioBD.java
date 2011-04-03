@@ -43,7 +43,6 @@ public class usuarioBD {
         }
         else {
             acceso=false;
-            System.out.println("================FALSE=============\n");
         }
         conexion.closeConnection();
         return acceso;
@@ -94,7 +93,7 @@ public class usuarioBD {
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, this.user,pass);
-        String Consulta = "UPDATE Usuarios SET Dni="+dni+",Nombre="+nombre+",Apellidos="+apellidos+",Direccion="+direccion+",Email="+email+",Contrasena="+contrasena+",Telefono="+telefono+",FechaNacimiento="+fecNac+",LugarNacimiento="+lugarNac+",Fotografia="+foto+",TipoUsuario="+tipo+" WHERE Dni="+dni;
+        String Consulta = "UPDATE Usuarios SET Dni='"+dni+"',Nombre='"+nombre+"',Apellidos='"+apellidos+"',Direccion='"+direccion+"',Email='"+email+"',Contrasena='"+contrasena+"',Telefono='"+telefono+"',FechaNacimiento="+fecNac+",LugarNacimiento='"+lugarNac+"',Fotografia='"+foto+"',TipoUsuario='"+tipo+"' WHERE Dni='"+dni+"'";
         conexion.consultaUpdate(Consulta);
         conexion.closeConnection();
 
@@ -105,7 +104,7 @@ public class usuarioBD {
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "SELECT Dni FROM Usuarios WHERE Dni="+Dni;
+        String Consulta = "SELECT Dni FROM Usuarios WHERE Dni='"+Dni+"'";
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
             existe=true;
