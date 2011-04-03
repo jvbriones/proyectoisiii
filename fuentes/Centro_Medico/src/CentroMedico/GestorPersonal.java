@@ -21,15 +21,15 @@ import java.util.Date;
 
 public class GestorPersonal {
 
-    public Boolean altaPersonal(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, String Foto, String TipoUsuario) throws SQLException {
-        Boolean existe;
+    public boolean altaPersonal(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, String Foto, String TipoUsuario) throws SQLException {
+        boolean existe;
         personalBD bd_personal=new personalBD();
-        String Datos;
+        String Datos=new String();
 
         existe=bd_personal.existePersonal(Dni);
 
         if(!existe) {
-            String pas;
+            String pas=new String();
             pas=generarContraseña();
             Personal personal=new Personal(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto, TipoUsuario);
             bd_personal.almacenarPersonal(personal);
@@ -59,8 +59,8 @@ public class GestorPersonal {
         return contrasena;
     }
 
-    public Boolean existePersonal(String Dni) throws SQLException {
-        Boolean existe;
+    public boolean existePersonal(String Dni) throws SQLException {
+        boolean existe;
         personalBD bd_personal=new personalBD();
         
         existe=bd_personal.existePersonal(Dni);

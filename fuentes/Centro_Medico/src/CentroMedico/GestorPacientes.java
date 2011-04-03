@@ -21,15 +21,15 @@ import java.util.Date;
 
 public class GestorPacientes {
 
-    public Boolean altaPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, String Foto, String TipoUsuario) throws SQLException {
-        Boolean existe;
+    public boolean altaPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, String Foto, String TipoUsuario) throws SQLException {
+        boolean existe;
         PacBD bd_paciente=new PacBD();
-        String Datos;
+        String Datos=new String();
 
         existe=bd_paciente.existePaciente(Dni);
 
         if(!existe) {
-            String pas;
+            String pas=new String();
             pas=generarContraseña();
             Paciente paciente=new Paciente(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto, TipoUsuario);
             bd_paciente.almacenarPaciente(paciente);
@@ -44,7 +44,7 @@ public class GestorPacientes {
 
     }
 
-    public String generarContraseña() {
+    private String generarContraseña() {
         String numeros = "0123456789";
 	String mayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	String minusculas = "abcdefghijklmnopqrstuvwxyz";
