@@ -14,6 +14,7 @@ package CentroMedico;
 import BaseDatos.*;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Date;
 
 
 /**
