@@ -24,7 +24,7 @@ public class GestorPacientes {
 
     PacBD bd_paciente=new PacBD();
 
-    public Boolean altaPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, String Foto, String Tipo) throws SQLException {
+    public Boolean altaPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, String Foto, String TipoUsuario) throws SQLException {
         Boolean existe;
         String Datos;
 
@@ -32,8 +32,8 @@ public class GestorPacientes {
 
         if(!existe) {
             String pas;
-            pas=generarContrasena();
-            Paciente paciente=new Paciente(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto, Tipo);
+            pas=generarContraseña();
+            Paciente paciente=new Paciente(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto, TipoUsuario);
             bd_paciente.almacenarPaciente(paciente);
 
             Datos="Usuario Introducido con Éxito";
@@ -46,7 +46,7 @@ public class GestorPacientes {
 
     }
 
-    public String generaContraseña() {
+    public String generarContraseña() {
         String numeros = "0123456789";
 	String mayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	String minusculas = "abcdefghijklmnopqrstuvwxyz";
