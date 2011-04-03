@@ -52,21 +52,135 @@ public class GestorCitas {
     }
 
     public String cancelarCitaOnline(){
+
+        citasBD bd_citas=new citasBD();
+
+        String Dni=new String();
+        Dni=user.getDni();
+
+        boolean existe;
+        existe=bd_citas.existeCita(Dni);
+
+        if(!existe) {
+            this.mostrarErrorCita();
+            return "No existe Ninguna cita con ese "+Dni;
+        }
+
+        Cita cita=new Cita();
+        cita=bd_citas.obtenerCita(Dni);
+
+        Date fecha=new Date();
+        fecha=cita.getFecha();
+
+        //no se como se hace
+
+        cita.setEstado(False);
+        bd_citas.almacenarCita(cita);
+        //falta
     }
 
-    public String cancelarCita(Dni){
+    public String cancelarCita(String Dni) throws SQLException{
+
+        citasBD bd_citas=new citasBD();
+
+        boolean existe;
+        existe=bd_citas.existeCita(Dni);
+
+        if(!existe) {
+            this.mostrarErrorCita();
+            return "No existe Ninguna cita con ese "+Dni;
+        }
+
+        Cita cita=new Cita();
+        cita=bd_citas.obtenerCita(Dni);
+
+        Date fecha=new Date();
+        fecha=cita.getFecha();
+
+        //no se como se hace
+
+        cita.setEstado(False);
+        bd_citas.almacenarCita(cita);
+        //falta
+
     }
 
     public String mostrarErrorCita(){
     }
 
-    public String ConsultarCita(Dni){
+    public String ConsultarCita(String Dni){
+
+        citasBD bd_citas=new citasBD();
+        PacBD bd_pac=new PacBD();
+
+        String datos=new String();
+        boolean existe;
+        existe=bd_pac.existePaciente(Dni);
+
+        if(!existe) {
+            this.mostrarErrorCita();
+            return "No existe el Paciente";
+        }
+
+        existe=bd_citas.existeCita(Dni);
+
+        if(!existe) {
+            this.mostrarErrorCita();
+            return "No existe Ninguna Cita asociada al dni";
+        }
+
+        Cita cita=new Cita();
+        cita=bd_citas.obtenerCita(Dni);
+
+        String DniM=new String();
+        DniM=cita.getDniMedico();
+        Date fecha=new Date();
+        fecha=cita.getFecha();
+
+        datos="Para este "+Dni+" no hay una cita con el Medico "+DniM+" y Fecha "+fecha;
+        return datos;
+
     }
 
     public String MostrarErrorPaciente(){
     }
 
     public String ConsultarCitaOnline(){
+
+        citasBD bd_citas=new citasBD();
+        PacBD bd_pac=new PacBD();
+
+        String datos=new String();
+
+        String Dni=new String();
+        Dni=user.getDni();
+
+        boolean existe;
+        existe=bd_pac.existePaciente(Dni);
+
+        if(!existe) {
+            this.mostrarErrorCita();
+            return "No existe el Paciente";
+        }
+
+        existe=bd_citas.existeCita(Dni);
+
+        if(!existe) {
+            this.mostrarErrorCita();
+            return "No existe Ninguna Cita asociada al dni";
+        }
+
+        Cita cita=new Cita();
+        cita=bd_citas.obtenerCita(Dni);
+
+        String DniM=new String();
+        DniM=cita.getDniMedico();
+        Date fecha=new Date();
+        fecha=cita.getFecha();
+
+        datos="Para este "+Dni+" no hay una cita con el Medico "+DniM+" y Fecha "+fecha;
+        return datos;
+
     }
 
     public boolean ModificarCita(Dni){
