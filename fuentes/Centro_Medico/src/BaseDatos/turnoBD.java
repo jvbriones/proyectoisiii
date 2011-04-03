@@ -11,7 +11,6 @@
  */
 package BaseDatos;
 
-import BaseDatos.*;
 import CentroMedico.Turno;
 import java.sql.*;
 import java.util.ArrayList;
@@ -23,11 +22,17 @@ import java.util.Date;
  * @author      Sub_Equipo1
  */
 public class turnoBD {
+
+    String IpDelServidor="84.125.212.141";
+    String NombreDB="centroMedico";
+    String user="personal";
+    String pass="personal";
+
     public boolean existeTurno(String tipo) throws SQLException {
         boolean existe;
 
         Jdbc conexion = new Jdbc();
-        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
         String Consulta = "SELECT Dni FROM Turnos WHERE Tipo="+tipo;
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
@@ -43,7 +48,7 @@ public class turnoBD {
     public void altaTurno(String tipo) {
 
         Jdbc conexion = new Jdbc();
-        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
         String Consulta = "INSERT INTO Turnos VALUES Tipo="+tipo;
         conexion.consultaUpdate(Consulta);
         conexion.closeConnection();
@@ -54,7 +59,7 @@ public class turnoBD {
         boolean puedo;
 
         Jdbc conexion = new Jdbc();
-        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
         String Consulta = "SELECT * FROM Turnos WHERE Dni="+Dni;
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
@@ -87,7 +92,7 @@ public class turnoBD {
     public void asignaTurno(String Dni, Date fechaInicio, Date fechaFin, String tipo) {
 
         Jdbc conexion = new Jdbc();
-        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
         String Consulta = "INSERT INTO Turnos VALUES "+Dni+","+fechaInicio+","+fechaFin+","+tipo;
         conexion.consultaUpdate(Consulta);
         conexion.closeConnection();
@@ -116,7 +121,7 @@ public class turnoBD {
         Turno Turno;
 
         Jdbc conexion = new Jdbc();
-        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
         String Consulta = "SELECT * FROM Turnos WHERE Turnos.Dni="+Dni;
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
@@ -140,7 +145,7 @@ public class turnoBD {
         ArrayList datos=new ArrayList();
 
         Jdbc conexion = new Jdbc();
-        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
         String Consulta = "SELECT Dni, Fecha FROM Turno WHERE "+fecha+"=Fecha";
         ResultSet rs = conexion.consultaSelect(Consulta);
         while(rs.next()) {

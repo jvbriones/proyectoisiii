@@ -11,7 +11,6 @@
  */
 package BaseDatos;
 
-import BaseDatos.*;
 import CentroMedico.Paciente;
 import java.sql.*;
 
@@ -23,11 +22,16 @@ import java.sql.*;
 public class PacBD {
 
 
+    String IpDelServidor="84.125.212.141";
+    String NombreDB="centroMedico";
+    String user="personal";
+    String pass="personal";
+
     public boolean existePaciente(String Dni) throws SQLException {
         boolean existe;
 
         Jdbc conexion = new Jdbc();
-        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        conexion.doConnection(IpDelServidor, NombreDB, user, pass);
         String Consulta = "SELECT Dni FROM Pacientes WHERE Dni="+Dni;
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
@@ -54,7 +58,7 @@ public class PacBD {
         String tipo=Paciente.getTipo();
 
         Jdbc conexion = new Jdbc();
-        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
         String Consulta = "INSERT INTO Pacientes VALUES Dni="+dni+",Nombre="+nombre+",Apellidos="+apellidos+",Direccion="+direccion+",Email="+email+",Contrasena="+contrasena+",Telefono="+telefono+",FechaNacimiento="+fecNac+",LugarNacimiento="+lugarNac+",Fotografia="+foto+",TipoUsuario="+tipo;
         conexion.consultaUpdate(Consulta);
         conexion.closeConnection();
@@ -67,7 +71,7 @@ public class PacBD {
         Paciente paciente;
 
         Jdbc conexion = new Jdbc();
-        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
         String Consulta = "SELECT * FROM Pacientes WHERE Dni="+Dni;
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {

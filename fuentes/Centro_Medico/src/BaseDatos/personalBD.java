@@ -20,11 +20,17 @@ import java.sql.*;
  * @author      Sub_Equipo1
  */
 public class personalBD {
+
+    String IpDelServidor="84.125.212.141";
+    String NombreDB="centroMedico";
+    String user="personal";
+    String pass="personal";
+
     public boolean existePersonal(String Dni) throws SQLException {
         boolean existe;
 
         Jdbc conexion = new Jdbc();
-        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
         String Consulta = "SELECT Dni FROM Personal WHERE Dni="+Dni;
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
@@ -51,7 +57,7 @@ public class personalBD {
         String tipo=personal.getTipoPersonal();
 
         Jdbc conexion = new Jdbc();
-        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
         String Consulta = "INSERT INTO Personal VALUES "+dni+","+nombre+","+apellidos+","+direccion+","+email+","+contrasena+","+telefono+","+fecNac+","+lugarNac+","+foto+","+tipo;
         conexion.consultaUpdate(Consulta);
         conexion.closeConnection();

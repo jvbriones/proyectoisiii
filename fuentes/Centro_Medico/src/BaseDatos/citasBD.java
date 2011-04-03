@@ -22,11 +22,18 @@ import java.util.ArrayList;
  */
 public class citasBD {
 
+
+    String IpDelServidor="84.125.212.141";
+    String NombreDB="centroMedico";
+    String user="personal";
+    String pass="personal";
+
+
     public boolean existeCita(String Dni) throws SQLException {
         boolean existe;
 
         Jdbc conexion = new Jdbc();
-        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
         String Consulta = "SELECT DniPaciente FROM Citas WHERE DniPaciente="+Dni+"And Estado=true";
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
@@ -47,7 +54,7 @@ public class citasBD {
 
 
         Jdbc conexion = new Jdbc();
-        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
         String Consulta = "INSERT INTO Citas VALUES DniPaciente="+dni+",DniMedico="+dniM+",Fecha="+fecha+",Estado="+estado;
         conexion.consultaUpdate(Consulta);
         conexion.closeConnection();
@@ -59,7 +66,7 @@ public class citasBD {
         Cita cita;
 
         Jdbc conexion = new Jdbc();
-        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
         String Consulta = "SELECT * FROM Citas WHERE DniPaciente="+Dni;
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
@@ -81,7 +88,7 @@ public class citasBD {
         ArrayList datosAdmin = new ArrayList();
 
         Jdbc conexion = new Jdbc();
-        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
         String Consulta = "SELECT * FROM Citas WHERE "+fecha_inicio+"<Fecha AND Fecha<"+fecha_fin;
         ResultSet rs = conexion.consultaSelect(Consulta);
         while(rs.next()) {

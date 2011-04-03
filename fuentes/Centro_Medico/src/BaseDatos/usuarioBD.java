@@ -11,10 +11,8 @@
  */
 package BaseDatos;
 
-import BaseDatos.*;
 import CentroMedico.Usuario;
 import java.sql.*;
-import java.awt.*;
 
 /**
  * @version     v1.0    01/04/2011
@@ -22,12 +20,18 @@ import java.awt.*;
  */
 public class usuarioBD {
 
+    String IpDelServidor="84.125.212.141";
+    String NombreDB="centroMedico";
+    String user="personal";
+    String pass="personal";
+    
+
     public boolean validacion(String Dni, String Pass) throws SQLException {
 
         boolean acceso;
 
         Jdbc conexion = new Jdbc();
-        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        conexion.doConnection(IpDelServidor,NombreDB, user,pass);
         String Consulta = "SELECT Dni, Contrasena FROM Usuarios WHERE Dni="+Dni+", and Contrasena="+Pass;
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
@@ -45,7 +49,7 @@ public class usuarioBD {
         Usuario user;
 
         Jdbc conexion = new Jdbc();
-        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        conexion.doConnection(IpDelServidor, NombreDB, this.user,pass);
         String Consulta = "SELECT * FROM Usuarios WHERE Dni="+Dni;
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
@@ -84,7 +88,7 @@ public class usuarioBD {
         String tipo=user.getTipo();
 
         Jdbc conexion = new Jdbc();
-        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        conexion.doConnection(IpDelServidor, NombreDB, this.user,pass);
         String Consulta = "UPDATE Usuarios SET Dni="+dni+",Nombre="+nombre+",Apellidos="+apellidos+",Direccion="+direccion+",Email="+email+",Contrasena="+contrasena+",Telefono="+telefono+",FechaNacimiento="+fecNac+",LugarNacimiento="+lugarNac+",Fotografia="+foto+",TipoUsuario="+tipo+" WHERE Dni="+dni;
         conexion.consultaUpdate(Consulta);
         conexion.closeConnection();
@@ -95,7 +99,7 @@ public class usuarioBD {
         boolean existe;
 
         Jdbc conexion = new Jdbc();
-        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
+        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
         String Consulta = "SELECT Dni FROM Usuarios WHERE Dni="+Dni;
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
