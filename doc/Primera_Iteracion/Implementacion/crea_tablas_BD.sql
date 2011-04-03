@@ -92,7 +92,7 @@ FOREIGN KEY (`DniTurno`) REFERENCES `Turnos`(`Dni`)
 CREATE TABLE `AdministrativoAsignaTurno`(
 `DniAdministrativo` VARCHAR(9) NOT NULL,
 `DniTurno` VARCHAR(9) NOT NULL,
-PRIMARY KEY (`DniAdministrativo`, `DniTurno`)
+PRIMARY KEY (`DniAdministrativo`, `DniTurno`),
 FOREIGN KEY (`DniAdministrativo`) REFERENCES `Administrativos`(`Dni`),
 FOREIGN KEY (`DniTurno`) REFERENCES `Turnos`(`Dni`)
 );
