@@ -305,9 +305,9 @@
                       <Component id="jLabelEstadPersFecha1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
                       <Component id="jLabelEstadPersTipo1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="97" max="32767" attributes="0"/>
+                      <EmptySpace pref="95" max="32767" attributes="0"/>
                       <Component id="jLabelGestionarCita1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
@@ -346,10 +346,10 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jButtonGestionarCita" alignment="0" pref="148" max="32767" attributes="1"/>
-                          <Component id="jButtonEstadPersTipo" alignment="0" pref="148" max="32767" attributes="1"/>
-                          <Component id="jButtonEstadCitas" alignment="0" pref="148" max="32767" attributes="1"/>
-                          <Component id="jButtonEstadPersFecha" alignment="0" pref="148" max="32767" attributes="1"/>
+                          <Component id="jButtonGestionarCita" alignment="0" pref="147" max="32767" attributes="1"/>
+                          <Component id="jButtonEstadPersTipo" alignment="0" pref="147" max="32767" attributes="1"/>
+                          <Component id="jButtonEstadCitas" alignment="0" pref="147" max="32767" attributes="1"/>
+                          <Component id="jButtonEstadPersFecha" alignment="0" pref="147" max="32767" attributes="1"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -360,9 +360,9 @@
                       </Group>
                       <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButtonGestionarTurno" alignment="0" pref="148" max="32767" attributes="1"/>
-                          <Component id="jButtonGestionarPaciente" alignment="0" pref="148" max="32767" attributes="1"/>
-                          <Component id="jButtonGestionarPersonal" alignment="0" pref="148" max="32767" attributes="1"/>
+                          <Component id="jButtonGestionarTurno" alignment="0" pref="147" max="32767" attributes="1"/>
+                          <Component id="jButtonGestionarPaciente" alignment="0" pref="147" max="32767" attributes="1"/>
+                          <Component id="jButtonGestionarPersonal" alignment="0" pref="147" max="32767" attributes="1"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -370,7 +370,7 @@
                           <Component id="jLabelGestionarTurno1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelGestionarPersonal1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -715,6 +715,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Alta"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonAltaPacienteMouseClicked"/>
+              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="410" y="450" width="93" height="39"/>
@@ -819,6 +822,9 @@
               </Constraints>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldEmailPaciente">
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldEmailPacienteKeyTyped"/>
+              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="509" y="192" width="289" height="-1"/>
@@ -905,11 +911,28 @@
                 <Property name="text" type="java.lang.String" value="Guardar"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonGuardarPacienteMouseClicked"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonGuardarPacienteActionPerformed"/>
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="410" y="450" width="-1" height="39"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabelErrorPaciente">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Lucida Grande" size="13" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="ERROR: revise los campos en rojo"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="320" y="420" width="230" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -1047,7 +1070,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabelFechaNacimiento2">
+            <Component class="javax.swing.JLabel" name="jLabelFechaNacimientoPersonal">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Fecha nacimiento"/>
               </Properties>
@@ -1120,6 +1143,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Alta"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonAltaPersonalMouseClicked"/>
+              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="440" y="460" width="93" height="39"/>
@@ -1396,9 +1422,28 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Guardar"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonGuardarPersonalMouseClicked"/>
+              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="440" y="460" width="-1" height="39"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabelErrorPersonal">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Lucida Grande" size="13" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="ERROR: revise los campos en rojo"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="370" y="440" width="230" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>

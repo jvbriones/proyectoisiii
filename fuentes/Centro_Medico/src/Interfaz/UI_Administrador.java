@@ -11,6 +11,7 @@
 
 package Interfaz;
 
+import java.awt.Color;
 import java.awt.Image;
 import java.util.Calendar;
 import javax.swing.ImageIcon;
@@ -139,6 +140,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jButtonConsultarPaciente = new javax.swing.JButton();
         jButtonLimpiarPaciente = new javax.swing.JButton();
         jButtonGuardarPaciente = new javax.swing.JButton();
+        jLabelErrorPaciente = new javax.swing.JLabel();
         jPanelGestionarPersonal = new javax.swing.JPanel();
         jTextFieldTelefonoPersonal = new javax.swing.JTextField();
         jLabelTelefonoPersonal = new javax.swing.JLabel();
@@ -150,7 +152,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jTextFieldDireccionPersonal = new javax.swing.JTextField();
         jButtonMasAnioPersonal = new javax.swing.JButton();
         jTextFieldFechaNacimientoAnioPersonal = new javax.swing.JTextField();
-        jLabelFechaNacimiento2 = new javax.swing.JLabel();
+        jLabelFechaNacimientoPersonal = new javax.swing.JLabel();
         jTextFieldFechaNacimientoDiaPersonal = new javax.swing.JTextField();
         jLabelEmailPersonal = new javax.swing.JLabel();
         jButtonMasMesPersonal = new javax.swing.JButton();
@@ -181,6 +183,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jRadioButtonRadiologo = new javax.swing.JRadioButton();
         jRadioButtonMedico = new javax.swing.JRadioButton();
         jButtonGuardarPersonal = new javax.swing.JButton();
+        jLabelErrorPersonal = new javax.swing.JLabel();
         jPanelGestionarTurno = new javax.swing.JPanel();
         jButtonConsultarTurno = new javax.swing.JButton();
         jButtonMenosDiaFechaInicioTurno = new javax.swing.JButton();
@@ -529,9 +532,9 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jLabelEstadPersFecha1)
                 .add(106, 106, 106)
                 .add(jLabelEstadPersTipo1)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 97, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 95, Short.MAX_VALUE)
                 .add(jLabelGestionarCita1)
-                .add(106, 106, 106))
+                .add(107, 107, 107))
             .add(jPanelPrincipalLayout.createSequentialGroup()
                 .add(39, 39, 39)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -563,10 +566,10 @@ public class UI_Administrador extends javax.swing.JFrame {
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelPrincipalLayout.createSequentialGroup()
                 .add(29, 29, 29)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadPersTipo, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadCitas, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadPersFecha, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE))
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadPersTipo, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadCitas, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadPersFecha, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelEstadCitas1)
@@ -575,15 +578,15 @@ public class UI_Administrador extends javax.swing.JFrame {
                     .add(jLabelGestionarCita1))
                 .add(45, 45, 45)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jButtonGestionarTurno, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
-                    .add(jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
-                    .add(jButtonGestionarPersonal, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE))
+                    .add(jButtonGestionarTurno, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
+                    .add(jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
+                    .add(jButtonGestionarPersonal, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelGestionarPaciente3)
                     .add(jLabelGestionarTurno1)
                     .add(jLabelGestionarPersonal1))
-                .add(113, 113, 113))
+                .add(114, 114, 114))
         );
 
         jPanelPrincipal.setBounds(1, 0, 900, 530);
@@ -698,6 +701,11 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarPaciente.add(jTextFieldApellidosPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(349, 126, 290, -1));
 
         jButtonAltaPaciente.setText("Alta");
+        jButtonAltaPaciente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonAltaPacienteMouseClicked(evt);
+            }
+        });
         jPanelGestionarPaciente.add(jButtonAltaPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 450, 93, 39));
 
         jButtonMasDiaPaciente.setText("+");
@@ -763,6 +771,12 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabelInfoFotoPaciente.setFont(new java.awt.Font("Lucida Grande", 0, 10));
         jLabelInfoFotoPaciente.setText("Tam max 130x150 pix");
         jPanelGestionarPaciente.add(jLabelInfoFotoPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(464, 364, 120, 50));
+
+        jTextFieldEmailPaciente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldEmailPacienteKeyTyped(evt);
+            }
+        });
         jPanelGestionarPaciente.add(jTextFieldEmailPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(509, 192, 289, -1));
 
         jTextFieldFechaNacimientoAnioPaciente.setEditable(false);
@@ -815,6 +829,11 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarPaciente.add(jButtonLimpiarPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 450, -1, 39));
 
         jButtonGuardarPaciente.setText("Guardar");
+        jButtonGuardarPaciente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonGuardarPacienteMouseClicked(evt);
+            }
+        });
         jButtonGuardarPaciente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonGuardarPacienteActionPerformed(evt);
@@ -822,7 +841,12 @@ public class UI_Administrador extends javax.swing.JFrame {
         });
         jPanelGestionarPaciente.add(jButtonGuardarPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 450, -1, 39));
 
-        jPanelGestionarPaciente.setBounds(0, 0, 901, 530);
+        jLabelErrorPaciente.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabelErrorPaciente.setForeground(new java.awt.Color(255, 0, 0));
+        jLabelErrorPaciente.setText("ERROR: revise los campos en rojo");
+        jPanelGestionarPaciente.add(jLabelErrorPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 420, 230, -1));
+
+        jPanelGestionarPaciente.setBounds(0, 0, -1, 530);
         ZonaTrabajo.add(jPanelGestionarPaciente, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarPersonal.setMinimumSize(new java.awt.Dimension(901, 510));
@@ -898,8 +922,8 @@ public class UI_Administrador extends javax.swing.JFrame {
         jTextFieldFechaNacimientoAnioPersonal.setText("1950");
         jPanelGestionarPersonal.add(jTextFieldFechaNacimientoAnioPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 381, 50, -1));
 
-        jLabelFechaNacimiento2.setText("Fecha nacimiento");
-        jPanelGestionarPersonal.add(jLabelFechaNacimiento2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 321, -1, -1));
+        jLabelFechaNacimientoPersonal.setText("Fecha nacimiento");
+        jPanelGestionarPersonal.add(jLabelFechaNacimientoPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 321, -1, -1));
 
         jTextFieldFechaNacimientoDiaPersonal.setEditable(false);
         jTextFieldFechaNacimientoDiaPersonal.setText("1");
@@ -942,6 +966,11 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarPersonal.add(jButtonMasDiaPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 341, 50, 40));
 
         jButtonAltaPersonal.setText("Alta");
+        jButtonAltaPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonAltaPersonalMouseClicked(evt);
+            }
+        });
         jPanelGestionarPersonal.add(jButtonAltaPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 460, 93, 39));
 
         jButtonMenosDiaPersonal.setText("-");
@@ -1083,9 +1112,19 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarPersonal.add(jRadioButtonMedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 388, -1, -1));
 
         jButtonGuardarPersonal.setText("Guardar");
+        jButtonGuardarPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonGuardarPersonalMouseClicked(evt);
+            }
+        });
         jPanelGestionarPersonal.add(jButtonGuardarPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 460, -1, 39));
 
-        jPanelGestionarPersonal.setBounds(0, 0, 901, 531);
+        jLabelErrorPersonal.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabelErrorPersonal.setForeground(new java.awt.Color(255, 0, 0));
+        jLabelErrorPersonal.setText("ERROR: revise los campos en rojo");
+        jPanelGestionarPersonal.add(jLabelErrorPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 440, 230, -1));
+
+        jPanelGestionarPersonal.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelGestionarPersonal, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarTurno.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1433,7 +1472,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarTurno.add(jButtonBajaTurno);
         jButtonBajaTurno.setBounds(580, 440, 93, 39);
 
-        jPanelGestionarTurno.setBounds(0, 0, 901, 531);
+        jPanelGestionarTurno.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelGestionarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarCita.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1849,7 +1888,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarCita.add(jButtonAceptarCita);
         jButtonAceptarCita.setBounds(400, 440, 93, 39);
 
-        jPanelGestionarCita.setBounds(0, 0, 901, 531);
+        jPanelGestionarCita.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelGestionarCita, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadPersTipo.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1909,7 +1948,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jScrollPane5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 327, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanelEstadPersTipo.setBounds(0, 0, 901, 531);
+        jPanelEstadPersTipo.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelEstadPersTipo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadPersFecha.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1975,7 +2014,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jScrollPane6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 327, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanelEstadPersFecha.setBounds(0, 0, 901, 531);
+        jPanelEstadPersFecha.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelEstadPersFecha, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadCitas.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -2255,7 +2294,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelEstadCitas.add(jLabel15);
         jLabel15.setBounds(469, 201, 69, 16);
 
-        jPanelEstadCitas.setBounds(0, 0, 901, 531);
+        jPanelEstadCitas.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelEstadCitas, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         getContentPane().add(ZonaTrabajo);
@@ -2833,6 +2872,10 @@ public class UI_Administrador extends javax.swing.JFrame {
         char teclaPresionada = evt.getKeyChar();
         if(Character.isDigit(teclaPresionada) == false)
             evt.consume();
+
+        /**Limitamos la longitud*/
+        if(jTextFieldTelefonoPaciente.getText().length() > 20)
+            evt.consume();
     }//GEN-LAST:event_jTextFieldTelefonoPacienteKeyTyped
 
     private void jTextFieldNombrePacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldNombrePacienteKeyTyped
@@ -2842,6 +2885,10 @@ public class UI_Administrador extends javax.swing.JFrame {
         char teclaPresionada = evt.getKeyChar();
         if(Character.isDigit(teclaPresionada) == true)
             evt.consume();
+
+        /**Limitamos la longitud*/
+        if(jTextFieldNombrePaciente.getText().length() > 50)
+            evt.consume();
     }//GEN-LAST:event_jTextFieldNombrePacienteKeyTyped
 
     private void jTextFieldApellidosPacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldApellidosPacienteKeyTyped
@@ -2850,6 +2897,10 @@ public class UI_Administrador extends javax.swing.JFrame {
         /**Comprobamos que no se teclee un número*/
         char teclaPresionada = evt.getKeyChar();
         if(Character.isDigit(teclaPresionada) == true)
+            evt.consume();
+
+        /**Limitamos la longitud*/
+        if(jTextFieldApellidosPaciente.getText().length() > 50)
             evt.consume();
     }//GEN-LAST:event_jTextFieldApellidosPacienteKeyTyped
 
@@ -2877,6 +2928,10 @@ public class UI_Administrador extends javax.swing.JFrame {
 
     private void jTextFieldLugarNacimientoPacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldLugarNacimientoPacienteKeyTyped
         // TODO add your handling code here:
+
+        /**Limitamos la longitud*/
+        if(jTextFieldLugarNacimientoPaciente.getText().length() > 50)
+            evt.consume();
     }//GEN-LAST:event_jTextFieldLugarNacimientoPacienteKeyTyped
 
     private void jTextFieldFechaNacimientoAnioPacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldFechaNacimientoAnioPacienteKeyTyped
@@ -2897,6 +2952,10 @@ public class UI_Administrador extends javax.swing.JFrame {
         if(Character.isDigit(teclaPresionada) == true)
             evt.consume();
 
+        /**Limitamos la longitud*/
+        if(jTextFieldNombrePersonal.getText().length() > 20)
+            evt.consume();
+
     }//GEN-LAST:event_jTextFieldNombrePersonalKeyTyped
 
     private void jTextFieldApellidosPersonalKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldApellidosPersonalKeyTyped
@@ -2905,6 +2964,10 @@ public class UI_Administrador extends javax.swing.JFrame {
         /**Comprobamos que no se teclee un número*/
         char teclaPresionada = evt.getKeyChar();
         if(Character.isDigit(teclaPresionada) == true)
+            evt.consume();
+
+        /**Limitamos la longitud*/
+        if(jTextFieldApellidosPersonal.getText().length() > 70)
             evt.consume();
     }//GEN-LAST:event_jTextFieldApellidosPersonalKeyTyped
 
@@ -2915,6 +2978,10 @@ public class UI_Administrador extends javax.swing.JFrame {
         char teclaPresionada = evt.getKeyChar();
         if(Character.isDigit(teclaPresionada) == true)
             evt.consume();
+
+        /**Limitamos la longitud*/
+        if(jTextFieldDireccionPersonal.getText().length() > 70)
+            evt.consume();
     }//GEN-LAST:event_jTextFieldDireccionPersonalKeyTyped
 
     private void jTextFieldEmailPersonalKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldEmailPersonalKeyTyped
@@ -2923,6 +2990,10 @@ public class UI_Administrador extends javax.swing.JFrame {
         /**Comprobamos que no se teclee un número*/
         char teclaPresionada = evt.getKeyChar();
         if(Character.isDigit(teclaPresionada) == true)
+            evt.consume();
+
+        /**Limitamos la longitud*/
+        if(jTextFieldEmailPersonal.getText().length() > 50)
             evt.consume();
     }//GEN-LAST:event_jTextFieldEmailPersonalKeyTyped
 
@@ -2933,6 +3004,10 @@ public class UI_Administrador extends javax.swing.JFrame {
         char teclaPresionada = evt.getKeyChar();
         if(Character.isDigit(teclaPresionada) == false)
             evt.consume();
+
+        /**Limitamos la longitud*/
+        if(jTextFieldTelefonoPersonal.getText().length() > 20)
+            evt.consume();
     }//GEN-LAST:event_jTextFieldTelefonoPersonalKeyTyped
 
     private void jTextFieldLugarNacimientoPersonalKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldLugarNacimientoPersonalKeyTyped
@@ -2941,6 +3016,10 @@ public class UI_Administrador extends javax.swing.JFrame {
         /**Comprobamos que no se teclee un número*/
         char teclaPresionada = evt.getKeyChar();
         if(Character.isDigit(teclaPresionada) == true)
+            evt.consume();
+
+        /**Limitamos la longitud*/
+        if(jTextFieldLugarNacimientoPersonal.getText().length() > 20)
             evt.consume();
     }//GEN-LAST:event_jTextFieldLugarNacimientoPersonalKeyTyped
 
@@ -3065,6 +3144,8 @@ public class UI_Administrador extends javax.swing.JFrame {
 
     private void jButtonAltaTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAltaTurnoMouseClicked
         // TODO add your handling code here:
+
+        compruebaFormulario("GestionarTurno");
     }//GEN-LAST:event_jButtonAltaTurnoMouseClicked
 
     private void jButtonMenosMesFechaInicioTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosMesFechaInicioTurnoMouseClicked
@@ -3088,6 +3169,8 @@ public class UI_Administrador extends javax.swing.JFrame {
 
     private void jButtonGuardarTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarTurnoMouseClicked
         // TODO add your handling code here:
+
+        compruebaFormulario("GestionarTurno");
     }//GEN-LAST:event_jButtonGuardarTurnoMouseClicked
 
     private void jButtonLimpiarTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonLimpiarTurnoMouseClicked
@@ -3612,13 +3695,58 @@ public class UI_Administrador extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonBajaTurnoMouseClicked
 
+    private void jTextFieldEmailPacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldEmailPacienteKeyTyped
+        // TODO add your handling code here:
+
+        /**Limitamos la longitud*/
+        if(jTextFieldEmailPaciente.getText().length() > 70)
+            evt.consume();
+    }//GEN-LAST:event_jTextFieldEmailPacienteKeyTyped
+
+    private void jButtonAltaPersonalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAltaPersonalMouseClicked
+        // TODO add your handling code here:
+
+        if(compruebaFormulario("GestionarPersonal")){
+             new InformacionExito().setVisible(true);
+        }else
+            jLabelErrorPersonal.setVisible(true);
+    }//GEN-LAST:event_jButtonAltaPersonalMouseClicked
+
+    private void jButtonAltaPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAltaPacienteMouseClicked
+        // TODO add your handling code here:
+
+        if(compruebaFormulario("GestionarPaciente")){
+             new InformacionExito().setVisible(true);
+        }else
+            jLabelErrorPaciente.setVisible(true);
+
+    }//GEN-LAST:event_jButtonAltaPacienteMouseClicked
+
+    private void jButtonGuardarPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarPacienteMouseClicked
+        // TODO add your handling code here:
+
+        if(compruebaFormulario("GestionarPaciente")){
+             new InformacionExito().setVisible(true);
+        }else
+            jLabelErrorPaciente.setVisible(true);
+    }//GEN-LAST:event_jButtonGuardarPacienteMouseClicked
+
+    private void jButtonGuardarPersonalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarPersonalMouseClicked
+        // TODO add your handling code here:
+
+        if(compruebaFormulario("GestionarPersonal")){
+             new InformacionExito().setVisible(true);
+        }else
+            jLabelErrorPersonal.setVisible(true);
+    }//GEN-LAST:event_jButtonGuardarPersonalMouseClicked
+
 
     /*Comprueba que la fecha introducida es correcta
      * 
      *@param persona, string que indica si se trata del formulario de Paciente o Personal
      *@return booleano diciendo si es válido o no
      */
-    private boolean compruebaFecha(String persona){
+    private boolean compruebaFecha(String formulario){
         
         int dia = 0;
         int mes = 0;
@@ -3627,16 +3755,28 @@ public class UI_Administrador extends javax.swing.JFrame {
         int mesActual;
         int anioActual;
 
-        if(persona.equals("GestionarPaciente")){
+        if(formulario.equals("GestionarPaciente")){
             dia = Integer.parseInt(jTextFieldFechaNacimientoDiaPaciente.getText());
             mes = Integer.parseInt(jTextFieldFechaNacimientoMesPaciente.getText());
             anio = Integer.parseInt(jTextFieldFechaNacimientoAnioPaciente.getText());
         }
 
-        if(persona.equals("GestionarPersonal")){
+        if(formulario.equals("GestionarPersonal")){
             dia = Integer.parseInt(jTextFieldFechaNacimientoDiaPersonal.getText());
             mes = Integer.parseInt(jTextFieldFechaNacimientoMesPersonal.getText());
             anio = Integer.parseInt(jTextFieldFechaNacimientoAnioPersonal.getText());
+        }
+
+        if(formulario.equals("CompruebaTurnoInicio")){
+            dia = Integer.parseInt(jTextFieldDiaInicioTurno.getText());
+            mes = Integer.parseInt(jTextFieldMesInicioTurno.getText());
+            anio = Integer.parseInt(jTextFieldAnioInicioTurno.getText());
+        }
+
+        if(formulario.equals("CompruebaTurnoFin")){
+            dia = Integer.parseInt(jTextFieldDiaFinTurno.getText());
+            mes = Integer.parseInt(jTextFieldMesFinTurno.getText());
+            anio = Integer.parseInt(jTextFieldAnioFinTurno.getText());
         }
 
         Calendar fechaActual = Calendar.getInstance();
@@ -3717,6 +3857,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             jButtonGuardarPaciente.setVisible(false);
             jButtonAltaPaciente.setVisible(true);
             jLabelFotoPaciente.setIcon(null);
+            jLabelErrorPaciente.setVisible(false);
         }
 
         if(formulario.equals("GestionarPersonal")){
@@ -3734,6 +3875,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             jButtonAltaPersonal.setVisible(true);
             jButtonGuardarPersonal.setVisible(false);
             jLabelFotoPersonal.setIcon(null);
+            jLabelErrorPersonal.setVisible(false);
         }
 
          if(formulario.equals("GestionarCitaOnline")){
@@ -4130,6 +4272,70 @@ public class UI_Administrador extends javax.swing.JFrame {
     }
 
 
+     /*Ccomprueba los datos del formulario pasado por parámetro
+     *
+     *@param formulario, string que indica el formulario
+     *
+     * Marca en ROJO la etiqueta del formulario equivocado
+     *@return booleano diciendo si son todos los datos válidos o no
+     */
+    private boolean compruebaFormulario(String formulario){
+
+        if(formulario.equals("GestionarPaciente")){
+
+            if(!compruebaFecha("GestionarPaciente")){
+                jLabelFechaNacimientoPaciente.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelFechaNacimientoPaciente.setForeground(Color.black);
+                }
+
+            if(jTextFieldNombrePaciente.getText().equals("")){
+                jLabelNombrePaciente.setBackground(Color.red);
+                return false;
+            }else{
+                jLabelNombrePaciente.setBackground(Color.black);
+            }
+
+            if
+
+        }
+
+        if(formulario.equals("GestionarPersonal")){
+
+            if(!compruebaFecha("GestionarPersonal")){
+                jLabelFechaNacimientoPersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelFechaNacimientoPersonal.setForeground(Color.black);
+                return true;
+                }
+
+        }
+
+        if(formulario.equals("GestionarTurno")){
+
+            if(!compruebaFecha("CompruebaTurnoInicio")){
+                jLabelFechaInicioTurno.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelFechaInicioTurno.setForeground(Color.black);
+                }
+
+            if(!compruebaFecha("CompruebaTurnoFin")){
+                jLabelFechaFinTurno.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelFechaFinTurno.setForeground(Color.black);
+                return true;
+                }
+            }
+
+        return true;
+
+    }
+
+
  
  //    @param args the command line arguments
     
@@ -4250,6 +4456,8 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelDireccionPersonal;
     private javax.swing.JLabel jLabelEmailPaciente;
     private javax.swing.JLabel jLabelEmailPersonal;
+    private javax.swing.JLabel jLabelErrorPaciente;
+    private javax.swing.JLabel jLabelErrorPersonal;
     private javax.swing.JLabel jLabelEstadCitas;
     private javax.swing.JLabel jLabelEstadCitas1;
     private javax.swing.JLabel jLabelEstadPersFecha;
@@ -4261,8 +4469,8 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelFechaCita2;
     private javax.swing.JLabel jLabelFechaFinTurno;
     private javax.swing.JLabel jLabelFechaInicioTurno;
-    private javax.swing.JLabel jLabelFechaNacimiento2;
     private javax.swing.JLabel jLabelFechaNacimientoPaciente;
+    private javax.swing.JLabel jLabelFechaNacimientoPersonal;
     private javax.swing.JLabel jLabelFotoPaciente;
     private javax.swing.JLabel jLabelFotoPersonal;
     private javax.swing.JLabel jLabelFotografiaPaciente;
