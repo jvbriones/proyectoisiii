@@ -59,7 +59,7 @@ public class PacBD {
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "INSERT INTO Pacientes VALUES Dni='"+dni+"',Nombre='"+nombre+"',Apellidos='"+apellidos+"',Direccion='"+direccion+"',Email='"+email+"',Contrasena='"+contrasena+"',Telefono='"+telefono+"',FechaNacimiento="+fecNac+",LugarNacimiento='"+lugarNac+"',Fotografia='"+foto+"',TipoUsuario='"+tipo+"'";
+        String Consulta = "INSERT INTO Pacientes VALUES ('"+dni+"','"+nombre+"','"+apellidos+"','"+direccion+"','"+email+"','"+contrasena+"','"+telefono+"',"+fecNac+",'"+lugarNac+"','"+foto+"','"+tipo+"')";
         conexion.consultaUpdate(Consulta);
         conexion.closeConnection();
         
