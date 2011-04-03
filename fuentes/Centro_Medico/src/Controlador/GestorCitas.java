@@ -59,7 +59,7 @@ public class GestorCitas {
 //    public String alta_citaonline(){
 //    }
 
-    public String cancelarCitaOnline() throws SQLException{
+   /* public String cancelarCitaOnline() throws SQLException{
 
         citasBD bd_citas=new citasBD();
 
@@ -197,5 +197,5 @@ public class GestorCitas {
 //    public boolean ModificarCitaOnline(){
 //    }
 
-    //public Arraylist EstadisticasCitas(fecha_inicio,fecha_fin){}
+    //public Arraylist EstadisticasCitas(fecha_inicio,fecha_fin){}*/
 }
