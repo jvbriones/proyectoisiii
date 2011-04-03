@@ -595,7 +595,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(115, 115, 115))
         );
 
-        jPanelPrincipal.setBounds(0, 0, -1, 530);
+        jPanelPrincipal.setBounds(0, 0, 901, 530);
         ZonaTrabajo.add(jPanelPrincipal, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarPaciente.setPreferredSize(new java.awt.Dimension(901, 531));
@@ -852,7 +852,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabelErrorPaciente.setText("ERROR: revise los campos en rojo");
         jPanelGestionarPaciente.add(jLabelErrorPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 420, 230, -1));
 
-        jPanelGestionarPaciente.setBounds(0, 0, -1, 530);
+        jPanelGestionarPaciente.setBounds(0, 0, 901, 530);
         ZonaTrabajo.add(jPanelGestionarPaciente, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarPersonal.setMinimumSize(new java.awt.Dimension(901, 510));
@@ -1130,7 +1130,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabelErrorPersonal.setText("ERROR: revise los campos en rojo");
         jPanelGestionarPersonal.add(jLabelErrorPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 440, 230, -1));
 
-        jPanelGestionarPersonal.setBounds(0, 0, -1, -1);
+        jPanelGestionarPersonal.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelGestionarPersonal, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarTurno.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1484,7 +1484,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarTurno.add(jLabelErrorGestionarTurno);
         jLabelErrorGestionarTurno.setBounds(320, 420, 224, 16);
 
-        jPanelGestionarTurno.setBounds(0, 0, -1, -1);
+        jPanelGestionarTurno.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelGestionarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarCita.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1900,7 +1900,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarCita.add(jButtonAceptarCita);
         jButtonAceptarCita.setBounds(400, 440, 93, 39);
 
-        jPanelGestionarCita.setBounds(0, 0, -1, -1);
+        jPanelGestionarCita.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelGestionarCita, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadPersTipo.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1960,7 +1960,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jScrollPane5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 327, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanelEstadPersTipo.setBounds(0, 0, -1, -1);
+        jPanelEstadPersTipo.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelEstadPersTipo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadPersFecha.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -2026,7 +2026,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jScrollPane6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 327, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanelEstadPersFecha.setBounds(0, 0, -1, -1);
+        jPanelEstadPersFecha.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelEstadPersFecha, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadCitas.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -2306,7 +2306,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelEstadCitas.add(jLabel15);
         jLabel15.setBounds(469, 201, 69, 16);
 
-        jPanelEstadCitas.setBounds(0, 0, -1, -1);
+        jPanelEstadCitas.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelEstadCitas, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         getContentPane().add(ZonaTrabajo);
@@ -2941,6 +2941,11 @@ public class UI_Administrador extends javax.swing.JFrame {
     private void jTextFieldLugarNacimientoPacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldLugarNacimientoPacienteKeyTyped
         // TODO add your handling code here:
 
+        /**Comprobamos que no se teclee un número*/
+        char teclaPresionada = evt.getKeyChar();
+        if(Character.isDigit(teclaPresionada) == true)
+            evt.consume();
+
         /**Limitamos la longitud*/
         if(jTextFieldLugarNacimientoPaciente.getText().length() > 50)
             evt.consume();
@@ -2965,7 +2970,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             evt.consume();
 
         /**Limitamos la longitud*/
-        if(jTextFieldNombrePersonal.getText().length() > 20)
+        if(jTextFieldNombrePersonal.getText().length() > 50)
             evt.consume();
 
     }//GEN-LAST:event_jTextFieldNombrePersonalKeyTyped
@@ -2979,7 +2984,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             evt.consume();
 
         /**Limitamos la longitud*/
-        if(jTextFieldApellidosPersonal.getText().length() > 70)
+        if(jTextFieldApellidosPersonal.getText().length() > 50)
             evt.consume();
     }//GEN-LAST:event_jTextFieldApellidosPersonalKeyTyped
 
@@ -3814,17 +3819,18 @@ public class UI_Administrador extends javax.swing.JFrame {
             
             try {
                 exito = gesPac.altaPaciente(jTextFieldDNIPaciente.getText(), jTextFieldNombrePaciente.getText(), jTextFieldApellidosPaciente.getText(), jTextFieldDireccionPaciente.getText(), jTextFieldEmailPaciente.getText(), jTextFieldTelefonoPaciente.getText(), fechaNacimiento, jTextFieldLugarNacimientoPaciente.getText(), urlFoto, "Paciente");
-
-                if(exito)
+                if(exito){
                     new InformacionExito().setVisible(true);
+                    }
                 else
-                    jLabelErrorPaciente.setVisible(true);
+                    new InformacionError().setVisible(true);
 
             } catch (SQLException ex) {
                 Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-
+        else
+            jLabelErrorPaciente.setVisible(true);
     }//GEN-LAST:event_jButtonAltaPacienteMouseClicked
 
     private void jButtonGuardarPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarPacienteMouseClicked
@@ -3973,7 +3979,6 @@ public class UI_Administrador extends javax.swing.JFrame {
             jTextFieldFechaNacimientoAnioPaciente.setText(anioActual);
             jButtonGuardarPaciente.setVisible(false);
             jButtonAltaPaciente.setVisible(true);
-            jLabelFotoPaciente.setIcon(null);
             jLabelErrorPaciente.setVisible(false);
             jLabelNombrePaciente.setBackground(Color.black);
             jLabelApellidosPaciente.setBackground(Color.black);
@@ -4000,7 +4005,6 @@ public class UI_Administrador extends javax.swing.JFrame {
             jTextFieldFechaNacimientoAnioPersonal.setText(anioActual);
             jButtonAltaPersonal.setVisible(true);
             jButtonGuardarPersonal.setVisible(false);
-            jLabelFotoPersonal.setIcon(null);
             jLabelErrorPersonal.setVisible(false);
             jLabelNombrePersonal.setBackground(Color.black);
             jLabelApellidosPersonal.setBackground(Color.black);
@@ -4431,54 +4435,56 @@ public class UI_Administrador extends javax.swing.JFrame {
                 jLabelFechaNacimientoPaciente.setForeground(Color.black);
                 }
 
-            if(jTextFieldNombrePaciente.getText().equals("")){
-                jLabelNombrePaciente.setBackground(Color.red);
+            if(jTextFieldNombrePaciente.getText().length() == 0){
+                jLabelNombrePaciente.setForeground(Color.red);
                 return false;
                 }else{
-                jLabelNombrePaciente.setBackground(Color.black);
+                jLabelNombrePaciente.setForeground(Color.black);
             }
 
-            if(jTextFieldApellidosPaciente.getText().equals("")){
-                jLabelApellidosPaciente.setBackground(Color.red);
+            if(jTextFieldApellidosPaciente.getText().length() == 0){
+                jLabelApellidosPaciente.setForeground(Color.red);
                 return false;
                 }else{
-                jLabelApellidosPaciente.setBackground(Color.black);
+                jLabelApellidosPaciente.setForeground(Color.black);
             }
 
-            if(jTextFieldDNIPaciente.getText().equals("") || jTextFieldDNIPaciente.getText().length() != 9){
-                jLabelDNIPaciente.setBackground(Color.red);
+            if(jTextFieldDNIPaciente.getText().length() != 9){
+                jLabelDNIPaciente.setForeground(Color.red);
                 return false;
                 }else{
-                jLabelDNIPaciente.setBackground(Color.black);
+                jLabelDNIPaciente.setForeground(Color.black);
             }
 
-            if(jTextFieldDireccionPaciente.getText().equals("")){
-                jLabelDireccionPaciente.setBackground(Color.red);
+            if(jTextFieldDireccionPaciente.getText().length() == 0){
+                jLabelDireccionPaciente.setForeground(Color.red);
                 return false;
                 }else{
-                jLabelDireccionPaciente.setBackground(Color.black);
+                jLabelDireccionPaciente.setForeground(Color.black);
             }
 
-            if(jTextFieldEmailPaciente.getText().equals("")){
-                jLabelEmailPaciente.setBackground(Color.red);
+            if(jTextFieldEmailPaciente.getText().length() == 0){
+                jLabelEmailPaciente.setForeground(Color.red);
                 return false;
                 }else{
-                jLabelEmailPaciente.setBackground(Color.black);
+                jLabelEmailPaciente.setForeground(Color.black);
             }
 
-            if(jTextFieldTelefonoPaciente.getText().equals("")){
-                jLabelTelefonoPaciente.setBackground(Color.red);
+            if(jTextFieldTelefonoPaciente.getText().length() == 0){
+                jLabelTelefonoPaciente.setForeground(Color.red);
                 return false;
                 }else{
-                jLabelTelefonoPaciente.setBackground(Color.black);
+                jLabelTelefonoPaciente.setForeground(Color.black);
             }
 
-            if(jTextFieldLugarNacimientoPaciente.getText().equals("")){
-                jLabelLugarNacimientoPaciente.setBackground(Color.red);
+            if(jTextFieldLugarNacimientoPaciente.getText().length() == 0){
+                jLabelLugarNacimientoPaciente.setForeground(Color.red);
                 return false;
                 }else{
-                jLabelLugarNacimientoPaciente.setBackground(Color.black);
+                jLabelLugarNacimientoPaciente.setForeground(Color.black);
             }
+
+            return true;
             
         }
 
@@ -4493,54 +4499,56 @@ public class UI_Administrador extends javax.swing.JFrame {
                 jLabelFechaNacimientoPersonal.setForeground(Color.black);
                 }
 
-            if(jTextFieldNombrePersonal.getText().equals("")){
+            if(jTextFieldNombrePersonal.getText().length() == 0){
                 jLabelNombrePaciente.setBackground(Color.red);
                 return false;
                 }else{
                 jLabelNombrePersonal.setBackground(Color.black);
             }
 
-            if(jTextFieldApellidosPersonal.getText().equals("")){
+            if(jTextFieldApellidosPersonal.getText().length() == 0){
                 jLabelApellidosPersonal.setBackground(Color.red);
                 return false;
                 }else{
                 jLabelApellidosPersonal.setBackground(Color.black);
             }
 
-            if(jTextFieldDNIPersonal.getText().equals("") || jTextFieldDNIPersonal.getText().length() != 9){
+            if(jTextFieldDNIPersonal.getText().length() != 9){
                 jLabelDNIPersonal.setBackground(Color.red);
                 return false;
                 }else{
                 jLabelDNIPersonal.setBackground(Color.black);
             }
 
-            if(jTextFieldDireccionPersonal.getText().equals("")){
+            if(jTextFieldDireccionPersonal.getText().length() == 0){
                 jLabelDireccionPersonal.setBackground(Color.red);
                 return false;
                 }else{
                 jLabelDireccionPersonal.setBackground(Color.black);
             }
 
-            if(jTextFieldEmailPersonal.getText().equals("")){
+            if(jTextFieldEmailPersonal.getText().length() == 0){
                 jLabelEmailPersonal.setBackground(Color.red);
                 return false;
                 }else{
                 jLabelEmailPersonal.setBackground(Color.black);
             }
 
-            if(jTextFieldTelefonoPersonal.getText().equals("")){
+            if(jTextFieldTelefonoPersonal.getText().length() == 0){
                 jLabelTelefonoPersonal.setBackground(Color.red);
                 return false;
                 }else{
                 jLabelTelefonoPersonal.setBackground(Color.black);
             }
 
-            if(jTextFieldLugarNacimientoPersonal.getText().equals("")){
+            if(jTextFieldLugarNacimientoPersonal.getText().length() == 0){
                 jLabelLugarNacimientoPersonal.setBackground(Color.red);
                 return false;
                 }else{
                 jLabelLugarNacimientoPersonal.setBackground(Color.black);
             }
+
+            return true;
 
         }
 
