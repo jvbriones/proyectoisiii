@@ -21,8 +21,8 @@ import java.util.ArrayList;
  * @author      Sub_Equipo1
  */
 public class turnoBD {
-    public Boolean existeTurno(String tipo) throws SQLException {
-        Boolean existe;
+    public boolean existeTurno(String tipo) throws SQLException {
+        boolean existe;
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
@@ -48,8 +48,8 @@ public class turnoBD {
 
     }
 
-    public Boolean puedoBorrarTurno(String Dni) throws SQLException {
-        Boolean puedo;
+    public boolean puedoBorrarTurno(String Dni) throws SQLException {
+        boolean puedo;
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
@@ -69,7 +69,7 @@ public class turnoBD {
 
         /*
          Hay una incoherencia ya que en el diagrama de clases dice que esta
-         * función devuelve un Boolean, y luego en el diagrama de secuencia
+         * función devuelve un boolean, y luego en el diagrama de secuencia
          * por el contrario, no devuelove nada (void).
          */
         /*
@@ -82,7 +82,7 @@ public class turnoBD {
 
     }
     
-    public void altaTurno(String Dni, Date fechaInicio, Date fechaFin, String tipo) {
+    public void asignaTurno(String Dni, Date fechaInicio, Date fechaFin, String tipo) {
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
@@ -96,7 +96,7 @@ public class turnoBD {
 
         /*
          Hay una incoherencia ya que en el diagrama de clases dice que esta
-         * función devuelve un Boolean, y luego en el diagrama de secuencia
+         * función devuelve un boolean, y luego en el diagrama de secuencia
          * por el contrario, no devuelove nada (void).
          */
         /*

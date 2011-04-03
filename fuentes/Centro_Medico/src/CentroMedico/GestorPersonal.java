@@ -44,7 +44,7 @@ public class GestorPersonal {
 
     }
 
-    public String generarContraseña() {
+    private String generarContraseña() {
         String numeros = "0123456789";
 	String mayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	String minusculas = "abcdefghijklmnopqrstuvwxyz";

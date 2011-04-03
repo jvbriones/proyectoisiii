@@ -20,8 +20,8 @@ import java.sql.*;
  * @author      Sub_Equipo1
  */
 public class personalBD {
-    public Boolean existePersonal(String Dni) throws SQLException {
-        Boolean existe;
+    public boolean existePersonal(String Dni) throws SQLException {
+        boolean existe;
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");

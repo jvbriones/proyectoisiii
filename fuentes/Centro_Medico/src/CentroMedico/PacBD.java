@@ -22,8 +22,8 @@ import java.sql.*;
 public class PacBD {
 
 
-    public Boolean existePaciente(String Dni) throws SQLException {
-        Boolean existe;
+    public boolean existePaciente(String Dni) throws SQLException {
+        boolean existe;
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");

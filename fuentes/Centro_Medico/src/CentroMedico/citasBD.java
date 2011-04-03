@@ -22,8 +22,8 @@ import java.util.ArrayList;
  */
 public class citasBD {
 
-    public Boolean existeCita(String Dni) throws SQLException {
-        Boolean existe;
+    public boolean existeCita(String Dni) throws SQLException {
+        boolean existe;
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
@@ -43,7 +43,7 @@ public class citasBD {
         String dni=cita.getDniPaciente();
         String dniM=cita.getDniMedico();
         Date fecha=(Date) cita.getFecha();
-        Boolean estado=cita.getEstado();
+        boolean estado=cita.getEstado();
 
 
         Jdbc conexion = new Jdbc();
@@ -66,7 +66,7 @@ public class citasBD {
             String dni=rs.getString("DniPaciente");
             String dniM=rs.getString("DniMedico");
             Date fecha=rs.getDate("Fecha");
-            Boolean estado=rs.getBoolean("Estado");
+            boolean estado=rs.getBoolean("Estado");
 
             cita = new Cita(dni, dniM, fecha, estado);
         }
@@ -88,7 +88,7 @@ public class citasBD {
             String dni=rs.getString("DniPaciente");
             String dniM=rs.getString("DniMedico");
             Date fecha=rs.getDate("Fecha");
-            Boolean estado=rs.getBoolean("Estado");
+            boolean estado=rs.getBoolean("Estado");
             String dniA=rs.getString("DniAdministrativoCita");
 
             datosAdmin.add(dni);

@@ -21,9 +21,9 @@ import java.awt.*;
  */
 public class usuarioBD {
 
-    public Boolean validacion(String Dni, String Pass) throws SQLException {
+    public boolean validacion(String Dni, String Pass) throws SQLException {
 
-        Boolean acceso;
+        boolean acceso;
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
@@ -90,8 +90,8 @@ public class usuarioBD {
 
     }
 
-    public Boolean existeUsuario(String Dni) throws SQLException {
-        Boolean existe;
+    public boolean existeUsuario(String Dni) throws SQLException {
+        boolean existe;
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
