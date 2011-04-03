@@ -20,17 +20,17 @@ import java.util.*;
 
 public class Usuario {
 
-    private String DNI;
-    private String Nombre;
-    private String Apellidos;
-    private String Direccion;
-    private String Email;
-    private String Contrasena;
-    private String Telefono;
-    private Date FecNac;
-    private String LugarNac;
-    private String Foto;
-    private String Tipo;
+    private String DNI=null;
+    private String Nombre=null;
+    private String Apellidos=null;
+    private String Direccion=null;
+    private String Email=null;
+    private String Contrasena=null;
+    private String Telefono=null;
+    private Date FecNac=null;
+    private String LugarNac=null;
+    private String Foto=null;
+    private String Tipo=null;
 
     /*
      *

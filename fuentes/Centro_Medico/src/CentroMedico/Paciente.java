@@ -32,7 +32,7 @@ public class Paciente extends Usuario {
             String Contrasena, String Telefono, Date FecNac, String LugarNac, String Foto, String Tipo){
 
         super(Dni, Nombre, Apellidos, Direccion, Email, Contrasena, Telefono, FecNac, LugarNac, Foto, Tipo);
-    }    
+    }
     
 
 }
