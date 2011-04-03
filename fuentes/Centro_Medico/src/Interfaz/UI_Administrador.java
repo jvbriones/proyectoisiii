@@ -222,6 +222,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jRadioButtonTarde = new javax.swing.JRadioButton();
         jRadioButtonNoche = new javax.swing.JRadioButton();
         jButtonBajaTurno = new javax.swing.JButton();
+        jLabelGestionarTurno = new javax.swing.JLabel();
         jPanelGestionarCita = new javax.swing.JPanel();
         jButtonGuardarCita = new javax.swing.JButton();
         jTextFieldDNIGestionarCitaPaciente = new javax.swing.JTextField();
@@ -841,7 +842,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         });
         jPanelGestionarPaciente.add(jButtonGuardarPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 450, -1, 39));
 
-        jLabelErrorPaciente.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabelErrorPaciente.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelErrorPaciente.setForeground(new java.awt.Color(255, 0, 0));
         jLabelErrorPaciente.setText("ERROR: revise los campos en rojo");
         jPanelGestionarPaciente.add(jLabelErrorPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 420, 230, -1));
@@ -1471,6 +1472,12 @@ public class UI_Administrador extends javax.swing.JFrame {
         });
         jPanelGestionarTurno.add(jButtonBajaTurno);
         jButtonBajaTurno.setBounds(580, 440, 93, 39);
+
+        jLabelGestionarTurno.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabelGestionarTurno.setForeground(new java.awt.Color(255, 0, 0));
+        jLabelGestionarTurno.setText("ERROR: revise los campos en rojo");
+        jPanelGestionarTurno.add(jLabelGestionarTurno);
+        jLabelGestionarTurno.setBounds(320, 420, 224, 16);
 
         jPanelGestionarTurno.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelGestionarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -3145,7 +3152,11 @@ public class UI_Administrador extends javax.swing.JFrame {
     private void jButtonAltaTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAltaTurnoMouseClicked
         // TODO add your handling code here:
 
-        compruebaFormulario("GestionarTurno");
+        if(compruebaFormulario("GestionarTurno"))
+             new InformacionExito().setVisible(true);
+        else
+            jLabelGestionarTurno.setVisible(true);
+
     }//GEN-LAST:event_jButtonAltaTurnoMouseClicked
 
     private void jButtonMenosMesFechaInicioTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosMesFechaInicioTurnoMouseClicked
@@ -3170,7 +3181,10 @@ public class UI_Administrador extends javax.swing.JFrame {
     private void jButtonGuardarTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarTurnoMouseClicked
         // TODO add your handling code here:
 
-        compruebaFormulario("GestionarTurno");
+        if(!compruebaFormulario("GestionarTurno"))
+             new InformacionExito().setVisible(true);
+        else
+            jLabelGestionarTurno.setVisible(true);
     }//GEN-LAST:event_jButtonGuardarTurnoMouseClicked
 
     private void jButtonLimpiarTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonLimpiarTurnoMouseClicked
@@ -4293,13 +4307,55 @@ public class UI_Administrador extends javax.swing.JFrame {
             if(jTextFieldNombrePaciente.getText().equals("")){
                 jLabelNombrePaciente.setBackground(Color.red);
                 return false;
-            }else{
+                }else{
                 jLabelNombrePaciente.setBackground(Color.black);
             }
 
-            if
+            if(jTextFieldApellidosPaciente.getText().equals("")){
+                jLabelApellidosPaciente.setBackground(Color.red);
+                return false;
+                }else{
+                jLabelApellidosPaciente.setBackground(Color.black);
+            }
 
+            if(jTextFieldDNIPaciente.getText().equals("") || jTextFieldDNIPaciente.getText().length() != 9){
+                jLabelDNIPaciente.setBackground(Color.red);
+                return false;
+                }else{
+                jLabelDNIPaciente.setBackground(Color.black);
+            }
+
+            if(jTextFieldDireccionPaciente.getText().equals("")){
+                jLabelDireccionPaciente.setBackground(Color.red);
+                return false;
+                }else{
+                jLabelDireccionPaciente.setBackground(Color.black);
+            }
+
+            if(jTextFieldEmailPaciente.getText().equals("")){
+                jLabelEmailPaciente.setBackground(Color.red);
+                return false;
+                }else{
+                jLabelEmailPaciente.setBackground(Color.black);
+            }
+
+            if(jTextFieldTelefonoPaciente.getText().equals("")){
+                jLabelTelefonoPaciente.setBackground(Color.red);
+                return false;
+                }else{
+                jLabelTelefonoPaciente.setBackground(Color.black);
+            }
+
+            if(jTextFieldLugarNacimientoPaciente.getText().equals("")){
+                jLabelLugarNacimientoPaciente.setBackground(Color.red);
+                return false;
+                }else{
+                jLabelLugarNacimientoPaciente.setBackground(Color.black);
+            }
+            
         }
+
+
 
         if(formulario.equals("GestionarPersonal")){
 
@@ -4308,8 +4364,56 @@ public class UI_Administrador extends javax.swing.JFrame {
                 return false;
                 }else{
                 jLabelFechaNacimientoPersonal.setForeground(Color.black);
-                return true;
                 }
+
+            if(jTextFieldNombrePersonal.getText().equals("")){
+                jLabelNombrePaciente.setBackground(Color.red);
+                return false;
+                }else{
+                jLabelNombrePersonal.setBackground(Color.black);
+            }
+
+            if(jTextFieldApellidosPersonal.getText().equals("")){
+                jLabelApellidosPersonal.setBackground(Color.red);
+                return false;
+                }else{
+                jLabelApellidosPersonal.setBackground(Color.black);
+            }
+
+            if(jTextFieldDNIPersonal.getText().equals("") || jTextFieldDNIPersonal.getText().length() != 9){
+                jLabelDNIPersonal.setBackground(Color.red);
+                return false;
+                }else{
+                jLabelDNIPersonal.setBackground(Color.black);
+            }
+
+            if(jTextFieldDireccionPersonal.getText().equals("")){
+                jLabelDireccionPersonal.setBackground(Color.red);
+                return false;
+                }else{
+                jLabelDireccionPersonal.setBackground(Color.black);
+            }
+
+            if(jTextFieldEmailPersonal.getText().equals("")){
+                jLabelEmailPersonal.setBackground(Color.red);
+                return false;
+                }else{
+                jLabelEmailPersonal.setBackground(Color.black);
+            }
+
+            if(jTextFieldTelefonoPersonal.getText().equals("")){
+                jLabelTelefonoPersonal.setBackground(Color.red);
+                return false;
+                }else{
+                jLabelTelefonoPersonal.setBackground(Color.black);
+            }
+
+            if(jTextFieldLugarNacimientoPersonal.getText().equals("")){
+                jLabelLugarNacimientoPersonal.setBackground(Color.red);
+                return false;
+                }else{
+                jLabelLugarNacimientoPersonal.setBackground(Color.black);
+            }
 
         }
 
@@ -4327,7 +4431,33 @@ public class UI_Administrador extends javax.swing.JFrame {
                 return false;
                 }else{
                 jLabelFechaFinTurno.setForeground(Color.black);
-                return true;
+                }
+            }
+
+            int anioInicio;
+            int anioFin;
+            int mesInicio;
+            int mesFin;
+            int diaInicio;
+            int diaFin;
+
+            anioInicio = Integer.parseInt(jTextFieldAnioInicioTurno.getText());
+            anioFin = Integer.parseInt(jTextFieldAnioFinTurno.getText());
+            mesInicio = Integer.parseInt(jTextFieldMesInicioTurno.getText());
+            mesFin = Integer.parseInt(jTextFieldMesFinTurno.getText());
+            diaInicio = Integer.parseInt(jTextFieldDiaInicioTurno.getText());
+            diaFin = Integer.parseInt(jTextFieldDiaFinTurno.getText());
+
+            if(anioInicio > anioFin)
+                return false;
+
+            if(anioInicio == anioFin){
+                if(mesInicio > mesFin){
+                    return false;
+                    }
+                if(mesInicio == mesFin){
+                    if(diaInicio > diaFin)
+                        return false;
                 }
             }
 
@@ -4486,6 +4616,7 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelGestionarPaciente5;
     private javax.swing.JLabel jLabelGestionarPaciente6;
     private javax.swing.JLabel jLabelGestionarPersonal1;
+    private javax.swing.JLabel jLabelGestionarTurno;
     private javax.swing.JLabel jLabelGestionarTurno1;
     private javax.swing.JLabel jLabelGuardarPDF;
     private javax.swing.JLabel jLabelHoraCita;
