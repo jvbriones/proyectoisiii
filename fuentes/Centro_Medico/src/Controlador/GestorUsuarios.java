@@ -26,8 +26,8 @@ public class GestorUsuarios {
     private Usuario user = null; 
 
     
-    public Boolean validacionUsuario(String Dni, String Pass) throws SQLException, Exception {
-        Boolean acceso;
+    public boolean validacionUsuario(String Dni, String Pass) throws SQLException, Exception {
+        boolean acceso=false;
         usuarioBD usuario_bd = new usuarioBD();
 
         acceso=usuario_bd.validacion(Dni, Pass);

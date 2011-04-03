@@ -21,24 +21,25 @@ import java.sql.*;
 public class usuarioBD {
 
     String IpDelServidor="84.125.212.141";
-    String NombreDB="centroMedico";
+    String NombreDB="centromedico";
     String user="personal";
     String pass="personal";
     
 
     public boolean validacion(String Dni, String Pass) throws SQLException {
 
-        boolean acceso;
+        boolean acceso=false;
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor,NombreDB, user,pass);
-        String Consulta = "SELECT Dni, Contrasena FROM Usuarios WHERE Dni="+Dni+", and Contrasena="+Pass;
+        String Consulta = "SELECT Dni , Contrasena FROM Usuarios WHERE Dni='"+Dni+"' and Contrasena='"+Pass+"'";
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
             acceso=true;
         }
         else {
             acceso=false;
+            System.out.println("================FALSE=============\n");
         }
         conexion.closeConnection();
         return acceso;
