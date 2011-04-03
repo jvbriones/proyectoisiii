@@ -20,15 +20,12 @@ import java.sql.*;
  */
 public class usuarioBD {
 
-    String IpDelServidor="84.125.212.141";
+    String IpDelServidor="217.216.97.75";
     String NombreDB="centroMedico";
     String user="personal";
     String pass="personal";
 
-    /*String IpDelServidor="locahost";
-    String NombreDB="centromedico";
-    String user="javier";
-    String pass="";*/
+   
 
     public boolean validacion(String Dni, String Pass) throws SQLException {
 

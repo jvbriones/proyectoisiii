@@ -23,7 +23,7 @@ import java.util.Date;
  */
 public class turnoBD {
 
-    String IpDelServidor="84.125.212.141";
+    String IpDelServidor="217.216.97.75";
     String NombreDB="centroMedico";
     String user="personal";
     String pass="personal";
