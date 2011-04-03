@@ -21,7 +21,7 @@ import java.util.*;
 
 public class GestorUsuarios {
 
-    private Usuario user = null;
+    private Usuario user = null; 
 
     
     public Boolean validacionUsuario(String Dni, String Pass) throws SQLException, Exception {
