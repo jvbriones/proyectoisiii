@@ -535,7 +535,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jLabelEstadPersTipo1)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 95, Short.MAX_VALUE)
                 .add(jLabelGestionarCita1)
-                .add(107, 107, 107))
+                .add(108, 108, 108))
             .add(jPanelPrincipalLayout.createSequentialGroup()
                 .add(39, 39, 39)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -560,7 +560,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                         .add(jButtonEstadPersTipo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(18, 18, 18)
                         .add(jButtonGestionarCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         jPanelPrincipalLayout.setVerticalGroup(
             jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -587,10 +587,10 @@ public class UI_Administrador extends javax.swing.JFrame {
                     .add(jLabelGestionarPaciente3)
                     .add(jLabelGestionarTurno1)
                     .add(jLabelGestionarPersonal1))
-                .add(114, 114, 114))
+                .add(115, 115, 115))
         );
 
-        jPanelPrincipal.setBounds(1, 0, 900, 530);
+        jPanelPrincipal.setBounds(0, 0, 901, 530);
         ZonaTrabajo.add(jPanelPrincipal, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarPaciente.setPreferredSize(new java.awt.Dimension(901, 531));
@@ -847,7 +847,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabelErrorPaciente.setText("ERROR: revise los campos en rojo");
         jPanelGestionarPaciente.add(jLabelErrorPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 420, 230, -1));
 
-        jPanelGestionarPaciente.setBounds(0, 0, -1, 530);
+        jPanelGestionarPaciente.setBounds(0, 0, 901, 530);
         ZonaTrabajo.add(jPanelGestionarPaciente, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarPersonal.setMinimumSize(new java.awt.Dimension(901, 510));
@@ -1120,12 +1120,12 @@ public class UI_Administrador extends javax.swing.JFrame {
         });
         jPanelGestionarPersonal.add(jButtonGuardarPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 460, -1, 39));
 
-        jLabelErrorPersonal.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabelErrorPersonal.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelErrorPersonal.setForeground(new java.awt.Color(255, 0, 0));
         jLabelErrorPersonal.setText("ERROR: revise los campos en rojo");
         jPanelGestionarPersonal.add(jLabelErrorPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 440, 230, -1));
 
-        jPanelGestionarPersonal.setBounds(0, 0, -1, -1);
+        jPanelGestionarPersonal.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelGestionarPersonal, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarTurno.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1473,13 +1473,13 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarTurno.add(jButtonBajaTurno);
         jButtonBajaTurno.setBounds(580, 440, 93, 39);
 
-        jLabelGestionarTurno.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabelGestionarTurno.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelGestionarTurno.setForeground(new java.awt.Color(255, 0, 0));
         jLabelGestionarTurno.setText("ERROR: revise los campos en rojo");
         jPanelGestionarTurno.add(jLabelGestionarTurno);
         jLabelGestionarTurno.setBounds(320, 420, 224, 16);
 
-        jPanelGestionarTurno.setBounds(0, 0, -1, -1);
+        jPanelGestionarTurno.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelGestionarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarCita.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1895,7 +1895,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarCita.add(jButtonAceptarCita);
         jButtonAceptarCita.setBounds(400, 440, 93, 39);
 
-        jPanelGestionarCita.setBounds(0, 0, -1, -1);
+        jPanelGestionarCita.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelGestionarCita, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadPersTipo.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1955,7 +1955,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jScrollPane5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 327, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanelEstadPersTipo.setBounds(0, 0, -1, -1);
+        jPanelEstadPersTipo.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelEstadPersTipo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadPersFecha.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -2021,7 +2021,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jScrollPane6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 327, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanelEstadPersFecha.setBounds(0, 0, -1, -1);
+        jPanelEstadPersFecha.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelEstadPersFecha, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadCitas.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -2301,7 +2301,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelEstadCitas.add(jLabel15);
         jLabel15.setBounds(469, 201, 69, 16);
 
-        jPanelEstadCitas.setBounds(0, 0, -1, -1);
+        jPanelEstadCitas.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelEstadCitas, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         getContentPane().add(ZonaTrabajo);
@@ -3793,6 +3793,18 @@ public class UI_Administrador extends javax.swing.JFrame {
             anio = Integer.parseInt(jTextFieldAnioFinTurno.getText());
         }
 
+        if(formulario.equals("CompruebaEstadCitasInicio")){
+            dia = Integer.parseInt(jTextFieldDiaEstadCitasInicial.getText());
+            mes = Integer.parseInt(jTextFieldMesEstadCitasInicial.getText());
+            anio = Integer.parseInt(jTextFieldAnioEstadCitasInicial.getText());
+        }
+
+        if(formulario.equals("CompruebaEstadCitasFin")){
+            dia = Integer.parseInt(jTextFieldDiaEstadCitasFinal.getText());
+            mes = Integer.parseInt(jTextFieldMesEstadCitasFinal.getText());
+            anio = Integer.parseInt(jTextFieldAnioEstadCitasFinal.getText());
+        }
+
         Calendar fechaActual = Calendar.getInstance();
         diaActual = fechaActual.get(Calendar.DATE);
         mesActual = fechaActual.get(Calendar.MONTH);
@@ -4432,7 +4444,6 @@ public class UI_Administrador extends javax.swing.JFrame {
                 }else{
                 jLabelFechaFinTurno.setForeground(Color.black);
                 }
-            }
 
             int anioInicio;
             int anioFin;
@@ -4460,6 +4471,51 @@ public class UI_Administrador extends javax.swing.JFrame {
                         return false;
                 }
             }
+        }
+
+        if(formulario.equals("EstadCitas")){
+
+            if(!compruebaFecha("CompruebaEstadCitasInicio")){
+                jLabelFechaInicioTurno.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelFechaInicioTurno.setForeground(Color.black);
+                }
+
+            if(!compruebaFecha("CompruebaEstadCitasFin")){
+                jLabelFechaFinTurno.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelFechaFinTurno.setForeground(Color.black);
+                }
+
+            int anioInicio;
+            int anioFin;
+            int mesInicio;
+            int mesFin;
+            int diaInicio;
+            int diaFin;
+
+            anioInicio = Integer.parseInt(jTextFieldAnioEstadCitasInicial.getText());
+            anioFin = Integer.parseInt(jTextFieldAnioEstadCitasFinal.getText());
+            mesInicio = Integer.parseInt(jTextFieldMesEstadCitasInicial.getText());
+            mesFin = Integer.parseInt(jTextFieldMesEstadCitasFinal.getText());
+            diaInicio = Integer.parseInt(jTextFieldDiaEstadCitasInicial.getText());
+            diaFin = Integer.parseInt(jTextFieldDiaEstadCitasFinal.getText());
+
+            if(anioInicio > anioFin)
+                return false;
+
+            if(anioInicio == anioFin){
+                if(mesInicio > mesFin){
+                    return false;
+                    }
+                if(mesInicio == mesFin){
+                    if(diaInicio > diaFin)
+                        return false;
+                }
+            }
+        }
 
         return true;
 
