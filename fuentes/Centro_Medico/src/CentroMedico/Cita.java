@@ -54,19 +54,19 @@ public class Cita {
      *
      */
 
-    String getDniPaciente(){
+    public String getDniPaciente(){
         return DNIPac;
     }
 
-    String getDniMedico(){
+    public String getDniMedico(){
         return  DNIMed;
      }
 
-    Date getFecha(){
+    public Date getFecha(){
         return Fecha;
     }
     
-    boolean getEstado(){
+    public boolean getEstado(){
         return Estado;
     }
 
@@ -76,7 +76,7 @@ public class Cita {
       *
       */
 
-    void setEstado(boolean Estado){
+    public void setEstado(boolean Estado){
         this.Estado=Estado;
     }
 

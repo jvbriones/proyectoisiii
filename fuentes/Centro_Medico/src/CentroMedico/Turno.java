@@ -46,19 +46,19 @@ public class Turno {
      *
      */
 
-    String getDni(){
+    public String getDni(){
         return DNI;
     }
 
-    Date getFechaInicio(){
+    public Date getFechaInicio(){
         return  FechaIni;
      }
 
-    Date getFechaFin(){
+    public Date getFechaFin(){
         return FechaEnd;
     }
 
-    String getTipoTurno(){
+    public String getTipoTurno(){
         return TipoTurno;
     }
 
@@ -68,19 +68,19 @@ public class Turno {
      *
      */
 
-    void setDni(String DNI){
+    public void setDni(String DNI){
         this.DNI=DNI;
     }
 
-    void setFechaInicio(Date FechaIni){
+    public void setFechaInicio(Date FechaIni){
         this.FechaIni=FechaIni;
      }
 
-    void getFechaFin(Date FechaEnd){
+    public void getFechaFin(Date FechaEnd){
         this.FechaEnd=FechaEnd;
     }
 
-    void getTipoTurno(String TipoTurno){
+    public void getTipoTurno(String TipoTurno){
         this.TipoTurno=TipoTurno;
     }
 

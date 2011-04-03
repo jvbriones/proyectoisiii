@@ -31,11 +31,11 @@ public class Personal extends Usuario{
     }    
     
 
-    String getTipoPersonal(){
+    public String getTipoPersonal(){
         return  this.TipoPersonal;
      }
 
-    void setTipoPersonal(String TipoPer){
+    public void setTipoPersonal(String TipoPer){
         this.TipoPersonal=TipoPer;
      }
    

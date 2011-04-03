@@ -9,8 +9,10 @@
  *
  */
 
-package CentroMedico;
+package Controlador;
 
+import BaseDatos.PacBD;
+import CentroMedico.Paciente;
 import java.sql.SQLException;
 import java.util.Date;
 

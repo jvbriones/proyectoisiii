@@ -9,8 +9,10 @@
  *
  */
 
-package CentroMedico;
+package Controlador;
 
+import CentroMedico.Turno;
+import BaseDatos.turnoBD;
 import java.sql.SQLException;
 import java.util.Date;
 import java.text.SimpleDateFormat;

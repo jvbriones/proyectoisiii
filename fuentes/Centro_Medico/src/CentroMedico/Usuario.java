@@ -60,47 +60,47 @@ public class Usuario {
      *
      */
     
-    String getDni(){
+    public String getDni(){
         return DNI;
     }
 
-    String getNombre(){
+    public String getNombre(){
         return  Nombre;
      }
 
-    String getApellidos(){
+    public String getApellidos(){
         return Apellidos;
     }
 
-    String getDireccion(){
+    public String getDireccion(){
         return  Direccion;
      }
 
-    String getEmail(){
+    public String getEmail(){
         return Email;
     }
 
-    String getContrasena(){
+    public String getContrasena(){
         return  Contrasena;
      }
 
-    String getTelefono(){
+    public String getTelefono(){
         return  Telefono;
      }
 
-    Date getFechaNacimiento(){
+    public Date getFechaNacimiento(){
         return FecNac;
     }
 
-    String getLugarNacimiento(){
+    public String getLugarNacimiento(){
         return  LugarNac;
     }
 
-    String getFotografia(){
+    public String getFotografia(){
         return  Foto;
     }
 
-     String getTipo(){
+     public String getTipo(){
         return Tipo;
     }
 
@@ -110,45 +110,46 @@ public class Usuario {
       *
       */
 
-    void setDni(String Dni){
+    public void setDni(String Dni){
         this.DNI=Dni;
     }
 
-    void  setNombre(String Nombre){
+    public void setNombre(String Nombre){
         this.Nombre=Nombre;
     }
-    void  setApellidos(String Apellidos){
+    public void setApellidos(String Apellidos){
         this.Apellidos=Apellidos;
     }
 
-    void  setDireccion(String Direccion){
+    public void setDireccion(String Direccion){
         this.Direccion=Direccion;
     }
-    void  setEmail(String Email){
+
+    public void setEmail(String Email){
         this.Email=Email;
     }
 
-    void  setContrasena(String Contrasena){
+    public void setContrasena(String Contrasena){
         this.Contrasena=Contrasena;
     }
 
-    void  setTelefono(String Telefono){
+    public void setTelefono(String Telefono){
         this.Telefono=Telefono;
     }
 
-    void  setFechaNacimiento(Date FecNac){
+    public void setFechaNacimiento(Date FecNac){
         this.FecNac=FecNac;
     }
 
-    void  setLugarNacimiento(String LugarNac){
+    public void setLugarNacimiento(String LugarNac){
         this.LugarNac=LugarNac;
     }
 
-    void  setFotografia(String Foto){
+    public void setFotografia(String Foto){
        this.Foto=Foto;
     }
 
-    void  setTipo(String Tipo){
+    public void setTipo(String Tipo){
        this.Tipo=Tipo;
     }
 

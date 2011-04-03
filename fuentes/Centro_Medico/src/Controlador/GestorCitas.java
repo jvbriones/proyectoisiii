@@ -3,8 +3,11 @@
  * and open the template in the editor.
  */
 
-package CentroMedico;
+package Controlador;
 
+import BaseDatos.PacBD;
+import CentroMedico.Paciente;
+import BaseDatos.citasBD;
 import java.sql.SQLException;
 
 /**
