@@ -50,6 +50,7 @@ public class Intro extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setLocation(new java.awt.Point(400, 170));
         setMinimumSize(new java.awt.Dimension(470, 430));
+        setPreferredSize(new java.awt.Dimension(460, 410));
         setResizable(false);
         setSize(new java.awt.Dimension(475, 430));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -63,10 +64,10 @@ public class Intro extends javax.swing.JFrame {
 
         jTextFieldUsuario.setColumns(10);
 
-        jLabelCentroMedico.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jLabelCentroMedico.setFont(new java.awt.Font("Lucida Grande", 1, 14));
         jLabelCentroMedico.setText("Centro Médico");
 
-        jButtonEntrar.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jButtonEntrar.setFont(new java.awt.Font("Lucida Grande", 1, 18));
         jButtonEntrar.setForeground(new java.awt.Color(255, 153, 0));
         jButtonEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Entrar.png"))); // NOI18N
         jButtonEntrar.addActionListener(new java.awt.event.ActionListener() {
@@ -173,6 +174,11 @@ public class Intro extends javax.swing.JFrame {
         }
         else if(nombre.equals("Paci") && contrasenia.equals("Paci")){
             UI_Paciente p = new UI_Paciente(nombre,"Paciente");
+            p.setVisible(true);
+            this.setVisible(false);
+        }
+        else if(nombre.equals("Perso") && contrasenia.equals("Perso")){
+            UI_Personal p = new UI_Personal(nombre,"Personal");
             p.setVisible(true);
             this.setVisible(false);
         }

@@ -38,14 +38,19 @@ public class Ayuda extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 204, 102));
+        setLocation(new java.awt.Point(320, 200));
+        setPreferredSize(new java.awt.Dimension(650, 300));
+        setResizable(false);
+        setSize(new java.awt.Dimension(650, 300));
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24));
         jLabel1.setText("v. 0.4");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(260, 86, 66, 39);
 
-        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 24));
         jLabel2.setText("Centro de Salud");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(202, 39, 196, 39);

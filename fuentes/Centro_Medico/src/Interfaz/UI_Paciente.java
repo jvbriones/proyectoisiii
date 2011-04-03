@@ -37,6 +37,9 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         /**Mostramos el panel Principal*/
         mostrarPanel("Principal");
+
+        /**Ponemos icono de paciente logueado*/
+        jLabelTipoUsuarioIdentificado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo-Usuario-Paciente.png"))); // NOI18N
     }
 
     /** This method is called from within the constructor to
@@ -55,10 +58,6 @@ public class UI_Paciente extends javax.swing.JFrame {
         jLabelIconoSalir = new javax.swing.JLabel();
         jLabelAyuda = new javax.swing.JLabel();
         jLabelSalir = new javax.swing.JLabel();
-        jPanelUsuario = new javax.swing.JPanel();
-        jLabelUsuario = new javax.swing.JLabel();
-        jLabelTipoUsuario = new javax.swing.JLabel();
-        jLabelNombreUsuario = new javax.swing.JLabel();
         jLabelIcono = new javax.swing.JLabel();
         ZonaTrabajo = new javax.swing.JLayeredPane();
         jPanelPrincipal = new javax.swing.JPanel();
@@ -144,6 +143,11 @@ public class UI_Paciente extends javax.swing.JFrame {
         jButtonModificarCita = new javax.swing.JButton();
         jButtonConsultarCita1 = new javax.swing.JButton();
         jButtonPedirAltaCita = new javax.swing.JButton();
+        jPanelUsuario = new javax.swing.JPanel();
+        jLabelUsuario = new javax.swing.JLabel();
+        jLabelTipoUsuario = new javax.swing.JLabel();
+        jLabelNombreUsuario = new javax.swing.JLabel();
+        jLabelTipoUsuarioIdentificado = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 204, 102));
@@ -213,41 +217,6 @@ public class UI_Paciente extends javax.swing.JFrame {
         getContentPane().add(jLabelSalir);
         jLabelSalir.setBounds(590, 120, 27, 16);
 
-        jPanelUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-
-        jLabelUsuario.setText("Usuario:");
-
-        jLabelTipoUsuario.setFont(new java.awt.Font("Lucida Grande", 1, 13));
-        jLabelTipoUsuario.setText("Tipo Usuario");
-
-        jLabelNombreUsuario.setFont(new java.awt.Font("Lucida Grande", 1, 13));
-        jLabelNombreUsuario.setText("Nombre");
-
-        org.jdesktop.layout.GroupLayout jPanelUsuarioLayout = new org.jdesktop.layout.GroupLayout(jPanelUsuario);
-        jPanelUsuario.setLayout(jPanelUsuarioLayout);
-        jPanelUsuarioLayout.setHorizontalGroup(
-            jPanelUsuarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelUsuarioLayout.createSequentialGroup()
-                .add(jPanelUsuarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jLabelUsuario)
-                    .add(jLabelTipoUsuario)
-                    .add(jLabelNombreUsuario))
-                .addContainerGap(69, Short.MAX_VALUE))
-        );
-        jPanelUsuarioLayout.setVerticalGroup(
-            jPanelUsuarioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelUsuarioLayout.createSequentialGroup()
-                .add(jLabelUsuario)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jLabelTipoUsuario)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jLabelNombreUsuario)
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(jPanelUsuario);
-        jPanelUsuario.setBounds(728, 47, 157, 86);
-
         jLabelIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Logo-Centro-Medico.png"))); // NOI18N
         getContentPane().add(jLabelIcono);
         jLabelIcono.setBounds(20, 17, 140, 150);
@@ -299,15 +268,15 @@ public class UI_Paciente extends javax.swing.JFrame {
                     .add(jPanelPrincipalLayout.createSequentialGroup()
                         .add(84, 84, 84)
                         .add(jLabelGestionarCita1)))
-                .addContainerGap(412, Short.MAX_VALUE))
+                .addContainerGap(413, Short.MAX_VALUE))
         );
         jPanelPrincipalLayout.setVerticalGroup(
             jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanelPrincipalLayout.createSequentialGroup()
                 .add(29, 29, 29)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE))
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelGestionarPaciente3)
@@ -315,7 +284,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(330, 330, 330))
         );
 
-        jPanelPrincipal.setBounds(1, 0, 900, 530);
+        jPanelPrincipal.setBounds(0, 0, 901, 530);
         ZonaTrabajo.add(jPanelPrincipal, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarPaciente.setPreferredSize(new java.awt.Dimension(901, 531));
@@ -1019,6 +988,28 @@ public class UI_Paciente extends javax.swing.JFrame {
         getContentPane().add(ZonaTrabajo);
         ZonaTrabajo.setBounds(13, 185, 920, 550);
 
+        jPanelUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jPanelUsuario.setLayout(null);
+
+        jLabelUsuario.setText("Usuario:");
+        jPanelUsuario.add(jLabelUsuario);
+        jLabelUsuario.setBounds(90, 0, 52, 16);
+
+        jLabelTipoUsuario.setFont(new java.awt.Font("Lucida Grande", 1, 13));
+        jLabelTipoUsuario.setText("Tipo Usuario");
+        jPanelUsuario.add(jLabelTipoUsuario);
+        jLabelTipoUsuario.setBounds(90, 30, 120, 16);
+
+        jLabelNombreUsuario.setFont(new java.awt.Font("Lucida Grande", 1, 13));
+        jLabelNombreUsuario.setText("Nombre");
+        jPanelUsuario.add(jLabelNombreUsuario);
+        jLabelNombreUsuario.setBounds(90, 60, 120, 16);
+        jPanelUsuario.add(jLabelTipoUsuarioIdentificado);
+        jLabelTipoUsuarioIdentificado.setBounds(10, 10, 70, 70);
+
+        getContentPane().add(jPanelUsuario);
+        jPanelUsuario.setBounds(665, 47, 220, 90);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
@@ -1688,6 +1679,10 @@ public class UI_Paciente extends javax.swing.JFrame {
             jLabelInicio.setVisible(true);
             jLabelIconoInicio.setVisible(true);
 
+            /**Insertamos icono de foto anónima*/
+            jLabelFotoPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
+
+
             /**Hacemos visible el panel seleccionado*/
             jPanelPrincipal.setVisible(false);
             jPanelGestionarPaciente.setVisible(true);
@@ -1856,6 +1851,7 @@ public class UI_Paciente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelSalir;
     private javax.swing.JLabel jLabelTelefonoPaciente;
     private javax.swing.JLabel jLabelTipoUsuario;
+    private javax.swing.JLabel jLabelTipoUsuarioIdentificado;
     private javax.swing.JLabel jLabelUsuario;
     private javax.swing.JList jList1;
     private javax.swing.JPanel jPanelAltaCita;

@@ -53,14 +53,8 @@ public class UI_Administrador extends javax.swing.JFrame {
         jRadioButtonManiana.setSelected(true);
 
 
-        /**Cargamos las imágenes de cada tipo de usuario al loguearse*/
-        if(tipoUsuario.equals("Paciente"))
-            jLabelTipoUsuarioIdentificado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo-Usuario-Paciente.png"))); // NOI18N
-        if(tipoUsuario.equals("Administrador"))
-            jLabelTipoUsuarioIdentificado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo-Usuario-Administrador.png"))); // NOI18N
-        if(tipoUsuario.equals("Personal"))
-            jLabelTipoUsuarioIdentificado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo-Usuario-Personal.png"))); // NOI18N
-
+        /**Cargamos las imágenes al loguearse*/
+        jLabelTipoUsuarioIdentificado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo-Usuario-Administrador.png"))); // NOI18N
 
     }
 
@@ -537,7 +531,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jLabelEstadPersTipo1)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 97, Short.MAX_VALUE)
                 .add(jLabelGestionarCita1)
-                .add(105, 105, 105))
+                .add(106, 106, 106))
             .add(jPanelPrincipalLayout.createSequentialGroup()
                 .add(39, 39, 39)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -589,7 +583,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                     .add(jLabelGestionarPaciente3)
                     .add(jLabelGestionarTurno1)
                     .add(jLabelGestionarPersonal1))
-                .add(112, 112, 112))
+                .add(113, 113, 113))
         );
 
         jPanelPrincipal.setBounds(1, 0, 900, 530);
@@ -1011,7 +1005,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabelFotoPersonal.setBackground(new java.awt.Color(255, 255, 255));
         jLabelFotoPersonal.setForeground(new java.awt.Color(255, 255, 255));
-        jPanelGestionarPersonal.add(jLabelFotoPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(721, 294, 130, 150));
+        jPanelGestionarPersonal.add(jLabelFotoPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 300, 130, 150));
 
         jTextFieldNombrePersonal.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -1106,7 +1100,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarTurno.add(jButtonConsultarTurno);
-        jButtonConsultarTurno.setBounds(520, 440, 93, 39);
+        jButtonConsultarTurno.setBounds(460, 440, 93, 39);
 
         jButtonMenosDiaFechaInicioTurno.setText("-");
         jButtonMenosDiaFechaInicioTurno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1129,7 +1123,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarTurno.add(jButtonAltaTurno);
-        jButtonAltaTurno.setBounds(400, 440, 93, 39);
+        jButtonAltaTurno.setBounds(340, 440, 93, 39);
 
         jButtonMenosMesFechaInicioTurno.setText("-");
         jButtonMenosMesFechaInicioTurno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1152,7 +1146,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarTurno.add(jButtonGuardarTurno);
-        jButtonGuardarTurno.setBounds(400, 440, 93, 39);
+        jButtonGuardarTurno.setBounds(340, 440, 93, 39);
 
         jButtonLimpiarTurno.setText("Limpiar");
         jButtonLimpiarTurno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1166,7 +1160,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarTurno.add(jButtonLimpiarTurno);
-        jButtonLimpiarTurno.setBounds(280, 440, 91, 39);
+        jButtonLimpiarTurno.setBounds(220, 440, 91, 39);
 
         jLabelDNITurno.setText("DNI");
         jPanelGestionarTurno.add(jLabelDNITurno);
@@ -1437,7 +1431,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarTurno.add(jButtonBajaTurno);
-        jButtonBajaTurno.setBounds(640, 440, 93, 39);
+        jButtonBajaTurno.setBounds(580, 440, 93, 39);
 
         jPanelGestionarTurno.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelGestionarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -3981,6 +3975,10 @@ public class UI_Administrador extends javax.swing.JFrame {
             /**Limpiamos posibles datos introducidos anteriormente*/
             limpiarFormulario("GestionarPaciente");
 
+            /**Insertamos icono de foto anónima*/
+            jLabelFotoPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
+
+
             /**Hacemos visible el botón jLabelIconoInicio*/
             jLabelInicio.setVisible(true);
             jLabelIconoInicio.setVisible(true);
@@ -4017,6 +4015,10 @@ public class UI_Administrador extends javax.swing.JFrame {
 
             /**Limpiamos posibles datos introducidos anteriormente*/
             limpiarFormulario("GestionarPersonal");
+
+            /**Insertamos icono de foto anónima*/
+            jLabelFotoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
+
 
             /**Hacemos visible el botón jLabelIconoInicio*/
             jLabelInicio.setVisible(true);
