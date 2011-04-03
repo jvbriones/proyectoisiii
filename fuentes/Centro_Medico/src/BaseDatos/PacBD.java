@@ -44,6 +44,7 @@ public class PacBD {
         return existe;
     }
 
+    // Modificado con respecto al diseño
     public void almacenarPaciente(Paciente Paciente) {
         String dni=Paciente.getDni();
         String nombre=Paciente.getNombre();
@@ -60,6 +61,8 @@ public class PacBD {
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, user,pass);
 
+        // El diseño no se corresponde con al modelo de la base de datos
+        // Hay que ejecutar estas 2 sentencias
         String Consulta = "INSERT INTO Usuarios VALUES ('"+dni+"','"+nombre+"','"+apellidos+"','"+direccion+"','"+email+"','"+contrasena+"','"+telefono+"',"+fecNac+",'"+lugarNac+"','"+foto+"','"+tipo+"')";
         conexion.consultaUpdate(Consulta);
 

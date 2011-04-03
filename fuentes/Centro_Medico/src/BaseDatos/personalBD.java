@@ -43,6 +43,7 @@ public class personalBD {
         return existe;
     }
 
+    // Modificado con respecto al diseño
     public void almacenarPersonal(Personal personal) {
         String dni=personal.getDni();
         String nombre=personal.getNombre();
@@ -59,6 +60,8 @@ public class personalBD {
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, user,pass);
 
+        // El diseño no se corresponde con al modelo de la base de datos
+        // Hay que ejecutar estas 2 sentencias
         String Consulta = "INSERT INTO Usuarios VALUES ('"+dni+"','"+nombre+"','"+apellidos+"','"+direccion+"','"+email+"','"+contrasena+"','"+telefono+"',"+fecNac+",'"+lugarNac+"','"+foto+"','Personal')";
         conexion.consultaUpdate(Consulta);
 

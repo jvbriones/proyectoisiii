@@ -34,7 +34,7 @@ public class citasBD {
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "SELECT DniPaciente FROM Citas WHERE DniPaciente="+Dni+"And Estado=true";
+        String Consulta = "SELECT DniPaciente FROM Citas WHERE DniPaciente='"+Dni+"' And Estado=true";
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
             existe=true;
@@ -55,7 +55,7 @@ public class citasBD {
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "INSERT INTO Citas VALUES DniPaciente="+dni+",DniMedico="+dniM+",Fecha="+fecha+",Estado="+estado;
+        String Consulta = "INSERT INTO Citas VALUES ('"+dni+"','"+dniM+"',"+fecha+","+estado+")";
         conexion.consultaUpdate(Consulta);
         conexion.closeConnection();
 
@@ -67,7 +67,7 @@ public class citasBD {
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "SELECT * FROM Citas WHERE DniPaciente="+Dni;
+        String Consulta = "SELECT * FROM Citas WHERE DniPaciente='"+Dni+"'";
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
             String dni=rs.getString("DniPaciente");

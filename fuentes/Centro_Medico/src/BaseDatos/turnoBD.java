@@ -33,7 +33,7 @@ public class turnoBD {
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "SELECT Dni FROM Turnos WHERE Tipo="+tipo;
+        String Consulta = "SELECT Dni FROM Turnos WHERE Tipo='"+tipo+"'";
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
             existe=true;
@@ -49,7 +49,7 @@ public class turnoBD {
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "INSERT INTO Turnos VALUES Tipo="+tipo;
+        String Consulta = "INSERT INTO Turnos VALUES ('"+tipo+"')";
         conexion.consultaUpdate(Consulta);
         conexion.closeConnection();
 
@@ -60,7 +60,7 @@ public class turnoBD {
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "SELECT * FROM Turnos WHERE Dni="+Dni;
+        String Consulta = "SELECT * FROM Turnos WHERE Dni='"+Dni+"'";
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
             puedo=true;
@@ -93,7 +93,7 @@ public class turnoBD {
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "INSERT INTO Turnos VALUES "+Dni+","+fechaInicio+","+fechaFin+","+tipo;
+        String Consulta = "INSERT INTO Turnos VALUES ('"+Dni+"',"+fechaInicio+","+fechaFin+",'"+tipo+"')";
         conexion.consultaUpdate(Consulta);
         conexion.closeConnection();
 
@@ -122,7 +122,7 @@ public class turnoBD {
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "SELECT * FROM Turnos WHERE Turnos.Dni="+Dni;
+        String Consulta = "SELECT * FROM Turnos WHERE Dni='"+Dni+"'";
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
             String dni=rs.getString("Dni");
@@ -146,7 +146,7 @@ public class turnoBD {
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "SELECT Dni, Fecha FROM Turno WHERE "+fecha+"=Fecha";
+        String Consulta = "SELECT Dni, FechaInicio FROM Turno WHERE FechaInicio="+fecha;
         ResultSet rs = conexion.consultaSelect(Consulta);
         while(rs.next()) {
             String dni=rs.getString("Dni");
