@@ -33,7 +33,7 @@ public class GestorUsuarios {
         acceso=usuario_bd.validacion(Dni, Pass);
 
         if(!acceso) {
-            throw new Exception("Usuario o contraseña erroneos");
+            throw new Exception("Usuario o contraseña erroneos ");
         }
         else {
             user=usuario_bd.obtenerUsuario(Dni);
