@@ -12,6 +12,10 @@
 package Interfaz;
 
 import java.awt.Toolkit;
+import Controlador.*;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -150,28 +154,50 @@ public class Intro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
-        // TODO add your handling code here:
-        ComprobarAcceso();
+        try {
+            // TODO add your handling code here:
+            ComprobarAcceso();
+        } catch (SQLException ex) {
+            Logger.getLogger(Intro.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButtonEntrarActionPerformed
 
     private void jPasswordField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyPressed
         // TODO add your handling code here:
         if(evt.getKeyCode()== java.awt.event.KeyEvent.VK_ENTER){
+            try {
                 ComprobarAcceso();
+            } catch (SQLException ex) {
+                Logger.getLogger(Intro.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }//GEN-LAST:event_jPasswordField1KeyPressed
 
     /**
      * Comprueba que los datos de acceso correspondan a algún usuario
      */
-    private void ComprobarAcceso(){
+    private void ComprobarAcceso() throws SQLException{
+        
         String nombre = jTextFieldUsuario.getText();
         String contrasenia = new String(jPasswordField1.getPassword());
-        if(nombre.equals("Admin") && contrasenia.equals("Admin") ){
-            UI_Administrador a = new UI_Administrador(nombre,"Administrador");
-            a.setVisible(true);
+        boolean tieneAcceso = false;
+        GestorUsuarios gesUsu = new GestorUsuarios();
+        String nombreUsu = gesUsu.consultarDatosPersonales();
+
+        try {
+            tieneAcceso = gesUsu.validacionUsuario(nombre, contrasenia);
+        } catch (Exception ex) {
+            Logger.getLogger(Intro.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+
+        if(tieneAcceso){
+            UI_Administrador uiAdmin = new UI_Administrador(nombreUsu,"Administrador");
+            uiAdmin.setVisible(true);
             this.setVisible(false);
         }
+
+        
         else if(nombre.equals("Paci") && contrasenia.equals("Paci")){
             UI_Paciente p = new UI_Paciente(nombre,"Paciente");
             p.setVisible(true);

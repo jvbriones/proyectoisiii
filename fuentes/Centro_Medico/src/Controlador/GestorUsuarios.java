@@ -135,7 +135,7 @@ public class GestorUsuarios {
         String foto=user.getFotografia();
         String tipo=user.getTipo();
 
-        String salida=dni + nombre;//hay que integrarlo con la interfaz
+        String salida= nombre;//hay que integrarlo con la interfaz
         return salida;
         
     }

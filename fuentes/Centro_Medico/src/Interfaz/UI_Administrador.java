@@ -13,9 +13,14 @@ package Interfaz;
 
 import java.awt.Color;
 import java.awt.Image;
+import java.sql.SQLException;
 import java.util.Calendar;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import Controlador.*;
+import java.util.Date;
 
 
 /**
@@ -590,7 +595,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(115, 115, 115))
         );
 
-        jPanelPrincipal.setBounds(0, 0, 901, 530);
+        jPanelPrincipal.setBounds(0, 0, -1, 530);
         ZonaTrabajo.add(jPanelPrincipal, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarPaciente.setPreferredSize(new java.awt.Dimension(901, 531));
@@ -847,7 +852,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabelErrorPaciente.setText("ERROR: revise los campos en rojo");
         jPanelGestionarPaciente.add(jLabelErrorPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 420, 230, -1));
 
-        jPanelGestionarPaciente.setBounds(0, 0, 901, 530);
+        jPanelGestionarPaciente.setBounds(0, 0, -1, 530);
         ZonaTrabajo.add(jPanelGestionarPaciente, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarPersonal.setMinimumSize(new java.awt.Dimension(901, 510));
@@ -1125,7 +1130,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabelErrorPersonal.setText("ERROR: revise los campos en rojo");
         jPanelGestionarPersonal.add(jLabelErrorPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 440, 230, -1));
 
-        jPanelGestionarPersonal.setBounds(0, 0, 901, 531);
+        jPanelGestionarPersonal.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelGestionarPersonal, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarTurno.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1473,13 +1478,13 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarTurno.add(jButtonBajaTurno);
         jButtonBajaTurno.setBounds(580, 440, 93, 39);
 
-        jLabelErrorGestionarTurno.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabelErrorGestionarTurno.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelErrorGestionarTurno.setForeground(new java.awt.Color(255, 0, 0));
         jLabelErrorGestionarTurno.setText("ERROR: revise los campos en rojo");
         jPanelGestionarTurno.add(jLabelErrorGestionarTurno);
         jLabelErrorGestionarTurno.setBounds(320, 420, 224, 16);
 
-        jPanelGestionarTurno.setBounds(0, 0, 901, 531);
+        jPanelGestionarTurno.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelGestionarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarCita.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1895,7 +1900,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarCita.add(jButtonAceptarCita);
         jButtonAceptarCita.setBounds(400, 440, 93, 39);
 
-        jPanelGestionarCita.setBounds(0, 0, 901, 531);
+        jPanelGestionarCita.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelGestionarCita, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadPersTipo.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1955,7 +1960,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jScrollPane5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 327, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanelEstadPersTipo.setBounds(0, 0, 901, 531);
+        jPanelEstadPersTipo.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelEstadPersTipo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadPersFecha.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -2021,7 +2026,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jScrollPane6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 327, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanelEstadPersFecha.setBounds(0, 0, 901, 531);
+        jPanelEstadPersFecha.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelEstadPersFecha, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadCitas.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -2301,7 +2306,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelEstadCitas.add(jLabel15);
         jLabel15.setBounds(469, 201, 69, 16);
 
-        jPanelEstadCitas.setBounds(0, 0, 901, 531);
+        jPanelEstadCitas.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelEstadCitas, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         getContentPane().add(ZonaTrabajo);
@@ -3802,9 +3807,23 @@ public class UI_Administrador extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         if(compruebaFormulario("GestionarPaciente")){
-             new InformacionExito().setVisible(true);
-        }else
-            jLabelErrorPaciente.setVisible(true);
+            GestorPacientes gesPac = new GestorPacientes();
+            Date fechaNacimiento = null;                        //HAY QUE PROCESARLA LEYÉNDOLA DEL FORMULARIOOOO
+            String urlFoto = null;                              //HAY QUE GUARDAR LA FOTO Y PASAR LA RUTA DE DONDE ESTA
+            boolean exito;
+            
+            try {
+                exito = gesPac.altaPaciente(jTextFieldDNIPaciente.getText(), jTextFieldNombrePaciente.getText(), jTextFieldApellidosPaciente.getText(), jTextFieldDireccionPaciente.getText(), jTextFieldEmailPaciente.getText(), jTextFieldTelefonoPaciente.getText(), fechaNacimiento, jTextFieldLugarNacimientoPaciente.getText(), urlFoto, "Paciente");
+
+                if(exito)
+                    new InformacionExito().setVisible(true);
+                else
+                    jLabelErrorPaciente.setVisible(true);
+
+            } catch (SQLException ex) {
+                Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
 
     }//GEN-LAST:event_jButtonAltaPacienteMouseClicked
 
@@ -3956,6 +3975,15 @@ public class UI_Administrador extends javax.swing.JFrame {
             jButtonAltaPaciente.setVisible(true);
             jLabelFotoPaciente.setIcon(null);
             jLabelErrorPaciente.setVisible(false);
+            jLabelNombrePaciente.setBackground(Color.black);
+            jLabelApellidosPaciente.setBackground(Color.black);
+            jLabelDNIPaciente.setBackground(Color.black);
+            jLabelDireccionPaciente.setBackground(Color.black);
+            jLabelEmailPaciente.setBackground(Color.black);
+            jLabelTelefonoPaciente.setBackground(Color.black);
+            jLabelLugarNacimientoPaciente.setBackground(Color.black);
+            jLabelFechaNacimientoPaciente.setBackground(Color.black);
+
         }
 
         if(formulario.equals("GestionarPersonal")){
@@ -3974,6 +4002,14 @@ public class UI_Administrador extends javax.swing.JFrame {
             jButtonGuardarPersonal.setVisible(false);
             jLabelFotoPersonal.setIcon(null);
             jLabelErrorPersonal.setVisible(false);
+            jLabelNombrePersonal.setBackground(Color.black);
+            jLabelApellidosPersonal.setBackground(Color.black);
+            jLabelDNIPersonal.setBackground(Color.black);
+            jLabelDireccionPersonal.setBackground(Color.black);
+            jLabelEmailPersonal.setBackground(Color.black);
+            jLabelTelefonoPersonal.setBackground(Color.black);
+            jLabelLugarNacimientoPersonal.setBackground(Color.black);
+            jLabelFechaNacimientoPersonal.setBackground(Color.black);
         }
 
          if(formulario.equals("GestionarCitaOnline")){
