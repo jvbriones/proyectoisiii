@@ -360,9 +360,9 @@
                       </Group>
                       <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButtonGestionarTurno" alignment="0" pref="147" max="32767" attributes="1"/>
-                          <Component id="jButtonGestionarPaciente" alignment="0" pref="147" max="32767" attributes="1"/>
-                          <Component id="jButtonGestionarPersonal" alignment="0" pref="147" max="32767" attributes="1"/>
+                          <Component id="jButtonGestionarTurno" alignment="0" pref="146" max="32767" attributes="1"/>
+                          <Component id="jButtonGestionarPaciente" alignment="0" pref="146" max="32767" attributes="1"/>
+                          <Component id="jButtonGestionarPersonal" alignment="0" pref="146" max="32767" attributes="1"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -1945,7 +1945,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabelGestionarTurno">
+            <Component class="javax.swing.JLabel" name="jLabelErrorGestionarTurno">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Lucida Grande" size="13" style="1"/>
