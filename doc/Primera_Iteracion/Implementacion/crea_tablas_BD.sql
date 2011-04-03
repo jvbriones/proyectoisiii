@@ -88,7 +88,7 @@ DniPersonal VARCHAR2(9) NOT NULL,
 DniTurno VARCHAR2(9) NOT NULL, /* Identificador de turno */
 PRIMARY KEY (DniPersonal, DniTurno),
 FOREIGN KEY (DniPersonal) REFERENCES Personal(Dni),
-FOREIGN KEY (DniTurno) REFERENCES Turnos(DniTurno)
+FOREIGN KEY (DniTurno) REFERENCES Turnos(Dni)
 );
 
 CREATE TABLE AdministrativoAsignaTurno(
@@ -97,5 +97,5 @@ DniAdministrativo VARCHAR2(9) NOT NULL,
 DniTurno VARCHAR2(9) NOT NULL, /* Identificador de turno */
 PRIMARY KEY (DniAdministrativo, DniTurno)
 FOREIGN KEY (DniAdministrativo) REFERENCES Administrativos(Dni),
-FOREIGN KEY (DniTurno) REFERENCES Turnos(DniTurno)
+FOREIGN KEY (DniTurno) REFERENCES Turnos(Dni)
 );
