@@ -2,11 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
-        <file>file:/home/zerosk8/Documentos/Facultad/ISIII_Superior/Practicas/Repositorio/fuentes/Centro_Medico/src/CentroMedico/GestorTurnos.java</file>
-        <file>file:/home/zerosk8/Documentos/Facultad/ISIII_Superior/Practicas/Repositorio/fuentes/Centro_Medico/src/CentroMedico/Turno.java</file>
-        <file>file:/home/zerosk8/Documentos/Facultad/ISIII_Superior/Practicas/Repositorio/fuentes/Centro_Medico/src/CentroMedico/turnoBD.java</file>
-        <file>file:/home/zerosk8/Documentos/Facultad/ISIII_Superior/Practicas/Repositorio/fuentes/Centro_Medico/src/CentroMedico/Paciente.java</file>
-        <file>file:/home/zerosk8/Documentos/Facultad/ISIII_Superior/Practicas/Repositorio/fuentes/Centro_Medico/src/CentroMedico/GestorPacientes.java</file>
-        <file>file:/home/zerosk8/Documentos/Facultad/ISIII_Superior/Practicas/Repositorio/fuentes/Centro_Medico/src/CentroMedico/GestorPersonal.java</file>
+        <file>file:/home/nicolas/proyectoisiii/fuentes/Centro_Medico/src/CentroMedico/Personal.java</file>
+        <file>file:/home/nicolas/proyectoisiii/fuentes/Centro_Medico/src/CentroMedico/Paciente.java</file>
+        <file>file:/home/nicolas/proyectoisiii/fuentes/Centro_Medico/src/BaseDatos/Jdbc.java</file>
+        <file>file:/home/nicolas/proyectoisiii/fuentes/Centro_Medico/src/CentroMedico/Administrativo.java</file>
+        <file>file:/home/nicolas/proyectoisiii/fuentes/Centro_Medico/src/CentroMedico/Radiologo.java</file>
+        <file>file:/home/nicolas/proyectoisiii/fuentes/Centro_Medico/src/CentroMedico/Turno.java</file>
+        <file>file:/home/nicolas/proyectoisiii/fuentes/Centro_Medico/src/Controlador/GestorPacientes.java</file>
+        <file>file:/home/nicolas/proyectoisiii/fuentes/Centro_Medico/src/BaseDatos/PacBD.java</file>
+        <file>file:/home/nicolas/proyectoisiii/fuentes/Centro_Medico/src/BaseDatos/citasBD.java</file>
+        <file>file:/home/nicolas/proyectoisiii/fuentes/Centro_Medico/src/BaseDatos/personalBD.java</file>
     </open-files>
 </project-private>

@@ -52,11 +52,9 @@ public class Intro extends javax.swing.JFrame {
         setTitle("Centro Salud");
         setBackground(new java.awt.Color(255, 204, 102));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setLocation(new java.awt.Point(400, 170));
         setMinimumSize(new java.awt.Dimension(470, 430));
         setPreferredSize(new java.awt.Dimension(460, 410));
         setResizable(false);
-        setSize(new java.awt.Dimension(475, 430));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -67,6 +65,11 @@ public class Intro extends javax.swing.JFrame {
         jLabelUsuario1.setText("Usuario:");
 
         jTextFieldUsuario.setColumns(10);
+        jTextFieldUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldUsuarioActionPerformed(evt);
+            }
+        });
 
         jLabelCentroMedico.setFont(new java.awt.Font("Lucida Grande", 1, 14));
         jLabelCentroMedico.setText("Centro Médico");
@@ -110,7 +113,7 @@ public class Intro extends javax.swing.JFrame {
                         .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(jTextFieldUsuario, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(jPasswordField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 31, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 28, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
                         .add(56, 56, 56)
                         .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -119,9 +122,9 @@ public class Intro extends javax.swing.JFrame {
                                 .add(jButtonEntrar))
                             .add(jLabelError))
                         .add(79, 79, 79)))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(182, Short.MAX_VALUE)
+                .addContainerGap(171, Short.MAX_VALUE)
                 .add(jLabelCentroMedico)
                 .add(162, 162, 162))
         );
@@ -142,7 +145,7 @@ public class Intro extends javax.swing.JFrame {
                 .add(jLabelError)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jButtonEntrar)
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 450, 230));
@@ -156,7 +159,8 @@ public class Intro extends javax.swing.JFrame {
     private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
         try {
             // TODO add your handling code here:
-            ComprobarAcceso();
+           ComprobarAcceso();
+
         } catch (SQLException ex) {
             Logger.getLogger(Intro.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -172,6 +176,10 @@ public class Intro extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jPasswordField1KeyPressed
+
+    private void jTextFieldUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldUsuarioActionPerformed
 
     /**
      * Comprueba que los datos de acceso correspondan a algún usuario
