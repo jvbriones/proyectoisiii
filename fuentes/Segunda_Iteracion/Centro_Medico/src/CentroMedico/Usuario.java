@@ -37,7 +37,12 @@ public class Usuario {
      * Constructores
      *
      */
-   
+
+
+ 
+
+
+
     public Usuario(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
             String Contrasena, String Telefono, Date FecNac, String LugarNac, String Foto, String Tipo){
         

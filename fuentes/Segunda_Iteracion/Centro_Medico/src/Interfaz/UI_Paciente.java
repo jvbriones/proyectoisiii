@@ -12,6 +12,11 @@
 package Interfaz;
 
 import java.awt.Image;
+import Controlador.*;
+import CentroMedico.*;
+import BaseDatos.*;
+
+import java.sql.SQLException;
 import java.util.Calendar;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
@@ -28,7 +33,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         initComponents();
     }
 
-    public UI_Paciente(String nombreUsuario, String tipoUsuario){
+    public UI_Paciente(String nombreUsuario, String tipoUsuario) throws SQLException{
         initComponents();
 
         /**Ponemos las etiquetas del usuario que ha entrado*/
@@ -38,9 +43,47 @@ public class UI_Paciente extends javax.swing.JFrame {
         /**Mostramos el panel Principal*/
         mostrarPanel("Principal");
 
+        /** Conectamos con la BD y tomamos los datos del paciente*/
+        mostrarDatosPaciente(nombreUsuario);
+
+
+
         /**Ponemos icono de paciente logueado*/
         jLabelTipoUsuarioIdentificado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo-Usuario-Paciente.png"))); // NOI18N
     }
+
+
+
+    private void mostrarDatosPaciente( String nombreUsuario) throws SQLException{
+
+        Usuario user = null;
+        usuarioBD userBD=null;
+        //user= userBD.obtenerUsuarioNombre(nombreUsuario);
+
+
+
+
+
+
+        
+        jTextFieldDNIPaciente.setText("");
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
 
     /** This method is called from within the constructor to
      * initialize the form.

@@ -74,6 +74,47 @@ public class usuarioBD {
         return user;
     }
 
+
+        public Usuario obtenerUsuarioNombre(String nombre) throws SQLException {
+
+        Usuario user=null;
+
+        System.out.println("Hola");
+        
+
+        Jdbc conexion = new Jdbc();
+        conexion.doConnection(IpDelServidor, NombreDB, this.user,pass);
+        String Consulta = "SELECT * FROM Usuarios WHERE Nombre='"+nombre+"'";
+        ResultSet rs = conexion.consultaSelect(Consulta);
+        if(rs.next()) {
+            String dni=rs.getString("Dni");
+            String apellidos=rs.getString("Apellidos");
+            String direccion=rs.getString("Direccion");
+            String email=rs.getString("Email");
+            String contrasena=rs.getString("Contrasena");
+            String telefono=rs.getString("Telefono"); //Estos campos han de coincidir exactamente con los de la tabla Usuarios en la BD
+            Date fecNac=rs.getDate("FechaNacimiento");//Si el Telefono es un Entero en la BD, aqui tendria que ser getInt("Telefono")
+            String lugarNac=rs.getString("LugarNacimiento");
+            String foto=rs.getString("Fotografia");
+            String tipo=rs.getString("TipoUsuario");
+
+            user = new Usuario(dni, nombre, apellidos, direccion, email, contrasena, telefono, fecNac, lugarNac, foto, tipo);
+        }
+        else{
+            user= null;
+        }
+        conexion.closeConnection();
+         
+
+        return user;
+
+
+    }
+
+
+
+
+
     public void almacenarUsuario(Usuario user) {
         String dni=user.getDni();
         String nombre=user.getNombre();

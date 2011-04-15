@@ -17,8 +17,8 @@ import java.sql.SQLException;
 import java.util.*;
 
 /**
- * @version     1.0    02/04/2011
- * @author      Sub_Equipo1
+ * @version     2.0    15/04/2011
+ * @author      Sub_Equipo2
  */
 
 public class GestorUsuarios {
@@ -121,12 +121,14 @@ public class GestorUsuarios {
 
     }
 
+
+ 
     public String consultarTipoUsuario( )throws SQLException{
 
-
      return user.getTipo();
-
     }
+
+
 
     public String consultarDatosPersonales() throws SQLException{        
 
@@ -142,10 +144,11 @@ public class GestorUsuarios {
         String foto=user.getFotografia();
         String tipo=user.getTipo();
 
-        String salida= nombre;//hay que integrarlo con la interfaz
+        String salida= dni;//hay que integrarlo con la interfaz
         return salida;
         
     }
+
 
 
 

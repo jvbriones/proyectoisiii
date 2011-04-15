@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Nicolás_Sánchez
+ * @author Nicolás_
  */
 public class Intro extends javax.swing.JFrame {
 
@@ -203,7 +203,7 @@ public class Intro extends javax.swing.JFrame {
             String nombreUsu = gesUsu.consultarDatosPersonales();
             String tipoUsu = gesUsu.consultarTipoUsuario();
 
-            System.out.println(tipoUsu);
+            //System.out.println(tipoUsu);
             if( tipoUsu.equals("Paciente")){
                 UI_Paciente p = new UI_Paciente(nombre,"Paciente");
                 p.setVisible(true);
