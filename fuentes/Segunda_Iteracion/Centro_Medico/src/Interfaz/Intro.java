@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author fran_gestion
+ * @author Nicolás_Sánchez
  */
 public class Intro extends javax.swing.JFrame {
 
@@ -199,10 +199,22 @@ public class Intro extends javax.swing.JFrame {
 
 
         if(tieneAcceso){
+//
             String nombreUsu = gesUsu.consultarDatosPersonales();
+            String tipoUsu = gesUsu.consultarTipoUsuario();
+
+            System.out.println(tipoUsu);
+            if( tipoUsu.equals("Paciente")){
+                UI_Paciente p = new UI_Paciente(nombre,"Paciente");
+                p.setVisible(true);
+                this.setVisible(false);
+
+            }
+            else{
             UI_Administrador uiAdmin = new UI_Administrador(nombreUsu,"Administrador");
             uiAdmin.setVisible(true);
             this.setVisible(false);
+            }
         }
 
         

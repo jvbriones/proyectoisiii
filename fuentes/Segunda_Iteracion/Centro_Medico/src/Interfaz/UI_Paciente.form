@@ -169,11 +169,11 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jButtonGestionarPaciente" min="-2" pref="194" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
                               <EmptySpace min="12" pref="12" max="12" attributes="0"/>
                               <Component id="jLabelGestionarPaciente3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jButtonGestionarPaciente" alignment="0" min="-2" pref="194" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -199,9 +199,9 @@
                           <Component id="jButtonGestionarPaciente" alignment="1" pref="142" max="32767" attributes="1"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabelGestionarCita1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelGestionarPaciente3" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabelGestionarCita1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelGestionarPaciente3" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="336" max="-2" attributes="0"/>
                   </Group>
@@ -258,7 +258,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="111" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">

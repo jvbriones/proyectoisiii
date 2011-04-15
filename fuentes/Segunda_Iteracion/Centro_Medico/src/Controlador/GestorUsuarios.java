@@ -121,6 +121,13 @@ public class GestorUsuarios {
 
     }
 
+    public String consultarTipoUsuario( )throws SQLException{
+
+
+     return user.getTipo();
+
+    }
+
     public String consultarDatosPersonales() throws SQLException{        
 
         String dni=user.getDni();
@@ -139,6 +146,8 @@ public class GestorUsuarios {
         return salida;
         
     }
+
+
 
 
 

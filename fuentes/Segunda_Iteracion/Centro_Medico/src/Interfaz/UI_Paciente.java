@@ -255,10 +255,10 @@ public class UI_Paciente extends javax.swing.JFrame {
             .add(jPanelPrincipalLayout.createSequentialGroup()
                 .add(47, 47, 47)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jPanelPrincipalLayout.createSequentialGroup()
                         .add(12, 12, 12)
-                        .add(jLabelGestionarPaciente3))
-                    .add(jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .add(jLabelGestionarPaciente3)))
                 .add(25, 25, 25)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelPrincipalLayout.createSequentialGroup()
@@ -277,13 +277,13 @@ public class UI_Paciente extends javax.swing.JFrame {
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelGestionarCita1)
                     .add(jLabelGestionarPaciente3))
                 .add(336, 336, 336))
         );
 
-        jPanelPrincipal.setBounds(0, 0, -1, 530);
+        jPanelPrincipal.setBounds(0, 0, 901, 530);
         ZonaTrabajo.add(jPanelPrincipal, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarPaciente.setPreferredSize(new java.awt.Dimension(901, 531));
@@ -466,7 +466,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jPanelGestionarPacienteLayout.setHorizontalGroup(
             jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarPacienteLayout.createSequentialGroup()
-                .addContainerGap(111, Short.MAX_VALUE)
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarPacienteLayout.createSequentialGroup()
                         .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -844,7 +844,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         });
         jPanelConsultarCitaOnline.add(jTextFieldDNIPacienteCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 90, -1));
 
-        jPanelConsultarCitaOnline.setBounds(0, 0, -1, -1);
+        jPanelConsultarCitaOnline.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelConsultarCitaOnline, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarCitaOnline.setMinimumSize(new java.awt.Dimension(901, 510));
@@ -981,7 +981,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jPanelGestionarCitaOnline.add(jPanelBotones, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 580, 60));
 
-        jPanelGestionarCitaOnline.setBounds(0, 0, -1, -1);
+        jPanelGestionarCitaOnline.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelGestionarCitaOnline, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         getContentPane().add(ZonaTrabajo);
