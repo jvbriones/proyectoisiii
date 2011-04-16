@@ -1,5 +1,0 @@
-Modificaciones:
-14.actualizarExistencias -> 14.actualizarExistenciasLote
-
-Operación nueva:
-recetas=obtenerRecetas(Dni)
