@@ -1,0 +1,81 @@
+
+*******************CON RESPECTO A TURNOS****************************
+
+Según lo que hablamos esta tarde con respecto a los turnos:
+sólo habrá 3 turno, (osea en la tabla Turnos sólo habrá 3 tuplas)
+identificados por su tipo, 
+mañana 	08:00 a 16:00
+tarde 	16:00 a 00:00
+noche	00:00 a 08:00
+Ok??
+
+y en la relación del personal a turnos, se crea una clase relacion(igual que con cita)
+que tiene un atributo propio:
+
+fechaInicio por ejemplo y si quereis(yo opino que es mejor) una fechaFin
+
+De esta forma, en esa tabla tendremos la claves primarios de ambos extremos-->tipo y DNI y su atributo propio fechaInicio y fechaFin
+por lo que aquí habrá una tupla por cada usuario currando en el centro.
+DNI			Tipo	FechaIni	FechaFin
+74728787 	Mañana 	15/02/10 	10/02/12 
+2587878		Mañana 	10/06/11 	05/02/12 
+8828787 	Noche 	24/02/09 	02/10/12 
+
+
+IMPORTANTE
+Deberíais que incluir esa clase asociación en el diagrama estático.
+Esto También implica tener que hacer contratos y operaciones nuevas, en concreto:
+-altaTurno (Que es distinto a asignarTurnopersonal-->asigna un turno a un trabajador del centro, que es la operacion que tenemos ya)
+-bajaTurno ...
+(no es necesario uno de modificar)
+Tampoco es necesario tener el modificaTurnoPersonal, pues hace lo mismo que asignarselo, pero si que hay que
+comprobar que antes de asignarselo no tenga citas pendientes a partir de la fecha actual.
+
+Es un coñazo tener que añadir eso pero lo bueno es que son operaciones sencillisimas! de hecho os las paso en los diagramas de Diseño!!
+pero teneis que hacer los contratos y demás.. e incluirlo en los documentos, si no, no deberían de aparecer en los diagramas de diseño ok?
+y si no se hace no funcionará nada porque todo depende de que haya almenos un medico currando..
+
+Cuando tengais definidos los nombres de losa atributos, repasar los diagramas de diseño de asignaTurnoPersonal, modificaTurnoPersonal, 
+consultaTurnoPersonal,altaTurno y bajaTurno.
+para Juanmi--->Puede que esto afecte a tu algoritmo de buscar los huecos para nuevas citas,almenos el nombre de la tabla.
+
+*************************************************************
+
+
+
+
+**************************CON RESPECTO A MODIFICAR y CONSULTAR DATOS PERSONALES*****************
+
+Hay que distinguir 2 casos y hay que hacer sus 2 casos de uso y operaciones..
+
+1)Administrador-->puede modificar a todos
+2)Pacientes -->solo puede modificar los suyos, y para eso en el diagram de diseño comprueba que es él.
+
+He incluido estos 2 diagramas de diseño.
+	-ModificarDatosPersonalesAdmin
+	-ModificarDatosPersonales
+
+	
+1)Administrador-->puede Consultar a todos
+2)Pacientes -->solo puede consultar los suyos, y para eso en el diagram de diseño comprueba que es él.
+
+He incluido estos 2 diagramas de diseño.
+	-consultarDatosPersonalesAdmin
+	-consultarDatosPersonales
+
+	
+	
+	
+	
+IMPORTANTE
+Deberíais de indicarlo en el DMR y en el analisis etc..
+
+*****************************************************************************
+
+
+
+***Para los diagramas de clases y diccionario de clases: 
+Fijaros en los atributos, y el tipo, que aparece en las tablas de mysql(el archivo .sql)
+
+***Si os veis fuertes y modificais el MDR y el DA, tened en cuenta las cosas que veais oportunas del 
+documento PENDIENTE POR MODICIAR.TXT, todo sea por que saquéis mayor nota :P
