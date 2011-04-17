@@ -53,7 +53,6 @@ public class Intro extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 204, 102));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMinimumSize(new java.awt.Dimension(470, 430));
-        setPreferredSize(new java.awt.Dimension(460, 410));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -65,21 +64,16 @@ public class Intro extends javax.swing.JFrame {
         jLabelUsuario1.setText("Usuario:");
 
         jTextFieldUsuario.setColumns(10);
-        jTextFieldUsuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldUsuarioActionPerformed(evt);
-            }
-        });
 
         jLabelCentroMedico.setFont(new java.awt.Font("Lucida Grande", 1, 14));
         jLabelCentroMedico.setText("Centro Médico");
 
-        jButtonEntrar.setFont(new java.awt.Font("Lucida Grande", 1, 18));
+        jButtonEntrar.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jButtonEntrar.setForeground(new java.awt.Color(255, 153, 0));
         jButtonEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Entrar.png"))); // NOI18N
-        jButtonEntrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonEntrarActionPerformed(evt);
+        jButtonEntrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButtonEntrarMouseReleased(evt);
             }
         });
 
@@ -156,16 +150,6 @@ public class Intro extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
-        try {
-            // TODO add your handling code here:
-           ComprobarAcceso();
-
-        } catch (SQLException ex) {
-            Logger.getLogger(Intro.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_jButtonEntrarActionPerformed
-
     private void jPasswordField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyPressed
         // TODO add your handling code here:
         if(evt.getKeyCode()== java.awt.event.KeyEvent.VK_ENTER){
@@ -180,6 +164,18 @@ public class Intro extends javax.swing.JFrame {
     private void jTextFieldUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldUsuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldUsuarioActionPerformed
+
+    private void jButtonEntrarMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonEntrarMouseReleased
+        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+           ComprobarAcceso();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(Intro.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_jButtonEntrarMouseReleased
 
     /**
      * Comprueba que los datos de acceso correspondan a algún usuario
@@ -199,11 +195,12 @@ public class Intro extends javax.swing.JFrame {
 
 
         if(tieneAcceso){
-//
+
+           
             String nombreUsu = gesUsu.consultarDatosPersonales();
             String tipoUsu = gesUsu.consultarTipoUsuario();
 
-            //System.out.println(tipoUsu);
+            
             if( tipoUsu.equals("Paciente")){
                 UI_Paciente p = new UI_Paciente(nombre,"Paciente");
                 p.setVisible(true);
@@ -211,9 +208,9 @@ public class Intro extends javax.swing.JFrame {
 
             }
             else{
-            UI_Administrador uiAdmin = new UI_Administrador(nombreUsu,"Administrador");
-            uiAdmin.setVisible(true);
-            this.setVisible(false);
+                UI_Administrador uiAdmin = new UI_Administrador(nombreUsu,"Administrador");
+                 uiAdmin.setVisible(true);
+                this.setVisible(false);
             }
         }
 

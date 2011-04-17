@@ -46,13 +46,23 @@ public class usuarioBD {
 
     public Usuario obtenerUsuario(String Dni) throws SQLException {
 
-        Usuario user;
+        Usuario usu=null;
 
+       
         Jdbc conexion = new Jdbc();
-        conexion.doConnection(IpDelServidor, NombreDB, this.user,pass);
+
+
+        conexion.doConnection(IpDelServidor, NombreDB,this.user,pass);
+
+        //System.out.println(this.user);
         String Consulta = "SELECT * FROM Usuarios WHERE Dni='"+Dni+"'";
+       
+
         ResultSet rs = conexion.consultaSelect(Consulta);
+
+      
         if(rs.next()) {
+            
             String dni=rs.getString("Dni");
             String nombre=rs.getString("Nombre");
             String apellidos=rs.getString("Apellidos");
@@ -65,21 +75,23 @@ public class usuarioBD {
             String foto=rs.getString("Fotografia");
             String tipo=rs.getString("TipoUsuario");
  
-            user = new Usuario(dni, nombre, apellidos, direccion, email, contrasena, telefono, fecNac, lugarNac, foto, tipo);
+            usu = new Usuario(dni, nombre, apellidos, direccion, email, contrasena, telefono, fecNac, lugarNac, foto, tipo);
+
+           
         }
-        else{
-            user= null;
-        }
+      
+          
+         
         conexion.closeConnection();
-        return user;
+         
+        return usu;
+
     }
 
 
         public Usuario obtenerUsuarioNombre(String nombre) throws SQLException {
 
-        Usuario user=null;
-
-        System.out.println("Hola");
+        Usuario user;
         
 
         Jdbc conexion = new Jdbc();
@@ -152,4 +164,8 @@ public class usuarioBD {
         conexion.closeConnection();
         return existe;
     }
+
+
+
+
 }

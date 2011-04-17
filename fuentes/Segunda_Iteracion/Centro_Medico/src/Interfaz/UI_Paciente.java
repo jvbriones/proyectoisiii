@@ -42,9 +42,10 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         /**Mostramos el panel Principal*/
         mostrarPanel("Principal");
+        mostrarDatosPaciente(nombreUsuario);
 
         /** Conectamos con la BD y tomamos los datos del paciente*/
-        mostrarDatosPaciente(nombreUsuario);
+       
 
 
 
@@ -56,23 +57,31 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void mostrarDatosPaciente( String nombreUsuario) throws SQLException{
 
-        Usuario user = null;
-        usuarioBD userBD=null;
-        //user= userBD.obtenerUsuarioNombre(nombreUsuario);
+        Usuario usu=null; // creamos el usuario
+        usuarioBD usuario_bd = new usuarioBD();
+
+        usu=usuario_bd.obtenerUsuarioNombre(nombreUsuario);
+
+       String nombre=usu.getNombre();
+       
 
 
+        jTextFieldNombrePaciente.setText(usu.getNombre());
+        jTextFieldContraseniaPaciente.setText(usu.getContrasena());
+        jTextFieldDNIPaciente.setText(usu.getDni());
+        jTextFieldApellidosPaciente.setText(usu.getApellidos());
+        jTextFieldTelefonoPaciente.setText(usu.getTelefono());
+        jTextFieldDireccionPaciente.setText(usu.getDireccion());
+        jTextFieldEmailPaciente.setText(usu.getEmail());
+        jTextFieldLugarNacimientoPaciente.setText(usu.getLugarNacimiento());
 
-
-
-
+        /*
+        jTextFieldFechaNacimientoAnioPaciente.setText(usu.)
+        jTextFieldFechaNacimientoDiaPaciente;
+        jTextFieldFechaNacimientoMesPaciente;
+       */
+       
         
-        jTextFieldDNIPaciente.setText("");
-
-
-
-
-
-
 
     }
 
@@ -509,7 +518,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jPanelGestionarPacienteLayout.setHorizontalGroup(
             jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarPacienteLayout.createSequentialGroup()
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(111, Short.MAX_VALUE)
                 .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarPacienteLayout.createSequentialGroup()
                         .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1694,6 +1703,7 @@ public class UI_Paciente extends javax.swing.JFrame {
      *@param panel, string que indica el panel a mostrar
      */
     private void mostrarPanel(String panel){
+
 
         if(panel.equals("Principal")){
 

@@ -132,6 +132,7 @@ public class GestorUsuarios {
 
     public String consultarDatosPersonales() throws SQLException{        
 
+        
         String dni=user.getDni();
         String nombre=user.getNombre();
         String apellidos=user.getApellidos();

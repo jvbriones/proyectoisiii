@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/Controlador/GestorUsuarios.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/Controlador/GestorTurnos.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/BaseDatos/Jdbc.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/BaseDatos/PacBD.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/BaseDatos/turnoBD.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/CentroMedico/Usuario.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/BaseDatos/usuarioBD.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/CentroMedico/Radiologo.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/CentroMedico/Paciente.java</file>
+    </open-files>
 </project-private>

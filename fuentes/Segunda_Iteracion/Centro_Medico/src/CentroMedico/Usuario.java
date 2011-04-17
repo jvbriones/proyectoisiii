@@ -12,7 +12,8 @@
 package CentroMedico;
 
 import java.util.*;
-
+import BaseDatos.*;
+import java.sql.SQLException;
 /**
  * @version     v1.0    01/04/2011
  * @author      Sub_Equipo1
@@ -115,12 +116,14 @@ public class Usuario {
       *
       */
 
-    public void setDni(String Dni){
+    public void setDni(String Dni) throws SQLException{
         this.DNI=Dni;
     }
 
     public void setNombre(String Nombre){
         this.Nombre=Nombre;
+        System.out.println(Nombre);
+
     }
     public void setApellidos(String Apellidos){
         this.Apellidos=Apellidos;
@@ -157,6 +160,7 @@ public class Usuario {
     public void setTipo(String Tipo){
        this.Tipo=Tipo;
     }
+
 
 
 }
