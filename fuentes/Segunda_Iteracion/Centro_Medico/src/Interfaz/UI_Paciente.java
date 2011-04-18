@@ -15,6 +15,7 @@ import java.awt.Image;
 import Controlador.*;
 import CentroMedico.*;
 import BaseDatos.*;
+import java.util.Calendar.*;
 
 import java.sql.SQLException;
 import java.util.Calendar;
@@ -24,7 +25,7 @@ import javax.swing.JFileChooser;
 
 /**
  *
- * @author fran_gestion
+ * @author Nicolas_Sanchez
  */
 public class UI_Paciente extends javax.swing.JFrame {
 
@@ -42,30 +43,44 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         /**Mostramos el panel Principal*/
         mostrarPanel("Principal");
-        mostrarDatosPaciente(nombreUsuario);
+        identificarPaciente(nombreUsuario);
 
         /** Conectamos con la BD y tomamos los datos del paciente*/
        
-
-
-
         /**Ponemos icono de paciente logueado*/
         jLabelTipoUsuarioIdentificado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo-Usuario-Paciente.png"))); // NOI18N
     }
 
+    private void identificarPaciente( String nombreUsuario) throws SQLException{
 
-
-    private void mostrarDatosPaciente( String nombreUsuario) throws SQLException{
-
-        Usuario usu=null; // creamos el usuario
-        usuarioBD usuario_bd = new usuarioBD();
-
-        usu=usuario_bd.obtenerUsuarioNombre(nombreUsuario);
-
-       String nombre=usu.getNombre();
+        //trabajar con paciente no se puede, ya que su BD está mal
        
+        Usuario paci=null;
+        usuarioBD usu_bd=new usuarioBD ();
+        paci=usu_bd.obtenerUsuario(nombreUsuario);
+
+        mostrarDatosPaciente(paci);
+        cargarDatosCitaPaciente(paci);
+
+    }
+    
+    private void mostrarDatosPaciente(Usuario usu) throws SQLException{
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(usu.getFechaNacimiento());
+        int dia = calendar.get(Calendar.DAY_OF_MONTH);   //dia del mes
+        int mes = calendar.get(Calendar.MONTH);
+        mes=mes+1;//mes, de 0 a 11
+        int anio = calendar.get(Calendar.YEAR);  //año
+
+        String num_dia= String.valueOf(dia);
+        String num_mes= String.valueOf(mes);
+        String num_anio= String.valueOf(anio);
 
 
+        jTextFieldFechaNacimientoAnioPaciente.setText(num_anio);
+        jTextFieldFechaNacimientoDiaPaciente.setText(num_dia);
+        jTextFieldFechaNacimientoMesPaciente.setText(num_mes);
         jTextFieldNombrePaciente.setText(usu.getNombre());
         jTextFieldContraseniaPaciente.setText(usu.getContrasena());
         jTextFieldDNIPaciente.setText(usu.getDni());
@@ -75,21 +90,55 @@ public class UI_Paciente extends javax.swing.JFrame {
         jTextFieldEmailPaciente.setText(usu.getEmail());
         jTextFieldLugarNacimientoPaciente.setText(usu.getLugarNacimiento());
 
-        /*
-        jTextFieldFechaNacimientoAnioPaciente.setText(usu.)
-        jTextFieldFechaNacimientoDiaPaciente;
-        jTextFieldFechaNacimientoMesPaciente;
-       */
+        
+      
+       
        
         
 
     }
 
+    private void cargarDatosCitaPaciente( Usuario usu )throws SQLException{
+
+        citasBD cita_bd=new citasBD();
+        Cita nueva_cita = null;
+        boolean existe;
+
+        existe=cita_bd.existeCita(usu.getDni());
+
+        if(existe){
+
+            nueva_cita = cita_bd.obtenerCita(usu.getDni());
+
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(nueva_cita.getFecha());
+            int dia = calendar.get(Calendar.DAY_OF_MONTH);   //dia del mes
+            int mes = calendar.get(Calendar.MONTH);
+            mes=mes+1;//mes, de 0 a 11
+            int anio = calendar.get(Calendar.YEAR);  //año
+
+            String num_dia= String.valueOf(dia);
+            String num_mes= String.valueOf(mes);
+            String num_anio= String.valueOf(anio);
 
 
 
+            jTextFieldDNIMedico.setText(nueva_cita.getDniMedico());
+            jTextFieldDNIPacienteCita.setText(nueva_cita.getDniPaciente());
+            jTextFieldAnioCita.setText(num_anio);
+            jTextFieldDiaCita.setText(num_dia);
+            jTextFieldMesCita.setText(num_mes);
 
 
+             //la hora de la cita no está implementada
+
+
+        }
+           
+
+
+
+    }
 
 
 
