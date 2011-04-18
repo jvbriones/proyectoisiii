@@ -42,17 +42,22 @@ public class Intro extends javax.swing.JFrame {
         jLabelContrasenia = new javax.swing.JLabel();
         jLabelUsuario1 = new javax.swing.JLabel();
         jTextFieldUsuario = new javax.swing.JTextField();
-        jLabelCentroMedico = new javax.swing.JLabel();
-        jButtonEntrar = new javax.swing.JButton();
         jPasswordField1 = new javax.swing.JPasswordField();
         jLabelError = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jLabelIcono = new javax.swing.JLabel();
+        jLabelCentroMedico1 = new javax.swing.JLabel();
+        jLabelIconoAyuda = new javax.swing.JLabel();
+        jLabelIconoSalir = new javax.swing.JLabel();
+        jLabelAyuda = new javax.swing.JLabel();
+        jLabelSalir = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Centro Salud");
         setBackground(new java.awt.Color(255, 204, 102));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setMinimumSize(new java.awt.Dimension(470, 430));
+        setMinimumSize(new java.awt.Dimension(931, 715));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -65,18 +70,6 @@ public class Intro extends javax.swing.JFrame {
 
         jTextFieldUsuario.setColumns(10);
 
-        jLabelCentroMedico.setFont(new java.awt.Font("Lucida Grande", 1, 14));
-        jLabelCentroMedico.setText("Centro Médico");
-
-        jButtonEntrar.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        jButtonEntrar.setForeground(new java.awt.Color(255, 153, 0));
-        jButtonEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Entrar.png"))); // NOI18N
-        jButtonEntrar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jButtonEntrarMouseReleased(evt);
-            }
-        });
-
         jPasswordField1.setColumns(10);
         jPasswordField1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -88,64 +81,110 @@ public class Intro extends javax.swing.JFrame {
         jLabelError.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Error.png"))); // NOI18N
         jLabelError.setText("Usuario o contraseña erróneos");
 
+        jButton1.setText("Entrar");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButton1MouseReleased(evt);
+            }
+        });
+
         org.jdesktop.layout.GroupLayout jPanel1Layout = new org.jdesktop.layout.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanel1Layout.createSequentialGroup()
-                .add(63, 63, 63)
                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanel1Layout.createSequentialGroup()
-                        .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                            .add(jPanel1Layout.createSequentialGroup()
-                                .add(9, 9, 9)
-                                .add(jLabelUsuario1)
-                                .add(44, 44, 44))
-                            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .add(jLabelContrasenia)
-                                .add(30, 30, 30)))
+                        .add(28, 28, 28)
                         .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jTextFieldUsuario, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jPasswordField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 28, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .add(56, 56, 56)
-                        .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jPanel1Layout.createSequentialGroup()
-                                .add(21, 21, 21)
-                                .add(jButtonEntrar))
-                            .add(jLabelError))
-                        .add(79, 79, 79)))
-                .addContainerGap(30, Short.MAX_VALUE))
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(171, Short.MAX_VALUE)
-                .add(jLabelCentroMedico)
-                .add(162, 162, 162))
+                            .add(jLabelUsuario1)
+                            .add(jLabelContrasenia))
+                        .add(7, 7, 7)
+                        .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, jPasswordField1, 0, 0, Short.MAX_VALUE)
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, jTextFieldUsuario, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)))
+                    .add(jPanel1Layout.createSequentialGroup()
+                        .add(42, 42, 42)
+                        .add(jLabelError))
+                    .add(jPanel1Layout.createSequentialGroup()
+                        .add(121, 121, 121)
+                        .add(jButton1)))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .add(jLabelCentroMedico)
-                .add(18, 18, 18)
+                .add(31, 31, 31)
                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelUsuario1)
                     .add(jTextFieldUsuario, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(16, 16, 16)
-                .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jLabelContrasenia)
                     .add(jPasswordField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(6, 6, 6)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .add(jLabelError)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jButtonEntrar)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .add(18, 18, 18)
+                .add(jButton1)
+                .add(46, 46, 46))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 450, 230));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 10, 320, 180));
 
         jLabelIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Logo-Centro-Medico.png"))); // NOI18N
-        getContentPane().add(jLabelIcono, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 140, 163));
+        getContentPane().add(jLabelIcono, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 140, 150));
+
+        jLabelCentroMedico1.setText("Centro médico");
+        getContentPane().add(jLabelCentroMedico1, new org.netbeans.lib.awtextra.AbsoluteConstraints(177, 68, -1, -1));
+
+        jLabelIconoAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Ayuda-Desactivado.png"))); // NOI18N
+        jLabelIconoAyuda.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelIconoAyudaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabelIconoAyudaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelIconoAyudaMouseExited(evt);
+            }
+        });
+        getContentPane().add(jLabelIconoAyuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 70, -1, -1));
+
+        jLabelIconoSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Salir-Desactivado.png"))); // NOI18N
+        jLabelIconoSalir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelIconoSalirMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabelIconoSalirMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelIconoSalirMouseExited(evt);
+            }
+        });
+        getContentPane().add(jLabelIconoSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 70, -1, -1));
+
+        jLabelAyuda.setText("Ayuda");
+        getContentPane().add(jLabelAyuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 120, -1, -1));
+
+        jLabelSalir.setText("Salir");
+        getContentPane().add(jLabelSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 120, -1, -1));
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        org.jdesktop.layout.GroupLayout jPanel2Layout = new org.jdesktop.layout.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 998, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 498, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 1000, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -165,17 +204,45 @@ public class Intro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldUsuarioActionPerformed
 
-    private void jButtonEntrarMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonEntrarMouseReleased
+    private void jLabelIconoAyudaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoAyudaMouseClicked
         // TODO add your handling code here:
-        try {
-            // TODO add your handling code here:
-           ComprobarAcceso();
+        new Ayuda().setVisible(true);
+}//GEN-LAST:event_jLabelIconoAyudaMouseClicked
+
+    private void jLabelIconoAyudaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoAyudaMouseEntered
+        // TODO add your handling code here:
+        jLabelIconoAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Ayuda-Activado.png"))); // NOI18N
+}//GEN-LAST:event_jLabelIconoAyudaMouseEntered
+
+    private void jLabelIconoAyudaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoAyudaMouseExited
+        // TODO add your handling code here:
+        jLabelIconoAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Ayuda-Desactivado.png"))); // NOI18N
+}//GEN-LAST:event_jLabelIconoAyudaMouseExited
+
+    private void jLabelIconoSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoSalirMouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+}//GEN-LAST:event_jLabelIconoSalirMouseClicked
+
+    private void jLabelIconoSalirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoSalirMouseExited
+        // TODO add your handling code here:
+        jLabelIconoSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Salir-Desactivado.png"))); // NOI18N
+}//GEN-LAST:event_jLabelIconoSalirMouseExited
+
+    private void jLabelIconoSalirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIconoSalirMouseEntered
+        // TODO add your handling code here:
+        jLabelIconoSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Salir-Activado.png"))); // NOI18N
+}//GEN-LAST:event_jLabelIconoSalirMouseEntered
+
+    private void jButton1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseReleased
+         try {
+
+         ComprobarAcceso();
 
         } catch (SQLException ex) {
             Logger.getLogger(Intro.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-    }//GEN-LAST:event_jButtonEntrarMouseReleased
+    }//GEN-LAST:event_jButton1MouseReleased
 
     /**
      * Comprueba que los datos de acceso correspondan a algún usuario
@@ -242,13 +309,18 @@ public class Intro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonEntrar;
-    private javax.swing.JLabel jLabelCentroMedico;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabelAyuda;
+    private javax.swing.JLabel jLabelCentroMedico1;
     private javax.swing.JLabel jLabelContrasenia;
     private javax.swing.JLabel jLabelError;
     private javax.swing.JLabel jLabelIcono;
+    private javax.swing.JLabel jLabelIconoAyuda;
+    private javax.swing.JLabel jLabelIconoSalir;
+    private javax.swing.JLabel jLabelSalir;
     private javax.swing.JLabel jLabelUsuario1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextFieldUsuario;
     // End of variables declaration//GEN-END:variables
