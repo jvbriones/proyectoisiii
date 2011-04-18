@@ -858,7 +858,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabelErrorPaciente.setText("ERROR: revise los campos en rojo");
         jPanelGestionarPaciente.add(jLabelErrorPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 420, 230, -1));
 
-        jPanelGestionarPaciente.setBounds(0, 0, 901, 530);
+        jPanelGestionarPaciente.setBounds(1, 0, 900, 530);
         ZonaTrabajo.add(jPanelGestionarPaciente, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarPersonal.setMinimumSize(new java.awt.Dimension(901, 510));
@@ -1127,6 +1127,11 @@ public class UI_Administrador extends javax.swing.JFrame {
         jButtonGuardarPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonGuardarPersonalMouseClicked(evt);
+            }
+        });
+        jButtonGuardarPersonal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGuardarPersonalActionPerformed(evt);
             }
         });
         jPanelGestionarPersonal.add(jButtonGuardarPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 460, -1, 39));
@@ -2485,7 +2490,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
     private void jButtonFotoPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonFotoPacienteMouseClicked
         // TODO add your handling code here:
-        cargarFoto("GestnionarPaciente");
+        cargarFoto("GestionarPaciente");
     }//GEN-LAST:event_jButtonFotoPacienteMouseClicked
 
     private void jButtonFotoPersonalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonFotoPersonalMouseClicked
@@ -3081,11 +3086,40 @@ public class UI_Administrador extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         /**Mostramos el botón guardar paciente y ocultamos el de alta */
-        jButtonGuardarPaciente.setVisible(true);
+         /**Mostramos el botón guardar paciente y ocultamos el de alta */
+        if(compruebaCampoContrasena() == true){
+            jLabelErrorPersonal.setVisible(false);
+                try{
+                GestorUsuarios gestUsu = new GestorUsuarios();
+                ArrayList datos = new ArrayList();
+
+                datos = gestUsu.consultarDatosPersonalesAdmin(jTextFieldDNIPaciente.getText());
+
+                jTextFieldNombrePaciente.setText(datos.get(1).toString());
+                jTextFieldApellidosPaciente.setText(datos.get(2).toString());
+                jTextFieldDireccionPaciente.setText(datos.get(3).toString());
+                jTextFieldContraseniaPaciente.setText(datos.get(4).toString());
+                jTextFieldEmailPaciente.setText(datos.get(10).toString());
+                jTextFieldTelefonoPaciente.setText(datos.get(5).toString());
+                jTextFieldLugarNacimientoPaciente.setText(datos.get(7).toString());
+                String tipo = datos.get(9).toString();
+
+
+
+                jButtonGuardarPaciente.setVisible(true);
+                jButtonAltaPaciente.setVisible(false);
+
+                jLabelContraseniaPaciente.setVisible(true);
+                jTextFieldContraseniaPaciente.setVisible(true);
+            }catch(Exception E){}
+        }
+        else
+            jLabelErrorPaciente.setVisible(true);
+        /*jButtonGuardarPaciente.setVisible(true);
         jButtonAltaPaciente.setVisible(false);
 
         jLabelContraseniaPaciente.setVisible(true);
-        jTextFieldContraseniaPaciente.setVisible(true);
+        jTextFieldContraseniaPaciente.setVisible(true);*/
 
     }//GEN-LAST:event_jButtonConsultarPacienteMouseClicked
 
@@ -3910,10 +3944,28 @@ public class UI_Administrador extends javax.swing.JFrame {
     private void jButtonGuardarPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarPacienteMouseClicked
         // TODO add your handling code here:
 
-        if(compruebaFormulario("GestionarPaciente")){
+        if(compruebaFormulario("GestionarPersonal")){
+         GestorUsuarios gestUsu = new GestorUsuarios();
+         Date fechaNacimiento = null;                        //HAY QUE PROCESARLA LEYÉNDOLA DEL FORMULARIOOOO
+         String urlFoto = null;                              //HAY QUE GUARDAR LA FOTO Y PASAR LA RUTA DE DONDE ESTA
+         boolean exito;
+
+         try{
+          gestUsu.modificarDatosPersonalesAdmin(jTextFieldDNIPaciente.getText(), jTextFieldNombrePaciente.getText(), jTextFieldApellidosPaciente.getText(), jTextFieldDireccionPaciente.getText(), jTextFieldEmailPaciente.getText(), jTextFieldContraseniaPaciente.getText(), jTextFieldTelefonoPaciente.getText(), fechaNacimiento, jTextFieldLugarNacimientoPaciente.getText(), urlFoto);
+          new InformacionExito().setVisible(true);
+          limpiarFormulario("GestionarPersonal");
+
+         }catch (SQLException ex) {
+                Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        else
+            jLabelErrorPersonal.setVisible(true);
+
+        /*if(compruebaFormulario("GestionarPaciente")){
              new InformacionExito().setVisible(true);
         }else
-            jLabelErrorPaciente.setVisible(true);
+            jLabelErrorPaciente.setVisible(true);*/
     }//GEN-LAST:event_jButtonGuardarPacienteMouseClicked
 
     private void jButtonGuardarPersonalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarPersonalMouseClicked
@@ -3949,6 +4001,10 @@ public class UI_Administrador extends javax.swing.JFrame {
     private void jTextFieldApellidosPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldApellidosPacienteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldApellidosPacienteActionPerformed
+
+    private void jButtonGuardarPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGuardarPersonalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonGuardarPersonalActionPerformed
 
 
     /*Comprueba que la fecha introducida es correcta
