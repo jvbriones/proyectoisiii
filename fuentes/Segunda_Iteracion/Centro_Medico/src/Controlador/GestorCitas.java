@@ -15,6 +15,10 @@ import BaseDatos.PacBD;
 import CentroMedico.Paciente;
 import BaseDatos.citasBD;
 import java.sql.SQLException;
+import CentroMedico.Usuario;
+import CentroMedico.Cita;
+
+import java.util.*;
 
 /**
  * @version     1.0    03/04/2011
@@ -59,34 +63,55 @@ public class GestorCitas {
 //    public String alta_citaonline(){
 //    }
 
-   /* public String cancelarCitaOnline() throws SQLException{
+    public String cancelarCitaOnline(Usuario usu) throws SQLException{
 
         citasBD bd_citas=new citasBD();
 
         String Dni=new String();
-        Dni=user.getDni();
+        Dni=usu.getDni();
 
         boolean existe;
         existe=bd_citas.existeCita(Dni);
 
         if(!existe) {
-            this.mostrarErrorCita();
+            //this.mostrarErrorCita();
             return "No existe Ninguna cita con ese "+Dni;
         }
 
-        Cita cita=new Cita();
+        Cita cita=null;
         cita=bd_citas.obtenerCita(Dni);
 
-        Date fecha=new Date();
+        Date fecha=null;
         fecha=cita.getFecha();
 
-        //no se como se hace
+        
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(fecha);
+        int dia = calendar.get(Calendar.DAY_OF_MONTH);   //dia del mes
+        int mes = calendar.get(Calendar.MONTH);
+        mes=mes+1;//mes, de 0 a 11
+        int anio = calendar.get(Calendar.YEAR);  //año
+
+
+        // desde la interfaz se manda un mensaje por pantalla para eliminar la cita
+        // si dice que si, se viene aquí de nuevo, y se hace las operaciones del DS
+        // si dice que no, desde la interfaz, se finaliza la operacion.
+
+
+
+
+
+
+      
 
         cita.setEstado(false);
         bd_citas.almacenarCita(cita);
-        //falta
+
+
+       return " cita cancelada";
     }
 
+    /*
     public String cancelarCita(String Dni) throws SQLException{
 
         citasBD bd_citas=new citasBD();

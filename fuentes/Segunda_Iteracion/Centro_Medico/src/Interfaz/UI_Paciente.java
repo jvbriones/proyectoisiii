@@ -16,9 +16,10 @@ import Controlador.*;
 import CentroMedico.*;
 import BaseDatos.*;
 import java.util.Calendar.*;
+import java.util.Calendar;
 
 import java.sql.SQLException;
-import java.util.Calendar;
+
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 
@@ -139,9 +140,6 @@ public class UI_Paciente extends javax.swing.JFrame {
 
 
     }
-
-
-
 
     /** This method is called from within the constructor to
      * initialize the form.
@@ -1169,6 +1167,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void jButtonLimpiarCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimpiarCitaActionPerformed
         // TODO add your handling code here:
+        limpiarFormulario("GestionarCitaOnlineAlta");
 }//GEN-LAST:event_jButtonLimpiarCitaActionPerformed
 
     private void jButtonMasMesFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasMesFechaActionPerformed
@@ -1571,6 +1570,11 @@ public class UI_Paciente extends javax.swing.JFrame {
 }//GEN-LAST:event_jTextFieldLugarNacimientoPacienteKeyTyped
 
     private void jButtonLimpiarCita1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonLimpiarCita1MouseClicked
+
+
+
+
+
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonLimpiarCita1MouseClicked
 

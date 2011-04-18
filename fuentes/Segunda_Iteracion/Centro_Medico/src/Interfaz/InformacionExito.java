@@ -36,11 +36,9 @@ public class InformacionExito extends javax.swing.JFrame {
         jLabelInformacion = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setLocation(new java.awt.Point(320, 200));
 
         jPanel2.setBackground(new java.awt.Color(255, 204, 102));
         jPanel2.setMaximumSize(new java.awt.Dimension(519, 303));
-        jPanel2.setSize(new java.awt.Dimension(519, 303));
 
         jButtonAceptarInformacion1.setText("Aceptar");
         jButtonAceptarInformacion1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -62,7 +60,7 @@ public class InformacionExito extends javax.swing.JFrame {
                 .add(jLabelInformacion)
                 .addContainerGap(28, Short.MAX_VALUE))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(203, Short.MAX_VALUE)
+                .addContainerGap(231, Short.MAX_VALUE)
                 .add(jButtonAceptarInformacion1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 126, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(196, 196, 196))
         );

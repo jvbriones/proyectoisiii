@@ -4644,13 +4644,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
     }
 
-    private void rellenarDatos(){
 
-
-
-
-
-    }
 
 
 
