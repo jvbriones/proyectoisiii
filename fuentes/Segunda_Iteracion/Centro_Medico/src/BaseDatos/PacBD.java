@@ -63,7 +63,7 @@ public class PacBD {
 
         // El diseño no se corresponde con al modelo de la base de datos
         // Hay que ejecutar estas 2 sentencias
-        String Consulta = "INSERT INTO Usuarios VALUES ('"+dni+"','"+nombre+"','"+apellidos+"','"+direccion+"','"+email+"','"+contrasena+"','"+telefono+"',"+fecNac+",'"+lugarNac+"','"+foto+"','"+tipo+"')";
+        String Consulta = "INSERT INTO Usuarios VALUES ('"+dni+"','"+nombre+"','"+apellidos+"','"+contrasena+"','"+direccion+"','"+email+"','"+telefono+"',"+fecNac+",'"+lugarNac+"','"+foto+"','"+tipo+"')";
         conexion.consultaUpdate(Consulta);
 
         Consulta = "INSERT INTO Pacientes VALUES ('"+dni+"')";
