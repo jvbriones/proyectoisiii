@@ -197,7 +197,7 @@ public class Intro extends javax.swing.JFrame {
         if(tieneAcceso){
 
            
-            String nombreUsu = gesUsu.consultarDatosPersonales();
+            String nombreUsu = gesUsu.consultarDatosPersonales().get(0).toString();
             String tipoUsu = gesUsu.consultarTipoUsuario();
 
             

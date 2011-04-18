@@ -91,10 +91,11 @@ public class GestorUsuarios {
        return "Operacion Realizada con Exito";
     }
 
-    public String consultarDatosPersonalesAdmin(String DNI) throws SQLException{
+    public ArrayList consultarDatosPersonalesAdmin(String DNI) throws SQLException{
 
         usuarioBD usuario_bd = new usuarioBD();
         boolean Existe=usuario_bd.existeUsuario(DNI);
+        ArrayList salida = new ArrayList();
 
         if(Existe){
             Usuario userAux =usuario_bd.obtenerUsuario(DNI);
@@ -111,16 +112,29 @@ public class GestorUsuarios {
             String foto=userAux.getFotografia();
             String tipo=userAux.getTipo();
 
-            String salida=dni + nombre;//hay que integrarlo con la interfaz
+
+            salida.add(dni);
+            salida.add(nombre);
+            salida.add(apellidos);
+            salida.add(direccion);
+            salida.add(contrasena);
+            salida.add(telefono);
+            salida.add(fecNac);
+            salida.add(lugarNac);
+            salida.add(foto);
+            salida.add(tipo);
+            salida.add(email);
+
+
+
             return salida;
-            
+
         }else{
-            
-            return"No existe ningun Usuario con ese Dni";
+            salida.add("No existe ningun Usuario con ese Dni");
+            return salida;
         }
 
     }
-
 
  
     public String consultarTipoUsuario( )throws SQLException{
@@ -130,9 +144,10 @@ public class GestorUsuarios {
 
 
 
-    public String consultarDatosPersonales() throws SQLException{        
+    public ArrayList consultarDatosPersonales() throws SQLException{
 
-        
+        ArrayList salida = new ArrayList();
+
         String dni=user.getDni();
         String nombre=user.getNombre();
         String apellidos=user.getApellidos();
@@ -145,9 +160,13 @@ public class GestorUsuarios {
         String foto=user.getFotografia();
         String tipo=user.getTipo();
 
-        String salida= dni;//hay que integrarlo con la interfaz
+        salida.add(nombre);
+        salida.add(dni);
+        salida.add(contrasena);
+
         return salida;
-        
+
+
     }
 
 

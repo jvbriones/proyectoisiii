@@ -21,6 +21,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import Controlador.*;
 import java.util.Date;
+import java.util.*;
 
 
 /**
@@ -3094,13 +3095,44 @@ public class UI_Administrador extends javax.swing.JFrame {
 
     private void jButtonConsultarPersonalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarPersonalMouseClicked
         // TODO add your handling code here:
+        // TODO add your handling code here:
 
         /**Mostramos el botón guardar paciente y ocultamos el de alta */
-        jButtonGuardarPersonal.setVisible(true);
-        jButtonAltaPersonal.setVisible(false);
+        if(compruebaCampoContrasena() == true){
+            jLabelErrorPersonal.setVisible(false);
+                try{
+                GestorUsuarios gestUsu = new GestorUsuarios();
+                ArrayList datos = new ArrayList();
 
-        jLabelContraseniaPersonal.setVisible(true);
-        jTextFieldContraseniaPersonal.setVisible(true);
+                datos = gestUsu.consultarDatosPersonalesAdmin(jTextFieldDNIPersonal.getText());
+
+                jTextFieldNombrePersonal.setText(datos.get(1).toString());
+                jTextFieldApellidosPersonal.setText(datos.get(2).toString());
+                jTextFieldDireccionPersonal.setText(datos.get(3).toString());
+                jTextFieldContraseniaPersonal.setText(datos.get(4).toString());
+                jTextFieldEmailPersonal.setText(datos.get(10).toString());
+                jTextFieldTelefonoPersonal.setText(datos.get(5).toString());
+                jTextFieldLugarNacimientoPersonal.setText(datos.get(7).toString());
+                String tipo = datos.get(9).toString();
+
+                if(tipo.equals("Analista"))
+                    jRadioButtonAnalista.setSelected(true);
+                else if(tipo.equals("Medico"))
+                    jRadioButtonMedico.setSelected(true);
+                else if(tipo.equals("Farmaceutico"))
+                    jRadioButtonFarmaceutico.setSelected(true);
+                else if(tipo.equals("Radiologo"))
+                    jRadioButtonRadiologo.setSelected(true);
+
+                jButtonGuardarPersonal.setVisible(true);
+                jButtonAltaPersonal.setVisible(false);
+
+                jLabelContraseniaPersonal.setVisible(true);
+                jTextFieldContraseniaPersonal.setVisible(true);
+            }catch(Exception E){}
+        }
+        else
+            jLabelErrorPersonal.setVisible(true);
 }//GEN-LAST:event_jButtonConsultarPersonalMouseClicked
 
     private void jButtonAltaCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAltaCitaMouseClicked
@@ -3817,9 +3849,36 @@ public class UI_Administrador extends javax.swing.JFrame {
     private void jButtonAltaPersonalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAltaPersonalMouseClicked
         // TODO add your handling code here:
 
+
         if(compruebaFormulario("GestionarPersonal")){
-             new InformacionExito().setVisible(true);
-        }else
+            GestorPersonal gesPer = new GestorPersonal();
+            Date fechaNacimiento = null;                        //HAY QUE PROCESARLA LEYÉNDOLA DEL FORMULARIOOOO
+            String urlFoto = null;                              //HAY QUE GUARDAR LA FOTO Y PASAR LA RUTA DE DONDE ESTA
+            boolean exito;
+            String tipoPersonal = "Analista";
+            if(jRadioButtonAnalista.isSelected())
+                tipoPersonal = "Analista";
+            else if(jRadioButtonMedico.isSelected())
+                tipoPersonal = "Medico";
+            else if(jRadioButtonRadiologo.isSelected())
+                tipoPersonal = "Radiologo";
+            else if(jRadioButtonFarmaceutico.isSelected())
+                tipoPersonal = "Farmaceutico";
+
+            try {
+                exito = gesPer.altaPersonal(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(), jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), urlFoto, tipoPersonal);
+                if(exito){
+                    new InformacionExito().setVisible(true);
+                    limpiarFormulario("GestionarPersonal");
+                    }
+                else
+                    new InformacionError().setVisible(true);
+
+            } catch (SQLException ex) {
+                Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        else
             jLabelErrorPersonal.setVisible(true);
     }//GEN-LAST:event_jButtonAltaPersonalMouseClicked
 
@@ -3861,8 +3920,29 @@ public class UI_Administrador extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         if(compruebaFormulario("GestionarPersonal")){
-             new InformacionExito().setVisible(true);
-        }else
+        GestorUsuarios gestUsu = new GestorUsuarios();
+         Date fechaNacimiento = null;                        //HAY QUE PROCESARLA LEYÉNDOLA DEL FORMULARIOOOO
+         String urlFoto = null;                              //HAY QUE GUARDAR LA FOTO Y PASAR LA RUTA DE DONDE ESTA
+         boolean exito;
+         String tipoPersonal = "Analista";
+         if(jRadioButtonAnalista.isSelected())
+                tipoPersonal = "Analista";
+         else if(jRadioButtonMedico.isSelected())
+                tipoPersonal = "Medico";
+         else if(jRadioButtonRadiologo.isSelected())
+                tipoPersonal = "Radiologo";
+         else if(jRadioButtonFarmaceutico.isSelected())
+                tipoPersonal = "Farmaceutico";
+        try{
+        gestUsu.modificarDatosPersonalesAdmin(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(), jTextFieldContraseniaPersonal.getText(), jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), urlFoto);
+        new InformacionExito().setVisible(true);
+        limpiarFormulario("GestionarPersonal");
+
+        }catch (SQLException ex) {
+                Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        else
             jLabelErrorPersonal.setVisible(true);
     }//GEN-LAST:event_jButtonGuardarPersonalMouseClicked
 
@@ -4664,7 +4744,19 @@ public class UI_Administrador extends javax.swing.JFrame {
     }
 
 
+    private boolean compruebaCampoContrasena(){
 
+        boolean correcto = true;
+
+            if(jTextFieldDNIPersonal.getText().length() != 9){
+                jLabelDNIPersonal.setBackground(Color.red);
+                return false;
+                }else{
+                jLabelDNIPersonal.setBackground(Color.black);
+            }
+
+        return correcto;
+    }
 
 
 
