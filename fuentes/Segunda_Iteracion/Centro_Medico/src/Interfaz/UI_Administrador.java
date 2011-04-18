@@ -3819,7 +3819,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             
             try {
                 exito = gesPac.altaPaciente(jTextFieldDNIPaciente.getText(), jTextFieldNombrePaciente.getText(), jTextFieldApellidosPaciente.getText(), jTextFieldDireccionPaciente.getText(), jTextFieldEmailPaciente.getText(), jTextFieldTelefonoPaciente.getText(), fechaNacimiento, jTextFieldLugarNacimientoPaciente.getText(), urlFoto, "Paciente");
-                if(exito){
+                if(!exito){
                     new InformacionExito().setVisible(true);
                     }
                 else
