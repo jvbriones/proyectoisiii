@@ -3087,8 +3087,8 @@ public class UI_Administrador extends javax.swing.JFrame {
         
         /**Mostramos el botón guardar paciente y ocultamos el de alta */
          /**Mostramos el botón guardar paciente y ocultamos el de alta */
-        if(compruebaCampoContrasena() == true){
-            jLabelErrorPersonal.setVisible(false);
+        if(compruebaCampoContrasena2() == true){
+            jLabelErrorPaciente.setVisible(false);
                 try{
                 GestorUsuarios gestUsu = new GestorUsuarios();
                 ArrayList datos = new ArrayList();
@@ -4809,6 +4809,20 @@ public class UI_Administrador extends javax.swing.JFrame {
                 return false;
                 }else{
                 jLabelDNIPersonal.setBackground(Color.black);
+            }
+
+        return correcto;
+    }
+
+    private boolean compruebaCampoContrasena2(){
+
+        boolean correcto = true;
+
+            if(jTextFieldDNIPaciente.getText().length() != 9){
+                jLabelDNIPaciente.setBackground(Color.red);
+                return false;
+                }else{
+                jLabelDNIPaciente.setBackground(Color.black);
             }
 
         return correcto;
