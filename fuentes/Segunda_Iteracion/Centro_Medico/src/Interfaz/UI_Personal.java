@@ -12,13 +12,14 @@
 package Interfaz;
 
 import java.awt.Image;
-import Controlador.*;
 import CentroMedico.*;
 import BaseDatos.*;
 import java.util.Calendar.*;
 import java.util.Calendar;
 
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
@@ -45,7 +46,11 @@ public class UI_Personal extends javax.swing.JFrame {
 
         /**Mostramos el panel Principal*/
         mostrarPanel("Principal");
-        identificarPersonal(nombreUsuario);
+        try {
+            identificarPersonal(nombreUsuario);
+        } catch (SQLException ex) {
+            Logger.getLogger(UI_Personal.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
         /**Cargamos la foto de login*/
         jLabelTipoUsuarioIdentificado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo-Usuario-Personal.png"))); // NOI18N
