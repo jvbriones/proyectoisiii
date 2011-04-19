@@ -16,7 +16,7 @@ import BaseDatos.*;
 import java.sql.SQLException;
 /**
  * @version     v1.0    01/04/2011
- * @author      Sub_Equipo1
+ * @author      Sub_Equipo2
  */
 
 public class Usuario {

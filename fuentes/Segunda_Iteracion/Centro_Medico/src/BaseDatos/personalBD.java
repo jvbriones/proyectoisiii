@@ -17,7 +17,7 @@ import java.sql.*;
 
 /**
  * @version     1.0     02/04/2011
- * @author      Sub_Equipo1
+ * @author      Sub_Equipo2
  */
 public class personalBD {
 

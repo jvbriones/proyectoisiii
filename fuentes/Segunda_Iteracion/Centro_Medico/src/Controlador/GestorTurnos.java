@@ -19,7 +19,7 @@ import java.text.SimpleDateFormat;
 
 /**
  * @version     1.0     03/04/2011
- * @author      Sub_Equipo1
+ * @author      Sub_Equipo2
  */
 public class GestorTurnos {
     

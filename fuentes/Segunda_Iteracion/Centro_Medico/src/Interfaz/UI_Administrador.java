@@ -26,7 +26,8 @@ import java.util.*;
 
 /**
  *
- * @author fran_gestion
+ * @author Adrian Selva
+ * @author Pedro Luis
  */
 public class UI_Administrador extends javax.swing.JFrame {
 
