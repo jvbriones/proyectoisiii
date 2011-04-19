@@ -37,7 +37,7 @@ public class UI_Personal extends javax.swing.JFrame {
         initComponents();
     }
 
-    public UI_Personal(String nombreUsuario, String tipoUsuario){
+    public UI_Personal(String nombreUsuario, String tipoUsuario) throws SQLException{
         initComponents();
 
         /**Ponemos las etiquetas del usuario que ha entrado*/

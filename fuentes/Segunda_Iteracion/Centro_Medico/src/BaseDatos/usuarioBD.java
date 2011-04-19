@@ -31,25 +31,25 @@ public class usuarioBD {
 
         boolean acceso=false;
 
-        Connection con=null;//obtener una conexión a base de dato
+       // Connection con=null;//obtener una conexión a base de dato
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor,NombreDB, user,pass);
 
         String Consulta = "SELECT Dni , Contrasena FROM Usuarios WHERE Dni='"+Dni+"' and Contrasena='"+Pass+"'";
-       PreparedStatement ps = con.prepareStatement(Consulta);
-       ps.setString(1,Dni); // toma los datos como
-       ps.setString(2,Pass);
-        //ResultSet rs = conexion.consultaSelect(Consulta);
-        ResultSet rs = ps.executeQuery();
+       //PreparedStatement ps = con.prepareStatement(Consulta);
+      // ps.setString(1,Dni); // toma los datos como
+       //ps.setString(2,Pass);
+        ResultSet rs = conexion.consultaSelect(Consulta);
+        //ResultSet rs = ps.executeQuery();
        if(rs.next()) {
             acceso=true;
         }
         else {
             acceso=false;
         }
-        con.close();
-        ps.close();
+        //con.close();
+        //ps.close();
         conexion.closeConnection();
         return acceso;
     }

@@ -297,7 +297,7 @@ public class Intro extends javax.swing.JFrame {
             p.setVisible(true);
             this.setVisible(false);
         }
-        else if(nombre.equals("Perso") && contrasenia.equals("Perso")){
+        else if(nombre.equals("Person") && contrasenia.equals("Person")){
             UI_Personal p = new UI_Personal(nombre,"Personal");
             p.setVisible(true);
             this.setVisible(false);
