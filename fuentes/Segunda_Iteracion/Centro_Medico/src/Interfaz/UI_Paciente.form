@@ -33,7 +33,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabelCentroMedico">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Centro m&#xe9;dico"/>
+        <Property name="text" type="java.lang.String" value="Centro M&#xe9;dico"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

@@ -134,7 +134,7 @@ public class Intro extends javax.swing.JFrame {
         jLabelIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Logo-Centro-Medico.png"))); // NOI18N
         getContentPane().add(jLabelIcono, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 140, 150));
 
-        jLabelCentroMedico1.setText("Centro médico");
+        jLabelCentroMedico1.setText("Centro Médico");
         getContentPane().add(jLabelCentroMedico1, new org.netbeans.lib.awtextra.AbsoluteConstraints(177, 68, -1, -1));
 
         jLabelIconoAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Ayuda-Desactivado.png"))); // NOI18N
