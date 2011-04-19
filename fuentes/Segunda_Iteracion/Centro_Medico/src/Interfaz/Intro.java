@@ -285,8 +285,13 @@ public class Intro extends javax.swing.JFrame {
                 this.setVisible(false);
             }
         }
-
-        
+        //MODIFICADO POR POPE PARA PRUEBAS DESDE AKI
+        else if(nombre.equals("Admin") && contrasenia.equals("Admin")){
+            UI_Administrador p = new UI_Administrador(nombre,"Admin");
+            p.setVisible(true);
+            this.setVisible(false);
+        }
+        //HASTA AQUI MODIFICADO POR POPE PARA PRUEBAS
         else if(nombre.equals("Paci") && contrasenia.equals("Paci")){
             UI_Paciente p = new UI_Paciente(nombre,"Paciente");
             p.setVisible(true);
@@ -302,6 +307,7 @@ public class Intro extends javax.swing.JFrame {
             jLabelError.setVisible(true);
         }
     }
+    
     /**
     * @param args the command line arguments
     */
