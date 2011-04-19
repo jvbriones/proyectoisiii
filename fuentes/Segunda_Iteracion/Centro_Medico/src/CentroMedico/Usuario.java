@@ -14,11 +14,11 @@ package CentroMedico;
 import java.util.*;
 import BaseDatos.*;
 import java.sql.SQLException;
+
 /**
- * @version     v1.0    01/04/2011
+ * @version     1.1     16/04/2011
  * @author      Sub_Equipo2
  */
-
 public class Usuario {
 
     private String DNI=null;

@@ -11,10 +11,12 @@
 
 package Interfaz;
 
+
 /**
- *
- * @author fran_gestion
+ * @version     1.1     16/04/2011
+ * @author      Sub_Equipo2
  */
+
 public class Ayuda extends javax.swing.JFrame {
 
     /** Creates new form Ayuda */

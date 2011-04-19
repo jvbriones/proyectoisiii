@@ -16,8 +16,9 @@ import CentroMedico.Paciente;
 import java.sql.SQLException;
 import java.util.Date;
 
+
 /**
- * @version     1.0    02/04/2011
+ * @version     1.1     16/04/2011
  * @author      Sub_Equipo2
  */
 

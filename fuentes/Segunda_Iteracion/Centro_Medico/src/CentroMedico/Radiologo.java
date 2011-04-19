@@ -14,10 +14,9 @@ package CentroMedico;
 import java.util.*;
 
 /**
- * @version     1.0     02/04/2011
+ * @version     1.1     16/04/2011
  * @author      Sub_Equipo2
  */
-
 public class Radiologo extends Personal{
 
     public Radiologo(String Dni, String Nombre, String Apellidos, String Direccion, String Email, String Contrasena,

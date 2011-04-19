@@ -17,10 +17,12 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
+
 /**
- * @version     1.0     03/04/2011
+ * @version     1.1     16/04/2011
  * @author      Sub_Equipo2
  */
+
 public class GestorTurnos {
     
     public String altaTurno(String tipo)throws SQLException {

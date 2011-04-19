@@ -16,7 +16,7 @@ import java.sql.*;
 
 
 /**
- * @version     1.0     02/04/2011
+ * @version     1.1     16/04/2011
  * @author      Sub_Equipo2
  */
 

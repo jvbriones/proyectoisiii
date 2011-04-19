@@ -15,13 +15,14 @@ import CentroMedico.Usuario;
 import java.sql.*;
 
 
+
 /**
- * @version     v1.0    01/04/2011
+ * @version     1.1     16/04/2011
  * @author      Sub_Equipo2
  */
 public class usuarioBD {
 
-    String IpDelServidor="localhost";
+    String IpDelServidor="85.61.7.27";
     String NombreDB="CentroMedico";
     String user="personal";
     String pass="personal";

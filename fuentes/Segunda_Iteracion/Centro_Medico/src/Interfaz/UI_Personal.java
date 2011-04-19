@@ -915,10 +915,10 @@ public class UI_Personal extends javax.swing.JFrame {
             .add(jPanelConsultarTurnoLayout.createSequentialGroup()
                 .add(65, 65, 65)
                 .add(jLabelGestionarPaciente6)
-                .addContainerGap(409, Short.MAX_VALUE))
+                .addContainerGap(478, Short.MAX_VALUE))
             .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(jPanelConsultarTurnoLayout.createSequentialGroup()
-                    .add(50, 115, Short.MAX_VALUE)
+                    .add(50, 149, Short.MAX_VALUE)
                     .add(jLabel9)
                     .add(24, 24, 24)
                     .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -963,7 +963,7 @@ public class UI_Personal extends javax.swing.JFrame {
                         .add(jButtonMenosMesFechaFinTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(jButtonMenosAnioFechaFinTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(jRadioButtonNoche))
-                    .add(0, 66, Short.MAX_VALUE)))
+                    .add(0, 101, Short.MAX_VALUE)))
         );
 
         jPanelConsultarTurno.setBounds(0, 0, 860, 531);

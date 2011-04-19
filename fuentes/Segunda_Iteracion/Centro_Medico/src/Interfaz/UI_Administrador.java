@@ -326,7 +326,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabelCentroMedico.setText("Centro médico");
         getContentPane().add(jLabelCentroMedico);
-        jLabelCentroMedico.setBounds(177, 68, 104, 18);
+        jLabelCentroMedico.setBounds(177, 68, 94, 17);
 
         jLabelIconoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Inicio-Desactivado.png"))); // NOI18N
         jLabelIconoInicio.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -345,7 +345,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabelInicio.setText("Inicio");
         getContentPane().add(jLabelInicio);
-        jLabelInicio.setBounds(410, 120, 44, 18);
+        jLabelInicio.setBounds(410, 120, 44, 17);
 
         jLabelIconoAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Ayuda-Desactivado.png"))); // NOI18N
         jLabelIconoAyuda.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -379,11 +379,11 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabelAyuda.setText("Ayuda");
         getContentPane().add(jLabelAyuda);
-        jLabelAyuda.setBounds(500, 120, 44, 18);
+        jLabelAyuda.setBounds(500, 120, 44, 17);
 
         jLabelSalir.setText("Salir");
         getContentPane().add(jLabelSalir);
-        jLabelSalir.setBounds(590, 120, 29, 18);
+        jLabelSalir.setBounds(590, 120, 28, 17);
 
         jLabelIconoImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Imprimir-Desactivado.png"))); // NOI18N
         jLabelIconoImprimir.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -417,18 +417,18 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabelImprimir.setText("Imprimir");
         getContentPane().add(jLabelImprimir);
-        jLabelImprimir.setBounds(310, 160, 60, 18);
+        jLabelImprimir.setBounds(310, 160, 60, 17);
 
         jLabelGuardarPDF.setText("GuardarPDF");
         getContentPane().add(jLabelGuardarPDF);
-        jLabelGuardarPDF.setBounds(200, 160, 80, 18);
+        jLabelGuardarPDF.setBounds(200, 160, 80, 17);
 
         jPanelUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jPanelUsuario.setLayout(null);
 
         jLabelUsuario.setText("Usuario:");
         jPanelUsuario.add(jLabelUsuario);
-        jLabelUsuario.setBounds(90, 0, 56, 18);
+        jLabelUsuario.setBounds(90, 0, 53, 17);
 
         jLabelTipoUsuario.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelTipoUsuario.setText("Tipo Usuario");
@@ -540,7 +540,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jLabelEstadPersFecha1)
                 .add(106, 106, 106)
                 .add(jLabelEstadPersTipo1)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 51, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 83, Short.MAX_VALUE)
                 .add(jLabelGestionarCita1)
                 .add(117, 117, 117))
             .add(jPanelPrincipalLayout.createSequentialGroup()
@@ -574,10 +574,10 @@ public class UI_Administrador extends javax.swing.JFrame {
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelPrincipalLayout.createSequentialGroup()
                 .add(29, 29, 29)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadPersTipo, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadCitas, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadPersFecha, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE))
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadPersTipo, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadCitas, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadPersFecha, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelEstadCitas1)
@@ -586,9 +586,9 @@ public class UI_Administrador extends javax.swing.JFrame {
                     .add(jLabelGestionarCita1))
                 .add(45, 45, 45)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jButtonGestionarTurno, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
-                    .add(jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
-                    .add(jButtonGestionarPersonal, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE))
+                    .add(jButtonGestionarTurno, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
+                    .add(jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
+                    .add(jButtonGestionarPersonal, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelGestionarPaciente3)
@@ -1202,7 +1202,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarTurno.add(jButtonGuardarTurno);
-        jButtonGuardarTurno.setBounds(340, 440, 68, 39);
+        jButtonGuardarTurno.setBounds(340, 440, 64, 39);
 
         jButtonLimpiarTurno.setText("Limpiar");
         jButtonLimpiarTurno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1216,11 +1216,11 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarTurno.add(jButtonLimpiarTurno);
-        jButtonLimpiarTurno.setBounds(220, 440, 62, 39);
+        jButtonLimpiarTurno.setBounds(220, 440, 59, 39);
 
         jLabelDNITurno.setText("DNI");
         jPanelGestionarTurno.add(jLabelDNITurno);
-        jLabelDNITurno.setBounds(350, 260, 25, 18);
+        jLabelDNITurno.setBounds(350, 260, 23, 17);
 
         jTextFieldDNIGestionarTurno.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -1228,7 +1228,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarTurno.add(jTextFieldDNIGestionarTurno);
-        jTextFieldDNIGestionarTurno.setBounds(390, 250, 95, 28);
+        jTextFieldDNIGestionarTurno.setBounds(390, 250, 95, 27);
 
         jTextAreaInfoConsultaTurno.setBackground(new java.awt.Color(255, 204, 102));
         jTextAreaInfoConsultaTurno.setColumns(17);
@@ -1274,7 +1274,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarTurno.add(jTextFieldMesInicioTurno);
-        jTextFieldMesInicioTurno.setBounds(160, 350, 33, 28);
+        jTextFieldMesInicioTurno.setBounds(160, 350, 33, 27);
 
         jTextFieldAnioInicioTurno.setEditable(false);
         jTextFieldAnioInicioTurno.setText("1950");
@@ -1284,7 +1284,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarTurno.add(jTextFieldAnioInicioTurno);
-        jTextFieldAnioInicioTurno.setBounds(200, 350, 50, 28);
+        jTextFieldAnioInicioTurno.setBounds(200, 350, 50, 27);
 
         jButtonMasAnioFechaInicioTurno.setText("+");
         jButtonMasAnioFechaInicioTurno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1308,11 +1308,11 @@ public class UI_Administrador extends javax.swing.JFrame {
         jTextFieldDiaInicioTurno.setEditable(false);
         jTextFieldDiaInicioTurno.setText("1");
         jPanelGestionarTurno.add(jTextFieldDiaInicioTurno);
-        jTextFieldDiaInicioTurno.setBounds(110, 350, 33, 28);
+        jTextFieldDiaInicioTurno.setBounds(110, 350, 33, 27);
 
         jLabelFechaInicioTurno.setText("Fecha inicio");
         jPanelGestionarTurno.add(jLabelFechaInicioTurno);
-        jLabelFechaInicioTurno.setBounds(140, 290, 81, 18);
+        jLabelFechaInicioTurno.setBounds(140, 290, 74, 17);
 
         jButtonMasDiaFechaInicioTurno.setText("+");
         jButtonMasDiaFechaInicioTurno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1330,7 +1330,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabel5.setText("_____________________________________________________________________________");
         jPanelGestionarTurno.add(jLabel5);
-        jLabel5.setBounds(180, 70, 539, 18);
+        jLabel5.setBounds(180, 70, 539, 17);
 
         jButtonMasMesFechaInicioTurno.setText("+");
         jButtonMasMesFechaInicioTurno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1396,7 +1396,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarTurno.add(jTextFieldMesFinTurno);
-        jTextFieldMesFinTurno.setBounds(420, 350, 33, 28);
+        jTextFieldMesFinTurno.setBounds(420, 350, 33, 27);
 
         jTextFieldAnioFinTurno.setEditable(false);
         jTextFieldAnioFinTurno.setText("1950");
@@ -1406,7 +1406,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarTurno.add(jTextFieldAnioFinTurno);
-        jTextFieldAnioFinTurno.setBounds(460, 350, 50, 28);
+        jTextFieldAnioFinTurno.setBounds(460, 350, 50, 27);
 
         jButtonMasAnioFechaFinTurno.setText("+");
         jButtonMasAnioFechaFinTurno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1425,11 +1425,11 @@ public class UI_Administrador extends javax.swing.JFrame {
         jTextFieldDiaFinTurno.setEditable(false);
         jTextFieldDiaFinTurno.setText("1");
         jPanelGestionarTurno.add(jTextFieldDiaFinTurno);
-        jTextFieldDiaFinTurno.setBounds(370, 350, 33, 28);
+        jTextFieldDiaFinTurno.setBounds(370, 350, 33, 27);
 
         jLabelFechaFinTurno.setText("Fecha fin");
         jPanelGestionarTurno.add(jLabelFechaFinTurno);
-        jLabelFechaFinTurno.setBounds(400, 290, 74, 18);
+        jLabelFechaFinTurno.setBounds(400, 290, 74, 17);
 
         jButtonMasDiaFechaFinTurno.setText("+");
         jButtonMasDiaFechaFinTurno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1461,11 +1461,11 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabelTurnoTrabajo.setText("Turno de trabajo");
         jPanelGestionarTurno.add(jLabelTurnoTrabajo);
-        jLabelTurnoTrabajo.setBounds(610, 290, 110, 18);
+        jLabelTurnoTrabajo.setBounds(610, 290, 110, 17);
 
         jRadioButtonManiana.setText("Mañana (8h-16h)");
         jPanelGestionarTurno.add(jRadioButtonManiana);
-        jRadioButtonManiana.setBounds(600, 320, 150, 24);
+        jRadioButtonManiana.setBounds(600, 320, 150, 22);
 
         jRadioButtonTarde.setText("Tarde (16h-24h)");
         jRadioButtonTarde.addActionListener(new java.awt.event.ActionListener() {
@@ -1474,11 +1474,11 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarTurno.add(jRadioButtonTarde);
-        jRadioButtonTarde.setBounds(600, 350, 150, 24);
+        jRadioButtonTarde.setBounds(600, 350, 150, 22);
 
         jRadioButtonNoche.setText("Noche (24h-8h)");
         jPanelGestionarTurno.add(jRadioButtonNoche);
-        jRadioButtonNoche.setBounds(600, 380, 150, 24);
+        jRadioButtonNoche.setBounds(600, 380, 150, 22);
 
         jButtonBajaTurno.setText("Baja");
         jButtonBajaTurno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1510,7 +1510,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarCita.add(jButtonGuardarCita);
-        jButtonGuardarCita.setBounds(400, 440, 68, 39);
+        jButtonGuardarCita.setBounds(400, 440, 64, 39);
 
         jTextFieldDNIGestionarCitaPaciente.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -1518,11 +1518,11 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarCita.add(jTextFieldDNIGestionarCitaPaciente);
-        jTextFieldDNIGestionarCitaPaciente.setBounds(250, 220, 95, 28);
+        jTextFieldDNIGestionarCitaPaciente.setBounds(250, 220, 95, 27);
 
         jLabelDNIGestionarCita.setText("DNI Paciente");
         jPanelGestionarCita.add(jLabelDNIGestionarCita);
-        jLabelDNIGestionarCita.setBounds(160, 230, 90, 18);
+        jLabelDNIGestionarCita.setBounds(160, 230, 90, 17);
 
         jButtonLimpiarCita.setText("Limpiar");
         jButtonLimpiarCita.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1536,7 +1536,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarCita.add(jButtonLimpiarCita);
-        jButtonLimpiarCita.setBounds(280, 440, 62, 39);
+        jButtonLimpiarCita.setBounds(280, 440, 59, 39);
 
         jLabelGestionarPaciente5.setFont(new java.awt.Font("Lucida Grande", 1, 48));
         jLabelGestionarPaciente5.setText("Gestionar Cita Online");
@@ -1545,7 +1545,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabel4.setText("_____________________________________________________________________________");
         jPanelGestionarCita.add(jLabel4);
-        jLabel4.setBounds(180, 70, 539, 18);
+        jLabel4.setBounds(180, 70, 539, 17);
 
         jButtonCancelarCita.setText("Cancelar");
         jPanelGestionarCita.add(jButtonCancelarCita);
@@ -1576,7 +1576,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabelDNIGestionarCitaMedico.setText("DNI Médico");
         jPanelGestionarCita.add(jLabelDNIGestionarCitaMedico);
-        jLabelDNIGestionarCitaMedico.setBounds(460, 230, 80, 18);
+        jLabelDNIGestionarCitaMedico.setBounds(460, 230, 80, 17);
 
         jTextFieldDNIGestionarCitaMedico.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -1584,7 +1584,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarCita.add(jTextFieldDNIGestionarCitaMedico);
-        jTextFieldDNIGestionarCitaMedico.setBounds(570, 220, 95, 28);
+        jTextFieldDNIGestionarCitaMedico.setBounds(570, 220, 95, 27);
 
         jTextFieldMesCita.setEditable(false);
         jTextFieldMesCita.setText("1");
@@ -1833,7 +1833,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jPanelGestionarCitaHoraLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jButtonMenosHoraCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jButtonMenosMinutoCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         jPanelGestionarCita.add(jPanelGestionarCitaHora);
@@ -1876,7 +1876,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarCitaAltaLayout.setVerticalGroup(
             jPanelGestionarCitaAltaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarCitaAltaLayout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
+                .addContainerGap(22, Short.MAX_VALUE)
                 .add(jPanelGestionarCitaAltaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelGestionarCitaAltaHora)
                     .add(jLabelGestionarCitaAltaFecha)
@@ -2115,16 +2115,16 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelEstadCitas.add(jTextFieldAnioEstadCitasInicial);
-        jTextFieldAnioEstadCitasInicial.setBounds(210, 320, 50, 28);
+        jTextFieldAnioEstadCitasInicial.setBounds(210, 320, 50, 27);
 
         jLabelFechaCita1.setText("Fecha inicial");
         jPanelEstadCitas.add(jLabelFechaCita1);
-        jLabelFechaCita1.setBounds(150, 260, 84, 18);
+        jLabelFechaCita1.setBounds(150, 260, 77, 17);
 
         jTextFieldDiaEstadCitasInicial.setEditable(false);
         jTextFieldDiaEstadCitasInicial.setText("1");
         jPanelEstadCitas.add(jTextFieldDiaEstadCitasInicial);
-        jTextFieldDiaEstadCitasInicial.setBounds(120, 320, 33, 28);
+        jTextFieldDiaEstadCitasInicial.setBounds(120, 320, 33, 27);
 
         jButtonMasMesEstadCitasInicial.setText("+");
         jButtonMasMesEstadCitasInicial.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -2156,7 +2156,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabel13.setText("_____________________________________________________________________________");
         jPanelEstadCitas.add(jLabel13);
-        jLabel13.setBounds(180, 70, 539, 18);
+        jLabel13.setBounds(180, 70, 539, 17);
 
         jLabelEstadCitas.setFont(new java.awt.Font("Lucida Grande", 1, 48));
         jLabelEstadCitas.setText("Estadísticas citas");
@@ -2182,7 +2182,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelEstadCitas.add(jTextFieldMesEstadCitasInicial);
-        jTextFieldMesEstadCitasInicial.setBounds(170, 320, 33, 28);
+        jTextFieldMesEstadCitasInicial.setBounds(170, 320, 33, 27);
 
         jButtonMenosMesEstadCitasFinal.setText("-");
         jButtonMenosMesEstadCitasFinal.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -2248,16 +2248,16 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelEstadCitas.add(jTextFieldAnioEstadCitasFinal);
-        jTextFieldAnioEstadCitasFinal.setBounds(720, 320, 50, 28);
+        jTextFieldAnioEstadCitasFinal.setBounds(720, 320, 50, 27);
 
         jLabelFechaCita2.setText("Fecha final");
         jPanelEstadCitas.add(jLabelFechaCita2);
-        jLabelFechaCita2.setBounds(660, 260, 76, 18);
+        jLabelFechaCita2.setBounds(660, 260, 68, 17);
 
         jTextFieldDiaEstadCitasFinal.setEditable(false);
         jTextFieldDiaEstadCitasFinal.setText("1");
         jPanelEstadCitas.add(jTextFieldDiaEstadCitasFinal);
-        jTextFieldDiaEstadCitasFinal.setBounds(630, 320, 33, 28);
+        jTextFieldDiaEstadCitasFinal.setBounds(630, 320, 33, 27);
 
         jButtonMasMesEstadCitasFinal.setText("+");
         jButtonMasMesEstadCitasFinal.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -2295,7 +2295,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelEstadCitas.add(jTextFieldMesEstadCitasFinal);
-        jTextFieldMesEstadCitasFinal.setBounds(680, 320, 33, 28);
+        jTextFieldMesEstadCitasFinal.setBounds(680, 320, 33, 27);
 
         jTextAreaEstadCitas.setBackground(new java.awt.Color(255, 204, 102));
         jTextAreaEstadCitas.setColumns(20);
@@ -2308,11 +2308,11 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabel14.setText("Fecha");
         jPanelEstadCitas.add(jLabel14);
-        jLabel14.setBounds(335, 201, 42, 18);
+        jLabel14.setBounds(335, 201, 38, 17);
 
         jLabel15.setText("Nº de citas");
         jPanelEstadCitas.add(jLabel15);
-        jLabel15.setBounds(469, 201, 76, 18);
+        jLabel15.setBounds(469, 201, 70, 17);
 
         jPanelEstadCitas.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelEstadCitas, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -3955,6 +3955,7 @@ public class UI_Administrador extends javax.swing.JFrame {
           gestUsu.modificarDatosPersonalesAdmin(jTextFieldDNIPaciente.getText(), jTextFieldNombrePaciente.getText(), jTextFieldApellidosPaciente.getText(), jTextFieldDireccionPaciente.getText(), jTextFieldEmailPaciente.getText(), jTextFieldContraseniaPaciente.getText(), jTextFieldTelefonoPaciente.getText(), fechaNacimiento, jTextFieldLugarNacimientoPaciente.getText(), urlFoto);
           new InformacionExito().setVisible(true);
           limpiarFormulario("GestionarPersonal");
+          System.out.println("hola");
 
          }catch (SQLException ex) {
                 Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
