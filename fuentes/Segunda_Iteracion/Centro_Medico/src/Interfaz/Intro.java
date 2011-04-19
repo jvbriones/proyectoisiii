@@ -274,6 +274,11 @@ public class Intro extends javax.swing.JFrame {
                 this.setVisible(false);
 
             }
+            else if(tipoUsu.equals("Personal")){
+                UI_Personal per = new UI_Personal(nombre,"Personal");
+                per.setVisible(true);
+                this.setVisible(false);
+            }
             else{
                 UI_Administrador uiAdmin = new UI_Administrador(nombreUsu,"Administrador");
                  uiAdmin.setVisible(true);

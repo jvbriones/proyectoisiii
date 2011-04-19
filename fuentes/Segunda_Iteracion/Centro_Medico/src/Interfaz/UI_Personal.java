@@ -160,14 +160,13 @@ public class UI_Personal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 204, 102));
-        setLocation(new java.awt.Point(150, 22));
         setMinimumSize(new java.awt.Dimension(931, 715));
         setResizable(false);
         getContentPane().setLayout(null);
 
         jLabelCentroMedico.setText("Centro médico");
         getContentPane().add(jLabelCentroMedico);
-        jLabelCentroMedico.setBounds(177, 68, 92, 16);
+        jLabelCentroMedico.setBounds(177, 68, 104, 18);
 
         jLabelIconoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Inicio-Desactivado.png"))); // NOI18N
         jLabelIconoInicio.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -186,7 +185,7 @@ public class UI_Personal extends javax.swing.JFrame {
 
         jLabelInicio.setText("Inicio");
         getContentPane().add(jLabelInicio);
-        jLabelInicio.setBounds(420, 120, 44, 16);
+        jLabelInicio.setBounds(420, 120, 44, 18);
 
         jLabelIconoAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Ayuda-Desactivado.png"))); // NOI18N
         jLabelIconoAyuda.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -220,11 +219,11 @@ public class UI_Personal extends javax.swing.JFrame {
 
         jLabelAyuda.setText("Ayuda");
         getContentPane().add(jLabelAyuda);
-        jLabelAyuda.setBounds(500, 120, 44, 16);
+        jLabelAyuda.setBounds(500, 120, 44, 18);
 
         jLabelSalir.setText("Salir");
         getContentPane().add(jLabelSalir);
-        jLabelSalir.setBounds(590, 120, 27, 16);
+        jLabelSalir.setBounds(590, 120, 29, 18);
 
         jLabelIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Logo-Centro-Medico.png"))); // NOI18N
         getContentPane().add(jLabelIcono);
@@ -277,23 +276,23 @@ public class UI_Personal extends javax.swing.JFrame {
                     .add(jPanelPrincipalLayout.createSequentialGroup()
                         .add(121, 121, 121)
                         .add(jLabelConsultarTurno)))
-                .addContainerGap(393, Short.MAX_VALUE))
+                .addContainerGap(386, Short.MAX_VALUE))
         );
         jPanelPrincipalLayout.setVerticalGroup(
             jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanelPrincipalLayout.createSequentialGroup()
                 .add(29, 29, 29)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonConsultarDatosPersonales, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE))
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonConsultarDatosPersonales, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelGestionarPaciente3)
                     .add(jLabelConsultarTurno))
-                .add(330, 330, 330))
+                .add(331, 331, 331))
         );
 
-        jPanelPrincipal.setBounds(0, 0, 901, 530);
+        jPanelPrincipal.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelPrincipal, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelConsultarDatosPersonales.setPreferredSize(new java.awt.Dimension(901, 531));
@@ -301,12 +300,12 @@ public class UI_Personal extends javax.swing.JFrame {
 
         jLabel3.setText("___________________________________________________________________");
         jPanelConsultarDatosPersonales.add(jLabel3);
-        jLabel3.setBounds(256, 59, 469, 16);
+        jLabel3.setBounds(256, 59, 469, 18);
 
         jLabelGestionarPaciente4.setFont(new java.awt.Font("Lucida Grande", 1, 48));
         jLabelGestionarPaciente4.setText("Gestionar Personal");
         jPanelConsultarDatosPersonales.add(jLabelGestionarPaciente4);
-        jLabelGestionarPaciente4.setBounds(257, 20, 468, 58);
+        jLabelGestionarPaciente4.setBounds(257, 20, 516, 57);
 
         jTextFieldNombrePersonal.setEditable(false);
         jTextFieldNombrePersonal.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -333,7 +332,7 @@ public class UI_Personal extends javax.swing.JFrame {
 
         jLabelContraseniaPersonal.setText("Contraseña");
         jPanelConsultarDatosPersonales.add(jLabelContraseniaPersonal);
-        jLabelContraseniaPersonal.setBounds(729, 250, 71, 16);
+        jLabelContraseniaPersonal.setBounds(729, 250, 81, 18);
 
         jTextFieldDNIPersonal.setEditable(false);
         jTextFieldDNIPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -346,15 +345,15 @@ public class UI_Personal extends javax.swing.JFrame {
 
         jLabelNombrePersonal.setText("Nombre");
         jPanelConsultarDatosPersonales.add(jLabelNombrePersonal);
-        jLabelNombrePersonal.setBounds(157, 96, 50, 16);
+        jLabelNombrePersonal.setBounds(157, 96, 57, 18);
 
         jLabelFotografiaersonal.setText("Fotografía");
         jPanelConsultarDatosPersonales.add(jLabelFotografiaersonal);
-        jLabelFotografiaersonal.setBounds(610, 330, 64, 16);
+        jLabelFotografiaersonal.setBounds(610, 330, 72, 18);
 
         jLabelDNIPersonal.setText("DNI");
         jPanelConsultarDatosPersonales.add(jLabelDNIPersonal);
-        jLabelDNIPersonal.setBounds(757, 96, 24, 16);
+        jLabelDNIPersonal.setBounds(757, 96, 25, 18);
 
         jTextFieldLugarNacimientoPersonal.setEditable(false);
         jTextFieldLugarNacimientoPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -367,7 +366,7 @@ public class UI_Personal extends javax.swing.JFrame {
 
         jLabelTelefonoPersonal.setText("Teléfono");
         jPanelConsultarDatosPersonales.add(jLabelTelefonoPersonal);
-        jLabelTelefonoPersonal.setBounds(157, 250, 55, 16);
+        jLabelTelefonoPersonal.setBounds(157, 250, 64, 18);
 
         jTextFieldFechaNacimientoMesersonal.setEditable(false);
         jTextFieldFechaNacimientoMesersonal.setText("1");
@@ -381,11 +380,11 @@ public class UI_Personal extends javax.swing.JFrame {
 
         jLabelLugarNacimientoPersonal.setText("Lugar nacimiento");
         jPanelConsultarDatosPersonales.add(jLabelLugarNacimientoPersonal);
-        jLabelLugarNacimientoPersonal.setBounds(350, 250, 109, 16);
+        jLabelLugarNacimientoPersonal.setBounds(350, 250, 121, 18);
 
         jLabelDireccionPersonal.setText("Dirección");
         jPanelConsultarDatosPersonales.add(jLabelDireccionPersonal);
-        jLabelDireccionPersonal.setBounds(157, 172, 60, 16);
+        jLabelDireccionPersonal.setBounds(157, 172, 66, 18);
 
         jButtonMenosAnioPersona.setText("-");
         jButtonMenosAnioPersona.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -403,7 +402,7 @@ public class UI_Personal extends javax.swing.JFrame {
 
         jLabelApellidosPersonal.setText("Apellidos");
         jPanelConsultarDatosPersonales.add(jLabelApellidosPersonal);
-        jLabelApellidosPersonal.setBounds(407, 96, 59, 16);
+        jLabelApellidosPersonal.setBounds(407, 96, 63, 18);
 
         jTextFieldApellidosPersonal.setEditable(false);
         jTextFieldApellidosPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -458,7 +457,7 @@ public class UI_Personal extends javax.swing.JFrame {
 
         jLabelEmailPersonal.setText("Email");
         jPanelConsultarDatosPersonales.add(jLabelEmailPersonal);
-        jLabelEmailPersonal.setBounds(567, 172, 34, 16);
+        jLabelEmailPersonal.setBounds(567, 172, 37, 18);
 
         jTextFieldDireccionPersonal.setEditable(false);
         jTextFieldDireccionPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -505,7 +504,7 @@ public class UI_Personal extends javax.swing.JFrame {
         jTextFieldContraseniaPersonal.setColumns(8);
         jTextFieldContraseniaPersonal.setEditable(false);
         jPanelConsultarDatosPersonales.add(jTextFieldContraseniaPersonal);
-        jTextFieldContraseniaPersonal.setBounds(729, 270, 110, 28);
+        jTextFieldContraseniaPersonal.setBounds(729, 270, 114, 28);
 
         jButtonMasMesPersonal.setText("+");
         jButtonMasMesPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -523,7 +522,7 @@ public class UI_Personal extends javax.swing.JFrame {
 
         jLabelFechaNacimientoPersonal.setText("Fecha nacimiento");
         jPanelConsultarDatosPersonales.add(jLabelFechaNacimientoPersonal);
-        jLabelFechaNacimientoPersonal.setBounds(157, 317, 110, 16);
+        jLabelFechaNacimientoPersonal.setBounds(157, 317, 123, 18);
 
         jButtonGuardar.setText("Guardar");
         jButtonGuardar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -537,7 +536,7 @@ public class UI_Personal extends javax.swing.JFrame {
             }
         });
         jPanelConsultarDatosPersonales.add(jButtonGuardar);
-        jButtonGuardar.setBounds(430, 460, 93, 39);
+        jButtonGuardar.setBounds(430, 460, 68, 39);
 
         jButtonFotoPersonal.setText("Añadir foto");
         jButtonFotoPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -551,7 +550,7 @@ public class UI_Personal extends javax.swing.JFrame {
             }
         });
         jPanelConsultarDatosPersonales.add(jButtonFotoPersonal);
-        jButtonFotoPersonal.setBounds(590, 350, 115, 29);
+        jButtonFotoPersonal.setBounds(590, 350, 90, 30);
 
         jLabelInfoFotoPersonal.setFont(new java.awt.Font("Lucida Grande", 0, 10));
         jLabelInfoFotoPersonal.setText("Tam max 130x150 pix");
@@ -560,7 +559,7 @@ public class UI_Personal extends javax.swing.JFrame {
 
         jLabel8.setText("Tipo personal");
         jPanelConsultarDatosPersonales.add(jLabel8);
-        jLabel8.setBounds(440, 330, 86, 16);
+        jLabel8.setBounds(440, 330, 95, 18);
 
         jRadioButtonFarmaceutico.setText("Farmacéutico");
         jRadioButtonFarmaceutico.addActionListener(new java.awt.event.ActionListener() {
@@ -569,11 +568,11 @@ public class UI_Personal extends javax.swing.JFrame {
             }
         });
         jPanelConsultarDatosPersonales.add(jRadioButtonFarmaceutico);
-        jRadioButtonFarmaceutico.setBounds(440, 370, 116, 23);
+        jRadioButtonFarmaceutico.setBounds(440, 370, 121, 24);
 
         jRadioButtonAnalista.setText("Analista");
         jPanelConsultarDatosPersonales.add(jRadioButtonAnalista);
-        jRadioButtonAnalista.setBounds(440, 350, 83, 23);
+        jRadioButtonAnalista.setBounds(440, 350, 80, 24);
 
         jRadioButtonRadiologo.setText("Radiólogo");
         jRadioButtonRadiologo.addActionListener(new java.awt.event.ActionListener() {
@@ -582,7 +581,7 @@ public class UI_Personal extends javax.swing.JFrame {
             }
         });
         jPanelConsultarDatosPersonales.add(jRadioButtonRadiologo);
-        jRadioButtonRadiologo.setBounds(440, 410, 95, 23);
+        jRadioButtonRadiologo.setBounds(440, 410, 95, 24);
 
         jRadioButtonMedico.setText("Médico");
         jRadioButtonMedico.addActionListener(new java.awt.event.ActionListener() {
@@ -591,9 +590,9 @@ public class UI_Personal extends javax.swing.JFrame {
             }
         });
         jPanelConsultarDatosPersonales.add(jRadioButtonMedico);
-        jRadioButtonMedico.setBounds(440, 390, 77, 23);
+        jRadioButtonMedico.setBounds(440, 390, 77, 24);
 
-        jPanelConsultarDatosPersonales.setBounds(1, 0, 900, 530);
+        jPanelConsultarDatosPersonales.setBounds(1, -240, 900, 770);
         ZonaTrabajo.add(jPanelConsultarDatosPersonales, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelConsultarTurno.setMinimumSize(new java.awt.Dimension(901, 510));
@@ -834,7 +833,7 @@ public class UI_Personal extends javax.swing.JFrame {
             .add(jPanelConsultarTurnoLayout.createSequentialGroup()
                 .add(239, 239, 239)
                 .add(jLabelGestionarPaciente6)
-                .addContainerGap(255, Short.MAX_VALUE))
+                .addContainerGap(227, Short.MAX_VALUE))
             .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(jPanelConsultarTurnoLayout.createSequentialGroup()
                     .add(0, 60, Short.MAX_VALUE)
@@ -900,10 +899,10 @@ public class UI_Personal extends javax.swing.JFrame {
             .add(jPanelConsultarTurnoLayout.createSequentialGroup()
                 .add(65, 65, 65)
                 .add(jLabelGestionarPaciente6)
-                .addContainerGap(408, Short.MAX_VALUE))
+                .addContainerGap(409, Short.MAX_VALUE))
             .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(jPanelConsultarTurnoLayout.createSequentialGroup()
-                    .add(50, 115, Short.MAX_VALUE)
+                    .add(50, 113, Short.MAX_VALUE)
                     .add(jLabel9)
                     .add(24, 24, 24)
                     .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -948,7 +947,7 @@ public class UI_Personal extends javax.swing.JFrame {
                         .add(jButtonMenosMesFechaFinTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(jButtonMenosAnioFechaFinTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(jRadioButtonNoche))
-                    .add(0, 66, Short.MAX_VALUE)))
+                    .add(0, 64, Short.MAX_VALUE)))
         );
 
         jPanelConsultarTurno.setBounds(0, 0, 901, 531);
@@ -962,17 +961,17 @@ public class UI_Personal extends javax.swing.JFrame {
 
         jLabelUsuario.setText("Usuario:");
         jPanelUsuario.add(jLabelUsuario);
-        jLabelUsuario.setBounds(90, 0, 52, 16);
+        jLabelUsuario.setBounds(90, 0, 56, 18);
 
         jLabelTipoUsuario.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelTipoUsuario.setText("Tipo Usuario");
         jPanelUsuario.add(jLabelTipoUsuario);
-        jLabelTipoUsuario.setBounds(90, 30, 120, 16);
+        jLabelTipoUsuario.setBounds(90, 30, 120, 17);
 
         jLabelNombreUsuario.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelNombreUsuario.setText("Nombre");
         jPanelUsuario.add(jLabelNombreUsuario);
-        jLabelNombreUsuario.setBounds(90, 60, 120, 16);
+        jLabelNombreUsuario.setBounds(90, 60, 120, 17);
         jPanelUsuario.add(jLabelTipoUsuarioIdentificado);
         jLabelTipoUsuarioIdentificado.setBounds(10, 10, 70, 70);
 
