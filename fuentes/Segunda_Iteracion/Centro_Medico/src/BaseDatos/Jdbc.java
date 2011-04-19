@@ -14,6 +14,7 @@ package BaseDatos;
 
 import java.sql.*;
 
+
 /**
  * @version     1.0     02/04/2011
  * @author      Sub_Equipo1
@@ -41,7 +42,7 @@ public class Jdbc {
             //Cargar el driver para Bases de Datos MySql
             Class.forName("com.mysql.jdbc.Driver");
             //Establecemos la conexion con la base de datos
-            conexion = DriverManager.getConnection("jdbc:mysql://"+Host+"/"+BaseDatos,Usuario,Password);
+            conexion = DriverManager.getConnection("jdbc:mysql://"+Host+"/"+BaseDatos+"?useServerPrepStmts=true",Usuario,Password);
 
         } catch (Exception e) {
             e.printStackTrace();
