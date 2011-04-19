@@ -151,14 +151,13 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 204, 102));
-        setLocation(new java.awt.Point(150, 22));
         setMinimumSize(new java.awt.Dimension(931, 715));
         setResizable(false);
         getContentPane().setLayout(null);
 
         jLabelCentroMedico.setText("Centro médico");
         getContentPane().add(jLabelCentroMedico);
-        jLabelCentroMedico.setBounds(177, 68, 92, 16);
+        jLabelCentroMedico.setBounds(177, 68, 94, 17);
 
         jLabelIconoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Inicio-Desactivado.png"))); // NOI18N
         jLabelIconoInicio.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -177,7 +176,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jLabelInicio.setText("Inicio");
         getContentPane().add(jLabelInicio);
-        jLabelInicio.setBounds(420, 120, 44, 16);
+        jLabelInicio.setBounds(420, 120, 44, 17);
 
         jLabelIconoAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Ayuda-Desactivado.png"))); // NOI18N
         jLabelIconoAyuda.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -211,11 +210,11 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jLabelAyuda.setText("Ayuda");
         getContentPane().add(jLabelAyuda);
-        jLabelAyuda.setBounds(500, 120, 44, 16);
+        jLabelAyuda.setBounds(500, 120, 44, 17);
 
         jLabelSalir.setText("Salir");
         getContentPane().add(jLabelSalir);
-        jLabelSalir.setBounds(590, 120, 27, 16);
+        jLabelSalir.setBounds(590, 120, 28, 17);
 
         jLabelIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Logo-Centro-Medico.png"))); // NOI18N
         getContentPane().add(jLabelIcono);
@@ -248,6 +247,11 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonGestionarCitaMouseClicked(evt);
             }
         });
+        jButtonGestionarCita.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGestionarCitaActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout jPanelPrincipalLayout = new org.jdesktop.layout.GroupLayout(jPanelPrincipal);
         jPanelPrincipal.setLayout(jPanelPrincipalLayout);
@@ -275,8 +279,8 @@ public class UI_Paciente extends javax.swing.JFrame {
             .add(jPanelPrincipalLayout.createSequentialGroup()
                 .add(29, 29, 29)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE))
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelGestionarPaciente3)
@@ -284,7 +288,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(330, 330, 330))
         );
 
-        jPanelPrincipal.setBounds(0, 0, 901, 530);
+        jPanelPrincipal.setBounds(0, 0, -1, 530);
         ZonaTrabajo.add(jPanelPrincipal, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarPaciente.setPreferredSize(new java.awt.Dimension(901, 531));
@@ -599,7 +603,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                         .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(jLabelFotoPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(jLabelFotografiaPaciente))))
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         jPanelGestionarPaciente.setBounds(1, 0, 900, 530);
@@ -845,7 +849,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         });
         jPanelConsultarCitaOnline.add(jTextFieldDNIPacienteCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 90, -1));
 
-        jPanelConsultarCitaOnline.setBounds(0, 0, 901, 531);
+        jPanelConsultarCitaOnline.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelConsultarCitaOnline, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarCitaOnline.setMinimumSize(new java.awt.Dimension(901, 510));
@@ -900,7 +904,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(jPanelAltaCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelAltaCitaLayout.createSequentialGroup()
                         .add(jPanelAltaCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jScrollPane3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
+                            .add(jScrollPane3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 516, Short.MAX_VALUE)
                             .add(jPanelAltaCitaLayout.createSequentialGroup()
                                 .add(jLabel1)
                                 .add(81, 81, 81)
@@ -982,7 +986,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jPanelGestionarCitaOnline.add(jPanelBotones, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 580, 60));
 
-        jPanelGestionarCitaOnline.setBounds(0, 0, 901, 531);
+        jPanelGestionarCitaOnline.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelGestionarCitaOnline, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         getContentPane().add(ZonaTrabajo);
@@ -993,17 +997,17 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jLabelUsuario.setText("Usuario:");
         jPanelUsuario.add(jLabelUsuario);
-        jLabelUsuario.setBounds(90, 0, 52, 16);
+        jLabelUsuario.setBounds(90, 0, 53, 17);
 
         jLabelTipoUsuario.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelTipoUsuario.setText("Tipo Usuario");
         jPanelUsuario.add(jLabelTipoUsuario);
-        jLabelTipoUsuario.setBounds(90, 30, 120, 16);
+        jLabelTipoUsuario.setBounds(90, 30, 120, 17);
 
         jLabelNombreUsuario.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelNombreUsuario.setText("Nombre");
         jPanelUsuario.add(jLabelNombreUsuario);
-        jLabelNombreUsuario.setBounds(90, 60, 120, 16);
+        jLabelNombreUsuario.setBounds(90, 60, 120, 17);
         jPanelUsuario.add(jLabelTipoUsuarioIdentificado);
         jLabelTipoUsuarioIdentificado.setBounds(10, 10, 70, 70);
 
@@ -1533,6 +1537,10 @@ public class UI_Paciente extends javax.swing.JFrame {
         // TODO add your handling code here:
         mostrarPanel("ConsultarCitaOnline");
     }//GEN-LAST:event_jButtonModificarCitaMouseClicked
+
+    private void jButtonGestionarCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGestionarCitaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonGestionarCitaActionPerformed
 
 
     /*Comprueba que la fecha introducida es correcta
