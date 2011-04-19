@@ -277,6 +277,7 @@ public class Intro extends javax.swing.JFrame {
             else if(tipoUsu.equals("Personal")){
                 UI_Personal per = new UI_Personal(nombre,"Personal");
                 per.setVisible(true);
+             
                 this.setVisible(false);
             }
             else{
