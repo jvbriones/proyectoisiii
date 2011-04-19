@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Nicolás_
+ * @author Nicolas_Sanchez
  */
 public class Intro extends javax.swing.JFrame {
 

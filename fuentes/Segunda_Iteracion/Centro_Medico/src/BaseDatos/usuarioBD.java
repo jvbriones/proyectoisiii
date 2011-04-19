@@ -13,6 +13,7 @@ package BaseDatos;
 
 import CentroMedico.Usuario;
 import java.sql.*;
+import java.sql.PreparedStatement;
 
 /**
  * @version     v1.0    01/04/2011
@@ -30,9 +31,13 @@ public class usuarioBD {
 
         boolean acceso=false;
 
+
+
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor,NombreDB, user,pass);
+
         String Consulta = "SELECT Dni , Contrasena FROM Usuarios WHERE Dni='"+Dni+"' and Contrasena='"+Pass+"'";
+       //PreparedStatement ps = conexion.prepareStatement( Consulta);
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
             acceso=true;
