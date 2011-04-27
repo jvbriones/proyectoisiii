@@ -21,7 +21,7 @@ import java.sql.*;
  */
 public class personalBD {
 
-    String IpDelServidor="85.61.7.27";
+    String IpDelServidor="localhost";
     String NombreDB="CentroMedico";
     String user="personal";
     String pass="personal";
@@ -62,11 +62,16 @@ public class personalBD {
 
         // El diseño no se corresponde con al modelo de la base de datos
         // Hay que ejecutar estas 2 sentencias
-        String Consulta = "INSERT INTO Usuarios VALUES ('"+dni+"','"+nombre+"','"+apellidos+"','"+direccion+"','"+email+"','"+contrasena+"','"+telefono+"',"+fecNac+",'"+lugarNac+"','"+foto+"','Personal')";
+        String Consulta = "INSERT INTO Usuarios VALUES ('"+dni+"','"+nombre+"','"+apellidos+"','"+direccion+"','"+email+"','"+contrasena+"','"+telefono+"',"+fecNac+",'"+lugarNac+"','"+foto+"','"+tipo+"')";
         conexion.consultaUpdate(Consulta);
 
         Consulta = "INSERT INTO Personal VALUES ('"+dni+"','"+tipo+"')";
         conexion.consultaUpdate(Consulta);
+
+        if(tipo.equals("Radiologo")){
+            Consulta = "INSERT INTO Radiologos VALUES ('"+dni+"')";
+            conexion.consultaUpdate(Consulta);
+        }
 
         conexion.closeConnection();
 

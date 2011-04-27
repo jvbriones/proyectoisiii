@@ -3900,8 +3900,19 @@ public class UI_Administrador extends javax.swing.JFrame {
             else if(jRadioButtonFarmaceutico.isSelected())
                 tipoPersonal = "Farmaceutico";
 
+            //NO FUNCIONA RECOGER EL DATO FECHA, NO INSERTA NUEVO PERSONAL
+            //ADRI
+           // int dia = Integer.parseInt(jTextFieldFechaNacimientoDiaPersonal.getText());
+           //int mes = Integer.parseInt(jTextFieldFechaNacimientoMesPersonal.getText());
+          //int anio = Integer.parseInt(jTextFieldFechaNacimientoAnioPersonal.getText());
+           //Calendar calendar = Calendar.getInstance();
+           //calendar.set(anio, mes, dia);
+           //fechaNacimiento =  calendar.getTime();
+           //java.sql.Date sqlDate = new java.sql.Date(fechaNacimiento.getTime());
+
+       
             try {
-                exito = gesPer.altaPersonal(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(), jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), urlFoto, tipoPersonal);
+                exito = gesPer.altaPersonal(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(), jTextFieldTelefonoPersonal.getText(), null, jTextFieldLugarNacimientoPersonal.getText(), urlFoto, tipoPersonal);
                 if(exito){
                     new InformacionExito().setVisible(true);
                     limpiarFormulario("GestionarPersonal");

@@ -274,9 +274,9 @@ public class Intro extends javax.swing.JFrame {
                 this.setVisible(false);
 
             }
-            else if(tipoUsu.equals("Personal")){
-                UI_Personal per = new UI_Personal(nombre,"Personal");
-                per.setVisible(true);
+            else if(tipoUsu.equals("Radiologo")){
+                UI_Radiologo ra = new UI_Radiologo(nombre,"Radiologo");
+                ra.setVisible(true);
              
                 this.setVisible(false);
             }
@@ -299,7 +299,7 @@ public class Intro extends javax.swing.JFrame {
             this.setVisible(false);
         }
         else if(nombre.equals("Person") && contrasenia.equals("Person")){
-            UI_Personal p = new UI_Personal(nombre,"Personal");
+            UI_Radiologo p = new UI_Radiologo(nombre,"Personal");
             p.setVisible(true);
             this.setVisible(false);
         }
