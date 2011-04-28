@@ -14,15 +14,13 @@ package Interfaz;
 import java.awt.Color;
 import java.awt.Image;
 import java.sql.SQLException;
-import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import Controlador.*;
-import java.util.Date;
 import java.util.*;
-
+import java.text.*;
 
 /**
  *
@@ -3900,12 +3898,51 @@ public class UI_Administrador extends javax.swing.JFrame {
             else if(jRadioButtonFarmaceutico.isSelected())
                 tipoPersonal = "Farmaceutico";
 
+            /*
+             nueva_cita = cita_bd.obtenerCita(usu.getDni());
+
+
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(nueva_cita.getFecha());
+            int dia = calendar.get(Calendar.DAY_OF_MONTH);   //dia del mes
+            int mes = calendar.get(Calendar.MONTH);
+            mes=mes+1;//mes, de 0 a 11
+            int anio = calendar.get(Calendar.YEAR);  //año
+
+            String num_dia= String.valueOf(dia);
+            String num_mes= String.valueOf(mes);
+            String num_anio= String.valueOf(anio);
+
+
+
+            jTextFieldDNIMedico.setText(nueva_cita.getDniMedico());
+            jTextFieldDNIPacienteCita.setText(nueva_cita.getDniPaciente());
+            jTextFieldAnioCita.setText(num_anio);
+            jTextFieldDiaCita.setText(num_dia);
+            jTextFieldMesCita.setText(num_mes);
+
+*/
             //NO FUNCIONA RECOGER EL DATO FECHA, NO INSERTA NUEVO PERSONAL
             //ADRI
-           // int dia = Integer.parseInt(jTextFieldFechaNacimientoDiaPersonal.getText());
-           //int mes = Integer.parseInt(jTextFieldFechaNacimientoMesPersonal.getText());
-          //int anio = Integer.parseInt(jTextFieldFechaNacimientoAnioPersonal.getText());
-           //Calendar calendar = Calendar.getInstance();
+
+           String  dia =(jTextFieldFechaNacimientoDiaPersonal.getText());
+           String mes = (jTextFieldFechaNacimientoMesPersonal.getText());
+           String anio =(jTextFieldFechaNacimientoAnioPersonal.getText());
+
+
+
+
+            String dateString=dia+"/"+mes+"/"+ anio;
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/mm/dd");
+            Date convertedDate = dateFormat.parse(dateString);
+
+
+
+
+
+
+            
+
            //calendar.set(anio, mes, dia);
            //fechaNacimiento =  calendar.getTime();
            //java.sql.Date sqlDate = new java.sql.Date(fechaNacimiento.getTime());

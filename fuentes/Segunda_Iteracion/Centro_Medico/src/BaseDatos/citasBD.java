@@ -23,7 +23,7 @@ import java.util.ArrayList;
 public class citasBD {
 
 
-    String IpDelServidor="85.61.7.27";
+    String IpDelServidor="localhost";
     String NombreDB="CentroMedico";
     String user="personal";
     String pass="personal";
