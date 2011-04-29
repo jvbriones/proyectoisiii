@@ -109,7 +109,7 @@ public class Intro extends javax.swing.JFrame {
                     .add(jPanel1Layout.createSequentialGroup()
                         .add(121, 121, 121)
                         .add(jButton1)))
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -284,6 +284,14 @@ public class Intro extends javax.swing.JFrame {
                 UI_Analista an = new UI_Analista(nombre, "Analista");
                 an.setVisible(true);
 
+            }
+            else if(tipoUsu.equals("Medico")){
+                UI_Medico med = new UI_Medico(nombre, "Medico");
+                med.setVisible(true);
+            }
+            else if(tipoUsu.equals("Farmaceutico")){
+                UI_Farmaceutico far = new UI_Farmaceutico(nombre, "Farmaceutico");
+                far.setVisible(true);
             }
             else{
                 UI_Administrador uiAdmin = new UI_Administrador(nombreUsu,"Administrador");
