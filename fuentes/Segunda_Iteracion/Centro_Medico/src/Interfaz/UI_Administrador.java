@@ -3934,7 +3934,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
             String dateString=dia+"/"+mes+"/"+ anio;
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/mm/dd");
-            Date convertedDate = dateFormat.parse(dateString);
+       //     Date convertedDate = dateFormat.parse(dateString);
 
 
 
