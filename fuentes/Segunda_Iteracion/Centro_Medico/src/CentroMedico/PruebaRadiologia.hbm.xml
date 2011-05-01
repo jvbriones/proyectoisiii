@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="CentroMedico.PruebaRadiologia">
+    <id column="ID_PRUEBARADIOLOGIA" name="Id">
+      <generator class="native"/>
+    </id>
+    <property name="Comentario"/>
+
+	<one-to-one class="CentroMedico.Paciente" name="Paciente" constrained="true" lazy="true"/>
+
+    <joined-subclass name="CentroMedico.Resonancia">
+        <key column="ID_RESONANCIA"/>
+
+        <set cascade="all" lazy="true" name="Resonancias">
+          <key column="ID_PRUEBARADIOLOGIA"/>
+          <one-to-many class="CentroMedico.Imagen"/>
+        </set>
+	</joined-subclass>
+    <joined-subclass name="CentroMedico.Radiografia">
+        <key column="ID_RADIOGRAFIA"/>
+
+        <set cascade="all" lazy="true" name="Radiografias">
+          <key column="ID_PRUEBARADIOLOGIA"/>
+          <one-to-many class="CentroMedico.Imagen"/>
+        </set>
+	</joined-subclass>
+  </class>
+</hibernate-mapping>
+
