@@ -37,7 +37,7 @@ public class GestorUsuarios {
             throw new Exception("Usuario o contraseña erroneos ");
         }
         else {
-            user=usuario_bd.obtenerUsuario(Dni);
+            user=usuario_bd.obtener(Dni);
         }
 
         return acceso;
@@ -48,7 +48,7 @@ public class GestorUsuarios {
             String Contrasena, String Telefono, Date FecNac, String LugarNac, String Fotografia) throws SQLException{
 
        usuarioBD usuario_bd = new usuarioBD();
-       Usuario userAux =usuario_bd.obtenerUsuario(Dni);
+       Usuario userAux =usuario_bd.obtener(Dni);
 
        userAux.setDni(Dni);
        userAux.setNombre(Nombre);
@@ -61,7 +61,7 @@ public class GestorUsuarios {
        userAux.setLugarNacimiento( LugarNac);
        userAux.setFotografia( Fotografia);
 
-       usuario_bd.almacenarUsuario(userAux);
+       usuario_bd.almacenar(userAux);
 
        return "Operacion Realizada con Exito";
     }
@@ -99,14 +99,14 @@ public class GestorUsuarios {
         ArrayList salida = new ArrayList();
 
         if(Existe){
-            Usuario userAux =usuario_bd.obtenerUsuario(DNI);
+            Usuario userAux =usuario_bd.obtener(DNI);
 
             String dni=userAux.getDni();
             String nombre=userAux.getNombre();
             String apellidos=userAux.getApellidos();
             String direccion=userAux.getDireccion();
             String email=userAux.getEmail();
-            String contrasena=userAux.getContrasena();
+            String contrasena=userAux.getContrasenia();
             String telefono=userAux.getTelefono();
             Date fecNac=userAux.getFechaNacimiento();
             String lugarNac=userAux.getLugarNacimiento();
@@ -154,7 +154,7 @@ public class GestorUsuarios {
         String apellidos=user.getApellidos();
         String direccion=user.getDireccion();
         String email=user.getEmail();
-        String contrasena=user.getContrasena();
+        String contrasena=user.getContrasenia();
         String telefono=user.getTelefono();
         Date fecNac=user.getFechaNacimiento();
         String lugarNac=user.getLugarNacimiento();

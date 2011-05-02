@@ -50,7 +50,7 @@ public class personalBD {
         String apellidos=personal.getApellidos();
         String direccion=personal.getDireccion();
         String email=personal.getEmail();
-        String contrasena=personal.getContrasena();
+        String contrasena=personal.getContrasenia();
         String telefono=personal.getTelefono();
         Date fecNac=(Date) personal.getFechaNacimiento();
         String lugarNac=personal.getLugarNacimiento();

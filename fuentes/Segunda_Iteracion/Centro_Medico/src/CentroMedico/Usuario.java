@@ -12,47 +12,42 @@
 package CentroMedico;
 
 import java.util.*;
-import BaseDatos.*;
 import java.sql.SQLException;
 
 /**
  * @version     1.1     16/04/2011
  * @author      Sub_Equipo2
+ * modificado por Juan Carlos
  */
 public class Usuario {
 
-    private String DNI=null;
-    private String Nombre=null;
-    private String Apellidos=null;
+    private String DNI;
+    private String Nombre;
+    private String Apellidos;
     private String Direccion=null;
     private String Email=null;
-    private String Contrasena=null;
+    private String Contrasenia=null;
     private String Telefono=null;
     private Date FecNac=null;
     private String LugarNac=null;
     private String Foto=null;
-    private String Tipo=null;
+    private String Tipo;
+
 
     /*
      *
      * Constructores
      *
      */
-
-
- 
-
-
-
     public Usuario(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
-            String Contrasena, String Telefono, Date FecNac, String LugarNac, String Foto, String Tipo){
+            String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto, String Tipo){
         
         this.DNI=Dni;
         this.Nombre=Nombre;
         this.Apellidos=Apellidos;
         this.Direccion=Direccion;
         this.Email=Email;
-        this.Contrasena=Contrasena;
+        this.Contrasenia=Contrasenia;
         this.Telefono=Telefono;
         this.FecNac=FecNac;
         this.LugarNac=LugarNac;
@@ -86,8 +81,8 @@ public class Usuario {
         return Email;
     }
 
-    public String getContrasena(){
-        return  Contrasena;
+    public String getContrasenia(){
+        return  Contrasenia;
      }
 
     public String getTelefono(){
@@ -137,8 +132,8 @@ public class Usuario {
         this.Email=Email;
     }
 
-    public void setContrasena(String Contrasena){
-        this.Contrasena=Contrasena;
+    public void setContrasena(String Contrasenia){
+        this.Contrasenia=Contrasenia;
     }
 
     public void setTelefono(String Telefono){
@@ -160,7 +155,5 @@ public class Usuario {
     public void setTipo(String Tipo){
        this.Tipo=Tipo;
     }
-
-
 
 }

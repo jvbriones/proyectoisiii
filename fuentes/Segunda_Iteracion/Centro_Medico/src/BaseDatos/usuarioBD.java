@@ -13,20 +13,65 @@ package BaseDatos;
 
 import CentroMedico.Usuario;
 import java.sql.*;
-
-
+import org.hibernate.Session;
 
 /**
  * @version     1.1     16/04/2011
  * @author      Sub_Equipo2
+ * modificado por Juan Carlos
  */
 public class usuarioBD {
+    //public boolean validacion(String Dni, String Pass) throws SQLException{}
 
-    String IpDelServidor="localhost";
+    public Usuario obtener(String Dni) throws SQLException{
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+        Usuario User = (Usuario) session.get(Usuario.class, Dni);
+        return User;
+    }
+    //public Usuario obtenerUsuarioNombre(String nombre) throws SQLException {}
+    
+    public void almacenar(Usuario User){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+        session.save (User);
+    }
+    
+    public boolean existeUsuario(String Dni) throws SQLException{
+        boolean existe=false;
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+        Usuario User = (Usuario) session.get(Usuario.class, Dni);
+        if (User != null)
+            existe = true;
+
+        return existe;
+    }
+
+    public void actualizar (Usuario User){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+        session.update (User);
+    }
+
+    public void eliminar(Usuario User){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+        session.delete (User);
+
+    }
+}
+
+/*SE HA PUESTO EN COMENTARIO TODO EL CÓDIGO ANTIGUO DE LA CLASE USUARIOBD, para mantenerlo por si hace falta */
+/*    String IpDelServidor="localhost";
     String NombreDB="CentroMedico";
     String user="personal";
     String pass="personal";
-   
 
     public boolean validacion(String Dni, String Pass) throws SQLException {
 
@@ -180,3 +225,4 @@ public class usuarioBD {
 
 
 }
+*/

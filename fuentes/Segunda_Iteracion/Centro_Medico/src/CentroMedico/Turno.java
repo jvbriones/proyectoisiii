@@ -17,13 +17,13 @@ import java.util.*;
 /**
  * @version     1.1     16/04/2011
  * @author      Sub_Equipo2
+ * modificado por Juan Carlos
  */
 public class Turno {
 
-    private String DNI;
-    private Date FechaIni;
-    private Date FechaEnd;
-    private String TipoTurno;
+    private int Id;
+    private Date HoraInicio;
+    private Date HoraFin;
 
     /*
      *
@@ -31,13 +31,11 @@ public class Turno {
      *
      */
 
-    public Turno(String DNI, Date FechaIni, Date FechaEnd, String TipoTurno){
+    public Turno(int Id, Date HoraInicio, Date HoraFin){
 
-        this.DNI=DNI;
-        this.FechaIni=FechaIni;
-        this.FechaEnd=FechaEnd;
-        this.TipoTurno=TipoTurno;
-
+        this.Id=Id;
+        this.HoraInicio=HoraInicio;
+        this.HoraFin=HoraFin;
     }
 
     /*
@@ -46,20 +44,16 @@ public class Turno {
      *
      */
 
-    public String getDni(){
-        return DNI;
+    public int getId(){
+        return Id;
     }
 
-    public Date getFechaInicio(){
-        return  FechaIni;
+    public Date getHoraInicio(){
+        return  HoraInicio;
      }
 
-    public Date getFechaFin(){
-        return FechaEnd;
-    }
-
-    public String getTipoTurno(){
-        return TipoTurno;
+    public Date getHoraFin(){
+        return HoraFin;
     }
 
     /*
@@ -68,21 +62,15 @@ public class Turno {
      *
      */
 
-    public void setDni(String DNI){
-        this.DNI=DNI;
+    public void setId(int Id){
+        this.Id=Id;
     }
 
-    public void setFechaInicio(Date FechaIni){
-        this.FechaIni=FechaIni;
+    public void setHoraInicio(Date HoraInicio){
+        this.HoraInicio=HoraInicio;
      }
 
-    public void getFechaFin(Date FechaEnd){
-        this.FechaEnd=FechaEnd;
+    public void setHoraFin(Date HoraFin){
+        this.HoraFin=HoraFin;
     }
-
-    public void getTipoTurno(String TipoTurno){
-        this.TipoTurno=TipoTurno;
-    }
-
-
 }

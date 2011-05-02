@@ -214,7 +214,7 @@
                               <Component id="jLabel2" min="-2" pref="142" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="233" max="32767" attributes="0"/>
+                      <EmptySpace pref="249" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -223,8 +223,8 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jButtonGestionarCita" pref="140" max="32767" attributes="1"/>
-                          <Component id="jButtonConsultarDatosPersonales" alignment="1" max="32767" attributes="1"/>
+                          <Component id="jButtonGestionarCita" pref="141" max="32767" attributes="1"/>
+                          <Component id="jButtonConsultarDatosPersonales" alignment="1" pref="141" max="32767" attributes="1"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -367,7 +367,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Component id="jButtonAceptar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="152" max="32767" attributes="0"/>
+                      <EmptySpace pref="153" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1361,7 +1361,7 @@
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="50" pref="113" max="32767" attributes="0"/>
+                          <EmptySpace min="50" pref="115" max="32767" attributes="0"/>
                           <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="24" pref="24" max="24" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -1414,7 +1414,7 @@
                               <Component id="jButtonMenosAnioFechaFinTurno" min="-2" pref="40" max="-2" attributes="0"/>
                               <Component id="jRadioButtonNoche" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="64" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="66" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -1870,13 +1870,13 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="117" max="32767" attributes="0"/>
+                      <EmptySpace pref="120" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jTextFieldCitaPruebaPaciente" alignment="0" min="-2" pref="296" max="-2" attributes="0"/>
                           <Component id="jLabel14" alignment="0" min="-2" pref="187" max="-2" attributes="0"/>
                           <Component id="jButton1" alignment="1" min="-2" pref="155" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="132" max="32767" attributes="0"/>
+                      <EmptySpace pref="135" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
                               <Component id="jRadioButtonOrinaCitaPrueba" alignment="0" max="32767" attributes="1"/>

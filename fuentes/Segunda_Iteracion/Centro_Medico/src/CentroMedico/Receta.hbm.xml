@@ -2,21 +2,17 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
   <class name="CentroMedico.Receta">
-        <id name="Id" column="ID_RECETA" type="integer">
-            <generator class="native" />
-        </id>
-        <property name="Instrucciones"/>
-        <property name="JuicioDiagnostico"/>
-        <property name="Fecha"/>
-
-        <set cascade="all" name="MedicamentoRecetado">
-          <key column="ID_MEDICAMENTORECETADO"/>
-          <one-to-many class="CentroMedico.MedicamentoRecetado" lazy="true"/>
-        </set>
-
-	<one-to-one class="CentroMedico.Medico" name="Medico" constrained="true" lazy="true"/>
-	<one-to-one class="CentroMedico.Paciente" name="Paciente" constrained="true" lazy="true"/>
-        
+    <id column="ID_RECETA" name="Id" type="integer">
+      <generator class="native"/>
+    </id>
+    <property name="Instrucciones"/>
+    <property name="JuicioDiagnostico"/>
+    <property name="Fecha"/>
+    <set cascade="all" name="MedicamentoRecetado">
+      <key column="ID_MEDICAMENTORECETADO"/>
+      <one-to-many class="CentroMedico.MedicamentoRecetado" lazy="true"/>
+    </set>
+    <one-to-one class="CentroMedico.Medico" constrained="true" lazy="true" name="Medico"/>
+    <one-to-one class="CentroMedico.Paciente" constrained="true" lazy="true" name="Paciente"/>
   </class>
 </hibernate-mapping>
-

@@ -4,18 +4,45 @@
  */
 
 package BaseDatos;
+
 import CentroMedico.*;
+import org.hibernate.Session;
+
 
 /**
  *
- * @author pope
+ * @author Juan Carlos
  */
 public class RecetaBD {
-    void almacenar(Receta Rec){}
-    Receta obtener (int Id){}
-    void actualizar (Receta Rec){}
-    void eliminar (Receta Rec){}
-    Collection obtener (String Dni){}
+    void almacenar(Receta Rec){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+        session.save (Rec);
+    }
+    
+    Receta obtener (int Id){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+        Receta Rec = (Receta) session.get(Receta.class, Id);
+      return Rec;
+    }
+    void actualizar (Receta Rec){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+        session.update (Rec);
+
+    }
+    void eliminar (Receta Rec){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+        session.delete (Rec);
+
+    }
+
 }
 
 

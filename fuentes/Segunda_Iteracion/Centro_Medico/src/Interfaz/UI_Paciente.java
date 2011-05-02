@@ -58,7 +58,7 @@ public class UI_Paciente extends javax.swing.JFrame {
        
         Usuario paci=null;
         usuarioBD usu_bd=new usuarioBD ();
-        paci=usu_bd.obtenerUsuario(nombreUsuario);
+        paci=usu_bd.obtener(nombreUsuario);
 
         mostrarDatosPaciente(paci);
         cargarDatosCitaPaciente(paci);
@@ -83,7 +83,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jTextFieldFechaNacimientoDiaPaciente.setText(num_dia);
         jTextFieldFechaNacimientoMesPaciente.setText(num_mes);
         jTextFieldNombrePaciente.setText(usu.getNombre());
-        jTextFieldContraseniaPaciente.setText(usu.getContrasena());
+        jTextFieldContraseniaPaciente.setText(usu.getContrasenia());
         jTextFieldDNIPaciente.setText(usu.getDni());
         jTextFieldApellidosPaciente.setText(usu.getApellidos());
         jTextFieldTelefonoPaciente.setText(usu.getTelefono());

@@ -6,25 +6,20 @@
       <generator class="native"/>
     </id>
     <property name="Comentario"/>
-
-	<one-to-one class="CentroMedico.Paciente" name="Paciente" constrained="true" lazy="true"/>
-
+    <one-to-one class="CentroMedico.Paciente" constrained="true" lazy="true" name="Paciente"/>
     <joined-subclass name="CentroMedico.PruebaSangre">
-        <key column="ID_PRUEBASANGRE"/>
-
-        <set cascade="all" lazy="true" name="ResultadosSangre">
-          <key column="ID_PRUEBAANALISIS"/>
-          <one-to-many class="CentroMedico.AtributoSangre"/>
-        </set>
-	</joined-subclass>
+      <key column="ID_PRUEBASANGRE"/>
+      <set cascade="all" lazy="true" name="ResultadosSangre">
+        <key column="ID_PRUEBAANALISIS"/>
+        <one-to-many class="CentroMedico.ResultadoSangre"/>
+      </set>
+    </joined-subclass>
     <joined-subclass name="CentroMedico.PruebaOrina">
-        <key column="ID_PRUEBAORINA"/>
-
-        <set cascade="all" lazy="true" name="ResultadosOrina">
-          <key column="ID_PRUEBAANALISIS"/>
-          <one-to-many class="CentroMedico.AtributoOrina"/>
-        </set>
-	</joined-subclass>
+      <key column="ID_PRUEBAORINA"/>
+      <set cascade="all" lazy="true" name="ResultadosOrina">
+        <key column="ID_PRUEBAANALISIS"/>
+        <one-to-many class="CentroMedico.ResultadoOrina"/>
+      </set>
+    </joined-subclass>
   </class>
 </hibernate-mapping>
-

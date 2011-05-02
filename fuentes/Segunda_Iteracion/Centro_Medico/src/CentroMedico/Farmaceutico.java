@@ -17,8 +17,9 @@ import java.util.*;
 /**
  * @version     1.1     16/04/2011
  * @author      Sub_Equipo2
+ * modificado por Juan Carlos
  */
-public class Farmaceutico extends Personal{
+public class Farmaceutico extends Usuario{
 
     public Farmaceutico(String Dni, String Nombre, String Apellidos, String Direccion, String Email, String Contrasena,
             String Telefono, Date FecNac, String LugarNac, String Foto) {

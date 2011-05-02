@@ -3121,7 +3121,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
         Usuario perso=null;
         usuarioBD usu_bd=new usuarioBD ();
-        perso=usu_bd.obtenerUsuario(nombreUsuario);
+        perso=usu_bd.obtener(nombreUsuario);
 
         mostrarDatosPerso(perso);
 
@@ -3145,7 +3145,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jTextFieldFechaNacimientoDiaPersonal.setText(num_dia);
         jTextFieldFechaNacimientoMesersonal.setText(num_mes);
         jTextFieldNombrePersonal.setText(usu.getNombre());
-        jTextFieldContraseniaPersonal.setText(usu.getContrasena());
+        jTextFieldContraseniaPersonal.setText(usu.getContrasenia());
         jTextFieldDNIPersonal.setText(usu.getDni());
         jTextFieldApellidosPersonal.setText(usu.getApellidos());
         jTextFieldTelefonoPersonal.setText(usu.getTelefono());

@@ -17,9 +17,10 @@ import java.util.*;
 /**
  * @version     1.1     16/04/2011
  * @author      Sub_Equipo2
+ * modificado por Juan Carlos
  */
 
-public class Administrativo extends Personal{
+public class Administrativo extends Usuario{
 
     public Administrativo(String Dni, String Nombre, String Apellidos, String Direccion, String Email, String Contrasena,
             String Telefono, Date FecNac, String LugarNac, String Foto) {

@@ -16,8 +16,9 @@ import java.util.*;
 /**
  * @version     1.1     16/04/2011
  * @author      Sub_Equipo2
+ * modificado por Juan Carlos
  */
-public class Radiologo extends Personal{
+public class Radiologo extends PersonalMedico{
 
     public Radiologo(String Dni, String Nombre, String Apellidos, String Direccion, String Email, String Contrasena,
             String Telefono, Date FecNac, String LugarNac, String Foto) {

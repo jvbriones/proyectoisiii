@@ -17,14 +17,17 @@ import java.util.*;
 /**
  * @version     1.1     16/04/2011
  * @author      Sub_Equipo2
+ * modificado por Juan Carlos
  */
 
 public class Cita {
 
     private boolean Estado;
     private Date Fecha;
-    private String DNIPac;
-    private String DNIMed;
+    private String Tipo;
+
+    private Paciente Paci;
+    private PersonalMedico Perso;
 
     /*
      *
@@ -32,21 +35,10 @@ public class Cita {
      *
      */
     
-    public Cita(String DniPac, String DniMec, Date Fecha, boolean Estado){
-
-        this.DNIPac=DniPac;
-        this.DNIMed=DniMec;
+    public Cita(Date Fecha, boolean Estado, String Tipo){
         this.Fecha=Fecha;
         this.Estado=Estado;
-
-    }
-
-    public Cita(String DniPac, String DniMec, Date Fecha){
-
-        this.DNIPac=DniPac;
-        this.DNIMed=DniMec;
-        this.Fecha=Fecha;
-        this.Estado=true;
+        this.Tipo=Tipo;
     }
     
     /*
@@ -54,15 +46,6 @@ public class Cita {
      * Metodos Consultores
      *
      */
-
-    public String getDniPaciente(){
-        return DNIPac;
-    }
-
-    public String getDniMedico(){
-        return  DNIMed;
-     }
-
     public Date getFecha(){
         return Fecha;
     }
@@ -71,15 +54,41 @@ public class Cita {
         return Estado;
     }
 
-     /*
+    public String getTipo(){
+        return Tipo;
+    }
+
+    public Paciente getPaciente(){
+        return Paci;
+    }
+
+    public PersonalMedico getPersonalMedico(){
+        return  Perso;
+    }
+
+    /*
       *
       * Metodos Asignadores
       *
       */
 
-    public void setEstado(boolean Estado){
+public void setFecha(Date Fecha){
+        this.Fecha=Fecha;
+    }
+
+    public void setEstado(boolean Estado ){
         this.Estado=Estado;
     }
 
+    public void setTipo(String Tipo){
+        this.Tipo=Tipo;
+    }
 
+    public void setPaciente(Paciente Paci){
+        this.Paci=Paci;
+    }
+
+    public void setPersonalMedico( PersonalMedico Perso){
+        this.Perso=Perso;
+    }
 }
