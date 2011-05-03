@@ -61,7 +61,7 @@ public class Usuario {
      *
      */
     
-    public String getDni(){
+    public String getDNI(){
         return DNI;
     }
 
@@ -89,15 +89,15 @@ public class Usuario {
         return  Telefono;
      }
 
-    public Date getFechaNacimiento(){
+    public Date getFecNac(){
         return FecNac;
     }
 
-    public String getLugarNacimiento(){
+    public String getLugarNac(){
         return  LugarNac;
     }
 
-    public String getFotografia(){
+    public String getFoto(){
         return  Foto;
     }
 
@@ -111,7 +111,7 @@ public class Usuario {
       *
       */
 
-    public void setDni(String Dni) throws SQLException{
+    public void setDNI(String Dni) throws SQLException{
         this.DNI=Dni;
     }
 
@@ -132,7 +132,7 @@ public class Usuario {
         this.Email=Email;
     }
 
-    public void setContrasena(String Contrasenia){
+    public void setContrasenia(String Contrasenia){
         this.Contrasenia=Contrasenia;
     }
 
@@ -140,15 +140,15 @@ public class Usuario {
         this.Telefono=Telefono;
     }
 
-    public void setFechaNacimiento(Date FecNac){
+    public void setFecNac(Date FecNac){
         this.FecNac=FecNac;
     }
 
-    public void setLugarNacimiento(String LugarNac){
+    public void setLugarNac(String LugarNac){
         this.LugarNac=LugarNac;
     }
 
-    public void setFotografia(String Foto){
+    public void setFoto(String Foto){
        this.Foto=Foto;
     }
 

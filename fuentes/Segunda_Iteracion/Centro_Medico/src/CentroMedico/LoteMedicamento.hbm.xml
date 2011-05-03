@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-  <class name="CentroMedico.MedicamentoRecetado">
+  <class name="CentroMedico.LoteMedicamento">
     <id column="CODBARRAS" name="CodBarras" type="string">
       <generator class="assigned"/>
     </id>
     <property name="Existencias"/>
     <property name="FechaCaducidad"/>
-    <many-to-one class="CentroMedico.Medicamento" lazy="true" name="Medicamento"/>
+    <many-to-one class="CentroMedico.Medicamento" name="Medicamento"/>
   </class>
 </hibernate-mapping>

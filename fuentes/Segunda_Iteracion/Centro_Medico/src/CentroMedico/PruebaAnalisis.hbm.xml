@@ -6,7 +6,7 @@
       <generator class="native"/>
     </id>
     <property name="Comentario"/>
-    <one-to-one class="CentroMedico.Paciente" constrained="true" lazy="true" name="Paciente"/>
+    <one-to-one class="CentroMedico.Paciente" constrained="true" name="Paciente"/>
     <joined-subclass name="CentroMedico.PruebaSangre">
       <key column="ID_PRUEBASANGRE"/>
       <set cascade="all" lazy="true" name="ResultadosSangre">

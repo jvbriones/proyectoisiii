@@ -13,7 +13,7 @@ import java.util.*;
  */
 public class PersonalMedico extends Usuario{
 
-    private Turno T=null;
+    private Turno Turn=null;
 
     public PersonalMedico (String Dni, String Nombre, String Apellidos, String Direccion,String Email,
             String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto, String Tipo){
@@ -25,17 +25,17 @@ public class PersonalMedico extends Usuario{
             String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto, String Tipo, Turno T1){
 
         super(Dni, Nombre, Apellidos, Direccion, Email, Contrasenia, Telefono, FecNac, LugarNac, Foto, Tipo);
-        this.T = T1;
+        this.Turn = T1;
     }
 
     //Método Get
-    public Turno getTurno(){
-        return T;
+    public Turno getTurn(){
+        return Turn;
     };
 
     //Método Set
-    public void setTurno( Turno T1){
-        this.T = T1;
+    public void setTurn( Turno T1){
+        this.Turn = T1;
     };
 
 }

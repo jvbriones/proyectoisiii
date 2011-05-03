@@ -12,7 +12,7 @@
     <property name="email"/>
     <set cascade="all" name="Usuarios">
       <key column="DNI_USUARIO"/>
-      <one-to-many class="CentroMedico.Usuario" lazy="true"/>
+      <one-to-many class="CentroMedico.Usuario" />
     </set>
   </class>
 </hibernate-mapping>

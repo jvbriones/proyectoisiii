@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
   <class name="CentroMedico.Usuario">
-    <id column="DNI_USUARIO" name="Dni">
+    <id column="DNI_USUARIO" name="DNI">
       <generator class="assigned"/>
     </id>
     <property name="Nombre"/>
@@ -20,7 +20,7 @@
     </joined-subclass>
     <joined-subclass name="CentroMedico.PersonalMedico">
       <key column="DNI_PERSONALMEDICO"/>
-      <one-to-one class="CentroMedico.Turno" constrained="true" lazy="false" name="Turno"/>
+      <one-to-one class="CentroMedico.Turno" constrained="true" lazy="false" name="Turn"/>
       <joined-subclass name="CentroMedico.Medico">
         <key column="DNI_MEDICO"/>
       </joined-subclass>

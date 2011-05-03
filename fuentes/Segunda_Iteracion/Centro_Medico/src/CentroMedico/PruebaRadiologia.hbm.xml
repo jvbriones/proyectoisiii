@@ -3,20 +3,19 @@
 <hibernate-mapping>
   <class name="CentroMedico.PruebaRadiologia">
     <id column="ID_PRUEBARADIOLOGIA" name="Id">
-      <generator class="native"/>
     </id>
     <property name="Comentario"/>
-    <one-to-one class="CentroMedico.Paciente" constrained="true" lazy="true" name="Paciente"/>
+    <one-to-one class="CentroMedico.Paciente" constrained="true"  name="Paciente"/>
     <joined-subclass name="CentroMedico.Resonancia">
       <key column="ID_RESONANCIA"/>
-      <set cascade="all" lazy="true" name="Imagenes">
+      <set cascade="all" name="Imagenes">
         <key column="ID_PRUEBARADIOLOGIA"/>
         <one-to-many class="CentroMedico.Imagen"/>
       </set>
     </joined-subclass>
     <joined-subclass name="CentroMedico.Radiografia">
       <key column="ID_RADIOGRAFIA"/>
-      <set cascade="all" lazy="true" name="Imagenes">
+      <set cascade="all" name="Imagenes">
         <key column="ID_PRUEBARADIOLOGIA"/>
         <one-to-many class="CentroMedico.Imagen"/>
       </set>

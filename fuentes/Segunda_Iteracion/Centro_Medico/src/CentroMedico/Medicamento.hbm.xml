@@ -6,9 +6,9 @@
       <generator class="assigned"/>
     </id>
     <property name="Descripcion"/>
-    <property name="ExistenciaMinimas"/>
+    <property name="ExistenciasMinimas"/>
     <property name="StockActual"/>
-    <set cascade="all" lazy="true" name="LotesMedicamento">
+    <set cascade="all" name="LotesMedicamento">
       <key column="ID_LOTEMEDICAMENTO"/>
       <one-to-many class="CentroMedico.LoteMedicamento"/>
     </set>
