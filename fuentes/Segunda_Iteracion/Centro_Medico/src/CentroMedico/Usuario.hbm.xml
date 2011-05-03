@@ -20,7 +20,7 @@
     </joined-subclass>
     <joined-subclass name="CentroMedico.PersonalMedico">
       <key column="DNI_PERSONALMEDICO"/>
-      <one-to-one class="CentroMedico.Turno" constrained="true" lazy="true" name="Turno"/>
+      <one-to-one class="CentroMedico.Turno" constrained="true" lazy="false" name="Turno"/>
       <joined-subclass name="CentroMedico.Medico">
         <key column="DNI_MEDICO"/>
       </joined-subclass>
