@@ -331,6 +331,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="A&#xf1;adir"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonAnadirMouseReleased"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButtonConsultar">
               <Properties>
@@ -338,6 +341,7 @@
               </Properties>
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonConsultarMouseClicked"/>
+                <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonConsultarMouseReleased"/>
               </Events>
             </Component>
           </SubComponents>
@@ -401,7 +405,7 @@
                               <Component id="jLabelConsultarTurno" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="67" max="32767" attributes="0"/>
+                      <EmptySpace pref="58" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1478,7 +1482,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="scrollPane1" min="-2" pref="202" max="-2" attributes="0"/>
-                      <EmptySpace pref="132" max="32767" attributes="0"/>
+                      <EmptySpace pref="133" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1868,7 +1872,7 @@
                       <Component id="scrollPane3" min="-2" pref="168" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jButtonDispensarFinal" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="51" max="32767" attributes="0"/>
+                      <EmptySpace pref="52" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2186,7 +2190,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                       <Component id="jButtonAnadirMedicamento" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="131" max="32767" attributes="0"/>
+                      <EmptySpace pref="132" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2291,7 +2295,7 @@
                                           <Component id="jLabel34" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="jPanel1" alignment="1" max="32767" attributes="1"/>
-                                      <Component id="scrollPane4" alignment="1" max="32767" attributes="1"/>
+                                      <Component id="scrollPanelDescripcion" alignment="1" max="32767" attributes="1"/>
                                   </Group>
                                   <Component id="jScrollPane11" alignment="1" min="-2" pref="575" max="-2" attributes="1"/>
                               </Group>
@@ -2305,16 +2309,16 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="jTextField11" alignment="0" min="0" pref="0" max="32767" attributes="1"/>
+                                  <Component id="jTextFieldExistencias" alignment="0" min="0" pref="0" max="32767" attributes="1"/>
                                   <Component id="jLabel33" alignment="0" min="-2" max="-2" attributes="1"/>
                               </Group>
                           </Group>
                           <Component id="jLabel32" alignment="0" min="-2" pref="208" max="-2" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                              <Component id="jTextField10" alignment="1" min="-2" pref="184" max="-2" attributes="1"/>
+                              <Component id="jTextFieldNombreMedica" alignment="1" min="-2" pref="184" max="-2" attributes="1"/>
                               <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jButton3" alignment="0" max="32767" attributes="1"/>
-                                  <Component id="jButton2" alignment="0" max="32767" attributes="1"/>
+                                  <Component id="jButtonEliminarMedicamento" alignment="0" max="32767" attributes="1"/>
+                                  <Component id="jButtonModificarMedica" alignment="0" max="32767" attributes="1"/>
                               </Group>
                           </Group>
                       </Group>
@@ -2336,24 +2340,24 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel34" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="scrollPane4" min="-2" max="-2" attributes="0"/>
+                              <Component id="scrollPanelDescripcion" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTextField10" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextFieldNombreMedica" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jTextField11" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextFieldExistencias" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButtonModificarMedica" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButtonEliminarMedicamento" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -2399,9 +2403,9 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JTextField" name="jTextField10">
+            <Component class="javax.swing.JTextField" name="jTextFieldNombreMedica">
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField11">
+            <Component class="javax.swing.JTextField" name="jTextFieldExistencias">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel32">
               <Properties>
@@ -2418,7 +2422,7 @@
                 <Property name="text" type="java.lang.String" value="Descripci&#xf3;n"/>
               </Properties>
             </Component>
-            <Container class="java.awt.ScrollPane" name="scrollPane4">
+            <Container class="java.awt.ScrollPane" name="scrollPanelDescripcion">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="fe" green="fe" red="fe" type="rgb"/>
@@ -2427,17 +2431,20 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.ScrollPaneSupportLayout"/>
             </Container>
-            <Component class="javax.swing.JButton" name="jButton2">
+            <Component class="javax.swing.JButton" name="jButtonModificarMedica">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Modificar Medicamento"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonModificarMedicaMouseReleased"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton3">
+            <Component class="javax.swing.JButton" name="jButtonEliminarMedicamento">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Eliminar Medicamento"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonEliminarMedicamentoActionPerformed"/>
               </Events>
             </Component>
             <Container class="javax.swing.JPanel" name="jPanel1">

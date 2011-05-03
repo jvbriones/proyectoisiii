@@ -19,6 +19,15 @@ public class Medicamento {
 
     private Set<LoteMedicamento> LotesMedicamento = new HashSet<LoteMedicamento>(0);
 
+    public Medicamento(String Nombre, String Descripcion, int ExistenciasMinimas, int StockActual){
+
+        this.Nombre=Nombre;
+        this.Descripcion=Descripcion;
+        this.ExistenciasMinimas=ExistenciasMinimas;
+        this.StockActual=StockActual;
+    }
+
+
 
     public String getNombre() {
         return Nombre;
@@ -52,7 +61,7 @@ public class Medicamento {
         this.ExistenciasMinimas = ExistenciasMinimas;
     }
 
-    private void setStockActual(int stockActual) {
+    public void setStockActual(int stockActual) {
         this.StockActual = stockActual;
     }
 
