@@ -2550,6 +2550,18 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField8ActionPerformed
 
     private void jButtonEliminarMedicamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarMedicamentoActionPerformed
+
+        //solicita confirmacion
+        // si confirma:
+        boolean exito;
+        GestorFarmacia gesFar = new GestorFarmacia();
+        exito = gesFar.eliminarMedicamento(Nombre);
+        if( exito)
+              new InformacionExito().setVisible(true);
+        else
+            new InformacionError().setVisible(false);
+
+
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonEliminarMedicamentoActionPerformed
 
