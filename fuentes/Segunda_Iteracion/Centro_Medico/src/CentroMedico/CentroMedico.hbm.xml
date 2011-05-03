@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="CentroMedico.CentroMedico">
+    <id column="NOMBRE_CENTROMEDICO" name="Nombre" type="string">
+      <generator class="assigned"/>
+    </id>
+    <property name="CIF"/>
+    <property name="Direccion"/>
+    <property name="Telefono"/>
+    <property name="Fax"/>
+    <property name="email"/>
+    <set cascade="all" name="Usuarios">
+      <key column="DNI_USUARIO"/>
+      <one-to-many class="CentroMedico.Usuario" lazy="true"/>
+    </set>
+  </class>
+</hibernate-mapping>
