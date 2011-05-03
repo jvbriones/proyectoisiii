@@ -22,5 +22,6 @@
     <mapping resource="CentroMedico/ResultadoSangre.hbm.xml"/>
     <mapping resource="CentroMedico/CentroMedico.hbm.xml"/>
     <mapping resource="CentroMedico/ResultadoOrina.hbm.xml"/>
+    <mapping resource="CentroMedico/PruebaRadiologia.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
