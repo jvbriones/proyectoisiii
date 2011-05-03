@@ -31,8 +31,8 @@
         <key column="DNI_RADIOLOGO"/>
       </joined-subclass>
     </joined-subclass>
-    <joined-subclass name="CentroMedico.Administrador">
-      <key column="DNI_ADMINISTRADOR"/>
+    <joined-subclass name="CentroMedico.Administrativo">
+      <key column="DNI_ADMINISTRATIVO"/>
     </joined-subclass>
     <joined-subclass name="CentroMedico.Farmaceutico">
       <key column="DNI_FARMACEUTICO"/>

@@ -23,7 +23,7 @@ public class ResultadoOrina {
         return Resultado;
     }
 
-    public AtributoOrina getAtributoOrina(){
+    public AtributoOrina getAtr(){
         return Atr;
     }
 
@@ -39,4 +39,7 @@ public class ResultadoOrina {
         this.Atr=Atr;
     }
 
+    public void setAtr(AtributoOrina Atr){
+        this.Atr=Atr;
+    }
 }

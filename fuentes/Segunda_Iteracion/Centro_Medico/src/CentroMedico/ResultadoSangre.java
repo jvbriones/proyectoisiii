@@ -23,7 +23,7 @@ public class ResultadoSangre {
         return Resultado;
     }
 
-    public AtributoSangre getAtributoSangre(){
+    public AtributoSangre getAtr(){
         return Atr;
     }
 
@@ -36,6 +36,10 @@ public class ResultadoSangre {
     }
 
     public void setId(AtributoSangre Atr){
+        this.Atr=Atr;
+    }
+
+    public void setAtr(AtributoSangre Atr){
         this.Atr=Atr;
     }
 

@@ -8,11 +8,11 @@
     <property name="Instrucciones"/>
     <property name="JuicioDiagnostico"/>
     <property name="Fecha"/>
-    <set cascade="all" name="MedicamentoRecetado">
+    <set cascade="all" name="MedicamentosRecetados">
       <key column="ID_MEDICAMENTORECETADO"/>
       <one-to-many class="CentroMedico.MedicamentoRecetado"/>
     </set>
-    <one-to-one class="CentroMedico.Medico" constrained="true" name="Medico"/>
-    <one-to-one class="CentroMedico.Paciente" constrained="true" name="Paciente"/>
+    <one-to-one class="CentroMedico.Medico" constrained="true" name="Medi"/>
+    <one-to-one class="CentroMedico.Paciente" constrained="true" name="Paci"/>
   </class>
 </hibernate-mapping>

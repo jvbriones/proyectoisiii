@@ -31,11 +31,15 @@ public class MedicamentoRecetado {
         return Duracion;
     };
 
-    public Date getDate (){
+    public Date getFechaFin (){
         return FechaFin;
     };
 
-    public Medicamento getMedicamento (){
+    public boolean getDispensado (){
+        return Dispensado;
+    };
+
+    public Medicamento getMed (){
         return Med;
     };
 
@@ -51,11 +55,15 @@ public class MedicamentoRecetado {
         this.Duracion=Duracion;
     };
 
-    public void setDate ( Date FechaFin){
+    public void setFechaFin ( Date FechaFin){
         this.FechaFin=FechaFin;
     };
 
-    public void setMedicamento (Medicamento Med){
+    public void setDispensado (boolean Dispensado){
+        this.Dispensado=Dispensado;
+    };
+
+    public void setMed (Medicamento Med){
         this.Med=Med;
     };
 }

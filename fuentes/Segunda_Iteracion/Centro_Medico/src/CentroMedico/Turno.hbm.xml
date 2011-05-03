@@ -7,6 +7,5 @@
     </id>
     <property name="HoraInicio"/>
     <property name="HoraFin"/>
-    <many-to-one cascade="all" class="CentroMedico.PersonalMedico" column="DNI_PERSONALMEDICO" name="PersonalMedico" not-null="true"/>
   </class>
 </hibernate-mapping>
