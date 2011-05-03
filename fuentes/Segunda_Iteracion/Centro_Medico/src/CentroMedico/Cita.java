@@ -23,6 +23,7 @@ import java.util.*;
 public class Cita {
 
     private boolean Estado;
+    private Date Hora;
     private Date Fecha;
     private String Tipo;
 
