@@ -2,21 +2,23 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
   <class name="CentroMedico.PruebaRadiologia">
-    <id column="ID_PRUEBARADIOLOGIA" name="Id">
+    <id column="ID_PRUEBARADIOLOGIA" name="Id" type="integer">
+        <generator class="native"/>
     </id>
     <property name="Comentario"/>
     <one-to-one class="CentroMedico.Paciente" constrained="true"  name="Paciente"/>
+    <one-to-one class="CentroMedico.Radiologo" constrained="true"  name="Radiologo"/>
     <joined-subclass name="CentroMedico.Resonancia">
       <key column="ID_RESONANCIA"/>
-      <set cascade="all" name="Imagenes">
-        <key column="ID_PRUEBARADIOLOGIA"/>
+      <set cascade="all" name="Resonancias">
+        <key column="ID_RESONANCIA"/>
         <one-to-many class="CentroMedico.Imagen"/>
       </set>
     </joined-subclass>
     <joined-subclass name="CentroMedico.Radiografia">
       <key column="ID_RADIOGRAFIA"/>
-      <set cascade="all" name="Imagenes">
-        <key column="ID_PRUEBARADIOLOGIA"/>
+      <set cascade="all" name="Radiografias">
+        <key column="ID_RADIOGRAFIA"/>
         <one-to-many class="CentroMedico.Imagen"/>
       </set>
     </joined-subclass>

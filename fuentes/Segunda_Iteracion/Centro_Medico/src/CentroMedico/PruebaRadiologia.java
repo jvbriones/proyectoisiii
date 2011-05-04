@@ -10,12 +10,14 @@ package CentroMedico;
  * @author pope
  */
 public class PruebaRadiologia {
-    private String Id;
+    private int Id;
     private String Comentario;
 
-    private Paciente Paci;
+    private Paciente Paciente;
+    private Radiologo Radiologo;
 
-    public String getId(){
+
+    public int getId(){
         return Id;
     }
 
@@ -24,10 +26,14 @@ public class PruebaRadiologia {
     }
 
     public Paciente getPaciente(){
-        return Paci;
+        return Paciente;
     }
 
-    public void setId(String Id){
+    public Radiologo getRadiologo() {
+        return Radiologo;
+    }
+
+    public void setId(int Id){
         this.Id=Id;
     }
 
@@ -35,8 +41,12 @@ public class PruebaRadiologia {
         this.Comentario=Comentario;
     }
 
-    public void setPaciente(Paciente Paci){
-        this.Paci=Paci;
+    public void setPaciente(Paciente Paciente){
+        this.Paciente=Paciente;
+    }
+
+    public void setRadiologo(Radiologo Radiologo) {
+        this.Radiologo = Radiologo;
     }
 
 }

@@ -11,18 +11,18 @@ import java.util.HashSet;
  *
  * @author pope
  */
-public class Radiografia {
-    private Set<Imagen> Imagenes=new HashSet<Imagen>(0);
+public class Radiografia extends PruebaRadiologia{
+    private Set<Imagen> Radiografias=new HashSet<Imagen>(0);
 
-    public Set<Imagen> getImagenes(){
-        return Imagenes;
+    public Set<Imagen> getRadiografias(){
+        return Radiografias;
     }
 
-    public void setImagenes(Set<Imagen> Imagenes){
-        this.Imagenes=Imagenes;
+    public void setRadiografias(Set<Imagen> Radiografias){
+        this.Radiografias=Radiografias;
     }
 
     public void añadirImagen(Imagen Img){
-        Imagenes.add(Img);
+        Radiografias.add(Img);
     }
 }

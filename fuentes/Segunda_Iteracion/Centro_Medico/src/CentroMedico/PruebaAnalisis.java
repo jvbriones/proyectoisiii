@@ -10,12 +10,12 @@ package CentroMedico;
  * @author pope
  */
 public class PruebaAnalisis {
-    private String Id;
+    private int Id;
     private String Comentario;
 
-    private Paciente Paci;
+    private Paciente Paciente;
 
-    public String getId (){
+    public int getId (){
         return Id;
     }
 
@@ -24,10 +24,10 @@ public class PruebaAnalisis {
     }
 
     public Paciente getPaciente (){
-        return Paci;
+        return Paciente;
     }
 
-    public void setId (String Id){
+    public void setId (int Id){
         this.Id=Id;
     }
 
@@ -35,7 +35,7 @@ public class PruebaAnalisis {
         this.Comentario=Comentario;
     }
 
-    public void setPaciente (Paciente Paci){
-        this.Paci=Paci;
+    public void setPaciente (Paciente Paciente){
+        this.Paciente=Paciente;
     }
 }

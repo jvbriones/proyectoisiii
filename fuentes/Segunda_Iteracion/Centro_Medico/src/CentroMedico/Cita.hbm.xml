@@ -4,10 +4,11 @@
   <class name="CentroMedico.Cita">
     <composite-id>
       <key-property column="FECHA_CITA" name="Fecha" type="date"/>
-      <key-many-to-one class="CentroMedico.Paciente" column="DNI_PACIENTE" lazy="true" name="Paciente"/>
+      <key-many-to-one class="CentroMedico.Paciente" column="DNI_PACIENTE" name="Paciente"/>
     </composite-id>
+    
     <property name="Estado"/>
     <property name="Tipo"/>
-    <one-to-one class="CentroMedico.PersonalMedico" constrained="true" lazy="true" name="PersonalMedico"/>
+    <many-to-one class="CentroMedico.PersonalMedico" name="PersonalMedico" column="DNI_PERSONALMEDICO"/>
   </class>
 </hibernate-mapping>

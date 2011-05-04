@@ -12,6 +12,7 @@
 package CentroMedico;
 
 import java.util.*;
+import java.io.Serializable;
 
 
 /**
@@ -20,22 +21,26 @@ import java.util.*;
  * modificado por Juan Carlos
  */
 
-public class Cita {
+public class Cita implements Serializable{
 
     private boolean Estado;
     private Date Hora;
     private Date Fecha;
     private String Tipo;
 
-    private Paciente Paci;
-    private PersonalMedico Perso;
+    private Paciente Paciente;
+    private PersonalMedico PersonalMedico;
 
     /*
      *
      * Constructores
      *
      */
-    
+
+    public Cita() {
+        this.Fecha = new Date(0);
+    }
+
     public Cita(Date Fecha, boolean Estado, String Tipo){
         this.Fecha=Fecha;
         this.Estado=Estado;
@@ -50,6 +55,11 @@ public class Cita {
     public Date getFecha(){
         return Fecha;
     }
+
+    public Date getHora() {
+        return Hora;
+    }
+
     
     public boolean getEstado(){
         return Estado;
@@ -60,11 +70,11 @@ public class Cita {
     }
 
     public Paciente getPaciente(){
-        return Paci;
+        return Paciente;
     }
 
     public PersonalMedico getPersonalMedico(){
-        return  Perso;
+        return  PersonalMedico;
     }
 
     /*
@@ -73,7 +83,7 @@ public class Cita {
       *
       */
 
-public void setFecha(Date Fecha){
+    public void setFecha(Date Fecha){
         this.Fecha=Fecha;
     }
 
@@ -85,11 +95,16 @@ public void setFecha(Date Fecha){
         this.Tipo=Tipo;
     }
 
-    public void setPaciente(Paciente Paci){
-        this.Paci=Paci;
+    public void setPaciente(Paciente Paciente){
+        this.Paciente=Paciente;
     }
 
-    public void setPersonalMedico( PersonalMedico Perso){
-        this.Perso=Perso;
+    public void setPersonalMedico( PersonalMedico PersonalMedico){
+        this.PersonalMedico=PersonalMedico;
     }
+
+    public void setHora(Date Hora) {
+        this.Hora = Hora;
+    }
+
 }
