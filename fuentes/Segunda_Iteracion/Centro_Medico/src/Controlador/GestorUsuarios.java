@@ -31,7 +31,7 @@ public class GestorUsuarios {
         boolean acceso=false;
         usuarioBD usuario_bd = new usuarioBD();
 
-        acceso=usuario_bd.validacion(Dni, Pass);
+        acceso=usuario_bd.existeUsuario(Dni);
 
         if(!acceso) {
             throw new Exception("Usuario o contraseña erroneos ");
@@ -50,16 +50,16 @@ public class GestorUsuarios {
        usuarioBD usuario_bd = new usuarioBD();
        Usuario userAux =usuario_bd.obtener(Dni);
 
-       userAux.setDni(Dni);
+       userAux.setDNI(Dni);
        userAux.setNombre(Nombre);
        userAux.setApellidos( Apellidos);
        userAux.setDireccion( Direccion);
        userAux.setEmail( Email);
-       userAux.setContrasena( Contrasena);
+       userAux.setContrasenia( Contrasena);
        userAux.setTelefono( Telefono);
-       userAux.setFechaNacimiento( FecNac);
-       userAux.setLugarNacimiento( LugarNac);
-       userAux.setFotografia( Fotografia);
+       userAux.setFecNac( FecNac);
+       userAux.setLugarNac( LugarNac);
+       userAux.setFoto( Fotografia);
 
        usuario_bd.almacenar(userAux);
 
@@ -70,24 +70,24 @@ public class GestorUsuarios {
             String Contrasena, String Telefono, Date FecNac, String LugarNac, String Fotografia) throws SQLException{
 
        usuarioBD usuario_bd = new usuarioBD();
-       String dni=user.getDni();
+       String dni=user.getDNI();
 
        if(dni.equalsIgnoreCase(Dni)){
           return "No puede modificarle los datos a otro Usuario.";
        }
 
-       user.setDni(Dni);
+       user.setDNI(Dni);
        user.setNombre(Nombre);
        user.setApellidos( Apellidos);
        user.setDireccion( Direccion);
        user.setEmail( Email);
-       user.setContrasena( Contrasena);
+       user.setContrasenia( Contrasena);
        user.setTelefono( Telefono);
-       user.setFechaNacimiento( FecNac);
-       user.setLugarNacimiento( LugarNac);
-       user.setFotografia( Fotografia);
+       user.setFecNac( FecNac);
+       user.setLugarNac( LugarNac);
+       user.setFoto( Fotografia);
 
-       usuario_bd.almacenarUsuario(user);
+       usuario_bd.almacenar(user);
 
        return "Operacion Realizada con Exito";
     }
@@ -101,16 +101,16 @@ public class GestorUsuarios {
         if(Existe){
             Usuario userAux =usuario_bd.obtener(DNI);
 
-            String dni=userAux.getDni();
+            String dni=userAux.getDNI();
             String nombre=userAux.getNombre();
             String apellidos=userAux.getApellidos();
             String direccion=userAux.getDireccion();
             String email=userAux.getEmail();
             String contrasena=userAux.getContrasenia();
             String telefono=userAux.getTelefono();
-            Date fecNac=userAux.getFechaNacimiento();
-            String lugarNac=userAux.getLugarNacimiento();
-            String foto=userAux.getFotografia();
+            Date fecNac=userAux.getFecNac();
+            String lugarNac=userAux.getLugarNac();
+            String foto=userAux.getFoto();
             String tipo=userAux.getTipo();
 
 
@@ -149,16 +149,16 @@ public class GestorUsuarios {
 
         ArrayList salida = new ArrayList();
 
-        String dni=user.getDni();
+        String dni=user.getDNI();
         String nombre=user.getNombre();
         String apellidos=user.getApellidos();
         String direccion=user.getDireccion();
         String email=user.getEmail();
         String contrasena=user.getContrasenia();
         String telefono=user.getTelefono();
-        Date fecNac=user.getFechaNacimiento();
-        String lugarNac=user.getLugarNacimiento();
-        String foto=user.getFotografia();
+        Date fecNac=user.getFecNac();
+        String lugarNac=user.getLugarNac();
+        String foto=user.getFoto();
         String tipo=user.getTipo();
 
         salida.add(nombre);

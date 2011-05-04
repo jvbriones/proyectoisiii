@@ -69,7 +69,7 @@ public class GestorCitas {
         citasBD bd_citas=new citasBD();
 
         String Dni=new String();
-        Dni=usu.getDni();
+        Dni=usu.getDNI();
 
         boolean existe;
         existe=bd_citas.existeCita(Dni);
