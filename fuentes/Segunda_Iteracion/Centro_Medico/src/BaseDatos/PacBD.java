@@ -46,16 +46,16 @@ public class PacBD {
 
     // Modificado con respecto al diseño
     public void almacenarPaciente(Paciente Paciente) {
-        String dni=Paciente.getDni();
+        String dni=Paciente.getDNI();
         String nombre=Paciente.getNombre();
         String apellidos=Paciente.getApellidos();
         String direccion=Paciente.getDireccion();
         String email=Paciente.getEmail();
-        String contrasena=Paciente.getContrasena();
+        String contrasena=Paciente.getContrasenia();
         String telefono=Paciente.getTelefono();
-        Date fecNac=(Date) Paciente.getFechaNacimiento();
-        String lugarNac=Paciente.getLugarNacimiento();
-        String foto=Paciente.getFotografia();
+        Date fecNac=(Date) Paciente.getFecNac();
+        String lugarNac=Paciente.getLugarNac();
+        String foto=Paciente.getFoto();
         String tipo=Paciente.getTipo();
 
         Jdbc conexion = new Jdbc();

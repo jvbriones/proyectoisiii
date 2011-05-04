@@ -45,16 +45,16 @@ public class personalBD {
 
     // Modificado con respecto al diseño
     public void almacenarPersonal(Personal personal) {
-        String dni=personal.getDni();
+        String dni=personal.getDNI();
         String nombre=personal.getNombre();
         String apellidos=personal.getApellidos();
         String direccion=personal.getDireccion();
         String email=personal.getEmail();
         String contrasena=personal.getContrasenia();
         String telefono=personal.getTelefono();
-        Date fecNac=(Date) personal.getFechaNacimiento();
-        String lugarNac=personal.getLugarNacimiento();
-        String foto=personal.getFotografia();
+        Date fecNac=(Date) personal.getFecNac();
+        String lugarNac=personal.getLugarNac();
+        String foto=personal.getFoto();
         String tipo=personal.getTipoPersonal();
 
         Jdbc conexion = new Jdbc();
