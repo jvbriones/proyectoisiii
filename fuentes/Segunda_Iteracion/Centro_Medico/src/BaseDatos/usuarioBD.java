@@ -40,7 +40,7 @@ public class usuarioBD {
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor,NombreDB, user,pass);
 
-        String Consulta = "SELECT Dni , Contrasena FROM Usuarios WHERE Dni='"+Dni+"' and Contrasena='"+Pass+"'";
+        String Consulta = "SELECT DNI_USUARIO , Contrasenia FROM Usuario WHERE DNI_USUARIO='"+Dni+"' and Contrasenia='"+Pass+"'";
        //PreparedStatement ps = con.prepareStatement(Consulta);
       // ps.setString(1,Dni); // toma los datos como
        //ps.setString(2,Pass);
@@ -69,7 +69,7 @@ public class usuarioBD {
         conexion.doConnection(IpDelServidor, NombreDB,this.user,pass);
 
         //System.out.println(this.user);
-        String Consulta = "SELECT * FROM Usuarios WHERE Dni='"+Dni+"'";
+        String Consulta = "SELECT * FROM Usuario WHERE DNI_USUARIO='"+Dni+"'";
        
 
         ResultSet rs = conexion.consultaSelect(Consulta);
@@ -77,17 +77,17 @@ public class usuarioBD {
       
         if(rs.next()) {
             
-            String dni=rs.getString("Dni");
+            String dni=rs.getString("DNI_USUARIO");
             String nombre=rs.getString("Nombre");
             String apellidos=rs.getString("Apellidos");
             String direccion=rs.getString("Direccion");
             String email=rs.getString("Email");
-            String contrasena=rs.getString("Contrasena");
+            String contrasena=rs.getString("Contrasenia");
             String telefono=rs.getString("Telefono"); //Estos campos han de coincidir exactamente con los de la tabla Usuarios en la BD
-            Date fecNac=rs.getDate("FechaNacimiento");//Si el Telefono es un Entero en la BD, aqui tendria que ser getInt("Telefono")
-            String lugarNac=rs.getString("LugarNacimiento");
-            String foto=rs.getString("Fotografia");
-            String tipo=rs.getString("TipoUsuario");
+            Date fecNac=rs.getDate("FecNac");//Si el Telefono es un Entero en la BD, aqui tendria que ser getInt("Telefono")
+            String lugarNac=rs.getString("LugarNac");
+            String foto=rs.getString("Foto");
+            String tipo=rs.getString("Tipo");
  
             usu = new Usuario(dni, nombre, apellidos, direccion, email, contrasena, telefono, fecNac, lugarNac, foto, tipo);
 
@@ -110,19 +110,19 @@ public class usuarioBD {
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, this.user,pass);
-        String Consulta = "SELECT * FROM Usuarios WHERE Nombre='"+nombre+"'";
+        String Consulta = "SELECT * FROM Usuario WHERE Nombre='"+nombre+"'";
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
             String dni=rs.getString("Dni");
             String apellidos=rs.getString("Apellidos");
             String direccion=rs.getString("Direccion");
             String email=rs.getString("Email");
-            String contrasena=rs.getString("Contrasena");
+            String contrasena=rs.getString("Contrasenia");
             String telefono=rs.getString("Telefono"); //Estos campos han de coincidir exactamente con los de la tabla Usuarios en la BD
-            Date fecNac=rs.getDate("FechaNacimiento");//Si el Telefono es un Entero en la BD, aqui tendria que ser getInt("Telefono")
-            String lugarNac=rs.getString("LugarNacimiento");
-            String foto=rs.getString("Fotografia");
-            String tipo=rs.getString("TipoUsuario");
+            Date fecNac=rs.getDate("FecNac");//Si el Telefono es un Entero en la BD, aqui tendria que ser getInt("Telefono")
+            String lugarNac=rs.getString("LugarNac");
+            String foto=rs.getString("Foto");
+            String tipo=rs.getString("Tipo");
 
             user = new Usuario(dni, nombre, apellidos, direccion, email, contrasena, telefono, fecNac, lugarNac, foto, tipo);
         }
@@ -156,7 +156,7 @@ public class usuarioBD {
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, this.user,pass);
-        String Consulta = "UPDATE Usuarios SET Dni='"+dni+"',Nombre='"+nombre+"',Apellidos='"+apellidos+"',Direccion='"+direccion+"',Email='"+email+"',Contrasena='"+contrasena+"',Telefono='"+telefono+"',FechaNacimiento="+fecNac+",LugarNacimiento='"+lugarNac+"',Fotografia='"+foto+"',TipoUsuario='"+tipo+"' WHERE Dni='"+dni+"'";
+        String Consulta = "UPDATE Usuario SET DNI='"+dni+"',Nombre='"+nombre+"',Apellidos='"+apellidos+"',Direccion='"+direccion+"',Email='"+email+"',Contrasenia='"+contrasena+"',Telefono='"+telefono+"',FecNac="+fecNac+",LugarNac='"+lugarNac+"',Foto='"+foto+"',Tipo='"+tipo+"' WHERE DNI='"+dni+"'";
         conexion.consultaUpdate(Consulta);
         conexion.closeConnection();
 
@@ -167,7 +167,7 @@ public class usuarioBD {
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "SELECT Dni FROM Usuarios WHERE Dni='"+Dni+"'";
+        String Consulta = "SELECT DNI FROM Usuario WHERE DNI='"+Dni+"'";
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
             existe=true;
