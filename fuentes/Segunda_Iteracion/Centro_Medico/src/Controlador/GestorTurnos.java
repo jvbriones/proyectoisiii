@@ -134,12 +134,12 @@ public class GestorTurnos {
                 SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
                 
                 turno=bd_turno.obtenerTurno(Dni);
-                String fechaI=new String(sdf.format(turno.getFechaInicio()));
-                String tipo=new String(turno.getTipoTurno());
-                String fechaF=new String(sdf.format(turno.getFechaFin()));
+//                String fechaI=new String(sdf.format(turno.getFechaInicio()));
+  //              String tipo=new String(turno.getTipoTurno());
+    //            String fechaF=new String(sdf.format(turno.getFechaFin()));
 
-                exito="El turno es desde el día "+fechaI+" hasta "+fechaF;
-                exito+=", del tipo "+tipo;
+       //         exito="El turno es desde el día "+fechaI+" hasta "+fechaF;
+         //       exito+=", del tipo "+tipo;
             }
             else{
                 exito="El usuario "+Dni+" no tiene ningun turno asignado";

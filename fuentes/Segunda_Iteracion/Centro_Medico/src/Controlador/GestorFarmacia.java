@@ -27,7 +27,7 @@ public class GestorFarmacia {
 
         boolean exito;
         MedicamentoBD meBD= new MedicamentoBD();
-        Medicamento me= new Medicamento();
+        Medicamento me;
         me= meBD.obtener(Nombre);
 
         if( me!=null){
@@ -47,8 +47,8 @@ public class GestorFarmacia {
 
     public Medicamento consultarMedicamento( String Nombre){
 
-        Medicamento Me = new Medicamento();
-        MedicamentoBD meBD = new MedicaentoBD();
+        Medicamento Me;
+        MedicamentoBD meBD = new MedicamentoBD();
 
         Me = meBD.obtener(Nombre);
 
@@ -60,7 +60,7 @@ public class GestorFarmacia {
 
    public boolean modificarMedicamento( String Nombre,String Descripcion, int ExistenciasMinimas, int StockActual){
 
-       Medicamento Me= new Medicamento();
+       Medicamento Me;
        MedicamentoBD meBD=new MedicamentoBD();
        Me= meBD.obtener(Nombre);
 
@@ -79,7 +79,7 @@ public class GestorFarmacia {
     }
 
     public boolean eliminarMedicamento( String Nombre){
-       Medicamento Me= new Medicamento();
+       Medicamento Me;
        MedicamentoBD meBD=new MedicamentoBD();
        Me= meBD.obtener(Nombre);
        if( Me != null){

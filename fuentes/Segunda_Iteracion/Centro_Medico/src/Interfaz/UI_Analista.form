@@ -199,7 +199,7 @@
                                           <Component id="jButtonConsultarTurno" alignment="0" min="-2" pref="194" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Component id="jLabel4" alignment="1" min="-2" pref="166" max="-2" attributes="1"/>
+                                                  <Component id="jLabelAgregarAtributo" alignment="1" min="-2" pref="166" max="-2" attributes="1"/>
                                                   <Component id="jButtonAlmacenarResultado1" alignment="1" min="-2" pref="192" max="-2" attributes="1"/>
                                               </Group>
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -209,7 +209,7 @@
                                                   </Group>
                                                   <Group type="102" attributes="1">
                                                       <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
-                                                      <Component id="jLabel5" max="32767" attributes="0"/>
+                                                      <Component id="jLabelEliminarAtributo" max="32767" attributes="0"/>
                                                   </Group>
                                               </Group>
                                           </Group>
@@ -223,10 +223,10 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
-                              <Component id="jLabel1" min="-2" pref="162" max="-2" attributes="0"/>
+                              <Component id="jLabelAlamcenarResultados" min="-2" pref="162" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="172" max="32767" attributes="0"/>
+                      <EmptySpace pref="156" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -235,8 +235,8 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButtonConsultarDatosPersonales" pref="141" max="32767" attributes="1"/>
-                          <Component id="jButtonConsultarTurno" pref="141" max="32767" attributes="1"/>
+                          <Component id="jButtonConsultarDatosPersonales" max="32767" attributes="1"/>
+                          <Component id="jButtonConsultarTurno" max="32767" attributes="1"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -248,17 +248,17 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jButtonAlmacenarResultado2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelEliminarAtributo" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Component id="jButtonAlmacenarResultado" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jLabel1" min="-2" pref="21" max="-2" attributes="0"/>
+                              <Component id="jLabelAlamcenarResultados" min="-2" pref="21" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Component id="jButtonAlmacenarResultado1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelAgregarAtributo" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
@@ -309,7 +309,7 @@
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonAlmacenarResultadoMouseClicked"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel1">
+            <Component class="javax.swing.JLabel" name="jLabelAlamcenarResultados">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Almacenar resultados"/>
               </Properties>
@@ -335,12 +335,12 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAlmacenarResultado2ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel4">
+            <Component class="javax.swing.JLabel" name="jLabelAgregarAtributo">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Agregar atributo"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel5">
+            <Component class="javax.swing.JLabel" name="jLabelEliminarAtributo">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Eliminar atributo"/>
               </Properties>
@@ -927,7 +927,7 @@
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="50" pref="115" max="32767" attributes="0"/>
+                          <EmptySpace min="50" pref="113" max="32767" attributes="0"/>
                           <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="24" pref="24" max="24" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -980,7 +980,7 @@
                               <Component id="jButtonMenosAnioFechaFinTurno" min="-2" pref="40" max="-2" attributes="0"/>
                               <Component id="jRadioButtonNoche" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="66" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="64" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -1277,10 +1277,10 @@
                                       </Group>
                                       <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel2" min="-2" pref="66" max="-2" attributes="0"/>
+                                          <Component id="jLabelPrueba" min="-2" pref="66" max="-2" attributes="0"/>
                                           <Group type="102" attributes="0">
                                               <EmptySpace min="12" pref="12" max="12" attributes="0"/>
-                                              <Component id="jTextField1" min="-2" pref="72" max="-2" attributes="0"/>
+                                              <Component id="jTextFieldValorLinfocitos" min="-2" pref="72" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="jLabel6" min="-2" pref="162" max="-2" attributes="0"/>
                                           <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
@@ -1322,7 +1322,7 @@
                               <Component id="jLabelIAtributos" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelPrueba" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jRadioButtonSangre" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -1344,10 +1344,10 @@
                               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                               <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTextField1" min="-2" pref="38" max="-2" attributes="0"/>
+                              <Component id="jTextFieldValorLinfocitos" min="-2" pref="38" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="33" max="32767" attributes="0"/>
+                      <EmptySpace pref="29" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1389,7 +1389,7 @@
                 <Property name="text" type="java.lang.String" value="Orina"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel2">
+            <Component class="javax.swing.JLabel" name="jLabelPrueba">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Prueba"/>
               </Properties>
@@ -1432,9 +1432,9 @@
                 <Property name="text" type="java.lang.String" value="Valor linfocitos"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField1">
+            <Component class="javax.swing.JTextField" name="jTextFieldValorLinfocitos">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldValorLinfocitosActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

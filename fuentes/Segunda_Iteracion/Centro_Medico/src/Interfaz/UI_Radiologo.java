@@ -891,10 +891,10 @@ public class UI_Radiologo extends javax.swing.JFrame {
             .add(jPanelConsultarTurnoLayout.createSequentialGroup()
                 .add(273, 273, 273)
                 .add(jLabelGestionarPaciente6)
-                .addContainerGap(152, Short.MAX_VALUE))
+                .addContainerGap(193, Short.MAX_VALUE))
             .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(jPanelConsultarTurnoLayout.createSequentialGroup()
-                    .add(0, 40, Short.MAX_VALUE)
+                    .add(0, 60, Short.MAX_VALUE)
                     .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                         .add(jPanelConsultarTurnoLayout.createSequentialGroup()
                             .add(120, 120, 120)
@@ -950,7 +950,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
                             .add(jButtonMenosAnioFechaFinTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(90, 90, 90)
                             .add(jRadioButtonNoche, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                    .add(0, 40, Short.MAX_VALUE)))
+                    .add(0, 61, Short.MAX_VALUE)))
         );
         jPanelConsultarTurnoLayout.setVerticalGroup(
             jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1011,14 +1011,13 @@ public class UI_Radiologo extends javax.swing.JFrame {
         jPanelConsultarTurno.setBounds(0, 0, 860, -1);
         ZonaTrabajo.add(jPanelConsultarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jLabelGestionarPaciente7.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
+        jLabelGestionarPaciente7.setFont(new java.awt.Font("Lucida Grande", 1, 36));
         jLabelGestionarPaciente7.setText("Almacenar Resultados Radiología");
 
         jLabel10.setText("_____________________________________________________________________________");
 
         jLabelAlmacenarDni.setText("Dni del paciente:");
 
-        jTextFieldAlmacenarDni.setText("jTextField1");
         jTextFieldAlmacenarDni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldAlmacenarDniActionPerformed(evt);
@@ -1063,42 +1062,41 @@ public class UI_Radiologo extends javax.swing.JFrame {
         jPanelAlmacenarResultadosLayout.setHorizontalGroup(
             jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                .add(149, 149, 149)
                 .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jLabel10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 809, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                        .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                            .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                                .add(jLabelAlmacenarDni)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(jTextFieldAlmacenarDni, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 185, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED))
-                            .add(jLabelImagenes)
-                            .add(jLabelComentarios)
-                            .add(scrollPaneImagenes, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)
-                            .add(scrollPaneComentarios, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .add(149, 149, 149)
                         .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jLabel10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 809, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                                .add(86, 86, 86)
                                 .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                                        .add(30, 30, 30)
-                                        .add(jLabel2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 66, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                    .add(jRadioButtonResonancia, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
-                                    .add(jRadioButtonRadiologia, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                                .add(23, 23, 23)
-                                .add(jButtonAnadirImagen, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 181, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 201, Short.MAX_VALUE)))
-                .add(540, 540, 540))
-            .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                .add(298, 298, 298)
-                .add(jButtonAlmacenarResultadoRadiologo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 116, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(544, Short.MAX_VALUE))
-            .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                .add(107, 107, 107)
-                .add(jLabelGestionarPaciente7)
-                .addContainerGap(172, Short.MAX_VALUE))
+                                        .add(jLabelAlmacenarDni)
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                        .add(jTextFieldAlmacenarDni, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 185, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED))
+                                    .add(jLabelImagenes)
+                                    .add(jLabelComentarios)
+                                    .add(scrollPaneImagenes, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)
+                                    .add(scrollPaneComentarios, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
+                                        .add(86, 86, 86)
+                                        .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                                            .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
+                                                .add(30, 30, 30)
+                                                .add(jLabel2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 66, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                            .add(jRadioButtonResonancia, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                                            .add(jRadioButtonRadiologia, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
+                                        .add(23, 23, 23)
+                                        .add(jButtonAnadirImagen, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 181, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))))
+                    .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
+                        .add(298, 298, 298)
+                        .add(jButtonAlmacenarResultadoRadiologo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 116, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
+                        .add(107, 107, 107)
+                        .add(jLabelGestionarPaciente7)))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelAlmacenarResultadosLayout.setVerticalGroup(
             jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1131,7 +1129,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
                 .add(scrollPaneComentarios, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jButtonAlmacenarResultadoRadiologo)
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         jPanelAlmacenarResultados.setBounds(10, 30, 870, 510);
@@ -1992,7 +1990,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
     private void mostrarDatosPerso(Usuario usu) throws SQLException{
 
         Calendar calendar = Calendar.getInstance();
-        calendar.setTime(usu.getFechaNacimiento());
+        calendar.setTime(usu.getFecNac());
         int dia = calendar.get(Calendar.DAY_OF_MONTH);   //dia del mes
         int mes = calendar.get(Calendar.MONTH);
         mes=mes+1;//mes, de 0 a 11
@@ -2008,12 +2006,12 @@ public class UI_Radiologo extends javax.swing.JFrame {
         jTextFieldFechaNacimientoMesersonal.setText(num_mes);
         jTextFieldNombrePersonal.setText(usu.getNombre());
         jTextFieldContraseniaPersonal.setText(usu.getContrasenia());
-        jTextFieldDNIPersonal.setText(usu.getDni());
+        jTextFieldDNIPersonal.setText(usu.getDNI());
         jTextFieldApellidosPersonal.setText(usu.getApellidos());
         jTextFieldTelefonoPersonal.setText(usu.getTelefono());
         jTextFieldDireccionPersonal.setText(usu.getDireccion());
         jTextFieldEmailPersonal.setText(usu.getEmail());
-        jTextFieldLugarNacimientoPersonal.setText(usu.getLugarNacimiento());
+        jTextFieldLugarNacimientoPersonal.setText(usu.getLugarNac());
     }
     
     // @param args the command line arguments

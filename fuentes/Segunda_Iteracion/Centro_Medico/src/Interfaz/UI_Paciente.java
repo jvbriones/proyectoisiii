@@ -68,7 +68,7 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void mostrarDatosPaciente(Usuario usu) throws SQLException{
 
         Calendar calendar = Calendar.getInstance();
-        calendar.setTime(usu.getFechaNacimiento());
+        calendar.setTime(usu.getFecNac());
         int dia = calendar.get(Calendar.DAY_OF_MONTH);   //dia del mes
         int mes = calendar.get(Calendar.MONTH);
         mes=mes+1;//mes, de 0 a 11
@@ -84,12 +84,12 @@ public class UI_Paciente extends javax.swing.JFrame {
         jTextFieldFechaNacimientoMesPaciente.setText(num_mes);
         jTextFieldNombrePaciente.setText(usu.getNombre());
         jTextFieldContraseniaPaciente.setText(usu.getContrasenia());
-        jTextFieldDNIPaciente.setText(usu.getDni());
+        jTextFieldDNIPaciente.setText(usu.getDNI());
         jTextFieldApellidosPaciente.setText(usu.getApellidos());
         jTextFieldTelefonoPaciente.setText(usu.getTelefono());
         jTextFieldDireccionPaciente.setText(usu.getDireccion());
         jTextFieldEmailPaciente.setText(usu.getEmail());
-        jTextFieldLugarNacimientoPaciente.setText(usu.getLugarNacimiento());
+        jTextFieldLugarNacimientoPaciente.setText(usu.getLugarNac());
 
         
       
@@ -105,11 +105,11 @@ public class UI_Paciente extends javax.swing.JFrame {
         Cita nueva_cita = null;
         boolean existe;
 
-        existe=cita_bd.existeCita(usu.getDni());
+        existe=cita_bd.existeCita(usu.getDNI());
 
         if(existe){
 
-            nueva_cita = cita_bd.obtenerCita(usu.getDni());
+            nueva_cita = cita_bd.obtenerCita(usu.getDNI());
 
             Calendar calendar = Calendar.getInstance();
             calendar.setTime(nueva_cita.getFecha());
@@ -124,8 +124,8 @@ public class UI_Paciente extends javax.swing.JFrame {
 
 
 
-            jTextFieldDNIMedico.setText(nueva_cita.getDniMedico());
-            jTextFieldDNIPacienteCita.setText(nueva_cita.getDniPaciente());
+            jTextFieldDNIMedico.setText(nueva_cita.getPersonalMedico().getDNI());
+            jTextFieldDNIPacienteCita.setText(nueva_cita.getPaciente().getDNI());
             jTextFieldAnioCita.setText(num_anio);
             jTextFieldDiaCita.setText(num_dia);
             jTextFieldMesCita.setText(num_mes);

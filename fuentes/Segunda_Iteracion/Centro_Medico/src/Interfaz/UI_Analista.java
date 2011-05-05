@@ -106,11 +106,11 @@ public class UI_Analista extends javax.swing.JFrame {
         jLabelConsultarTurno = new javax.swing.JLabel();
         jButtonConsultarTurno = new javax.swing.JButton();
         jButtonAlmacenarResultado = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jLabelAlamcenarResultados = new javax.swing.JLabel();
         jButtonAlmacenarResultado1 = new javax.swing.JButton();
         jButtonAlmacenarResultado2 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jLabelAgregarAtributo = new javax.swing.JLabel();
+        jLabelEliminarAtributo = new javax.swing.JLabel();
         jPanelConsultarDatosPersonales = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabelGestionarPaciente4 = new javax.swing.JLabel();
@@ -190,14 +190,14 @@ public class UI_Analista extends javax.swing.JFrame {
         jTextFieldAlmacenarDni = new javax.swing.JTextField();
         jRadioButtonSangre = new javax.swing.JRadioButton();
         jRadioButtonOrina = new javax.swing.JRadioButton();
-        jLabel2 = new javax.swing.JLabel();
+        jLabelPrueba = new javax.swing.JLabel();
         jLabelIAtributos = new javax.swing.JLabel();
         scrollPaneImagenes = new java.awt.ScrollPane();
         jLabelComentarios = new javax.swing.JLabel();
         scrollPaneComentarios = new java.awt.ScrollPane();
         jButtonAlmacenarResultadoRadiologo = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jTextFieldValorLinfocitos = new javax.swing.JTextField();
         jPanelAgregarAtributo = new javax.swing.JPanel();
         jLabelGestionarPaciente8 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -333,7 +333,7 @@ public class UI_Analista extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Almacenar resultados");
+        jLabelAlamcenarResultados.setText("Almacenar resultados");
 
         jButtonAlmacenarResultado1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Citas.png"))); // NOI18N
         jButtonAlmacenarResultado1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -354,9 +354,9 @@ public class UI_Analista extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setText("Agregar atributo");
+        jLabelAgregarAtributo.setText("Agregar atributo");
 
-        jLabel5.setText("Eliminar atributo");
+        jLabelEliminarAtributo.setText("Eliminar atributo");
 
         org.jdesktop.layout.GroupLayout jPanelPrincipalLayout = new org.jdesktop.layout.GroupLayout(jPanelPrincipal);
         jPanelPrincipal.setLayout(jPanelPrincipalLayout);
@@ -381,7 +381,7 @@ public class UI_Analista extends javax.swing.JFrame {
                                     .add(jButtonConsultarTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                     .add(jPanelPrincipalLayout.createSequentialGroup()
                                         .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                                            .add(jLabel4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 166, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                            .add(jLabelAgregarAtributo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 166, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                             .add(jButtonAlmacenarResultado1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 192, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                         .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                                             .add(jPanelPrincipalLayout.createSequentialGroup()
@@ -389,14 +389,14 @@ public class UI_Analista extends javax.swing.JFrame {
                                                 .add(jButtonAlmacenarResultado2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 192, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                             .add(jPanelPrincipalLayout.createSequentialGroup()
                                                 .add(92, 92, 92)
-                                                .add(jLabel5, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                                                .add(jLabelEliminarAtributo, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                             .add(jPanelPrincipalLayout.createSequentialGroup()
                                 .add(88, 88, 88)
                                 .add(jLabelConsultarTurno))))
                     .add(jPanelPrincipalLayout.createSequentialGroup()
                         .add(67, 67, 67)
-                        .add(jLabel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 162, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(165, Short.MAX_VALUE))
+                        .add(jLabelAlamcenarResultados, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 162, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(156, Short.MAX_VALUE))
         );
         jPanelPrincipalLayout.setVerticalGroup(
             jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -404,7 +404,7 @@ public class UI_Analista extends javax.swing.JFrame {
                 .add(29, 29, 29)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jButtonConsultarDatosPersonales, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(jButtonConsultarTurno, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE))
+                    .add(jButtonConsultarTurno, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelConsultarDatosPersonales)
@@ -414,15 +414,15 @@ public class UI_Analista extends javax.swing.JFrame {
                     .add(jPanelPrincipalLayout.createSequentialGroup()
                         .add(jButtonAlmacenarResultado2)
                         .add(18, 18, 18)
-                        .add(jLabel5))
+                        .add(jLabelEliminarAtributo))
                     .add(jPanelPrincipalLayout.createSequentialGroup()
                         .add(jButtonAlmacenarResultado)
                         .add(18, 18, 18)
-                        .add(jLabel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 21, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .add(jLabelAlamcenarResultados, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 21, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                     .add(jPanelPrincipalLayout.createSequentialGroup()
                         .add(jButtonAlmacenarResultado1)
                         .add(18, 18, 18)
-                        .add(jLabel4)))
+                        .add(jLabelAgregarAtributo)))
                 .add(131, 131, 131))
         );
 
@@ -1109,7 +1109,7 @@ public class UI_Analista extends javax.swing.JFrame {
 
         jRadioButtonOrina.setText("Orina");
 
-        jLabel2.setText("Prueba");
+        jLabelPrueba.setText("Prueba");
 
         jLabelIAtributos.setText("Atributos");
 
@@ -1123,9 +1123,9 @@ public class UI_Analista extends javax.swing.JFrame {
 
         jLabel6.setText("Valor linfocitos");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldValorLinfocitos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jTextFieldValorLinfocitosActionPerformed(evt);
             }
         });
 
@@ -1151,10 +1151,10 @@ public class UI_Analista extends javax.swing.JFrame {
                                     .add(scrollPaneComentarios, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .add(77, 77, 77)
                                 .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                    .add(jLabel2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 66, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                    .add(jLabelPrueba, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 66, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
                                         .add(12, 12, 12)
-                                        .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 72, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                        .add(jTextFieldValorLinfocitos, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 72, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                     .add(jLabel6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 162, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                     .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                                         .add(jRadioButtonOrina, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
@@ -1183,7 +1183,7 @@ public class UI_Analista extends javax.swing.JFrame {
                         .add(60, 60, 60)
                         .add(jLabelIAtributos))
                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                        .add(jLabel2)
+                        .add(jLabelPrueba)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(jRadioButtonSangre)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
@@ -1202,8 +1202,8 @@ public class UI_Analista extends javax.swing.JFrame {
                         .add(16, 16, 16)
                         .add(jLabel6)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 38, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .add(jTextFieldValorLinfocitos, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 38, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         jPanelAlmacenarResultados.setBounds(10, 30, 870, 510);
@@ -1281,7 +1281,7 @@ public class UI_Analista extends javax.swing.JFrame {
                 .addContainerGap(46, Short.MAX_VALUE))
         );
 
-        jPanelAgregarAtributo.setBounds(0, 0, 854, 381);
+        jPanelAgregarAtributo.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelAgregarAtributo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente9.setFont(new java.awt.Font("Lucida Grande", 1, 36));
@@ -1354,7 +1354,7 @@ public class UI_Analista extends javax.swing.JFrame {
                 .addContainerGap(48, Short.MAX_VALUE))
         );
 
-        jPanelEliminarAtributo.setBounds(0, 0, 800, 381);
+        jPanelEliminarAtributo.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelEliminarAtributo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         getContentPane().add(ZonaTrabajo);
@@ -1962,9 +1962,9 @@ public class UI_Analista extends javax.swing.JFrame {
         mostrarPanel("EliminarAtributo");
     }//GEN-LAST:event_jButtonAlmacenarResultado2MouseClicked
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jTextFieldValorLinfocitosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldValorLinfocitosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jTextFieldValorLinfocitosActionPerformed
 
     private void jTextFieldNombreAtributoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreAtributoActionPerformed
         // TODO add your handling code here:
@@ -2296,7 +2296,7 @@ public class UI_Analista extends javax.swing.JFrame {
     private void mostrarDatosPerso(Usuario usu) throws SQLException{
 
         Calendar calendar = Calendar.getInstance();
-        calendar.setTime(usu.getFechaNacimiento());
+        calendar.setTime(usu.getFecNac());
         int dia = calendar.get(Calendar.DAY_OF_MONTH);   //dia del mes
         int mes = calendar.get(Calendar.MONTH);
         mes=mes+1;//mes, de 0 a 11
@@ -2312,12 +2312,12 @@ public class UI_Analista extends javax.swing.JFrame {
         jTextFieldFechaNacimientoMesersonal.setText(num_mes);
         jTextFieldNombrePersonal.setText(usu.getNombre());
         jTextFieldContraseniaPersonal.setText(usu.getContrasenia());
-        jTextFieldDNIPersonal.setText(usu.getDni());
+        jTextFieldDNIPersonal.setText(usu.getDNI());
         jTextFieldApellidosPersonal.setText(usu.getApellidos());
         jTextFieldTelefonoPersonal.setText(usu.getTelefono());
         jTextFieldDireccionPersonal.setText(usu.getDireccion());
         jTextFieldEmailPersonal.setText(usu.getEmail());
-        jTextFieldLugarNacimientoPersonal.setText(usu.getLugarNacimiento());
+        jTextFieldLugarNacimientoPersonal.setText(usu.getLugarNac());
     }
     
     // @param args the command line arguments
@@ -2366,19 +2366,17 @@ public class UI_Analista extends javax.swing.JFrame {
     private javax.swing.JButton jButtonMenosMesFechaFinTurno;
     private javax.swing.JButton jButtonMenosMesFechaInicioTurno;
     private javax.swing.JButton jButtonMenosMesPersonal;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelAgregarAtributo;
+    private javax.swing.JLabel jLabelAlamcenarResultados;
     private javax.swing.JLabel jLabelAlmacenarDni;
     private javax.swing.JLabel jLabelApellidosPersonal;
     private javax.swing.JLabel jLabelAyuda;
@@ -2390,6 +2388,7 @@ public class UI_Analista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelDNIPersonal;
     private javax.swing.JLabel jLabelDNITurno;
     private javax.swing.JLabel jLabelDireccionPersonal;
+    private javax.swing.JLabel jLabelEliminarAtributo;
     private javax.swing.JLabel jLabelEmailPersonal;
     private javax.swing.JLabel jLabelFechaFinTurno;
     private javax.swing.JLabel jLabelFechaInicioTurno;
@@ -2413,6 +2412,7 @@ public class UI_Analista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelNombreAtributo1;
     private javax.swing.JLabel jLabelNombrePersonal;
     private javax.swing.JLabel jLabelNombreUsuario;
+    private javax.swing.JLabel jLabelPrueba;
     private javax.swing.JLabel jLabelSalir;
     private javax.swing.JLabel jLabelTelefonoPersonal;
     private javax.swing.JLabel jLabelTipoUsuario;
@@ -2443,7 +2443,6 @@ public class UI_Analista extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTextArea jTextAreaInfoConsultaTurno;
     private javax.swing.JTextArea jTextAreaInfoTurno;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextFieldAlmacenarDni;
     private javax.swing.JTextField jTextFieldAnioFinTurno;
     private javax.swing.JTextField jTextFieldAnioInicioTurno;
@@ -2465,6 +2464,7 @@ public class UI_Analista extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldNombreAtributo1;
     private javax.swing.JTextField jTextFieldNombrePersonal;
     private javax.swing.JTextField jTextFieldTelefonoPersonal;
+    private javax.swing.JTextField jTextFieldValorLinfocitos;
     private java.awt.ScrollPane scrollPaneComentarios;
     private java.awt.ScrollPane scrollPaneImagenes;
     // End of variables declaration//GEN-END:variables
