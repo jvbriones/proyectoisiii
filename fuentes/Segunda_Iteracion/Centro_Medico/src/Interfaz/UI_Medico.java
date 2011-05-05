@@ -2566,7 +2566,7 @@ public class UI_Medico extends javax.swing.JFrame {
 
         Usuario perso=null;
         usuarioBD usu_bd=new usuarioBD ();
-        perso=usu_bd.obtener(nombreUsuario);
+        perso=usu_bd.obtenerUsuario(nombreUsuario);
 
         mostrarDatosPerso(perso);
 

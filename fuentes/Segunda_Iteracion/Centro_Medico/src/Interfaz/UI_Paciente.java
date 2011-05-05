@@ -58,7 +58,7 @@ public class UI_Paciente extends javax.swing.JFrame {
        
         Usuario paci=null;
         usuarioBD usu_bd=new usuarioBD ();
-        paci=usu_bd.obtener(nombreUsuario);
+        paci=usu_bd.obtenerUsuario(nombreUsuario);
 
         mostrarDatosPaciente(paci);
         cargarDatosCitaPaciente(paci);

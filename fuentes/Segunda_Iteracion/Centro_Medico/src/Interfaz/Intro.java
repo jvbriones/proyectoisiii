@@ -17,8 +17,6 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import CentroMedico.*;
-import BaseDatos.*;
-import java.util.Date;
 
 /**
  *
@@ -249,79 +247,66 @@ public class Intro extends javax.swing.JFrame {
 
     /**
      * Comprueba que los datos de acceso correspondan a algún usuario
+     *
+     * @author Juan Carlos
+     * Esta función era de la primera iteración pero se ha cambiado para que sea coherente con la nueva implementación.
      */
     private void ComprobarAcceso() throws SQLException{
-        
-        String nombre = jTextFieldUsuario.getText();
+        String dni = jTextFieldUsuario.getText(); //El usuario de login siempre es un dni.
         String contrasenia = new String(jPasswordField1.getPassword());
-        boolean tieneAcceso = false;
         GestorUsuarios gesUsu = new GestorUsuarios();
+        Usuario usu=null;
+        String pass;
+        String tipo;
 
         try {
-            tieneAcceso = gesUsu.validacionUsuario(nombre, contrasenia);
+            usu = gesUsu.obtenerUsuario(dni);
         } catch (Exception ex) {
             Logger.getLogger(Intro.class.getName()).log(Level.SEVERE, null, ex);
         }
 
 
-        if(tieneAcceso){
-
-           
-            String nombreUsu = gesUsu.consultarDatosPersonales().get(0).toString();
-            String tipoUsu = gesUsu.consultarTipoUsuario();
-
-            
-            if( tipoUsu.equals("Paciente")){
-                UI_Paciente p = new UI_Paciente(nombre,"Paciente");
-                p.setVisible(true);
-                this.setVisible(false);
-
-            }
-            else if(tipoUsu.equals("Radiologo")){
-                UI_Radiologo ra = new UI_Radiologo(nombre,"Radiologo");
-                ra.setVisible(true);
-             
-                this.setVisible(false);
-            }
-            else if(tipoUsu.equals("Analista")){
-                UI_Analista an = new UI_Analista(nombre, "Analista");
-                an.setVisible(true);
-
-            }
-            else if(tipoUsu.equals("Medico")){
-                UI_Medico med = new UI_Medico(nombre, "Medico");
-                med.setVisible(true);
-            }
-            else if(tipoUsu.equals("Farmaceutico")){
-                UI_Farmaceutico far = new UI_Farmaceutico(nombre, "Farmaceutico");
-                far.setVisible(true);
-            }
-            else{
-                UI_Administrador uiAdmin = new UI_Administrador(nombreUsu,"Administrador");
-                 uiAdmin.setVisible(true);
-                this.setVisible(false);
-            }
-        }
-        //MODIFICADO POR POPE PARA PRUEBAS DESDE AKI
-        else if(nombre.equals("Admin") && contrasenia.equals("Admin")){
-            UI_Administrador p = new UI_Administrador(nombre,"Admin");
-            p.setVisible(true);
-            this.setVisible(false);
-        }
-        //HASTA AQUI MODIFICADO POR POPE PARA PRUEBAS
-        else if(nombre.equals("Paci") && contrasenia.equals("Paci")){
-            UI_Paciente p = new UI_Paciente(nombre,"Paciente");
-            p.setVisible(true);
-            this.setVisible(false);
-        }
-        else if(nombre.equals("Person") && contrasenia.equals("Person")){
-            UI_Radiologo p = new UI_Radiologo(nombre,"Personal");
-            p.setVisible(true);
-            this.setVisible(false);
-        }
-        else{
+        if(usu==null){
             Toolkit.getDefaultToolkit().beep();
             jLabelError.setVisible(true);
+        }else{
+            pass = usu.getContrasenia();
+            if( pass.equals(contrasenia) ){
+                tipo = usu.getTipo();
+                    if(tipo.equals("Administrativo")){
+                            UI_Administrador ui = new UI_Administrador(usu.getNombre(),"Administrativo");
+                            ui.setVisible(true);
+                            this.setVisible(false);
+                    }
+                    if(tipo.equals("Paciente")){
+                            UI_Paciente ui = new UI_Paciente(usu.getNombre(),"Paciente");
+                            ui.setVisible(true);
+                            this.setVisible(false);
+                    }
+                    if(tipo.equals("Analista")){
+                            UI_Analista ui = new UI_Analista(usu.getNombre(),"Analista");
+                            ui.setVisible(true);
+                            this.setVisible(false);
+                    }
+                    if(tipo.equals("Farmaceutico")){
+                            UI_Farmaceutico ui = new UI_Farmaceutico(usu.getNombre(),"Farmaceutico");
+                            ui.setVisible(true);
+                            this.setVisible(false);
+                    }
+                    if(tipo.equals("Medico")){
+                            UI_Medico ui = new UI_Medico(usu.getNombre(),"Medico");
+                            ui.setVisible(true);
+                            this.setVisible(false);
+                    }
+                    if(tipo.equals("Radiologo")){
+                            UI_Radiologo ui = new UI_Radiologo(usu.getNombre(),"Radiologo");
+                            ui.setVisible(true);
+                            this.setVisible(false);
+                    }
+            }else{
+                Toolkit.getDefaultToolkit().beep();
+                jLabelError.setVisible(true);
+            }
         }
     }
     
