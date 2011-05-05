@@ -37,7 +37,7 @@ public class GestorUsuarios {
             throw new Exception("Usuario o contraseña erroneos ");
         }
         else {
-            user=usuario_bd.obtener(Dni);
+            user=usuario_bd.obtenerUsuario(Dni);
         }
 
         return acceso;
@@ -48,7 +48,7 @@ public class GestorUsuarios {
             String Contrasena, String Telefono, Date FecNac, String LugarNac, String Fotografia) throws SQLException{
 
        usuarioBD usuario_bd = new usuarioBD();
-       Usuario userAux =usuario_bd.obtener(Dni);
+       Usuario userAux =usuario_bd.obtenerUsuario(Dni);
 
        userAux.setDNI(Dni);
        userAux.setNombre(Nombre);

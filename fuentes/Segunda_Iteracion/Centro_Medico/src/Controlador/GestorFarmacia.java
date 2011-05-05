@@ -117,11 +117,11 @@ public class GestorFarmacia {
 
 
 
-    public LoteMedicamento consultarLoteMedicamento (String CodBarras){
+    public LoteMedicamento consultarLoteMedicamento (String CodBarras, Medicamento me){
 
 
         LoteMedicamento Lo=null;
-        Medicamento Me=null;
+        Medicamento Me=me;
 
         Set<LoteMedicamento> lotes;
 
@@ -139,11 +139,11 @@ public class GestorFarmacia {
     }
 
 
-    public boolean modificarLoteMedicamento( String CodBarras,int Existencias, Date FechaCaducidad ){
+    public boolean modificarLoteMedicamento( String CodBarras,int Existencias, Date FechaCaducidad,Medicamento me ){
 
         LoteMedicamentoBD loBD = null;
         LoteMedicamento Lo= null;
-        Medicamento Me= null;
+        Medicamento Me= me;
         MedicamentoBD meBD=null;
 
 
@@ -166,6 +166,29 @@ public class GestorFarmacia {
         }
 
     }
+    
+    public boolean eliminarLoteMedicamento ( String CodBarras, Medicamento me){
+        
+         Medicamento Me =me;
+         MedicamentoBD meBD=null;
+         LoteMedicamentoBD loBD= null; 
+         LoteMedicamento Lo = this.consultarLoteMedicamento(CodBarras,Me);
+         if( Lo == null)
+             return false; 
+         else{
+             int existencias = Lo.getExistencias();
+             Me.actualizaLote(CodBarras);
+             Me.actualizaStock(existencias);//aquí debe restar las existencias
+             Me.eliminarLote(CodBarras);
+
+
+             loBD.almacenar(Lo); // tengo mis dudas porque loBD es nulo
+             meBD.almacenar(Me);
+             return true;
+        }
+    }
+
+
 
 }
 

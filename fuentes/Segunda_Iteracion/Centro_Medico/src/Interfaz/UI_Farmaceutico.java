@@ -34,13 +34,25 @@ import javax.swing.JFileChooser;
  */
 public class UI_Farmaceutico extends javax.swing.JFrame {
 
+    Medicamento Me = null;
+
     /** Creates new form Principal_Administrador */
     public UI_Farmaceutico() {
         initComponents();
+        //medicamento global
+
+
     }
 
     public UI_Farmaceutico(String nombreUsuario, String tipoUsuario) throws SQLException{
         initComponents();
+
+
+       
+        
+        
+
+
 
         /**Ponemos las etiquetas del usuario que ha entrado*/
         jLabelNombreUsuario.setText(nombreUsuario);
@@ -2576,7 +2588,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         // si confirma:
         boolean exito;
         GestorFarmacia gesFar = new GestorFarmacia();
-        exito = gesFar.eliminarMedicamento(Nombre);
+        exito = gesFar.eliminarMedicamento(jTextFieldNombreMedicamento.getText());
         if( exito)
               new InformacionExito().setVisible(true);
          else
@@ -2674,18 +2686,18 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
     private void jButtonConsultarMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarMouseReleased
         // TODO add your handling code here:
-        Medicamento Me= new Medicamento();
+
 
         GestorFarmacia gesFar= new GestorFarmacia();
-        Me=gesFar.consultarMedicamento(Nombre); // tomar nombre del jtextfieldddd
+        Me=gesFar.consultarMedicamento(jTextFieldNombreMedicamento.getText()); // tomar nombre del jtextfieldddd
         if( Me==null)
             
-            System.out.println(" El medicamento"+ Nombre + " no existe");
+            System.out.println(" El medicamento"+ jTextFieldNombreMedicamento.getText() + " no existe");
             
         else{ // establecemos la informacion en la interfaz
             
-            String ExistenciasMinimas= Integer.parseInt(Me.getExistenciasMinimas());
-            jTextFieldNombreMedica.setText(Nombre);
+            String ExistenciasMinimas= String.valueOf(Me.getExistenciasMinimas());
+        
             jTextFieldExistencias.setText(ExistenciasMinimas);
             //scrollPanelDescripcion.set
         }
@@ -2698,9 +2710,10 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         boolean exito;
 
         GestorFarmacia gesFar= new GestorFarmacia();
-
+        String Nombre= jTextFieldNombreMedicamento.getText();
         //tomar datos de los campos,procesarlos y pasarselos a la siguiente funcion
-        exito = gesFar.modificarMedicamento();
+        exito = gesFar.modificarMedicamento(Nombre);
+
 
         if( exito==false)
             System.out.println("El medicamento" +Nombre+" no existe");
@@ -2734,7 +2747,23 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
     private void jButtonELiminarLoteMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonELiminarLoteMouseReleased
 
        // TODO add your handling code here:
+        //solicita confirmacion
+        // si confirma:
 
+        boolean exito;
+        LoteMedicamento Lo=null;
+        LoteMedicamentoBD loBD=null;
+
+
+        GestorFarmacia gesFar = new GestorFarmacia();
+        exito = gesFar.eliminarLoteMedicamento( jTextFieldCodigoBarras.getText(),Me);
+        
+        if( exito == false)
+            System.out.println("Ya existe un Lote con " +jTextFieldCodigoBarras.getText());
+        
+        else{
+            new InformacionExito().setVisible(true);
+        }
 
     }//GEN-LAST:event_jButtonELiminarLoteMouseReleased
 

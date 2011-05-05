@@ -6,6 +6,7 @@
 package CentroMedico;
 import java.util.Set;
 import java.util.HashSet;
+import java.util.Iterator;
 
 /**
  *
@@ -84,9 +85,20 @@ public class Medicamento {
 
 
    public void actualizaLote(String CodBarras){
-
-
-
-
    }
+
+   public void eliminarLote( String CodBarras){
+
+       LoteMedicamento Lo=null;
+
+
+        for( Iterator it = LotesMedicamento.iterator(); it.hasNext();) {
+             Lo = (LoteMedicamento)it.next();
+             if( Lo.getCodBarras().equals(CodBarras))
+                    it.remove();
+
+         }
+
+
+}
 }
