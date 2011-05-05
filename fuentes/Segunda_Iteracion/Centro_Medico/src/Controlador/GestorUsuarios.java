@@ -15,23 +15,39 @@ import CentroMedico.Usuario;
 import BaseDatos.usuarioBD;
 import java.sql.SQLException;
 import java.util.*;
-
+import BaseDatos.UsuarioBD;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
- * @version     1.1     16/04/2011
- * @author      Sub_Equipo2
+ * @version     1.0    02/04/2011
+ * @author      Sub_Equipo1
  */
 
 public class GestorUsuarios {
 
-    private Usuario user = null; 
+    private Usuario user = null;
 
-    
-    public boolean validacionUsuario(String Dni, String Pass) throws SQLException, Exception {
+    public Usuario obtenerUsuario(String dni){
+        UsuarioBD usuBD=new UsuarioBD();
+        Usuario usu=null;
+        try {
+            usu= usuBD.obtener(dni);
+        } catch (SQLException ex) {
+            Logger.getLogger(GestorUsuarios.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return usu;
+    }
+
+/*
+    Esta función ya no se usa.
+ */
+
+/*    public boolean validacionUsuario(String Dni, String Pass) throws SQLException, Exception {
         boolean acceso=false;
         usuarioBD usuario_bd = new usuarioBD();
 
-        acceso=usuario_bd.existeUsuario(Dni);
+        acceso=usuario_bd.validacion(Dni, Pass);
 
         if(!acceso) {
             throw new Exception("Usuario o contraseña erroneos ");
@@ -43,7 +59,7 @@ public class GestorUsuarios {
         return acceso;
 
     }
-
+*/
    public String modificarDatosPersonalesAdmin(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
             String Contrasena, String Telefono, Date FecNac, String LugarNac, String Fotografia) throws SQLException{
 
@@ -61,7 +77,7 @@ public class GestorUsuarios {
        userAux.setLugarNac( LugarNac);
        userAux.setFoto( Fotografia);
 
-       usuario_bd.almacenar(userAux);
+       usuario_bd.almacenarUsuario(userAux);
 
        return "Operacion Realizada con Exito";
     }
@@ -87,19 +103,18 @@ public class GestorUsuarios {
        user.setLugarNac( LugarNac);
        user.setFoto( Fotografia);
 
-       usuario_bd.almacenar(user);
+       usuario_bd.almacenarUsuario(user);
 
        return "Operacion Realizada con Exito";
     }
 
-    public ArrayList consultarDatosPersonalesAdmin(String DNI) throws SQLException{
+    public String consultarDatosPersonalesAdmin(String DNI) throws SQLException{
 
         usuarioBD usuario_bd = new usuarioBD();
         boolean Existe=usuario_bd.existeUsuario(DNI);
-        ArrayList salida = new ArrayList();
 
         if(Existe){
-            Usuario userAux =usuario_bd.obtener(DNI);
+            Usuario userAux =usuario_bd.obtenerUsuario(DNI);
 
             String dni=userAux.getDNI();
             String nombre=userAux.getNombre();
@@ -113,41 +128,17 @@ public class GestorUsuarios {
             String foto=userAux.getFoto();
             String tipo=userAux.getTipo();
 
-
-            salida.add(dni);
-            salida.add(nombre);
-            salida.add(apellidos);
-            salida.add(direccion);
-            salida.add(contrasena);
-            salida.add(telefono);
-            salida.add(fecNac);
-            salida.add(lugarNac);
-            salida.add(foto);
-            salida.add(tipo);
-            salida.add(email);
-
-
-
+            String salida=dni + nombre;//hay que integrarlo con la interfaz
             return salida;
 
         }else{
-            salida.add("No existe ningun Usuario con ese Dni");
-            return salida;
+
+            return"No existe ningun Usuario con ese Dni";
         }
 
     }
 
- 
-    public String consultarTipoUsuario( )throws SQLException{
-
-     return user.getTipo();
-    }
-
-
-
-    public ArrayList consultarDatosPersonales() throws SQLException{
-
-        ArrayList salida = new ArrayList();
+    public String consultarDatosPersonales() throws SQLException{
 
         String dni=user.getDNI();
         String nombre=user.getNombre();
@@ -161,17 +152,10 @@ public class GestorUsuarios {
         String foto=user.getFoto();
         String tipo=user.getTipo();
 
-        salida.add(nombre);
-        salida.add(dni);
-        salida.add(contrasena);
-
+        String salida= nombre;//hay que integrarlo con la interfaz
         return salida;
 
-
     }
-
-
-
 
 
 
