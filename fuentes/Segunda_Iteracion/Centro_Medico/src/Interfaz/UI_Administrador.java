@@ -717,6 +717,11 @@ public class UI_Administrador extends javax.swing.JFrame {
                 jButtonAltaPacienteMouseClicked(evt);
             }
         });
+        jButtonAltaPaciente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAltaPacienteActionPerformed(evt);
+            }
+        });
         jPanelGestionarPaciente.add(jButtonAltaPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 450, 93, 39));
 
         jButtonMasDiaPaciente.setText("+");
@@ -1140,7 +1145,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabelErrorPersonal.setText("ERROR: revise los campos en rojo");
         jPanelGestionarPersonal.add(jLabelErrorPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 440, 230, -1));
 
-        jPanelGestionarPersonal.setBounds(0, 0, 901, 531);
+        jPanelGestionarPersonal.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelGestionarPersonal, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarTurno.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1493,7 +1498,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarTurno.add(jLabelErrorGestionarTurno);
         jLabelErrorGestionarTurno.setBounds(320, 420, 249, 17);
 
-        jPanelGestionarTurno.setBounds(0, 0, 901, 531);
+        jPanelGestionarTurno.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelGestionarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarCita.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1908,7 +1913,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarCita.add(jButtonAceptarCita);
         jButtonAceptarCita.setBounds(400, 440, 93, 39);
 
-        jPanelGestionarCita.setBounds(0, 0, 901, 531);
+        jPanelGestionarCita.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelGestionarCita, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadPersTipo.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1967,7 +1972,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jScrollPane5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 327, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanelEstadPersTipo.setBounds(0, 0, 901, 531);
+        jPanelEstadPersTipo.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelEstadPersTipo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadPersFecha.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -2033,7 +2038,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jScrollPane6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 327, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanelEstadPersFecha.setBounds(0, 0, 901, 531);
+        jPanelEstadPersFecha.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelEstadPersFecha, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadCitas.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -2312,7 +2317,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelEstadCitas.add(jLabel15);
         jLabel15.setBounds(469, 201, 70, 17);
 
-        jPanelEstadCitas.setBounds(0, 0, 901, 531);
+        jPanelEstadCitas.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelEstadCitas, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         getContentPane().add(ZonaTrabajo);
@@ -4055,6 +4060,10 @@ public class UI_Administrador extends javax.swing.JFrame {
     private void jButtonGuardarPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGuardarPersonalActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonGuardarPersonalActionPerformed
+
+    private void jButtonAltaPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAltaPacienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAltaPacienteActionPerformed
 
 
     /*Comprueba que la fecha introducida es correcta

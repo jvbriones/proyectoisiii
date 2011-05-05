@@ -69,4 +69,17 @@ public class Medicamento {
         this.LotesMedicamento = LotesMedicamento;
     }
 
+    public void anadirAlArray( LoteMedicamento Lote){
+
+         LotesMedicamento.add(Lote);
+
+    }
+
+    public void actualizaStock( int Existencias){
+
+        int Totales;
+        Totales = this.getStockActual() + Existencias;
+        this.setStockActual(Totales);
+    }
+
 }

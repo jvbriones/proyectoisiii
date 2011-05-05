@@ -12,11 +12,10 @@
 
 package Controlador;
 
-import CentroMedico.Medicamento;
-import BaseDatos.MedicamentoBD;
-import BaseDatos.personalBD;
+import CentroMedico.*;
+import BaseDatos.*;
 import java.sql.SQLException;
-import java.util.Date;
+import java.util.*;
 
 /**
  *
@@ -91,7 +90,53 @@ public class GestorFarmacia {
           return false;
     }
 
+
+    public boolean anadirLoteMedicamento (String CodBarras,int Existencias, Date FechaCaducidad){
+
+        LoteMedicamento Lo= null;
+        LoteMedicamentoBD loBD = new LoteMedicamentoBD();
+        MedicamentoBD meBD = new MedicamentoBD();
+        Lo=loBD.obtener(CodBarras);
+
+        if( Lo!=null)
+            return false;
+
+        else{
+            LoteMedicamento lote = new LoteMedicamento(CodBarras,Existencias,FechaCaducidad);
+            Medicamento Me = lote.getMedicamento();
+            loBD.almacenar(lote);
+            Me.anadirAlArray(lote);
+            Me.actualizaStock(Existencias);
+            meBD.almacenar(Me);
+            return true; 
+
+        }
+
+        
+    }
+
+
+
+    public LoteMedicamento consultarLoteMedicamento (String CodBarras){
+
+
+        LoteMedicamento Lo=null;
+        Medicamento Me=null;
+
+        Set<LoteMedicamento> lotes;
+
+        LoteMedicamento Aux=null;
+        lotes = Me.getLotesMedicamento();
+
+        for( Iterator it = lotes.iterator(); it.hasNext();) {
+	    Aux = (LoteMedicamento)it.next();
+	    if( Aux.getCodBarras() == CodBarras){
+                Lo = Aux;
+
+            }
+         }
+         return Lo;
 }
 
-
+}
 

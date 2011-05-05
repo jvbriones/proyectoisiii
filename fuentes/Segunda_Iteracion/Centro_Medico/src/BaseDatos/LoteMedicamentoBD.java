@@ -12,6 +12,7 @@ import org.hibernate.Session;
  * @author pope
  */
 public class LoteMedicamentoBD {
+    
     public void almacenar(LoteMedicamento Lote){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 

@@ -405,7 +405,7 @@
                               <Component id="jLabelConsultarTurno" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="58" max="32767" attributes="0"/>
+                      <EmptySpace pref="67" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1482,7 +1482,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="scrollPane1" min="-2" pref="202" max="-2" attributes="0"/>
-                      <EmptySpace pref="133" max="32767" attributes="0"/>
+                      <EmptySpace pref="201" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1872,7 +1872,7 @@
                       <Component id="scrollPane3" min="-2" pref="168" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jButtonDispensarFinal" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="52" max="32767" attributes="0"/>
+                      <EmptySpace pref="120" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2140,18 +2140,18 @@
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jTextField9" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldCodBarras" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
                                   <Component id="jLabel30" alignment="0" min="-2" pref="121" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="98" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                   <Component id="jButtonAnadirMedicamento" alignment="0" max="32767" attributes="1"/>
-                                  <Component id="jTextField7" alignment="0" min="0" pref="0" max="32767" attributes="1"/>
+                                  <Component id="jTextFieldExistenc" alignment="0" min="0" pref="0" max="32767" attributes="1"/>
                                   <Component id="jLabel29" alignment="0" min="-2" max="-2" attributes="1"/>
                               </Group>
                               <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jTextField8" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldFechCad" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
                                   <Component id="jLabel31" alignment="1" min="-2" pref="133" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
@@ -2175,22 +2175,22 @@
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="jLabel30" min="-2" pref="24" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTextField9" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextFieldCodBarras" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTextField8" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextFieldFechCad" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTextField7" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextFieldExistenc" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                       <Component id="jButtonAnadirMedicamento" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="132" max="32767" attributes="0"/>
+                      <EmptySpace pref="200" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2232,17 +2232,17 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JTextField" name="jTextField7">
+            <Component class="javax.swing.JTextField" name="jTextFieldExistenc">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField7ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldExistencActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField8">
+            <Component class="javax.swing.JTextField" name="jTextFieldFechCad">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField8ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldFechCadActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField9">
+            <Component class="javax.swing.JTextField" name="jTextFieldCodBarras">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel29">
               <Properties>
@@ -2263,6 +2263,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Aceptar"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAnadirMedicamentoActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

@@ -17,6 +17,16 @@ public class LoteMedicamento {
 
     private Medicamento Medicamento;
 
+
+    public LoteMedicamento( String CodBarras, int Existencias, Date FechaCaducidad){
+
+        this.CodBarras= CodBarras;
+        this.Existencias= Existencias;
+        this.FechaCaducidad=FechaCaducidad;
+       
+    }
+
+
     public String getCodBarras (){
         return CodBarras;
     }

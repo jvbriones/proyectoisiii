@@ -241,9 +241,9 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jLabel28 = new javax.swing.JLabel();
         jScrollPane10 = new javax.swing.JScrollPane();
         jTextAreaInfo6 = new javax.swing.JTextArea();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
+        jTextFieldExistenc = new javax.swing.JTextField();
+        jTextFieldFechCad = new javax.swing.JTextField();
+        jTextFieldCodBarras = new javax.swing.JTextField();
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
@@ -555,7 +555,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                     .add(jPanelPrincipalLayout.createSequentialGroup()
                         .add(126, 126, 126)
                         .add(jLabelConsultarTurno)))
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
         jPanelPrincipalLayout.setVerticalGroup(
             jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1307,7 +1307,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                     .add(jLabel7))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(scrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 202, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(133, Short.MAX_VALUE))
+                .addContainerGap(178, Short.MAX_VALUE))
         );
 
         jPanelComprobarStockMedicamentos.setBounds(0, 0, -1, -1);
@@ -1466,7 +1466,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                 .add(jLabel18)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jScrollPane7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 17, Short.MAX_VALUE)
                 .add(jPanelDispensarConsultarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabel17)
                     .add(jLabel19))
@@ -1544,7 +1544,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                 .add(scrollPane3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 168, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(18, 18, 18)
                 .add(jButtonDispensarFinal)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
 
         jPanelDispensarFinal.setBounds(0, 0, -1, -1);
@@ -1670,15 +1670,15 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jTextAreaInfo6.setText("\nInserte los datos del lote a agregar\n");
         jScrollPane10.setViewportView(jTextAreaInfo6);
 
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldExistenc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                jTextFieldExistencActionPerformed(evt);
             }
         });
 
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldFechCad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
+                jTextFieldFechCadActionPerformed(evt);
             }
         });
 
@@ -1689,6 +1689,11 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jLabel31.setText("Fecha Caducidad");
 
         jButtonAnadirMedicamento.setText("Aceptar");
+        jButtonAnadirMedicamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAnadirMedicamentoActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout jPanelAnadirLoteLayout = new org.jdesktop.layout.GroupLayout(jPanelAnadirLote);
         jPanelAnadirLote.setLayout(jPanelAnadirLoteLayout);
@@ -1709,16 +1714,16 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelAnadirLoteLayout.createSequentialGroup()
                         .add(16, 16, 16)
                         .add(jPanelAnadirLoteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jTextField9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 110, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(jTextFieldCodBarras, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 110, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(jLabel30, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 121, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 98, Short.MAX_VALUE)
                         .add(jPanelAnadirLoteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
                             .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonAnadirMedicamento, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .add(org.jdesktop.layout.GroupLayout.LEADING, jTextField7, 0, 0, Short.MAX_VALUE)
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, jTextFieldExistenc, 0, 0, Short.MAX_VALUE)
                             .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel29))
                         .add(90, 90, 90)
                         .add(jPanelAnadirLoteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                            .add(org.jdesktop.layout.GroupLayout.LEADING, jTextField8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 118, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, jTextFieldFechCad, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 118, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(jLabel31, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 133, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                         .add(10, 10, 10)))
                 .add(74, 74, 74))
@@ -1737,18 +1742,18 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                     .add(jPanelAnadirLoteLayout.createSequentialGroup()
                         .add(jLabel30, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 24, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jTextField9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .add(jTextFieldCodBarras, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                     .add(jPanelAnadirLoteLayout.createSequentialGroup()
                         .add(jLabel31)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jTextField8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .add(jTextFieldFechCad, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                     .add(jPanelAnadirLoteLayout.createSequentialGroup()
                         .add(jLabel29)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jTextField7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                        .add(jTextFieldExistenc, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                 .add(44, 44, 44)
                 .add(jButtonAnadirMedicamento)
-                .addContainerGap(132, Short.MAX_VALUE))
+                .addContainerGap(177, Short.MAX_VALUE))
         );
 
         jPanelAnadirLote.setBounds(0, 0, -1, -1);
@@ -2541,13 +2546,13 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField6ActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void jTextFieldExistencActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldExistencActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_jTextFieldExistencActionPerformed
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void jTextFieldFechCadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFechCadActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }//GEN-LAST:event_jTextFieldFechCadActionPerformed
 
     private void jButtonEliminarMedicamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarMedicamentoActionPerformed
 
@@ -2572,6 +2577,43 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
     private void jButtonConsultarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarMouseClicked
         // TODO add your handling code here:
         mostrarPanel("ConsultarMedicamento");
+        GestorFarmacia gesFar = new GestorFarmacia();
+        LoteMedicamento Lo = null;
+        String CodBarras = jTextFieldCodBarras.getText(); // duda
+        Lo = gesFar.consultarLoteMedicamento(CodBarras);
+
+
+        if( Lo == null){
+
+           System.out.println( " El lote " + CodBarras + "ya existe");
+
+        }
+
+        else{
+
+           String numExistenc=String.valueOf( Lo.getExistencias());
+
+           Calendar calendar = Calendar.getInstance();
+            calendar.setTime(Lo.getFechaCaducidad());
+            int dia = calendar.get(Calendar.DAY_OF_MONTH);   //dia del mes
+            int mes = calendar.get(Calendar.MONTH);
+            mes=mes+1;//mes, de 0 a 11
+            int anio = calendar.get(Calendar.YEAR);  //año
+
+            String num_dia= String.valueOf(dia);
+            String num_mes= String.valueOf(mes);
+            String num_anio= String.valueOf(anio);
+           String dateString=num_dia+"/"+num_mes+"/"+ num_anio;
+
+           jTextFieldCodBarras.setText(CodBarras);
+           jTextFieldExistenc.setText(numExistenc);
+           jTextFieldFechCad.setText(dateString);
+
+           
+
+ }
+
+
     }//GEN-LAST:event_jButtonConsultarMouseClicked
 
     private void jButtonAnadirLoteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAnadirLoteMouseClicked
@@ -2650,6 +2692,28 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
               new InformacionExito().setVisible(true);
         
     }//GEN-LAST:event_jButtonModificarMedicaMouseReleased
+
+    private void jButtonAnadirMedicamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnadirMedicamentoActionPerformed
+        // TODO add your handling code here:
+        boolean exito;
+        GestorFarmacia gesFar = new GestorFarmacia();
+        
+        // falta pasar de String a Date
+
+
+        exito= gesFar.anadirLoteMedicamento(jTextFieldCodBarras.getText(), jTextFieldExistenc.getText());
+
+        if( exito == false){
+
+            System.out.println("El lote" + jTextFieldCodBarras.getText() + " ya existe");
+        }
+
+        else
+            new InformacionExito().setVisible(true);
+
+
+//GEN-LAST:event_jButtonAnadirMedicamentoActionPerformed
+}
 
 
     /*Comprueba que la fecha introducida es correcta
@@ -3412,12 +3476,10 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JTextField jTextFieldAnioFinTurno;
     private javax.swing.JTextField jTextFieldAnioInicioTurno;
     private javax.swing.JTextField jTextFieldApellidosPersonal;
+    private javax.swing.JTextField jTextFieldCodBarras;
     private javax.swing.JTextField jTextFieldContraseniaPersonal;
     private javax.swing.JTextField jTextFieldDNIGestionarTurno;
     private javax.swing.JTextField jTextFieldDNIPersonal;
@@ -3425,7 +3487,9 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldDiaInicioTurno;
     private javax.swing.JTextField jTextFieldDireccionPersonal;
     private javax.swing.JTextField jTextFieldEmailPersonal;
+    private javax.swing.JTextField jTextFieldExistenc;
     private javax.swing.JTextField jTextFieldExistencias;
+    private javax.swing.JTextField jTextFieldFechCad;
     private javax.swing.JTextField jTextFieldFechaNacimientoAnioPersonal;
     private javax.swing.JTextField jTextFieldFechaNacimientoDiaPersonal;
     private javax.swing.JTextField jTextFieldFechaNacimientoMesersonal;
