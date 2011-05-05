@@ -24,7 +24,6 @@ import java.io.Serializable;
 public class Cita implements Serializable{
 
     private boolean Estado;
-    private Date Hora;
     private Date Fecha;
     private String Tipo;
 
@@ -55,11 +54,6 @@ public class Cita implements Serializable{
     public Date getFecha(){
         return Fecha;
     }
-
-    public Date getHora() {
-        return Hora;
-    }
-
     
     public boolean getEstado(){
         return Estado;
@@ -102,9 +96,4 @@ public class Cita implements Serializable{
     public void setPersonalMedico( PersonalMedico PersonalMedico){
         this.PersonalMedico=PersonalMedico;
     }
-
-    public void setHora(Date Hora) {
-        this.Hora = Hora;
-    }
-
 }

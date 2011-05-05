@@ -17,6 +17,9 @@ public class LoteMedicamento {
 
     private Medicamento Medicamento;
 
+    public LoteMedicamento() {
+    }
+
 
     public LoteMedicamento( String CodBarras, int Existencias, Date FechaCaducidad){
 
