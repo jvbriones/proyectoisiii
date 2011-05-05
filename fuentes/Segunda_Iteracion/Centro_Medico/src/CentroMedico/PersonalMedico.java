@@ -15,6 +15,11 @@ public class PersonalMedico extends Usuario{
 
     private Turno Turn=null;
 
+    public PersonalMedico() {
+    }
+
+    
+
     public PersonalMedico (String Dni, String Nombre, String Apellidos, String Direccion,String Email,
             String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto, String Tipo){
 

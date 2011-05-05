@@ -12,6 +12,10 @@ package CentroMedico;
 public class AtributoOrina {
     private String Nombre;
 
+    public AtributoOrina() {
+    }
+
+
     public String getNombre(){
         return Nombre;
     }

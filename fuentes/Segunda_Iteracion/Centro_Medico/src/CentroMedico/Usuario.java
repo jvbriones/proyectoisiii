@@ -21,6 +21,7 @@ import java.sql.SQLException;
  */
 public class Usuario {
 
+
     private String DNI;
     private String Nombre;
     private String Apellidos;
@@ -39,6 +40,9 @@ public class Usuario {
      * Constructores
      *
      */
+    public Usuario() {
+    }
+
     public Usuario(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
             String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto, String Tipo){
         

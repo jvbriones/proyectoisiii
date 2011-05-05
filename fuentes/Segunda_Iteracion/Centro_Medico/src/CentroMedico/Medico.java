@@ -22,6 +22,9 @@ import java.util.*;
 
 public class Medico extends PersonalMedico{
 
+    public Medico() {
+    }
+
     public Medico(String Dni, String Nombre, String Apellidos, String Direccion, String Email, String Contrasena,
             String Telefono, Date FecNac, String LugarNac, String Foto) {
 

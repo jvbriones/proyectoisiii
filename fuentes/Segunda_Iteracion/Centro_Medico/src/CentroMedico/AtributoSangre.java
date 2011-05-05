@@ -12,6 +12,10 @@ package CentroMedico;
 public class AtributoSangre {
     private String Nombre;
 
+    public AtributoSangre() {
+    }
+
+
     public String getNombre(){
         return Nombre;
     }

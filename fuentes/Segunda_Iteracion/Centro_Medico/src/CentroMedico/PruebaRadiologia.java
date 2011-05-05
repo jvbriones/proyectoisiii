@@ -16,6 +16,9 @@ public class PruebaRadiologia {
     private Paciente Paciente;
     private Radiologo Radiologo;
 
+    public PruebaRadiologia() {
+    }
+
 
     public int getId(){
         return Id;

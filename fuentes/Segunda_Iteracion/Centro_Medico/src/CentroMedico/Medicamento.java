@@ -20,6 +20,9 @@ public class Medicamento {
 
     private Set<LoteMedicamento> LotesMedicamento = new HashSet<LoteMedicamento>(0);
 
+    public Medicamento() {
+    }
+
     public Medicamento(String Nombre, String Descripcion, int ExistenciasMinimas, int StockActual){
 
         this.Nombre=Nombre;

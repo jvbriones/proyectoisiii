@@ -21,11 +21,16 @@ public class CentroMedico {
     private String email;
 
     private Set<Usuario> Usuarios = new HashSet<Usuario>(0);
+
         /*
      *
      * Constructores
      *
      */
+
+    public CentroMedico() {
+    }
+
     public CentroMedico(String Nombre, String CIF, String Direccion,String Telefono, String Fax, String email){
 
         this.Nombre=Nombre;

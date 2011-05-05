@@ -15,6 +15,9 @@ public class ResultadoOrina {
 
     private AtributoOrina Atr;
 
+    public ResultadoOrina() {
+    }
+
     public int getId(){
         return Id;
     }

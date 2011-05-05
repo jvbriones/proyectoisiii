@@ -14,6 +14,9 @@ import java.util.HashSet;
 public class PruebaSangre extends PruebaAnalisis{
     private Set <ResultadoSangre> ResultadosSangre = new HashSet<ResultadoSangre>(0);
 
+    public PruebaSangre() {
+    }
+
     public Set<ResultadoSangre> getResultadosSangre(){
         return ResultadosSangre;
     }

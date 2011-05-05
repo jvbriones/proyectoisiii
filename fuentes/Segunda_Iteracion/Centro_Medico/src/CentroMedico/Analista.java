@@ -29,6 +29,10 @@ public class Analista extends PersonalMedico{
 
     }
 
+    public Analista() {
+      
+    }
+
 
 
 }

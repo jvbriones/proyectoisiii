@@ -12,6 +12,9 @@ package CentroMedico;
 public class Imagen {
     private String Ruta;
 
+    public Imagen() {
+    }
+
     public String getRuta(){
         return Ruta;
     }

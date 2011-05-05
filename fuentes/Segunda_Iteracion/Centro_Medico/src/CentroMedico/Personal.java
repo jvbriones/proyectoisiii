@@ -21,6 +21,9 @@ import java.util.*;
 public class Personal extends Usuario{
 
     private String TipoPersonal;
+
+    public Personal() {
+    }
    
 
     public Personal(String Dni, String Nombre, String Apellidos, String Direccion, String Email, String Contrasena,

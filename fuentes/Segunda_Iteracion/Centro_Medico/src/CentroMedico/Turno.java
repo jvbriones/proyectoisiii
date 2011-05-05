@@ -31,6 +31,9 @@ public class Turno {
      *
      */
 
+    public Turno() {
+    }
+
     public Turno(int Id, Date HoraInicio, Date HoraFin){
 
         this.Id=Id;

@@ -23,6 +23,9 @@ public class Receta {
     private Paciente Paci;
     private Set <MedicamentoRecetado> MedicamentosRecetados = new HashSet<MedicamentoRecetado>(0);
 
+    public Receta() {
+    }
+
     public Receta(String Instrucciones) {
         this.Instrucciones = Instrucciones;
     }

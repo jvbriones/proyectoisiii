@@ -15,6 +15,9 @@ public class PruebaAnalisis {
 
     private Paciente Paciente;
 
+    public PruebaAnalisis() {
+    }
+
     public int getId (){
         return Id;
     }

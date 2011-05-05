@@ -21,6 +21,9 @@ import java.util.*;
  */
 public class Farmaceutico extends Usuario{
 
+    public Farmaceutico() {
+    }
+
     public Farmaceutico(String Dni, String Nombre, String Apellidos, String Direccion, String Email, String Contrasena,
             String Telefono, Date FecNac, String LugarNac, String Foto) {
 

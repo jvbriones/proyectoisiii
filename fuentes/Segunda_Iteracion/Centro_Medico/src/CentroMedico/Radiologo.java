@@ -20,6 +20,9 @@ import java.util.*;
  */
 public class Radiologo extends PersonalMedico{
 
+    public Radiologo() {
+    }
+
     public Radiologo(String Dni, String Nombre, String Apellidos, String Direccion, String Email, String Contrasena,
             String Telefono, Date FecNac, String LugarNac, String Foto) {
 

@@ -20,6 +20,9 @@ import java.util.*;
  * modificado por Juan Carlos
  */
 public class Paciente extends Usuario {
+
+    public Paciente() {
+    }
   
 
 

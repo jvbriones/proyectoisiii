@@ -15,6 +15,9 @@ public class ResultadoSangre {
 
     private AtributoSangre Atr;
 
+    public ResultadoSangre() {
+    }
+
     public int getId(){
         return Id;
     }

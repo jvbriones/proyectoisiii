@@ -19,6 +19,9 @@ public class MedicamentoRecetado {
 
     private Medicamento Med;
 
+    public MedicamentoRecetado() {
+    }
+
     public int getId (){
         return Id;
     };

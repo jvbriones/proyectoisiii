@@ -14,6 +14,9 @@ import java.util.HashSet;
 public class Resonancia extends PruebaRadiologia{
     private Set<Imagen> Resonancias=new HashSet<Imagen>(0);
 
+    public Resonancia() {
+    }
+
     public Set<Imagen> getResonancias(){
         return Resonancias;
     }
