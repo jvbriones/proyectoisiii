@@ -23,52 +23,10 @@ import org.hibernate.Session;
 public class usuarioBD {
     //public boolean validacion(String Dni, String Pass) throws SQLException{}
 
-    public Usuario obtener(String Dni) throws SQLException{
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
-        session.beginTransaction ();
-        Usuario User = (Usuario) session.get(Usuario.class, Dni);
-        return User;
-    }
-    //public Usuario obtenerUsuarioNombre(String nombre) throws SQLException {}
-    
-    public void almacenar(Usuario User){
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
-        session.beginTransaction ();
-        session.save (User);
-    }
-    
-    public boolean existeUsuario(String Dni) throws SQLException{
-        boolean existe=false;
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
-        session.beginTransaction ();
-        Usuario User = (Usuario) session.get(Usuario.class, Dni);
-        if (User != null)
-            existe = true;
-
-        return existe;
-    }
-
-    public void actualizar (Usuario User){
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-
-        session.beginTransaction ();
-        session.update (User);
-    }
-
-    public void eliminar(Usuario User){
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-
-        session.beginTransaction ();
-        session.delete (User);
-
-    }
-}
-
-/*SE HA PUESTO EN COMENTARIO TODO EL CÓDIGO ANTIGUO DE LA CLASE USUARIOBD, para mantenerlo por si hace falta */
-/*    String IpDelServidor="localhost";
+    String IpDelServidor="localhost";
     String NombreDB="CentroMedico";
     String user="personal";
     String pass="personal";
@@ -184,16 +142,16 @@ public class usuarioBD {
 
 
     public void almacenarUsuario(Usuario user) {
-        String dni=user.getDni();
+        String dni=user.getDNI();
         String nombre=user.getNombre();
         String apellidos=user.getApellidos();
         String direccion=user.getDireccion();
         String email=user.getEmail();
-        String contrasena=user.getContrasena();
+        String contrasena=user.getContrasenia();
         String telefono=user.getTelefono();
-        Date fecNac=(Date) user.getFechaNacimiento();
-        String lugarNac=user.getLugarNacimiento();
-        String foto=user.getFotografia();
+        Date fecNac=(Date) user.getFecNac();
+        String lugarNac=user.getLugarNac();
+        String foto=user.getFoto();
         String tipo=user.getTipo();
 
         Jdbc conexion = new Jdbc();
@@ -225,4 +183,3 @@ public class usuarioBD {
 
 
 }
-*/

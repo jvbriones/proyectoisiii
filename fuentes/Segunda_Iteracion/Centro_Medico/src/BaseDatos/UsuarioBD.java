@@ -4,48 +4,43 @@
  */
 
 package BaseDatos;
-
 import CentroMedico.*;
 import org.hibernate.Session;
-
+import java.sql.*;
 
 /**
  *
- * @author Juan Carlos
+ * @author pope
  */
-public class RecetaBD {
-    void almacenar(Receta Rec){
+public class UsuarioBD {
+    public Usuario obtener(String Dni) throws SQLException{
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
-        session.save (Rec);
+        Usuario User = (Usuario) session.get(Usuario.class, Dni);
+        return User;
     }
-    
-    Receta obtener (int Id){
+    //public Usuario obtenerUsuarioNombre(String nombre) throws SQLException {}
+
+    public void almacenar(Usuario User){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
-        Receta Rec = (Receta) session.get(Receta.class, Id);
-      return Rec;
+        session.save (User);
     }
-    void actualizar (Receta Rec){
+
+    public void actualizar (Usuario User){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
-        session.update (Rec);
-
+        session.update (User);
     }
-    void eliminar (Receta Rec){
+
+    public void eliminar(Usuario User){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
-        session.delete (Rec);
-    }
+        session.delete (User);
 
-    Set<Receta> obtenerRecetasPaciente (String dni){
-        //ESTA FUNCIÓN HAY QUE IMPLEMENTARLA. OBTIENE UN SET CON TODAS LAS RECETAS DE ESE PACIENTE.
     }
-
 }
-
-
