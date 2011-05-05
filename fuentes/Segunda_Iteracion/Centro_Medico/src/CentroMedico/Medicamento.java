@@ -82,4 +82,11 @@ public class Medicamento {
         this.setStockActual(Totales);
     }
 
+
+   public void actualizaLote(String CodBarras){
+
+
+
+
+   }
 }

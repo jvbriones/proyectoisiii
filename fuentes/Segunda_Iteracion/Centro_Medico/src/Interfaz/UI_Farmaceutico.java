@@ -1307,7 +1307,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                     .add(jLabel7))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(scrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 202, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(178, Short.MAX_VALUE))
+                .addContainerGap(201, Short.MAX_VALUE))
         );
 
         jPanelComprobarStockMedicamentos.setBounds(0, 0, -1, -1);
@@ -1466,7 +1466,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                 .add(jLabel18)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jScrollPane7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 17, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .add(jPanelDispensarConsultarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabel17)
                     .add(jLabel19))
@@ -1544,7 +1544,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                 .add(scrollPane3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 168, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(18, 18, 18)
                 .add(jButtonDispensarFinal)
-                .addContainerGap(97, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         jPanelDispensarFinal.setBounds(0, 0, -1, -1);
@@ -1582,8 +1582,18 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jLabel26.setText("Fecha Caducidad");
 
         jButtonModificarLote.setText("Modificar");
+        jButtonModificarLote.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonModificarLoteActionPerformed(evt);
+            }
+        });
 
         jButtonELiminarLote.setText("Eliminar");
+        jButtonELiminarLote.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButtonELiminarLoteMouseReleased(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout jPanelModificarLoteLayout = new org.jdesktop.layout.GroupLayout(jPanelModificarLote);
         jPanelModificarLote.setLayout(jPanelModificarLoteLayout);
@@ -1753,7 +1763,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                         .add(jTextFieldExistenc, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                 .add(44, 44, 44)
                 .add(jButtonAnadirMedicamento)
-                .addContainerGap(177, Short.MAX_VALUE))
+                .addContainerGap(200, Short.MAX_VALUE))
         );
 
         jPanelAnadirLote.setBounds(0, 0, -1, -1);
@@ -2714,6 +2724,30 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
 //GEN-LAST:event_jButtonAnadirMedicamentoActionPerformed
 }
+
+    private void jButtonELiminarLoteMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonELiminarLoteMouseReleased
+
+       // TODO add your handling code here:
+
+
+    }//GEN-LAST:event_jButtonELiminarLoteMouseReleased
+
+    private void jButtonModificarLoteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarLoteActionPerformed
+        // TODO add your handling code here:
+
+        GestorFarmacia gesFar = new GestorFarmacia();
+        boolean exito;
+
+        // hay que hacer el tema de la fecha 
+
+        exito = gesFar.modificarLoteMedicamento(jTextFieldCodBarras.getText(), jTextFieldExistenc.getText(), null);
+        if( exito == false)
+            System.out.println(" Ya existe un lote con " + jTextFieldCodBarras.getText());
+
+        else
+            new InformacionExito().setVisible(true);
+
+    }//GEN-LAST:event_jButtonModificarLoteActionPerformed
 
 
     /*Comprueba que la fecha introducida es correcta

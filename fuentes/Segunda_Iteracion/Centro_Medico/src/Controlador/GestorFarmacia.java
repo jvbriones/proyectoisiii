@@ -136,7 +136,36 @@ public class GestorFarmacia {
             }
          }
          return Lo;
-}
+    }
+
+
+    public boolean modificarLoteMedicamento( String CodBarras,int Existencias, Date FechaCaducidad ){
+
+        LoteMedicamentoBD loBD = null;
+        LoteMedicamento Lo= null;
+        Medicamento Me= null;
+        MedicamentoBD meBD=null;
+
+
+        Lo= loBD.obtener(CodBarras);
+
+        if( Lo!= null)
+            return false;
+
+        else{
+
+            Lo.setCodBarras(CodBarras);
+            Lo.setExistencias(Existencias);
+            Lo.setFechaCaducidad(FechaCaducidad);
+            Me.actualizaStock(Existencias);
+            Me.actualizaLote(CodBarras);
+            loBD.almacenar(Lo);
+            meBD.almacenar(Me);
+
+            return true;
+        }
+
+    }
 
 }
 
