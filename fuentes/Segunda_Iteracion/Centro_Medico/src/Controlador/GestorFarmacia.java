@@ -26,7 +26,7 @@ public class GestorFarmacia {
    public boolean anadirMedicamento( String Nombre,String Descripcion, int ExistenciasMinimas, int StockActual){
 
         boolean exito;
-        MedicamentoBD meBD= new MedicamentoBD();
+        MedicamentoBD meBD= null;
         Medicamento me;
         me= meBD.obtener(Nombre);
 
@@ -48,7 +48,7 @@ public class GestorFarmacia {
     public Medicamento consultarMedicamento( String Nombre){
 
         Medicamento Me;
-        MedicamentoBD meBD = new MedicamentoBD();
+        MedicamentoBD meBD = null; 
 
         Me = meBD.obtener(Nombre);
 
@@ -80,7 +80,7 @@ public class GestorFarmacia {
 
     public boolean eliminarMedicamento( String Nombre){
        Medicamento Me;
-       MedicamentoBD meBD=new MedicamentoBD();
+       MedicamentoBD meBD=null;
        Me= meBD.obtener(Nombre);
        if( Me != null){
         meBD.eliminar(Me);
