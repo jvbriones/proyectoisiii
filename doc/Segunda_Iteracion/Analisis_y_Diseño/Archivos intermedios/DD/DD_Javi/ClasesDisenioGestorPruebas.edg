@@ -3,8 +3,8 @@ Version 6.14
 
 ## Globals Section:
 
-X -314
-Y 861
+X -315
+Y 1210
 Scale 100.015
 OriginX 0
 OriginY 0
@@ -333,31 +333,31 @@ AF39FF03D703BF06FF039603EE03FF03F4F7ACACADA4A3A4A5A4A503A60393FD
 97A8A4AABDBCBFA592A69592A5A7A699B1ACB4BDB7B8D2D1C984848515FF03D1
 03FC1BFF03E5038C03EAFDE8E9E904E7FEE6E703E803E903EAFDC8C7C8039824
 FF06DB45FF039603EE12FFFDBDBDBC0313F5C2C3C4E4EBF3E9EFF4F7FE04FF03
-CA038503910690248F038D0392F7A4A4A59697979998980399039EF43F3E3F69
-6A6B9C9D9E9A9A9B039A039503BC15FF037A03F51BFF03E3FD9D9C9C03FFF1E6
-F3FDCAC6C8BF9EC2E3D8DBFFFCF503FF03EB039C18FF03EB03E003F403F23FFF
-03F103E906FF03F703FE12FF03E30363F4C6C6C7C3C7CCDFDCD9EEEEED03FE03
-9DFDBBBBBC03E9FEE7E604E727E9038003F509FF03F3F4494A4B676159E3E9EF
-F2F8FA1EFF03B503F91BFFFDEBEAE9037103BAFDB7B8B804AEFEADAE03AF03B3
-03BA0399039318FF03C303A803BC03BA03E103DB39FF03C3039F06FF03F603FE
-15FF0385F4FBFBFAF1F0EFE1E1E2E2E1E203DAEE8B8C8DA8A2AFD6D5D7C2B2C8
-CBC1C8FFFFFA24FF038F03ED09FF03EBF48B8B8C96938EF5F3F0F6F7F53CFFFA
-ECF2F7ECF2F703C1035B031F03B106B203640327FAA6A6A5E4E4E518FF03DE03
-D003C703CC03B603AF39FF03D703BF06FF039603EE15FF03800CFF03FEDC9697
-98BBB9BEE9E8E8E5E6E7E0D9E0E4E0E2DED8E2EBE8E5E5E3E8D6D0DBE7E7E2E4
-E0E503E7EEE2DDE1DEE0E4DDD6D8CEC1D1F3F0E88F908F03EE0CFFFAAEAEADD0
-D0D124FF03D103FC18FFF4C0CCD9E2E3E3EDEDEB6A6A69036509FF03B6F14443
-42B3BCC7E4E4E0D5E2F1FFFFFC1EFF06DB45FF039603EE15FF03800FFFC7A4A7
-A792889DC1BEBFBBABB8ADB2B7AD97AAAC9CAFC4BFC0AF9BB4BCB6BBB3A1B5B8
-ADB7BAB4BBBBB2BAC8C4C6DDD6D6CFC2D2F4F1E98A8B8A03D7036303CE06FF03
-A903C924FF037A03F51EFF03DB039803E009FF03ECF1B6B5B59EA2A8F2F0EDEF
-EFF2FFFFFC12FF03EE03DD03F403F23FFF03F103E906FF03F703FE15FF038103
-FD0CFFD3A2A4A4B1ABB7DFDDDEDECFD9D8E1DFD5C8D4D9D2D9E1E1E3D6C8D7EF
-F0EAD7C8DDDFD9DCDED9DEE3E1E3F2EEEB09FF038C03E403BF03EB06FF03A903
+CA038503910690248F038D0392F7A4A4A59697979998980399039E033FF7696A
+6B9C9D9E9A9A9B039A039503BC15FF037A03F51BFF03E3FD9D9C9C03FFF1E6F3
+FDCAC6C8BF9EC2E3D8DBFFFCF503FF03EB039C18FF03EB03E003F403F23FFF03
+F103E906FF03F703FE12FF03E30363F4C6C6C7C3C7CCDFDCD9EEEEED03FE039D
+FDBBBBBC03E9FEE7E604E727E9038103F709FF03F4F448494A666159E3E9EFF2
+F8FA1EFF03B503F91BFFFDEBEAE9037103BAFDB7B8B804AEFEADAE03AF03B303
+BA0399039318FF03C303A803BC03BA03E103DB39FF03C3039F06FF03F603FE15
+FF0385F4FBFBFAF1F0EFE1E1E2E2E1E203DAEE8B8C8DA8A2AFD6D5D7C2B2C8CB
+C1C8FFFFFA24FF038E03E303ED03DE03E503CBF4686969918F8AF5F3F0F6F7F5
+3CFFFAECF2F7ECF2F703C1035B031F03B106B203640327FAA6A6A5E4E4E518FF
+03DE03D003C703CC03B603AF39FF03D703BF06FF039603EE15FF03800CFF03FE
+DC969798BBB9BEE9E8E8E5E6E7E0D9E0E4E0E2DED8E2EBE8E5E5E3E8D6D0DBE7
+E7E2E4E0E503E7EEE2DDE1DEE0E4DDD6D8CEC1D1F3F0E885868503D103E003DE
+03F003F503ACFDD0D0D124FF03D103FC18FFF4C0CCD9E2E3E3EDEDEB6A6A6903
+6509FF03B6F1444342B3BCC7E4E4E0D5E2F1FFFFFC1EFF06DB45FF039603EE15
+FF03800FFFC7A4A7A792889DC1BEBFBBABB8ADB2B7AD97AAAC9CAFC4BFC0AF9B
+B4BCB6BBB3A1B5B8ADB7BAB4BBBBB2BAC8C4C6DDD6D6CFC2D2F4F1E98F908F03
+EE0CFF03AA03C924FF037A03F51EFF03DB039803E009FF03ECF1B6B5B59EA2A8
+F2F0EDEFEFF2FFFFFC12FF03EE03DD03F403F23FFF03F103E906FF03F703FE15
+FF038103FD0CFFD3A2A4A4B1ABB7DFDDDEDECFD9D8E1DFD5C8D4D9D2D9E1E1E3
+D6C8D7EFF0EAD7C8DDDFD9DCDED9DEE3E1E3F2EEEB09FF038E03ED0CFF03A903
 C924FF03B503F91EFF039603E912FFFA969594F7F7F818FF03D403A103BB03BA
 03E103DB39FF03C3039F06FF03F603FE15FF038703F60CFFD6A1A3A49EAAB0D0
 BFCDDCE1DDD9CFD5D5D8DDC1AEC4D6DBD8D2CBD2CDCAD2C5C3C8D5D2D4DDD5D4
-E7DDDE0CFF038F03EE0CFF03A903C92AFF03F215E803E903B5039303ED03E803
+E7DDDE0CFF038F03EC0CFF03A903C92AFF03F215E803E903B5039303ED03E803
 EA03EB03D603D503D703A5038A03D615D503C403CC03C703CC03B603AF39FF03
 D703BF06FF039603EE15FF038703F60CFFE89FA0A1B6B7BFE4E1E4E4D9DFDED6
 E2EFF0EBD9CDE1E1CFD81BFF039F036203F20CFF03A903C924FF03D403E3B37A
@@ -5862,7 +5862,7 @@ Connector 4
 {
   SheetNumber 1
   Style "Association"
-  Figure1 83
+  Figure1 85
   Figure2 3
   EndPoint1 334,972
   EndPoint2 334,954
@@ -6167,7 +6167,7 @@ Connector 19
 {
   SheetNumber 1
   Style "Directional Association"
-  Figure1 83
+  Figure1 85
   Figure2 16
   EndPoint1 337,1165
   EndPoint2 336,1368
@@ -6187,11 +6187,11 @@ Connector 20
 {
   SheetNumber 1
   Style "Directional Association"
-  Figure1 2
+  Figure1 22
   Figure2 10
-  EndPoint1 1042,1164
+  EndPoint1 1042,1344
   EndPoint2 1042,1396
-  SuppressEnd1 FALSE
+  SuppressEnd1 TRUE
   SuppressEnd2 FALSE
   End1 "null"
   End2 "arrow umlstick"
@@ -6206,11 +6206,48 @@ Connector 20
 Connector 21
 {
   SheetNumber 1
+  Style "Directional Association"
+  Figure1 2
+  Figure2 22
+  EndPoint1 1042,1164
+  EndPoint2 1042,1344
+  SuppressEnd1 FALSE
+  SuppressEnd2 TRUE
+  End1 "null"
+  End2 "arrow umlstick"
+  End1Length 47
+  End2Length 47
+  LineWidth 3
+  EndBorderWidth 3
+  End2FillColor 255,255,255
+  Behavior 0x0000000000000000
+}
+
+Figure 22
+{
+  SheetNumber 1
+  Text ""
+  Bounds 1035,1337,1050,1352
+  AutoDelJct TRUE
+  FillColor 1,2,3
+  BorderWidth 0
+  BindToStyle FALSE
+  TextFormat 0x0000
+  Behavior 0x0000033000327012
+  Symbol "null"
+  TypeSize 8
+  TypeFace "Arial"
+  FillType 0
+}
+
+Connector 23
+{
+  SheetNumber 1
   Style "Anchor"
-  Figure1 -1
+  Figure1 22
   Figure2 12
-  EndPoint1 946,1292
-  EndPoint2 898,1292
+  EndPoint1 1042,1344
+  EndPoint2 898,1323
   SuppressEnd1 FALSE
   SuppressEnd2 FALSE
   End1 "anchor point"
@@ -6223,7 +6260,7 @@ Connector 21
   Behavior 0x0000000000000000
 }
 
-Figure 22
+Figure 24
 {
   SheetNumber 1
   Style "Class R3"
@@ -6254,7 +6291,7 @@ a:String):Bool"
   FigMarginBottom 14
 }
 
-Figure 23
+Figure 25
 {
   SheetNumber 1
   Style "Class R3"
@@ -6278,7 +6315,7 @@ lt \ql \b0\i0\ul0\fs16\f0 Arial;\red0\green0\blue0"
   FigMarginBottom 10
 }
 
-Figure 24
+Figure 26
 {
   SheetNumber 1
   Style "Class R3"
@@ -6302,7 +6339,7 @@ lc \qc \b0\i0\ul0\fs16\f0 Arial;\red0\green0\blue0"
   FigMarginBottom 10
 }
 
-Figure 25
+Figure 27
 {
   SheetNumber 1
   Style "Class R3"
@@ -6326,7 +6363,7 @@ lc \qc \b0\i0\ul0\fs16\f0 Arial;\red0\green0\blue0"
   FigMarginBottom 10
 }
 
-Figure 26
+Figure 28
 {
   SheetNumber 1
   Text ""
@@ -6342,12 +6379,12 @@ Figure 26
   FillType 0
 }
 
-Connector 27
+Connector 29
 {
   SheetNumber 1
   Style "Association"
-  Figure1 24
-  Figure2 26
+  Figure1 26
+  Figure2 28
   EndPoint1 1566,1039
   EndPoint2 1567,976
   SuppressEnd1 FALSE
@@ -6362,12 +6399,12 @@ Connector 27
   Behavior 0x0000000000000000
 }
 
-Connector 28
+Connector 30
 {
   SheetNumber 1
   Style "Association"
-  Figure1 30
-  Figure2 32
+  Figure1 32
+  Figure2 34
   EndPoint1 1723,976
   EndPoint2 1903,976
   SuppressEnd1 TRUE
@@ -6382,12 +6419,12 @@ Connector 28
   Behavior 0x0000000000000000
 }
 
-Connector 29
+Connector 31
 {
   SheetNumber 1
   Style "Association"
-  Figure1 26
-  Figure2 30
+  Figure1 28
+  Figure2 32
   EndPoint1 1567,976
   EndPoint2 1723,976
   SuppressEnd1 TRUE
@@ -6402,7 +6439,7 @@ Connector 29
   Behavior 0x0000000000000000
 }
 
-Figure 30
+Figure 32
 {
   SheetNumber 1
   Text ""
@@ -6419,12 +6456,12 @@ Figure 30
   FillType 0
 }
 
-Connector 31
+Connector 33
 {
   SheetNumber 1
   Style "Generalization"
-  Figure1 30
-  Figure2 23
+  Figure1 32
+  Figure2 25
   EndPoint1 1723,976
   EndPoint2 1723,816
   SuppressEnd1 TRUE
@@ -6439,7 +6476,7 @@ Connector 31
   Behavior 0x0000000000000000
 }
 
-Figure 32
+Figure 34
 {
   SheetNumber 1
   Text ""
@@ -6455,12 +6492,12 @@ Figure 32
   FillType 0
 }
 
-Connector 33
+Connector 35
 {
   SheetNumber 1
   Style "Association"
-  Figure1 25
-  Figure2 32
+  Figure1 27
+  Figure2 34
   EndPoint1 1902,1040
   EndPoint2 1903,976
   SuppressEnd1 FALSE
@@ -6475,7 +6512,7 @@ Connector 33
   Behavior 0x0000000000000000
 }
 
-Figure 34
+Figure 36
 {
   SheetNumber 1
   Style "Class R3"
@@ -6498,12 +6535,12 @@ rtalc \qc \b0\i0\ul0\fs16\f0 Arial;\red0\green0\blue0"
   FigMarginBottom 10
 }
 
-Connector 35
+Connector 37
 {
   SheetNumber 1
   Style "Directional Association"
-  Figure1 24
-  Figure2 34
+  Figure1 26
+  Figure2 36
   EndPoint1 1618,1232
   EndPoint2 1687,1355
   SuppressEnd1 FALSE
@@ -6518,12 +6555,12 @@ Connector 35
   Behavior 0x0000000000000000
 }
 
-Connector 36
+Connector 38
 {
   SheetNumber 1
   Style "Directional Association"
-  Figure1 25
-  Figure2 34
+  Figure1 27
+  Figure2 36
   EndPoint1 1847,1233
   EndPoint2 1784,1355
   SuppressEnd1 FALSE
@@ -6538,7 +6575,7 @@ Connector 36
   Behavior 0x0000000000000000
 }
 
-Figure 37
+Figure 39
 {
   SheetNumber 1
   Label TRUE
@@ -6555,7 +6592,7 @@ Figure 37
   FillType 0
 }
 
-Figure 38
+Figure 40
 {
   SheetNumber 1
   Label TRUE
@@ -6572,7 +6609,7 @@ Figure 38
   FillType 0
 }
 
-Figure 39
+Figure 41
 {
   SheetNumber 1
   Text ""
@@ -6588,12 +6625,12 @@ Figure 39
   FillType 0
 }
 
-Connector 40
+Connector 42
 {
   SheetNumber 1
   Style "Dependency"
-  Figure1 22
-  Figure2 39
+  Figure1 24
+  Figure2 41
   EndPoint1 709,286
   EndPoint2 130,288
   SuppressEnd1 FALSE
@@ -6609,7 +6646,7 @@ Connector 40
   Behavior 0x0000000000000000
 }
 
-Figure 41
+Figure 43
 {
   SheetNumber 1
   Text ""
@@ -6625,12 +6662,12 @@ Figure 41
   FillType 0
 }
 
-Connector 42
+Connector 44
 {
   SheetNumber 1
   Style "Dependency"
-  Figure1 39
-  Figure2 41
+  Figure1 41
+  Figure2 43
   EndPoint1 130,288
   EndPoint2 130,1762
   SuppressEnd1 TRUE
@@ -6646,11 +6683,11 @@ Connector 42
   Behavior 0x0000000000000000
 }
 
-Connector 43
+Connector 45
 {
   SheetNumber 1
   Style "Dependency"
-  Figure1 41
+  Figure1 43
   Figure2 8
   EndPoint1 130,1762
   EndPoint2 224,1762
@@ -6667,11 +6704,11 @@ Connector 43
   Behavior 0x0000000000000000
 }
 
-Connector 44
+Connector 46
 {
   SheetNumber 1
   Style "Dependency"
-  Figure1 22
+  Figure1 24
   Figure2 1
   EndPoint1 882,518
   EndPoint2 786,590
@@ -6688,12 +6725,12 @@ Connector 44
   Behavior 0x0000000000000000
 }
 
-Connector 45
+Connector 47
 {
   SheetNumber 1
   Style "Dependency"
-  Figure1 22
-  Figure2 23
+  Figure1 24
+  Figure2 25
   EndPoint1 1486,518
   EndPoint2 1595,605
   SuppressEnd1 FALSE
@@ -6709,13 +6746,13 @@ Connector 45
   Behavior 0x0000000000000000
 }
 
-Figure 46
+Figure 48
 {
   SheetNumber 1
   Label TRUE
   Style "Flow Label"
   Text "1..*"
-  Bounds 1058,1347,1112,1388
+  Bounds 1058,1350,1112,1391
   FillColor 1,2,3
   TextFormat 0x0024
   Behavior 0x0000030000BA51D1
@@ -6726,7 +6763,7 @@ Figure 46
   FillType 0
 }
 
-Figure 47
+Figure 49
 {
   SheetNumber 1
   Style "Class R3"
@@ -6752,7 +6789,7 @@ gre:Atr):Void\line +eliminar(AtributoSangre:Atr):Void\line "
   FigMarginBottom 14
 }
 
-Figure 48
+Figure 50
 {
   SheetNumber 1
   Style "Class R3"
@@ -6778,12 +6815,12 @@ Atr):Void\line +eliminar(AtributoOrina:Atr):Void\line "
   FigMarginBottom 14
 }
 
-Connector 49
+Connector 51
 {
   SheetNumber 1
   Style "Dependency"
-  Figure1 50
-  Figure2 48
+  Figure1 52
+  Figure2 50
   EndPoint1 2064,2032
   EndPoint2 1920,2032
   SuppressEnd1 TRUE
@@ -6799,7 +6836,7 @@ Connector 49
   Behavior 0x0000000000000000
 }
 
-Figure 50
+Figure 52
 {
   SheetNumber 1
   Text ""
@@ -6815,52 +6852,15 @@ Figure 50
   FillType 0
 }
 
-Connector 51
-{
-  SheetNumber 1
-  Style "Dependency"
-  Figure1 52
-  Figure2 50
-  EndPoint1 2080,348
-  EndPoint2 2064,2032
-  SuppressEnd1 TRUE
-  SuppressEnd2 TRUE
-  End1 "null"
-  End2 "arrow umlstick"
-  End1Length 47
-  End2Length 47
-  PenStyle 12
-  LineWidth 3
-  EndBorderWidth 3
-  End2FillColor 255,255,255
-  Behavior 0x0000000000000000
-}
-
-Figure 52
-{
-  SheetNumber 1
-  Text ""
-  Bounds 2073,341,2088,356
-  FillColor 1,2,3
-  BorderWidth 0
-  BindToStyle FALSE
-  TextFormat 0x0000
-  Behavior 0x0000033000327012
-  Symbol "null"
-  TypeSize 8
-  TypeFace "Arial"
-  FillType 0
-}
-
 Connector 53
 {
   SheetNumber 1
   Style "Dependency"
-  Figure1 -1
+  Figure1 54
   Figure2 52
-  EndPoint1 1680,348
-  EndPoint2 2080,348
-  SuppressEnd1 FALSE
+  EndPoint1 2080,348
+  EndPoint2 2064,2032
+  SuppressEnd1 TRUE
   SuppressEnd2 TRUE
   End1 "null"
   End2 "arrow umlstick"
@@ -6877,7 +6877,7 @@ Figure 54
 {
   SheetNumber 1
   Text ""
-  Bounds 2107,277,2122,292
+  Bounds 2073,341,2088,356
   FillColor 1,2,3
   BorderWidth 0
   BindToStyle FALSE
@@ -6893,10 +6893,10 @@ Connector 55
 {
   SheetNumber 1
   Style "Dependency"
-  Figure1 22
+  Figure1 -1
   Figure2 54
-  EndPoint1 1680,284
-  EndPoint2 2114,284
+  EndPoint1 1680,348
+  EndPoint2 2080,348
   SuppressEnd1 FALSE
   SuppressEnd2 TRUE
   End1 "null"
@@ -6914,7 +6914,7 @@ Figure 56
 {
   SheetNumber 1
   Text ""
-  Bounds 2107,2313,2122,2328
+  Bounds 2107,277,2122,292
   FillColor 1,2,3
   BorderWidth 0
   BindToStyle FALSE
@@ -6930,11 +6930,11 @@ Connector 57
 {
   SheetNumber 1
   Style "Dependency"
-  Figure1 54
+  Figure1 24
   Figure2 56
-  EndPoint1 2114,284
-  EndPoint2 2114,2320
-  SuppressEnd1 TRUE
+  EndPoint1 1680,284
+  EndPoint2 2114,284
+  SuppressEnd1 FALSE
   SuppressEnd2 TRUE
   End1 "null"
   End2 "arrow umlstick"
@@ -6951,7 +6951,7 @@ Figure 58
 {
   SheetNumber 1
   Text ""
-  Bounds 953,2313,968,2328
+  Bounds 2107,2313,2122,2328
   FillColor 1,2,3
   BorderWidth 0
   BindToStyle FALSE
@@ -6969,6 +6969,43 @@ Connector 59
   Style "Dependency"
   Figure1 56
   Figure2 58
+  EndPoint1 2114,284
+  EndPoint2 2114,2320
+  SuppressEnd1 TRUE
+  SuppressEnd2 TRUE
+  End1 "null"
+  End2 "arrow umlstick"
+  End1Length 47
+  End2Length 47
+  PenStyle 12
+  LineWidth 3
+  EndBorderWidth 3
+  End2FillColor 255,255,255
+  Behavior 0x0000000000000000
+}
+
+Figure 60
+{
+  SheetNumber 1
+  Text ""
+  Bounds 953,2313,968,2328
+  FillColor 1,2,3
+  BorderWidth 0
+  BindToStyle FALSE
+  TextFormat 0x0000
+  Behavior 0x0000033000327012
+  Symbol "null"
+  TypeSize 8
+  TypeFace "Arial"
+  FillType 0
+}
+
+Connector 61
+{
+  SheetNumber 1
+  Style "Dependency"
+  Figure1 58
+  Figure2 60
   EndPoint1 2114,2320
   EndPoint2 960,2320
   SuppressEnd1 TRUE
@@ -6984,12 +7021,12 @@ Connector 59
   Behavior 0x0000000000000000
 }
 
-Connector 60
+Connector 62
 {
   SheetNumber 1
   Style "Dependency"
-  Figure1 58
-  Figure2 47
+  Figure1 60
+  Figure2 49
   EndPoint1 960,2320
   EndPoint2 956,2245
   SuppressEnd1 TRUE
@@ -7005,7 +7042,7 @@ Connector 60
   Behavior 0x0000000000000000
 }
 
-Figure 61
+Figure 63
 {
   SheetNumber 1
   Text ""
@@ -7021,12 +7058,12 @@ Figure 61
   FillType 0
 }
 
-Connector 62
+Connector 64
 {
   SheetNumber 1
   Style "Association"
   Figure1 2
-  Figure2 61
+  Figure2 63
   EndPoint1 1042,971
   EndPoint2 1042,954
   SuppressEnd1 FALSE
@@ -7041,11 +7078,11 @@ Connector 62
   Behavior 0x0000000000000000
 }
 
-Connector 63
+Connector 65
 {
   SheetNumber 1
   Style "Association"
-  Figure1 61
+  Figure1 63
   Figure2 6
   EndPoint1 1042,954
   EndPoint2 658,954
@@ -7061,7 +7098,7 @@ Connector 63
   Behavior 0x0000000000000000
 }
 
-Figure 64
+Figure 66
 {
   SheetNumber 1
   Text ""
@@ -7077,52 +7114,15 @@ Figure 64
   FillType 0
 }
 
-Connector 65
-{
-  SheetNumber 1
-  Style "Dependency"
-  Figure1 22
-  Figure2 64
-  EndPoint1 1190,518
-  EndPoint2 1186,876
-  SuppressEnd1 FALSE
-  SuppressEnd2 TRUE
-  End1 "null"
-  End2 "arrow umlstick"
-  End1Length 47
-  End2Length 47
-  PenStyle 12
-  LineWidth 3
-  EndBorderWidth 3
-  End2FillColor 255,255,255
-  Behavior 0x0000000000000000
-}
-
-Figure 66
-{
-  SheetNumber 1
-  Text ""
-  Bounds 1353,869,1368,884
-  FillColor 1,2,3
-  BorderWidth 0
-  BindToStyle FALSE
-  TextFormat 0x0000
-  Behavior 0x0000033000327012
-  Symbol "null"
-  TypeSize 8
-  TypeFace "Arial"
-  FillType 0
-}
-
 Connector 67
 {
   SheetNumber 1
   Style "Dependency"
-  Figure1 64
+  Figure1 24
   Figure2 66
-  EndPoint1 1186,876
-  EndPoint2 1360,876
-  SuppressEnd1 TRUE
+  EndPoint1 1190,518
+  EndPoint2 1186,876
+  SuppressEnd1 FALSE
   SuppressEnd2 TRUE
   End1 "null"
   End2 "arrow umlstick"
@@ -7139,7 +7139,7 @@ Figure 68
 {
   SheetNumber 1
   Text ""
-  Bounds 1353,1755,1368,1770
+  Bounds 1353,869,1368,884
   FillColor 1,2,3
   BorderWidth 0
   BindToStyle FALSE
@@ -7157,6 +7157,43 @@ Connector 69
   Style "Dependency"
   Figure1 66
   Figure2 68
+  EndPoint1 1186,876
+  EndPoint2 1360,876
+  SuppressEnd1 TRUE
+  SuppressEnd2 TRUE
+  End1 "null"
+  End2 "arrow umlstick"
+  End1Length 47
+  End2Length 47
+  PenStyle 12
+  LineWidth 3
+  EndBorderWidth 3
+  End2FillColor 255,255,255
+  Behavior 0x0000000000000000
+}
+
+Figure 70
+{
+  SheetNumber 1
+  Text ""
+  Bounds 1353,1755,1368,1770
+  FillColor 1,2,3
+  BorderWidth 0
+  BindToStyle FALSE
+  TextFormat 0x0000
+  Behavior 0x0000033000327012
+  Symbol "null"
+  TypeSize 8
+  TypeFace "Arial"
+  FillType 0
+}
+
+Connector 71
+{
+  SheetNumber 1
+  Style "Dependency"
+  Figure1 68
+  Figure2 70
   EndPoint1 1360,876
   EndPoint2 1360,1762
   SuppressEnd1 TRUE
@@ -7172,11 +7209,11 @@ Connector 69
   Behavior 0x0000000000000000
 }
 
-Connector 70
+Connector 72
 {
   SheetNumber 1
   Style "Dependency"
-  Figure1 68
+  Figure1 70
   Figure2 9
   EndPoint1 1360,1762
   EndPoint2 1152,1762
@@ -7193,7 +7230,7 @@ Connector 70
   Behavior 0x0000000000000000
 }
 
-Figure 71
+Figure 73
 {
   SheetNumber 1
   Style "Class R3"
@@ -7219,7 +7256,7 @@ d:Integer):Resonancia\line +actualizar(Resonancia:Res):Void\line -
   FigMarginBottom 14
 }
 
-Figure 72
+Figure 74
 {
   SheetNumber 1
   Style "Class R3"
@@ -7245,7 +7282,7 @@ ine +eliminar(Radiografia:Rad):Void\line "
   FigMarginBottom 14
 }
 
-Figure 73
+Figure 75
 {
   SheetNumber 1
   Text ""
@@ -7261,12 +7298,12 @@ Figure 73
   FillType 0
 }
 
-Connector 74
+Connector 76
 {
   SheetNumber 1
   Style "Dependency"
   Figure1 -1
-  Figure2 73
+  Figure2 75
   EndPoint1 1696,208
   EndPoint2 2160,208
   SuppressEnd1 FALSE
@@ -7282,7 +7319,7 @@ Connector 74
   Behavior 0x0000000000000000
 }
 
-Figure 75
+Figure 77
 {
   SheetNumber 1
   Text ""
@@ -7298,12 +7335,12 @@ Figure 75
   FillType 0
 }
 
-Connector 76
+Connector 78
 {
   SheetNumber 1
   Style "Dependency"
-  Figure1 73
-  Figure2 75
+  Figure1 75
+  Figure2 77
   EndPoint1 2160,208
   EndPoint2 2160,2517
   SuppressEnd1 TRUE
@@ -7319,12 +7356,12 @@ Connector 76
   Behavior 0x0000000000000000
 }
 
-Connector 77
+Connector 79
 {
   SheetNumber 1
   Style "Dependency"
-  Figure1 75
-  Figure2 72
+  Figure1 77
+  Figure2 74
   EndPoint1 2160,2517
   EndPoint2 1655,2517
   SuppressEnd1 TRUE
@@ -7340,7 +7377,7 @@ Connector 77
   Behavior 0x0000000000000000
 }
 
-Figure 78
+Figure 80
 {
   SheetNumber 1
   Text ""
@@ -7356,12 +7393,12 @@ Figure 78
   FillType 0
 }
 
-Connector 79
+Connector 81
 {
   SheetNumber 1
   Style "Dependency"
   Figure1 -1
-  Figure2 78
+  Figure2 80
   EndPoint1 704,208
   EndPoint2 48,208
   SuppressEnd1 FALSE
@@ -7377,7 +7414,7 @@ Connector 79
   Behavior 0x0000000000000000
 }
 
-Figure 80
+Figure 82
 {
   SheetNumber 1
   Text ""
@@ -7393,12 +7430,12 @@ Figure 80
   FillType 0
 }
 
-Connector 81
+Connector 83
 {
   SheetNumber 1
   Style "Dependency"
-  Figure1 78
-  Figure2 80
+  Figure1 80
+  Figure2 82
   EndPoint1 48,208
   EndPoint2 48,2437
   SuppressEnd1 TRUE
@@ -7414,12 +7451,12 @@ Connector 81
   Behavior 0x0000000000000000
 }
 
-Connector 82
+Connector 84
 {
   SheetNumber 1
   Style "Dependency"
-  Figure1 80
-  Figure2 71
+  Figure1 82
+  Figure2 73
   EndPoint1 48,2437
   EndPoint2 272,2437
   SuppressEnd1 TRUE
@@ -7435,7 +7472,7 @@ Connector 82
   Behavior 0x0000000000000000
 }
 
-Figure 83
+Figure 85
 {
   SheetNumber 1
   Style "Class R3"
@@ -7465,9 +7502,9 @@ oid"
 Staple 1
 {
   StapleType 5
-  Connector 35
+  Connector 37
   ConPos 146
-  Figure1 37
+  Figure1 39
   Fig1PosX 127
   Fig1PosY 127
   Figure2 -1
@@ -7482,12 +7519,12 @@ Staple 1
 Staple 2
 {
   StapleType 3
-  Connector 36
+  Connector 38
   ConPos 0
-  Figure1 34
+  Figure1 36
   Fig1PosX 0
   Fig1PosY 0
-  Figure2 38
+  Figure2 40
   Fig2PosX 0
   Fig2PosY 0
   OffsetX 0
@@ -7499,8 +7536,8 @@ Staple 3
 {
   StapleType 5
   Connector 20
-  ConPos 224
-  Figure1 46
+  ConPos 128
+  Figure1 48
   Fig1PosX 127
   Fig1PosY 127
   Figure2 -1
