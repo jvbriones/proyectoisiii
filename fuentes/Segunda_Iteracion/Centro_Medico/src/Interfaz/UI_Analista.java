@@ -326,7 +326,7 @@ public class UI_Analista extends javax.swing.JFrame {
             }
         });
 
-        jButtonAlmacenarResultado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Citas.png"))); // NOI18N
+        jButtonAlmacenarResultado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/almacenarResultados.png"))); // NOI18N
         jButtonAlmacenarResultado.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonAlmacenarResultadoMouseClicked(evt);
@@ -335,14 +335,14 @@ public class UI_Analista extends javax.swing.JFrame {
 
         jLabelAlamcenarResultados.setText("Almacenar resultados");
 
-        jButtonAlmacenarResultado1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Citas.png"))); // NOI18N
+        jButtonAlmacenarResultado1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/agregarAtributo.png"))); // NOI18N
         jButtonAlmacenarResultado1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonAlmacenarResultado1MouseClicked(evt);
             }
         });
 
-        jButtonAlmacenarResultado2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Citas.png"))); // NOI18N
+        jButtonAlmacenarResultado2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/eliminarAtributo.png"))); // NOI18N
         jButtonAlmacenarResultado2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonAlmacenarResultado2MouseClicked(evt);
@@ -373,7 +373,8 @@ public class UI_Analista extends javax.swing.JFrame {
                                 .add(47, 47, 47)
                                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                                     .add(jButtonAlmacenarResultado, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 192, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .add(jButtonConsultarDatosPersonales, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
+                                    .add(jButtonConsultarDatosPersonales, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                .add(7, 7, 7)))
                         .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(jPanelPrincipalLayout.createSequentialGroup()
                                 .add(51, 51, 51)
@@ -383,20 +384,20 @@ public class UI_Analista extends javax.swing.JFrame {
                                         .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
                                             .add(jLabelAgregarAtributo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 166, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                             .add(jButtonAlmacenarResultado1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 192, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                        .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                                        .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                            .add(jPanelPrincipalLayout.createSequentialGroup()
+                                                .add(99, 99, 99)
+                                                .add(jLabelEliminarAtributo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 131, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                             .add(jPanelPrincipalLayout.createSequentialGroup()
                                                 .add(62, 62, 62)
-                                                .add(jButtonAlmacenarResultado2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 192, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                            .add(jPanelPrincipalLayout.createSequentialGroup()
-                                                .add(92, 92, 92)
-                                                .add(jLabelEliminarAtributo, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                                                .add(jButtonAlmacenarResultado2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 192, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))))
                             .add(jPanelPrincipalLayout.createSequentialGroup()
                                 .add(88, 88, 88)
                                 .add(jLabelConsultarTurno))))
                     .add(jPanelPrincipalLayout.createSequentialGroup()
                         .add(67, 67, 67)
                         .add(jLabelAlamcenarResultados, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 162, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(156, Short.MAX_VALUE))
+                .addContainerGap(165, Short.MAX_VALUE))
         );
         jPanelPrincipalLayout.setVerticalGroup(
             jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -410,20 +411,22 @@ public class UI_Analista extends javax.swing.JFrame {
                     .add(jLabelConsultarDatosPersonales)
                     .add(jLabelConsultarTurno))
                 .add(37, 37, 37)
+                .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonAlmacenarResultado, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonAlmacenarResultado1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(jPanelPrincipalLayout.createSequentialGroup()
+                        .add(jButtonAlmacenarResultado2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 139, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)))
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelPrincipalLayout.createSequentialGroup()
-                        .add(jButtonAlmacenarResultado2)
                         .add(18, 18, 18)
-                        .add(jLabelEliminarAtributo))
-                    .add(jPanelPrincipalLayout.createSequentialGroup()
-                        .add(jButtonAlmacenarResultado)
-                        .add(18, 18, 18)
-                        .add(jLabelAlamcenarResultados, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 21, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanelPrincipalLayout.createSequentialGroup()
-                        .add(jButtonAlmacenarResultado1)
-                        .add(18, 18, 18)
-                        .add(jLabelAgregarAtributo)))
-                .add(131, 131, 131))
+                        .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(jLabelAgregarAtributo)
+                            .add(jLabelEliminarAtributo)))
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelPrincipalLayout.createSequentialGroup()
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jLabelAlamcenarResultados, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 21, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .add(135, 135, 135))
         );
 
         jPanelPrincipal.setBounds(-9, 1, 910, 540);
