@@ -2628,16 +2628,32 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
     private void jButtonConsultarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarMouseClicked
         // TODO add your handling code here:
+
+
+
         mostrarPanel("ConsultarMedicamento");
+
+    }//GEN-LAST:event_jButtonConsultarMouseClicked
+
+    private void jButtonAnadirLoteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAnadirLoteMouseClicked
+        // TODO add your handling code here:
+        mostrarPanel("AnadirLote");
+    }//GEN-LAST:event_jButtonAnadirLoteMouseClicked
+
+    private void jButtonConsultarLoteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarLoteMouseClicked
+        // TODO add your handling code here:
+        mostrarPanel("ModificarLote");
+
         GestorFarmacia gesFar = new GestorFarmacia();
         LoteMedicamento Lo = null;
         String CodBarras = jTextFieldCodBarras.getText(); // duda
-        Lo = gesFar.consultarLoteMedicamento(CodBarras);
+        Lo = gesFar.consultarLoteMedicamento(CodBarras, Me);
 
 
         if( Lo == null){
 
            System.out.println( " El lote " + CodBarras + "ya existe");
+           new InformacionError().setVisible(true);
 
         }
 
@@ -2661,21 +2677,8 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
            jTextFieldExistenc.setText(numExistenc);
            jTextFieldFechCad.setText(dateString);
 
-           
+        }
 
- }
-
-
-    }//GEN-LAST:event_jButtonConsultarMouseClicked
-
-    private void jButtonAnadirLoteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAnadirLoteMouseClicked
-        // TODO add your handling code here:
-        mostrarPanel("AnadirLote");
-    }//GEN-LAST:event_jButtonAnadirLoteMouseClicked
-
-    private void jButtonConsultarLoteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarLoteMouseClicked
-        // TODO add your handling code here:
-        mostrarPanel("ModificarLote");
     }//GEN-LAST:event_jButtonConsultarLoteMouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
@@ -2799,17 +2802,25 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         LoteMedicamento Lo=null;
         LoteMedicamentoBD loBD=null;
 
+        boolean pulsado;
 
-        GestorFarmacia gesFar = new GestorFarmacia();
-        exito = gesFar.eliminarLoteMedicamento( jTextFieldCodigoBarras.getText(),Me);
+        InformacionConfirma panelInfo = new InformacionConfirma();
+        pulsado = panelInfo.botonPulsado(evt);
+
+        if(pulsado == true){
+
+            GestorFarmacia gesFar = new GestorFarmacia();
+            exito = gesFar.eliminarLoteMedicamento( jTextFieldCodigoBarras.getText(),Me);
         
-        if( exito == false)
-            System.out.println("Ya existe un Lote con " +jTextFieldCodigoBarras.getText());
+            if( exito == false)
+                System.out.println("Ya existe un Lote con " +jTextFieldCodigoBarras.getText());
         
-        else{
-            new InformacionExito().setVisible(true);
+            else{
+             new InformacionExito().setVisible(true);
+            }
         }
-
+        else
+            new InformacionError().setVisible(true);
     }//GEN-LAST:event_jButtonELiminarLoteMouseReleased
 
     private void jButtonModificarLoteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarLoteActionPerformed
@@ -2818,12 +2829,29 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         GestorFarmacia gesFar = new GestorFarmacia();
         boolean exito;
 
-        // hay que hacer el tema de la fecha 
+        String CodBarras=jTextFieldCodBarras.getText();
+        int Existencias = Integer.parseInt(jTextFieldExistenc.getText());
 
-        exito = gesFar.modificarLoteMedicamento(jTextFieldCodBarras.getText(), jTextFieldExistenc.getText(), null);
-        if( exito == false)
-            System.out.println(" Ya existe un lote con " + jTextFieldCodBarras.getText());
+        String FechCad = jTextFieldFechCad.getText();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
+
+        // lo pongo en cuarentenaaa
+        Date DateCadu = null;
+        if ((FechCad != null) && (!"".equals(FechCad)))
+        try {
+            DateCadu = sdf.parse(FechCad);
+        } catch (ParseException ex) {
+            DateCadu = null;
+       }
+
+        
+
+        exito = gesFar.modificarLoteMedicamento(CodBarras,Existencias,DateCadu,Me);
+        if( exito == false){
+            System.out.println(" Ya existe un lote con " + CodBarras);
+            new InformacionError().setVisible(true);
+        }
         else
             new InformacionExito().setVisible(true);
 
@@ -3407,7 +3435,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         //trabajar con personal no se puede, ya que su BD está mal
 
         Usuario perso=null;
-        usuarioBD usu_bd=new usuarioBD ();
+        UsuarioBD usu_bd=new UsuarioBD ();
         perso=usu_bd.obtener(nombreUsuario);
 
         mostrarDatosPerso(perso);

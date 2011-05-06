@@ -20,8 +20,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * @version     1.0    02/04/2011
- * @author      Sub_Equipo1
+ * @version     2.0    05/05/2011
+ * @author      Sub_Equipo2
  */
 
 public class GestorUsuarios {

@@ -94,8 +94,8 @@ public class GestorFarmacia {
     public boolean anadirLoteMedicamento (String CodBarras,int Existencias, Date FechaCaducidad){
 
         LoteMedicamento Lo= null;
-        LoteMedicamentoBD loBD = new LoteMedicamentoBD();
-        MedicamentoBD meBD = new MedicamentoBD();
+        LoteMedicamentoBD loBD = null;
+        MedicamentoBD meBD = null;
         Lo=loBD.obtener(CodBarras);
 
         if( Lo!=null)
@@ -104,11 +104,17 @@ public class GestorFarmacia {
         else{
             LoteMedicamento lote = new LoteMedicamento(CodBarras,Existencias,FechaCaducidad);
             Medicamento Me = lote.getMedicamento();
+            // LLAMAR A JAVI, FALTA AÑADIR
             loBD.almacenar(lote);
             Me.anadirAlArray(lote);
             Me.actualizaStock(Existencias);
             meBD.almacenar(Me);
-            return true; 
+            return true;
+
+          
+
+
+
 
         }
 
@@ -118,8 +124,6 @@ public class GestorFarmacia {
 
 
     public LoteMedicamento consultarLoteMedicamento (String CodBarras, Medicamento me){
-
-
         LoteMedicamento Lo=null;
         Medicamento Me=me;
 
@@ -130,7 +134,7 @@ public class GestorFarmacia {
 
         for( Iterator it = lotes.iterator(); it.hasNext();) {
 	    Aux = (LoteMedicamento)it.next();
-	    if( Aux.getCodBarras() == CodBarras){
+	    if( Aux.getCodBarras().equals(CodBarras)){
                 Lo = Aux;
 
             }
@@ -176,9 +180,9 @@ public class GestorFarmacia {
          if( Lo == null)
              return false; 
          else{
-             int existencias = Lo.getExistencias();
+             int Existencias = Lo.getExistencias();
              Me.actualizaLote(CodBarras);
-             Me.actualizaStock(existencias);//aquí debe restar las existencias
+             Me.actualizaStock(-Existencias);//aquí debe restar las existencias
              Me.eliminarLote(CodBarras);
 
 
@@ -186,6 +190,17 @@ public class GestorFarmacia {
              meBD.almacenar(Me);
              return true;
         }
+    }
+
+    public Set buscarMedicamento( String Nombre ){
+
+
+        MedicamentoBD meBD=null;
+        Set<Medicamento> me=null;
+
+        me = meBD.obtenerTodosMedicamentos();
+        return me;
+
     }
 
 
