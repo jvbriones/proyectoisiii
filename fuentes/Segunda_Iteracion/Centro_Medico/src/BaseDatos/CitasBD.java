@@ -14,7 +14,7 @@ package BaseDatos;
 import CentroMedico.Cita;
 import java.sql.*;
 import java.util.ArrayList;
-
+import org.hibernate.*;
 
 /**
  * @version     1.1     16/04/2011
@@ -106,5 +106,37 @@ public class citasBD {
 
         }
         return datosAdmin;
+    }
+    public void Cita(Cita cita){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+        session.save ( cita );
+
+    }
+
+    //La clase cita no tiene este método todavía ya que no se va a utilizar, y no se implementa directamente porque tiene una clave compuesta.
+/*    public Cita obtener (Date fecha, String dniPaciente){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+
+        Cita cita= (Cita) session.get(Cita.class, Fecha);
+
+        return cita;
+    }
+*/
+    public void actualizar (Cita cita){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+        session.update ( cita );
+    }
+
+    public void eliminar (Cita cita){
+    Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+        session.delete ( cita );
     }
 }

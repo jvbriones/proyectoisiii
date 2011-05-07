@@ -15,7 +15,7 @@ import CentroMedico.Turno;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Date;
-
+import org.hibernate.*;
 
 /**
  * @version     1.1     16/04/2011
@@ -158,4 +158,38 @@ public class turnoBD {
         }
         return datos;
     }
+    public void almacenar(Turno turno){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+        session.save ( turno );
+
+    }
+
+    public Turno obtener (int Id){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+
+        Turno turno= (Turno) session.get(Turno.class, Id);
+
+        return turno;
+    }
+
+
+
+    public void actualizar (Turno turno){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+        session.update ( turno );
+    }
+
+    public void eliminar (Turno turno){
+    Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+        session.delete ( turno );
+    }
+
 }
