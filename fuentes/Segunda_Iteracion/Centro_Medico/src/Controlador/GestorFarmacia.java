@@ -203,6 +203,124 @@ public class GestorFarmacia {
 
     }
 
+    public ArrayList consultarResumenRecetas(String Dni) throws SQLException{
+        ArrayList resumenRecetas = new ArrayList();
+        GestorPacientes pacien = new GestorPacientes();
+        Paciente pac = new Paciente();
+        RecetaBD recetas = new RecetaBD();
+        Receta rec = null;
+        Set<Receta> almacenRecetas;
+        boolean fin = false;
+        Medico doc = null;
+
+        pac = pacien.obtenerPaciente(Dni);
+
+
+        if(pac == null){
+            System.out.println("El paciente no existe");
+            return resumenRecetas;
+
+        }
+
+        else{
+
+            almacenRecetas = recetas.obtenerRecetasPaciente(Dni);
+
+            for( Iterator it = almacenRecetas.iterator(); it.hasNext();) {
+                rec = (Receta)it.next();
+                ArrayList aux = new ArrayList();
+
+                aux.add(rec.getFecha());
+                doc = rec.getMedi();
+                aux.add(doc);
+                aux.add(doc.getNombre());
+                aux.add(doc.getApellidos());
+                resumenRecetas.add(aux);
+             }
+
+            return resumenRecetas;
+        }
+    }
+
+    public ArrayList mostrarReceta(int idReceta){
+
+            ArrayList datosReceta = new ArrayList();
+            ArrayList datosMedicamentos = new ArrayList();
+            Set<MedicamentoRecetado> recetados = null;
+            Receta rec = null;
+            RecetaBD recetas = new RecetaBD();
+            Medicamento med = null;
+            MedicamentoRecetado medRed = new MedicamentoRecetado();
+
+            rec = recetas.obtener(idReceta);
+
+            datosReceta.add(rec.getFecha());
+            datosReceta.add(rec.getInstrucciones());
+            datosReceta.add(rec.getJuicioDiagnostico());
+            recetados.add((MedicamentoRecetado) rec.getMedicamentosRecetados());
+
+            for( Iterator it = recetados.iterator(); it.hasNext();){
+                medRed = (MedicamentoRecetado)it.next();
+                med = medRed.getMed();
+                ArrayList aux = new ArrayList();
+
+                aux.add(med.getNombre());
+                aux.add(medRed.getPosologia());
+                aux.add(medRed.getDuracion());
+                aux.add(medRed.getFechaFin());
+                aux.add(medRed.getDispensado());
+                aux.add(med.getStockActual());
+
+                datosMedicamentos.add(aux);
+
+            }
+
+            return datosReceta; //también hay que devolver los datos de medicamentos no es posible devolver dos arrays
+
+
+
+        }
+
+    public void dispensarMedicamentos(ArrayList<String> ListaCodBarras){
+        String codBarras;
+        LoteMedicamentoBD loteBD = new LoteMedicamentoBD();
+        LoteMedicamento lote = null;
+        Medicamento med = new Medicamento();
+        MedicamentoBD mBD = new MedicamentoBD();
+        String nombre;
+        RecetaBD rBD = new RecetaBD();
+
+        for( Iterator it = ListaCodBarras.iterator(); it.hasNext();){
+            codBarras = (String)it.next();
+            lote = loteBD.obtener(codBarras);
+            lote.decrementarExistencias(1);
+            if(lote.getExistencias()==0){
+                loteBD.eliminarLote(codBarras);//En el diseño usa eliminar pero pasa como atributo codBarras al que le pertenece la función eliminarLote
+
+            }
+
+            else{
+                loteBD.actualizar(lote);
+            }
+
+            med = lote.getMedicamento();
+            med.actualizaStock(1);
+            mBD.actualizar(med);
+            nombre = med.getNombre();
+            Set<MedicamentoRecetado> recetados;
+            MedicamentoRecetado medRed = null;
+            //No hay ninguna función que se llame obtenerMedicamentoRecetado en MedicamentoRecetado
+            medRed.setDispensado(true);
+            rBD.actualizar(rec);//no puedo coger rec de la función anterior ya que es local a la función
+
+            
+
+
+
+
+        }
+    }
+
     public ArrayList comprobarStockMedicamentos(){
 
         Date fechaActual=new Date();
