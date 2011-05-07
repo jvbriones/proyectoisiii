@@ -38,15 +38,16 @@ public class UI_Radiologo extends javax.swing.JFrame {
         initComponents();
     }
 
-    public UI_Radiologo(String nombreUsuario, String tipoUsuario) throws SQLException{
+    public UI_Radiologo(Usuario usu, String tipoUsuario) throws SQLException{
         initComponents();
 
         /**Ponemos las etiquetas del usuario que ha entrado*/
-        jLabelNombreUsuario.setText(nombreUsuario);
+        jLabelNombreUsuario.setText(usu.getNombre());
         jLabelTipoUsuario.setText(tipoUsuario);
 
         /**Mostramos el panel Principal*/
         mostrarPanel("Principal");
+        mostrarDatosPerso(usu);
     
 
         /**Cargamos la foto de login*/

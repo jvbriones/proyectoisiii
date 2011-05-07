@@ -274,34 +274,34 @@ public class Intro extends javax.swing.JFrame {
             if( pass.equals(contrasenia) ){
                 tipo = usu.getTipo();
                     if(tipo.equals("Administrativo")){
-                            UI_Administrador ui = new UI_Administrador(usu.getNombre(),"Administrativo");
+                            UI_Administrador ui = new UI_Administrador(usu,"Administrativo");
 
                             ui.setVisible(true);
                             this.setVisible(false);
                     }
                     if(tipo.equals("Paciente")){
-                            UI_Paciente ui = new UI_Paciente(usu.getNombre(),"Paciente");
+                            UI_Paciente ui = new UI_Paciente(usu,"Paciente");
                             System.out.println(usu.getNombre());
                             ui.setVisible(true);
                             this.setVisible(false);
                     }
                     if(tipo.equals("Analista")){
-                            UI_Analista ui = new UI_Analista(usu.getNombre(),"Analista");
+                            UI_Analista ui = new UI_Analista(usu,"Analista");
                             ui.setVisible(true);
                             this.setVisible(false);
                     }
                     if(tipo.equals("Farmaceutico")){
-                            UI_Farmaceutico ui = new UI_Farmaceutico(usu.getNombre(),"Farmaceutico");
+                            UI_Farmaceutico ui = new UI_Farmaceutico(usu,"Farmaceutico");
                             ui.setVisible(true);
                             this.setVisible(false);
                     }
                     if(tipo.equals("Medico")){
-                            UI_Medico ui = new UI_Medico(usu.getNombre(),"Medico");
+                            UI_Medico ui = new UI_Medico(usu,"Medico");
                             ui.setVisible(true);
                             this.setVisible(false);
                     }
                     if(tipo.equals("Radiologo")){
-                            UI_Radiologo ui = new UI_Radiologo(usu.getNombre(),"Radiologo");
+                            UI_Radiologo ui = new UI_Radiologo(usu,"Radiologo");
                             ui.setVisible(true);
                             this.setVisible(false);
                     }

@@ -48,7 +48,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
     }
 
-    public UI_Farmaceutico(String nombreUsuario, String tipoUsuario) throws SQLException{
+    public UI_Farmaceutico(Usuario usu, String tipoUsuario) throws SQLException{
         initComponents();
 
 
@@ -59,11 +59,12 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
 
         /**Ponemos las etiquetas del usuario que ha entrado*/
-        jLabelNombreUsuario.setText(nombreUsuario);
+        jLabelNombreUsuario.setText(usu.getNombre());
         jLabelTipoUsuario.setText(tipoUsuario);
 
         /**Mostramos el panel Principal*/
         mostrarPanel("Principal");
+        mostrarDatosPerso(usu);
     
 
         /**Cargamos la foto de login*/

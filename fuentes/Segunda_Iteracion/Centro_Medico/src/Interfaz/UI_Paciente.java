@@ -35,16 +35,16 @@ public class UI_Paciente extends javax.swing.JFrame {
         initComponents();
     }
 
-    public UI_Paciente(String nombreUsuario, String tipoUsuario) throws SQLException{
+    public UI_Paciente(Usuario usu, String tipoUsuario) throws SQLException{
         initComponents();
 
         /**Ponemos las etiquetas del usuario que ha entrado*/
-        jLabelNombreUsuario.setText(nombreUsuario);
+        jLabelNombreUsuario.setText(usu.getNombre());
         jLabelTipoUsuario.setText(tipoUsuario);
 
         /**Mostramos el panel Principal*/
         mostrarPanel("Principal");
-        //identificarPaciente(nombreUsuario);
+        mostrarDatosPaciente(usu);
 
         /** Conectamos con la BD y tomamos los datos del paciente*/
        

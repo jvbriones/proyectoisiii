@@ -19,6 +19,7 @@ import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import Controlador.*;
+import CentroMedico.*;
 import java.util.*;
 import java.text.*;
 
@@ -34,16 +35,16 @@ public class UI_Administrador extends javax.swing.JFrame {
         initComponents();
     }
 
-    public UI_Administrador(String nombreUsuario, String tipoUsuario){
+    public UI_Administrador(Usuario usu, String tipoUsuario){
         initComponents();
 
         /**Ponemos las etiquetas del usuario que ha entrado*/
-        jLabelNombreUsuario.setText(nombreUsuario);
+        jLabelNombreUsuario.setText(usu.getNombre());
         jLabelTipoUsuario.setText(tipoUsuario);
 
         /**Mostramos el panel Principal*/
         mostrarPanel("Principal");
-
+        
 
         /**Enlazamos grupo botones de GestionarPersonal*/
         buttonGroup1.add(jRadioButtonAnalista);
