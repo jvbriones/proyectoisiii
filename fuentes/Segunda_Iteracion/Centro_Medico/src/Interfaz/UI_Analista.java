@@ -1301,7 +1301,7 @@ public class UI_Analista extends javax.swing.JFrame {
             }
         });
 
-        jLabel12.setText("Prueba");
+        jLabel12.setText("Tipo  de Prueba");
 
         jTextFieldNombreAtributo1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1328,11 +1328,11 @@ public class UI_Analista extends javax.swing.JFrame {
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(jTextFieldNombreAtributo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 125, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                     .add(jLabel13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 591, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel12, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 66, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                        .add(jRadioButtonOrina2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
-                        .add(jRadioButtonSangre2)
-                        .add(jButtonGuardarAtributo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 115, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                    .add(jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel12, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, jRadioButtonOrina2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, jRadioButtonSangre2)
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonGuardarAtributo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 115, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                 .add(80, 80, 80))
         );
         jPanelEliminarAtributoLayout.setVerticalGroup(

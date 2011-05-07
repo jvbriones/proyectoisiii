@@ -75,6 +75,8 @@ public class UI_Medico extends javax.swing.JFrame {
         jRadioButtonOrinaCitaPrueba.setSelected(true);
         
         jTextFieldCitaPruebaPaciente.setEditable(false);
+        jLabelErrorDniPaciente.setVisible(false);
+        jTextFieldAtenderPaciente.setEditable(false);
         
     }
 
@@ -130,6 +132,7 @@ public class UI_Medico extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jTextFieldDNIAtenderPaciente = new javax.swing.JTextField();
         jButtonAceptar = new javax.swing.JButton();
+        jLabelErrorDniPaciente = new javax.swing.JLabel();
         jPanelRealizarReceta = new javax.swing.JPanel();
         jLabelGestionarPaciente10 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -395,7 +398,7 @@ public class UI_Medico extends javax.swing.JFrame {
                         .add(jLabel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 162, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(145, 145, 145)
                         .add(jLabel2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 142, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(372, Short.MAX_VALUE))
+                .addContainerGap(233, Short.MAX_VALUE))
         );
         jPanelPrincipalLayout.setVerticalGroup(
             jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -463,7 +466,7 @@ public class UI_Medico extends javax.swing.JFrame {
         jPanelAtenderPacienteLayout.setHorizontalGroup(
             jPanelAtenderPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanelAtenderPacienteLayout.createSequentialGroup()
-                .add(221, 221, 221)
+                .add(134, 134, 134)
                 .add(jPanelAtenderPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelAtenderPacienteLayout.createSequentialGroup()
                         .add(jPanelAtenderPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -492,7 +495,7 @@ public class UI_Medico extends javax.swing.JFrame {
                         .add(23, 23, 23)
                         .add(jLabelGestionarPaciente8))
                     .add(jLabel11))
-                .add(115, 115, 115))
+                .addContainerGap(202, Short.MAX_VALUE))
         );
         jPanelAtenderPacienteLayout.setVerticalGroup(
             jPanelAtenderPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -563,6 +566,10 @@ public class UI_Medico extends javax.swing.JFrame {
             }
         });
 
+        jLabelErrorDniPaciente.setForeground(new java.awt.Color(255, 0, 0));
+        jLabelErrorDniPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Error.png"))); // NOI18N
+        jLabelErrorDniPaciente.setText("No existe paciente con ese DNI");
+
         org.jdesktop.layout.GroupLayout jPanelAtenderPacienteIntermedioLayout = new org.jdesktop.layout.GroupLayout(jPanelAtenderPacienteIntermedio);
         jPanelAtenderPacienteIntermedio.setLayout(jPanelAtenderPacienteIntermedioLayout);
         jPanelAtenderPacienteIntermedioLayout.setHorizontalGroup(
@@ -580,13 +587,18 @@ public class UI_Medico extends javax.swing.JFrame {
                         .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 461, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                     .add(jPanelAtenderPacienteIntermedioLayout.createSequentialGroup()
                         .add(279, 279, 279)
-                        .add(jPanelAtenderPacienteIntermedioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                            .add(jButtonAceptar, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 93, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jPanelAtenderPacienteIntermedioLayout.createSequentialGroup()
-                                .add(jLabel4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 39, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .add(18, 18, 18)
-                                .add(jTextFieldDNIAtenderPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 134, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(60, Short.MAX_VALUE))
+                        .add(jLabel4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 39, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(18, 18, 18)
+                        .add(jTextFieldDNIAtenderPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 134, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(82, Short.MAX_VALUE))
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelAtenderPacienteIntermedioLayout.createSequentialGroup()
+                .addContainerGap(381, Short.MAX_VALUE)
+                .add(jButtonAceptar, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 93, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(253, 253, 253))
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelAtenderPacienteIntermedioLayout.createSequentialGroup()
+                .addContainerGap(289, Short.MAX_VALUE)
+                .add(jLabelErrorDniPaciente)
+                .add(197, 197, 197))
         );
         jPanelAtenderPacienteIntermedioLayout.setVerticalGroup(
             jPanelAtenderPacienteIntermedioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -601,12 +613,14 @@ public class UI_Medico extends javax.swing.JFrame {
                 .add(jPanelAtenderPacienteIntermedioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jTextFieldDNIAtenderPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jLabel4))
-                .add(26, 26, 26)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(jLabelErrorDniPaciente)
+                .add(10, 10, 10)
                 .add(jButtonAceptar)
-                .addContainerGap(168, Short.MAX_VALUE))
+                .addContainerGap(186, Short.MAX_VALUE))
         );
 
-        jPanelAtenderPacienteIntermedio.setBounds(0, 0, 705, 480);
+        jPanelAtenderPacienteIntermedio.setBounds(0, 0, 727, 480);
         ZonaTrabajo.add(jPanelAtenderPacienteIntermedio, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente10.setFont(new java.awt.Font("Lucida Grande", 1, 48));
@@ -807,7 +821,7 @@ public class UI_Medico extends javax.swing.JFrame {
                 .add(jPanelRealizarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jButtonCancelar)
                     .add(jButtonTerminar))
-                .add(302, 302, 302))
+                .add(103, 103, 103))
         );
 
         jPanelRealizarReceta.setBounds(0, 0, 1080, 640);
@@ -2158,6 +2172,7 @@ public class UI_Medico extends javax.swing.JFrame {
 
     private void jButtonAtenderPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAtenderPacienteMouseClicked
         // TODO add your handling code here:
+        jLabelErrorDniPaciente.setVisible(false);
         mostrarPanel("AtenderPacienteIntermedio");
     }//GEN-LAST:event_jButtonAtenderPacienteMouseClicked
 
@@ -2191,7 +2206,18 @@ public class UI_Medico extends javax.swing.JFrame {
 
     private void jButtonAceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAceptarMouseClicked
         // TODO add your handling code here:
-        mostrarPanel("AtenderPaciente");
+
+   // exito debe devolver si encuentra o no el paciente para mostrar el mensaje de error --> ADRI
+   //     boolean exito;
+
+   //     GestorMedico gestMed = new GestorMedico();
+
+   //     exito = gestMed.atenderPaciente(jTextFieldDNIAtenderPaciente.getText());
+      
+   //     if(exito == true)
+                mostrarPanel("AtenderPaciente");
+   //     else
+   //             jLabelErrorDniPaciente.setVisible(true);
     }//GEN-LAST:event_jButtonAceptarMouseClicked
 
     private void jButtonRealizarRecetaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonRealizarRecetaMouseClicked
@@ -2717,6 +2743,7 @@ public class UI_Medico extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelDNITurno;
     private javax.swing.JLabel jLabelDireccionPersonal;
     private javax.swing.JLabel jLabelEmailPersonal;
+    private javax.swing.JLabel jLabelErrorDniPaciente;
     private javax.swing.JLabel jLabelFechaFinTurno;
     private javax.swing.JLabel jLabelFechaInicioTurno;
     private javax.swing.JLabel jLabelFechaNacimientoPersonal;
