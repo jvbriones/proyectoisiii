@@ -44,7 +44,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         /**Mostramos el panel Principal*/
         mostrarPanel("Principal");
-        identificarPaciente(nombreUsuario);
+        //identificarPaciente(nombreUsuario);
 
         /** Conectamos con la BD y tomamos los datos del paciente*/
        

@@ -2240,7 +2240,7 @@ public class UI_Medico extends javax.swing.JFrame {
              modelo.addElement(li.get(i));
             }
            jListMedicamentos.setModel(modelo);
-            // la lista debe mostrarse uno a uno en el
+            // la lista debe mostrarse uno a uno en el RealizarReceta,
          
 
 

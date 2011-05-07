@@ -275,11 +275,13 @@ public class Intro extends javax.swing.JFrame {
                 tipo = usu.getTipo();
                     if(tipo.equals("Administrativo")){
                             UI_Administrador ui = new UI_Administrador(usu.getNombre(),"Administrativo");
+
                             ui.setVisible(true);
                             this.setVisible(false);
                     }
                     if(tipo.equals("Paciente")){
                             UI_Paciente ui = new UI_Paciente(usu.getNombre(),"Paciente");
+                            System.out.println(usu.getNombre());
                             ui.setVisible(true);
                             this.setVisible(false);
                     }
