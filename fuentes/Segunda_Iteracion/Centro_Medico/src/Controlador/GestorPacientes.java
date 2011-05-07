@@ -61,4 +61,17 @@ public class GestorPacientes {
 
         return contrasena;
     }
+    
+    public Paciente obtenerPaciente(String Dni) throws SQLException{
+    
+        PacBD pac = new PacBD();
+        Paciente p= new Paciente();
+        
+        p = pac.obtenerPaciente(Dni);
+        
+        return p;
+        
+        
+    }
+
 }
