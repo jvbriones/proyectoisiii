@@ -10,7 +10,7 @@
     <property name="StockActual"/>
     <set cascade="all" name="LotesMedicamento">
       <key column="ID_LOTEMEDICAMENTO"/>
-      <one-to-many class="CentroMedico.LoteMedicamento"/>
+      <one-to-many class="CentroMedico.LoteMedicamento" />
     </set>
   </class>
 </hibernate-mapping>

@@ -111,7 +111,7 @@ public class GestorFarmacia {
             loBD.almacenar(lote);
             Me.anadirAlArray(lote);
             Me.actualizaStock(Existencias);
-            meBD.almacenar(Me);
+            meBD.actualizar(Me);
             return true;
 
           
@@ -127,13 +127,16 @@ public class GestorFarmacia {
 
 
     public LoteMedicamento consultarLoteMedicamento (String CodBarras, Medicamento me){
-        LoteMedicamento Lo=null;
+        LoteMedicamento Lo=new LoteMedicamento();
         Medicamento Me=me;
 
         Set<LoteMedicamento> lotes;
 
-        LoteMedicamento Aux=null;
+        LoteMedicamento Aux=new LoteMedicamento();
         lotes = Me.getLotesMedicamento();
+
+        if( lotes != null)
+            System.out.println("mal");
 
         for( Iterator it = lotes.iterator(); it.hasNext();) {
 	    Aux = (LoteMedicamento)it.next();

@@ -46,9 +46,15 @@ public class LoteMedicamento implements Serializable{
         return FechaCaducidad;
     }
 
+
     public Medicamento getMedicamento (){
         return Medicamento;
     }
+
+    public String getNOMBRE_MEDICAMENTO (){
+        return Medicamento.getNombre();
+    }
+
 
     public void setCodBarras (String CodBarras){
         this.CodBarras=CodBarras;
@@ -64,5 +70,8 @@ public class LoteMedicamento implements Serializable{
 
     public void setMedicamento (Medicamento Medicamento){
         this.Medicamento=Medicamento;
+    }
+    public void setNOMBRE_MEDICAMENTO (String Nombre){
+        this.Medicamento.setNombre(Nombre);
     }
 }
