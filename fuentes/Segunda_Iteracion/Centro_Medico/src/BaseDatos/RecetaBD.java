@@ -47,6 +47,7 @@ public class RecetaBD {
         session.getTransaction().commit();
     }
 
+
     public Set<Receta> obtenerRecetasPaciente (String dni){
         //ESTA FUNCIÓN HAY QUE IMPLEMENTARLA. OBTIENE UN SET CON TODAS LAS RECETAS DE ESE PACIENTE.
 

@@ -29,7 +29,7 @@ public class PruebaOrina extends PruebaAnalisis{
         this.ResultadosOrina=ResultadosOrina;
     }
 
-    void añadirResultadoOrina (ResultadoOrina Res){
+    public void añadirResultadoOrina (ResultadoOrina Res){
         ResultadosOrina.add(Res);
     }
 }

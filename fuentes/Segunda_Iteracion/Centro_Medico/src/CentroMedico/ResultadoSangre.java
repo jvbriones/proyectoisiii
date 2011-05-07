@@ -19,6 +19,11 @@ public class ResultadoSangre implements Serializable{
     public ResultadoSangre() {
     }
 
+    public ResultadoSangre(AtributoSangre atS, String res){
+        this.Atr = atS;
+        this.Resultado = res;
+    }
+
 
     public int getId(){
         return Id;

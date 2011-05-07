@@ -19,6 +19,11 @@ public class ResultadoOrina implements Serializable{
     public ResultadoOrina() {
     }
 
+    public ResultadoOrina(AtributoOrina aO, String res){
+        this.Atr = aO;
+        this.Resultado = res;
+    }
+
     public int getId(){
         return Id;
     }

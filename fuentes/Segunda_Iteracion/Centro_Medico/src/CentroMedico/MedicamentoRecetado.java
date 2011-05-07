@@ -24,6 +24,14 @@ public class MedicamentoRecetado implements Serializable{
     public MedicamentoRecetado() {
     }
 
+    public MedicamentoRecetado(Medicamento medica, String pos, int duracion, Date fechaFin, boolean disp){
+        this.Med = medica;
+        this.Posologia = pos;
+        this.Duracion = duracion;
+        this.FechaFin = fechaFin;
+        this.Dispensado = disp;
+    }
+
     public int getId (){
         return Id;
     };

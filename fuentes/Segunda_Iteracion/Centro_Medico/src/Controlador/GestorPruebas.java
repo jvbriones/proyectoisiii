@@ -16,6 +16,7 @@ import CentroMedico.PruebaOrina;
 import CentroMedico.PruebaSangre;
 import CentroMedico.Radiografia;
 import CentroMedico.Resonancia;
+import CentroMedico.ResultadoOrina;
 import CentroMedico.ResultadoSangre;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -99,11 +100,11 @@ public class GestorPruebas {
         return exito;
     }
 
-    public boolean almacenarResultadosAnalisis(String Dni, String Comentario, String TipoAnalisis) throws SQLException{
+    public boolean almacenarResultadosAnalisis(String Dni, String DatosAnalisis, String Comentario, String TipoAnalisis) throws SQLException{
 
         Paciente paciente = null;
         PacBD pBD = new PacBD();
-        AtributoSangre atributo = null;
+        AtributoSangre atributoS = null;
         AtributoOrina atributoO = null;
         AtributoOrinaBD atribOBD = new AtributoOrinaBD();
         AtributoSangreBD atribSBD = new AtributoSangreBD();
@@ -114,14 +115,14 @@ public class GestorPruebas {
             PruebaSangre pruebaS = new PruebaSangre(Comentario);
 
             //¿Como voy a hacer un bucle si solo devuelve un objeto?
-            atributo = atribSBD.obtener(Dni);
-            ResultadoSangre res = new ResultadoSangre(atributo, Resultado);
+            atributoS = atribSBD.obtener(Dni);
+            ResultadoSangre res = new ResultadoSangre(atributoS, Resultado);//¿De donde sale resultado?
             pruebaS.añadirResultadoSangre(res);
             //fin bucle teorico
 
-            paciente.almacenarPruebaSangre(pruebaS);
+            paciente.almacenarPruebaSangre(pruebaS);//Este metodo no existe en la clase Paciente
 
-            //como actualizo el paciente
+            //En pacienteBD no hay ningún metodo que sea actualizarPaciente
         }
 
         if(TipoAnalisis == "orina"){
@@ -129,13 +130,15 @@ public class GestorPruebas {
 
             //¿Como voy a hacer un bucle si solo devuelve un objeto?
             atributoO = atribOBD.obtener(Dni);
-            ResultadoOrina res = new ResultadoOrina(atributo, Resultado);
+            ResultadoOrina res = new ResultadoOrina(atributoO, Resultado);//¿De donde sale resultado?
             pruebaO.añadirResultadoOrina(res);
             //fin bucle teórico
 
-            paciente.añadirAnalisisOrina(prueba);
+            paciente.añadirAnalisisOrina(prueba);//Este metodo no existe en la clase Paciente
 
-            //como actualizo el paciente
+           //En pacienteBD no hay ningún metodo que sea actualizarPaciente
+
+            // ¿RETURN?
 
         }
     }
