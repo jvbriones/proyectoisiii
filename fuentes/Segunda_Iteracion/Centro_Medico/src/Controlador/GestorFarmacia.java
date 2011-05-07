@@ -48,7 +48,7 @@ public class GestorFarmacia {
     public Medicamento consultarMedicamento( String Nombre){
 
         Medicamento Me;
-        MedicamentoBD meBD = null; 
+        MedicamentoBD meBD = new MedicamentoBD();
 
         Me = meBD.obtener(Nombre);
 

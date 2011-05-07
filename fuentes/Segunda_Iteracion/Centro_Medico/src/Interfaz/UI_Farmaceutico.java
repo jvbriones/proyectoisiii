@@ -34,7 +34,7 @@ import java.text.ParseException;
  */
 public class UI_Farmaceutico extends javax.swing.JFrame {
 
-    Medicamento Me = null;
+    Medicamento Me = new Medicamento ();
 
     /** Creates new form Principal_Administrador */
     public UI_Farmaceutico() {
@@ -460,7 +460,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                     .add(jPanelPrincipalLayout.createSequentialGroup()
                         .add(126, 126, 126)
                         .add(jLabelConsultarTurno)))
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
         jPanelPrincipalLayout.setVerticalGroup(
             jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1326,7 +1326,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                     .add(jLabel7))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(scrollPaneMedicamentosBajoStock, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 202, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(143, Short.MAX_VALUE))
+                .addContainerGap(144, Short.MAX_VALUE))
         );
 
         jPanelComprobarStockMedicamentos.setBounds(0, 0, -1, -1);
@@ -1560,7 +1560,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                 .add(scrollPaneMedicamentosReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 168, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(18, 18, 18)
                 .add(jButtonDispensarFinal)
-                .addContainerGap(297, Short.MAX_VALUE))
+                .addContainerGap(298, Short.MAX_VALUE))
         );
 
         jPanelDispensarFinal.setBounds(0, 0, -1, -1);
@@ -1779,7 +1779,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                         .add(jTextFieldExistenc, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                 .add(44, 44, 44)
                 .add(jButtonAnadirMedicamento)
-                .addContainerGap(97, Short.MAX_VALUE))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
 
         jPanelAnadirLote.setBounds(0, 0, -1, -1);
@@ -1970,7 +1970,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                         .add(18, 18, 18)
                         .add(jButtonEliminarMedicamento))
                     .add(jPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
 
         jPanelConsultarMedicamento.setBounds(0, 0, -1, -1);
@@ -2623,9 +2623,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonConsultarLoteActionPerformed
 
     private void jButtonConsultarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarMouseClicked
-        // TODO add your handling code here:
-
-
+        // TODO add your handling code her
 
         mostrarPanel("ConsultarMedicamento");
 
@@ -2710,7 +2708,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
     private void jButtonConsultarMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarMouseReleased
         // TODO add your handling code here:
 
-
+       
         GestorFarmacia gesFar= new GestorFarmacia();
         String Nombre = jTextFieldNombreMedicamento.getText();
         Me=gesFar.consultarMedicamento(Nombre); // tomar nombre del jtextfieldddd
@@ -3373,6 +3371,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
             jLabelIconoInicio.setVisible(true);
 
             /**Hacemos visible el panel seleccionado*/
+           
             jPanelPrincipal.setVisible(false);
             jPanelConsultarDatosPersonales.setVisible(false);
             jPanelConsultarTurno.setVisible(false);
