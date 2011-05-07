@@ -30,6 +30,13 @@ public class Receta {
         this.Instrucciones = Instrucciones;
     }
 
+    public Receta(String Ins, String JD, Date F){
+        
+        this.JuicioDiagnostico = JD;
+        this.Instrucciones = Ins;
+        this.Fecha = F;
+    }
+
 
     public Date getFecha() {
         return Fecha;

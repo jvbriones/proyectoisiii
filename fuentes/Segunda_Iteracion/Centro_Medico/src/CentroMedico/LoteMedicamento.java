@@ -20,6 +20,9 @@ public class LoteMedicamento {
     public LoteMedicamento() {
     }
 
+    public void decrementarExistencias(int Num){
+        this.Existencias = this.Existencias - Num;
+    }
 
     public LoteMedicamento( String CodBarras, int Existencias, Date FechaCaducidad){
 

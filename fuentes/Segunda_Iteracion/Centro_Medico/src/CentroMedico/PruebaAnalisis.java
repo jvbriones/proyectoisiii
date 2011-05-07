@@ -17,6 +17,9 @@ public class PruebaAnalisis {
 
     public PruebaAnalisis() {
     }
+    public PruebaAnalisis(String com){
+        this.Comentario=com;
+    }
 
     public int getId (){
         return Id;

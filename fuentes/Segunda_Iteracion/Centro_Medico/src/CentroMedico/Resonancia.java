@@ -17,6 +17,10 @@ public class Resonancia extends PruebaRadiologia{
     public Resonancia() {
     }
 
+    public Resonancia(String Comentario) {
+        super(Comentario);
+    }
+
     public Set<Imagen> getResonancias(){
         return Resonancias;
     }

@@ -18,6 +18,7 @@ public class ResultadoSangre {
     public ResultadoSangre() {
     }
 
+
     public int getId(){
         return Id;
     }

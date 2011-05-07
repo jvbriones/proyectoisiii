@@ -17,6 +17,10 @@ public class PruebaSangre extends PruebaAnalisis{
     public PruebaSangre() {
     }
 
+    public PruebaSangre(String Comentario){
+        super(Comentario);
+    }
+
     public Set<ResultadoSangre> getResultadosSangre(){
         return ResultadosSangre;
     }
@@ -25,7 +29,7 @@ public class PruebaSangre extends PruebaAnalisis{
         this.ResultadosSangre=ResultadosSangre;
     }
 
-    void añadirResultadoSangre (ResultadoSangre Res){
+    public void añadirResultadoSangre (ResultadoSangre Res){
         ResultadosSangre.add(Res);
     }
 }

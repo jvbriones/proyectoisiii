@@ -17,6 +17,10 @@ public class PruebaOrina extends PruebaAnalisis{
     public PruebaOrina() {
     }
 
+    public PruebaOrina(String Comentario) {
+        super(Comentario);
+    }
+
     public Set<ResultadoOrina> getResultadosOrina(){
         return ResultadosOrina;
     }

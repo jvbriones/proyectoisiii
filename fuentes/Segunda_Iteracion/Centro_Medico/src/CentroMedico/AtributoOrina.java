@@ -15,6 +15,10 @@ public class AtributoOrina {
     public AtributoOrina() {
     }
 
+    public AtributoOrina(String Nom){
+        this.Nombre=Nom;
+    }
+
 
     public String getNombre(){
         return Nombre;

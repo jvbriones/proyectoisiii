@@ -15,6 +15,10 @@ public class AtributoSangre {
     public AtributoSangre() {
     }
 
+    public AtributoSangre(String Nom){
+        this.Nombre = Nom;
+    }
+
 
     public String getNombre(){
         return Nombre;

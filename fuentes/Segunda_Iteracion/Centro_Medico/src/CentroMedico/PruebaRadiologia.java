@@ -19,6 +19,10 @@ public class PruebaRadiologia {
     public PruebaRadiologia() {
     }
 
+    public PruebaRadiologia(String com){
+        this.Comentario=com;
+    }
+
 
     public int getId(){
         return Id;

@@ -15,6 +15,10 @@ public class Imagen {
     public Imagen() {
     }
 
+    public Imagen(Imagen aux) {
+        this.Ruta = aux.Ruta;
+    }
+
     public String getRuta(){
         return Ruta;
     }
