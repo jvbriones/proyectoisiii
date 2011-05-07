@@ -2800,7 +2800,7 @@ public class UI_Medico extends javax.swing.JFrame {
             jPanelRealizarReceta1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
             jPanelSolicitarPrueba.setBorder(null);
             jPanelAtenderPacienteIntermedio.setBorder(null);
-            jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+            
         }
 
         if(panel.equals("SolicitarPrueba")){
