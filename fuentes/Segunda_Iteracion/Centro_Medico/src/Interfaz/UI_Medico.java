@@ -2207,15 +2207,15 @@ public class UI_Medico extends javax.swing.JFrame {
     private void jButtonAceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAceptarMouseClicked
         // TODO add your handling code here:
 
-   // exito debe devolver si encuentra o no el paciente para mostrar el mensaje de error --> ADRI
-   //     boolean exito;
-
+    //ADRI
    //     GestorMedico gestMed = new GestorMedico();
 
-   //     exito = gestMed.atenderPaciente(jTextFieldDNIAtenderPaciente.getText());
+   //     Paciente pac = gestMed.atenderPaciente(jTextFieldDNIAtenderPaciente.getText());
       
-   //     if(exito == true)
-                mostrarPanel("AtenderPaciente");
+   //     if(pac != null){
+                 mostrarPanel("AtenderPaciente");
+    //            jTextFieldAtenderPaciente.setText(pac.super.obtenerNombre());
+    //        }
    //     else
    //             jLabelErrorDniPaciente.setVisible(true);
     }//GEN-LAST:event_jButtonAceptarMouseClicked
