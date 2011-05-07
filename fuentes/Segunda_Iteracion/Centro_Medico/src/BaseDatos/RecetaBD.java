@@ -6,6 +6,7 @@
 package BaseDatos;
 
 import CentroMedico.*;
+import java.util.Set;
 import org.hibernate.Session;
 
 
@@ -47,7 +48,6 @@ public class RecetaBD {
 
 
     }
-
 }
 
 
