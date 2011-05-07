@@ -8,12 +8,13 @@ package BaseDatos;
 import CentroMedico.*;
 import org.hibernate.Session;
 import java.util.Set;
+import java.io.Serializable;
 
 /**
  *
  * @author pope
  */
-public class MedicamentoBD {
+public class MedicamentoBD  implements Serializable{
 
 
     public void almacenar(Medicamento Med){
