@@ -30,7 +30,7 @@ import java.text.ParseException;
 /**
  *
  * @author Adrian
- *
+ * @author Nicolaś
  */
 public class UI_Farmaceutico extends javax.swing.JFrame {
 
