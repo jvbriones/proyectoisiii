@@ -13,7 +13,7 @@ import org.hibernate.Session;
  * @author pope
  */
 public class AtributoSangreBD {
-    void almacenar(AtributoSangre Atr){
+    public void almacenar(AtributoSangre Atr){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
@@ -21,21 +21,21 @@ public class AtributoSangreBD {
     }
 
 
-    void actualizar (AtributoSangre Atr){
+    public void actualizar (AtributoSangre Atr){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
         session.update( Atr );
     }
 
-    void eliminar (AtributoSangre Atr){
+    public void eliminar (AtributoSangre Atr){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
         session.delete( Atr );
     }
 
-    AtributoSangre obtener (String Nombre){
+    public AtributoSangre obtener (String Nombre){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();

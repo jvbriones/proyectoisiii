@@ -14,36 +14,38 @@ import org.hibernate.Session;
  * @author Juan Carlos
  */
 public class RecetaBD {
-    void almacenar(Receta Rec){
+    public void almacenar(Receta Rec){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
         session.save (Rec);
     }
     
-    Receta obtener (int Id){
+    public Receta obtener (int Id){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
         Receta Rec = (Receta) session.get(Receta.class, Id);
       return Rec;
     }
-    void actualizar (Receta Rec){
+    public void actualizar (Receta Rec){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
         session.update (Rec);
 
     }
-    void eliminar (Receta Rec){
+    public void eliminar (Receta Rec){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
         session.delete (Rec);
     }
 
-    Set<Receta> obtenerRecetasPaciente (String dni){
+    public Set<Receta> obtenerRecetasPaciente (String dni){
         //ESTA FUNCIÓN HAY QUE IMPLEMENTARLA. OBTIENE UN SET CON TODAS LAS RECETAS DE ESE PACIENTE.
+
+
     }
 
 }
