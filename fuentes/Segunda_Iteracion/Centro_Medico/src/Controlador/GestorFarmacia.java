@@ -93,7 +93,7 @@ public class GestorFarmacia {
 
     public boolean anadirLoteMedicamento (String CodBarras,int Existencias, Date FechaCaducidad){
 
-        LoteMedicamento Lo=null;
+        LoteMedicamento Lo=new LoteMedicamento();
         LoteMedicamentoBD loBD = new LoteMedicamentoBD();
         MedicamentoBD meBD = new MedicamentoBD();
         Lo=loBD.obtener(CodBarras);
@@ -104,7 +104,10 @@ public class GestorFarmacia {
         else{
             LoteMedicamento lote = new LoteMedicamento(CodBarras,Existencias,FechaCaducidad);
             Medicamento Me = lote.getMedicamento();
-            // LLAMAR A JAVI, FALTA AÑADIR
+
+            if(Me==null){
+                System.out.println("Hola");
+            }
             loBD.almacenar(lote);
             Me.anadirAlArray(lote);
             Me.actualizaStock(Existencias);
