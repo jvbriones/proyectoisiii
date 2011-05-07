@@ -326,10 +326,15 @@ public class UI_Analista extends javax.swing.JFrame {
         jPanelAgregarAtributo.setLayout(jPanelAgregarAtributoLayout);
         jPanelAgregarAtributoLayout.setHorizontalGroup(
             jPanelAgregarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelAgregarAtributoLayout.createSequentialGroup()
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelAgregarAtributoLayout.createSequentialGroup()
+                .addContainerGap(122, Short.MAX_VALUE)
                 .add(jPanelAgregarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelAgregarAtributoLayout.createSequentialGroup()
-                        .add(197, 197, 197)
+                        .add(21, 21, 21)
+                        .add(jLabelGestionarPaciente8))
+                    .add(jLabel11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 591, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jPanelAgregarAtributoLayout.createSequentialGroup()
+                        .add(10, 10, 10)
                         .add(jPanelAgregarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(jPanelAgregarAtributoLayout.createSequentialGroup()
                                 .add(jLabelNombreAtributo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 242, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
@@ -339,24 +344,17 @@ public class UI_Analista extends javax.swing.JFrame {
                             .add(jPanelAgregarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                                 .add(jRadioButtonOrina1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
                                 .add(jRadioButtonSangre1)
-                                .add(jButtonGuardarAtributo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 115, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
-                    .add(jPanelAgregarAtributoLayout.createSequentialGroup()
-                        .add(90, 90, 90)
-                        .add(jPanelAgregarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jPanelAgregarAtributoLayout.createSequentialGroup()
-                                .add(21, 21, 21)
-                                .add(jLabelGestionarPaciente8))
-                            .add(jLabel11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 591, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(119, Short.MAX_VALUE))
+                                .add(jButtonGuardarAtributo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 115, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))
+                .add(25, 25, 25))
         );
         jPanelAgregarAtributoLayout.setVerticalGroup(
             jPanelAgregarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanelAgregarAtributoLayout.createSequentialGroup()
-                .add(30, 30, 30)
+                .add(28, 28, 28)
                 .add(jLabelGestionarPaciente8)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jLabel11)
-                .add(40, 40, 40)
+                .add(38, 38, 38)
                 .add(jPanelAgregarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelNombreAtributo)
                     .add(jTextFieldNombreAtributo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
@@ -366,12 +364,12 @@ public class UI_Analista extends javax.swing.JFrame {
                 .add(jRadioButtonSangre1)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jRadioButtonOrina1)
-                .add(30, 30, 30)
+                .add(33, 33, 33)
                 .add(jButtonGuardarAtributo)
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
-        jPanelAgregarAtributo.setBounds(0, 0, 800, 470);
+        jPanelAgregarAtributo.setBounds(0, 0, 738, 470);
         ZonaTrabajo.add(jPanelAgregarAtributo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelPrincipal.setPreferredSize(new java.awt.Dimension(901, 531));

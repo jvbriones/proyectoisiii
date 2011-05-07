@@ -1460,30 +1460,27 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelDispensarConsultarLayout.createSequentialGroup()
                 .add(146, 146, 146)
                 .add(jPanelDispensarConsultarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanelDispensarConsultarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                        .add(jLabel18)
-                        .add(jLabelGestionarPaciente10, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 531, Short.MAX_VALUE))
+                    .add(jLabel18)
+                    .add(jLabelGestionarPaciente10, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 552, Short.MAX_VALUE)
                     .add(jPanelDispensarConsultarLayout.createSequentialGroup()
                         .add(74, 74, 74)
                         .add(jScrollPane7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 370, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 87, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                     .add(jPanelDispensarConsultarLayout.createSequentialGroup()
                         .add(134, 134, 134)
                         .add(jLabel17)
                         .add(126, 126, 126)
                         .add(jLabel19)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 178, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(199, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                     .add(jPanelDispensarConsultarLayout.createSequentialGroup()
                         .add(100, 100, 100)
                         .add(jPanelDispensarConsultarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jButtonConsultarReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 91, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(scrollPaneRecetas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 323, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .add(74, 74, 74))
+                            .add(jButtonConsultarReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 127, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(scrollPaneRecetas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 323, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))
         );
         jPanelDispensarConsultarLayout.setVerticalGroup(
             jPanelDispensarConsultarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelDispensarConsultarLayout.createSequentialGroup()
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelDispensarConsultarLayout.createSequentialGroup()
                 .addContainerGap()
                 .add(jLabelGestionarPaciente10)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
@@ -1495,13 +1492,13 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                     .add(jLabel17)
                     .add(jLabel19))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(scrollPaneRecetas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 168, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(scrollPaneRecetas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 204, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(24, 24, 24)
                 .add(jButtonConsultarReceta)
-                .add(101, 101, 101))
+                .add(87, 87, 87))
         );
 
-        jPanelDispensarConsultar.setBounds(0, 0, 751, 510);
+        jPanelDispensarConsultar.setBounds(0, 0, 698, 510);
         ZonaTrabajo.add(jPanelDispensarConsultar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jTextAreaInfo4.setBackground(new java.awt.Color(255, 204, 102));
@@ -1685,10 +1682,10 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                         .add(jButtonELiminarLote)
                         .add(18, 18, 18)
                         .add(jButtonModificarLote)))
-                .addContainerGap(114, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
-        jPanelModificarLote.setBounds(0, 0, 808, 477);
+        jPanelModificarLote.setBounds(0, 0, 808, 404);
         ZonaTrabajo.add(jPanelModificarLote, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente14.setFont(new java.awt.Font("Lucida Grande", 1, 36));
@@ -1787,10 +1784,10 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                         .add(jTextFieldExistenc, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                 .add(44, 44, 44)
                 .add(jButtonAnadirMedicamento)
-                .addContainerGap(399, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
-        jPanelAnadirLote.setBounds(0, 0, 760, 731);
+        jPanelAnadirLote.setBounds(0, 0, 760, 387);
         ZonaTrabajo.add(jPanelAnadirLote, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel27.setText("___________________________________________________________________________________________");
