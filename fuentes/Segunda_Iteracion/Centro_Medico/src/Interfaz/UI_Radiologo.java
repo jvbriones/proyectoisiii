@@ -47,7 +47,6 @@ public class UI_Radiologo extends javax.swing.JFrame {
 
         /**Mostramos el panel Principal*/
         mostrarPanel("Principal");
-        identificarPersonal(nombreUsuario);
     
 
         /**Cargamos la foto de login*/
@@ -295,7 +294,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
             }
         });
 
-        jButtonAlmacenarResultado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/almacenarResultados.png"))); // NOI18N
+        jButtonAlmacenarResultado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/AlmacenarResultados.png"))); // NOI18N
         jButtonAlmacenarResultado.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonAlmacenarResultadoMouseClicked(evt);
@@ -319,8 +318,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
                                 .add(47, 47, 47)
                                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                                     .add(jButtonAlmacenarResultado, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 193, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .add(jButtonConsultarDatosPersonales, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                .add(7, 7, 7)))
+                                    .add(jButtonConsultarDatosPersonales, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
                         .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(jPanelPrincipalLayout.createSequentialGroup()
                                 .add(121, 121, 121)
