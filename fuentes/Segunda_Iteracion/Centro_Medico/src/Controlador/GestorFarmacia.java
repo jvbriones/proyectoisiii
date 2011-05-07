@@ -203,6 +203,44 @@ public class GestorFarmacia {
 
     }
 
+    public ArrayList comprobarStockMedicamentos(){
+
+        Date fechaActual=new Date();
+        MedicamentoBD meBD = new MedicamentoBD();
+        Medicamento medica= new Medicamento(); 
+        LoteMedicamentoBD loteBD = new LoteMedicamentoBD();
+        LoteMedicamento lote = new LoteMedicamento();
+        Set<Medicamento> me;
+        ArrayList<LoteMedicamento> lotesMedica=new ArrayList();
+
+        ArrayList<ArrayList < String > > li = new ArrayList();
+        ArrayList< String> Atributos = new ArrayList();
+        me= meBD.obtenerTodosMedicamentos();
+
+        for( Iterator it = me.iterator(); it.hasNext();) {
+	   medica = (Medicamento)it.next();
+	   String nombre =medica.getNombre();
+           int StockMinimoPermitido = medica.getExistenciasMinimas();
+           medica.setExistenciasMinimas(0);
+           lote = loteBD.obtener(nombre);// como obtener de aquí un array cuando en el diseñoo aparece un array?
+           lotesMedica.add(lote);
+           Date fechaCad = lote.getFechaCaducidad();
+           if( fechaActual.before(fechaCad)){
+               Atributos.add(nombre);
+               Atributos.add(String.valueOf(StockMinimoPermitido));
+               Atributos.add(String.valueOf(medica.getExistenciasMinimas()));
+               li.add(Atributos);
+            }
+
+               lote.getExistencias();
+                      
+         }
+
+
+
+
+
+    }
 
 
 }
