@@ -12,7 +12,7 @@
 package Controlador;
 
 import CentroMedico.Usuario;
-import BaseDatos.usuarioBD;
+import BaseDatos.UsuarioBD;
 import java.sql.SQLException;
 import java.util.*;
 import BaseDatos.UsuarioBD;
@@ -65,7 +65,7 @@ public class GestorUsuarios {
    public String modificarDatosPersonalesAdmin(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
             String Contrasena, String Telefono, Date FecNac, String LugarNac, String Fotografia) throws SQLException{
 
-       usuarioBD usuario_bd = new usuarioBD();
+       UsuarioBD usuario_bd = new UsuarioBD();
        Usuario userAux =usuario_bd.obtenerUsuario(Dni);
 
        userAux.setDNI(Dni);
@@ -87,7 +87,7 @@ public class GestorUsuarios {
       public String modificarDatosPersonales(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
             String Contrasena, String Telefono, Date FecNac, String LugarNac, String Fotografia) throws SQLException{
 
-       usuarioBD usuario_bd = new usuarioBD();
+       UsuarioBD usuario_bd = new UsuarioBD();
        String dni=user.getDNI();
 
        if(dni.equalsIgnoreCase(Dni)){
@@ -112,7 +112,7 @@ public class GestorUsuarios {
 
     public String consultarDatosPersonalesAdmin(String DNI) throws SQLException{
 
-        usuarioBD usuario_bd = new usuarioBD();
+        UsuarioBD usuario_bd = new UsuarioBD();
         boolean Existe=usuario_bd.existeUsuario(DNI);
 
         if(Existe){

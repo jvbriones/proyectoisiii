@@ -26,7 +26,7 @@ public class GestorFarmacia {
    public boolean anadirMedicamento( String Nombre,String Descripcion, int ExistenciasMinimas, int StockActual){
 
         boolean exito;
-        MedicamentoBD meBD= null;
+        MedicamentoBD meBD= new MedicamentoBD();
         Medicamento me;
         me= meBD.obtener(Nombre);
 
