@@ -28,6 +28,8 @@ public class GestorUsuarios {
 
     private Usuario user = null;
 
+    public GestorUsuarios(){}
+
     public Usuario obtenerUsuario(String dni){
         UsuarioBD usuBD=new UsuarioBD();
         Usuario usu=null;
