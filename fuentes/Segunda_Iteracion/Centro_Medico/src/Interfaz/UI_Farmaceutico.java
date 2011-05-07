@@ -15,13 +15,9 @@ import java.awt.Image;
 import CentroMedico.*;
 import BaseDatos.*;
 import Controlador.*;
-import java.util.Calendar.*;
-import java.util.Calendar;
+import java.util.*;
 
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.Date;
 import java.text.SimpleDateFormat;
 
 import javax.swing.ImageIcon;
@@ -2566,6 +2562,12 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
     private void jButtonComprobarStockMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonComprobarStockMouseClicked
         // TODO add your handling code here:
         mostrarPanel("ComprobarStock");
+         ArrayList<ArrayList < String > > li = new ArrayList();
+        GestorFarmacia gesFar = new GestorFarmacia();
+        li=gesFar.comprobarStockMedicamentos();
+
+
+
     }//GEN-LAST:event_jButtonComprobarStockMouseClicked
 
     private void jButtonGestionarMedicamentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGestionarMedicamentoMouseClicked
