@@ -80,7 +80,7 @@ public class GestorFarmacia {
 
     public boolean eliminarMedicamento( String Nombre){
        Medicamento Me;
-       MedicamentoBD meBD=null;
+       MedicamentoBD meBD=new MedicamentoBD();
        Me= meBD.obtener(Nombre);
        if( Me != null){
         meBD.eliminar(Me);
@@ -93,9 +93,9 @@ public class GestorFarmacia {
 
     public boolean anadirLoteMedicamento (String CodBarras,int Existencias, Date FechaCaducidad){
 
-        LoteMedicamento Lo= null;
-        LoteMedicamentoBD loBD = null;
-        MedicamentoBD meBD = null;
+        LoteMedicamento Lo=null;
+        LoteMedicamentoBD loBD = new LoteMedicamentoBD();
+        MedicamentoBD meBD = new MedicamentoBD();
         Lo=loBD.obtener(CodBarras);
 
         if( Lo!=null)
