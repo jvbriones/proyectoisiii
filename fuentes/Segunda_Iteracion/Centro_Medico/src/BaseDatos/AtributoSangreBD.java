@@ -18,6 +18,7 @@ public class AtributoSangreBD {
 
         session.beginTransaction ();
         session.save ( Atr );
+        session.getTransaction().commit();
     }
 
 
@@ -26,6 +27,7 @@ public class AtributoSangreBD {
 
         session.beginTransaction ();
         session.update( Atr );
+        session.getTransaction().commit();
     }
 
     public void eliminar (AtributoSangre Atr){
@@ -33,6 +35,7 @@ public class AtributoSangreBD {
 
         session.beginTransaction ();
         session.delete( Atr );
+        session.getTransaction().commit();
     }
 
     public AtributoSangre obtener (String Nombre){
@@ -41,6 +44,7 @@ public class AtributoSangreBD {
         session.beginTransaction ();
 
         AtributoSangre atr = (AtributoSangre) session.get(AtributoSangre.class, Nombre);
+        session.getTransaction().commit();
 
         return atr;
     }

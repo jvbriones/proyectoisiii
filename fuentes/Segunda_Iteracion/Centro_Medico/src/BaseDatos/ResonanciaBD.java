@@ -17,6 +17,7 @@ public class ResonanciaBD {
 
         session.beginTransaction ();
         session.save ( Res );
+        session.getTransaction().commit();
 
     }
 
@@ -26,6 +27,7 @@ public class ResonanciaBD {
         session.beginTransaction ();
 
         Resonancia Res= (Resonancia) session.get(Resonancia.class, Id);
+        session.getTransaction().commit();
 
         return Res;
     }
@@ -35,6 +37,7 @@ public class ResonanciaBD {
 
         session.beginTransaction ();
         session.update ( Res );
+        session.getTransaction().commit();
     }
 
     public void eliminar (Resonancia Res){
@@ -42,5 +45,6 @@ public class ResonanciaBD {
 
         session.beginTransaction ();
         session.delete ( Res );
+        session.getTransaction().commit();
     }
 }

@@ -21,6 +21,7 @@ public class MedicamentoBD {
 
         session.beginTransaction ();
         session.save(Med);
+        session.getTransaction().commit();
     }
 
     public Medicamento obtener (String Nombre){
@@ -28,6 +29,7 @@ public class MedicamentoBD {
 
         session.beginTransaction ();
         Medicamento Med = (Medicamento) session.get(Medicamento.class, Nombre);
+        session.getTransaction().commit();
         return Med;
     }
 
@@ -36,6 +38,7 @@ public class MedicamentoBD {
 
         session.beginTransaction ();
         session.update(Med);
+        session.getTransaction().commit();
     }
     
     public void eliminar (Medicamento Med){
@@ -43,6 +46,7 @@ public class MedicamentoBD {
 
         session.beginTransaction ();
         session.delete(Med);
+        session.getTransaction().commit();
     }
     
     public Set<Medicamento> obtenerTodosMedicamentos (){

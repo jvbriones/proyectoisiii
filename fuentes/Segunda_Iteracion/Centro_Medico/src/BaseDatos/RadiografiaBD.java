@@ -17,6 +17,7 @@ public class RadiografiaBD {
 
         session.beginTransaction ();
         session.save ( Rad );
+        session.getTransaction().commit();
 
     }
 
@@ -26,6 +27,7 @@ public class RadiografiaBD {
         session.beginTransaction ();
 
         Radiografia Rad = (Radiografia) session.get(Radiografia.class, Id);
+        session.getTransaction().commit();
 
         return Rad;
     }
@@ -35,6 +37,7 @@ public class RadiografiaBD {
 
         session.beginTransaction ();
         session.update ( Rad );    
+        session.getTransaction().commit();
     }
 
     public void eliminar (Radiografia Rad){
@@ -42,5 +45,6 @@ public class RadiografiaBD {
 
         session.beginTransaction ();
         session.delete ( Rad );
+        session.getTransaction().commit();
     }
 }

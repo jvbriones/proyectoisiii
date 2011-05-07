@@ -18,6 +18,7 @@ public class LoteMedicamentoBD {
 
         session.beginTransaction ();
         session.save(Lote);
+        session.getTransaction().commit();
     }
 
     public LoteMedicamento obtener (String CodBarras){
@@ -25,6 +26,7 @@ public class LoteMedicamentoBD {
 
         session.beginTransaction ();
         LoteMedicamento Lote = (LoteMedicamento) session.get(LoteMedicamento.class, CodBarras);
+        session.getTransaction().commit();
         return Lote;
     }
 
@@ -50,5 +52,6 @@ public class LoteMedicamentoBD {
 
         session.beginTransaction ();
         session.delete(Lote);
+        session.getTransaction().commit();
     }
 }

@@ -163,6 +163,7 @@ public class turnoBD {
 
         session.beginTransaction ();
         session.save ( turno );
+        session.getTransaction().commit();
 
     }
 
@@ -172,6 +173,7 @@ public class turnoBD {
         session.beginTransaction ();
 
         Turno turno= (Turno) session.get(Turno.class, Id);
+        session.getTransaction().commit();
 
         return turno;
     }
@@ -183,6 +185,7 @@ public class turnoBD {
 
         session.beginTransaction ();
         session.update ( turno );
+        session.getTransaction().commit();
     }
 
     public void eliminar (Turno turno){
@@ -190,6 +193,7 @@ public class turnoBD {
 
         session.beginTransaction ();
         session.delete ( turno );
+        session.getTransaction().commit();
     }
 
 }

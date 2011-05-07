@@ -107,12 +107,12 @@ public class citasBD {
         }
         return datosAdmin;
     }
-    public void Cita(Cita cita){
+    public void almacenar(Cita cita){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
         session.save ( cita );
-
+        session.getTransaction().commit();
     }
 
     //La clase cita no tiene este método todavía ya que no se va a utilizar, y no se implementa directamente porque tiene una clave compuesta.
@@ -131,6 +131,7 @@ public class citasBD {
 
         session.beginTransaction ();
         session.update ( cita );
+        session.getTransaction().commit();
     }
 
     public void eliminar (Cita cita){
@@ -138,5 +139,6 @@ public class citasBD {
 
         session.beginTransaction ();
         session.delete ( cita );
+        session.getTransaction().commit();
     }
 }

@@ -20,6 +20,7 @@ public class RecetaBD {
 
         session.beginTransaction ();
         session.save (Rec);
+        session.getTransaction().commit();
     }
     
     public Receta obtener (int Id){
@@ -27,6 +28,7 @@ public class RecetaBD {
 
         session.beginTransaction ();
         Receta Rec = (Receta) session.get(Receta.class, Id);
+        session.getTransaction().commit();
       return Rec;
     }
     public void actualizar (Receta Rec){
@@ -34,6 +36,7 @@ public class RecetaBD {
 
         session.beginTransaction ();
         session.update (Rec);
+        session.getTransaction().commit();
 
     }
     public void eliminar (Receta Rec){
@@ -41,6 +44,7 @@ public class RecetaBD {
 
         session.beginTransaction ();
         session.delete (Rec);
+        session.getTransaction().commit();
     }
 
     public Set<Receta> obtenerRecetasPaciente (String dni){

@@ -179,6 +179,7 @@ public class UsuarioBD {
 
         session.beginTransaction ();
         session.save (User);
+        session.getTransaction().commit();
     }
 
     public void actualizar (Usuario User){
@@ -186,6 +187,7 @@ public class UsuarioBD {
 
         session.beginTransaction ();
         session.update (User);
+        session.getTransaction().commit();
     }
 
     public void eliminar(Usuario User){
@@ -193,6 +195,7 @@ public class UsuarioBD {
 
         session.beginTransaction ();
         session.delete (User);
+        session.getTransaction().commit();
 
     }
 }

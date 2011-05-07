@@ -18,6 +18,7 @@ public class AtributoOrinaBD {
 
         session.beginTransaction ();
         session.save ( Atr );
+        session.getTransaction().commit();
     }
 
 
@@ -33,6 +34,7 @@ public class AtributoOrinaBD {
 
         session.beginTransaction ();
         session.delete( Atr );
+        session.getTransaction().commit();
     }
 
     public AtributoOrina obtener (String Nombre){
@@ -41,6 +43,7 @@ public class AtributoOrinaBD {
         session.beginTransaction ();
 
         AtributoOrina atr = (AtributoOrina) session.get(AtributoOrina.class, Nombre);
+        session.getTransaction().commit();
 
         return atr;
     }
