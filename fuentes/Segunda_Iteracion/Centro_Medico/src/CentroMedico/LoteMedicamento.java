@@ -5,12 +5,13 @@
 
 package CentroMedico;
 import java.util.Date;
+import java.io.Serializable;
 
 /**
  *
  * @author pope
  */
-public class LoteMedicamento {
+public class LoteMedicamento implements Serializable{
     private String CodBarras;
     private int Existencias;
     private Date FechaCaducidad;

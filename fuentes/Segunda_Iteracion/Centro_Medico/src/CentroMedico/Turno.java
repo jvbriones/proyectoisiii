@@ -12,6 +12,7 @@
 package CentroMedico;
 
 import java.util.*;
+import java.io.Serializable;
 
 
 /**
@@ -19,7 +20,7 @@ import java.util.*;
  * @author      Sub_Equipo2
  * modificado por Juan Carlos
  */
-public class Turno {
+public class Turno implements Serializable{
 
     private int Id;
     private Date HoraInicio;

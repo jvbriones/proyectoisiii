@@ -4,12 +4,13 @@
  */
 
 package CentroMedico;
+import java.io.Serializable;
 
 /**
  *
  * @author Juan Carlos
  */
-public class Imagen {
+public class Imagen implements Serializable{
     private String Ruta;
 
     public Imagen() {

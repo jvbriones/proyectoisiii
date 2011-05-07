@@ -6,11 +6,13 @@
 package CentroMedico;
 
 import java.util.Date;
+import java.io.Serializable;
+
 /**
  *
  * @author pope
  */
-public class MedicamentoRecetado {
+public class MedicamentoRecetado implements Serializable{
     private int Id;
     private String Posologia;
     private int Duracion;

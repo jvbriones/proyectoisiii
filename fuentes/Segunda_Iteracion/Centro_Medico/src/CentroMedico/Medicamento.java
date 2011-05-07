@@ -7,12 +7,13 @@ package CentroMedico;
 import java.util.Set;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.io.Serializable;
 
 /**
  *
  * @author pope
  */
-public class Medicamento {
+public class Medicamento implements Serializable{
     private String Nombre;
     private String Descripcion;
     private int ExistenciasMinimas;

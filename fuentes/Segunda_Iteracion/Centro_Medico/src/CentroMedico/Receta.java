@@ -7,13 +7,14 @@ package CentroMedico;
 import java.util.Date;
 import java.util.Set;
 import java.util.HashSet;
+import java.io.Serializable;
 
 /**
  *
  * @author José Peso Buendía
  * modificado por Juan Carlos
  */
-public class Receta {
+public class Receta implements Serializable{
     private int Id;
     private String Instrucciones;
     private String JuicioDiagnostico;

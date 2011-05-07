@@ -4,12 +4,13 @@
  */
 
 package CentroMedico;
+import java.io.Serializable;
 
 /**
  *
  * @author pope
  */
-public class AtributoOrina {
+public class AtributoOrina implements Serializable{
     private String Nombre;
 
     public AtributoOrina() {

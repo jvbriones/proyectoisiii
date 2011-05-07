@@ -7,12 +7,13 @@ package CentroMedico;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.io.Serializable;
 
 /**
  *
  * @author Juan Carlos
  */
-public class CentroMedico {
+public class CentroMedico implements Serializable{
     private String Nombre;
     private String CIF;
     private String Direccion;

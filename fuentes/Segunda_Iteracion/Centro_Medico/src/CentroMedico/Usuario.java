@@ -10,6 +10,7 @@
  */
 
 package CentroMedico;
+import java.io.Serializable;
 
 import java.util.*;
 import java.sql.SQLException;
@@ -19,7 +20,7 @@ import java.sql.SQLException;
  * @author      Sub_Equipo2
  * modificado por Juan Carlos
  */
-public class Usuario {
+public class Usuario implements Serializable{
 
 
     private String DNI;

@@ -4,12 +4,13 @@
  */
 
 package CentroMedico;
+import java.io.Serializable;
 
 /**
  *
  * @author pope
  */
-public class PruebaAnalisis {
+public class PruebaAnalisis implements Serializable{
     private int Id;
     private String Comentario;
 
