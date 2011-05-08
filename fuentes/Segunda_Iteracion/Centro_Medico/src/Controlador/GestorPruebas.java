@@ -134,6 +134,7 @@ public class GestorPruebas {
 
         Paciente paciente = null;
         PacBD pBD = new PacBD();
+        
         AtributoSangre atributoS = null;
         AtributoOrina atributoO = null;
         AtributoOrinaBD atribOBD = new AtributoOrinaBD();
