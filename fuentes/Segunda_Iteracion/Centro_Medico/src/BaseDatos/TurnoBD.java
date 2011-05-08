@@ -21,7 +21,7 @@ import org.hibernate.*;
  * @version     1.1     16/04/2011
  * @author      Sub_Equipo2
  */
-public class turnoBD {
+public class TurnoBD {
 
     String IpDelServidor="localhost";
     String NombreDB="CentroMedico";
@@ -118,7 +118,7 @@ public class turnoBD {
 
     public Turno obtenerTurno(String Dni) throws SQLException {
 
-        Turno Turno;
+        Turno Turno=new Turno();
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, user,pass);
@@ -130,7 +130,8 @@ public class turnoBD {
             Date fechaFin=rs.getDate("FechaFin");
             String tipo=rs.getString("Tipo");
 
-            Turno = new Turno(dni, fechaInicio, fechaFin, tipo);
+//Se ha puesto esta línea entre comentarios porque es incoherente con la nueva clase Turno.
+//            Turno = new Turno(dni, fechaInicio, fechaFin, tipo);
         }
         else{
             Turno= null;

@@ -9,9 +9,7 @@ import CentroMedico.*;
 import org.hibernate.Session;
 import java.util.Set;
 import java.io.Serializable;
-import org.hibernate.Criteria;
 import java.util.HashSet;
-import org.hibernate.Query;
 import java.util.List;
 
 /**

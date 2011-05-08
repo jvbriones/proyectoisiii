@@ -20,7 +20,7 @@ import org.hibernate.*;
  * @version     1.1     16/04/2011
  * @author      Sub_Equipo2
  */
-public class citasBD {
+public class CitasBD {
 
 
     String IpDelServidor="localhost";
@@ -47,8 +47,8 @@ public class citasBD {
     }
 
     public void almacenarCita(Cita cita) {
-        String dni=cita.getDniPaciente();
-        String dniM=cita.getDniMedico();
+        String dni=cita.getPaciente().getDNI();
+        String dniM=cita.getPersonalMedico().getDNI();
         Date fecha=(Date) cita.getFecha();
         boolean estado=cita.getEstado();
 
@@ -63,7 +63,7 @@ public class citasBD {
 
     public Cita obtenerCita(String Dni) throws SQLException {
 
-        Cita cita;
+        Cita cita=new Cita();
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, user,pass);
@@ -75,7 +75,8 @@ public class citasBD {
             Date fecha=rs.getDate("Fecha");
             boolean estado=rs.getBoolean("Estado");
 
-            cita = new Cita(dni, dniM, fecha, estado);
+//Esta línea se ha puesto entre comentarios porque es incoherente con el nuevo constructor.
+//            cita = new Cita(dni, dniM, fecha, estado);
         }
         else{
             cita= null;
