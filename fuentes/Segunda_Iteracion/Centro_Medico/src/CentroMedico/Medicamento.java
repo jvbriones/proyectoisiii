@@ -77,7 +77,7 @@ public class Medicamento implements Serializable{
     public void anadirAlArray( LoteMedicamento Lote){
 
          LotesMedicamento.add(Lote);
-
+       
     }
 
     public void actualizaStock( int Existencias){

@@ -2650,8 +2650,8 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         mostrarPanel("ModificarLote");
 
         GestorFarmacia gesFar = new GestorFarmacia();
-        LoteMedicamento Lo = null;
-        String CodBarras = jTextFieldCodBarras.getText(); // duda
+        LoteMedicamento Lo = new LoteMedicamento();
+        String CodBarras = jTextField12.getText(); // duda
         Lo = gesFar.consultarLoteMedicamento(CodBarras, Me);
 
 
@@ -2791,7 +2791,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
 
 
-        exito= gesFar.anadirLoteMedicamento(CodBarras,Existencias,DateCadu );
+        exito= gesFar.anadirLoteMedicamento(CodBarras,Existencias,DateCadu,Me );
 
         if( exito == false){
 

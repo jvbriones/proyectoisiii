@@ -91,7 +91,7 @@ public class GestorFarmacia {
     }
 
 
-    public boolean anadirLoteMedicamento (String CodBarras,int Existencias, Date FechaCaducidad){
+    public boolean anadirLoteMedicamento (String CodBarras,int Existencias, Date FechaCaducidad,Medicamento Me){
 
         LoteMedicamento Lo=new LoteMedicamento();
         LoteMedicamentoBD loBD = new LoteMedicamentoBD();
@@ -103,7 +103,7 @@ public class GestorFarmacia {
 
         else{
             LoteMedicamento lote = new LoteMedicamento(CodBarras,Existencias,FechaCaducidad);
-            Medicamento Me = lote.getMedicamento();
+            lote.setMedicamento(Me);
 
             if(Me==null){
                 System.out.println("Hola");
@@ -126,23 +126,24 @@ public class GestorFarmacia {
 
 
 
-    public LoteMedicamento consultarLoteMedicamento (String CodBarras, Medicamento me){
+    public LoteMedicamento consultarLoteMedicamento (String CodBarras, Medicamento Me){
         LoteMedicamento Lo=new LoteMedicamento();
-        Medicamento Me=me;
+    
 
-        Set<LoteMedicamento> lotes;
+        
 
         LoteMedicamento Aux=new LoteMedicamento();
-        lotes = Me.getLotesMedicamento();
+        Set<LoteMedicamento> lotes = Me.getLotesMedicamento();
 
-        if( lotes != null)
-            System.out.println("mal");
+
+        if( lotes == null)
+            System.out.println(lotes.size() + "hola");
 
         for( Iterator it = lotes.iterator(); it.hasNext();) {
 	    Aux = (LoteMedicamento)it.next();
 	    if( Aux.getCodBarras().equals(CodBarras)){
                 Lo = Aux;
-
+                
             }
          }
          return Lo;
