@@ -8,6 +8,7 @@ package Controlador;
 import BaseDatos.AtributoOrinaBD;
 import BaseDatos.AtributoSangreBD;
 import BaseDatos.PacBD;
+import BaseDatos.RadiografiaBD;
 import CentroMedico.AtributoOrina;
 import CentroMedico.AtributoSangre;
 import CentroMedico.Imagen;
@@ -190,14 +191,16 @@ public class GestorPruebas {
 
         if(TipoRadiologia == "radiografia"){
             Radiografia prueba = new Radiografia(Comentario);
+            RadiografiaBD rBD = new RadiografiaBD();
 
             for( Iterator it = imag.iterator(); it.hasNext();) {
                 aux = (Imagen)it.next();
                 Imagen img = new Imagen(aux);
                 prueba.añadirImagen(img);
+                prueba.setPaciente(paciente);
             }
 
-            paciente.añadirPruebaRadiografia(prueba);
+            rbD
 
             //actualizar paciente
         }
