@@ -230,6 +230,7 @@ public class GestorFarmacia {
                 aux.add(doc);
                 aux.add(doc.getNombre());
                 aux.add(doc.getApellidos());
+                aux.add(rec.getId());
                 resumenRecetas.add(aux);
              }
 
@@ -246,6 +247,7 @@ public class GestorFarmacia {
             RecetaBD recetas = new RecetaBD();
             Medicamento med = null;
             MedicamentoRecetado medRed = new MedicamentoRecetado();
+            ArrayList<ArrayList> aux2 = new ArrayList();
 
             rec = recetas.obtener(idReceta);
 
@@ -270,7 +272,10 @@ public class GestorFarmacia {
 
             }
 
-            return datosReceta; //también hay que devolver los datos de medicamentos no es posible devolver dos arrays
+            aux2.add(datosReceta);
+            aux2.add(datosMedicamentos);
+
+            return aux2;
 
 
 

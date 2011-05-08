@@ -66,9 +66,12 @@ public class GestorPacientes {
     
         PacBD pac = new PacBD();
         Paciente p= new Paciente();
+
+        System.out.println("antes de obtener paciente");
         
-        p = pac.obtenerPaciente(Dni);
-        
+        p = pac.obtener(Dni);
+
+        System.out.println("tras obtener paciente");
         return p;
         
         
