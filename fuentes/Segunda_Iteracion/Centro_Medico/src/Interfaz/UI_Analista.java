@@ -2142,7 +2142,8 @@ public class UI_Analista extends javax.swing.JFrame {
 
     private void jButtonAlmacenarResultadoRadiologoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAlmacenarResultadoRadiologoMouseClicked
         // TODO add your handling code here:
-      if(compruebaFormulario("Almacenar")){
+    /* comentado por Nicolás
+        if(compruebaFormulario("Almacenar")){
         GestorPruebas gp = new GestorPruebas();
         String tipo = null;
         if(jRadioButtonSangre.isSelected()){
@@ -2159,6 +2160,8 @@ public class UI_Analista extends javax.swing.JFrame {
         }
         else
             jLabelError.setVisible(true);
+     
+     */
     }//GEN-LAST:event_jButtonAlmacenarResultadoRadiologoMouseClicked
 
 
@@ -2464,6 +2467,7 @@ public class UI_Analista extends javax.swing.JFrame {
 
     }
 
+    /* Comentado por Nicolás
     private void identificarPersonal( String nombreUsuario) throws SQLException{
 
         //trabajar con personal no se puede, ya que su BD está mal
@@ -2475,6 +2479,8 @@ public class UI_Analista extends javax.swing.JFrame {
         mostrarDatosPerso(perso);
 
     }
+     */
+
 
     private void mostrarDatosPerso(Usuario usu) throws SQLException{
 

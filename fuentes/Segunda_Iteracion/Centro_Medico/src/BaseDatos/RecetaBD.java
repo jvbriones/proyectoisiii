@@ -50,9 +50,12 @@ public class RecetaBD {
 
     public Set<Receta> obtenerRecetasPaciente (String dni){
         //ESTA FUNCIÓN HAY QUE IMPLEMENTARLA. OBTIENE UN SET CON TODAS LAS RECETAS DE ESE PACIENTE.
-
+            Set<Receta> Vacio=null;
+            return Vacio;
 
     }
+ 
+ 
 }
 
 

@@ -3097,7 +3097,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 GestorUsuarios gestUsu = new GestorUsuarios();
                 ArrayList datos = new ArrayList();
 
-                datos = gestUsu.consultarDatosPersonalesAdmin(jTextFieldDNIPaciente.getText());
+             //   datos = gestUsu.consultarDatosPersonalesAdmin(jTextFieldDNIPaciente.getText());
 
                 jTextFieldNombrePaciente.setText(datos.get(1).toString());
                 jTextFieldApellidosPaciente.setText(datos.get(2).toString());
@@ -3142,7 +3142,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 GestorUsuarios gestUsu = new GestorUsuarios();
                 ArrayList datos = new ArrayList();
 
-                datos = gestUsu.consultarDatosPersonalesAdmin(jTextFieldDNIPersonal.getText());
+                //datos = gestUsu.consultarDatosPersonalesAdmin(jTextFieldDNIPersonal.getText());
 
                 jTextFieldNombrePersonal.setText(datos.get(1).toString());
                 jTextFieldApellidosPersonal.setText(datos.get(2).toString());

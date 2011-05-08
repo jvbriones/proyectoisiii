@@ -98,7 +98,7 @@ public class GestorPruebas {
 
 
 
-        return exito;
+//        return exito; comentado por Nicolás
 
 
     }
@@ -130,7 +130,7 @@ public class GestorPruebas {
 
 
     }
-
+/* comentado por Nicolás
     public boolean almacenarResultadosAnalisis(String Dni, String DatosAnalisis, String Comentario, String TipoAnalisis) throws SQLException{
 
         Paciente paciente = null;
@@ -174,7 +174,8 @@ public class GestorPruebas {
 
         }
     }
-
+*/
+    /*
     public boolean almacenarResultadoRadiologia(String Dni, ArrayList<Imagen> imag, String Comentario, String TipoRadiologia) throws SQLException{
 
         //No concuerda el diagrama de secuencia con el de clases
@@ -216,5 +217,10 @@ public class GestorPruebas {
 
         }
 
-    }
+
+     }
+     *
+     */
+     
+
 }

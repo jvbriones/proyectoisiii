@@ -82,12 +82,12 @@ public class GestorMedico {
         return me;
 
     }
-
+/*
     public void guardarVolante(String Volante){
         //Implementación en la 3ª iteración
     }
-
-    public Cita solicitarCitaPrueba(String Dni, String TipoPrueba) throws SQLException{
+    //comentado por Nicolás
+   // public Cita solicitarCitaPrueba(String Dni, String TipoPrueba) throws SQLException{
 
         PacBD pBD = new PacBD();
         Paciente paciente = null;
@@ -99,5 +99,5 @@ public class GestorMedico {
             
         }
     }
-
+*/
 }

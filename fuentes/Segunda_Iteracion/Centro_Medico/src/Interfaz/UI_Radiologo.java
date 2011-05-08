@@ -2019,7 +2019,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
         }
 
     }
-
+/* Comentado por Nicolás
     private void identificarPersonal( String nombreUsuario) throws SQLException{
 
         //trabajar con personal no se puede, ya que su BD está mal
@@ -2031,7 +2031,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
         mostrarDatosPerso(perso);
 
     }
-
+*/
     private void mostrarDatosPerso(Usuario usu) throws SQLException{
 
         Calendar calendar = Calendar.getInstance();

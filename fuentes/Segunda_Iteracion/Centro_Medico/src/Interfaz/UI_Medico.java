@@ -2515,9 +2515,14 @@ public class UI_Medico extends javax.swing.JFrame {
 
     private void jButtonSolicitarCitaPruebaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonSolicitarCitaPruebaMouseClicked
         // TODO add your handling code here:
+        
         mostrarPanel("SolicitarPrueba");
         jTextFieldCitaPruebaPaciente.setText(jTextFieldAtenderPaciente.getText());
     }//GEN-LAST:event_jButtonSolicitarCitaPruebaMouseClicked
+
+     private void  jButtonBuscarMedicamentoActionPerformed(java.awt.event.ActionEvent evt) {
+         
+     }
 
     private void jButtonBuscarMedicamentoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonBuscarMedicamentoMouseReleased
         // TODO add your handling code here:
@@ -2540,11 +2545,8 @@ public class UI_Medico extends javax.swing.JFrame {
            jListMedicamentos.setModel(modelo);
             // la lista debe mostrarse uno a uno en el RealizarReceta,
          
-
-
-
-
-
+    }
+  private void jButtonRecetarOtroMedicamentoActionPerformed(java.awt.event.ActionEvent evt) {
     }//GEN-LAST:event_jButtonBuscarMedicamentoMouseReleased
 
     private void jButtonBuscarMedicamento1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonBuscarMedicamento1MouseReleased
@@ -2934,7 +2936,7 @@ public class UI_Medico extends javax.swing.JFrame {
         }
 
     }
-
+/* Comentado por Nicolás
     private void identificarPersonal( String nombreUsuario) throws SQLException{
 
         //trabajar con personal no se puede, ya que su BD está mal
@@ -2947,6 +2949,8 @@ public class UI_Medico extends javax.swing.JFrame {
 
     }
 
+ 
+ */
     private void mostrarDatosPerso(Usuario usu) throws SQLException{
 
         Calendar calendar = Calendar.getInstance();

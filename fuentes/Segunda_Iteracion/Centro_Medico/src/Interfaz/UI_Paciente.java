@@ -51,7 +51,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         /**Ponemos icono de paciente logueado*/
         jLabelTipoUsuarioIdentificado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo-Usuario-Paciente.png"))); // NOI18N
     }
-
+/* Comentado por Nicolás
     private void identificarPaciente( String nombreUsuario) throws SQLException{
 
         //trabajar con paciente no se puede, ya que su BD está mal
@@ -64,6 +64,8 @@ public class UI_Paciente extends javax.swing.JFrame {
         cargarDatosCitaPaciente(paci);
 
     }
+ 
+ */
     
     private void mostrarDatosPaciente(Usuario usu) throws SQLException{
 

@@ -317,7 +317,9 @@ public class GestorFarmacia {
             MedicamentoRecetado medRed = null;
             //No hay ninguna función que se llame obtenerMedicamentoRecetado en MedicamentoRecetado
             medRed.setDispensado(true);
-            rBD.actualizar(rec);//no puedo coger rec de la función anterior ya que es local a la función
+           // rBD.actualizar(rec);//no puedo coger rec de la función anterior ya que es local a la función
+            //la anterior linea ha sido comentada por Nicolás
+
 
             
 
