@@ -55,8 +55,7 @@ public class GestorFarmacia {
         Me = meBD.obtener(Nombre);
 
         return Me;
-        // hace faltar irse a la interfaz y allí
-        // hacer que si Me==null entonces el medicamento no existe
+        
     }
 
 
@@ -200,6 +199,7 @@ public class GestorFarmacia {
         Set<Medicamento> me=null;
 
         me = meBD.obtenerTodosMedicamentos();
+
         return me;
 
     }
@@ -349,6 +349,7 @@ public class GestorFarmacia {
            int StockActual = medica.getStockActual();
            int nExistencias=0;
            lotesMedica=medica.getLotesMedicamento();
+           System.out.println(medica.getNombre());
            for( Iterator itLo=lotesMedica.iterator();itLo.hasNext();){
 
                    lote = (LoteMedicamento)itLo.next();// como obtener de aquí un array cuando en el diseñoo aparece un array?

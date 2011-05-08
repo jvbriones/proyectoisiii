@@ -16,7 +16,7 @@ import java.awt.Image;
 import CentroMedico.*;
 import BaseDatos.*;
 import java.util.*;
-import java.util.*;
+
 import java.awt.Color;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -32,6 +32,7 @@ import Controlador.*;
 /**
  *
  * @author Adrian
+ * @author Nicolás
  *
  */
 public class UI_Medico extends javax.swing.JFrame {
