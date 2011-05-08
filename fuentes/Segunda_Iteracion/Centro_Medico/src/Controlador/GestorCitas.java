@@ -13,7 +13,7 @@ package Controlador;
 
 import BaseDatos.PacBD;
 import CentroMedico.Paciente;
-import BaseDatos.citasBD;
+import BaseDatos.CitasBD;
 import java.sql.SQLException;
 import CentroMedico.Usuario;
 import CentroMedico.Cita;
@@ -33,7 +33,7 @@ public class GestorCitas {
     // SINO QUE DEBERIA COMUNICARSE CON GestorPacientes, Y ESTE CON PacienteBD
     public String alta_cita(String Dni) throws SQLException{
         String datosCita=new String();
-        citasBD bd_citas=new citasBD();
+        CitasBD bd_citas=new CitasBD();
         boolean existe;
 
         existe=bd_citas.existeCita(Dni);
@@ -66,7 +66,7 @@ public class GestorCitas {
 
     public String cancelarCitaOnline(Usuario usu) throws SQLException{
 
-        citasBD bd_citas=new citasBD();
+        CitasBD bd_citas=new CitasBD();
 
         String Dni=new String();
         Dni=usu.getDNI();
