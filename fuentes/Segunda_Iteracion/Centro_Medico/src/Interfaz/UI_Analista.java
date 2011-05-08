@@ -478,7 +478,7 @@ public class UI_Analista extends javax.swing.JFrame {
                     .add(jPanelPrincipalLayout.createSequentialGroup()
                         .add(67, 67, 67)
                         .add(jLabelAlamcenarResultados, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 162, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(172, Short.MAX_VALUE))
+                .addContainerGap(163, Short.MAX_VALUE))
         );
         jPanelPrincipalLayout.setVerticalGroup(
             jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1334,7 +1334,7 @@ public class UI_Analista extends javax.swing.JFrame {
         jPanelEliminarAtributoLayout.setHorizontalGroup(
             jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelEliminarAtributoLayout.createSequentialGroup()
-                .addContainerGap(129, Short.MAX_VALUE)
+                .addContainerGap(127, Short.MAX_VALUE)
                 .add(jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelEliminarAtributoLayout.createSequentialGroup()
                         .add(21, 21, 21)
@@ -1370,7 +1370,7 @@ public class UI_Analista extends javax.swing.JFrame {
                 .add(jRadioButtonOrina2)
                 .add(30, 30, 30)
                 .add(jButtonGuardarAtributo1)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         jPanelEliminarAtributo.setBounds(0, 0, -1, -1);
@@ -2003,6 +2003,7 @@ public class UI_Analista extends javax.swing.JFrame {
 
     private void jButtonAlmacenarResultado2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAlmacenarResultado2ActionPerformed
         // TODO add your handling code here:
+
     }//GEN-LAST:event_jButtonAlmacenarResultado2ActionPerformed
 
     private void jButtonGuardarAtributoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarAtributoMouseClicked
@@ -2015,10 +2016,12 @@ public class UI_Analista extends javax.swing.JFrame {
              exito = gp.agregarAtributoSangre(jTextFieldNombreAtributo.getText());
              if(!exito){
                  System.out.println("El atributo "+jTextFieldNombreAtributo.getText()+" ya existe");
+                 new InformacionError().setVisible(true);
              }
 
              else{
                  System.out.println("Operación realizada con éxito");
+                 new InformacionExito().setVisible(true);
              }
          }
 
@@ -2026,10 +2029,12 @@ public class UI_Analista extends javax.swing.JFrame {
              exito = gp.agregarAtributoOrina(jTextFieldNombreAtributo.getText());
              if(!exito){
                  System.out.println("El atributo "+jTextFieldNombreAtributo.getText()+" ya existe");
+                 new InformacionError().setVisible(true);
              }
 
              else{
                  System.out.println("Operación realizada con éxito");
+                 new InformacionExito().setVisible(true);
              }
          }
     }//GEN-LAST:event_jButtonGuardarAtributoMouseClicked

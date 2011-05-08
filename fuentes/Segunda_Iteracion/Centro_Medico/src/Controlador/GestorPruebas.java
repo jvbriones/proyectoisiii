@@ -33,7 +33,7 @@ public class GestorPruebas {
 
         boolean exito;
         AtributoSangre atributo = new AtributoSangre();
-        AtributoSangreBD atribSBD = null;
+        AtributoSangreBD atribSBD = new AtributoSangreBD();
 
         atributo = atribSBD.obtener(Nombre);
 
@@ -55,7 +55,7 @@ public class GestorPruebas {
     public boolean agregarAtributoOrina(String Nombre){
         boolean exito;
         AtributoOrina atributo = new AtributoOrina();
-        AtributoOrinaBD atribOBD = null;
+        AtributoOrinaBD atribOBD = new AtributoOrinaBD();
 
         atributo = atribOBD.obtener(Nombre);
 

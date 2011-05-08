@@ -39,10 +39,10 @@ public class AtributoSangreBD {
     }
 
     public AtributoSangre obtener (String Nombre){
+        System.out.println("obtener");
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
-
         AtributoSangre atr = (AtributoSangre) session.get(AtributoSangre.class, Nombre);
         session.getTransaction().commit();
 
