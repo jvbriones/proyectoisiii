@@ -2817,9 +2817,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
     private void jButtonELiminarLoteMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonELiminarLoteMouseReleased
 
-       // TODO add your handling code here:
-        //solicita confirmacion
-        // si confirma:
+       // TODO add your handling code here
 
         boolean exito;
         LoteMedicamentoBD loBD=new LoteMedicamentoBD();
@@ -2828,11 +2826,11 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
         InformacionConfirma panelInfo = new InformacionConfirma();
         pulsado = panelInfo.botonPulsado(evt);
-
-        if(pulsado == true){
-
+        //panelInfo.setVisible(true);
+        //if(pulsado == true){
+            //panelInfo.setVisible(false);
             GestorFarmacia gesFar = new GestorFarmacia();
-            exito = gesFar.eliminarLoteMedicamento(Lo);
+            exito = gesFar.eliminarLoteMedicamento(Lo,Me);
         
             if( exito == false)
                 System.out.println("Ya existe un Lote con " +jTextFieldCodigoBarras.getText());
@@ -2840,9 +2838,12 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
             else{
              new InformacionExito().setVisible(true);
             }
-        }
-        else
+        //}
+        /*else{
+
+            panelInfo.setVisible(false);
             new InformacionError().setVisible(true);
+        }*/
     }//GEN-LAST:event_jButtonELiminarLoteMouseReleased
 
     private void jButtonModificarLoteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarLoteActionPerformed
@@ -2851,10 +2852,10 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         GestorFarmacia gesFar = new GestorFarmacia();
         boolean exito;
 
-        String CodBarras=jTextFieldCodBarras.getText();
-        int Existencias = Integer.parseInt(jTextFieldExistenc.getText());
+        String CodBarras=jTextFieldCodigoBarras.getText();
+        int Existencias = Integer.parseInt(jTextFieldExistencias1.getText());
 
-        String FechCad = jTextFieldFechCad.getText();
+        String FechCad = jTextFieldFechaCaducidad.getText();
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
 
@@ -2868,7 +2869,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         } catch (ParseException ex) {
             DateCadu = null;
        }
-        Lo.setCodBarras(CodBarras);
+       ;
         Lo.setExistencias(Existencias);
         Lo.setFechaCaducidad(DateCadu);
         

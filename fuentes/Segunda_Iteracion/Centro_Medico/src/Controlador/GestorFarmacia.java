@@ -153,36 +153,42 @@ public class GestorFarmacia {
 
         LoteMedicamentoBD loBD = new LoteMedicamentoBD();
         MedicamentoBD meBD=new MedicamentoBD();
-
-        if( Lo!= null)
-            return false;
-
-        else{
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session.beginTransaction ();
+    
 
             Me.actualizaStock(Lo.getExistencias());
-            loBD.almacenar(Lo);
-            meBD.almacenar(Me);
-
+            loBD.actualizar(Lo);
+            meBD.actualizar(Me);
+            
+            
             return true;
-        }
+
+        
 
     }
     
-    public boolean eliminarLoteMedicamento ( LoteMedicamento Lo){
+    public boolean eliminarLoteMedicamento ( LoteMedicamento Lo,Medicamento Me){
         
        
          MedicamentoBD meBD=new MedicamentoBD();
          LoteMedicamentoBD loBD= new LoteMedicamentoBD();
-         Medicamento Me = Lo.getMedicamento();
+     
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session.beginTransaction ();
+
          if( Lo == null)
              return false; 
          else{
+             
              int Existencias = Lo.getExistencias();
              Me.actualizaStock(-Existencias);//aquí debe restar las existencias
              //Me.eliminarLote(Lo.getCodBarras());
+             meBD.actualizar(Me);
              loBD.eliminar(Lo);
-             meBD.almacenar(Me);
-
+             System.out.println(Lo.getCodBarras());
+             
+             
              return true;
         }
     }

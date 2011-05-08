@@ -43,7 +43,7 @@ public class LoteMedicamentoBD {
         session.delete(Lote);
         session.getTransaction().commit();
     }
-
+   
     public void eliminarLote (String CodBarras){
         LoteMedicamento Lote = new LoteMedicamento();
         Lote = obtener (CodBarras);
