@@ -59,8 +59,8 @@ public class MedicamentoBD  implements Serializable{
 
         List<Medicamento> result = (List<Medicamento>)session.createQuery("from Medicamento").list();
         Set<Medicamento> medicamentos = new HashSet<Medicamento>(result);
-        
-        
+
+        session.getTransaction().commit();
         return medicamentos;
     }
 }
