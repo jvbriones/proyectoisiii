@@ -14,8 +14,10 @@ package Controlador;
 
 import CentroMedico.*;
 import BaseDatos.*;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.*;
+import org.hibernate.*;
 
 /**
  *
@@ -58,36 +60,40 @@ public class GestorFarmacia {
     }
 
 
-   public boolean modificarMedicamento( String Nombre,String Descripcion, int ExistenciasMinimas, int StockActual){
+   public boolean modificarMedicamento( Medicamento Me){
 
-       Medicamento Me;
+     
        MedicamentoBD meBD=new MedicamentoBD();
-       Me= meBD.obtener(Nombre);
+      
 
-       if( Me==null)
+
+       if( Me!=null)
            return false;
        else{
-           Me.setNombre(Nombre);
-           Me.setDescripcion(Descripcion);
-           Me.setExistenciasMinimas(ExistenciasMinimas);
-           Me.setStockActual(StockActual);
+          
            meBD.actualizar(Me);
-
-           return true;
+            return true;
        }
 
     }
 
-    public boolean eliminarMedicamento( String Nombre){
-       Medicamento Me;
+    public boolean eliminarMedicamento( Medicamento Me){
+       
        MedicamentoBD meBD=new MedicamentoBD();
-       Me= meBD.obtener(Nombre);
+       Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+
+        session.beginTransaction ();
+
        if( Me != null){
         meBD.eliminar(Me);
+
         return true;
         }
-      else
+      else{
+          Connection con = session.close();
           return false;
+      }
     }
 
 
@@ -137,25 +143,29 @@ public class GestorFarmacia {
 
 
         if( lotes == null)
-            System.out.println(lotes.size() + "hola");
+            System.out.println("alaaaaaa");
 
         for( Iterator it = lotes.iterator(); it.hasNext();) {
 	    Aux = (LoteMedicamento)it.next();
+            System.out.println(Aux.getCodBarras());
 	    if( Aux.getCodBarras().equals(CodBarras)){
+
+
                 Lo = Aux;
                 
             }
          }
+         
+
          return Lo;
     }
 
 
-    public boolean modificarLoteMedicamento( String CodBarras,int Existencias, Date FechaCaducidad,Medicamento me ){
+    public boolean modificarLoteMedicamento( String CodBarras,int Existencias, Date FechaCaducidad,Medicamento Me ){
 
-        LoteMedicamentoBD loBD = null;
-        LoteMedicamento Lo= null;
-        Medicamento Me= me;
-        MedicamentoBD meBD=null;
+        LoteMedicamentoBD loBD = new LoteMedicamentoBD();
+        LoteMedicamento Lo= new LoteMedicamento();
+        MedicamentoBD meBD=new MedicamentoBD();
 
 
         Lo= loBD.obtener(CodBarras);
@@ -178,11 +188,11 @@ public class GestorFarmacia {
 
     }
     
-    public boolean eliminarLoteMedicamento ( String CodBarras, Medicamento me){
+    public boolean eliminarLoteMedicamento ( String CodBarras, Medicamento Me){
         
-         Medicamento Me =me;
-         MedicamentoBD meBD=null;
-         LoteMedicamentoBD loBD= null; 
+       
+         MedicamentoBD meBD=new MedicamentoBD();
+         LoteMedicamentoBD loBD= new LoteMedicamentoBD();
          LoteMedicamento Lo = this.consultarLoteMedicamento(CodBarras,Me);
          if( Lo == null)
              return false; 
@@ -202,7 +212,7 @@ public class GestorFarmacia {
     public Set buscarMedicamento( String Nombre ){
 
 
-        MedicamentoBD meBD=null;
+        MedicamentoBD meBD=new MedicamentoBD();
         Set<Medicamento> me=null;
 
         me = meBD.obtenerTodosMedicamentos();
