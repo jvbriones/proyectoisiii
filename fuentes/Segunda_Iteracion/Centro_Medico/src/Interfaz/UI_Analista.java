@@ -101,6 +101,15 @@ public class UI_Analista extends javax.swing.JFrame {
         jLabelSalir = new javax.swing.JLabel();
         jLabelIcono = new javax.swing.JLabel();
         ZonaTrabajo = new javax.swing.JLayeredPane();
+        jPanelEliminarAtributo = new javax.swing.JPanel();
+        jLabelGestionarPaciente9 = new javax.swing.JLabel();
+        jButtonGuardarAtributo1 = new javax.swing.JButton();
+        jRadioButtonOrina2 = new javax.swing.JRadioButton();
+        jRadioButtonSangre2 = new javax.swing.JRadioButton();
+        jLabel12 = new javax.swing.JLabel();
+        jTextFieldNombreAtributo1 = new javax.swing.JTextField();
+        jLabelNombreAtributo1 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         jPanelAgregarAtributo = new javax.swing.JPanel();
         jLabelGestionarPaciente8 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -110,17 +119,6 @@ public class UI_Analista extends javax.swing.JFrame {
         jRadioButtonSangre1 = new javax.swing.JRadioButton();
         jRadioButtonOrina1 = new javax.swing.JRadioButton();
         jButtonGuardarAtributo = new javax.swing.JButton();
-        jPanelPrincipal = new javax.swing.JPanel();
-        jButtonConsultarDatosPersonales = new javax.swing.JButton();
-        jLabelConsultarDatosPersonales = new javax.swing.JLabel();
-        jLabelConsultarTurno = new javax.swing.JLabel();
-        jButtonConsultarTurno = new javax.swing.JButton();
-        jButtonAlmacenarResultado = new javax.swing.JButton();
-        jLabelAlamcenarResultados = new javax.swing.JLabel();
-        jButtonAlmacenarResultado1 = new javax.swing.JButton();
-        jButtonAlmacenarResultado2 = new javax.swing.JButton();
-        jLabelAgregarAtributo = new javax.swing.JLabel();
-        jLabelEliminarAtributo = new javax.swing.JLabel();
         jPanelConsultarDatosPersonales = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabelGestionarPaciente4 = new javax.swing.JLabel();
@@ -160,6 +158,17 @@ public class UI_Analista extends javax.swing.JFrame {
         jRadioButtonAnalista = new javax.swing.JRadioButton();
         jRadioButtonRadiologo = new javax.swing.JRadioButton();
         jRadioButtonMedico = new javax.swing.JRadioButton();
+        jPanelPrincipal = new javax.swing.JPanel();
+        jButtonConsultarDatosPersonales = new javax.swing.JButton();
+        jLabelConsultarDatosPersonales = new javax.swing.JLabel();
+        jLabelConsultarTurno = new javax.swing.JLabel();
+        jButtonConsultarTurno = new javax.swing.JButton();
+        jButtonAlmacenarResultado = new javax.swing.JButton();
+        jLabelAlamcenarResultados = new javax.swing.JLabel();
+        jButtonAlmacenarResultado1 = new javax.swing.JButton();
+        jButtonAlmacenarResultado2 = new javax.swing.JButton();
+        jLabelAgregarAtributo = new javax.swing.JLabel();
+        jLabelEliminarAtributo = new javax.swing.JLabel();
         jPanelConsultarTurno = new javax.swing.JPanel();
         jButtonMenosDiaFechaInicioTurno = new javax.swing.JButton();
         jButtonMenosMesFechaInicioTurno = new javax.swing.JButton();
@@ -208,15 +217,6 @@ public class UI_Analista extends javax.swing.JFrame {
         jButtonAlmacenarResultadoRadiologo = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jTextFieldValorLinfocitos = new javax.swing.JTextField();
-        jPanelEliminarAtributo = new javax.swing.JPanel();
-        jLabelGestionarPaciente9 = new javax.swing.JLabel();
-        jButtonGuardarAtributo1 = new javax.swing.JButton();
-        jRadioButtonOrina2 = new javax.swing.JRadioButton();
-        jRadioButtonSangre2 = new javax.swing.JRadioButton();
-        jLabel12 = new javax.swing.JLabel();
-        jTextFieldNombreAtributo1 = new javax.swing.JTextField();
-        jLabelNombreAtributo1 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
         jPanelUsuario = new javax.swing.JPanel();
         jLabelUsuario = new javax.swing.JLabel();
         jLabelTipoUsuario = new javax.swing.JLabel();
@@ -231,7 +231,7 @@ public class UI_Analista extends javax.swing.JFrame {
 
         jLabelCentroMedico.setText("Centro médico");
         getContentPane().add(jLabelCentroMedico);
-        jLabelCentroMedico.setBounds(177, 68, 120, 17);
+        jLabelCentroMedico.setBounds(177, 68, 120, 18);
 
         jLabelIconoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Inicio-Desactivado.png"))); // NOI18N
         jLabelIconoInicio.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -250,7 +250,7 @@ public class UI_Analista extends javax.swing.JFrame {
 
         jLabelInicio.setText("Inicio");
         getContentPane().add(jLabelInicio);
-        jLabelInicio.setBounds(420, 120, 44, 17);
+        jLabelInicio.setBounds(420, 120, 44, 18);
 
         jLabelIconoAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Ayuda-Desactivado.png"))); // NOI18N
         jLabelIconoAyuda.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -284,11 +284,11 @@ public class UI_Analista extends javax.swing.JFrame {
 
         jLabelAyuda.setText("Ayuda");
         getContentPane().add(jLabelAyuda);
-        jLabelAyuda.setBounds(500, 120, 44, 17);
+        jLabelAyuda.setBounds(500, 120, 44, 18);
 
         jLabelSalir.setText("Salir");
         getContentPane().add(jLabelSalir);
-        jLabelSalir.setBounds(590, 120, 40, 17);
+        jLabelSalir.setBounds(590, 120, 40, 18);
 
         jLabelIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Logo-Centro-Medico.png"))); // NOI18N
         getContentPane().add(jLabelIcono);
@@ -296,6 +296,84 @@ public class UI_Analista extends javax.swing.JFrame {
 
         ZonaTrabajo.setMinimumSize(new java.awt.Dimension(902, 520));
         ZonaTrabajo.setPreferredSize(new java.awt.Dimension(912, 530));
+
+        jLabelGestionarPaciente9.setFont(new java.awt.Font("Lucida Grande", 1, 36));
+        jLabelGestionarPaciente9.setText("Eliminar Atributo Análisis");
+
+        jButtonGuardarAtributo1.setText("Eliminar");
+        jButtonGuardarAtributo1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonGuardarAtributo1MouseClicked(evt);
+            }
+        });
+
+        jRadioButtonOrina2.setText("Orina");
+
+        jRadioButtonSangre2.setText("Sangre");
+        jRadioButtonSangre2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonSangre2ActionPerformed(evt);
+            }
+        });
+
+        jLabel12.setText("Tipo  de Prueba");
+
+        jTextFieldNombreAtributo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldNombreAtributo1ActionPerformed(evt);
+            }
+        });
+
+        jLabelNombreAtributo1.setText("Nombre del atributo a eliminar:   ");
+
+        jLabel13.setText("_____________________________________________________________________________");
+
+        org.jdesktop.layout.GroupLayout jPanelEliminarAtributoLayout = new org.jdesktop.layout.GroupLayout(jPanelEliminarAtributo);
+        jPanelEliminarAtributo.setLayout(jPanelEliminarAtributoLayout);
+        jPanelEliminarAtributoLayout.setHorizontalGroup(
+            jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelEliminarAtributoLayout.createSequentialGroup()
+                .addContainerGap(127, Short.MAX_VALUE)
+                .add(jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jPanelEliminarAtributoLayout.createSequentialGroup()
+                        .add(21, 21, 21)
+                        .add(jLabelGestionarPaciente9))
+                    .add(jPanelEliminarAtributoLayout.createSequentialGroup()
+                        .add(jLabelNombreAtributo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 242, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jTextFieldNombreAtributo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 125, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jLabel13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 591, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel12, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, jRadioButtonOrina2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, jRadioButtonSangre2)
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonGuardarAtributo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 115, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .add(80, 80, 80))
+        );
+        jPanelEliminarAtributoLayout.setVerticalGroup(
+            jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanelEliminarAtributoLayout.createSequentialGroup()
+                .add(26, 26, 26)
+                .add(jLabelGestionarPaciente9)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jLabel13)
+                .add(42, 42, 42)
+                .add(jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jLabelNombreAtributo1)
+                    .add(jTextFieldNombreAtributo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(32, 32, 32)
+                .add(jLabel12)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jRadioButtonSangre2)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jRadioButtonOrina2)
+                .add(30, 30, 30)
+                .add(jButtonGuardarAtributo1)
+                .addContainerGap(157, Short.MAX_VALUE))
+        );
+
+        jPanelEliminarAtributo.setBounds(0, 0, 798, 490);
+        ZonaTrabajo.add(jPanelEliminarAtributo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente8.setFont(new java.awt.Font("Lucida Grande", 1, 36));
         jLabelGestionarPaciente8.setText("Agregar Atributo Análisis");
@@ -372,11 +450,311 @@ public class UI_Analista extends javax.swing.JFrame {
                 .add(jRadioButtonOrina1)
                 .add(33, 33, 33)
                 .add(jButtonGuardarAtributo)
-                .addContainerGap(146, Short.MAX_VALUE))
+                .addContainerGap(142, Short.MAX_VALUE))
         );
 
         jPanelAgregarAtributo.setBounds(0, 0, 800, 480);
         ZonaTrabajo.add(jPanelAgregarAtributo, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        jPanelConsultarDatosPersonales.setPreferredSize(new java.awt.Dimension(901, 531));
+        jPanelConsultarDatosPersonales.setLayout(null);
+
+        jLabel3.setText("___________________________________________________________________");
+        jPanelConsultarDatosPersonales.add(jLabel3);
+        jLabel3.setBounds(256, 59, 469, 18);
+
+        jLabelGestionarPaciente4.setFont(new java.awt.Font("Lucida Grande", 1, 48));
+        jLabelGestionarPaciente4.setText("Gestionar Personal");
+        jPanelConsultarDatosPersonales.add(jLabelGestionarPaciente4);
+        jLabelGestionarPaciente4.setBounds(257, 20, 516, 57);
+
+        jTextFieldNombrePersonal.setEditable(false);
+        jTextFieldNombrePersonal.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldNombrePersonalKeyTyped(evt);
+            }
+        });
+        jPanelConsultarDatosPersonales.add(jTextFieldNombrePersonal);
+        jTextFieldNombrePersonal.setBounds(157, 126, 210, 28);
+
+        jLabelFotoPersonal.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelFotoPersonal.setForeground(new java.awt.Color(255, 255, 255));
+        jPanelConsultarDatosPersonales.add(jLabelFotoPersonal);
+        jLabelFotoPersonal.setBounds(720, 330, 130, 150);
+
+        jTextFieldTelefonoPersonal.setEditable(false);
+        jTextFieldTelefonoPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldTelefonoPersonalKeyTyped(evt);
+            }
+        });
+        jPanelConsultarDatosPersonales.add(jTextFieldTelefonoPersonal);
+        jTextFieldTelefonoPersonal.setBounds(157, 270, 130, 28);
+
+        jLabelContraseniaPersonal.setText("Contraseña");
+        jPanelConsultarDatosPersonales.add(jLabelContraseniaPersonal);
+        jLabelContraseniaPersonal.setBounds(729, 250, 100, 18);
+
+        jTextFieldDNIPersonal.setEditable(false);
+        jTextFieldDNIPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldDNIPersonalKeyTyped(evt);
+            }
+        });
+        jPanelConsultarDatosPersonales.add(jTextFieldDNIPersonal);
+        jTextFieldDNIPersonal.setBounds(757, 126, 95, 28);
+
+        jLabelNombrePersonal.setText("Nombre");
+        jPanelConsultarDatosPersonales.add(jLabelNombrePersonal);
+        jLabelNombrePersonal.setBounds(157, 96, 80, 18);
+
+        jLabelFotografiaersonal.setText("Fotografía");
+        jPanelConsultarDatosPersonales.add(jLabelFotografiaersonal);
+        jLabelFotografiaersonal.setBounds(610, 330, 100, 18);
+
+        jLabelDNIPersonal.setText("DNI");
+        jPanelConsultarDatosPersonales.add(jLabelDNIPersonal);
+        jLabelDNIPersonal.setBounds(757, 96, 40, 18);
+
+        jTextFieldLugarNacimientoPersonal.setEditable(false);
+        jTextFieldLugarNacimientoPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldLugarNacimientoPersonalKeyTyped(evt);
+            }
+        });
+        jPanelConsultarDatosPersonales.add(jTextFieldLugarNacimientoPersonal);
+        jTextFieldLugarNacimientoPersonal.setBounds(350, 270, 300, 28);
+
+        jLabelTelefonoPersonal.setText("Teléfono");
+        jPanelConsultarDatosPersonales.add(jLabelTelefonoPersonal);
+        jLabelTelefonoPersonal.setBounds(157, 250, 70, 18);
+
+        jTextFieldFechaNacimientoMesersonal.setEditable(false);
+        jTextFieldFechaNacimientoMesersonal.setText("1");
+        jTextFieldFechaNacimientoMesersonal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldFechaNacimientoMesersonalActionPerformed(evt);
+            }
+        });
+        jPanelConsultarDatosPersonales.add(jTextFieldFechaNacimientoMesersonal);
+        jTextFieldFechaNacimientoMesersonal.setBounds(217, 377, 33, 28);
+
+        jLabelLugarNacimientoPersonal.setText("Lugar nacimiento");
+        jPanelConsultarDatosPersonales.add(jLabelLugarNacimientoPersonal);
+        jLabelLugarNacimientoPersonal.setBounds(350, 250, 140, 18);
+
+        jLabelDireccionPersonal.setText("Dirección");
+        jPanelConsultarDatosPersonales.add(jLabelDireccionPersonal);
+        jLabelDireccionPersonal.setBounds(157, 172, 80, 18);
+
+        jButtonMenosAnioPersona.setText("-");
+        jButtonMenosAnioPersona.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMenosAnioPersonaMouseClicked(evt);
+            }
+        });
+        jButtonMenosAnioPersona.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMenosAnioPersonaActionPerformed(evt);
+            }
+        });
+        jPanelConsultarDatosPersonales.add(jButtonMenosAnioPersona);
+        jButtonMenosAnioPersona.setBounds(257, 407, 50, 40);
+
+        jLabelApellidosPersonal.setText("Apellidos");
+        jPanelConsultarDatosPersonales.add(jLabelApellidosPersonal);
+        jLabelApellidosPersonal.setBounds(407, 96, 80, 18);
+
+        jTextFieldApellidosPersonal.setEditable(false);
+        jTextFieldApellidosPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldApellidosPersonalKeyTyped(evt);
+            }
+        });
+        jPanelConsultarDatosPersonales.add(jTextFieldApellidosPersonal);
+        jTextFieldApellidosPersonal.setBounds(407, 126, 290, 28);
+
+        jButtonMasDiaPersonal.setText("+");
+        jButtonMasDiaPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMasDiaPersonalMouseClicked(evt);
+            }
+        });
+        jButtonMasDiaPersonal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMasDiaPersonalActionPerformed(evt);
+            }
+        });
+        jPanelConsultarDatosPersonales.add(jButtonMasDiaPersonal);
+        jButtonMasDiaPersonal.setBounds(157, 337, 50, 40);
+
+        jButtonMenosMesPersonal.setText("-");
+        jButtonMenosMesPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMenosMesPersonalMouseClicked(evt);
+            }
+        });
+        jButtonMenosMesPersonal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMenosMesPersonalActionPerformed(evt);
+            }
+        });
+        jPanelConsultarDatosPersonales.add(jButtonMenosMesPersonal);
+        jButtonMenosMesPersonal.setBounds(207, 407, 50, 40);
+
+        jButtonMenosDiaPersonal.setText("-");
+        jButtonMenosDiaPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMenosDiaPersonalMouseClicked(evt);
+            }
+        });
+        jButtonMenosDiaPersonal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMenosDiaPersonalActionPerformed(evt);
+            }
+        });
+        jPanelConsultarDatosPersonales.add(jButtonMenosDiaPersonal);
+        jButtonMenosDiaPersonal.setBounds(157, 407, 50, 40);
+
+        jLabelEmailPersonal.setText("Email");
+        jPanelConsultarDatosPersonales.add(jLabelEmailPersonal);
+        jLabelEmailPersonal.setBounds(567, 172, 80, 18);
+
+        jTextFieldDireccionPersonal.setEditable(false);
+        jTextFieldDireccionPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldDireccionPersonalKeyTyped(evt);
+            }
+        });
+        jPanelConsultarDatosPersonales.add(jTextFieldDireccionPersonal);
+        jTextFieldDireccionPersonal.setBounds(157, 192, 370, 28);
+
+        jTextFieldFechaNacimientoDiaPersonal.setEditable(false);
+        jTextFieldFechaNacimientoDiaPersonal.setText("1");
+        jPanelConsultarDatosPersonales.add(jTextFieldFechaNacimientoDiaPersonal);
+        jTextFieldFechaNacimientoDiaPersonal.setBounds(167, 377, 33, 28);
+
+        jButtonMasAnioPersonal.setText("+");
+        jButtonMasAnioPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMasAnioPersonalMouseClicked(evt);
+            }
+        });
+        jButtonMasAnioPersonal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMasAnioPersonalActionPerformed(evt);
+            }
+        });
+        jPanelConsultarDatosPersonales.add(jButtonMasAnioPersonal);
+        jButtonMasAnioPersonal.setBounds(257, 337, 50, 40);
+
+        jTextFieldEmailPersonal.setEditable(false);
+        jTextFieldEmailPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldEmailPersonalKeyTyped(evt);
+            }
+        });
+        jPanelConsultarDatosPersonales.add(jTextFieldEmailPersonal);
+        jTextFieldEmailPersonal.setBounds(567, 192, 289, 28);
+
+        jTextFieldFechaNacimientoAnioPersonal.setEditable(false);
+        jTextFieldFechaNacimientoAnioPersonal.setText("1950");
+        jPanelConsultarDatosPersonales.add(jTextFieldFechaNacimientoAnioPersonal);
+        jTextFieldFechaNacimientoAnioPersonal.setBounds(257, 377, 50, 28);
+
+        jTextFieldContraseniaPersonal.setColumns(8);
+        jTextFieldContraseniaPersonal.setEditable(false);
+        jPanelConsultarDatosPersonales.add(jTextFieldContraseniaPersonal);
+        jTextFieldContraseniaPersonal.setBounds(729, 270, 114, 28);
+
+        jButtonMasMesPersonal.setText("+");
+        jButtonMasMesPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMasMesPersonalMouseClicked(evt);
+            }
+        });
+        jButtonMasMesPersonal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMasMesPersonalActionPerformed(evt);
+            }
+        });
+        jPanelConsultarDatosPersonales.add(jButtonMasMesPersonal);
+        jButtonMasMesPersonal.setBounds(207, 337, 50, 40);
+
+        jLabelFechaNacimientoPersonal.setText("Fecha nacimiento");
+        jPanelConsultarDatosPersonales.add(jLabelFechaNacimientoPersonal);
+        jLabelFechaNacimientoPersonal.setBounds(157, 317, 140, 18);
+
+        jButtonGuardar.setText("Guardar");
+        jButtonGuardar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonGuardarMouseClicked(evt);
+            }
+        });
+        jButtonGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGuardarActionPerformed(evt);
+            }
+        });
+        jPanelConsultarDatosPersonales.add(jButtonGuardar);
+        jButtonGuardar.setBounds(430, 460, 130, 39);
+
+        jButtonFotoPersonal.setText("Añadir foto");
+        jButtonFotoPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonFotoPersonalMouseClicked(evt);
+            }
+        });
+        jButtonFotoPersonal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonFotoPersonalActionPerformed(evt);
+            }
+        });
+        jPanelConsultarDatosPersonales.add(jButtonFotoPersonal);
+        jButtonFotoPersonal.setBounds(590, 350, 120, 30);
+
+        jLabelInfoFotoPersonal.setFont(new java.awt.Font("Lucida Grande", 0, 10));
+        jLabelInfoFotoPersonal.setText("Tam max 130x150 pix");
+        jPanelConsultarDatosPersonales.add(jLabelInfoFotoPersonal);
+        jLabelInfoFotoPersonal.setBounds(600, 380, 108, 13);
+
+        jLabel8.setText("Tipo personal");
+        jPanelConsultarDatosPersonales.add(jLabel8);
+        jLabel8.setBounds(440, 330, 110, 18);
+
+        jRadioButtonFarmaceutico.setText("Farmacéutico");
+        jRadioButtonFarmaceutico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonFarmaceuticoActionPerformed(evt);
+            }
+        });
+        jPanelConsultarDatosPersonales.add(jRadioButtonFarmaceutico);
+        jRadioButtonFarmaceutico.setBounds(440, 370, 130, 24);
+
+        jRadioButtonAnalista.setText("Analista");
+        jPanelConsultarDatosPersonales.add(jRadioButtonAnalista);
+        jRadioButtonAnalista.setBounds(440, 350, 100, 24);
+
+        jRadioButtonRadiologo.setText("Radiólogo");
+        jRadioButtonRadiologo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonRadiologoActionPerformed(evt);
+            }
+        });
+        jPanelConsultarDatosPersonales.add(jRadioButtonRadiologo);
+        jRadioButtonRadiologo.setBounds(440, 410, 120, 24);
+
+        jRadioButtonMedico.setText("Médico");
+        jRadioButtonMedico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonMedicoActionPerformed(evt);
+            }
+        });
+        jPanelConsultarDatosPersonales.add(jRadioButtonMedico);
+        jRadioButtonMedico.setBounds(440, 390, 110, 24);
+
+        jPanelConsultarDatosPersonales.setBounds(-60, -15, 960, 830);
+        ZonaTrabajo.add(jPanelConsultarDatosPersonales, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelPrincipal.setPreferredSize(new java.awt.Dimension(901, 531));
 
@@ -478,15 +856,15 @@ public class UI_Analista extends javax.swing.JFrame {
                     .add(jPanelPrincipalLayout.createSequentialGroup()
                         .add(67, 67, 67)
                         .add(jLabelAlamcenarResultados, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 162, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(163, Short.MAX_VALUE))
+                .addContainerGap(165, Short.MAX_VALUE))
         );
         jPanelPrincipalLayout.setVerticalGroup(
             jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelPrincipalLayout.createSequentialGroup()
                 .add(29, 29, 29)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jButtonConsultarDatosPersonales, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
-                    .add(jButtonConsultarTurno, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE))
+                    .add(jButtonConsultarDatosPersonales, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(jButtonConsultarTurno, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelConsultarDatosPersonales)
@@ -512,306 +890,6 @@ public class UI_Analista extends javax.swing.JFrame {
 
         jPanelPrincipal.setBounds(-9, 1, 910, 540);
         ZonaTrabajo.add(jPanelPrincipal, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        jPanelConsultarDatosPersonales.setPreferredSize(new java.awt.Dimension(901, 531));
-        jPanelConsultarDatosPersonales.setLayout(null);
-
-        jLabel3.setText("___________________________________________________________________");
-        jPanelConsultarDatosPersonales.add(jLabel3);
-        jLabel3.setBounds(256, 59, 469, 17);
-
-        jLabelGestionarPaciente4.setFont(new java.awt.Font("Lucida Grande", 1, 48));
-        jLabelGestionarPaciente4.setText("Gestionar Personal");
-        jPanelConsultarDatosPersonales.add(jLabelGestionarPaciente4);
-        jLabelGestionarPaciente4.setBounds(257, 20, 516, 57);
-
-        jTextFieldNombrePersonal.setEditable(false);
-        jTextFieldNombrePersonal.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldNombrePersonalKeyTyped(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jTextFieldNombrePersonal);
-        jTextFieldNombrePersonal.setBounds(157, 126, 210, 27);
-
-        jLabelFotoPersonal.setBackground(new java.awt.Color(255, 255, 255));
-        jLabelFotoPersonal.setForeground(new java.awt.Color(255, 255, 255));
-        jPanelConsultarDatosPersonales.add(jLabelFotoPersonal);
-        jLabelFotoPersonal.setBounds(720, 330, 130, 150);
-
-        jTextFieldTelefonoPersonal.setEditable(false);
-        jTextFieldTelefonoPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldTelefonoPersonalKeyTyped(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jTextFieldTelefonoPersonal);
-        jTextFieldTelefonoPersonal.setBounds(157, 270, 130, 27);
-
-        jLabelContraseniaPersonal.setText("Contraseña");
-        jPanelConsultarDatosPersonales.add(jLabelContraseniaPersonal);
-        jLabelContraseniaPersonal.setBounds(729, 250, 100, 17);
-
-        jTextFieldDNIPersonal.setEditable(false);
-        jTextFieldDNIPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldDNIPersonalKeyTyped(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jTextFieldDNIPersonal);
-        jTextFieldDNIPersonal.setBounds(757, 126, 95, 27);
-
-        jLabelNombrePersonal.setText("Nombre");
-        jPanelConsultarDatosPersonales.add(jLabelNombrePersonal);
-        jLabelNombrePersonal.setBounds(157, 96, 80, 17);
-
-        jLabelFotografiaersonal.setText("Fotografía");
-        jPanelConsultarDatosPersonales.add(jLabelFotografiaersonal);
-        jLabelFotografiaersonal.setBounds(610, 330, 100, 17);
-
-        jLabelDNIPersonal.setText("DNI");
-        jPanelConsultarDatosPersonales.add(jLabelDNIPersonal);
-        jLabelDNIPersonal.setBounds(757, 96, 40, 17);
-
-        jTextFieldLugarNacimientoPersonal.setEditable(false);
-        jTextFieldLugarNacimientoPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldLugarNacimientoPersonalKeyTyped(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jTextFieldLugarNacimientoPersonal);
-        jTextFieldLugarNacimientoPersonal.setBounds(350, 270, 300, 27);
-
-        jLabelTelefonoPersonal.setText("Teléfono");
-        jPanelConsultarDatosPersonales.add(jLabelTelefonoPersonal);
-        jLabelTelefonoPersonal.setBounds(157, 250, 70, 17);
-
-        jTextFieldFechaNacimientoMesersonal.setEditable(false);
-        jTextFieldFechaNacimientoMesersonal.setText("1");
-        jTextFieldFechaNacimientoMesersonal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldFechaNacimientoMesersonalActionPerformed(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jTextFieldFechaNacimientoMesersonal);
-        jTextFieldFechaNacimientoMesersonal.setBounds(217, 377, 33, 27);
-
-        jLabelLugarNacimientoPersonal.setText("Lugar nacimiento");
-        jPanelConsultarDatosPersonales.add(jLabelLugarNacimientoPersonal);
-        jLabelLugarNacimientoPersonal.setBounds(350, 250, 140, 17);
-
-        jLabelDireccionPersonal.setText("Dirección");
-        jPanelConsultarDatosPersonales.add(jLabelDireccionPersonal);
-        jLabelDireccionPersonal.setBounds(157, 172, 80, 17);
-
-        jButtonMenosAnioPersona.setText("-");
-        jButtonMenosAnioPersona.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMenosAnioPersonaMouseClicked(evt);
-            }
-        });
-        jButtonMenosAnioPersona.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMenosAnioPersonaActionPerformed(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jButtonMenosAnioPersona);
-        jButtonMenosAnioPersona.setBounds(257, 407, 50, 40);
-
-        jLabelApellidosPersonal.setText("Apellidos");
-        jPanelConsultarDatosPersonales.add(jLabelApellidosPersonal);
-        jLabelApellidosPersonal.setBounds(407, 96, 80, 17);
-
-        jTextFieldApellidosPersonal.setEditable(false);
-        jTextFieldApellidosPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldApellidosPersonalKeyTyped(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jTextFieldApellidosPersonal);
-        jTextFieldApellidosPersonal.setBounds(407, 126, 290, 27);
-
-        jButtonMasDiaPersonal.setText("+");
-        jButtonMasDiaPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMasDiaPersonalMouseClicked(evt);
-            }
-        });
-        jButtonMasDiaPersonal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMasDiaPersonalActionPerformed(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jButtonMasDiaPersonal);
-        jButtonMasDiaPersonal.setBounds(157, 337, 50, 40);
-
-        jButtonMenosMesPersonal.setText("-");
-        jButtonMenosMesPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMenosMesPersonalMouseClicked(evt);
-            }
-        });
-        jButtonMenosMesPersonal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMenosMesPersonalActionPerformed(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jButtonMenosMesPersonal);
-        jButtonMenosMesPersonal.setBounds(207, 407, 50, 40);
-
-        jButtonMenosDiaPersonal.setText("-");
-        jButtonMenosDiaPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMenosDiaPersonalMouseClicked(evt);
-            }
-        });
-        jButtonMenosDiaPersonal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMenosDiaPersonalActionPerformed(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jButtonMenosDiaPersonal);
-        jButtonMenosDiaPersonal.setBounds(157, 407, 50, 40);
-
-        jLabelEmailPersonal.setText("Email");
-        jPanelConsultarDatosPersonales.add(jLabelEmailPersonal);
-        jLabelEmailPersonal.setBounds(567, 172, 80, 17);
-
-        jTextFieldDireccionPersonal.setEditable(false);
-        jTextFieldDireccionPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldDireccionPersonalKeyTyped(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jTextFieldDireccionPersonal);
-        jTextFieldDireccionPersonal.setBounds(157, 192, 370, 27);
-
-        jTextFieldFechaNacimientoDiaPersonal.setEditable(false);
-        jTextFieldFechaNacimientoDiaPersonal.setText("1");
-        jPanelConsultarDatosPersonales.add(jTextFieldFechaNacimientoDiaPersonal);
-        jTextFieldFechaNacimientoDiaPersonal.setBounds(167, 377, 33, 27);
-
-        jButtonMasAnioPersonal.setText("+");
-        jButtonMasAnioPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMasAnioPersonalMouseClicked(evt);
-            }
-        });
-        jButtonMasAnioPersonal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMasAnioPersonalActionPerformed(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jButtonMasAnioPersonal);
-        jButtonMasAnioPersonal.setBounds(257, 337, 50, 40);
-
-        jTextFieldEmailPersonal.setEditable(false);
-        jTextFieldEmailPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldEmailPersonalKeyTyped(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jTextFieldEmailPersonal);
-        jTextFieldEmailPersonal.setBounds(567, 192, 289, 27);
-
-        jTextFieldFechaNacimientoAnioPersonal.setEditable(false);
-        jTextFieldFechaNacimientoAnioPersonal.setText("1950");
-        jPanelConsultarDatosPersonales.add(jTextFieldFechaNacimientoAnioPersonal);
-        jTextFieldFechaNacimientoAnioPersonal.setBounds(257, 377, 50, 27);
-
-        jTextFieldContraseniaPersonal.setColumns(8);
-        jTextFieldContraseniaPersonal.setEditable(false);
-        jPanelConsultarDatosPersonales.add(jTextFieldContraseniaPersonal);
-        jTextFieldContraseniaPersonal.setBounds(729, 270, 114, 27);
-
-        jButtonMasMesPersonal.setText("+");
-        jButtonMasMesPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMasMesPersonalMouseClicked(evt);
-            }
-        });
-        jButtonMasMesPersonal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMasMesPersonalActionPerformed(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jButtonMasMesPersonal);
-        jButtonMasMesPersonal.setBounds(207, 337, 50, 40);
-
-        jLabelFechaNacimientoPersonal.setText("Fecha nacimiento");
-        jPanelConsultarDatosPersonales.add(jLabelFechaNacimientoPersonal);
-        jLabelFechaNacimientoPersonal.setBounds(157, 317, 140, 17);
-
-        jButtonGuardar.setText("Guardar");
-        jButtonGuardar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonGuardarMouseClicked(evt);
-            }
-        });
-        jButtonGuardar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonGuardarActionPerformed(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jButtonGuardar);
-        jButtonGuardar.setBounds(430, 460, 130, 39);
-
-        jButtonFotoPersonal.setText("Añadir foto");
-        jButtonFotoPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonFotoPersonalMouseClicked(evt);
-            }
-        });
-        jButtonFotoPersonal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonFotoPersonalActionPerformed(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jButtonFotoPersonal);
-        jButtonFotoPersonal.setBounds(590, 350, 120, 29);
-
-        jLabelInfoFotoPersonal.setFont(new java.awt.Font("Lucida Grande", 0, 10));
-        jLabelInfoFotoPersonal.setText("Tam max 130x150 pix");
-        jPanelConsultarDatosPersonales.add(jLabelInfoFotoPersonal);
-        jLabelInfoFotoPersonal.setBounds(600, 380, 108, 13);
-
-        jLabel8.setText("Tipo personal");
-        jPanelConsultarDatosPersonales.add(jLabel8);
-        jLabel8.setBounds(440, 330, 110, 17);
-
-        jRadioButtonFarmaceutico.setText("Farmacéutico");
-        jRadioButtonFarmaceutico.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonFarmaceuticoActionPerformed(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jRadioButtonFarmaceutico);
-        jRadioButtonFarmaceutico.setBounds(440, 370, 130, 24);
-
-        jRadioButtonAnalista.setText("Analista");
-        jPanelConsultarDatosPersonales.add(jRadioButtonAnalista);
-        jRadioButtonAnalista.setBounds(440, 350, 100, 24);
-
-        jRadioButtonRadiologo.setText("Radiólogo");
-        jRadioButtonRadiologo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonRadiologoActionPerformed(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jRadioButtonRadiologo);
-        jRadioButtonRadiologo.setBounds(440, 410, 120, 24);
-
-        jRadioButtonMedico.setText("Médico");
-        jRadioButtonMedico.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonMedicoActionPerformed(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jRadioButtonMedico);
-        jRadioButtonMedico.setBounds(440, 390, 110, 24);
-
-        jPanelConsultarDatosPersonales.setBounds(-60, -15, 960, 830);
-        ZonaTrabajo.add(jPanelConsultarDatosPersonales, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelConsultarTurno.setMinimumSize(new java.awt.Dimension(901, 510));
         jPanelConsultarTurno.setPreferredSize(new java.awt.Dimension(901, 531));
@@ -1120,7 +1198,7 @@ public class UI_Analista extends javax.swing.JFrame {
                 .addContainerGap(409, Short.MAX_VALUE))
             .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(jPanelConsultarTurnoLayout.createSequentialGroup()
-                    .add(50, 115, Short.MAX_VALUE)
+                    .add(50, 113, Short.MAX_VALUE)
                     .add(jLabel9)
                     .add(24, 24, 24)
                     .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1165,10 +1243,10 @@ public class UI_Analista extends javax.swing.JFrame {
                         .add(jButtonMenosMesFechaFinTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(jButtonMenosAnioFechaFinTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(jRadioButtonNoche))
-                    .add(0, 66, Short.MAX_VALUE)))
+                    .add(0, 64, Short.MAX_VALUE)))
         );
 
-        jPanelConsultarTurno.setBounds(0, 0, 860, -1);
+        jPanelConsultarTurno.setBounds(0, 0, 860, 531);
         ZonaTrabajo.add(jPanelConsultarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente7.setFont(new java.awt.Font("Lucida Grande", 1, 36));
@@ -1292,89 +1370,11 @@ public class UI_Analista extends javax.swing.JFrame {
                         .add(jLabel6)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(jTextFieldValorLinfocitos, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 38, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         jPanelAlmacenarResultados.setBounds(10, 30, 870, 510);
         ZonaTrabajo.add(jPanelAlmacenarResultados, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        jLabelGestionarPaciente9.setFont(new java.awt.Font("Lucida Grande", 1, 36));
-        jLabelGestionarPaciente9.setText("Eliminar Atributo Análisis");
-
-        jButtonGuardarAtributo1.setText("Eliminar");
-        jButtonGuardarAtributo1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonGuardarAtributo1MouseClicked(evt);
-            }
-        });
-
-        jRadioButtonOrina2.setText("Orina");
-
-        jRadioButtonSangre2.setText("Sangre");
-        jRadioButtonSangre2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonSangre2ActionPerformed(evt);
-            }
-        });
-
-        jLabel12.setText("Tipo  de Prueba");
-
-        jTextFieldNombreAtributo1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNombreAtributo1ActionPerformed(evt);
-            }
-        });
-
-        jLabelNombreAtributo1.setText("Nombre del atributo a eliminar:   ");
-
-        jLabel13.setText("_____________________________________________________________________________");
-
-        org.jdesktop.layout.GroupLayout jPanelEliminarAtributoLayout = new org.jdesktop.layout.GroupLayout(jPanelEliminarAtributo);
-        jPanelEliminarAtributo.setLayout(jPanelEliminarAtributoLayout);
-        jPanelEliminarAtributoLayout.setHorizontalGroup(
-            jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelEliminarAtributoLayout.createSequentialGroup()
-                .addContainerGap(127, Short.MAX_VALUE)
-                .add(jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanelEliminarAtributoLayout.createSequentialGroup()
-                        .add(21, 21, 21)
-                        .add(jLabelGestionarPaciente9))
-                    .add(jPanelEliminarAtributoLayout.createSequentialGroup()
-                        .add(jLabelNombreAtributo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 242, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jTextFieldNombreAtributo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 125, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jLabel13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 591, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                        .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel12, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .add(org.jdesktop.layout.GroupLayout.LEADING, jRadioButtonOrina2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
-                        .add(org.jdesktop.layout.GroupLayout.LEADING, jRadioButtonSangre2)
-                        .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonGuardarAtributo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 115, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .add(80, 80, 80))
-        );
-        jPanelEliminarAtributoLayout.setVerticalGroup(
-            jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelEliminarAtributoLayout.createSequentialGroup()
-                .add(26, 26, 26)
-                .add(jLabelGestionarPaciente9)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jLabel13)
-                .add(42, 42, 42)
-                .add(jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabelNombreAtributo1)
-                    .add(jTextFieldNombreAtributo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(32, 32, 32)
-                .add(jLabel12)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jRadioButtonSangre2)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jRadioButtonOrina2)
-                .add(30, 30, 30)
-                .add(jButtonGuardarAtributo1)
-                .addContainerGap(49, Short.MAX_VALUE))
-        );
-
-        jPanelEliminarAtributo.setBounds(0, 0, -1, -1);
-        ZonaTrabajo.add(jPanelEliminarAtributo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         getContentPane().add(ZonaTrabajo);
         ZonaTrabajo.setBounds(13, 185, 890, 550);
@@ -1384,7 +1384,7 @@ public class UI_Analista extends javax.swing.JFrame {
 
         jLabelUsuario.setText("Usuario:");
         jPanelUsuario.add(jLabelUsuario);
-        jLabelUsuario.setBounds(90, 0, 120, 17);
+        jLabelUsuario.setBounds(90, 0, 120, 18);
 
         jLabelTipoUsuario.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelTipoUsuario.setText("Tipo Usuario");

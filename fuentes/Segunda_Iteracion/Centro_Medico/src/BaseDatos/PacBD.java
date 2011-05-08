@@ -80,7 +80,7 @@ public class PacBD {
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "SELECT * FROM Pacientes WHERE Dni='"+Dni+"'";
+        String Consulta = "SELECT * FROM Paciente WHERE DNI_PACIENTE='"+Dni+"'";
         ResultSet rs = conexion.consultaSelect(Consulta);
         if(rs.next()) {
             String dni=rs.getString("Dni");
