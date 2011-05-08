@@ -16,7 +16,7 @@ import CentroMedico.*;
 import BaseDatos.*;
 import java.util.Calendar.*;
 import java.util.Calendar;
-
+import java.awt.Color;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -69,6 +69,9 @@ public class UI_Radiologo extends javax.swing.JFrame {
         buttonGroup3.add(jRadioButtonRadiologia);
         buttonGroup3.add(jRadioButtonResonancia);
         jRadioButtonRadiologia.setSelected(true);
+
+
+        jLabelError.setVisible(false);
     }
 
     /** This method is called from within the constructor to
@@ -181,10 +184,15 @@ public class UI_Radiologo extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabelImagenes = new javax.swing.JLabel();
         scrollPaneImagenes = new java.awt.ScrollPane();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jListImagenes = new javax.swing.JList();
         jLabelComentarios = new javax.swing.JLabel();
         scrollPaneComentarios = new java.awt.ScrollPane();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextAreaComentario = new javax.swing.JTextArea();
         jButtonAnadirImagen = new javax.swing.JButton();
         jButtonAlmacenarResultadoRadiologo = new javax.swing.JButton();
+        jLabelError = new javax.swing.JLabel();
         jPanelUsuario = new javax.swing.JPanel();
         jLabelUsuario = new javax.swing.JLabel();
         jLabelTipoUsuario = new javax.swing.JLabel();
@@ -1033,15 +1041,30 @@ public class UI_Radiologo extends javax.swing.JFrame {
 
         jRadioButtonResonancia.setText("Resonancia");
 
-        jLabel2.setText("Prueba");
+        jLabel2.setText("Tipo de Prueba");
 
         jLabelImagenes.setText("Imagenes");
 
         scrollPaneImagenes.setBackground(new java.awt.Color(254, 253, 253));
 
+        jListImagenes.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jListImagenes);
+
+        scrollPaneImagenes.add(jScrollPane1);
+
         jLabelComentarios.setText("Comentarios");
 
         scrollPaneComentarios.setBackground(new java.awt.Color(254, 254, 254));
+
+        jTextAreaComentario.setColumns(20);
+        jTextAreaComentario.setRows(5);
+        jScrollPane2.setViewportView(jTextAreaComentario);
+
+        scrollPaneComentarios.add(jScrollPane2);
 
         jButtonAnadirImagen.setText("Añadir Imagen");
         jButtonAnadirImagen.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1056,6 +1079,15 @@ public class UI_Radiologo extends javax.swing.JFrame {
         });
 
         jButtonAlmacenarResultadoRadiologo.setText("Guardar");
+        jButtonAlmacenarResultadoRadiologo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonAlmacenarResultadoRadiologoMouseClicked(evt);
+            }
+        });
+
+        jLabelError.setForeground(new java.awt.Color(255, 0, 0));
+        jLabelError.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Error.png"))); // NOI18N
+        jLabelError.setText("Debe rellenar todos los campos");
 
         org.jdesktop.layout.GroupLayout jPanelAlmacenarResultadosLayout = new org.jdesktop.layout.GroupLayout(jPanelAlmacenarResultados);
         jPanelAlmacenarResultados.setLayout(jPanelAlmacenarResultadosLayout);
@@ -1082,21 +1114,22 @@ public class UI_Radiologo extends javax.swing.JFrame {
                                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
                                         .add(86, 86, 86)
                                         .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                                            .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                                                .add(30, 30, 30)
-                                                .add(jLabel2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 66, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                             .add(jRadioButtonResonancia, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
-                                            .add(jRadioButtonRadiologia, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                            .add(jRadioButtonRadiologia, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .add(jLabel2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
                                         .add(23, 23, 23)
-                                        .add(jButtonAnadirImagen, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 181, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))))
-                    .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                        .add(298, 298, 298)
-                        .add(jButtonAlmacenarResultadoRadiologo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 116, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                        .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                            .add(jLabelError, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 263, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                            .add(jButtonAnadirImagen, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 181, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
+                                .add(154, 154, 154))))
                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
                         .add(107, 107, 107)
-                        .add(jLabelGestionarPaciente7)))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .add(jLabelGestionarPaciente7))
+                    .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
+                        .add(289, 289, 289)
+                        .add(jButtonAlmacenarResultadoRadiologo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 116, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
         jPanelAlmacenarResultadosLayout.setVerticalGroup(
             jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1124,12 +1157,15 @@ public class UI_Radiologo extends javax.swing.JFrame {
                     .add(scrollPaneImagenes, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 84, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jButtonAnadirImagen))
                 .add(17, 17, 17)
-                .add(jLabelComentarios)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(scrollPaneComentarios, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
+                        .add(jLabelComentarios)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(scrollPaneComentarios, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 70, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jLabelError))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jButtonAlmacenarResultadoRadiologo)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         jPanelAlmacenarResultados.setBounds(10, 30, 870, 510);
@@ -1739,6 +1775,15 @@ public class UI_Radiologo extends javax.swing.JFrame {
         cargarFoto("GestionarPersonal");
     }//GEN-LAST:event_jButtonAnadirImagenMouseClicked
 
+    private void jButtonAlmacenarResultadoRadiologoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAlmacenarResultadoRadiologoMouseClicked
+        // TODO add your handling code here:
+       // if(compruebaFormulario("almacenar"))
+
+     //   else
+         //   jLabelError.setVisible(true);
+
+    }//GEN-LAST:event_jButtonAlmacenarResultadoRadiologoMouseClicked
+
 
     /*Comprueba que la fecha introducida es correcta
      * 
@@ -1860,7 +1905,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
             /**Hacemos visible el botón jLabelIconoInicio*/
             jLabelInicio.setVisible(false);
             jLabelIconoInicio.setVisible(false);
-
+            jLabelError.setVisible(false);
             /**Hacemos visible el panel seleccionado*/
             jPanelPrincipal.setVisible(true);
             jPanelConsultarDatosPersonales.setVisible(false);
@@ -2013,7 +2058,28 @@ public class UI_Radiologo extends javax.swing.JFrame {
         jTextFieldEmailPersonal.setText(usu.getEmail());
         jTextFieldLugarNacimientoPersonal.setText(usu.getLugarNac());
     }
-    
+
+
+    private boolean compruebaFormulario(String formulario){
+
+        if(formulario.equals("Almacenar")){
+
+            if(jTextFieldAlmacenarDni.getText().length() == 0){
+                jLabelAlmacenarDni.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelAlmacenarDni.setForeground(Color.black);
+                }
+            if(jTextAreaComentario.getText().length() == 0){
+                jLabelComentarios.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelComentarios.setForeground(Color.black);
+                }
+        }
+        return true;
+    }
+
     // @param args the command line arguments
     
 /*    public static void main(String args[]) {
@@ -2073,6 +2139,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelDNITurno;
     private javax.swing.JLabel jLabelDireccionPersonal;
     private javax.swing.JLabel jLabelEmailPersonal;
+    private javax.swing.JLabel jLabelError;
     private javax.swing.JLabel jLabelFechaFinTurno;
     private javax.swing.JLabel jLabelFechaInicioTurno;
     private javax.swing.JLabel jLabelFechaNacimientoPersonal;
@@ -2098,6 +2165,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelTipoUsuarioIdentificado;
     private javax.swing.JLabel jLabelTurnoTrabajo;
     private javax.swing.JLabel jLabelUsuario;
+    private javax.swing.JList jListImagenes;
     private javax.swing.JPanel jPanelAlmacenarResultados;
     private javax.swing.JPanel jPanelConsultarDatosPersonales;
     private javax.swing.JPanel jPanelConsultarTurno;
@@ -2112,8 +2180,11 @@ public class UI_Radiologo extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButtonRadiologo;
     private javax.swing.JRadioButton jRadioButtonResonancia;
     private javax.swing.JRadioButton jRadioButtonTarde1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JTextArea jTextAreaComentario;
     private javax.swing.JTextArea jTextAreaInfoConsultaTurno;
     private javax.swing.JTextArea jTextAreaInfoTurno;
     private javax.swing.JTextField jTextFieldAlmacenarDni;
