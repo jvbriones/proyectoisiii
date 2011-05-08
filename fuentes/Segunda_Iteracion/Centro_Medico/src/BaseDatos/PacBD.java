@@ -13,7 +13,8 @@ package BaseDatos;
 
 import CentroMedico.Paciente;
 import java.sql.*;
-
+import CentroMedico.Usuario;
+import org.hibernate.Session;
 
 /**
  * @version     1.1     16/04/2011
@@ -102,4 +103,42 @@ public class PacBD {
         conexion.closeConnection();
         return paciente;
     }
+
+        public Paciente obtener(String Dni) throws SQLException{
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+        Usuario usuario = (Usuario) session.get(Usuario.class, Dni);
+
+        Paciente paciente = new Paciente(usuario.getDNI(), usuario.getNombre(), usuario.getApellidos(), usuario.getDireccion(), usuario.getEmail(), usuario.getContrasenia(), usuario.getTelefono(), usuario.getFecNac(), usuario.getLugarNac(), usuario.getFoto(), "Paciente");
+
+        return paciente;
+    }
+    //public Usuario obtenerUsuarioNombre(String nombre) throws SQLException {}
+
+    public void almacenar(Paciente paciente){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+        session.save (paciente);
+        session.getTransaction().commit();
+    }
+
+    public void actualizar (Paciente paciente){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+        session.update (paciente);
+        session.getTransaction().commit();
+    }
+
+    public void eliminar(Paciente paciente){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+        session.delete (paciente);
+        session.getTransaction().commit();
+
+    }
+
 }
