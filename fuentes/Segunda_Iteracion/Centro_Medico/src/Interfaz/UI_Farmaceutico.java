@@ -2715,7 +2715,8 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
     private void jButtonConsultarLoteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarLoteMouseClicked
         // TODO add your handling code here:
-        mostrarPanel("ModificarLote");
+
+       if(compruebaFormulario("ConsultarMedicamentoLote")){
 
         GestorFarmacia gesFar = new GestorFarmacia();
         String CodBarras = jTextFieldCodLote.getText(); // duda
@@ -2731,6 +2732,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
         else{
 
+           mostrarPanel("ModificarLote");
            String numExistenc=String.valueOf( Lo.getExistencias());
 
            Calendar calendar = Calendar.getInstance();
@@ -2749,6 +2751,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
            jTextFieldExistencias1.setText(numExistenc);
            jTextFieldFechaCaducidad.setText(dateString);
 
+        }
         }
 
     }//GEN-LAST:event_jButtonConsultarLoteMouseClicked
