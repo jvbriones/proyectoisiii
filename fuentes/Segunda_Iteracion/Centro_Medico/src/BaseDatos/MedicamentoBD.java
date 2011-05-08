@@ -31,7 +31,7 @@ public class MedicamentoBD  implements Serializable{
 
         session.beginTransaction ();
         Medicamento Med = (Medicamento) session.get(Medicamento.class, Nombre);
-        session.getTransaction().commit();
+        
         return Med;
     }
 
