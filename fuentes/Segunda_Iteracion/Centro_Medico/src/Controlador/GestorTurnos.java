@@ -12,7 +12,7 @@
 package Controlador;
 
 import CentroMedico.Turno;
-import BaseDatos.turnoBD;
+import BaseDatos.TurnoBD;
 import java.sql.SQLException;
 import java.util.Date;
 import java.text.SimpleDateFormat;
@@ -27,7 +27,7 @@ public class GestorTurnos {
     
     public String altaTurno(String tipo)throws SQLException {
         String exito=new String();
-        turnoBD bd_turno=new turnoBD();
+        TurnoBD bd_turno=new TurnoBD();
         boolean existe;
         
         existe=bd_turno.existeTurno(tipo);
@@ -49,7 +49,7 @@ public class GestorTurnos {
     public String bajaTurno(String Dni)throws SQLException {
         boolean existe;
         String existeSalida=new String();
-        turnoBD bd_turno=new turnoBD();
+        TurnoBD bd_turno=new TurnoBD();
 
         existe=bd_turno.existeTurno(Dni);
 
@@ -79,7 +79,7 @@ public class GestorTurnos {
         existe=gestorPers.existePersonal(Dni);
 
         if(existe){
-            turnoBD bd_turno=new turnoBD();
+            TurnoBD bd_turno=new TurnoBD();
             SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
             
             bd_turno.asignaTurno(Dni,fechaInicio,fechaFin,tipo);
@@ -101,7 +101,7 @@ public class GestorTurnos {
         existe=gestorPers.existePersonal(Dni);
 
         if(existe){
-            turnoBD bd_turno=new turnoBD();
+            TurnoBD bd_turno=new TurnoBD();
             // Esta variable es necesario tenerla para convertir tipo "Date" a String
             SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
 
@@ -124,7 +124,7 @@ public class GestorTurnos {
         existe=gestorPers.existePersonal(Dni);
 
         if(existe){
-            turnoBD bd_turno=new turnoBD();
+            TurnoBD bd_turno=new TurnoBD();
             boolean existe2;
 
             existe2=bd_turno.existeTurno(Dni);
