@@ -51,7 +51,7 @@ public class LoteMedicamento implements Serializable{
         return Medicamento;
     }
 
-    public String getNOMBRE_MEDICAMENTO (){
+    public String getNombre (){
         return Medicamento.getNombre();
     }
 
