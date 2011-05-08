@@ -10,6 +10,9 @@ import org.hibernate.Session;
 import java.util.Set;
 import java.io.Serializable;
 import org.hibernate.Criteria;
+import java.util.HashSet;
+import org.hibernate.Query;
+import java.util.List;
 
 /**
  *
@@ -52,24 +55,14 @@ public class MedicamentoBD  implements Serializable{
     }
     
     public Set<Medicamento> obtenerTodosMedicamentos (){
+
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction ();
 
-
-        Criteria criteria = session.createCriteria ( Medicamento.class );
-        System.out.println ("Medicamentos Encontrados:" + criteria.list ().size ());
-        for ( Object medicamento_obj : criteria.list () )
-        {
-            Medicamento med = (Medicamento) medicamento_obj;
-            if(med.getNombre() == null ? Dni == null : paciente.getDni().equals(Dni)) {
-                System.out.println ( " Encontrado " );
-                session.getTransaction ().commit ();
-                return paciente;
-            }
-        }
-
-
-
-        return null;
+        List<Medicamento> result = (List<Medicamento>)session.createQuery("from Medicamento").list();
+        Set<Medicamento> medicamentos = new HashSet<Medicamento>(result);
+        
+        
+        return medicamentos;
     }
 }
