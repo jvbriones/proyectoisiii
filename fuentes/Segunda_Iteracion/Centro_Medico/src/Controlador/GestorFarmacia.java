@@ -81,8 +81,6 @@ public class GestorFarmacia {
        
        MedicamentoBD meBD=new MedicamentoBD();
        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-
-
         session.beginTransaction ();
 
        if( Me != null){
@@ -111,9 +109,7 @@ public class GestorFarmacia {
             LoteMedicamento lote = new LoteMedicamento(CodBarras,Existencias,FechaCaducidad);
             lote.setMedicamento(Me);
 
-            if(Me==null){
-                System.out.println("Hola");
-            }
+         
             loBD.almacenar(lote);
             Me.anadirAlArray(lote);
             Me.actualizaStock(Existencias);
@@ -134,52 +130,36 @@ public class GestorFarmacia {
 
     public LoteMedicamento consultarLoteMedicamento (String CodBarras, Medicamento Me){
         LoteMedicamento Lo=new LoteMedicamento();
-    
-
-        
-
         LoteMedicamento Aux=new LoteMedicamento();
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session.beginTransaction ();
         Set<LoteMedicamento> lotes = Me.getLotesMedicamento();
-
-
-        if( lotes == null)
-            System.out.println("alaaaaaa");
-
         for( Iterator it = lotes.iterator(); it.hasNext();) {
 	    Aux = (LoteMedicamento)it.next();
-            System.out.println(Aux.getCodBarras());
-	    if( Aux.getCodBarras().equals(CodBarras)){
-
-
+            //System.out.println(Aux.getCodBarras());
+	    if( Aux.getCodBarras().equals(CodBarras))
                 Lo = Aux;
                 
-            }
+            
          }
+         Connection con = session.close();
          
 
          return Lo;
     }
 
 
-    public boolean modificarLoteMedicamento( String CodBarras,int Existencias, Date FechaCaducidad,Medicamento Me ){
+    public boolean modificarLoteMedicamento(LoteMedicamento Lo,Medicamento Me){
 
         LoteMedicamentoBD loBD = new LoteMedicamentoBD();
-        LoteMedicamento Lo= new LoteMedicamento();
         MedicamentoBD meBD=new MedicamentoBD();
-
-
-        Lo= loBD.obtener(CodBarras);
 
         if( Lo!= null)
             return false;
 
         else{
 
-            Lo.setCodBarras(CodBarras);
-            Lo.setExistencias(Existencias);
-            Lo.setFechaCaducidad(FechaCaducidad);
-            Me.actualizaStock(Existencias);
-            Me.actualizaLote(CodBarras);
+            Me.actualizaStock(Lo.getExistencias());
             loBD.almacenar(Lo);
             meBD.almacenar(Me);
 
@@ -188,23 +168,21 @@ public class GestorFarmacia {
 
     }
     
-    public boolean eliminarLoteMedicamento ( String CodBarras, Medicamento Me){
+    public boolean eliminarLoteMedicamento ( LoteMedicamento Lo){
         
        
          MedicamentoBD meBD=new MedicamentoBD();
          LoteMedicamentoBD loBD= new LoteMedicamentoBD();
-         LoteMedicamento Lo = this.consultarLoteMedicamento(CodBarras,Me);
+         Medicamento Me = Lo.getMedicamento();
          if( Lo == null)
              return false; 
          else{
              int Existencias = Lo.getExistencias();
-             Me.actualizaLote(CodBarras);
              Me.actualizaStock(-Existencias);//aquí debe restar las existencias
-             Me.eliminarLote(CodBarras);
-
-
-             loBD.almacenar(Lo); // tengo mis dudas porque loBD es nulo
+             //Me.eliminarLote(Lo.getCodBarras());
+             loBD.eliminar(Lo);
              meBD.almacenar(Me);
+
              return true;
         }
     }
@@ -346,35 +324,39 @@ public class GestorFarmacia {
         LoteMedicamentoBD loteBD = new LoteMedicamentoBD();
         LoteMedicamento lote = new LoteMedicamento();
         Set<Medicamento> me;
-        ArrayList<LoteMedicamento> lotesMedica=new ArrayList();
-
+        Set<LoteMedicamento> lotesMedica;
+        String nombreLo;
         ArrayList<ArrayList < String > > li = new ArrayList();
         ArrayList< String> Atributos = new ArrayList();
         me= meBD.obtenerTodosMedicamentos(); // array con todos los medicamentos
 
+       
         for( Iterator it = me.iterator(); it.hasNext();) {
 	   medica = (Medicamento)it.next();
 	   String nombre =medica.getNombre();
            int StockMinimoPermitido = medica.getExistenciasMinimas();
            int StockActual = medica.getStockActual();
-           medica.setExistenciasMinimas(0);
-           for( Iterator itMe=me.iterator();it.hasNext();){
+           int nExistencias=0;
+           lotesMedica=medica.getLotesMedicamento();
+           for( Iterator itLo=lotesMedica.iterator();itLo.hasNext();){
 
-                   lote = loteBD.obtener(nombre);// como obtener de aquí un array cuando en el diseñoo aparece un array?
-                   lotesMedica.add(lote);
+                   lote = (LoteMedicamento)itLo.next();// como obtener de aquí un array cuando en el diseñoo aparece un array?
+                   nombreLo=lote.getNombre();
                    Date fechaCad = lote.getFechaCaducidad();
-                if( fechaActual.before(fechaCad)){
-                 //nExistencias = getExistencias(lote)
+                if( fechaActual.after(fechaCad)){
+                    nExistencias +=lote.getExistencias();
                     loteBD.eliminar(lote);
-                   // medica.actualizaStock(Nexistencias);
+                    medica.actualizaStock(-nExistencias);
+                    StockActual-=nExistencias;//actualizamos stock
+                    meBD.actualizar(medica);
                 }
             }
 
 
            if( StockMinimoPermitido < StockActual){
                    Atributos.add(nombre);
+                   Atributos.add(String.valueOf(nExistencias));
                    Atributos.add(String.valueOf(StockMinimoPermitido));
-                   Atributos.add(String.valueOf(medica.getExistenciasMinimas()));
                    li.add(Atributos);
 
            }

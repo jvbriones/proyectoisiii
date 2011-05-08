@@ -88,8 +88,6 @@ public class Medicamento implements Serializable{
     }
 
 
-   public void actualizaLote(String CodBarras){
-   }
 
    public void eliminarLote( String CodBarras){
 
