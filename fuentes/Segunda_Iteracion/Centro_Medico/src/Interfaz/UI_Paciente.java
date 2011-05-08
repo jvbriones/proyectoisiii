@@ -103,7 +103,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void cargarDatosCitaPaciente( Usuario usu )throws SQLException{
 
-        citasBD cita_bd=new citasBD();
+        CitasBD cita_bd=new CitasBD();
         Cita nueva_cita = null;
         boolean existe;
 
