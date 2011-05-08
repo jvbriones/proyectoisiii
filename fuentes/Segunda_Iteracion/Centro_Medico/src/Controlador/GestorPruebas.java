@@ -77,9 +77,23 @@ public class GestorPruebas {
     public boolean eliminarAtributoSangre(String Nombre){
 
         boolean exito;
-        AtributoSangreBD atribSBD = null;
+        AtributoSangreBD atribSBD = new AtributoSangreBD();
+        AtributoSangre atrib = null;
+        
+        atrib = atribSBD.obtener(Nombre);
 
-        //No existe la función borrar y la que existe eliminar ni devuelve bool ni tiene un string como parametro
+        if(atrib == null){
+
+            return false;
+        }
+
+
+        else{
+
+        atribSBD.eliminar(atrib);
+
+        return true;
+        }
 
 
 
@@ -91,13 +105,29 @@ public class GestorPruebas {
     public boolean eliminarAtributoOrina(String Nombre){
 
         boolean exito;
-        AtributoOrinaBD atribOBD = null;
-
-        //No existe la función borrar y la que existe eliminar ni devuelve bool ni tiene un string como parametro
-
+        AtributoOrinaBD atribOBD = new AtributoOrinaBD();
+        AtributoOrina atrib = new AtributoOrina();
 
 
-        return exito;
+        atrib = atribOBD.obtener(Nombre);
+
+
+        if(atrib == null){
+
+            return false;
+        }
+
+
+        else{
+
+        atribOBD.eliminar(atrib);
+
+        return true;
+        }
+
+
+
+
     }
 
     public boolean almacenarResultadosAnalisis(String Dni, String DatosAnalisis, String Comentario, String TipoAnalisis) throws SQLException{

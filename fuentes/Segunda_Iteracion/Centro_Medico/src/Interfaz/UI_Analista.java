@@ -2046,24 +2046,28 @@ public class UI_Analista extends javax.swing.JFrame {
          boolean exito;
 
          if(jRadioButtonSangre2.isSelected()){
-             exito = gp.eliminarAtributoSangre(jTextFieldNombreAtributo.getText());
-             if(!exito){
-                 System.out.println("El atributo "+jTextFieldNombreAtributo.getText()+" ya existe");
+             exito = gp.eliminarAtributoSangre(jTextFieldNombreAtributo1.getText());
+             if(exito){
+                 System.out.println("El atributo "+jTextFieldNombreAtributo1.getText()+" fue eliminado");
+                 new InformacionExito().setVisible(true);
              }
 
              else{
-                 System.out.println("Operación realizada con éxito");
+                 System.out.println("Error");
+                 new InformacionError().setVisible(true);
              }
          }
 
          if(jRadioButtonOrina2.isSelected()){
-             exito = gp.eliminarAtributoOrina(jTextFieldNombreAtributo.getText());
-             if(!exito){
-                 System.out.println("El atributo "+jTextFieldNombreAtributo.getText()+" ya existe");
+             exito = gp.eliminarAtributoOrina(jTextFieldNombreAtributo1.getText());
+             if(exito){
+                 System.out.println("El atributo "+jTextFieldNombreAtributo1.getText()+" fue eliminado");
+                 new InformacionExito().setVisible(true);
              }
 
              else{
                  System.out.println("Operación realizada con éxito");
+                 new InformacionError().setVisible(true);
              }
          }
     }//GEN-LAST:event_jButtonGuardarAtributo1MouseClicked

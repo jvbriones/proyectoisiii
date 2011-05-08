@@ -94,7 +94,8 @@ public class GestorMedico {
 
         paciente = pBD.obtenerPaciente(Dni);
         if(TipoPrueba == "sangre" || TipoPrueba == "orina"){
-            paciente.asignarCita(cita);
+            paciente.asignarCita(cita);//¿De donde sale cita? Un paciente no tiene la operación asignarCita
+            //No puedo seguir programando porque no tiene sentido nada del diagrama
             
         }
     }
