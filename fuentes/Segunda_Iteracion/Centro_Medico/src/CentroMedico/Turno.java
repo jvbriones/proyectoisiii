@@ -18,7 +18,7 @@ import java.io.Serializable;
 /**
  * @version     1.1     16/04/2011
  * @author      Sub_Equipo2
- * modificado por Juan Carlos
+ * modificado por Juan Carlos Bermúdez
  */
 public class Turno implements Serializable{
 

@@ -1,15 +1,18 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * ResultadoOrina.java
+ *
+ * Informacion:
+ * Clase encargada de modelizar el resultado de una prueba de orina
+ *
+ * Proyecto ISIII UGR 10/11
+ * Grupo M_1.2
+ *
+ * @author Juan Carlos Bermúdez Sánchez
  */
 
 package CentroMedico;
 import java.io.Serializable;
 
-/**
- *
- * @author pope
- */
 public class ResultadoOrina implements Serializable{
     private int Id;
     private String Resultado;

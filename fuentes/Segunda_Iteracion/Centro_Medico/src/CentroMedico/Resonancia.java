@@ -1,16 +1,19 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Resonancia.java
+ *
+ * Informacion:
+ * Clase encargada de modelizar una resonancia
+ *
+ * Proyecto ISIII UGR 10/11
+ * Grupo M_1.2
+ *
+ * @author Juan Carlos Bermúdez Sánchez
  */
 
 package CentroMedico;
 import java.util.Set;
 import java.util.HashSet;
 
-/**
- *
- * @author pope
- */
 public class Resonancia extends PruebaRadiologia{
     private Set<Imagen> Resonancias=new HashSet<Imagen>(0);
 

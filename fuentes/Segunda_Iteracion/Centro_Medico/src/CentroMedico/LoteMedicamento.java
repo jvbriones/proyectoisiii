@@ -1,16 +1,19 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * LoteMedicamento.java
+ *
+ * Informacion:
+ * Clase encargada de modelizar un lote de un medicamento
+ *
+ * Proyecto ISIII UGR 10/11
+ * Grupo M_1.2
+ *
+ * @author Juan Carlos Bermúdez Sánchez
  */
 
 package CentroMedico;
 import java.util.Date;
 import java.io.Serializable;
 
-/**
- *
- * @author pope
- */
 public class LoteMedicamento implements Serializable{
     private String CodBarras;
     private int Existencias;

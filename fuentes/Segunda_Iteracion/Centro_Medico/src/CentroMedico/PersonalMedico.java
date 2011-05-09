@@ -1,16 +1,18 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * PersonalMedico.java
+ *
+ * Informacion:
+ * Clase encargada de modelizar a un miembro del personal médico
+ *
+ * Proyecto ISIII UGR 10/11
+ * Grupo M_1.2
+ *
+ * @author Juan Carlos Bermúdez Sánchez
  */
 
 package CentroMedico;
 import java.util.*;
 
-
-/**
- *
- * @author pope
- */
 public class PersonalMedico extends Usuario{
 
     private Turno Turn=null;

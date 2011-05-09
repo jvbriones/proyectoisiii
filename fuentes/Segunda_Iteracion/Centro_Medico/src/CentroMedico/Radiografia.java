@@ -1,16 +1,19 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Radiografia.java
+ *
+ * Informacion:
+ * Clase encargada de modelizar una radiografía
+ *
+ * Proyecto ISIII UGR 10/11
+ * Grupo M_1.2
+ *
+ * @author Juan Carlos Bermúdez Sánchez
  */
 
 package CentroMedico;
 import java.util.Set;
 import java.util.HashSet;
 
-/**
- *
- * @author pope
- */
 public class Radiografia extends PruebaRadiologia{
     private Set<Imagen> Radiografias=new HashSet<Imagen>(0);
 

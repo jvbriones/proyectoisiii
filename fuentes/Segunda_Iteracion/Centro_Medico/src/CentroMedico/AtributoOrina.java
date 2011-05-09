@@ -1,15 +1,18 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * AtributoOrina.java
+ *
+ * Informacion:
+ * Clase encargada de modelizar un atributo correspondiente a un análisis de orina
+ *
+ * Proyecto ISIII UGR 10/11
+ * Grupo M_1.2
+ *
+ * @author Juan Carlos Bermúdez Sánchez
  */
 
 package CentroMedico;
 import java.io.Serializable;
 
-/**
- *
- * @author pope
- */
 public class AtributoOrina implements Serializable{
     private String Nombre;
 

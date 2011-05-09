@@ -1,6 +1,14 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Receta.java
+ *
+ * Informacion:
+ * Clase encargada de modelizar una receta
+ *
+ * Proyecto ISIII UGR 10/11
+ * Grupo M_1.2
+ *
+ * @author José Peso Buendía
+ * modificado por Juan Carlos Bermúdez Sánchez
  */
 
 package CentroMedico;
@@ -9,11 +17,6 @@ import java.util.Set;
 import java.util.HashSet;
 import java.io.Serializable;
 
-/**
- *
- * @author José Peso Buendía
- * modificado por Juan Carlos
- */
 public class Receta implements Serializable{
     private int Id;
     private String Instrucciones;

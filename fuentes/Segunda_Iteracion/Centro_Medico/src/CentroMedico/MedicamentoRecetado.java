@@ -1,6 +1,13 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * MedicamentoRecetado.java
+ *
+ * Informacion:
+ * Clase encargada de modelizar un medicamento recetado
+ *
+ * Proyecto ISIII UGR 10/11
+ * Grupo M_1.2
+ *
+ * @author Juan Carlos Bermúdez Sánchez
  */
 
 package CentroMedico;
@@ -8,10 +15,6 @@ package CentroMedico;
 import java.util.Date;
 import java.io.Serializable;
 
-/**
- *
- * @author pope
- */
 public class MedicamentoRecetado implements Serializable{
     private int Id;
     private String Posologia;

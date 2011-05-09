@@ -1,16 +1,19 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * PruebaOrina.java
+ *
+ * Informacion:
+ * Clase encargada de modelizar una prueba de orina
+ *
+ * Proyecto ISIII UGR 10/11
+ * Grupo M_1.2
+ *
+ * @author Juan Carlos Bermúdez Sánchez
  */
 
 package CentroMedico;
 import java.util.Set;
 import java.util.HashSet;
 
-/**
- *
- * @author pope
- */
 public class PruebaOrina extends PruebaAnalisis{
     private Set <ResultadoOrina> ResultadosOrina = new HashSet<ResultadoOrina>(0);
 

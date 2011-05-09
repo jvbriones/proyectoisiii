@@ -1,6 +1,13 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Medicamento.java
+ *
+ * Informacion:
+ * Clase encargada de modelizar un medicamento
+ *
+ * Proyecto ISIII UGR 10/11
+ * Grupo M_1.2
+ *
+ * @author Juan Carlos Bermúdez Sánchez
  */
 
 package CentroMedico;
@@ -9,10 +16,6 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.io.Serializable;
 
-/**
- *
- * @author pope
- */
 public class Medicamento implements Serializable{
     private String Nombre;
     private String Descripcion;
