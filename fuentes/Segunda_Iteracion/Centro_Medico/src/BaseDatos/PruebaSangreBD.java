@@ -1,15 +1,10 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package BaseDatos;
 import CentroMedico.PruebaSangre;
 import org.hibernate.Session;
 
 /**
- *
- * @author pope
+ *  @author Juan Carlos Bermúdez
+ *  Clase para el almacenamiento, actualización, borrado, y obtención de objetos de la clase PruebaSangre en la base de datos.
  */
 public class PruebaSangreBD {
     public void almacenar(PruebaSangre prueba){
@@ -26,6 +21,7 @@ public class PruebaSangreBD {
 
         session.beginTransaction ();
         session.update( prueba);
+        session.getTransaction().commit();
     }
 
     public void eliminar (PruebaSangre prueba){

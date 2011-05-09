@@ -1,16 +1,11 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package BaseDatos;
 
 import CentroMedico.AtributoOrina;
 import org.hibernate.Session;
 
 /**
- *
- * @author pope
+ *  @author Juan Carlos Bermúdez
+ *  Clase para el almacenamiento, actualización, borrado, y obtención de objetos de la clase AtributoOrina en la base de datos.
  */
 public class AtributoOrinaBD {
     public void almacenar(AtributoOrina Atr){
@@ -27,6 +22,7 @@ public class AtributoOrinaBD {
 
         session.beginTransaction ();
         session.update( Atr );
+        session.getTransaction().commit();
     }
 
     public void eliminar (AtributoOrina Atr){
@@ -47,6 +43,5 @@ public class AtributoOrinaBD {
 
         return atr;
     }
-
 
 }

@@ -1,15 +1,10 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package BaseDatos;
 import CentroMedico.PruebaRadiologia;
 import org.hibernate.Session;
 
 /**
- *
- * @author pope
+ *  @author Juan Carlos Bermúdez
+ *  Clase para el almacenamiento, actualización, borrado, y obtención de objetos de la clase PruebaRadiologia en la base de datos.
  */
 public class PruebaRadiologiaBD {
     public void almacenar(PruebaRadiologia prueba){
@@ -26,6 +21,7 @@ public class PruebaRadiologiaBD {
 
         session.beginTransaction ();
         session.update( prueba);
+        session.getTransaction().commit();
     }
 
     public void eliminar (PruebaRadiologia prueba){

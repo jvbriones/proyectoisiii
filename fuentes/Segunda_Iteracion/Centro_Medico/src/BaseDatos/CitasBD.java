@@ -8,6 +8,7 @@
  * Proyecto ISIII UGR 10/11
  * Grupo M_1.2
  *
+ * modificado por Juan Carlos Bermúdez. Añadidas las funciones almacenar, actualizar y eliminar
  */
 package BaseDatos;
 
@@ -25,8 +26,8 @@ public class CitasBD {
 
     String IpDelServidor="localhost";
     String NombreDB="CentroMedico";
-    String user="personal";
-    String pass="personal";
+    String user="generico";
+    String pass="generico";
 
 
     public boolean existeCita(String Dni) throws SQLException {

@@ -13,20 +13,20 @@ package BaseDatos;
 
 import CentroMedico.Paciente;
 import java.sql.*;
-import CentroMedico.Usuario;
 import org.hibernate.Session;
 
 /**
  * @version     1.1     16/04/2011
  * @author      Sub_Equipo2
+ * modificado por Juan Carlos Bermúdez. Añadidas las funciones almacenar, actualizar, eliminar y obtener.
  */
 public class PacBD {
 
 
     String IpDelServidor="localhost";
     String NombreDB="CentroMedico";
-    String user="personal";
-    String pass="personal";
+    String user="generico";
+    String pass="generico";
 
     public boolean existePaciente(String Dni) throws SQLException {
         boolean existe;
@@ -108,13 +108,10 @@ public class PacBD {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
-        Usuario usuario = (Usuario) session.get(Usuario.class, Dni);
-
-        Paciente paciente = new Paciente(usuario.getDNI(), usuario.getNombre(), usuario.getApellidos(), usuario.getDireccion(), usuario.getEmail(), usuario.getContrasenia(), usuario.getTelefono(), usuario.getFecNac(), usuario.getLugarNac(), usuario.getFoto(), "Paciente");
+        Paciente paciente = (Paciente) session.get(Paciente.class, Dni);
 
         return paciente;
     }
-    //public Usuario obtenerUsuarioNombre(String nombre) throws SQLException {}
 
     public void almacenar(Paciente paciente){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();

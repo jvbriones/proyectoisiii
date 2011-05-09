@@ -1,16 +1,11 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package BaseDatos;
 
 import CentroMedico.AtributoSangre;
 import org.hibernate.Session;
 
 /**
- *
- * @author pope
+ *  @author Juan Carlos Bermúdez
+ *  Clase para el almacenamiento, actualización, borrado, y obtención de objetos de la clase AtributoSangre en la base de datos.
  */
 public class AtributoSangreBD {
     public void almacenar(AtributoSangre Atr){
@@ -39,7 +34,6 @@ public class AtributoSangreBD {
     }
 
     public AtributoSangre obtener (String Nombre){
-        System.out.println("obtener");
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
@@ -48,6 +42,5 @@ public class AtributoSangreBD {
 
         return atr;
     }
-
 
 }

@@ -23,8 +23,8 @@ public class personalBD {
 
     String IpDelServidor="localhost";
     String NombreDB="CentroMedico";
-    String user="personal";
-    String pass="personal";
+    String user="generico";
+    String pass="generico";
 
     public boolean existePersonal(String Dni) throws SQLException {
         boolean existe;

@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package BaseDatos;
 
 import CentroMedico.*;
@@ -13,8 +8,8 @@ import java.util.List;
 
 
 /**
- *
- * @author Juan Carlos
+ *  @author Juan Carlos Bermúdez
+ *  Clase para el almacenamiento, actualización, borrado, y obtención de objetos de la clase Receta en la base de datos.
  */
 public class RecetaBD {
     public void almacenar(Receta Rec){

@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package BaseDatos;
 import CentroMedico.Analista;
 import org.hibernate.Session;
@@ -11,8 +6,8 @@ import java.util.HashSet;
 import java.util.List;
 
 /**
- *
- * @author pope
+ *  @author Juan Carlos Bermúdez
+ *  Clase para el almacenamiento, actualización, borrado, y obtención de objetos de la clase Analista en la base de datos.
  */
 public class AnalistaBD {
     public void almacenar(Analista analista){
@@ -52,6 +47,7 @@ public class AnalistaBD {
 
     public Set<Analista> obtenerListaAnalistas(){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
         session.beginTransaction ();
 
         List<Analista> result = (List<Analista>)session.createQuery("from Analista").list();
@@ -60,6 +56,5 @@ public class AnalistaBD {
         session.getTransaction().commit();
         return analistas;
     }
-
 
 }

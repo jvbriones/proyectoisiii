@@ -1,15 +1,10 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package BaseDatos;
 import CentroMedico.PruebaOrina;
 import org.hibernate.Session;
 
 /**
- *
- * @author pope
+ *  @author Juan Carlos Bermúdez
+ *  Clase para el almacenamiento, actualización, borrado, y obtención de objetos de la clase PruebaOrina en la base de datos.
  */
 public class PruebaOrinaBD {
     public void almacenar(PruebaOrina prueba){
