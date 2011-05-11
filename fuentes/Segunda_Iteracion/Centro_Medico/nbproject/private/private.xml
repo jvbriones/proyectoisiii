@@ -1,4 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/BaseDatos/AtributoOrinaBD.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/BaseDatos/personalBD.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/BaseDatos/ResonanciaBD.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/Controlador/GestorCitas.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/Controlador/GestorFarmacia.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/Interfaz/UI_Farmaceutico.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/BaseDatos/AtributoSangreBD.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/Interfaz/UI_Paciente.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/Interfaz/UI_Administrador.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/BaseDatos/LoteMedicamentoBD.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/BaseDatos/MedicamentoBD.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/Controlador/GestorPacientes.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/Controlador/GestorPersonal.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/CentroMedico/LoteMedicamento.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/CentroMedico/Medicamento.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/BaseDatos/HibernateUtil.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/BaseDatos/RecetaBD.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/BaseDatos/UsuarioBD.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/Controlador/GestorUsuarios.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/BaseDatos/PacBD.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/CentroMedico/Medico.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/BaseDatos/RadiografiaBD.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/BaseDatos/CitasBD.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/CentroMedico/Medicamento.hbm.xml</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/CentroMedico/LoteMedicamento.hbm.xml</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/Controlador/GestorMedico.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/Controlador/GestorPruebas.java</file>
+        <file>file:/home/nicolas/Repositorio/fuentes/Segunda_Iteracion/Centro_Medico/src/BaseDatos/TurnoBD.java</file>
+    </open-files>
 </project-private>
