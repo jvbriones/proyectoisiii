@@ -2749,7 +2749,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
         if( Lo == null){
 
-           System.out.println( " El lote " + CodBarras + "ya existe");
+           System.out.println( " El lote " + CodBarras + "no existe");
            new InformacionError().setVisible(true);
 
         }

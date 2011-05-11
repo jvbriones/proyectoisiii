@@ -66,12 +66,14 @@ public class GestorFarmacia {
       
 
 
-       if( Me!=null)
-           return false;
+          if( Me!=null){
+        meBD.actualizar(Me);
+           return true;
+       }
        else{
-          
-           meBD.actualizar(Me);
-            return true;
+
+
+            return false;
        }
 
     }
