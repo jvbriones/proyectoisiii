@@ -9,6 +9,7 @@ import BaseDatos.AtributoOrinaBD;
 import BaseDatos.AtributoSangreBD;
 import BaseDatos.PacBD;
 import BaseDatos.RadiografiaBD;
+import BaseDatos.ResonanciaBD;
 import CentroMedico.AtributoOrina;
 import CentroMedico.AtributoSangre;
 import CentroMedico.Imagen;
@@ -175,52 +176,60 @@ public class GestorPruebas {
         }
     }
 */
-    /*
+    
     public boolean almacenarResultadoRadiologia(String Dni, ArrayList<Imagen> imag, String Comentario, String TipoRadiologia) throws SQLException{
 
         //No concuerda el diagrama de secuencia con el de clases
+        System.out.println("Dentro de almacenar");
         PacBD pBD = new PacBD();
         Paciente paciente = null;
         Imagen aux;
+        System.out.println(TipoRadiologia);
 
-        paciente = pBD.obtenerPaciente(Dni);
+        paciente = pBD.obtener(Dni);
 
         if(paciente == null){
             System.out.println("No existe el paciente con ese DNI");
             return false;
         }
 
-        if(TipoRadiologia == "radiografia"){
+        if(TipoRadiologia == "radiologia"){
+
             Radiografia prueba = new Radiografia(Comentario);
             RadiografiaBD rBD = new RadiografiaBD();
 
+            System.out.println("Antes del loop de radiografia");
             for( Iterator it = imag.iterator(); it.hasNext();) {
+                System.out.println("en el bucle radiografía");
                 aux = (Imagen)it.next();
                 Imagen img = new Imagen(aux);
                 prueba.añadirImagen(img);
-                prueba.setPaciente(paciente);
             }
+            System.out.println("Fuera del bucle");
+            rBD.almacenar(prueba);
+            return true;
 
-            rbD
-
-            //actualizar paciente
         }
 
         if(TipoRadiologia == "resonancia"){
             Resonancia prueba = new Resonancia(Comentario);
+            ResonanciaBD rBD = new ResonanciaBD();
+
             for( Iterator it = imag.iterator(); it.hasNext();) {
                 aux = (Imagen)it.next();
                 Imagen img = new Imagen(aux);
                 prueba.añadirImagen(img);
             }
-            paciente.añadirPruebaResonancia(prueba);
+            System.out.println("antes de almacenar resonancia");
+            rBD.almacenar(prueba);
+            System.out.println("resonancia almacenada");
+            return true;
 
         }
+        return true;
 
 
      }
-     *
-     */
      
 
 }
