@@ -135,6 +135,8 @@ public class UI_Medico extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
         scrollPaneMedRecetados1 = new java.awt.ScrollPane();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        jListMedicamentosRecetados = new javax.swing.JList();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
@@ -151,8 +153,10 @@ public class UI_Medico extends javax.swing.JFrame {
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         scrollPane5 = new java.awt.ScrollPane();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jTextAreaInstrucciones = new javax.swing.JTextArea();
         jScrollPane7 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        jTextAreaDiagnostico = new javax.swing.JTextArea();
         jButtonTerminar1 = new javax.swing.JButton();
         jButtonCancelar1 = new javax.swing.JButton();
         jPanelPrincipal = new javax.swing.JPanel();
@@ -424,9 +428,9 @@ public class UI_Medico extends javax.swing.JFrame {
                     .add(jLabel6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 72, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(scrollPaneVolante, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 329, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jButton3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 239, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(77, Short.MAX_VALUE))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelAtenderPacienteLayout.createSequentialGroup()
-                .addContainerGap(209, Short.MAX_VALUE)
+                .addContainerGap(222, Short.MAX_VALUE)
                 .add(jPanelAtenderPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelAtenderPacienteLayout.createSequentialGroup()
                         .add(23, 23, 23)
@@ -467,7 +471,7 @@ public class UI_Medico extends javax.swing.JFrame {
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
-        jPanelAtenderPaciente.setBounds(0, 0, 938, 465);
+        jPanelAtenderPaciente.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelAtenderPaciente, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente7.setFont(new java.awt.Font("Lucida Grande", 1, 48));
@@ -530,17 +534,17 @@ public class UI_Medico extends javax.swing.JFrame {
                         .add(jLabelDNIPac, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 39, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(18, 18, 18)
                         .add(jTextFieldDNIAtenderPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 134, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(210, Short.MAX_VALUE))
+                .addContainerGap(229, Short.MAX_VALUE))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelAtenderPacienteIntermedioLayout.createSequentialGroup()
-                .addContainerGap(368, Short.MAX_VALUE)
+                .addContainerGap(387, Short.MAX_VALUE)
                 .add(jLabelError)
                 .add(333, 333, 333))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelAtenderPacienteIntermedioLayout.createSequentialGroup()
-                .addContainerGap(347, Short.MAX_VALUE)
+                .addContainerGap(366, Short.MAX_VALUE)
                 .add(jLabelErrorDniPaciente)
                 .add(318, 318, 318))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelAtenderPacienteIntermedioLayout.createSequentialGroup()
-                .addContainerGap(408, Short.MAX_VALUE)
+                .addContainerGap(427, Short.MAX_VALUE)
                 .add(jButtonAceptar, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 93, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(405, 405, 405))
         );
@@ -563,10 +567,10 @@ public class UI_Medico extends javax.swing.JFrame {
                 .add(jLabelErrorDniPaciente)
                 .add(26, 26, 26)
                 .add(jButtonAceptar)
-                .addContainerGap(138, Short.MAX_VALUE))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
 
-        jPanelAtenderPacienteIntermedio.setBounds(0, 0, 906, 480);
+        jPanelAtenderPacienteIntermedio.setBounds(0, 0, -1, 480);
         ZonaTrabajo.add(jPanelAtenderPacienteIntermedio, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente11.setFont(new java.awt.Font("Lucida Grande", 1, 48));
@@ -578,6 +582,10 @@ public class UI_Medico extends javax.swing.JFrame {
         jLabel24.setText("Medicamentos Recetados");
 
         scrollPaneMedRecetados1.setBackground(new java.awt.Color(254, 254, 254));
+
+        jScrollPane10.setViewportView(jListMedicamentosRecetados);
+
+        scrollPaneMedRecetados1.add(jScrollPane10);
 
         jLabel25.setFont(new java.awt.Font("Ubuntu", 1, 16));
         jLabel25.setText("Posología");
@@ -593,11 +601,6 @@ public class UI_Medico extends javax.swing.JFrame {
 
         scrollPaneListaMedica1.setBackground(new java.awt.Color(254, 254, 254));
 
-        jListMedicamentos1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane6.setViewportView(jListMedicamentos1);
 
         scrollPaneListaMedica1.add(jScrollPane6);
@@ -707,11 +710,22 @@ public class UI_Medico extends javax.swing.JFrame {
 
         scrollPane5.setBackground(new java.awt.Color(254, 254, 254));
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane7.setViewportView(jTextArea2);
+        jTextAreaInstrucciones.setColumns(20);
+        jTextAreaInstrucciones.setRows(5);
+        jScrollPane9.setViewportView(jTextAreaInstrucciones);
+
+        scrollPane5.add(jScrollPane9);
+
+        jTextAreaDiagnostico.setColumns(20);
+        jTextAreaDiagnostico.setRows(5);
+        jScrollPane7.setViewportView(jTextAreaDiagnostico);
 
         jButtonTerminar1.setText("Terminar");
+        jButtonTerminar1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonTerminar1MouseClicked(evt);
+            }
+        });
 
         jButtonCancelar1.setText("Cancelar");
 
@@ -762,7 +776,7 @@ public class UI_Medico extends javax.swing.JFrame {
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanelRealizarReceta1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jScrollPane7, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
-                    .add(scrollPane5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 67, Short.MAX_VALUE))
+                    .add(scrollPane5, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE))
                 .add(22, 22, 22)
                 .add(jPanelRealizarReceta1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jButtonCancelar1)
@@ -1068,7 +1082,7 @@ public class UI_Medico extends javax.swing.JFrame {
                             .add(162, 162, 162)))
                     .add(jPanelRealizarRecetaLayout.createSequentialGroup()
                         .add(28, 28, 28)
-                        .add(jPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 988, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                        .add(jPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(64, Short.MAX_VALUE))
         );
         jPanelRealizarRecetaLayout.setVerticalGroup(
@@ -1084,8 +1098,8 @@ public class UI_Medico extends javax.swing.JFrame {
                     .add(jLabel23))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanelRealizarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jScrollPane2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
-                    .add(scrollPane4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 70, Short.MAX_VALUE))
+                    .add(jScrollPane2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
+                    .add(scrollPane4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, Short.MAX_VALUE))
                 .add(22, 22, 22)
                 .add(jPanelRealizarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jButtonCancelar)
@@ -1751,7 +1765,7 @@ public class UI_Medico extends javax.swing.JFrame {
                     .add(0, 64, Short.MAX_VALUE)))
         );
 
-        jPanelConsultarTurno.setBounds(0, 0, 860, 531);
+        jPanelConsultarTurno.setBounds(0, 0, 860, -1);
         ZonaTrabajo.add(jPanelConsultarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel13.setText("_____________________________________________________________________________");
@@ -1854,7 +1868,7 @@ public class UI_Medico extends javax.swing.JFrame {
                 .add(42, 42, 42))
         );
 
-        jPanelSolicitarPrueba.setBounds(0, 0, 749, 422);
+        jPanelSolicitarPrueba.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelSolicitarPrueba, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         getContentPane().add(ZonaTrabajo);
@@ -2575,6 +2589,12 @@ public class UI_Medico extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonRecetarOtroMedicamentoMouseClicked
 
+    private void jButtonTerminar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonTerminar1MouseClicked
+        // TODO add your handling code here:
+        //despues de la operacion que muestre el panel principal
+        mostrarPanel("Principal");
+    }//GEN-LAST:event_jButtonTerminar1MouseClicked
+
 
     /*Comprueba que la fecha introducida es correcta
      * 
@@ -2645,7 +2665,7 @@ public class UI_Medico extends javax.swing.JFrame {
      *
      *@param persona, string que indica si se trata del formulario de Paciente o Personal
      */
-    private void limpiarFormulario(String persona){
+    private void limpiarFormulario(String formulario){
 
         String diaActual;
         String mesActual;
@@ -2661,7 +2681,7 @@ public class UI_Medico extends javax.swing.JFrame {
         minutoActual = Integer.toString(fechaActual.get(Calendar.MINUTE));
 
 
-        if(persona.equals("GestionarPaciente")){
+        if(formulario.equals("GestionarPaciente")){
             jTextFieldNombrePersonal.setText("");
             jTextFieldApellidosPersonal.setText("");
             jTextFieldDNIPersonal.setText("");
@@ -2674,13 +2694,27 @@ public class UI_Medico extends javax.swing.JFrame {
             jLabelFotoPersonal.setIcon(null);
         }
 
-        if(persona.equals("GestionarTurno")){
+        if(formulario.equals("GestionarTurno")){
             jTextFieldDiaInicioTurno.setText(diaActual);
             jTextFieldMesInicioTurno.setText(mesActual);
             jTextFieldAnioInicioTurno.setText(anioActual);
             jTextFieldDiaFinTurno.setText(diaActual);
             jTextFieldMesFinTurno.setText(mesActual);
             jTextFieldAnioFinTurno.setText(anioActual);
+        }
+
+        if(formulario.equals("RealizarReceta"))
+        {
+            jTextFieldPosologia1.setText("");
+            jTextFieldDuracion1.setText("");
+            jTextFieldFechaFin1.setText("");
+            jTextAreaInstrucciones.setText("");
+            jTextAreaDiagnostico.setText("");
+            jTextFieldMedBuscar1.setText("");
+
+
+
+
         }
     }
 
@@ -2852,6 +2886,7 @@ public class UI_Medico extends javax.swing.JFrame {
 
          if(panel.equals("RealizarReceta")){
 
+            limpiarFormulario("RealizarReceta");
             /**Hacemos visible el botón jLabelIconoInicio*/
             jLabelInicio.setVisible(true);
             jLabelIconoInicio.setVisible(true);
@@ -3118,6 +3153,7 @@ public class UI_Medico extends javax.swing.JFrame {
     private javax.swing.JList jListMedRecetados;
     private javax.swing.JList jListMedicamentos;
     private javax.swing.JList jListMedicamentos1;
+    private javax.swing.JList jListMedicamentosRecetados;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanelAtenderPaciente;
@@ -3141,6 +3177,7 @@ public class UI_Medico extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButtonSangreCitaPrueba;
     private javax.swing.JRadioButton jRadioButtonTarde1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -3148,11 +3185,13 @@ public class UI_Medico extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextAreaDiagnostico;
     private javax.swing.JTextArea jTextAreaInfo;
     private javax.swing.JTextArea jTextAreaInfoConsultaTurno;
     private javax.swing.JTextArea jTextAreaInfoTurno;
+    private javax.swing.JTextArea jTextAreaInstrucciones;
     private javax.swing.JTextField jTextFieldAnioFinTurno;
     private javax.swing.JTextField jTextFieldAnioInicioTurno;
     private javax.swing.JTextField jTextFieldApellidosPersonal;
