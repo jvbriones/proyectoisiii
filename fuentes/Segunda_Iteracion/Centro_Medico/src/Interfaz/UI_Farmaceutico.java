@@ -106,11 +106,23 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jLabelSalir = new javax.swing.JLabel();
         jLabelIcono = new javax.swing.JLabel();
         ZonaTrabajo = new javax.swing.JLayeredPane();
+        jPanelGestionarMedicamentos = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabelGestionarPaciente8 = new javax.swing.JLabel();
+        jLabelNombre = new javax.swing.JLabel();
+        jLabelStockMinimo = new javax.swing.JLabel();
+        jLabelDescripcion = new javax.swing.JLabel();
+        jTextFieldNombreMedicamento = new javax.swing.JTextField();
+        jTextFieldStockMinimo = new javax.swing.JTextField();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextAreaDescripcion = new javax.swing.JTextArea();
+        jButtonAnadir = new javax.swing.JButton();
+        jButtonConsultar = new javax.swing.JButton();
+        jLabelError3 = new javax.swing.JLabel();
+        jLabelError4 = new javax.swing.JLabel();
         jPanelConsultarMedicamento = new javax.swing.JPanel();
         jLabel27 = new javax.swing.JLabel();
         jLabelGestionarPaciente13 = new javax.swing.JLabel();
-        jScrollPane11 = new javax.swing.JScrollPane();
-        jTextAreaInfo7 = new javax.swing.JTextArea();
         jTextFieldNombreMedica = new javax.swing.JTextField();
         jTextFieldExistencias = new javax.swing.JTextField();
         jLabelNombreMedica = new javax.swing.JLabel();
@@ -129,6 +141,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jTextFieldStockActual = new javax.swing.JTextField();
         jLabelStockActual = new javax.swing.JLabel();
         jLabelError2 = new javax.swing.JLabel();
+        jOptionPaneConfirmar = new javax.swing.JOptionPane();
         jPanelComprobarStockMedicamentos = new javax.swing.JPanel();
         jLabelGestionarPaciente7 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -151,22 +164,6 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jButtonDispensar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jPanelGestionarMedicamentos = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabelGestionarPaciente8 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextAreaInfo1 = new javax.swing.JTextArea();
-        jLabelNombre = new javax.swing.JLabel();
-        jLabelStockMinimo = new javax.swing.JLabel();
-        jLabelDescripcion = new javax.swing.JLabel();
-        jTextFieldNombreMedicamento = new javax.swing.JTextField();
-        jTextFieldStockMinimo = new javax.swing.JTextField();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTextAreaDescripcion = new javax.swing.JTextArea();
-        jButtonAnadir = new javax.swing.JButton();
-        jButtonConsultar = new javax.swing.JButton();
-        jLabelError3 = new javax.swing.JLabel();
-        jLabelError4 = new javax.swing.JLabel();
         jPanelConsultarDatosPersonales = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabelGestionarPaciente4 = new javax.swing.JLabel();
@@ -251,8 +248,6 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jLabelError5 = new javax.swing.JLabel();
         jPanelDispensarConsultar = new javax.swing.JPanel();
         jButtonConsultarReceta = new javax.swing.JButton();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        jTextAreaInfo3 = new javax.swing.JTextArea();
         jLabelGestionarPaciente10 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         scrollPaneRecetas = new java.awt.ScrollPane();
@@ -270,8 +265,6 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jPanelModificarLote = new javax.swing.JPanel();
         jLabelGestionarPaciente12 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        jScrollPane9 = new javax.swing.JScrollPane();
-        jTextAreaInfo5 = new javax.swing.JTextArea();
         jTextFieldCodigoBarras = new javax.swing.JTextField();
         jTextFieldExistencias1 = new javax.swing.JTextField();
         jTextFieldFechaCaducidad = new javax.swing.JTextField();
@@ -280,11 +273,11 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jLabelFechaCad = new javax.swing.JLabel();
         jButtonModificarLote = new javax.swing.JButton();
         jButtonELiminarLote = new javax.swing.JButton();
+        jOptionPaneEliminarLote = new javax.swing.JOptionPane();
+        jLabelError6 = new javax.swing.JLabel();
         jPanelAnadirLote = new javax.swing.JPanel();
         jLabelGestionarPaciente14 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
-        jScrollPane10 = new javax.swing.JScrollPane();
-        jTextAreaInfo6 = new javax.swing.JTextArea();
         jTextFieldExistenc = new javax.swing.JTextField();
         jTextFieldFechCad = new javax.swing.JTextField();
         jTextFieldCodBarras = new javax.swing.JTextField();
@@ -373,18 +366,143 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         ZonaTrabajo.setMinimumSize(new java.awt.Dimension(902, 520));
         ZonaTrabajo.setPreferredSize(new java.awt.Dimension(912, 530));
 
+        jLabel11.setText("_______________________________________________________________________");
+
+        jLabelGestionarPaciente8.setFont(new java.awt.Font("Lucida Grande", 1, 36));
+        jLabelGestionarPaciente8.setText("Gestionar Medicamento");
+
+        jLabelNombre.setText("Nombre");
+
+        jLabelStockMinimo.setText("Stock Minimo");
+
+        jLabelDescripcion.setText("Descripcion");
+
+        jTextFieldNombreMedicamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldNombreMedicamentoActionPerformed(evt);
+            }
+        });
+
+        jTextAreaDescripcion.setColumns(20);
+        jTextAreaDescripcion.setRows(5);
+        jScrollPane3.setViewportView(jTextAreaDescripcion);
+
+        jButtonAnadir.setText("Añadir");
+        jButtonAnadir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButtonAnadirMouseReleased(evt);
+            }
+        });
+
+        jButtonConsultar.setText("Consultar");
+        jButtonConsultar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonConsultarMouseClicked(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButtonConsultarMouseReleased(evt);
+            }
+        });
+
+        jLabelError3.setForeground(new java.awt.Color(255, 0, 0));
+        jLabelError3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Error.png"))); // NOI18N
+        jLabelError3.setText("Faltan datos por introducir");
+
+        jLabelError4.setForeground(new java.awt.Color(255, 0, 0));
+        jLabelError4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Error.png"))); // NOI18N
+        jLabelError4.setText("No existe medicamento con ese nombre");
+
+        org.jdesktop.layout.GroupLayout jPanelGestionarMedicamentosLayout = new org.jdesktop.layout.GroupLayout(jPanelGestionarMedicamentos);
+        jPanelGestionarMedicamentos.setLayout(jPanelGestionarMedicamentosLayout);
+        jPanelGestionarMedicamentosLayout.setHorizontalGroup(
+            jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanelGestionarMedicamentosLayout.createSequentialGroup()
+                .add(jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarMedicamentosLayout.createSequentialGroup()
+                        .add(140, 140, 140)
+                        .add(jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jLabelGestionarPaciente8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 515, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarMedicamentosLayout.createSequentialGroup()
+                                .add(jLabel11)
+                                .add(116, 116, 116))))
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarMedicamentosLayout.createSequentialGroup()
+                        .add(130, 130, 130)
+                        .add(jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarMedicamentosLayout.createSequentialGroup()
+                                .add(jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(jPanelGestionarMedicamentosLayout.createSequentialGroup()
+                                        .add(jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                                            .add(jPanelGestionarMedicamentosLayout.createSequentialGroup()
+                                                .add(jLabelNombre)
+                                                .add(54, 54, 54)
+                                                .add(jTextFieldNombreMedicamento, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 132, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                            .add(jPanelGestionarMedicamentosLayout.createSequentialGroup()
+                                                .add(jLabelStockMinimo)
+                                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .add(jTextFieldStockMinimo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 65, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 77, Short.MAX_VALUE))
+                                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarMedicamentosLayout.createSequentialGroup()
+                                        .add(jButtonAnadir, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 105, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .add(75, 75, 75)))
+                                .add(jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(jPanelGestionarMedicamentosLayout.createSequentialGroup()
+                                        .add(76, 76, 76)
+                                        .add(jButtonConsultar, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 107, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                    .add(jPanelGestionarMedicamentosLayout.createSequentialGroup()
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                        .add(jScrollPane3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 281, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                                .add(27, 27, 27))
+                            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarMedicamentosLayout.createSequentialGroup()
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 351, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(jLabelDescripcion)
+                                .add(195, 195, 195))
+                            .add(jPanelGestionarMedicamentosLayout.createSequentialGroup()
+                                .add(18, 18, 18)
+                                .add(jLabelError3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 254, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(27, 27, 27)
+                                .add(jLabelError4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 329, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))
+                .add(107, 107, 107))
+        );
+        jPanelGestionarMedicamentosLayout.setVerticalGroup(
+            jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanelGestionarMedicamentosLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(jLabelGestionarPaciente8)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jLabel11)
+                .add(18, 18, 18)
+                .add(jLabelDescripcion)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jPanelGestionarMedicamentosLayout.createSequentialGroup()
+                        .add(jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jLabelNombre)
+                            .add(jTextFieldNombreMedicamento, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 28, Short.MAX_VALUE)
+                        .add(jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(jLabelStockMinimo)
+                            .add(jTextFieldStockMinimo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .add(48, 48, 48))
+                    .add(jPanelGestionarMedicamentosLayout.createSequentialGroup()
+                        .add(jScrollPane3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 126, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)))
+                .add(jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jButtonAnadir)
+                    .add(jButtonConsultar))
+                .add(32, 32, 32)
+                .add(jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jLabelError3)
+                    .add(jLabelError4))
+                .add(85, 85, 85))
+        );
+
+        jPanelGestionarMedicamentos.setBounds(0, 0, 860, 430);
+        ZonaTrabajo.add(jPanelGestionarMedicamentos, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         jLabel27.setText("____________________________________________________________________");
 
         jLabelGestionarPaciente13.setFont(new java.awt.Font("Lucida Grande", 1, 36));
         jLabelGestionarPaciente13.setText("Consultar Medicamento");
-
-        jTextAreaInfo7.setBackground(new java.awt.Color(255, 204, 102));
-        jTextAreaInfo7.setColumns(17);
-        jTextAreaInfo7.setEditable(false);
-        jTextAreaInfo7.setFont(new java.awt.Font("Lucida Grande", 0, 14));
-        jTextAreaInfo7.setRows(3);
-        jTextAreaInfo7.setText("\nCambie los datos que desee y haga 'click' en 'MODIFICAR MEDICAMENTO' \nPara borrar un meciamento haga 'click' en 'ELIMINAR'.\nInserte un Codigo y haga 'click' en 'CONSULTAR LOTE' si desea consultar un lote.\nPara agregar un nuevo lote haga 'click' en 'AÑADIR LOTE'.");
-        jScrollPane11.setViewportView(jTextAreaInfo7);
 
         jLabelNombreMedica.setText("Nombre del medicamento");
 
@@ -428,6 +546,9 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jButtonConsultarLote.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonConsultarLoteMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButtonConsultarLoteMouseEntered(evt);
             }
         });
         jButtonConsultarLote.addActionListener(new java.awt.event.ActionListener() {
@@ -486,53 +607,50 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jPanelConsultarMedicamentoLayout.setHorizontalGroup(
             jPanelConsultarMedicamentoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanelConsultarMedicamentoLayout.createSequentialGroup()
+                .add(227, 227, 227)
+                .add(jPanelConsultarMedicamentoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel27, 0, 0, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jLabelGestionarPaciente13))
+                .addContainerGap(186, Short.MAX_VALUE))
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelConsultarMedicamentoLayout.createSequentialGroup()
+                .addContainerGap(172, Short.MAX_VALUE)
                 .add(jPanelConsultarMedicamentoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelConsultarMedicamentoLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .add(jPanelConsultarMedicamentoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jPanelConsultarMedicamentoLayout.createSequentialGroup()
-                                .add(22, 22, 22)
-                                .add(jPanelConsultarMedicamentoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                    .add(jLabelNombreMedica, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 208, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .add(jPanelConsultarMedicamentoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                                        .add(jTextFieldNombreMedica, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 184, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                        .add(jPanelConsultarMedicamentoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                                            .add(jButtonEliminarMedicamento, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .add(jButtonModificarMedica, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelConsultarMedicamentoLayout.createSequentialGroup()
-                                                .add(jPanelConsultarMedicamentoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                                                    .add(jPanelConsultarMedicamentoLayout.createSequentialGroup()
-                                                        .add(18, 18, 18)
-                                                        .add(jTextFieldStockActual, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 58, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                                    .add(jPanelConsultarMedicamentoLayout.createSequentialGroup()
-                                                        .add(jLabelStockActual)
-                                                        .add(18, 18, 18)))
-                                                .add(jPanelConsultarMedicamentoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                                    .add(jLabelExis)
-                                                    .add(jTextFieldExistencias, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 58, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))))
-                                .add(24, 24, 24))
-                            .add(org.jdesktop.layout.GroupLayout.TRAILING, jLabelError2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 254, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .add(37, 37, 37)
-                        .add(jPanelConsultarMedicamentoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jPanelConsultarMedicamentoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelConsultarMedicamentoLayout.createSequentialGroup()
-                                    .add(jLabelDescrip)
-                                    .add(136, 136, 136))
-                                .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelConsultarMedicamentoLayout.createSequentialGroup()
-                                    .add(scrollPanelDescripcion, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 290, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .add(8, 8, 8)))
-                            .add(jPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                     .add(jPanelConsultarMedicamentoLayout.createSequentialGroup()
-                        .add(186, 186, 186)
-                        .add(jPanelConsultarMedicamentoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelConsultarMedicamentoLayout.createSequentialGroup()
-                                .add(jPanelConsultarMedicamentoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                                    .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel27, 0, 0, Short.MAX_VALUE)
-                                    .add(org.jdesktop.layout.GroupLayout.LEADING, jLabelGestionarPaciente13))
-                                .add(53, 53, 53))
-                            .add(org.jdesktop.layout.GroupLayout.TRAILING, jScrollPane11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 575, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(39, Short.MAX_VALUE))
+                        .add(22, 22, 22)
+                        .add(jPanelConsultarMedicamentoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jLabelNombreMedica, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 208, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(jPanelConsultarMedicamentoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                                .add(jTextFieldNombreMedica, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 184, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(jPanelConsultarMedicamentoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                                    .add(jButtonEliminarMedicamento, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .add(jButtonModificarMedica, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelConsultarMedicamentoLayout.createSequentialGroup()
+                                        .add(jPanelConsultarMedicamentoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                                            .add(jPanelConsultarMedicamentoLayout.createSequentialGroup()
+                                                .add(18, 18, 18)
+                                                .add(jTextFieldStockActual, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 58, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .add(jPanelConsultarMedicamentoLayout.createSequentialGroup()
+                                                .add(jLabelStockActual)
+                                                .add(18, 18, 18)))
+                                        .add(jPanelConsultarMedicamentoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                            .add(jLabelExis)
+                                            .add(jTextFieldExistencias, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 58, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))))
+                        .add(24, 24, 24))
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jLabelError2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 254, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(37, 37, 37)
+                .add(jPanelConsultarMedicamentoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jPanelConsultarMedicamentoLayout.createSequentialGroup()
+                        .add(jLabelDescrip)
+                        .add(136, 136, 136))
+                    .add(scrollPanelDescripcion, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 290, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(133, 133, 133))
+            .add(jPanelConsultarMedicamentoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(jPanelConsultarMedicamentoLayout.createSequentialGroup()
+                    .add(0, 316, Short.MAX_VALUE)
+                    .add(jOptionPaneConfirmar, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(0, 316, Short.MAX_VALUE)))
         );
         jPanelConsultarMedicamentoLayout.setVerticalGroup(
             jPanelConsultarMedicamentoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -541,17 +659,14 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                 .add(jLabelGestionarPaciente13)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jLabel27)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jScrollPane11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 101, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(31, 31, 31)
                 .add(jPanelConsultarMedicamentoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelConsultarMedicamentoLayout.createSequentialGroup()
                         .add(jLabelDescrip)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(scrollPanelDescripcion, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(31, 31, 31))
+                        .add(scrollPanelDescripcion, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 135, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(21, 21, 21)
+                        .add(jPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                     .add(jPanelConsultarMedicamentoLayout.createSequentialGroup()
                         .add(jLabelNombreMedica)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
@@ -569,11 +684,16 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                         .add(18, 18, 18)
                         .add(jButtonEliminarMedicamento)
                         .add(18, 18, 18)
-                        .add(jLabelError2)
-                        .addContainerGap())))
+                        .add(jLabelError2)))
+                .addContainerGap(77, Short.MAX_VALUE))
+            .add(jPanelConsultarMedicamentoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(jPanelConsultarMedicamentoLayout.createSequentialGroup()
+                    .add(0, 206, Short.MAX_VALUE)
+                    .add(jOptionPaneConfirmar, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(0, 207, Short.MAX_VALUE)))
         );
 
-        jPanelConsultarMedicamento.setBounds(0, 0, 800, 540);
+        jPanelConsultarMedicamento.setBounds(0, 0, 894, 503);
         ZonaTrabajo.add(jPanelConsultarMedicamento, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente7.setFont(new java.awt.Font("Lucida Grande", 1, 36));
@@ -644,7 +764,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                     .add(jLabel7))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(scrollPaneMedicamentosBajoStock, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 202, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(113, Short.MAX_VALUE))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
 
         jPanelComprobarStockMedicamentos.setBounds(0, 0, 810, 560);
@@ -776,151 +896,6 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
         jPanelPrincipal.setBounds(-9, 1, 910, 540);
         ZonaTrabajo.add(jPanelPrincipal, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        jLabel11.setText("_______________________________________________________________________");
-
-        jLabelGestionarPaciente8.setFont(new java.awt.Font("Lucida Grande", 1, 36));
-        jLabelGestionarPaciente8.setText("Gestionar Medicamento");
-
-        jTextAreaInfo1.setBackground(new java.awt.Color(255, 204, 102));
-        jTextAreaInfo1.setColumns(17);
-        jTextAreaInfo1.setEditable(false);
-        jTextAreaInfo1.setFont(new java.awt.Font("Lucida Grande", 0, 12));
-        jTextAreaInfo1.setRows(3);
-        jTextAreaInfo1.setText("Inserte todos los datos si lo que quiere es AÑADIR medicamentos\ny pulse AÑADIR.\nEn cambio, inserte solo el nombre y pulse CONSULTAR, silo que quiere es:\n- MODIFICAR los datos de un medicamento.\n- ELIMINAR un medicamento del sistema.\n- AÑADIR LOTE para el medicamento.\n- CONSULTAR LOTE del medicamento.\n\n");
-        jScrollPane2.setViewportView(jTextAreaInfo1);
-
-        jLabelNombre.setText("Nombre");
-
-        jLabelStockMinimo.setText("Stock Minimo");
-
-        jLabelDescripcion.setText("Descripcion");
-
-        jTextFieldNombreMedicamento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNombreMedicamentoActionPerformed(evt);
-            }
-        });
-
-        jTextAreaDescripcion.setColumns(20);
-        jTextAreaDescripcion.setRows(5);
-        jScrollPane3.setViewportView(jTextAreaDescripcion);
-
-        jButtonAnadir.setText("Añadir");
-        jButtonAnadir.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jButtonAnadirMouseReleased(evt);
-            }
-        });
-
-        jButtonConsultar.setText("Consultar");
-        jButtonConsultar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonConsultarMouseClicked(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jButtonConsultarMouseReleased(evt);
-            }
-        });
-
-        jLabelError3.setForeground(new java.awt.Color(255, 0, 0));
-        jLabelError3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Error.png"))); // NOI18N
-        jLabelError3.setText("Faltan datos por introducir");
-
-        jLabelError4.setForeground(new java.awt.Color(255, 0, 0));
-        jLabelError4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Error.png"))); // NOI18N
-        jLabelError4.setText("No existe medicamento con ese nombre");
-
-        org.jdesktop.layout.GroupLayout jPanelGestionarMedicamentosLayout = new org.jdesktop.layout.GroupLayout(jPanelGestionarMedicamentos);
-        jPanelGestionarMedicamentos.setLayout(jPanelGestionarMedicamentosLayout);
-        jPanelGestionarMedicamentosLayout.setHorizontalGroup(
-            jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarMedicamentosLayout.createSequentialGroup()
-                .add(131, 131, 131)
-                .add(jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                        .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarMedicamentosLayout.createSequentialGroup()
-                            .add(jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                .add(jPanelGestionarMedicamentosLayout.createSequentialGroup()
-                                    .add(jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                                        .add(jPanelGestionarMedicamentosLayout.createSequentialGroup()
-                                            .add(jLabelNombre)
-                                            .add(54, 54, 54)
-                                            .add(jTextFieldNombreMedicamento, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 132, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                        .add(jPanelGestionarMedicamentosLayout.createSequentialGroup()
-                                            .add(jLabelStockMinimo)
-                                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .add(jTextFieldStockMinimo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 65, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 77, Short.MAX_VALUE))
-                                .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarMedicamentosLayout.createSequentialGroup()
-                                    .add(jButtonAnadir, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 105, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .add(75, 75, 75)))
-                            .add(jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                .add(jPanelGestionarMedicamentosLayout.createSequentialGroup()
-                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                    .add(jScrollPane3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                .add(jPanelGestionarMedicamentosLayout.createSequentialGroup()
-                                    .add(76, 76, 76)
-                                    .add(jButtonConsultar, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 107, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                            .add(45, 45, 45))
-                        .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarMedicamentosLayout.createSequentialGroup()
-                            .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 575, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(47, 47, 47)))
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarMedicamentosLayout.createSequentialGroup()
-                        .add(9, 9, 9)
-                        .add(jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jLabelGestionarPaciente8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 515, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarMedicamentosLayout.createSequentialGroup()
-                                .add(jLabel11)
-                                .add(116, 116, 116)))))
-                .add(102, 102, 102))
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarMedicamentosLayout.createSequentialGroup()
-                .addContainerGap(482, Short.MAX_VALUE)
-                .add(jLabelDescripcion)
-                .add(296, 296, 296))
-            .add(jPanelGestionarMedicamentosLayout.createSequentialGroup()
-                .add(149, 149, 149)
-                .add(jLabelError3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 254, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(27, 27, 27)
-                .add(jLabelError4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 329, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(101, Short.MAX_VALUE))
-        );
-        jPanelGestionarMedicamentosLayout.setVerticalGroup(
-            jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelGestionarMedicamentosLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(jLabelGestionarPaciente8)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jLabel11)
-                .add(12, 12, 12)
-                .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 79, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(7, 7, 7)
-                .add(jLabelDescripcion)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanelGestionarMedicamentosLayout.createSequentialGroup()
-                        .add(jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jLabelNombre)
-                            .add(jTextFieldNombreMedicamento, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 20, Short.MAX_VALUE)
-                        .add(jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(jLabelStockMinimo)
-                            .add(jTextFieldStockMinimo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .add(32, 32, 32))
-                    .add(jScrollPane3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 102, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(16, 16, 16)
-                .add(jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jButtonAnadir)
-                    .add(jButtonConsultar))
-                .add(34, 34, 34)
-                .add(jPanelGestionarMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabelError3)
-                    .add(jLabelError4))
-                .addContainerGap(23, Short.MAX_VALUE))
-        );
-
-        jPanelGestionarMedicamentos.setBounds(0, 0, 860, 430);
-        ZonaTrabajo.add(jPanelGestionarMedicamentos, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelConsultarDatosPersonales.setPreferredSize(new java.awt.Dimension(901, 531));
         jPanelConsultarDatosPersonales.setLayout(null);
@@ -1693,14 +1668,6 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
             }
         });
 
-        jTextAreaInfo3.setBackground(new java.awt.Color(255, 204, 102));
-        jTextAreaInfo3.setColumns(17);
-        jTextAreaInfo3.setEditable(false);
-        jTextAreaInfo3.setFont(new java.awt.Font("Lucida Grande", 0, 18));
-        jTextAreaInfo3.setRows(3);
-        jTextAreaInfo3.setText("Estas son las recetas para el paciente.\nElija una y haga \"click\" en consultar para\nobtener una.");
-        jScrollPane7.setViewportView(jTextAreaInfo3);
-
         jLabelGestionarPaciente10.setFont(new java.awt.Font("Lucida Grande", 1, 36));
         jLabelGestionarPaciente10.setText("Dispensar Medicamentos");
 
@@ -1720,33 +1687,28 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                 .add(146, 146, 146)
                 .add(jPanelDispensarConsultarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jLabel18)
-                    .add(jLabelGestionarPaciente10, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 582, Short.MAX_VALUE)
+                    .add(jLabelGestionarPaciente10, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 582, Short.MAX_VALUE)))
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelDispensarConsultarLayout.createSequentialGroup()
+                .addContainerGap(245, Short.MAX_VALUE)
+                .add(jPanelDispensarConsultarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelDispensarConsultarLayout.createSequentialGroup()
-                        .add(74, 74, 74)
-                        .add(jScrollPane7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 370, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(138, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanelDispensarConsultarLayout.createSequentialGroup()
-                        .add(134, 134, 134)
+                        .add(34, 34, 34)
                         .add(jLabel17)
                         .add(126, 126, 126)
                         .add(jLabel19)
-                        .addContainerGap(229, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanelDispensarConsultarLayout.createSequentialGroup()
-                        .add(100, 100, 100)
-                        .add(jPanelDispensarConsultarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jButtonConsultarReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 127, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(scrollPaneRecetas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 323, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 70, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jButtonConsultarReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 127, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(scrollPaneRecetas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 323, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(160, 160, 160))
         );
         jPanelDispensarConsultarLayout.setVerticalGroup(
             jPanelDispensarConsultarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelDispensarConsultarLayout.createSequentialGroup()
+            .add(jPanelDispensarConsultarLayout.createSequentialGroup()
                 .addContainerGap()
                 .add(jLabelGestionarPaciente10)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jLabel18)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jScrollPane7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(35, 35, 35)
                 .add(jPanelDispensarConsultarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabel17)
                     .add(jLabel19))
@@ -1754,7 +1716,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                 .add(scrollPaneRecetas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 204, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(24, 24, 24)
                 .add(jButtonConsultarReceta)
-                .add(87, 87, 87))
+                .addContainerGap(160, Short.MAX_VALUE))
         );
 
         jPanelDispensarConsultar.setBounds(0, 0, 728, 510);
@@ -1824,24 +1786,16 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                 .add(scrollPaneMedicamentosReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 168, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(18, 18, 18)
                 .add(jButtonDispensarFinal)
-                .addContainerGap(626, Short.MAX_VALUE))
+                .addContainerGap(628, Short.MAX_VALUE))
         );
 
-        jPanelDispensarFinal.setBounds(0, 0, 736, 1067);
+        jPanelDispensarFinal.setBounds(0, 0, 736, 1069);
         ZonaTrabajo.add(jPanelDispensarFinal, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente12.setFont(new java.awt.Font("Lucida Grande", 1, 36));
         jLabelGestionarPaciente12.setText("Modificar Lote Medicamento");
 
         jLabel24.setText("__________________________________________________________________________________");
-
-        jTextAreaInfo5.setBackground(new java.awt.Color(255, 204, 102));
-        jTextAreaInfo5.setColumns(17);
-        jTextAreaInfo5.setEditable(false);
-        jTextAreaInfo5.setFont(new java.awt.Font("Lucida Grande", 0, 18));
-        jTextAreaInfo5.setRows(3);
-        jTextAreaInfo5.setText("Cambie los datos que desee y haga 'click' en 'MODIFICAR'\nSi quiere borrar el lote haga 'click' en 'ELIMINAR'");
-        jScrollPane9.setViewportView(jTextAreaInfo5);
 
         jTextFieldExistencias1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1874,26 +1828,27 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                 jButtonELiminarLoteMouseReleased(evt);
             }
         });
+        jButtonELiminarLote.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonELiminarLoteActionPerformed(evt);
+            }
+        });
+
+        jLabelError6.setForeground(new java.awt.Color(255, 0, 0));
+        jLabelError6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Error.png"))); // NOI18N
+        jLabelError6.setText("Faltan datos por introducir");
 
         org.jdesktop.layout.GroupLayout jPanelModificarLoteLayout = new org.jdesktop.layout.GroupLayout(jPanelModificarLote);
         jPanelModificarLote.setLayout(jPanelModificarLoteLayout);
         jPanelModificarLoteLayout.setHorizontalGroup(
             jPanelModificarLoteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanelModificarLoteLayout.createSequentialGroup()
-                .add(145, 145, 145)
+                .add(53, 53, 53)
+                .add(jOptionPaneEliminarLote, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 71, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(99, 99, 99)
                 .add(jPanelModificarLoteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelModificarLoteLayout.createSequentialGroup()
-                        .add(jLabel24)
-                        .addContainerGap())
-                    .add(jPanelModificarLoteLayout.createSequentialGroup()
-                        .add(jLabelGestionarPaciente12, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .add(85, 85, 85))))
-            .add(jPanelModificarLoteLayout.createSequentialGroup()
-                .add(177, 177, 177)
-                .add(jPanelModificarLoteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jScrollPane9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 513, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jPanelModificarLoteLayout.createSequentialGroup()
-                        .add(123, 123, 123)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 201, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(jPanelModificarLoteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(jLabel21, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 121, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(jPanelModificarLoteLayout.createSequentialGroup()
@@ -1908,57 +1863,60 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                                 .add(57, 57, 57)
                                 .add(jPanelModificarLoteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                                     .add(jButtonELiminarLote, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 98, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .add(jButtonModificarLote, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 102, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(118, Short.MAX_VALUE))
+                                    .add(jButtonModificarLote, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 102, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
+                        .add(85, 85, 85))
+                    .add(jPanelModificarLoteLayout.createSequentialGroup()
+                        .add(jLabel24)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jLabelGestionarPaciente12, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .add(24, 24, 24))
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelModificarLoteLayout.createSequentialGroup()
+                .addContainerGap(484, Short.MAX_VALUE)
+                .add(jLabelError6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 254, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(87, 87, 87))
         );
         jPanelModificarLoteLayout.setVerticalGroup(
             jPanelModificarLoteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanelModificarLoteLayout.createSequentialGroup()
                 .add(jPanelModificarLoteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelModificarLoteLayout.createSequentialGroup()
-                        .add(183, 183, 183)
-                        .add(jLabel21, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 24, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jTextFieldCodigoBarras, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanelModificarLoteLayout.createSequentialGroup()
                         .addContainerGap()
                         .add(jLabelGestionarPaciente12)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(jLabel24)
                         .add(18, 18, 18)
-                        .add(jScrollPane9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jPanelModificarLoteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanelModificarLoteLayout.createSequentialGroup()
-                        .add(jLabel25)
+                        .add(jLabel21, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 24, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jTextFieldExistencias1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(jLabelFechaCad)
+                        .add(jTextFieldCodigoBarras, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jTextFieldFechaCaducidad, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .add(jPanelModificarLoteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jPanelModificarLoteLayout.createSequentialGroup()
+                                .add(jLabel25)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(jTextFieldExistencias1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                                .add(jLabelFechaCad)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(jTextFieldFechaCaducidad, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                            .add(jPanelModificarLoteLayout.createSequentialGroup()
+                                .add(jButtonELiminarLote)
+                                .add(18, 18, 18)
+                                .add(jButtonModificarLote))))
                     .add(jPanelModificarLoteLayout.createSequentialGroup()
-                        .add(jButtonELiminarLote)
-                        .add(18, 18, 18)
-                        .add(jButtonModificarLote)))
-                .addContainerGap(41, Short.MAX_VALUE))
+                        .add(115, 115, 115)
+                        .add(jOptionPaneEliminarLote, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .add(26, 26, 26)
+                .add(jLabelError6)
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
-        jPanelModificarLote.setBounds(0, 0, 808, 404);
+        jPanelModificarLote.setBounds(0, 0, 825, 404);
         ZonaTrabajo.add(jPanelModificarLote, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente14.setFont(new java.awt.Font("Lucida Grande", 1, 36));
         jLabelGestionarPaciente14.setText("Añadir Lote Medicamento");
 
         jLabel28.setText("_____________________________________________________________________________");
-
-        jTextAreaInfo6.setBackground(new java.awt.Color(255, 204, 102));
-        jTextAreaInfo6.setColumns(17);
-        jTextAreaInfo6.setEditable(false);
-        jTextAreaInfo6.setFont(new java.awt.Font("Lucida Grande", 0, 18));
-        jTextAreaInfo6.setRows(3);
-        jTextAreaInfo6.setText("\nInserte los datos del lote a agregar\n");
-        jScrollPane10.setViewportView(jTextAreaInfo6);
 
         jTextFieldExistenc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2002,70 +1960,67 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jPanelAnadirLote.setLayout(jPanelAnadirLoteLayout);
         jPanelAnadirLoteLayout.setHorizontalGroup(
             jPanelAnadirLoteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelAnadirLoteLayout.createSequentialGroup()
-                .add(135, 135, 135)
+            .add(jPanelAnadirLoteLayout.createSequentialGroup()
+                .add(212, 212, 212)
                 .add(jPanelAnadirLoteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelAnadirLoteLayout.createSequentialGroup()
-                        .add(10, 10, 10)
-                        .add(jLabelGestionarPaciente14, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 564, Short.MAX_VALUE)
-                        .add(7, 7, 7))
-                    .add(jLabel28)
-                    .add(jPanelAnadirLoteLayout.createSequentialGroup()
-                        .add(112, 112, 112)
-                        .add(jScrollPane10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 320, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 142, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelAnadirLoteLayout.createSequentialGroup()
-                        .add(16, 16, 16)
-                        .add(jPanelAnadirLoteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jTextFieldCodBarras, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 110, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jLabelCodBarras2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 121, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 134, Short.MAX_VALUE)
                         .add(jPanelAnadirLoteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
                             .add(org.jdesktop.layout.GroupLayout.LEADING, jTextFieldExistenc, 0, 0, Short.MAX_VALUE)
-                            .add(org.jdesktop.layout.GroupLayout.LEADING, jLabelExistenc)
-                            .add(jButtonAnadirMedicamento, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .add(90, 90, 90)
-                        .add(jPanelAnadirLoteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                            .add(org.jdesktop.layout.GroupLayout.LEADING, jTextFieldFechCad, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 118, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jLabelFechCad, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 133, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .add(10, 10, 10)))
-                .add(74, 74, 74))
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelAnadirLoteLayout.createSequentialGroup()
-                .addContainerGap(347, Short.MAX_VALUE)
-                .add(jLabelError1)
-                .add(235, 235, 235))
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, jLabelExistenc))
+                        .add(jPanelAnadirLoteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jPanelAnadirLoteLayout.createSequentialGroup()
+                                .add(145, 145, 145)
+                                .add(jButtonAnadirMedicamento))
+                            .add(jPanelAnadirLoteLayout.createSequentialGroup()
+                                .add(86, 86, 86)
+                                .add(jLabelError1))))
+                    .add(jPanelAnadirLoteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, jTextFieldFechCad, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 118, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(jLabelFechCad, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 133, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jTextFieldCodBarras, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 110, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabelCodBarras2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 121, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(160, Short.MAX_VALUE))
+            .add(jPanelAnadirLoteLayout.createSequentialGroup()
+                .add(65, 65, 65)
+                .add(jPanelAnadirLoteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jPanelAnadirLoteLayout.createSequentialGroup()
+                        .add(10, 10, 10)
+                        .add(jLabelGestionarPaciente14, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 548, Short.MAX_VALUE))
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel28))
+                .add(120, 120, 120))
         );
         jPanelAnadirLoteLayout.setVerticalGroup(
             jPanelAnadirLoteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanelAnadirLoteLayout.createSequentialGroup()
-                .addContainerGap()
+                .add(39, 39, 39)
                 .add(jLabelGestionarPaciente14)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jLabel28)
-                .add(18, 18, 18)
-                .add(jScrollPane10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(18, 18, 18)
                 .add(jPanelAnadirLoteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
                     .add(jPanelAnadirLoteLayout.createSequentialGroup()
                         .add(jLabelCodBarras2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 24, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jTextFieldCodBarras, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanelAnadirLoteLayout.createSequentialGroup()
-                        .add(jLabelFechCad)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jTextFieldFechCad, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanelAnadirLoteLayout.createSequentialGroup()
+                        .add(jTextFieldCodBarras, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(18, 18, 18)
                         .add(jLabelExistenc)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jTextFieldExistenc, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .add(38, 38, 38)
-                .add(jButtonAnadirMedicamento)
-                .add(18, 18, 18)
+                        .add(jTextFieldExistenc, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jPanelAnadirLoteLayout.createSequentialGroup()
+                        .add(jButtonAnadirMedicamento)
+                        .add(36, 36, 36)))
+                .add(17, 17, 17)
+                .add(jLabelFechCad)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jTextFieldFechCad, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(105, Short.MAX_VALUE))
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelAnadirLoteLayout.createSequentialGroup()
+                .addContainerGap(249, Short.MAX_VALUE)
                 .add(jLabelError1)
-                .addContainerGap(428, Short.MAX_VALUE))
+                .add(159, 159, 159))
         );
 
-        jPanelAnadirLote.setBounds(0, 0, 790, 790);
+        jPanelAnadirLote.setBounds(0, 0, 743, 426);
         ZonaTrabajo.add(jPanelAnadirLote, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         getContentPane().add(ZonaTrabajo);
@@ -2806,6 +2761,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         // TODO add your handling code here:
      if(compruebaFormulario("GestionarMedicamento")){
         GestorFarmacia gesFar= new GestorFarmacia();
+        jLabelError3.setVisible(false);
         boolean exito;
         String Nombre = jTextFieldNombreMedicamento.getText();
         String Descripcion = jTextAreaDescripcion.getText();
@@ -2832,11 +2788,12 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         // TODO add your handling code here:
 
       if(compruebaFormulario("ConsultarMedica")){
+        jLabelError3.setVisible(false);
         GestorFarmacia gesFar= new GestorFarmacia();
         String Nombre = jTextFieldNombreMedicamento.getText();
         Me=gesFar.consultarMedicamento(Nombre); // tomar nombre del jtextfieldddd
         if( Me==null){
-            jLabelError3.setVisible(false);
+            
             new InformacionError().setVisible(true);
             jLabelError4.setVisible(true);
             System.out.println(" El medicamento"+ Nombre + " no existe");
@@ -2935,17 +2892,16 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
     private void jButtonELiminarLoteMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonELiminarLoteMouseReleased
 
        // TODO add your handling code here
-
+       if(compruebaFormulario("ModificarLote")){
         boolean exito;
         LoteMedicamentoBD loBD=new LoteMedicamentoBD();
-
+        int option;
         boolean pulsado;
 
-        InformacionConfirma panelInfo = new InformacionConfirma();
-        pulsado = panelInfo.botonPulsado(evt);
-        //panelInfo.setVisible(true);
-        //if(pulsado == true){
-            //panelInfo.setVisible(false);
+        jLabelError6.setVisible(false);
+        option = jOptionPaneEliminarLote.showConfirmDialog(null, "¿Esta seguro que desea eliminar el medicamento ?");
+        
+        if(option == 0){
             GestorFarmacia gesFar = new GestorFarmacia();
             exito = gesFar.eliminarLoteMedicamento(Lo,Me);
         
@@ -2955,18 +2911,22 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
             else{
              limpiarFormulario("ModificarLote");
              new InformacionExito().setVisible(true);
+             mostrarPanel("GestionarMedicamento");
             }
-        //}
-        /*else{
+        }
 
-            panelInfo.setVisible(false);
+        else{
             new InformacionError().setVisible(true);
-        }*/
+        }
+        }
+       else
+        jLabelError6.setVisible(true);
     }//GEN-LAST:event_jButtonELiminarLoteMouseReleased
 
     private void jButtonModificarLoteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarLoteActionPerformed
         // TODO add your handling code here:
 
+      if(compruebaFormulario("ModificarLote")){
         GestorFarmacia gesFar = new GestorFarmacia();
         boolean exito;
 
@@ -2998,10 +2958,14 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
             new InformacionError().setVisible(true);
         }
         else{
-            new InformacionExito().setVisible(true);
+            
             limpiarFormulario("ModificarLote");
+            new InformacionExito().setVisible(true);
             mostrarPanel("GestionarMedicamento");
         }
+       }
+        else
+            jLabelError6.setVisible(true);
     }//GEN-LAST:event_jButtonModificarLoteActionPerformed
 
     private void jTextFieldNombreMedicamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreMedicamentoActionPerformed
@@ -3013,19 +2977,20 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
        // TODO add your handling code here:
         //solicita confirmacion
         // si confirma:
-      if(compruebaFormulario("")){
-        boolean pulsado;
+      if(compruebaFormulario("ConsultarMedicamentoModificarEliminar")){
+        int option;
         boolean exito;
-        InformacionConfirma panelInfo = new InformacionConfirma();
-        panelInfo.setVisible(true);
-        pulsado = panelInfo.botonPulsado(evt);
+        option = jOptionPaneConfirmar.showConfirmDialog(null, "¿Esta seguro que desea eliminar el medicamento ?");
+        System.out.println("option es"+option);
+//        pulsado = panelInfo.botonPulsado(evt);
 
-        if( pulsado == true){
+        if( option == 0){
             GestorFarmacia gesFar = new GestorFarmacia();
             exito = gesFar.eliminarMedicamento(Me);
             if( exito){
                  new InformacionExito().setVisible(true);
-                 limpiarFormulario("ConsultarMEdicamento");
+                 limpiarFormulario("ConsultarMedicamento");
+                 mostrarPanel("GestionarMedicamento");
             }
              else
                 new InformacionError().setVisible(false);
@@ -3050,6 +3015,14 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
     private void jButtonAnadirMedicamentoAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jButtonAnadirMedicamentoAncestorAdded
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonAnadirMedicamentoAncestorAdded
+
+    private void jButtonELiminarLoteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonELiminarLoteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonELiminarLoteActionPerformed
+
+    private void jButtonConsultarLoteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarLoteMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonConsultarLoteMouseEntered
 
 
     /*Comprueba que la fecha introducida es correcta
@@ -3512,13 +3485,11 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
         if(panel.equals("ModificarLote")){
 
-            /**Limpiamos posibles datos introducidos anteriormente*/
-
-            limpiarFormulario("ModificarLote");
             /**Hacemos visible el botón jLabelIconoInicio*/
             jLabelInicio.setVisible(true);
             jLabelIconoInicio.setVisible(true);
-
+            jOptionPaneEliminarLote.setVisible(false);
+            jLabelError6.setVisible(false);
             /**Hacemos visible el panel seleccionado*/
             jPanelPrincipal.setVisible(false);
             jPanelConsultarDatosPersonales.setVisible(false);
@@ -3588,9 +3559,9 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
             /**Hacemos visible el botón jLabelIconoInicio*/
             jLabelInicio.setVisible(true);
             jLabelIconoInicio.setVisible(true);
-
+            jTextFieldCodLote.setText("");
             /**Hacemos visible el panel seleccionado*/
-           
+            jOptionPaneConfirmar.setVisible(false);
             jPanelPrincipal.setVisible(false);
             jPanelConsultarDatosPersonales.setVisible(false);
             jPanelConsultarTurno.setVisible(false);
@@ -3918,6 +3889,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelError3;
     private javax.swing.JLabel jLabelError4;
     private javax.swing.JLabel jLabelError5;
+    private javax.swing.JLabel jLabelError6;
     private javax.swing.JLabel jLabelErrorDNIPaciente;
     private javax.swing.JLabel jLabelExis;
     private javax.swing.JLabel jLabelExistenc;
@@ -3959,6 +3931,8 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelTurnoTrabajo;
     private javax.swing.JLabel jLabelUsuario;
     private javax.swing.JList jListStock;
+    private javax.swing.JOptionPane jOptionPaneConfirmar;
+    private javax.swing.JOptionPane jOptionPaneEliminarLote;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelAnadirLote;
     private javax.swing.JPanel jPanelComprobarStockMedicamentos;
@@ -3980,28 +3954,18 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButtonRadiologo;
     private javax.swing.JRadioButton jRadioButtonTarde1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane10;
-    private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane13;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTextArea jTextAreaConsulDescrip;
     private javax.swing.JTextArea jTextAreaDescripcion;
     private javax.swing.JTextArea jTextAreaInfo;
-    private javax.swing.JTextArea jTextAreaInfo1;
     private javax.swing.JTextArea jTextAreaInfo2;
-    private javax.swing.JTextArea jTextAreaInfo3;
     private javax.swing.JTextArea jTextAreaInfo4;
-    private javax.swing.JTextArea jTextAreaInfo5;
-    private javax.swing.JTextArea jTextAreaInfo6;
-    private javax.swing.JTextArea jTextAreaInfo7;
     private javax.swing.JTextArea jTextAreaInfoConsultaTurno;
     private javax.swing.JTextArea jTextAreaInfoTurno;
     private javax.swing.JTextField jTextFieldAnioFinTurno;
