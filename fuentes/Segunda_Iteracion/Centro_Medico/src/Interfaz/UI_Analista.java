@@ -217,7 +217,7 @@ public class UI_Analista extends javax.swing.JFrame {
         jLabelIAtributos = new javax.swing.JLabel();
         scrollPaneImagenes = new java.awt.ScrollPane();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextAreaAtributos = new javax.swing.JTextArea();
+        jListAtributos = new javax.swing.JList();
         jLabelComentarios = new javax.swing.JLabel();
         scrollPaneComentarios = new java.awt.ScrollPane();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -393,7 +393,7 @@ public class UI_Analista extends javax.swing.JFrame {
                     .add(jPanelAgregarAtributoLayout.createSequentialGroup()
                         .add(78, 78, 78)
                         .add(jLabelError1)))
-                .addContainerGap(167, Short.MAX_VALUE))
+                .addContainerGap(142, Short.MAX_VALUE))
         );
 
         jPanelAgregarAtributo.setBounds(0, 0, 800, 480);
@@ -486,7 +486,7 @@ public class UI_Analista extends javax.swing.JFrame {
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
-        jPanelEliminarAtributo.setBounds(0, 0, 835, 360);
+        jPanelEliminarAtributo.setBounds(0, 0, -1, 360);
         ZonaTrabajo.add(jPanelEliminarAtributo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelConsultarDatosPersonales.setPreferredSize(new java.awt.Dimension(901, 531));
@@ -1279,7 +1279,7 @@ public class UI_Analista extends javax.swing.JFrame {
                     .add(0, 64, Short.MAX_VALUE)))
         );
 
-        jPanelConsultarTurno.setBounds(0, 0, 860, 531);
+        jPanelConsultarTurno.setBounds(0, 0, 860, -1);
         ZonaTrabajo.add(jPanelConsultarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente7.setFont(new java.awt.Font("Lucida Grande", 1, 36));
@@ -1310,9 +1310,7 @@ public class UI_Analista extends javax.swing.JFrame {
 
         scrollPaneImagenes.setBackground(new java.awt.Color(254, 253, 253));
 
-        jTextAreaAtributos.setColumns(20);
-        jTextAreaAtributos.setRows(5);
-        jScrollPane1.setViewportView(jTextAreaAtributos);
+        jScrollPane1.setViewportView(jListAtributos);
 
         scrollPaneImagenes.add(jScrollPane1);
 
@@ -2234,7 +2232,7 @@ public class UI_Analista extends javax.swing.JFrame {
      *
      *@param persona, string que indica si se trata del formulario de Paciente o Personal
      */
-    private void limpiarFormulario(String persona){
+    private void limpiarFormulario(String formulario){
 
         String diaActual;
         String mesActual;
@@ -2250,7 +2248,7 @@ public class UI_Analista extends javax.swing.JFrame {
         minutoActual = Integer.toString(fechaActual.get(Calendar.MINUTE));
 
 
-        if(persona.equals("GestionarPaciente")){
+        if(formulario.equals("GestionarPaciente")){
             jTextFieldNombrePersonal.setText("");
             jTextFieldApellidosPersonal.setText("");
             jTextFieldDNIPersonal.setText("");
@@ -2263,7 +2261,7 @@ public class UI_Analista extends javax.swing.JFrame {
             jLabelFotoPersonal.setIcon(null);
         }
 
-        if(persona.equals("GestionarTurno")){
+        if(formulario.equals("GestionarTurno")){
             jTextFieldDiaInicioTurno.setText(diaActual);
             jTextFieldMesInicioTurno.setText(mesActual);
             jTextFieldAnioInicioTurno.setText(anioActual);
@@ -2271,6 +2269,20 @@ public class UI_Analista extends javax.swing.JFrame {
             jTextFieldMesFinTurno.setText(mesActual);
             jTextFieldAnioFinTurno.setText(anioActual);
         }
+
+        if(formulario.equals("AgregarAtributo"))
+            jTextFieldNombreAtributo.setText("");
+
+
+        if(formulario.equals("EliminarAtributo"))
+            jTextFieldNombreAtributo1.setText("");
+
+        if(formulario.equals("AlmacenarResultados")){
+            jTextAreaComentarios.setText("");
+
+
+        }
+
     }
 
   
@@ -2663,6 +2675,7 @@ public class UI_Analista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelTipoUsuarioIdentificado;
     private javax.swing.JLabel jLabelTurnoTrabajo;
     private javax.swing.JLabel jLabelUsuario;
+    private javax.swing.JList jListAtributos;
     private javax.swing.JPanel jPanelAgregarAtributo;
     private javax.swing.JPanel jPanelAlmacenarResultados;
     private javax.swing.JPanel jPanelConsultarDatosPersonales;
@@ -2687,7 +2700,6 @@ public class UI_Analista extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JTextArea jTextAreaAtributos;
     private javax.swing.JTextArea jTextAreaComentarios;
     private javax.swing.JTextArea jTextAreaInfoConsultaTurno;
     private javax.swing.JTextArea jTextAreaInfoTurno;
