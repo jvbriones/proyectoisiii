@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<project name="Centro M&#xE9;dico Grupo M1.2" company="" manager="" phase="" project-start="20110505T000000Z" mrproject-version="2" calendar="1">
+  <properties/>
+  <phases/>
+  <calendars>
+    <day-types>
+      <day-type id="0" name="Jornada laboral" description="Un d&#xED;a de trabajo predeterminado"/>
+      <day-type id="1" name="Jornada de descanso" description="Un d&#xED;a de descanso predeterminado"/>
+      <day-type id="2" name="Usar base" description="Usar d&#xED;a del calendario base"/>
+    </day-types>
+    <calendar id="1" name="Predeterminado">
+      <default-week mon="0" tue="0" wed="0" thu="0" fri="0" sat="1" sun="1"/>
+      <overridden-day-types>
+        <overridden-day-type id="0">
+          <interval start="0800" end="1200"/>
+          <interval start="1300" end="1700"/>
+        </overridden-day-type>
+      </overridden-day-types>
+      <days/>
+    </calendar>
+  </calendars>
+  <tasks>
+    <task id="1" name="Tercera Iteraci&#xF3;n" note="" work="5488200" start="20110505T000000Z" end="20110603T170000Z" work-start="20110505T080000Z" percent-complete="10" priority="0" type="normal" scheduling="fixed-work">
+      <task id="2" name="Tareas de Planificaci&#xF3;n" note="" work="1857600" start="20110505T000000Z" end="20110603T170000Z" work-start="20110505T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="3" name="Declaraci&#xF3;n de Alacance" note="" work="57600" start="20110505T000000Z" end="20110506T170000Z" work-start="20110505T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <constraint type="must-start-on" time="20110505T000000Z"/>
+        </task>
+        <task id="4" name="Estimaci&#xF3;n de Costos" note="" work="57600" start="20110505T000000Z" end="20110506T170000Z" work-start="20110505T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <constraint type="must-start-on" time="20110505T000000Z"/>
+        </task>
+        <task id="5" name="Planificaci&#xF3;n Organizativa" note="" work="28800" start="20110506T000000Z" end="20110506T170000Z" work-start="20110506T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <constraint type="must-start-on" time="20110506T000000Z"/>
+        </task>
+        <task id="6" name="Planificaci&#xF3;n Temporal" note="" work="57600" start="20110506T000000Z" end="20110509T170000Z" work-start="20110506T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <constraint type="must-start-on" time="20110506T000000Z"/>
+        </task>
+        <task id="7" name="An&#xE1;lisis de Riesgos" note="" work="28800" start="20110509T000000Z" end="20110509T170000Z" work-start="20110509T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <constraint type="must-start-on" time="20110509T000000Z"/>
+        </task>
+        <task id="8" name="An&#xE1;lisis de Heramientas Software" note="" work="28800" start="20110509T000000Z" end="20110509T170000Z" work-start="20110509T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <constraint type="must-start-on" time="20110509T000000Z"/>
+        </task>
+        <task id="9" name="Documento o Plan del Proyecto" note="" work="43200" start="20110509T000000Z" end="20110510T120000Z" work-start="20110509T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <constraint type="must-start-on" time="20110509T000000Z"/>
+        </task>
+        <task id="10" name="Planificaci&#xF3;n Tercera Iteraci&#xF3;n" note="" work="0" start="20110510T000000Z" end="20110510T000000Z" work-start="20110510T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+          <constraint type="must-start-on" time="20110510T000000Z"/>
+        </task>
+        <task id="11" name="Gesti&#xF3;n del Proyecto" note="" work="518400" start="20110511T000000Z" end="20110603T170000Z" work-start="20110511T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <constraint type="must-start-on" time="20110511T000000Z"/>
+          <predecessors>
+            <predecessor id="1" predecessor-id="9" type="FS"/>
+          </predecessors>
+        </task>
+        <task id="12" name="Reuni&#xF3;n entre Coordinadores" note="" work="518400" start="20110511T000000Z" end="20110603T170000Z" work-start="20110511T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <constraint type="must-start-on" time="20110511T000000Z"/>
+          <predecessors>
+            <predecessor id="1" predecessor-id="9" type="FS"/>
+          </predecessors>
+        </task>
+        <task id="13" name="Fase de Pruebas de Implementaci&#xF3;n" note="" work="518400" start="20110511T000000Z" end="20110603T170000Z" work-start="20110511T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <constraint type="must-start-on" time="20110511T000000Z"/>
+          <predecessors>
+            <predecessor id="1" predecessor-id="9" type="FS"/>
+          </predecessors>
+        </task>
+      </task>
+      <task id="14" name="Tareas de An&#xE1;lisis y Dise&#xF1;o" note="" work="2196900" start="20110505T000000Z" end="20110603T170000Z" work-start="20110505T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="15" name="Estudio de Estandares de Documentaci&#xF3;n" note="" work="105300" start="20110505T000000Z" end="20110510T141500Z" work-start="20110505T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="16" name="Estudio de Proyectos Desarrollados" note="" work="102600" start="20110505T000000Z" end="20110510T133000Z" work-start="20110505T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="17" name="Modelado de Requisitos" note="" work="259200" start="20110510T000000Z" end="20110513T170000Z" work-start="20110510T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <task id="18" name="Identificaci&#xF3;n Requisitos Funcionales" note="" work="28800" start="20110510T000000Z" end="20110510T170000Z" work-start="20110510T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <constraint type="must-start-on" time="20110510T000000Z"/>
+          </task>
+          <task id="19" name="Identificaci&#xF3;n Requisitos No Funcionales" note="" work="28800" start="20110510T000000Z" end="20110510T170000Z" work-start="20110510T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <constraint type="must-start-on" time="20110510T000000Z"/>
+          </task>
+          <task id="20" name="Identificaci&#xF3;n de Casos de Uso" note="" work="28800" start="20110510T000000Z" end="20110510T170000Z" work-start="20110510T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <constraint type="must-start-on" time="20110510T000000Z"/>
+          </task>
+          <task id="21" name="Diagramas Casos de Uso" note="" work="28800" start="20110510T000000Z" end="20110510T170000Z" work-start="20110510T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <predecessors>
+              <predecessor id="1" predecessor-id="20" type="SS"/>
+            </predecessors>
+          </task>
+          <task id="22" name="Descripcion Detallada Casos de Uso" note="" work="28800" start="20110511T000000Z" end="20110511T170000Z" work-start="20110511T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <constraint type="must-start-on" time="20110511T000000Z"/>
+            <predecessors>
+              <predecessor id="1" predecessor-id="20" type="FS"/>
+            </predecessors>
+          </task>
+          <task id="23" name="Subsistemas Funcionales" note="" work="57600" start="20110511T000000Z" end="20110512T170000Z" work-start="20110511T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <constraint type="must-start-on" time="20110511T000000Z"/>
+          </task>
+          <task id="24" name="Operaciones y Diagramas del Sistema" note="" work="57600" start="20110512T000000Z" end="20110513T170000Z" work-start="20110512T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <constraint type="must-start-on" time="20110512T000000Z"/>
+          </task>
+          <task id="25" name="Documento DMR" note="" work="0" start="20110513T000000Z" end="20110513T000000Z" work-start="20110513T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+            <constraint type="must-start-on" time="20110513T000000Z"/>
+          </task>
+        </task>
+        <task id="26" name="Modelado de An&#xE1;lisis" note="" work="230400" start="20110516T000000Z" end="20110519T170000Z" work-start="20110516T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <task id="27" name="Identificar Clases, Atributos y Relaciones" note="" work="28800" start="20110516T000000Z" end="20110516T170000Z" work-start="20110516T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <constraint type="must-start-on" time="20110516T000000Z"/>
+          </task>
+          <task id="28" name="Modelado Est&#xE1;tico" note="" work="28800" start="20110516T000000Z" end="20110516T170000Z" work-start="20110516T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <constraint type="must-start-on" time="20110516T000000Z"/>
+          </task>
+          <task id="29" name="Modelado del comportamiento Externo" note="" work="86400" start="20110517T000000Z" end="20110519T170000Z" work-start="20110517T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <constraint type="must-start-on" time="20110517T000000Z"/>
+          </task>
+          <task id="30" name="Modelado del comportamiento Interno" note="" work="86400" start="20110517T000000Z" end="20110519T170000Z" work-start="20110517T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <constraint type="must-start-on" time="20110517T000000Z"/>
+          </task>
+          <task id="31" name="Documento DA" note="&#10;" work="0" start="20110519T000000Z" end="20110519T000000Z" work-start="20110519T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+            <constraint type="must-start-on" time="20110519T000000Z"/>
+          </task>
+        </task>
+        <task id="32" name="Modelado de Dise&#xF1;o" note="" work="432000" start="20110520T000000Z" end="20110526T170000Z" work-start="20110520T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <task id="33" name="Arquitectura del Sistema" note="" work="57600" start="20110520T000000Z" end="20110523T170000Z" work-start="20110520T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <constraint type="must-start-on" time="20110520T000000Z"/>
+          </task>
+          <task id="34" name="Diagrama de Componentes" note="" work="28800" start="20110523T000000Z" end="20110523T170000Z" work-start="20110523T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <constraint type="must-start-on" time="20110523T000000Z"/>
+            <predecessors>
+              <predecessor id="1" predecessor-id="33" type="FS"/>
+            </predecessors>
+          </task>
+          <task id="35" name="Diagrama de Despliegue" note="" work="28800" start="20110523T000000Z" end="20110523T170000Z" work-start="20110523T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <constraint type="must-start-on" time="20110523T000000Z"/>
+            <predecessors>
+              <predecessor id="1" predecessor-id="33" type="FS"/>
+            </predecessors>
+          </task>
+          <task id="36" name="Dise&#xF1;o de Objetos" note="" work="201600" start="20110523T000000Z" end="20110526T170000Z" work-start="20110523T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <task id="37" name="Diagramas de Secuencia " note="" work="115200" start="20110523T000000Z" end="20110526T170000Z" work-start="20110523T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+              <constraint type="must-start-on" time="20110523T000000Z"/>
+            </task>
+            <task id="38" name="Diagrama de Clases" note="" work="86400" start="20110524T000000Z" end="20110526T170000Z" work-start="20110524T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+              <constraint type="must-start-on" time="20110524T000000Z"/>
+              <predecessors>
+                <predecessor id="1" predecessor-id="37" type="FS"/>
+              </predecessors>
+            </task>
+          </task>
+          <task id="39" name="Dise&#xF1;o de la Base de Datos" note="" work="57600" start="20110520T000000Z" end="20110523T170000Z" work-start="20110520T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <constraint type="must-start-on" time="20110520T000000Z"/>
+          </task>
+          <task id="40" name="Dise&#xF1;o Interfaz Usuario" note="" work="57600" start="20110520T000000Z" end="20110523T170000Z" work-start="20110520T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+            <constraint type="must-start-on" time="20110520T000000Z"/>
+          </task>
+          <task id="41" name="Documento DD" note="" work="0" start="20110526T000000Z" end="20110526T000000Z" work-start="20110526T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+            <constraint type="must-start-on" time="20110526T000000Z"/>
+          </task>
+        </task>
+        <task id="42" name="Revisiones DMR, DA y DD" note="" work="460800" start="20110513T000000Z" end="20110603T170000Z" work-start="20110513T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <constraint type="must-start-on" time="20110513T000000Z"/>
+        </task>
+        <task id="43" name="Dise&#xF1;o de Operaciones No Fun. Pendientes" note="" work="303300" start="20110520T000000Z" end="20110603T131500Z" work-start="20110520T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <constraint type="must-start-on" time="20110520T000000Z"/>
+        </task>
+        <task id="44" name="Feedback con Equipo de Implementaci&#xF3;n" note="" work="303300" start="20110520T000000Z" end="20110603T131500Z" work-start="20110520T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <constraint type="must-start-on" time="20110520T000000Z"/>
+        </task>
+        <task id="45" name="Documento del Producto Final" note="" work="0" start="20110603T000000Z" end="20110603T000000Z" work-start="20110603T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+          <constraint type="must-start-on" time="20110603T000000Z"/>
+        </task>
+      </task>
+      <task id="46" name="Tareas de Implementaci&#xF3;n" note="" work="1433700" start="20110505T000000Z" end="20110603T170000Z" work-start="20110505T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="47" name="Estudio o Revisi&#xF3;n de Len. de Codificaci&#xF3;n" note="" work="230400" start="20110505T000000Z" end="20110516T170000Z" work-start="20110505T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="48" name="Estudio Herramientas Desarrollo" note="" work="224100" start="20110505T000000Z" end="20110516T151500Z" work-start="20110505T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="49" name="Estudio Estandares Codificaci&#xF3;n" note="" work="230400" start="20110505T000000Z" end="20110516T170000Z" work-start="20110505T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="50" name="Detecci&#xF3;n de Operaciones No Fun." note="" work="230400" start="20110517T000000Z" end="20110526T170000Z" work-start="20110517T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <constraint type="must-start-on" time="20110517T000000Z"/>
+        </task>
+        <task id="51" name="Feedback con el Equipo de Dise&#xF1;o" note="" work="316800" start="20110520T000000Z" end="20110603T170000Z" work-start="20110520T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <constraint type="must-start-on" time="20110520T000000Z"/>
+        </task>
+        <task id="52" name="Codificaci&#xF3;n de la Tercera Iteraci&#xF3;n" note="" work="201600" start="20110526T000000Z" end="20110603T170000Z" work-start="20110526T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <constraint type="must-start-on" time="20110526T000000Z"/>
+        </task>
+        <task id="53" name="Entrega de la Aplicaci&#xF3;n" note="" work="0" start="20110603T000000Z" end="20110603T000000Z" work-start="20110603T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+          <constraint type="must-start-on" time="20110603T000000Z"/>
+        </task>
+      </task>
+    </task>
+  </tasks>
+  <resource-groups/>
+  <resources>
+    <resource id="1" name="Subgrupo-3" short-name="Sub3" type="1" units="0" email="" note="" std-rate="42"/>
+    <resource id="2" name="Subgrupo-2" short-name="Sub2" type="1" units="0" email="" note="" std-rate="42"/>
+    <resource id="3" name="Subgrupo-1" short-name="Sub1" type="1" units="0" email="" note="" std-rate="42"/>
+  </resources>
+  <allocations>
+    <allocation task-id="49" resource-id="1" units="100"/>
+    <allocation task-id="48" resource-id="1" units="100"/>
+    <allocation task-id="53" resource-id="1" units="100"/>
+    <allocation task-id="52" resource-id="1" units="100"/>
+    <allocation task-id="50" resource-id="1" units="100"/>
+    <allocation task-id="51" resource-id="1" units="100"/>
+    <allocation task-id="47" resource-id="1" units="100"/>
+    <allocation task-id="44" resource-id="2" units="100"/>
+    <allocation task-id="43" resource-id="2" units="100"/>
+    <allocation task-id="42" resource-id="2" units="100"/>
+    <allocation task-id="38" resource-id="2" units="100"/>
+    <allocation task-id="37" resource-id="2" units="100"/>
+    <allocation task-id="40" resource-id="2" units="100"/>
+    <allocation task-id="39" resource-id="2" units="100"/>
+    <allocation task-id="35" resource-id="2" units="100"/>
+    <allocation task-id="34" resource-id="2" units="100"/>
+    <allocation task-id="33" resource-id="2" units="100"/>
+    <allocation task-id="30" resource-id="2" units="100"/>
+    <allocation task-id="29" resource-id="2" units="100"/>
+    <allocation task-id="28" resource-id="2" units="100"/>
+    <allocation task-id="27" resource-id="2" units="100"/>
+    <allocation task-id="25" resource-id="2" units="100"/>
+    <allocation task-id="24" resource-id="2" units="100"/>
+    <allocation task-id="23" resource-id="2" units="100"/>
+    <allocation task-id="22" resource-id="2" units="100"/>
+    <allocation task-id="21" resource-id="2" units="100"/>
+    <allocation task-id="20" resource-id="2" units="100"/>
+    <allocation task-id="19" resource-id="2" units="100"/>
+    <allocation task-id="18" resource-id="2" units="100"/>
+    <allocation task-id="16" resource-id="2" units="100"/>
+    <allocation task-id="15" resource-id="2" units="100"/>
+    <allocation task-id="12" resource-id="3" units="100"/>
+    <allocation task-id="13" resource-id="3" units="100"/>
+    <allocation task-id="10" resource-id="3" units="100"/>
+    <allocation task-id="11" resource-id="3" units="100"/>
+    <allocation task-id="9" resource-id="3" units="100"/>
+    <allocation task-id="8" resource-id="3" units="100"/>
+    <allocation task-id="7" resource-id="3" units="100"/>
+    <allocation task-id="6" resource-id="3" units="100"/>
+    <allocation task-id="5" resource-id="3" units="100"/>
+    <allocation task-id="4" resource-id="3" units="100"/>
+    <allocation task-id="3" resource-id="3" units="100"/>
+  </allocations>
+</project>
