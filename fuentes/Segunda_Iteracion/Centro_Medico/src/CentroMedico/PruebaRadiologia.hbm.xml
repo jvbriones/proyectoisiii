@@ -6,8 +6,8 @@
         <generator class="native"/>
     </id>
     <property name="Comentario"/>
-    <one-to-one class="CentroMedico.Paciente" constrained="true"  name="Paciente"/>
-    <one-to-one class="CentroMedico.Radiologo" constrained="true"  name="Radiologo"/>
+    <many-to-one name="Paciente" class="CentroMedico.Paciente" column="DNI_PACIENTE" cascade="all" unique="true"/>
+    <many-to-one name="Radiologo" class="CentroMedico.Radiologo" column="DNI_RADIOLOGO" cascade="all" unique="true"/>
     <joined-subclass name="CentroMedico.Resonancia">
       <key column="ID_RESONANCIA"/>
       <set cascade="all" name="Resonancias">
