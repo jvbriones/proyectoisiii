@@ -106,6 +106,17 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jLabelSalir = new javax.swing.JLabel();
         jLabelIcono = new javax.swing.JLabel();
         ZonaTrabajo = new javax.swing.JLayeredPane();
+        jPanelComprobarStockMedicamentos = new javax.swing.JPanel();
+        jLabelGestionarPaciente7 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextAreaInfo = new javax.swing.JTextArea();
+        scrollPaneMedicamentosBajoStock = new java.awt.ScrollPane();
+        jScrollPane13 = new javax.swing.JScrollPane();
+        jListStock = new javax.swing.JList();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jPanelConsultarMedicamento = new javax.swing.JPanel();
         jLabel27 = new javax.swing.JLabel();
         jLabelGestionarPaciente13 = new javax.swing.JLabel();
@@ -129,17 +140,6 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jTextFieldStockActual = new javax.swing.JTextField();
         jLabelStockActual = new javax.swing.JLabel();
         jLabelError2 = new javax.swing.JLabel();
-        jPanelComprobarStockMedicamentos = new javax.swing.JPanel();
-        jLabelGestionarPaciente7 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextAreaInfo = new javax.swing.JTextArea();
-        scrollPaneMedicamentosBajoStock = new java.awt.ScrollPane();
-        jScrollPane13 = new javax.swing.JScrollPane();
-        jListStock = new javax.swing.JList();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jPanelPrincipal = new javax.swing.JPanel();
         jButtonConsultarDatosPersonales = new javax.swing.JButton();
         jLabelGestionarPaciente3 = new javax.swing.JLabel();
@@ -373,6 +373,80 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         ZonaTrabajo.setMinimumSize(new java.awt.Dimension(902, 520));
         ZonaTrabajo.setPreferredSize(new java.awt.Dimension(912, 530));
 
+        jLabelGestionarPaciente7.setFont(new java.awt.Font("Lucida Grande", 1, 36));
+        jLabelGestionarPaciente7.setText("Comprobar Stock Medicamentos");
+
+        jLabel10.setText("______________________________________________________________________________________________");
+
+        jTextAreaInfo.setBackground(new java.awt.Color(255, 204, 102));
+        jTextAreaInfo.setColumns(17);
+        jTextAreaInfo.setEditable(false);
+        jTextAreaInfo.setFont(new java.awt.Font("Lucida Grande", 0, 18));
+        jTextAreaInfo.setRows(3);
+        jTextAreaInfo.setText("\nEstos son los medicamentos con bajo stock");
+        jScrollPane1.setViewportView(jTextAreaInfo);
+
+        scrollPaneMedicamentosBajoStock.setBackground(new java.awt.Color(254, 254, 254));
+
+        jListStock.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane13.setViewportView(jListStock);
+
+        scrollPaneMedicamentosBajoStock.add(jScrollPane13);
+
+        jLabel5.setText("Nombre");
+
+        jLabel6.setText("Stock minimo");
+
+        jLabel7.setText("Stock actual");
+
+        org.jdesktop.layout.GroupLayout jPanelComprobarStockMedicamentosLayout = new org.jdesktop.layout.GroupLayout(jPanelComprobarStockMedicamentos);
+        jPanelComprobarStockMedicamentos.setLayout(jPanelComprobarStockMedicamentosLayout);
+        jPanelComprobarStockMedicamentosLayout.setHorizontalGroup(
+            jPanelComprobarStockMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanelComprobarStockMedicamentosLayout.createSequentialGroup()
+                .add(78, 78, 78)
+                .add(jPanelComprobarStockMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jPanelComprobarStockMedicamentosLayout.createSequentialGroup()
+                        .add(121, 121, 121)
+                        .add(jPanelComprobarStockMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, jPanelComprobarStockMedicamentosLayout.createSequentialGroup()
+                                .add(jLabel5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 66, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(69, 69, 69)
+                                .add(jLabel6)
+                                .add(63, 63, 63)
+                                .add(jLabel7))
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE)
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, scrollPaneMedicamentosBajoStock, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .add(jLabel10)
+                    .add(jLabelGestionarPaciente7))
+                .addContainerGap(73, Short.MAX_VALUE))
+        );
+        jPanelComprobarStockMedicamentosLayout.setVerticalGroup(
+            jPanelComprobarStockMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanelComprobarStockMedicamentosLayout.createSequentialGroup()
+                .add(27, 27, 27)
+                .add(jLabelGestionarPaciente7)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jLabel10)
+                .add(37, 37, 37)
+                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(18, 18, 18)
+                .add(jPanelComprobarStockMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jLabel5)
+                    .add(jLabel6)
+                    .add(jLabel7))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(scrollPaneMedicamentosBajoStock, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 202, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(115, Short.MAX_VALUE))
+        );
+
+        jPanelComprobarStockMedicamentos.setBounds(0, 0, 810, 560);
+        ZonaTrabajo.add(jPanelComprobarStockMedicamentos, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         jLabel27.setText("____________________________________________________________________");
 
         jLabelGestionarPaciente13.setFont(new java.awt.Font("Lucida Grande", 1, 36));
@@ -573,82 +647,8 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                         .addContainerGap())))
         );
 
-        jPanelConsultarMedicamento.setBounds(0, 0, -1, -1);
+        jPanelConsultarMedicamento.setBounds(0, 0, 1012, 535);
         ZonaTrabajo.add(jPanelConsultarMedicamento, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        jLabelGestionarPaciente7.setFont(new java.awt.Font("Lucida Grande", 1, 36));
-        jLabelGestionarPaciente7.setText("Comprobar Stock Medicamentos");
-
-        jLabel10.setText("______________________________________________________________________________________________");
-
-        jTextAreaInfo.setBackground(new java.awt.Color(255, 204, 102));
-        jTextAreaInfo.setColumns(17);
-        jTextAreaInfo.setEditable(false);
-        jTextAreaInfo.setFont(new java.awt.Font("Lucida Grande", 0, 18));
-        jTextAreaInfo.setRows(3);
-        jTextAreaInfo.setText("\nEstos son los medicamentos con bajo stock");
-        jScrollPane1.setViewportView(jTextAreaInfo);
-
-        scrollPaneMedicamentosBajoStock.setBackground(new java.awt.Color(254, 254, 254));
-
-        jListStock.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane13.setViewportView(jListStock);
-
-        scrollPaneMedicamentosBajoStock.add(jScrollPane13);
-
-        jLabel5.setText("Nombre");
-
-        jLabel6.setText("Stock minimo");
-
-        jLabel7.setText("Stock actual");
-
-        org.jdesktop.layout.GroupLayout jPanelComprobarStockMedicamentosLayout = new org.jdesktop.layout.GroupLayout(jPanelComprobarStockMedicamentos);
-        jPanelComprobarStockMedicamentos.setLayout(jPanelComprobarStockMedicamentosLayout);
-        jPanelComprobarStockMedicamentosLayout.setHorizontalGroup(
-            jPanelComprobarStockMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelComprobarStockMedicamentosLayout.createSequentialGroup()
-                .add(78, 78, 78)
-                .add(jPanelComprobarStockMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanelComprobarStockMedicamentosLayout.createSequentialGroup()
-                        .add(121, 121, 121)
-                        .add(jPanelComprobarStockMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                            .add(org.jdesktop.layout.GroupLayout.LEADING, jPanelComprobarStockMedicamentosLayout.createSequentialGroup()
-                                .add(jLabel5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 66, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .add(69, 69, 69)
-                                .add(jLabel6)
-                                .add(63, 63, 63)
-                                .add(jLabel7))
-                            .add(org.jdesktop.layout.GroupLayout.LEADING, jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE)
-                            .add(org.jdesktop.layout.GroupLayout.LEADING, scrollPaneMedicamentosBajoStock, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .add(jLabel10)
-                    .add(jLabelGestionarPaciente7))
-                .addContainerGap(118, Short.MAX_VALUE))
-        );
-        jPanelComprobarStockMedicamentosLayout.setVerticalGroup(
-            jPanelComprobarStockMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelComprobarStockMedicamentosLayout.createSequentialGroup()
-                .add(27, 27, 27)
-                .add(jLabelGestionarPaciente7)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jLabel10)
-                .add(37, 37, 37)
-                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(18, 18, 18)
-                .add(jPanelComprobarStockMedicamentosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel5)
-                    .add(jLabel6)
-                    .add(jLabel7))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(scrollPaneMedicamentosBajoStock, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 202, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(166, Short.MAX_VALUE))
-        );
-
-        jPanelComprobarStockMedicamentos.setBounds(0, 0, -1, -1);
-        ZonaTrabajo.add(jPanelComprobarStockMedicamentos, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelPrincipal.setPreferredSize(new java.awt.Dimension(901, 531));
 
@@ -1577,7 +1577,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                     .add(0, 66, Short.MAX_VALUE)))
         );
 
-        jPanelConsultarTurno.setBounds(0, 0, 860, -1);
+        jPanelConsultarTurno.setBounds(0, 0, 860, 531);
         ZonaTrabajo.add(jPanelConsultarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente9.setFont(new java.awt.Font("Lucida Grande", 1, 36));
@@ -1678,7 +1678,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                 .addContainerGap(35, Short.MAX_VALUE))
         );
 
-        jPanelDispensar.setBounds(0, 0, -1, -1);
+        jPanelDispensar.setBounds(0, 0, 790, 319);
         ZonaTrabajo.add(jPanelDispensar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jButtonConsultarReceta.setText("Consultar");
@@ -1757,7 +1757,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                 .add(87, 87, 87))
         );
 
-        jPanelDispensarConsultar.setBounds(0, 0, -1, 510);
+        jPanelDispensarConsultar.setBounds(0, 0, 718, 510);
         ZonaTrabajo.add(jPanelDispensarConsultar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jTextAreaInfo4.setBackground(new java.awt.Color(255, 204, 102));
@@ -1824,10 +1824,10 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                 .add(scrollPaneMedicamentosReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 168, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(18, 18, 18)
                 .add(jButtonDispensarFinal)
-                .addContainerGap(579, Short.MAX_VALUE))
+                .addContainerGap(624, Short.MAX_VALUE))
         );
 
-        jPanelDispensarFinal.setBounds(0, 0, -1, -1);
+        jPanelDispensarFinal.setBounds(0, 0, 736, 1045);
         ZonaTrabajo.add(jPanelDispensarFinal, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente12.setFont(new java.awt.Font("Lucida Grande", 1, 36));
@@ -1944,7 +1944,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                 .addContainerGap(41, Short.MAX_VALUE))
         );
 
-        jPanelModificarLote.setBounds(0, 0, -1, -1);
+        jPanelModificarLote.setBounds(0, 0, 808, 399);
         ZonaTrabajo.add(jPanelModificarLote, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente14.setFont(new java.awt.Font("Lucida Grande", 1, 36));
@@ -2062,10 +2062,10 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                 .add(jButtonAnadirMedicamento)
                 .add(18, 18, 18)
                 .add(jLabelError1)
-                .addContainerGap(381, Short.MAX_VALUE))
+                .addContainerGap(426, Short.MAX_VALUE))
         );
 
-        jPanelAnadirLote.setBounds(0, 0, -1, -1);
+        jPanelAnadirLote.setBounds(0, 0, 772, 768);
         ZonaTrabajo.add(jPanelAnadirLote, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         getContentPane().add(ZonaTrabajo);
