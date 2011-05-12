@@ -5,21 +5,8 @@
 
 package Controlador;
 
-import BaseDatos.AtributoOrinaBD;
-import BaseDatos.AtributoSangreBD;
-import BaseDatos.PacBD;
-import BaseDatos.RadiografiaBD;
-import BaseDatos.ResonanciaBD;
-import CentroMedico.AtributoOrina;
-import CentroMedico.AtributoSangre;
-import CentroMedico.Imagen;
-import CentroMedico.Paciente;
-import CentroMedico.PruebaOrina;
-import CentroMedico.PruebaSangre;
-import CentroMedico.Radiografia;
-import CentroMedico.Resonancia;
-import CentroMedico.ResultadoOrina;
-import CentroMedico.ResultadoSangre;
+import BaseDatos.*;
+import CentroMedico.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -177,26 +164,30 @@ public class GestorPruebas {
     }
 */
     
-    public boolean almacenarResultadoRadiologia(String Dni, ArrayList<Imagen> imag, String Comentario, String TipoRadiologia) throws SQLException{
+    public boolean almacenarResultadoRadiologia(String DNIPaciente, ArrayList<Imagen> imag, String Comentario, String TipoPrueba, String DNIRadiologo) throws SQLException{
 
         //No concuerda el diagrama de secuencia con el de clases
         System.out.println("Dentro de almacenar");
         PacBD pBD = new PacBD();
+        RadiologoBD radiologoBD = new RadiologoBD();
+
         Paciente paciente = null;
+        Radiologo radiologo = null;
         Imagen aux;
-        System.out.println(TipoRadiologia);
+        System.out.println(TipoPrueba);
 
-        paciente = pBD.obtener(Dni);
-
+        paciente = pBD.obtener(DNIPaciente);
+        radiologo = radiologoBD.obtener(DNIRadiologo);
         if(paciente == null){
             System.out.println("No existe el paciente con ese DNI");
             return false;
         }
 
-        if(TipoRadiologia == "radiologia"){
+        if(TipoPrueba == "Radiografia"){
 
-            Radiografia prueba = new Radiografia(Comentario);
+            Radiografia prueba = new Radiografia(Comentario, paciente, radiologo);
             RadiografiaBD rBD = new RadiografiaBD();
+
 
             System.out.println("Antes del loop de radiografia");
             for( Iterator it = imag.iterator(); it.hasNext();) {
@@ -211,8 +202,8 @@ public class GestorPruebas {
 
         }
 
-        if(TipoRadiologia == "resonancia"){
-            Resonancia prueba = new Resonancia(Comentario);
+        if(TipoPrueba == "Resonancia"){
+            Resonancia prueba = new Resonancia(Comentario,paciente, radiologo);
             ResonanciaBD rBD = new ResonanciaBD();
 
             for( Iterator it = imag.iterator(); it.hasNext();) {

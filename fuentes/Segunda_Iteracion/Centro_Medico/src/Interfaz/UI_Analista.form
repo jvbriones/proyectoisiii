@@ -1668,6 +1668,7 @@
             <Component class="javax.swing.JTextField" name="jTextFieldAlmacenarDni">
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldAlmacenarDniActionPerformed"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldAlmacenarDniKeyTyped"/>
               </Events>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButtonSangre">
@@ -1767,6 +1768,7 @@
             <Component class="javax.swing.JTextField" name="jTextFieldValorLinfocitos">
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldValorLinfocitosActionPerformed"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldValorLinfocitosKeyTyped"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelError">

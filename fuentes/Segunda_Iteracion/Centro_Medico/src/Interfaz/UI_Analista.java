@@ -1294,6 +1294,11 @@ public class UI_Analista extends javax.swing.JFrame {
                 jTextFieldAlmacenarDniActionPerformed(evt);
             }
         });
+        jTextFieldAlmacenarDni.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldAlmacenarDniKeyTyped(evt);
+            }
+        });
 
         jRadioButtonSangre.setText("Sangre");
         jRadioButtonSangre.addActionListener(new java.awt.event.ActionListener() {
@@ -1336,6 +1341,11 @@ public class UI_Analista extends javax.swing.JFrame {
         jTextFieldValorLinfocitos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldValorLinfocitosActionPerformed(evt);
+            }
+        });
+        jTextFieldValorLinfocitos.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldValorLinfocitosKeyTyped(evt);
             }
         });
 
@@ -2162,6 +2172,39 @@ public class UI_Analista extends javax.swing.JFrame {
      */
     }//GEN-LAST:event_jButtonAlmacenarResultadoRadiologoMouseClicked
 
+    private void jTextFieldAlmacenarDniKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldAlmacenarDniKeyTyped
+        // TODO add your handling code here:
+
+        char teclaPresionada = evt.getKeyChar();
+
+        if(jTextFieldAlmacenarDni.getText().length() < 8)
+            if(Character.isDigit(teclaPresionada) == false)
+                evt.consume();
+
+        if(jTextFieldAlmacenarDni.getText().length() == 8)
+            if(Character.isDigit(teclaPresionada) == true){
+                evt.consume();
+                }else if(Character.isLowerCase(teclaPresionada)){
+                    jTextFieldAlmacenarDni.setText(jTextFieldAlmacenarDni.getText().toUpperCase());
+                }
+
+        if(jTextFieldAlmacenarDni.getText().length() > 8)
+            evt.consume();
+    }//GEN-LAST:event_jTextFieldAlmacenarDniKeyTyped
+
+    private void jTextFieldValorLinfocitosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldValorLinfocitosKeyTyped
+        // TODO add your handling code here:
+
+        /**Comprobamos que no se teclee un número*/
+        char teclaPresionada = evt.getKeyChar();
+        if(Character.isDigit(teclaPresionada) == false)
+            evt.consume();
+
+        /**Limitamos la longitud*/
+        if(jTextFieldValorLinfocitos.getText().length() > 4)
+            evt.consume();
+    }//GEN-LAST:event_jTextFieldValorLinfocitosKeyTyped
+
 
     /*Comprueba que la fecha introducida es correcta
      * 
@@ -2531,12 +2574,6 @@ public class UI_Analista extends javax.swing.JFrame {
                 return false;
                 }else{
                 jLabelAlmacenarDni.setForeground(Color.black);
-                }
-            if(jTextAreaAtributos.getText().length() == 0){
-                jLabelComentarios.setForeground(Color.red);
-                return false;
-                }else{
-                jLabelComentarios.setForeground(Color.black);
                 }
             if(jTextFieldValorLinfocitos.getText().length() == 0){
                 jLabelComentarios.setForeground(Color.red);

@@ -196,6 +196,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
         jButtonAnadirImagen = new javax.swing.JButton();
         jButtonAlmacenarResultadoRadiologo = new javax.swing.JButton();
         jLabelError = new javax.swing.JLabel();
+        jLabelErrorDNI = new javax.swing.JLabel();
         jPanelUsuario = new javax.swing.JPanel();
         jLabelUsuario = new javax.swing.JLabel();
         jLabelTipoUsuario = new javax.swing.JLabel();
@@ -210,7 +211,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
 
         jLabelCentroMedico.setText("Centro médico");
         getContentPane().add(jLabelCentroMedico);
-        jLabelCentroMedico.setBounds(177, 68, 120, 17);
+        jLabelCentroMedico.setBounds(177, 68, 120, 18);
 
         jLabelIconoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Inicio-Desactivado.png"))); // NOI18N
         jLabelIconoInicio.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -229,7 +230,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
 
         jLabelInicio.setText("Inicio");
         getContentPane().add(jLabelInicio);
-        jLabelInicio.setBounds(420, 120, 44, 17);
+        jLabelInicio.setBounds(420, 120, 44, 18);
 
         jLabelIconoAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Ayuda-Desactivado.png"))); // NOI18N
         jLabelIconoAyuda.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -263,11 +264,11 @@ public class UI_Radiologo extends javax.swing.JFrame {
 
         jLabelAyuda.setText("Ayuda");
         getContentPane().add(jLabelAyuda);
-        jLabelAyuda.setBounds(500, 120, 44, 17);
+        jLabelAyuda.setBounds(500, 120, 44, 18);
 
         jLabelSalir.setText("Salir");
         getContentPane().add(jLabelSalir);
-        jLabelSalir.setBounds(590, 120, 40, 17);
+        jLabelSalir.setBounds(590, 120, 40, 18);
 
         jLabelIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Logo-Centro-Medico.png"))); // NOI18N
         getContentPane().add(jLabelIcono);
@@ -341,7 +342,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
                     .add(jPanelPrincipalLayout.createSequentialGroup()
                         .add(67, 67, 67)
                         .add(jLabel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 162, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(380, Short.MAX_VALUE))
+                .addContainerGap(364, Short.MAX_VALUE))
         );
         jPanelPrincipalLayout.setVerticalGroup(
             jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -355,7 +356,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
                     .add(jLabelGestionarPaciente3)
                     .add(jLabelConsultarTurno))
                 .add(23, 23, 23)
-                .add(jButtonAlmacenarResultado, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+                .add(jButtonAlmacenarResultado, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jLabel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 21, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(145, 145, 145))
@@ -369,7 +370,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
 
         jLabel3.setText("___________________________________________________________________");
         jPanelConsultarDatosPersonales.add(jLabel3);
-        jLabel3.setBounds(256, 59, 469, 17);
+        jLabel3.setBounds(256, 59, 469, 18);
 
         jLabelGestionarPaciente4.setFont(new java.awt.Font("Lucida Grande", 1, 48));
         jLabelGestionarPaciente4.setText("Gestionar Personal");
@@ -383,7 +384,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
             }
         });
         jPanelConsultarDatosPersonales.add(jTextFieldNombrePersonal);
-        jTextFieldNombrePersonal.setBounds(157, 126, 210, 27);
+        jTextFieldNombrePersonal.setBounds(157, 126, 210, 28);
 
         jLabelFotoPersonal.setBackground(new java.awt.Color(255, 255, 255));
         jLabelFotoPersonal.setForeground(new java.awt.Color(255, 255, 255));
@@ -397,11 +398,11 @@ public class UI_Radiologo extends javax.swing.JFrame {
             }
         });
         jPanelConsultarDatosPersonales.add(jTextFieldTelefonoPersonal);
-        jTextFieldTelefonoPersonal.setBounds(157, 270, 130, 27);
+        jTextFieldTelefonoPersonal.setBounds(157, 270, 130, 28);
 
         jLabelContraseniaPersonal.setText("Contraseña");
         jPanelConsultarDatosPersonales.add(jLabelContraseniaPersonal);
-        jLabelContraseniaPersonal.setBounds(729, 250, 100, 17);
+        jLabelContraseniaPersonal.setBounds(729, 250, 100, 18);
 
         jTextFieldDNIPersonal.setEditable(false);
         jTextFieldDNIPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -410,19 +411,19 @@ public class UI_Radiologo extends javax.swing.JFrame {
             }
         });
         jPanelConsultarDatosPersonales.add(jTextFieldDNIPersonal);
-        jTextFieldDNIPersonal.setBounds(757, 126, 95, 27);
+        jTextFieldDNIPersonal.setBounds(757, 126, 95, 28);
 
         jLabelNombrePersonal.setText("Nombre");
         jPanelConsultarDatosPersonales.add(jLabelNombrePersonal);
-        jLabelNombrePersonal.setBounds(157, 96, 80, 17);
+        jLabelNombrePersonal.setBounds(157, 96, 80, 18);
 
         jLabelFotografiaersonal.setText("Fotografía");
         jPanelConsultarDatosPersonales.add(jLabelFotografiaersonal);
-        jLabelFotografiaersonal.setBounds(610, 330, 100, 17);
+        jLabelFotografiaersonal.setBounds(610, 330, 100, 18);
 
         jLabelDNIPersonal.setText("DNI");
         jPanelConsultarDatosPersonales.add(jLabelDNIPersonal);
-        jLabelDNIPersonal.setBounds(757, 96, 40, 17);
+        jLabelDNIPersonal.setBounds(757, 96, 40, 18);
 
         jTextFieldLugarNacimientoPersonal.setEditable(false);
         jTextFieldLugarNacimientoPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -431,11 +432,11 @@ public class UI_Radiologo extends javax.swing.JFrame {
             }
         });
         jPanelConsultarDatosPersonales.add(jTextFieldLugarNacimientoPersonal);
-        jTextFieldLugarNacimientoPersonal.setBounds(350, 270, 300, 27);
+        jTextFieldLugarNacimientoPersonal.setBounds(350, 270, 300, 28);
 
         jLabelTelefonoPersonal.setText("Teléfono");
         jPanelConsultarDatosPersonales.add(jLabelTelefonoPersonal);
-        jLabelTelefonoPersonal.setBounds(157, 250, 70, 17);
+        jLabelTelefonoPersonal.setBounds(157, 250, 70, 18);
 
         jTextFieldFechaNacimientoMesersonal.setEditable(false);
         jTextFieldFechaNacimientoMesersonal.setText("1");
@@ -445,15 +446,15 @@ public class UI_Radiologo extends javax.swing.JFrame {
             }
         });
         jPanelConsultarDatosPersonales.add(jTextFieldFechaNacimientoMesersonal);
-        jTextFieldFechaNacimientoMesersonal.setBounds(217, 377, 33, 27);
+        jTextFieldFechaNacimientoMesersonal.setBounds(217, 377, 33, 28);
 
         jLabelLugarNacimientoPersonal.setText("Lugar nacimiento");
         jPanelConsultarDatosPersonales.add(jLabelLugarNacimientoPersonal);
-        jLabelLugarNacimientoPersonal.setBounds(350, 250, 140, 17);
+        jLabelLugarNacimientoPersonal.setBounds(350, 250, 140, 18);
 
         jLabelDireccionPersonal.setText("Dirección");
         jPanelConsultarDatosPersonales.add(jLabelDireccionPersonal);
-        jLabelDireccionPersonal.setBounds(157, 172, 80, 17);
+        jLabelDireccionPersonal.setBounds(157, 172, 80, 18);
 
         jButtonMenosAnioPersona.setText("-");
         jButtonMenosAnioPersona.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -471,7 +472,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
 
         jLabelApellidosPersonal.setText("Apellidos");
         jPanelConsultarDatosPersonales.add(jLabelApellidosPersonal);
-        jLabelApellidosPersonal.setBounds(407, 96, 80, 17);
+        jLabelApellidosPersonal.setBounds(407, 96, 80, 18);
 
         jTextFieldApellidosPersonal.setEditable(false);
         jTextFieldApellidosPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -480,7 +481,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
             }
         });
         jPanelConsultarDatosPersonales.add(jTextFieldApellidosPersonal);
-        jTextFieldApellidosPersonal.setBounds(407, 126, 290, 27);
+        jTextFieldApellidosPersonal.setBounds(407, 126, 290, 28);
 
         jButtonMasDiaPersonal.setText("+");
         jButtonMasDiaPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -526,7 +527,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
 
         jLabelEmailPersonal.setText("Email");
         jPanelConsultarDatosPersonales.add(jLabelEmailPersonal);
-        jLabelEmailPersonal.setBounds(567, 172, 80, 17);
+        jLabelEmailPersonal.setBounds(567, 172, 80, 18);
 
         jTextFieldDireccionPersonal.setEditable(false);
         jTextFieldDireccionPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -535,12 +536,12 @@ public class UI_Radiologo extends javax.swing.JFrame {
             }
         });
         jPanelConsultarDatosPersonales.add(jTextFieldDireccionPersonal);
-        jTextFieldDireccionPersonal.setBounds(157, 192, 370, 27);
+        jTextFieldDireccionPersonal.setBounds(157, 192, 370, 28);
 
         jTextFieldFechaNacimientoDiaPersonal.setEditable(false);
         jTextFieldFechaNacimientoDiaPersonal.setText("1");
         jPanelConsultarDatosPersonales.add(jTextFieldFechaNacimientoDiaPersonal);
-        jTextFieldFechaNacimientoDiaPersonal.setBounds(167, 377, 33, 27);
+        jTextFieldFechaNacimientoDiaPersonal.setBounds(167, 377, 33, 28);
 
         jButtonMasAnioPersonal.setText("+");
         jButtonMasAnioPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -563,17 +564,17 @@ public class UI_Radiologo extends javax.swing.JFrame {
             }
         });
         jPanelConsultarDatosPersonales.add(jTextFieldEmailPersonal);
-        jTextFieldEmailPersonal.setBounds(567, 192, 289, 27);
+        jTextFieldEmailPersonal.setBounds(567, 192, 289, 28);
 
         jTextFieldFechaNacimientoAnioPersonal.setEditable(false);
         jTextFieldFechaNacimientoAnioPersonal.setText("1950");
         jPanelConsultarDatosPersonales.add(jTextFieldFechaNacimientoAnioPersonal);
-        jTextFieldFechaNacimientoAnioPersonal.setBounds(257, 377, 50, 27);
+        jTextFieldFechaNacimientoAnioPersonal.setBounds(257, 377, 50, 28);
 
         jTextFieldContraseniaPersonal.setColumns(8);
         jTextFieldContraseniaPersonal.setEditable(false);
         jPanelConsultarDatosPersonales.add(jTextFieldContraseniaPersonal);
-        jTextFieldContraseniaPersonal.setBounds(729, 270, 114, 27);
+        jTextFieldContraseniaPersonal.setBounds(729, 270, 114, 28);
 
         jButtonMasMesPersonal.setText("+");
         jButtonMasMesPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -591,7 +592,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
 
         jLabelFechaNacimientoPersonal.setText("Fecha nacimiento");
         jPanelConsultarDatosPersonales.add(jLabelFechaNacimientoPersonal);
-        jLabelFechaNacimientoPersonal.setBounds(157, 317, 140, 17);
+        jLabelFechaNacimientoPersonal.setBounds(157, 317, 140, 18);
 
         jButtonGuardar.setText("Guardar");
         jButtonGuardar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -619,7 +620,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
             }
         });
         jPanelConsultarDatosPersonales.add(jButtonFotoPersonal);
-        jButtonFotoPersonal.setBounds(590, 350, 120, 29);
+        jButtonFotoPersonal.setBounds(590, 350, 120, 30);
 
         jLabelInfoFotoPersonal.setFont(new java.awt.Font("Lucida Grande", 0, 10));
         jLabelInfoFotoPersonal.setText("Tam max 130x150 pix");
@@ -628,7 +629,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
 
         jLabel8.setText("Tipo personal");
         jPanelConsultarDatosPersonales.add(jLabel8);
-        jLabel8.setBounds(440, 330, 110, 17);
+        jLabel8.setBounds(440, 330, 110, 18);
 
         jRadioButtonFarmaceutico.setText("Farmacéutico");
         jRadioButtonFarmaceutico.addActionListener(new java.awt.event.ActionListener() {
@@ -971,7 +972,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
                 .addContainerGap(409, Short.MAX_VALUE))
             .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(jPanelConsultarTurnoLayout.createSequentialGroup()
-                    .add(50, 115, Short.MAX_VALUE)
+                    .add(50, 113, Short.MAX_VALUE)
                     .add(jLabel9)
                     .add(24, 24, 24)
                     .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1016,7 +1017,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
                         .add(jButtonMenosMesFechaFinTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(jButtonMenosAnioFechaFinTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(jRadioButtonNoche))
-                    .add(0, 66, Short.MAX_VALUE)))
+                    .add(0, 64, Short.MAX_VALUE)))
         );
 
         jPanelConsultarTurno.setBounds(0, 0, 860, -1);
@@ -1032,6 +1033,11 @@ public class UI_Radiologo extends javax.swing.JFrame {
         jTextFieldAlmacenarDni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldAlmacenarDniActionPerformed(evt);
+            }
+        });
+        jTextFieldAlmacenarDni.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldAlmacenarDniKeyTyped(evt);
             }
         });
 
@@ -1050,11 +1056,6 @@ public class UI_Radiologo extends javax.swing.JFrame {
 
         scrollPaneImagenes.setBackground(new java.awt.Color(254, 253, 253));
 
-        jListImagenes.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", " " };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane1.setViewportView(jListImagenes);
 
         scrollPaneImagenes.add(jScrollPane1);
@@ -1092,6 +1093,10 @@ public class UI_Radiologo extends javax.swing.JFrame {
         jLabelError.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Error.png"))); // NOI18N
         jLabelError.setText("Debe rellenar todos los campos");
 
+        jLabelErrorDNI.setForeground(new java.awt.Color(255, 0, 0));
+        jLabelErrorDNI.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Error.png"))); // NOI18N
+        jLabelErrorDNI.setText("No existe paciente con este DNI");
+
         org.jdesktop.layout.GroupLayout jPanelAlmacenarResultadosLayout = new org.jdesktop.layout.GroupLayout(jPanelAlmacenarResultados);
         jPanelAlmacenarResultados.setLayout(jPanelAlmacenarResultadosLayout);
         jPanelAlmacenarResultadosLayout.setHorizontalGroup(
@@ -1104,15 +1109,18 @@ public class UI_Radiologo extends javax.swing.JFrame {
                             .add(jLabel10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 809, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
                                 .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                                    .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                                        .add(jLabelAlmacenarDni)
-                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                        .add(jTextFieldAlmacenarDni, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 185, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED))
                                     .add(jLabelImagenes)
                                     .add(jLabelComentarios)
                                     .add(scrollPaneImagenes, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)
-                                    .add(scrollPaneComentarios, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .add(scrollPaneComentarios, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
+                                        .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                                            .add(jLabelErrorDNI, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 275, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                            .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
+                                                .add(jLabelAlmacenarDni)
+                                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                                .add(jTextFieldAlmacenarDni, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 185, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)))
                                 .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
                                         .add(86, 86, 86)
@@ -1142,18 +1150,20 @@ public class UI_Radiologo extends javax.swing.JFrame {
                 .add(jLabel10)
                 .add(32, 32, 32)
                 .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                        .add(jLabelAlmacenarDni)
-                        .add(jTextFieldAlmacenarDni, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                        .add(60, 60, 60)
-                        .add(jLabelImagenes))
                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
                         .add(jLabel2)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(jRadioButtonRadiologia)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jRadioButtonResonancia)))
+                        .add(jRadioButtonResonancia))
+                    .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
+                        .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(jLabelAlmacenarDni)
+                            .add(jTextFieldAlmacenarDni, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jLabelErrorDNI)
+                        .add(8, 8, 8)
+                        .add(jLabelImagenes)))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
                     .add(scrollPaneImagenes, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 84, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
@@ -1167,7 +1177,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
                     .add(jLabelError))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jButtonAlmacenarResultadoRadiologo)
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
 
         jPanelAlmacenarResultados.setBounds(10, 30, 870, 510);
@@ -1181,7 +1191,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
 
         jLabelUsuario.setText("Usuario:");
         jPanelUsuario.add(jLabelUsuario);
-        jLabelUsuario.setBounds(90, 0, 120, 17);
+        jLabelUsuario.setBounds(90, 0, 120, 18);
 
         jLabelTipoUsuario.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelTipoUsuario.setText("Tipo Usuario");
@@ -1780,6 +1790,9 @@ public class UI_Radiologo extends javax.swing.JFrame {
     private void jButtonAlmacenarResultadoRadiologoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAlmacenarResultadoRadiologoMouseClicked
         // TODO add your handling code here:
 
+     if(compruebaFormulario("Almacenar")){
+       jLabelError.setVisible(false);
+       jLabelErrorDNI.setVisible(false);
        GestorPruebas gp = new GestorPruebas();
 
        String tipo = null;
@@ -1789,24 +1802,54 @@ public class UI_Radiologo extends javax.swing.JFrame {
        String ruta;
 
        if(jRadioButtonRadiologia.isSelected()){
-           tipo = "radiologia";
+           tipo = "Radiografia";
        }
 
        if(jRadioButtonResonancia.isSelected()){
-           tipo = "resonancia";
+           tipo = "Resonancia";
        }
-       ruta = jListImagenes.getModel().toString();
+       ruta = jListImagenes.getModel().getElementAt(0).toString();
        System.out.println(ruta);
        imag.setRuta(ruta);
        im.add(imag);
-
+       String DNIRadiologo = jTextFieldDNIPersonal.getText();
        try{
            System.out.println("Antes de entrar a la funcion");
-           dev = gp.almacenarResultadoRadiologia(jTextFieldAlmacenarDni.getText(),im , jScrollPane2.getName(), tipo);
+           dev = gp.almacenarResultadoRadiologia(jTextFieldAlmacenarDni.getText(),im , jTextAreaComentario.getText(), tipo, DNIRadiologo);
+           if(dev == true){
+                 new InformacionExito().setVisible(true);
+                 mostrarPanel("Principal");
+           }
+           else{
+                new InformacionError().setVisible(true);
+                jLabelErrorDNI.setVisible(true);
+           }
        }
        catch (Exception ex)    {}
-
+        }
+         else
+             jLabelError.setVisible(true);
     }//GEN-LAST:event_jButtonAlmacenarResultadoRadiologoMouseClicked
+
+    private void jTextFieldAlmacenarDniKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldAlmacenarDniKeyTyped
+        // TODO add your handling code here:
+        /**Limitamos a que el DNI siempre sea correcto sintácticamente*/
+        char teclaPresionada = evt.getKeyChar();
+
+        if(jTextFieldAlmacenarDni.getText().length() < 8)
+            if(Character.isDigit(teclaPresionada) == false)
+                evt.consume();
+
+        if(jTextFieldAlmacenarDni.getText().length() == 8)
+            if(Character.isDigit(teclaPresionada) == true){
+                evt.consume();
+                }else if(Character.isLowerCase(teclaPresionada)){
+                    jTextFieldAlmacenarDni.setText(jTextFieldAlmacenarDni.getText().toUpperCase());
+                }
+
+        if(jTextFieldAlmacenarDni.getText().length() > 8)
+            evt.consume();
+    }//GEN-LAST:event_jTextFieldAlmacenarDniKeyTyped
 
 
     /*Comprueba que la fecha introducida es correcta
@@ -1915,6 +1958,13 @@ public class UI_Radiologo extends javax.swing.JFrame {
             jTextFieldMesFinTurno.setText(mesActual);
             jTextFieldAnioFinTurno.setText(anioActual);
         }
+
+        if(persona.equals("Almacenar"))
+        {
+            jTextFieldAlmacenarDni.setText("");
+            jTextAreaComentario.setText("");
+            jListImagenes.removeAll();
+        }
     }
 
   
@@ -1930,6 +1980,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
             jLabelInicio.setVisible(false);
             jLabelIconoInicio.setVisible(false);
             jLabelError.setVisible(false);
+            jLabelErrorDNI.setVisible(false);
             /**Hacemos visible el panel seleccionado*/
             jPanelPrincipal.setVisible(true);
             jPanelConsultarDatosPersonales.setVisible(false);
@@ -1993,9 +2044,10 @@ public class UI_Radiologo extends javax.swing.JFrame {
 
          if(panel.equals("AlmacenarResultados")){
 
-            /**Limpiamos posibles datos introducidos anteriormente*/
-
-
+             limpiarFormulario("Almacenar");
+             jLabelImagenes.setForeground(Color.black);
+             jLabelAlmacenarDni.setForeground(Color.black);
+             jLabelComentarios.setForeground(Color.black);
             /**Hacemos visible el botón jLabelIconoInicio*/
             jLabelInicio.setVisible(true);
             jLabelIconoInicio.setVisible(true);
@@ -2124,7 +2176,12 @@ public class UI_Radiologo extends javax.swing.JFrame {
                 }else{
                 jLabelComentarios.setForeground(Color.black);
                 }
-        }
+            if(jListImagenes.getModel().getSize() == 0)
+                jLabelImagenes.setForeground(Color.red);
+                return false;
+                }else{
+                  jLabelImagenes.setForeground(Color.black);
+                 }
         return true;
     }
 
@@ -2188,6 +2245,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelDireccionPersonal;
     private javax.swing.JLabel jLabelEmailPersonal;
     private javax.swing.JLabel jLabelError;
+    private javax.swing.JLabel jLabelErrorDNI;
     private javax.swing.JLabel jLabelFechaFinTurno;
     private javax.swing.JLabel jLabelFechaInicioTurno;
     private javax.swing.JLabel jLabelFechaNacimientoPersonal;

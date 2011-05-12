@@ -20,8 +20,8 @@ public class Resonancia extends PruebaRadiologia{
     public Resonancia() {
     }
 
-    public Resonancia(String Comentario) {
-        super(Comentario);
+    public Resonancia(String Comentario, Paciente Pac, Radiologo Rad) {
+        super(Comentario, Pac, Rad);
     }
 
     public Set<Imagen> getResonancias(){

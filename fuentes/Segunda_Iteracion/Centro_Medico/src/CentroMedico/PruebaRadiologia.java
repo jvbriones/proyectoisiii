@@ -23,8 +23,11 @@ public class PruebaRadiologia implements Serializable{
     public PruebaRadiologia() {
     }
 
-    public PruebaRadiologia(String com){
+    public PruebaRadiologia(String com, Paciente Pac, Radiologo Rad){
         this.Comentario=com;
+        this.Paciente = Pac;
+        this.Radiologo=Rad;
+
     }
 
 
