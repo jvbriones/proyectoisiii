@@ -2980,8 +2980,8 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
       if(compruebaFormulario("ConsultarMedicamentoModificarEliminar")){
         int option;
         boolean exito;
-        option = jOptionPaneConfirmar.showConfirmDialog(null, "¿Esta seguro que desea eliminar el medicamento ?");
-        System.out.println("option es"+option);
+        option = jOptionPaneConfirmar.showConfirmDialog(null, "Si elimina el medicamento, también se borrarán los lotes asocidos ¿Está seguro?");
+        //System.out.println("option es"+option);
 //        pulsado = panelInfo.botonPulsado(evt);
 
         if( option == 0){

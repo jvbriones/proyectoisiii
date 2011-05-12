@@ -194,15 +194,22 @@ public class GestorFarmacia {
         }
     }
 
-    public Set buscarMedicamento( String Nombre ){
+    public ArrayList buscarMedicamento( String Nombre ){
 
 
         MedicamentoBD meBD=new MedicamentoBD();
         Set<Medicamento> me=null;
-
+        Medicamento Medica = new Medicamento();
         me = meBD.obtenerTodosMedicamentos();
+        ArrayList li = new ArrayList();
+        for( Iterator it = me.iterator(); it.hasNext();) {
+             
+	     Medica = (Medicamento)it.next();
+             String nombre = Medica.getNombre();
+             li.add(nombre);
+        }
 
-        return me;
+        return li;
 
     }
 
