@@ -1963,7 +1963,8 @@ public class UI_Radiologo extends javax.swing.JFrame {
         {
             jTextFieldAlmacenarDni.setText("");
             jTextAreaComentario.setText("");
-            jListImagenes.removeAll();
+            DefaultListModel modelo=new DefaultListModel();
+           jListImagenes.setModel(modelo);
         }
     }
 
@@ -2176,12 +2177,14 @@ public class UI_Radiologo extends javax.swing.JFrame {
                 }else{
                 jLabelComentarios.setForeground(Color.black);
                 }
-            if(jListImagenes.getModel().getSize() == 0)
+            if(jListImagenes.getModel().getSize() == 0){
                 jLabelImagenes.setForeground(Color.red);
                 return false;
                 }else{
                   jLabelImagenes.setForeground(Color.black);
                  }
+
+        }
         return true;
     }
 
