@@ -18,6 +18,7 @@ public class PruebaAnalisis implements Serializable{
     private String Comentario;
 
     private Paciente Paciente;
+    private Analista Analista;
 
     public PruebaAnalisis() {
     }
@@ -31,6 +32,10 @@ public class PruebaAnalisis implements Serializable{
 
     public String getComentario (){
         return Comentario;
+    }
+
+    public Analista getAnalista (){
+        return Analista;
     }
 
     public Paciente getPaciente (){
@@ -47,5 +52,9 @@ public class PruebaAnalisis implements Serializable{
 
     public void setPaciente (Paciente Paciente){
         this.Paciente=Paciente;
+    }
+
+    public void setAnalista (Analista Analista){
+        this.Analista=Analista;
     }
 }
