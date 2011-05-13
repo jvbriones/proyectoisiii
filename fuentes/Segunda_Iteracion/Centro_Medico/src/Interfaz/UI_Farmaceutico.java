@@ -23,6 +23,8 @@ import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 
@@ -2947,12 +2949,42 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
     private void jButtonObtenerRecetasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonObtenerRecetasMouseClicked
         // TODO add your handling code here:
-        //
-         //GestorFarmacia gestFar = new GestorFamarcia();
-         //Paciente pac = GestorFarmacia.consultarResumenRecetas(jTextFieldDNIPaciente.getText());
-         //if(pac == null)
+        GestorFarmacia gestFar = new GestorFarmacia();
+        ArrayList resumenRecetas = new ArrayList();
+        PacBD pac = new PacBD();
+        Paciente pacien = null;
+        System.out.println("Aqui llega");
+        try {
+            System.out.println("obtenerpaciente");
+            pacien = pac.obtenerPaciente(jTextFieldDNIPaciente.getText());
+        } catch (SQLException ex) {
+            Logger.getLogger(UI_Farmaceutico.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            System.out.println("resumen recetas");
+            resumenRecetas = gestFar.consultarResumenRecetas(jTextFieldDNIPaciente.getText());
+        } catch (SQLException ex) {
+            Logger.getLogger(UI_Farmaceutico.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         if(pac == null){
             jLabelErrorDNIPaciente.setVisible(true);
-        //    else
+        }
+
+         DefaultListModel listModel = new DefaultListModel();
+         Receta rec;
+System.out.println("antes del for");
+         for(Iterator it = resumenRecetas.iterator(); it.hasNext();){
+             System.out.println("en el for");
+             rec = (Receta) it.next();
+             listModel.addElement(rec);
+             System.out.println("Receta "+ rec.getId());
+
+         }
+         System.out.println("fin");
+         jList1.setModel(listModel);
+
+
+
         if(compruebaFormulario("dispensar"))
             mostrarPanel("DispensarConsultar");
         else
