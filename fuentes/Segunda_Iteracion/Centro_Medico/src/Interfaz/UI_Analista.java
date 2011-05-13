@@ -113,6 +113,12 @@ public class UI_Analista extends javax.swing.JFrame {
         jRadioButtonOrina1 = new javax.swing.JRadioButton();
         jButtonGuardarAtributo = new javax.swing.JButton();
         jLabelError1 = new javax.swing.JLabel();
+        jTextFieldUnidadMedida = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jTextFieldLimiteSup = new javax.swing.JTextField();
+        jTextFieldLimiteInf = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jPanelEliminarAtributo = new javax.swing.JPanel();
         jLabelGestionarPaciente9 = new javax.swing.JLabel();
         jButtonGuardarAtributo1 = new javax.swing.JButton();
@@ -234,7 +240,6 @@ public class UI_Analista extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 204, 102));
-        setMinimumSize(new java.awt.Dimension(931, 715));
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -341,33 +346,54 @@ public class UI_Analista extends javax.swing.JFrame {
         jLabelError1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Error.png"))); // NOI18N
         jLabelError1.setText("Debe rellenar el campo \"Nombre\"");
 
+        jLabel1.setText("Unidad de medida");
+
+        jTextFieldLimiteSup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldLimiteSupActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setText("Límite superior de medida");
+
+        jLabel4.setText("Límite inferior de medida");
+
         org.jdesktop.layout.GroupLayout jPanelAgregarAtributoLayout = new org.jdesktop.layout.GroupLayout(jPanelAgregarAtributo);
         jPanelAgregarAtributo.setLayout(jPanelAgregarAtributoLayout);
         jPanelAgregarAtributoLayout.setHorizontalGroup(
             jPanelAgregarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelAgregarAtributoLayout.createSequentialGroup()
+            .add(jPanelAgregarAtributoLayout.createSequentialGroup()
                 .addContainerGap(159, Short.MAX_VALUE)
                 .add(jPanelAgregarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelAgregarAtributoLayout.createSequentialGroup()
                         .add(21, 21, 21)
                         .add(jLabelGestionarPaciente8))
-                    .add(jLabel11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 591, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jPanelAgregarAtributoLayout.createSequentialGroup()
                         .add(10, 10, 10)
                         .add(jPanelAgregarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jPanelAgregarAtributoLayout.createSequentialGroup()
-                                .add(jLabelNombreAtributo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 242, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(jTextFieldNombreAtributo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 125, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                            .add(jPanelAgregarAtributoLayout.createSequentialGroup()
-                                .add(jPanelAgregarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                                    .add(jRadioButtonOrina1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
-                                    .add(jRadioButtonSangre1)
-                                    .add(jButtonGuardarAtributo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 115, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                .add(39, 39, 39)
-                                .add(jLabelError1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 263, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                            .add(jLabel7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 140, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
+                            .add(jLabelNombreAtributo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 242, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(jLabel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 148, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(jLabel2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 211, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(jLabel4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 196, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jPanelAgregarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                            .add(jTextFieldUnidadMedida)
+                            .add(jTextFieldNombreAtributo, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
+                            .add(jTextFieldLimiteInf)
+                            .add(jTextFieldLimiteSup, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
+                            .add(jButtonGuardarAtributo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 115, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .add(35, 35, 35)
+                        .add(jPanelAgregarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jPanelAgregarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                                .add(jRadioButtonOrina1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                                .add(jRadioButtonSangre1))
+                            .add(jLabel7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 140, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                    .add(jLabel11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 591, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .add(50, 50, 50))
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelAgregarAtributoLayout.createSequentialGroup()
+                .addContainerGap(358, Short.MAX_VALUE)
+                .add(jLabelError1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 263, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(179, 179, 179))
         );
         jPanelAgregarAtributoLayout.setVerticalGroup(
             jPanelAgregarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -377,23 +403,35 @@ public class UI_Analista extends javax.swing.JFrame {
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jLabel11)
                 .add(38, 38, 38)
-                .add(jPanelAgregarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabelNombreAtributo)
-                    .add(jTextFieldNombreAtributo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .add(jPanelAgregarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelAgregarAtributoLayout.createSequentialGroup()
-                        .add(32, 32, 32)
+                        .add(jPanelAgregarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(jLabelNombreAtributo)
+                            .add(jTextFieldNombreAtributo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jPanelAgregarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(jTextFieldUnidadMedida, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(jLabel1))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jPanelAgregarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(jTextFieldLimiteSup, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(jLabel2))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jPanelAgregarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(jTextFieldLimiteInf, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(jLabel4))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 36, Short.MAX_VALUE)
+                        .add(jButtonGuardarAtributo)
+                        .add(28, 28, 28))
+                    .add(jPanelAgregarAtributoLayout.createSequentialGroup()
                         .add(jLabel7)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(jRadioButtonSangre1)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(jRadioButtonOrina1)
-                        .add(33, 33, 33)
-                        .add(jButtonGuardarAtributo))
-                    .add(jPanelAgregarAtributoLayout.createSequentialGroup()
-                        .add(78, 78, 78)
-                        .add(jLabelError1)))
-                .addContainerGap(142, Short.MAX_VALUE))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)))
+                .add(jLabelError1)
+                .add(101, 101, 101))
         );
 
         jPanelAgregarAtributo.setBounds(0, 0, 800, 480);
@@ -2205,6 +2243,10 @@ public class UI_Analista extends javax.swing.JFrame {
             evt.consume();
     }//GEN-LAST:event_jTextFieldValorLinfocitosKeyTyped
 
+    private void jTextFieldLimiteSupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldLimiteSupActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldLimiteSupActionPerformed
+
 
     /*Comprueba que la fecha introducida es correcta
      * 
@@ -2656,11 +2698,14 @@ public class UI_Analista extends javax.swing.JFrame {
     private javax.swing.JButton jButtonMenosMesFechaFinTurno;
     private javax.swing.JButton jButtonMenosMesFechaInicioTurno;
     private javax.swing.JButton jButtonMenosMesPersonal;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -2754,6 +2799,8 @@ public class UI_Analista extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldFechaNacimientoAnioPersonal;
     private javax.swing.JTextField jTextFieldFechaNacimientoDiaPersonal;
     private javax.swing.JTextField jTextFieldFechaNacimientoMesersonal;
+    private javax.swing.JTextField jTextFieldLimiteInf;
+    private javax.swing.JTextField jTextFieldLimiteSup;
     private javax.swing.JTextField jTextFieldLugarNacimientoPersonal;
     private javax.swing.JTextField jTextFieldMesFinTurno;
     private javax.swing.JTextField jTextFieldMesInicioTurno;
@@ -2761,6 +2808,7 @@ public class UI_Analista extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldNombreAtributo1;
     private javax.swing.JTextField jTextFieldNombrePersonal;
     private javax.swing.JTextField jTextFieldTelefonoPersonal;
+    private javax.swing.JTextField jTextFieldUnidadMedida;
     private javax.swing.JTextField jTextFieldValorLinfocitos;
     private java.awt.ScrollPane scrollPaneComentarios;
     private java.awt.ScrollPane scrollPaneImagenes;
