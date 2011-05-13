@@ -3000,7 +3000,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         System.out.println("Aqui llega");
         try {
             System.out.println("obtenerpaciente");
-            pacien = pac.obtenerPaciente(jTextFieldDNIPaciente.getText());
+            pacien = pac.obtener(jTextFieldDNIPaciente.getText());
         } catch (SQLException ex) {
             Logger.getLogger(UI_Farmaceutico.class.getName()).log(Level.SEVERE, null, ex);
         }
