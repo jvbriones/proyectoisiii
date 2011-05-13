@@ -50,20 +50,13 @@ public class MedicamentoBD  implements Serializable{
     
     public Set<Medicamento> obtenerTodosMedicamentos (){
 
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction ();
 
         List<Medicamento> result = (List<Medicamento>)session.createQuery("from Medicamento").list();
         Set<Medicamento> medicamentos = new HashSet<Medicamento>(result);
-         MedicamentoBD medBD = new MedicamentoBD();
-         Medicamento med = new Medicamento();
-        Set<Medicamento> medicamentos2 = new HashSet<Medicamento>(0);
-                for( Iterator it = medicamentos.iterator(); it.hasNext();) {
-                    med = (Medicamento)it.next();
-                    medicamentos2.add(medBD.obtener(med.getNombre()));
-                }
 
         session.getTransaction().commit();
         return medicamentos;
-    }
+   }
 }
