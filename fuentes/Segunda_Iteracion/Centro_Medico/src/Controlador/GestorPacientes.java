@@ -70,8 +70,6 @@ public class GestorPacientes {
         System.out.println("antes de obtener paciente");
         
         p = pac.obtener(Dni);
-        String nombre = p.getNombre();
-        System.out.println("tras obtener paciente" + nombre);
         return p;
         
         

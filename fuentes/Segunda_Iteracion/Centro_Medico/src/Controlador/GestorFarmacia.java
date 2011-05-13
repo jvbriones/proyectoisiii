@@ -205,10 +205,12 @@ public class GestorFarmacia {
         for( Iterator it = me.iterator(); it.hasNext();) {
              
 	     Medica = (Medicamento)it.next();
-             String nombre = Medica.getNombre();
-             li.add(nombre);
-        }
+              if(Nombre.regionMatches(0, Medica.getNombre(), 0, Nombre.length())) {
+                 System.out.println ( Medica.getNombre() );
+                 li.add(Medica);
+                }
 
+        }
         return li;
 
     }

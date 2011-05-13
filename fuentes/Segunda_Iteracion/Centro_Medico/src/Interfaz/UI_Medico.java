@@ -318,11 +318,11 @@ public class UI_Medico extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelIconoAyudaMouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabelIconoAyudaMouseExited(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabelIconoAyudaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelIconoAyudaMouseExited(evt);
             }
         });
         getContentPane().add(jLabelIconoAyuda);
@@ -468,10 +468,10 @@ public class UI_Medico extends javax.swing.JFrame {
                                 .add(scrollPaneVolante, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 198, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))
                 .add(28, 28, 28)
                 .add(jButton3)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanelAtenderPaciente.setBounds(0, 0, 951, 461);
+        jPanelAtenderPaciente.setBounds(0, 0, 951, 440);
         ZonaTrabajo.add(jPanelAtenderPaciente, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente7.setFont(new java.awt.Font("Lucida Grande", 1, 48));
@@ -567,7 +567,7 @@ public class UI_Medico extends javax.swing.JFrame {
                 .add(jLabelErrorDniPaciente)
                 .add(26, 26, 26)
                 .add(jButtonAceptar)
-                .addContainerGap(125, Short.MAX_VALUE))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanelAtenderPacienteIntermedio.setBounds(0, 0, 925, 480);
@@ -1817,7 +1817,7 @@ public class UI_Medico extends javax.swing.JFrame {
         jPanelSolicitarPruebaLayout.setHorizontalGroup(
             jPanelSolicitarPruebaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanelSolicitarPruebaLayout.createSequentialGroup()
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(126, Short.MAX_VALUE)
                 .add(jPanelSolicitarPruebaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelSolicitarPruebaLayout.createSequentialGroup()
                         .add(jPanelSolicitarPruebaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -2540,22 +2540,9 @@ public class UI_Medico extends javax.swing.JFrame {
 
     private void jButtonBuscarMedicamentoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonBuscarMedicamentoMouseReleased
         // TODO add your handling code here:
-        MedicamentoBD meBD = new MedicamentoBD();
-        GestorFarmacia gesFar = new GestorFarmacia();
-        String Nombre = jTextFieldMedBuscar.getText();
-        DefaultListModel modelo = new DefaultListModel();
-        ArrayList li = new ArrayList();
-        li= gesFar.buscarMedicamento(Nombre); // esta funcion está incompleta.
-        Medicamento Medica = new Medicamento();
-        int i=0;
-         for( Iterator it = li.iterator(); it.hasNext();) {
-          
-	     String nombreMedica = (String)it.next();
-             li.add(nombreMedica);
-             modelo.addElement(li.get(i));
-            }
-           jListMedicamentos.setModel(modelo);
-            // la lista debe mostrarse uno a uno en el RealizarReceta,
+
+
+
          
     }
   private void jButtonRecetarOtroMedicamentoActionPerformed(java.awt.event.ActionEvent evt) {
@@ -2563,6 +2550,25 @@ public class UI_Medico extends javax.swing.JFrame {
 
     private void jButtonBuscarMedicamento1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonBuscarMedicamento1MouseReleased
         // TODO add your handling code here:
+   
+  MedicamentoBD meBD = new MedicamentoBD();
+        GestorFarmacia gesFar = new GestorFarmacia();
+        String Nombre = jTextFieldMedBuscar.getText();
+        DefaultListModel modelo = new DefaultListModel();
+        ArrayList li = new ArrayList();
+        String nombreMedica=new String();
+        li= gesFar.buscarMedicamento(Nombre); // esta funcion está incompleta.
+        Medicamento Medica = new Medicamento();
+        int i = 0;
+        for (Iterator it = li.iterator(); it.hasNext();) {
+
+            Medica = (Medicamento) it.next();
+            li.add(Medica.getNombre());
+            System.out.println(Medica.getNombre());
+             modelo.addElement(li.get(i));
+            }
+           jListMedicamentos.setModel(modelo);
+            // la lista debe mostrarse uno a uno en el RealizarReceta,
     }//GEN-LAST:event_jButtonBuscarMedicamento1MouseReleased
 
     private void jButtonBuscarMedicamento1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarMedicamento1ActionPerformed
