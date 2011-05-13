@@ -20,8 +20,8 @@ public class PruebaOrina extends PruebaAnalisis{
     public PruebaOrina() {
     }
 
-    public PruebaOrina(String Comentario) {
-        super(Comentario);
+    public PruebaOrina(String Comentario, Paciente pac, Analista an) {
+        super(Comentario, pac, an);
     }
 
     public Set<ResultadoOrina> getResultadosOrina(){
@@ -32,7 +32,7 @@ public class PruebaOrina extends PruebaAnalisis{
         this.ResultadosOrina=ResultadosOrina;
     }
 
-    public void añadirResultadoOrina (ResultadoOrina Res){
+    public void añadirResultadoOrina(ResultadoOrina Res){
         ResultadosOrina.add(Res);
     }
 }

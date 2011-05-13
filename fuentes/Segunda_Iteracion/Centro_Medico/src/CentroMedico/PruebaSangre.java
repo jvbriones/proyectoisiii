@@ -20,8 +20,8 @@ public class PruebaSangre extends PruebaAnalisis{
     public PruebaSangre() {
     }
 
-    public PruebaSangre(String Comentario){
-        super(Comentario);
+    public PruebaSangre(String com, Paciente pac, Analista an){
+        super(com, pac, an);
     }
 
     public Set<ResultadoSangre> getResultadosSangre(){

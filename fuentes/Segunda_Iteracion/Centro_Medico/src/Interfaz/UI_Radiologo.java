@@ -1789,8 +1789,10 @@ public class UI_Radiologo extends javax.swing.JFrame {
 
     private void jButtonAlmacenarResultadoRadiologoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAlmacenarResultadoRadiologoMouseClicked
         // TODO add your handling code here:
+        System.out.println("fuera almacenar");
 
      if(compruebaFormulario("Almacenar")){
+         System.out.println("dentro almacenar");
        jLabelError.setVisible(false);
        jLabelErrorDNI.setVisible(false);
        GestorPruebas gp = new GestorPruebas();
@@ -2162,6 +2164,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
 
 
     private boolean compruebaFormulario(String formulario){
+        System.out.println("dentro de comprueba formulario");
 
         if(formulario.equals("Almacenar")){
 

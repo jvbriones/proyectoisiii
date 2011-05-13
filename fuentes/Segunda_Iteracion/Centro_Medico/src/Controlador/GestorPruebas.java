@@ -118,56 +118,74 @@ public class GestorPruebas {
 
 
     }
-/* comentado por Nicolás
-    public boolean almacenarResultadosAnalisis(String Dni, String DatosAnalisis, String Comentario, String TipoAnalisis) throws SQLException{
+
+    public boolean almacenarResultadosAnalisis(String DniPaciente, ArrayList<String> listaAtributos, ArrayList<String> listaResultados, String Comentario, String TipoAnalisis, String DniAnalista) throws SQLException{
 
         Paciente paciente = null;
-        PacBD pBD = new PacBD();
+        GestorPacientes gP = new GestorPacientes();
         
         AtributoSangre atributoS = null;
         AtributoOrina atributoO = null;
         AtributoOrinaBD atribOBD = new AtributoOrinaBD();
         AtributoSangreBD atribSBD = new AtributoSangreBD();
+        Analista analista = null;
+        AnalistaBD aBD = new AnalistaBD();
+        String aux;
+        String aux2;
+        PruebaSangreBD pSBD = new PruebaSangreBD();
+        PruebaOrinaBD pOBD = new PruebaOrinaBD();
 
-        paciente = pBD.obtenerPaciente(Dni);
+        paciente = gP.obtenerPaciente(DniPaciente);
 
-        if(TipoAnalisis == "sangre"){
-            PruebaSangre pruebaS = new PruebaSangre(Comentario);
-
-            //¿Como voy a hacer un bucle si solo devuelve un objeto?
-            atributoS = atribSBD.obtener(Dni);
-            ResultadoSangre res = new ResultadoSangre(atributoS, Resultado);//¿De donde sale resultado?
-            pruebaS.añadirResultadoSangre(res);
-            //fin bucle teorico
-
-            paciente.almacenarPruebaSangre(pruebaS);//Este metodo no existe en la clase Paciente
-
-            //En pacienteBD no hay ningún metodo que sea actualizarPaciente
+        if(paciente == null){
+            System.out.println("No existe el paciente con ese DNI");
+            return false;
         }
 
-        if(TipoAnalisis == "orina"){
-            PruebaOrina pruebaO = new PruebaOrina(Comentario);
+        analista = aBD.obtener(DniAnalista);
 
-            //¿Como voy a hacer un bucle si solo devuelve un objeto?
-            atributoO = atribOBD.obtener(Dni);
-            ResultadoOrina res = new ResultadoOrina(atributoO, Resultado);//¿De donde sale resultado?
-            pruebaO.añadirResultadoOrina(res);
-            //fin bucle teórico
+        if(TipoAnalisis.equals("sangre")){
 
-            paciente.añadirAnalisisOrina(prueba);//Este metodo no existe en la clase Paciente
+            PruebaSangre pruebaS = new PruebaSangre(Comentario,paciente, analista);
 
-           //En pacienteBD no hay ningún metodo que sea actualizarPaciente
+            Iterator itRes = listaResultados.iterator();
+            for( Iterator it = listaAtributos.iterator(); it.hasNext();) {
+                aux = (String)it.next();
+                aux2 = (String) itRes.next();
+                atributoS = atribSBD.obtener(aux);
+                ResultadoSangre res = new ResultadoSangre(atributoS, aux2);
+                pruebaS.añadirResultadoSangre(res);
+            }
 
-            // ¿RETURN?
+            pSBD.almacenar(pruebaS);
+
 
         }
+
+        if(TipoAnalisis.equals("orina")){
+            PruebaOrina pruebaO = new PruebaOrina(Comentario, paciente, analista);
+
+            Iterator itRes = listaResultados.iterator();
+            for( Iterator it = listaAtributos.iterator(); it.hasNext();) {
+                aux = (String)it.next();
+                aux2 = (String) itRes.next();
+                atributoO = atribOBD.obtener(aux);
+                ResultadoOrina res = new ResultadoOrina(atributoO, aux2);
+                pruebaO.añadirResultadoOrina(res);
+            }
+
+            pOBD.almacenar(pruebaO);
+
+
+        }
+
+        return true;
     }
-*/
+
     
     public boolean almacenarResultadoRadiologia(String DNIPaciente, ArrayList<Imagen> imag, String Comentario, String TipoPrueba, String DNIRadiologo) throws SQLException{
 
         //No concuerda el diagrama de secuencia con el de clases
-        System.out.println("Dentro de almacenar");
         PacBD pBD = new PacBD();
         RadiologoBD radiologoBD = new RadiologoBD();
 
@@ -189,16 +207,12 @@ public class GestorPruebas {
             RadiografiaBD rBD = new RadiografiaBD();
 
 
-            System.out.println("Antes del loop de radiografia");
             for( Iterator it = imag.iterator(); it.hasNext();) {
-                System.out.println("en el bucle radiografía");
                 aux = (Imagen)it.next();
                 Imagen img = new Imagen(aux);
                 prueba.añadirImagen(img);
             }
-            System.out.println("Fuera del bucle");
             rBD.almacenar(prueba);
-            return true;
 
         }
 
@@ -211,10 +225,7 @@ public class GestorPruebas {
                 Imagen img = new Imagen(aux);
                 prueba.añadirImagen(img);
             }
-            System.out.println("antes de almacenar resonancia");
             rBD.almacenar(prueba);
-            System.out.println("resonancia almacenada");
-            return true;
 
         }
         return true;

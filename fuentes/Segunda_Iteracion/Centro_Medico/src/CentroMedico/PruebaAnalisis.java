@@ -22,8 +22,10 @@ public class PruebaAnalisis implements Serializable{
 
     public PruebaAnalisis() {
     }
-    public PruebaAnalisis(String com){
+    public PruebaAnalisis(String com, Paciente pac, Analista an){
         this.Comentario=com;
+        this.Paciente = pac;
+        this.Analista = an;
     }
 
     public int getId (){
