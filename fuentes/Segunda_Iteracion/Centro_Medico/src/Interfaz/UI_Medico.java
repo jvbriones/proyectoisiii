@@ -2606,7 +2606,7 @@ public class UI_Medico extends javax.swing.JFrame {
     private void jButtonBuscarMedicamento1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonBuscarMedicamento1MouseReleased
         // TODO add your handling code here:
    
-  MedicamentoBD meBD = new MedicamentoBD();
+MedicamentoBD meBD = new MedicamentoBD();
         GestorFarmacia gesFar = new GestorFarmacia();
         String Nombre = jTextFieldMedBuscar.getText();
         DefaultListModel modelo = new DefaultListModel();
@@ -2614,17 +2614,19 @@ public class UI_Medico extends javax.swing.JFrame {
         String nombreMedica=new String();
         li= gesFar.buscarMedicamento(Nombre); // esta funcion está incompleta.
         Medicamento Medica = new Medicamento();
+        ArrayList aux = new ArrayList();
         int i = 0;
         Iterator iter= li.iterator();
         while (iter.hasNext()) {
 
             Medica = (Medicamento) iter.next();
-            li.add(Medica.getNombre());
+            //aux.add(Medica.getNombre());
+             jListMedicamentos.setModel(modelo);
             System.out.println(Medica.getNombre() + "hola");
-             modelo.addElement(li.get(i));
+            modelo.addElement("uno");
+            modelo.addElement("dos");
+             modelo.addElement(Medica.getNombre());
             }
-           jListMedicamentos.setModel(modelo);
-            // la lista debe mostrarse uno a uno en el RealizarReceta,
     }//GEN-LAST:event_jButtonBuscarMedicamento1MouseReleased
 
     private void jButtonBuscarMedicamento1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarMedicamento1ActionPerformed
