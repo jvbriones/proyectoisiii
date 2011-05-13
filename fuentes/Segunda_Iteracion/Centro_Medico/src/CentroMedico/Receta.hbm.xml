@@ -12,7 +12,7 @@
       <key column="ID_MEDICAMENTORECETADO"/>
       <one-to-many class="CentroMedico.MedicamentoRecetado"/>
     </set>
-    <many-to-one name="Paci" class="CentroMedico.Paciente" column="DNI_PACIENTE" cascade="all" unique="true"/>
-    <many-to-one name="Medi" class="CentroMedico.Medico" column="DNI_MEDICO" cascade="all" unique="true"/>
+    <many-to-one name="Paci" class="CentroMedico.Paciente" column="DNI_PACIENTE" cascade="all" unique="true" lazy="false"/>
+    <many-to-one name="Medi" class="CentroMedico.Medico" column="DNI_MEDICO" cascade="all" unique="true" lazy="false"/>
   </class>
 </hibernate-mapping>
