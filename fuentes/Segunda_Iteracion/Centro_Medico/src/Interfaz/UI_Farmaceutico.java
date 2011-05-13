@@ -151,8 +151,13 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextAreaInfo = new javax.swing.JTextArea();
         scrollPaneMedicamentosBajoStock = new java.awt.ScrollPane();
-        jScrollPane13 = new javax.swing.JScrollPane();
-        jListStock = new javax.swing.JList();
+        jPanel3 = new javax.swing.JPanel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        jList3 = new javax.swing.JList();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        jList4 = new javax.swing.JList();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -723,14 +728,50 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
         scrollPaneMedicamentosBajoStock.setBackground(new java.awt.Color(254, 254, 254));
 
-        jListStock.setModel(new javax.swing.AbstractListModel() {
+        jList2.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane13.setViewportView(jListStock);
+        jScrollPane9.setViewportView(jList2);
 
-        scrollPaneMedicamentosBajoStock.add(jScrollPane13);
+        jList3.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane10.setViewportView(jList3);
+
+        jList4.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane11.setViewportView(jList4);
+
+        org.jdesktop.layout.GroupLayout jPanel3Layout = new org.jdesktop.layout.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanel3Layout.createSequentialGroup()
+                .add(jScrollPane9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 79, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(53, 53, 53)
+                .add(jScrollPane10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 87, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 55, Short.MAX_VALUE)
+                .add(jScrollPane11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 79, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(36, 36, 36))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanel3Layout.createSequentialGroup()
+                .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jScrollPane11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jScrollPane9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jScrollPane10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(48, Short.MAX_VALUE))
+        );
+
+        scrollPaneMedicamentosBajoStock.add(jPanel3);
 
         jLabel5.setText("Nombre");
 
@@ -776,7 +817,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                     .add(jLabel7))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(scrollPaneMedicamentosBajoStock, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 202, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(115, Short.MAX_VALUE))
+                .addContainerGap(136, Short.MAX_VALUE))
         );
 
         jPanelComprobarStockMedicamentos.setBounds(0, 0, 810, 560);
@@ -2827,17 +2868,20 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         ArrayList<ArrayList < String > > li = new ArrayList();
         GestorFarmacia gesFar = new GestorFarmacia();
         Medicamento Medica = new Medicamento();
+        DefaultListModel modelo = new DefaultListModel();
+        modelo.addElement("hola");
         li=gesFar.comprobarStockMedicamentos();
         ArrayList<String> Atributos = new ArrayList();
-        DefaultListModel modelo = new DefaultListModel();
+        
          int i=0;
          for( Iterator it = li.iterator(); it.hasNext();) {
 	     Atributos = (ArrayList)it.next();
              i++;
              modelo.addElement(Atributos);
-             System.out.println(Atributos.get(0));
+             System.out.println("hola");
             }
-           jListStock.setModel(modelo);
+            
+           jList2.setModel(modelo);
 
 
 
@@ -4413,12 +4457,15 @@ System.out.println("antes del for");
     private javax.swing.JLabel jLabelTurnoTrabajo;
     private javax.swing.JLabel jLabelUsuario;
     private javax.swing.JList jList1;
+    private javax.swing.JList jList2;
+    private javax.swing.JList jList3;
+    private javax.swing.JList jList4;
     private javax.swing.JList jListMedicamentosDispensar;
-    private javax.swing.JList jListStock;
     private javax.swing.JOptionPane jOptionPaneConfirmar;
     private javax.swing.JOptionPane jOptionPaneEliminarLote;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanelAnadirLote;
     private javax.swing.JPanel jPanelComprobarStockMedicamentos;
     private javax.swing.JPanel jPanelConsultarDatosPersonales;
@@ -4439,8 +4486,9 @@ System.out.println("antes del for");
     private javax.swing.JRadioButton jRadioButtonRadiologo;
     private javax.swing.JRadioButton jRadioButtonTarde1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
-    private javax.swing.JScrollPane jScrollPane13;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -4448,6 +4496,7 @@ System.out.println("antes del for");
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTextArea jTextAreaConsulDescrip;
     private javax.swing.JTextArea jTextAreaDescripcion;
     private javax.swing.JTextArea jTextAreaInfo;

@@ -2587,7 +2587,26 @@ public class UI_Medico extends javax.swing.JFrame {
 
     private void jButtonBuscarMedicamentoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonBuscarMedicamentoMouseReleased
         // TODO add your handling code here:
+MedicamentoBD meBD = new MedicamentoBD();
+        GestorFarmacia gesFar = new GestorFarmacia();
+        String Nombre = jTextFieldMedBuscar.getText();
+        DefaultListModel modelo = new DefaultListModel();
+        ArrayList li = new ArrayList();
+        String nombreMedica=new String();
+        li= gesFar.buscarMedicamento(Nombre); // esta funcion está incompleta.
+        Medicamento Medica = new Medicamento();
+        ArrayList aux = new ArrayList();
+        int i = 0;
+        Iterator iter= li.iterator();
+        while (iter.hasNext()) {
 
+            Medica = (Medicamento) iter.next();
+            //aux.add(Medica.getNombre());
+            jList1.setModel(modelo);
+            System.out.println(Medica.getNombre() + "hola");
+            modelo.addElement("uno");
+            modelo.addElement("dos");
+             modelo.addElement(Medica.getNombre());
 
 
          

@@ -346,6 +346,9 @@ System.out.println("4");
 
     public ArrayList comprobarStockMedicamentos(){
 
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session.beginTransaction ();
+
         Date fechaActual=new Date(); // fecha
         MedicamentoBD meBD = new MedicamentoBD();
         Medicamento medica= new Medicamento(); 
@@ -358,7 +361,7 @@ System.out.println("4");
         ArrayList< String> Atributos = new ArrayList();
         me= meBD.obtenerTodosMedicamentos(); // array con todos los medicamentos
 
-
+        
    
        
         for( Iterator it = me.iterator(); it.hasNext();) {
@@ -367,7 +370,7 @@ System.out.println("4");
            int StockMinimoPermitido = medica.getExistenciasMinimas();
            int StockActual = medica.getStockActual();
            int nExistencias=0;
-           medica=meBD.obtener(nombre);
+           medica=meBD.obtener(nombre); // avisar a diseño 
           lotesMedica=medica.getLotesMedicamento();
            System.out.println(medica.getNombre());
 
@@ -381,7 +384,10 @@ System.out.println("4");
                    Date fechaCad = lote.getFechaCaducidad();
                 if( fechaActual.after(fechaCad)){
                     nExistencias +=lote.getExistencias();
-                    loteBD.eliminar(lote);
+
+
+                    
+                    loteBD.eliminar(lote); // 
                     medica.actualizaStock(-nExistencias);
                     StockActual-=nExistencias;//actualizamos stock
                     meBD.actualizar(medica);
