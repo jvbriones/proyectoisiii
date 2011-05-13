@@ -342,7 +342,7 @@ public class GestorFarmacia {
 
     public ArrayList comprobarStockMedicamentos(){
 
-        Date fechaActual=new Date();
+        Date fechaActual=new Date(); // fecha
         MedicamentoBD meBD = new MedicamentoBD();
         Medicamento medica= new Medicamento(); 
         LoteMedicamentoBD loteBD = new LoteMedicamentoBD();
@@ -353,7 +353,8 @@ public class GestorFarmacia {
         ArrayList<ArrayList < String > > li = new ArrayList();
         ArrayList< String> Atributos = new ArrayList();
         me= meBD.obtenerTodosMedicamentos(); // array con todos los medicamentos
-
+Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session.beginTransaction ();
        
         for( Iterator it = me.iterator(); it.hasNext();) {
 	   medica = (Medicamento)it.next();
@@ -361,12 +362,16 @@ public class GestorFarmacia {
            int StockMinimoPermitido = medica.getExistenciasMinimas();
            int StockActual = medica.getStockActual();
            int nExistencias=0;
-           lotesMedica=medica.getLotesMedicamento();
+          lotesMedica=medica.getLotesMedicamento();
            System.out.println(medica.getNombre());
-           for( Iterator itLo=lotesMedica.iterator();itLo.hasNext();){
 
+           
+
+
+          for( Iterator itLo=lotesMedica.iterator();itLo.hasNext();){
+                 System.out.println("no ");
                    lote = (LoteMedicamento)itLo.next();// como obtener de aquí un array cuando en el diseñoo aparece un array?
-                   nombreLo=lote.getNombre();
+                   nombreLo=lote.getCodBarras();
                    Date fechaCad = lote.getFechaCaducidad();
                 if( fechaActual.after(fechaCad)){
                     nExistencias +=lote.getExistencias();
@@ -376,7 +381,7 @@ public class GestorFarmacia {
                     meBD.actualizar(medica);
                 }
             }
-
+            
 
            if( StockMinimoPermitido < StockActual){
                    Atributos.add(nombre);
@@ -388,7 +393,7 @@ public class GestorFarmacia {
        
                       
          }
-
+         Connection con = session.close();
          return li;
 
 

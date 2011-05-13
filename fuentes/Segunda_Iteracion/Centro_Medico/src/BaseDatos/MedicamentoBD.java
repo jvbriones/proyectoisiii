@@ -6,6 +6,7 @@ import java.util.Set;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Iterator;
 
 /**
  *  @author Juan Carlos Bermúdez
@@ -54,6 +55,13 @@ public class MedicamentoBD  implements Serializable{
 
         List<Medicamento> result = (List<Medicamento>)session.createQuery("from Medicamento").list();
         Set<Medicamento> medicamentos = new HashSet<Medicamento>(result);
+         MedicamentoBD medBD = new MedicamentoBD();
+         Medicamento med = new Medicamento();
+        Set<Medicamento> medicamentos2 = new HashSet<Medicamento>(0);
+                for( Iterator it = medicamentos.iterator(); it.hasNext();) {
+                    med = (Medicamento)it.next();
+                    medicamentos2.add(medBD.obtener(med.getNombre()));
+                }
 
         session.getTransaction().commit();
         return medicamentos;

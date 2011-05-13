@@ -2814,6 +2814,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 	     Atributos = (ArrayList)it.next();
              i++;
              modelo.addElement(Atributos);
+             System.out.println(Atributos.get(0));
             }
            jListStock.setModel(modelo);
 
