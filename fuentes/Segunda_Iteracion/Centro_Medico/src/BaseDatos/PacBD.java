@@ -75,7 +75,7 @@ public class PacBD {
     }
 
 
-    public Paciente obtenerPaciente(String Dni) throws SQLException {
+/*    public Paciente obtenerPaciente(String Dni) throws SQLException {
 
         Paciente paciente;
 
@@ -103,7 +103,7 @@ public class PacBD {
         conexion.closeConnection();
         return paciente;
     }
-
+*/
         public Paciente obtener(String Dni) throws SQLException{
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
