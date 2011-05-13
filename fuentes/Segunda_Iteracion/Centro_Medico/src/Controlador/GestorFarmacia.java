@@ -207,7 +207,7 @@ public class GestorFarmacia {
 	     Medica = (Medicamento)it.next();
               if(Nombre.regionMatches(0, Medica.getNombre(), 0, Nombre.length())) {
                  System.out.println ( Medica.getNombre() );
-                 li.add(Medica);
+                 li.add(Medica.getNombre());
                 }
 
         }

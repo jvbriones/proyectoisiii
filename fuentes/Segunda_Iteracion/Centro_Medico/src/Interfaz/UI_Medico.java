@@ -2560,11 +2560,12 @@ public class UI_Medico extends javax.swing.JFrame {
         li= gesFar.buscarMedicamento(Nombre); // esta funcion está incompleta.
         Medicamento Medica = new Medicamento();
         int i = 0;
-        for (Iterator it = li.iterator(); it.hasNext();) {
+        Iterator iter= li.iterator();
+        while (iter.hasNext()) {
 
-            Medica = (Medicamento) it.next();
+            Medica = (Medicamento) iter.next();
             li.add(Medica.getNombre());
-            System.out.println(Medica.getNombre());
+            System.out.println(Medica.getNombre() + "hola");
              modelo.addElement(li.get(i));
             }
            jListMedicamentos.setModel(modelo);
