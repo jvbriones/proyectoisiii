@@ -11,10 +11,16 @@
  */
 
 package CentroMedico;
+
+import BaseDatos.*;
 import java.util.Set;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.io.Serializable;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.*;
+import org.hibernate.*;
 
 public class Medicamento implements Serializable{
     private String Nombre;
@@ -54,6 +60,11 @@ public class Medicamento implements Serializable{
     }
 
     public Set<LoteMedicamento> getLotesMedicamento() {
+
+         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session.beginTransaction ();
+
+      
         return LotesMedicamento;
     }
 

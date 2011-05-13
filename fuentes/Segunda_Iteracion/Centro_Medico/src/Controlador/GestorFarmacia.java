@@ -348,13 +348,14 @@ public class GestorFarmacia {
         LoteMedicamentoBD loteBD = new LoteMedicamentoBD();
         LoteMedicamento lote = new LoteMedicamento();
         Set<Medicamento> me;
-        Set<LoteMedicamento> lotesMedica;
+        Set<LoteMedicamento> lotesMedica=new HashSet<LoteMedicamento>(0);
         String nombreLo;
         ArrayList<ArrayList < String > > li = new ArrayList();
         ArrayList< String> Atributos = new ArrayList();
         me= meBD.obtenerTodosMedicamentos(); // array con todos los medicamentos
-Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-        session.beginTransaction ();
+
+
+   
        
         for( Iterator it = me.iterator(); it.hasNext();) {
 	   medica = (Medicamento)it.next();
@@ -362,16 +363,17 @@ Session session = HibernateUtil.getSessionFactory().getCurrentSession();
            int StockMinimoPermitido = medica.getExistenciasMinimas();
            int StockActual = medica.getStockActual();
            int nExistencias=0;
+           medica=meBD.obtener(nombre);
           lotesMedica=medica.getLotesMedicamento();
            System.out.println(medica.getNombre());
 
-           
-
+          
 
           for( Iterator itLo=lotesMedica.iterator();itLo.hasNext();){
                  System.out.println("no ");
                    lote = (LoteMedicamento)itLo.next();// como obtener de aquí un array cuando en el diseñoo aparece un array?
                    nombreLo=lote.getCodBarras();
+                   System.out.println(lote.getCodBarras());
                    Date fechaCad = lote.getFechaCaducidad();
                 if( fechaActual.after(fechaCad)){
                     nExistencias +=lote.getExistencias();
@@ -393,7 +395,7 @@ Session session = HibernateUtil.getSessionFactory().getCurrentSession();
        
                       
          }
-         Connection con = session.close();
+   
          return li;
 
 
