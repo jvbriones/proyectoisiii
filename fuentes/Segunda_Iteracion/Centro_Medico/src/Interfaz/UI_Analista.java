@@ -2230,6 +2230,7 @@ public class UI_Analista extends javax.swing.JFrame {
             evt.consume();
     }//GEN-LAST:event_jTextFieldAlmacenarDniKeyTyped
 
+
     private void jTextFieldValorLinfocitosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldValorLinfocitosKeyTyped
         // TODO add your handling code here:
 

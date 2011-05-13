@@ -70,6 +70,11 @@ public class Intro extends javax.swing.JFrame {
         jLabelUsuario1.setText("Usuario:");
 
         jTextFieldUsuario.setColumns(10);
+        jTextFieldUsuario.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldUsuarioKeyTyped(evt);
+            }
+        });
 
         jPasswordField1.setColumns(10);
         jPasswordField1.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -244,6 +249,26 @@ public class Intro extends javax.swing.JFrame {
             Logger.getLogger(Intro.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton1MouseReleased
+
+    private void jTextFieldUsuarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldUsuarioKeyTyped
+        // TODO add your handling code here:
+          /**Limitamos a que el DNI siempre sea correcto sintácticamente*/
+        char teclaPresionada = evt.getKeyChar();
+
+        if(jTextFieldUsuario.getText().length() < 8)
+            if(Character.isDigit(teclaPresionada) == false)
+                evt.consume();
+
+        if(jTextFieldUsuario.getText().length() == 8)
+            if(Character.isDigit(teclaPresionada) == true){
+                evt.consume();
+                }else if(Character.isLowerCase(teclaPresionada)){
+                    jTextFieldUsuario.setText(jTextFieldUsuario.getText().toUpperCase());
+                }
+
+        if(jTextFieldUsuario.getText().length() > 8)
+            evt.consume();
+    }//GEN-LAST:event_jTextFieldUsuarioKeyTyped
 
     /**
      * Comprueba que los datos de acceso correspondan a algún usuario
