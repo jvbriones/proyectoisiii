@@ -372,10 +372,10 @@ System.out.println("4");
            int nExistencias=0;
            medica=meBD.obtener(nombre); // avisar a diseño 
           lotesMedica=medica.getLotesMedicamento();
-        
+          Atributos = new ArrayList();
           
 
-          for( Iterator itLo=lotesMedica.iterator();itLo.hasNext();){
+          for( Iterator itLo=lotesMedica.iterator();itLo.hasNext();){ // eliminar lotes caducados
                  
                    lote = (LoteMedicamento)itLo.next();// como obtener de aquí un array cuando en el diseñoo aparece un array?
                    nombreLo=lote.getCodBarras();
@@ -387,7 +387,7 @@ System.out.println("4");
 
                     
                     loteBD.eliminar(lote); // 
-                    medica.actualizaStock(-nExistencias);
+                    medica.actualizaStock(-nExistencias); // actualiza el stock del medicamento
                     StockActual-=nExistencias;//actualizamos stock
                     meBD.actualizar(medica);
                 }
@@ -395,10 +395,13 @@ System.out.println("4");
             
 
            if( StockMinimoPermitido < StockActual){
+                   System.out.println(nombre);
+                   
                    Atributos.add(nombre);
-                   Atributos.add(String.valueOf(nExistencias));
+                   Atributos.add(String.valueOf(StockActual)); //avisar a Javi por este cambio.
                    Atributos.add(String.valueOf(StockMinimoPermitido));
                    li.add(Atributos);
+                 
 
            }
        
