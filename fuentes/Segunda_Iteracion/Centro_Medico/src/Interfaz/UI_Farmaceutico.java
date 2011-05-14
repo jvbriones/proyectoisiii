@@ -3012,7 +3012,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
     private void jButtonObtenerRecetasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonObtenerRecetasMouseClicked
         // TODO add your handling code here:
         GestorFarmacia gestFar = new GestorFarmacia();
-        ArrayList resumenRecetas = new ArrayList();
+        Set<Receta> resumenRecetas = null;
         PacBD pac = new PacBD();
         Paciente pacien = null;
         System.out.println("Aqui llega");
@@ -3038,7 +3038,7 @@ System.out.println("antes del for");
          for(Iterator it = resumenRecetas.iterator(); it.hasNext();){
              System.out.println("en el for");
              rec = (Receta) it.next();
-             listModel.addElement(rec);
+             listModel.addElement(rec.getFecha());
              System.out.println("Receta "+ rec.getId());
 
          }

@@ -215,13 +215,13 @@ public class GestorFarmacia {
 
     }
 
-    public ArrayList consultarResumenRecetas(String Dni) throws SQLException{
+    public Set<Receta> consultarResumenRecetas(String Dni) throws SQLException{
         ArrayList resumenRecetas = new ArrayList();
         GestorPacientes pacien = new GestorPacientes();
         Paciente pac = new Paciente();
         RecetaBD recetas = new RecetaBD();
         Receta rec = null;
-        Set<Receta> almacenRecetas;
+        Set<Receta> almacenRecetas = null;
         boolean fin = false;
         Medico doc = null;
 
@@ -231,7 +231,7 @@ public class GestorFarmacia {
 
         if(pac == null){
             System.out.println("El paciente no existe");
-            return resumenRecetas;
+            return almacenRecetas;
 
         }
 
@@ -240,7 +240,7 @@ public class GestorFarmacia {
             System.out.println("2");
             almacenRecetas = recetas.obtenerRecetasPaciente(Dni);
 System.out.println("3");
-            for( Iterator it = almacenRecetas.iterator(); it.hasNext();) {
+            /*for( Iterator it = almacenRecetas.iterator(); it.hasNext();) {
                 rec = (Receta)it.next();
                 System.out.println("Receta: "+ rec.getJuicioDiagnostico());
                 ArrayList aux = new ArrayList();
@@ -253,9 +253,10 @@ System.out.println("3");
                 aux.add(rec.getId());
                 resumenRecetas.add(aux);
              }
+             * */
 System.out.println("4");
 
-            return resumenRecetas;
+            return almacenRecetas;
         }
     }
 
