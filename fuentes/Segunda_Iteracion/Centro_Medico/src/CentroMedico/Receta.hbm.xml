@@ -9,7 +9,7 @@
     <property name="JuicioDiagnostico"/>
     <property name="Fecha"/>
     <set cascade="all" name="MedicamentosRecetados">
-      <key column="ID_MEDICAMENTORECETADO"/>
+      <key column="ID_RECETA"/>
       <one-to-many class="CentroMedico.MedicamentoRecetado"/>
     </set>
     <many-to-one name="Paci" class="CentroMedico.Paciente" column="DNI_PACIENTE" cascade="all" unique="true"/>
