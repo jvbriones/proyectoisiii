@@ -8,7 +8,7 @@
     <property name="Descripcion"/>
     <property name="ExistenciasMinimas"/>
     <property name="StockActual"/>
-    <set cascade="all" name="LotesMedicamento" inverse="true">
+    <set cascade="delete" name="LotesMedicamento" inverse="true">
       <key column="NOMBRE_MEDICAMENTO"/>
       <one-to-many class="CentroMedico.LoteMedicamento" />
 </set>
