@@ -2621,7 +2621,7 @@ MedicamentoBD meBD = new MedicamentoBD();
    
 MedicamentoBD meBD = new MedicamentoBD();
         GestorFarmacia gesFar = new GestorFarmacia();
-        String Nombre = jTextFieldMedBuscar.getText();
+        String Nombre = jTextFieldMedBuscar1.getText();
         DefaultListModel modelo = new DefaultListModel();
         ArrayList li = new ArrayList();
         String nombreMedica=new String();
@@ -2629,20 +2629,13 @@ MedicamentoBD meBD = new MedicamentoBD();
         Medicamento Medica = new Medicamento();
         ArrayList aux = new ArrayList();
         int i = 0;
-         modelo.addElement("uno");
-            modelo.addElement("dos");
         Iterator iter= li.iterator();
         while (iter.hasNext()) {
 
             Medica = (Medicamento) iter.next();
-            //aux.add(Medica.getNombre());
-            jList1.setModel(modelo);
-            System.out.println(Medica.getNombre() + "hola");
-           
-             modelo.addElement(Medica.getNombre());
-             
-            
+            modelo.addElement(Medica.getNombre());
             }
+        jListMedicamentos1.setModel(modelo);
     }//GEN-LAST:event_jButtonBuscarMedicamento1MouseReleased
 
     private void jButtonBuscarMedicamento1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarMedicamento1ActionPerformed
