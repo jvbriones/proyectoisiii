@@ -372,15 +372,14 @@ System.out.println("4");
            int nExistencias=0;
            medica=meBD.obtener(nombre); // avisar a diseño 
           lotesMedica=medica.getLotesMedicamento();
-           System.out.println(medica.getNombre());
-
+        
           
 
           for( Iterator itLo=lotesMedica.iterator();itLo.hasNext();){
-                 System.out.println("no ");
+                 
                    lote = (LoteMedicamento)itLo.next();// como obtener de aquí un array cuando en el diseñoo aparece un array?
                    nombreLo=lote.getCodBarras();
-                   System.out.println(lote.getCodBarras());
+                  
                    Date fechaCad = lote.getFechaCaducidad();
                 if( fechaActual.after(fechaCad)){
                     nExistencias +=lote.getExistencias();

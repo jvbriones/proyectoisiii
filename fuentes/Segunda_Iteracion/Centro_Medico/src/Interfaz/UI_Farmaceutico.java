@@ -571,7 +571,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                     .add(0, 188, Short.MAX_VALUE)))
         );
 
-        jPanelConsultarMedicamento.setBounds(0, 0, 765, 465);
+        jPanelConsultarMedicamento.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelConsultarMedicamento, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel11.setText("_______________________________________________________________________");
@@ -728,6 +728,8 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
         scrollPaneMedicamentosBajoStock.setBackground(new java.awt.Color(254, 254, 254));
 
+        jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
         jList2.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
@@ -742,6 +744,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         });
         jScrollPane10.setViewportView(jList3);
 
+        jList4.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         jList4.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
@@ -754,21 +757,17 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanel3Layout.createSequentialGroup()
-                .add(jScrollPane9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 79, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(53, 53, 53)
-                .add(jScrollPane10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 87, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 55, Short.MAX_VALUE)
-                .add(jScrollPane11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 79, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(36, 36, 36))
+                .add(jScrollPane9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 114, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jScrollPane10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 136, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(jScrollPane11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 136, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel3Layout.createSequentialGroup()
-                .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jScrollPane11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jScrollPane9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jScrollPane10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(48, Short.MAX_VALUE))
+            .add(jScrollPane9, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)
+            .add(jScrollPane10, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)
+            .add(jScrollPane11, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)
         );
 
         scrollPaneMedicamentosBajoStock.add(jPanel3);
@@ -817,7 +816,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                     .add(jLabel7))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(scrollPaneMedicamentosBajoStock, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 202, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(136, Short.MAX_VALUE))
+                .addContainerGap(115, Short.MAX_VALUE))
         );
 
         jPanelComprobarStockMedicamentos.setBounds(0, 0, 810, 560);
@@ -1605,7 +1604,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                     .add(0, 66, Short.MAX_VALUE)))
         );
 
-        jPanelConsultarTurno.setBounds(0, 0, 860, 531);
+        jPanelConsultarTurno.setBounds(0, 0, 860, -1);
         ZonaTrabajo.add(jPanelConsultarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jTextAreaInfo4.setBackground(new java.awt.Color(255, 204, 102));
@@ -1693,10 +1692,10 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                     .add(jButtonDispensarFinal))
                 .add(35, 35, 35)
                 .add(jButtonFinalizar)
-                .addContainerGap(646, Short.MAX_VALUE))
+                .addContainerGap(671, Short.MAX_VALUE))
         );
 
-        jPanelDispensarFinal.setBounds(0, 0, 736, 1160);
+        jPanelDispensarFinal.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelDispensarFinal, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jButtonConsultarReceta.setText("Consultar");
@@ -1781,7 +1780,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                 .addContainerGap(113, Short.MAX_VALUE))
         );
 
-        jPanelDispensarConsultar.setBounds(0, 0, 728, 510);
+        jPanelDispensarConsultar.setBounds(0, 0, -1, 510);
         ZonaTrabajo.add(jPanelDispensarConsultar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente12.setFont(new java.awt.Font("Lucida Grande", 1, 36));
@@ -1949,7 +1948,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
-        jPanelModificarLote.setBounds(0, 0, 908, 348);
+        jPanelModificarLote.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelModificarLote, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente14.setFont(new java.awt.Font("Lucida Grande", 1, 36));
@@ -2118,7 +2117,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
-        jPanelAnadirLote.setBounds(0, 0, 698, 359);
+        jPanelAnadirLote.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelAnadirLote, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente9.setFont(new java.awt.Font("Lucida Grande", 1, 36));
@@ -2223,7 +2222,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                 .addContainerGap(88, Short.MAX_VALUE))
         );
 
-        jPanelDispensar.setBounds(0, 0, 770, 412);
+        jPanelDispensar.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelDispensar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -2868,20 +2867,37 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         ArrayList<ArrayList < String > > li = new ArrayList();
         GestorFarmacia gesFar = new GestorFarmacia();
         Medicamento Medica = new Medicamento();
-        DefaultListModel modelo = new DefaultListModel();
-        modelo.addElement("hola");
+        DefaultListModel modeloNombres = new DefaultListModel();
+        DefaultListModel modeloExistMin = new DefaultListModel();
+        DefaultListModel modeloStockActual = new DefaultListModel();
         li=gesFar.comprobarStockMedicamentos();
         ArrayList<String> Atributos = new ArrayList();
+        String Nombre=null;
+        String ExistenMin=null;
+        String StockActual=null;
         
          int i=0;
          for( Iterator it = li.iterator(); it.hasNext();) {
 	     Atributos = (ArrayList)it.next();
-             i++;
-             modelo.addElement(Atributos);
-             System.out.println("hola");
-            }
+             
+             
+             // for( Iterator iter = Atributos.iterator(); iter.hasNext();){
+                    Nombre = Atributos.get(0);
+                    ExistenMin= Atributos.get(1);
+                    StockActual = Atributos.get(2);
+                    modeloNombres.addElement(Nombre);
+                    modeloExistMin.addElement(ExistenMin);
+                    modeloStockActual.addElement(StockActual);
+             //  }
+             
+             
+        }
             
-           jList2.setModel(modelo);
+            
+            
+           jList2.setModel(modeloNombres);
+           jList3.setModel(modeloExistMin);
+           jList4.setModel(modeloStockActual);
 
 
 
