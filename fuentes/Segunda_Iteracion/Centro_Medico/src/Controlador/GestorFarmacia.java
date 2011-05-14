@@ -196,8 +196,6 @@ public class GestorFarmacia {
 
     public ArrayList buscarMedicamento( String Nombre ){
 
-
-        System.out.println(Nombre);
         MedicamentoBD meBD=new MedicamentoBD();
         Set<Medicamento> me=null;
         Medicamento Medica = new Medicamento();
@@ -205,15 +203,9 @@ public class GestorFarmacia {
         ArrayList li = new ArrayList();
         for( Iterator it = me.iterator(); it.hasNext();) {
              Medica = (Medicamento)it.next();
-            
-	    
               if(Medica.getNombre().regionMatches(0, Nombre, 0, Nombre.length())) {
-                 //System.out.println ( Medica.getNombre() +" aqui" );
                  li.add(Medica);
-                 
                 }
-            
-            
         }
         return li;
 
