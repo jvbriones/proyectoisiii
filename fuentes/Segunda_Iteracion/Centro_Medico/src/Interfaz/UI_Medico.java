@@ -2598,18 +2598,20 @@ MedicamentoBD meBD = new MedicamentoBD();
         ArrayList aux = new ArrayList();
         int i = 0;
         Iterator iter= li.iterator();
+        modelo.addElement("uno");
+            modelo.addElement("dos");
         while (iter.hasNext()) {
 
             Medica = (Medicamento) iter.next();
             //aux.add(Medica.getNombre());
             jList1.setModel(modelo);
             System.out.println(Medica.getNombre() + "hola");
-            modelo.addElement("uno");
-            modelo.addElement("dos");
+            
              modelo.addElement(Medica.getNombre());
 
 
          
+    }
     }
   private void jButtonRecetarOtroMedicamentoActionPerformed(java.awt.event.ActionEvent evt) {
     }//GEN-LAST:event_jButtonBuscarMedicamentoMouseReleased
@@ -2627,6 +2629,8 @@ MedicamentoBD meBD = new MedicamentoBD();
         Medicamento Medica = new Medicamento();
         ArrayList aux = new ArrayList();
         int i = 0;
+         modelo.addElement("uno");
+            modelo.addElement("dos");
         Iterator iter= li.iterator();
         while (iter.hasNext()) {
 
@@ -2634,8 +2638,7 @@ MedicamentoBD meBD = new MedicamentoBD();
             //aux.add(Medica.getNombre());
             jList1.setModel(modelo);
             System.out.println(Medica.getNombre() + "hola");
-            modelo.addElement("uno");
-            modelo.addElement("dos");
+           
              modelo.addElement(Medica.getNombre());
              
             
