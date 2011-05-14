@@ -19,8 +19,10 @@ import java.util.Calendar.*;
 import java.util.Calendar;
 import java.awt.Color;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultListModel;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
@@ -233,6 +235,7 @@ public class UI_Analista extends javax.swing.JFrame {
         jLabelLinfocitos = new javax.swing.JLabel();
         jTextFieldValorLinfocitos = new javax.swing.JTextField();
         jLabelError = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jPanelUsuario = new javax.swing.JPanel();
         jLabelUsuario = new javax.swing.JLabel();
         jLabelTipoUsuario = new javax.swing.JLabel();
@@ -1442,6 +1445,16 @@ public class UI_Analista extends javax.swing.JFrame {
 
         scrollPaneImagenes.setBackground(new java.awt.Color(254, 253, 253));
 
+        jListAtributos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jListAtributosMouseClicked(evt);
+            }
+        });
+        jListAtributos.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                jListAtributosValueChanged(evt);
+            }
+        });
         jScrollPane1.setViewportView(jListAtributos);
 
         scrollPaneImagenes.add(jScrollPane1);
@@ -1480,6 +1493,8 @@ public class UI_Analista extends javax.swing.JFrame {
         jLabelError.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Error.png"))); // NOI18N
         jLabelError.setText("Debe rellenar todos los campos");
 
+        jButton1.setText("Introducir Valor");
+
         org.jdesktop.layout.GroupLayout jPanelAlmacenarResultadosLayout = new org.jdesktop.layout.GroupLayout(jPanelAlmacenarResultados);
         jPanelAlmacenarResultados.setLayout(jPanelAlmacenarResultadosLayout);
         jPanelAlmacenarResultadosLayout.setHorizontalGroup(
@@ -1503,18 +1518,20 @@ public class UI_Analista extends javax.swing.JFrame {
                                 .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
                                         .add(77, 77, 77)
-                                        .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                        .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                                             .add(jLabelPrueba, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 66, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                            .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                                                .add(12, 12, 12)
-                                                .add(jTextFieldValorLinfocitos, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 72, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                            .add(jLabelLinfocitos, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 162, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                            .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                                                .add(jRadioButtonOrina, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
-                                                .add(jRadioButtonSangre, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                            .add(jLabelLinfocitos, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE)
+                                            .add(jRadioButtonOrina, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                                            .add(jRadioButtonSangre, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
                                         .add(24, 24, 24)
-                                        .add(jLabelError, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 263, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))))
+                                        .add(jLabelError, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 263, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                    .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
+                                        .add(100, 100, 100)
+                                        .add(jTextFieldValorLinfocitos, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 72, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                    .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
+                                        .add(51, 51, 51)
+                                        .add(jButton1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 160, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))))
                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
                         .add(107, 107, 107)
                         .add(jLabelGestionarPaciente7))
@@ -1554,7 +1571,9 @@ public class UI_Analista extends javax.swing.JFrame {
                         .add(16, 16, 16)
                         .add(jLabelLinfocitos)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jTextFieldValorLinfocitos, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 38, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                        .add(jTextFieldValorLinfocitos, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 38, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jButton1)))
                 .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
@@ -2374,13 +2393,13 @@ public class UI_Analista extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         /**Comprobamos que no se teclee un número*/
-        char teclaPresionada = evt.getKeyChar();
+      /**  char teclaPresionada = evt.getKeyChar();
         if(Character.isDigit(teclaPresionada) == false)
             evt.consume();
 
         /**Limitamos la longitud*/
-        if(jTextFieldValorLinfocitos.getText().length() > 4)
-            evt.consume();
+        /**if(jTextFieldValorLinfocitos.getText().length() > 4)
+            evt.consume();*/
     }//GEN-LAST:event_jTextFieldValorLinfocitosKeyTyped
 
     private void jTextFieldLimiteSupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldLimiteSupActionPerformed
@@ -2389,15 +2408,60 @@ public class UI_Analista extends javax.swing.JFrame {
 
     private void jRadioButtonSangreItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jRadioButtonSangreItemStateChanged
         // TODO add your handling code here:
-        if(jRadioButtonSangre.isSelected())
+        if(jRadioButtonSangre.isSelected()){
+            DefaultListModel aux=new DefaultListModel();
+            jListAtributos.setModel(aux);
+        }
+        jTextFieldValorLinfocitos.setText("");
             System.out.println("Cambio a sangre");
     }//GEN-LAST:event_jRadioButtonSangreItemStateChanged
 
     private void jRadioButtonOrinaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jRadioButtonOrinaItemStateChanged
         // TODO add your handling code here:
-        if(jRadioButtonOrina.isSelected())
+        //Prueba para probar el funcionamiento d la interfaz ADRI
+
+        if(jRadioButtonOrina.isSelected()){
+            jTextFieldValorLinfocitos.setText("");
             System.out.println("Cambio a orina");
+            AtributoOrina ori1 = new AtributoOrina("pantic");
+            AtributoOrina ori2 = new AtributoOrina("pope");
+            AtributoOrina ori3 = new AtributoOrina("niko");
+
+            ResultadoOrina resul1 = new ResultadoOrina(ori1,"0");
+            ResultadoOrina resul2 = new ResultadoOrina(ori2,"0");
+            ResultadoOrina resul3 = new ResultadoOrina(ori3,"0");
+
+
+            DefaultListModel aux=new DefaultListModel();
+            aux.addElement(ori1.getNombre());
+            aux.addElement(ori2.getNombre());
+            aux.addElement(ori3.getNombre());
+
+
+            jListAtributos.setModel(aux);
+        }
     }//GEN-LAST:event_jRadioButtonOrinaItemStateChanged
+
+    private void jListAtributosValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jListAtributosValueChanged
+        // TODO add your handling code here:
+        
+        
+    }//GEN-LAST:event_jListAtributosValueChanged
+
+    private void jListAtributosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jListAtributosMouseClicked
+        // TODO add your handling code here:
+        
+        String nombre = jListAtributos.getSelectedValue().toString();
+        AtributoOrinaBD a = new AtributoOrinaBD();
+        AtributoOrina atributo;
+        atributo = a.obtener(nombre);
+        ResultadoOrina or = new ResultadoOrina();
+        or.setAtr(atributo);
+            if(or.getResultado() == null)
+                jTextFieldValorLinfocitos.setText("0");
+            else
+                jTextFieldValorLinfocitos.setText(or.getResultado());
+    }//GEN-LAST:event_jListAtributosMouseClicked
 
 
     /*Comprueba que la fecha introducida es correcta
@@ -2619,8 +2683,7 @@ public class UI_Analista extends javax.swing.JFrame {
          if(panel.equals("AlmacenarResultados")){
 
             /**Limpiamos posibles datos introducidos anteriormente*/
-
-
+            
             /**Hacemos visible el botón jLabelIconoInicio*/
             jLabelInicio.setVisible(true);
             jLabelIconoInicio.setVisible(true);
@@ -2823,6 +2886,7 @@ public class UI_Analista extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.ButtonGroup buttonGroup5;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonAlmacenarResultado;
     private javax.swing.JButton jButtonAlmacenarResultado1;
     private javax.swing.JButton jButtonAlmacenarResultado2;
