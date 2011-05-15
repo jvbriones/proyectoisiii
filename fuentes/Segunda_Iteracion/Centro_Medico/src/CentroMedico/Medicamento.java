@@ -13,12 +13,7 @@
 package CentroMedico;
 
 import BaseDatos.*;
-import java.util.Set;
-import java.util.HashSet;
-import java.util.Iterator;
 import java.io.Serializable;
-import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.*;
 import org.hibernate.*;
 

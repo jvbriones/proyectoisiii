@@ -9,6 +9,6 @@
     <property name="Duracion"/>
     <property name="FechaFin"/>
     <property name="Dispensado"/>
-    <one-to-one class="CentroMedico.Medicamento" constrained="true" name="Med"/>
+    <many-to-one name="Medicamento" class="CentroMedico.Medicamento" column="NOMBRE_MEDICAMENTO"  unique="true" not-null="true"/>
   </class>
 </hibernate-mapping>

@@ -22,13 +22,13 @@ public class MedicamentoRecetado implements Serializable{
     private Date FechaFin;
     private boolean Dispensado;
 
-    private Medicamento Med;
+    private Medicamento Medicamento;
 
     public MedicamentoRecetado() {
     }
 
     public MedicamentoRecetado(Medicamento medica, String pos, int duracion, Date fechaFin, boolean disp){
-        this.Med = medica;
+        this.Medicamento = medica;
         this.Posologia = pos;
         this.Duracion = duracion;
         this.FechaFin = fechaFin;
@@ -55,8 +55,8 @@ public class MedicamentoRecetado implements Serializable{
         return Dispensado;
     };
 
-    public Medicamento getMed (){
-        return Med;
+    public Medicamento getMedicamento (){
+        return Medicamento;
     };
 
     public void setId (int Id){
@@ -79,7 +79,7 @@ public class MedicamentoRecetado implements Serializable{
         this.Dispensado=Dispensado;
     };
 
-    public void setMed (Medicamento Med){
-        this.Med=Med;
+    public void setMedicamento (Medicamento Medicamento){
+        this.Medicamento=Medicamento;
     };
 }
