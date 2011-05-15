@@ -5,9 +5,9 @@
 package BaseDatos;
 
 import org.hibernate.Session;
+import CentroMedico.MedicamentoRecetado;
 
-
-public class MedicamentoRecetado {
+public class MedicamentoRecetadoBD {
 
 
     public void almacenar(MedicamentoRecetado Med){
