@@ -3336,7 +3336,9 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
     private void jButtonDispensarFinalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonDispensarFinalMouseClicked
         // TODO add your handling code here:
+        System.out.println("1");
         ListaCodBarras.add(jTextFieldCodBarras2.getText());
+        System.out.println("2");
 
     }//GEN-LAST:event_jButtonDispensarFinalMouseClicked
 
