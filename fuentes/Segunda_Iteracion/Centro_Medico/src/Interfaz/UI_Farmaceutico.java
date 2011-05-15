@@ -38,6 +38,8 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
     Medicamento Me = new Medicamento ();
     LoteMedicamento Lo = new LoteMedicamento();
+    Set<Receta> resumenRecetas;
+    Set<MedicamentoRecetado> smR;
 
     /** Creates new form Principal_Administrador */
     public UI_Farmaceutico() {
@@ -3012,18 +3014,16 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
     private void jButtonObtenerRecetasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonObtenerRecetasMouseClicked
         // TODO add your handling code here:
         GestorFarmacia gestFar = new GestorFarmacia();
-        Set<Receta> resumenRecetas = null;
+        resumenRecetas = null;
         PacBD pac = new PacBD();
         Paciente pacien = null;
-        System.out.println("Aqui llega");
+
         try {
-            System.out.println("obtenerpaciente");
             pacien = pac.obtener(jTextFieldDNIPaciente.getText());
         } catch (SQLException ex) {
             Logger.getLogger(UI_Farmaceutico.class.getName()).log(Level.SEVERE, null, ex);
         }
         try {
-            System.out.println("resumen recetas");
             resumenRecetas = gestFar.consultarResumenRecetas(jTextFieldDNIPaciente.getText());
         } catch (SQLException ex) {
             Logger.getLogger(UI_Farmaceutico.class.getName()).log(Level.SEVERE, null, ex);
@@ -3034,15 +3034,11 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
          DefaultListModel listModel = new DefaultListModel();
          Receta rec;
-System.out.println("antes del for");
          for(Iterator it = resumenRecetas.iterator(); it.hasNext();){
-             System.out.println("en el for");
              rec = (Receta) it.next();
              listModel.addElement(rec.getFecha());
-             System.out.println("Receta "+ rec.getId());
-
          }
-         System.out.println("fin");
+
          jList1.setModel(listModel);
 
 
@@ -3055,6 +3051,34 @@ System.out.println("antes del for");
 
     private void jButtonConsultarRecetaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarRecetaMouseClicked
         // TODO add your handling code here:
+        int posicion;
+        smR = null;
+        posicion = jList1.getSelectedIndex();
+        Receta rec = null;
+        Iterator it = resumenRecetas.iterator();
+
+        System.out.println("1");
+        for(int i=0; i<=posicion;i++){
+            rec = (Receta) it.next();
+        }
+
+
+        System.out.println("2");
+        DefaultListModel listModel = new DefaultListModel();
+        System.out.println("Receta: "+ rec.getId());
+        smR = rec.getMedicamentosRecetados();
+        System.out.println("3");
+        for( Iterator itsmr = smR.iterator(); itsmr.hasNext();) {
+            MedicamentoRecetado mR = new MedicamentoRecetado();
+            mR = (MedicamentoRecetado) itsmr.next();
+            listModel.addElement(mR.getPosologia());
+            System.out.println("4");
+
+        }
+        System.out.println("5");
+
+        jListMedicamentosDispensar.setModel(listModel);
+
         mostrarPanel("DispensarFinal");
     }//GEN-LAST:event_jButtonConsultarRecetaMouseClicked
 

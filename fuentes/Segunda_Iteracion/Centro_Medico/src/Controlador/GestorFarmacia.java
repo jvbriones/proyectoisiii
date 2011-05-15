@@ -223,7 +223,6 @@ public class GestorFarmacia {
 
         pac = pacien.obtenerPaciente(Dni);
 
-        System.out.println("1");
 
         if(pac == null){
             System.out.println("El paciente no existe");
@@ -233,9 +232,7 @@ public class GestorFarmacia {
 
 
         else{
-            System.out.println("2");
             almacenRecetas = recetas.obtenerRecetasPaciente(Dni);
-System.out.println("3");
             /*for( Iterator it = almacenRecetas.iterator(); it.hasNext();) {
                 rec = (Receta)it.next();
                 System.out.println("Receta: "+ rec.getJuicioDiagnostico());
@@ -250,13 +247,12 @@ System.out.println("3");
                 resumenRecetas.add(aux);
              }
              * */
-System.out.println("4");
 
             return almacenRecetas;
         }
     }
 
-    public ArrayList mostrarReceta(int idReceta){
+    public Receta mostrarReceta(int idReceta){
 
             ArrayList datosReceta = new ArrayList();
             ArrayList datosMedicamentos = new ArrayList();
@@ -269,7 +265,7 @@ System.out.println("4");
 
             rec = recetas.obtener(idReceta);
 
-            datosReceta.add(rec.getFecha());
+            /*datosReceta.add(rec.getFecha());
             datosReceta.add(rec.getInstrucciones());
             datosReceta.add(rec.getJuicioDiagnostico());
             recetados.add((MedicamentoRecetado) rec.getMedicamentosRecetados());
@@ -291,9 +287,9 @@ System.out.println("4");
             }
 
             aux2.add(datosReceta);
-            aux2.add(datosMedicamentos);
+            aux2.add(datosMedicamentos);*/
 
-            return aux2;
+            return rec;
 
 
 

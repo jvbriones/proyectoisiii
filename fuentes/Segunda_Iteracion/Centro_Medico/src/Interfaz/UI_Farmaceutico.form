@@ -2077,7 +2077,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                       <Component id="jButtonFinalizar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="695" max="32767" attributes="0"/>
+                      <EmptySpace pref="713" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
