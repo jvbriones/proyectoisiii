@@ -67,7 +67,7 @@ public class GestorMedico {
 
         for( Iterator it = medRec.iterator(); it.hasNext();) {
 	    aux = (MedicamentoRecetado)it.next();
-            med = aux.getMed();
+            med = aux.getMedicamento();
             me = this.recetarMedicamento(med, aux.getPosologia(), aux.getDuracion(), aux.getFechaFin());
         }
 

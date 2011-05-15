@@ -42,7 +42,7 @@ public class GestorCitas {
             PacBD bd_paciente=new PacBD();
             Paciente paciente;
 
-            paciente=bd_paciente.obtenerPaciente(Dni);
+            paciente=bd_paciente.obtener(Dni);
             
             if(paciente==null){
                 datosCita="No existe el paciente";
