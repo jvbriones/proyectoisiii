@@ -1530,7 +1530,7 @@ public class UI_Analista extends javax.swing.JFrame {
                                         .add(100, 100, 100)
                                         .add(jTextFieldValorLinfocitos, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 72, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                                        .add(51, 51, 51)
+                                        .add(57, 57, 57)
                                         .add(jButton1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 160, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))))
                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
                         .add(107, 107, 107)
