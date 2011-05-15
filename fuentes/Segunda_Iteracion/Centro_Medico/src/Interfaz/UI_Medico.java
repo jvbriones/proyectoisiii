@@ -2639,6 +2639,7 @@ MedicamentoBD meBD = new MedicamentoBD();
 
             Medica = (Medicamento) iter.next();
             modelo.addElement(Medica.getNombre());
+            
             }
         jListMedicamentos1.setModel(modelo);
     }//GEN-LAST:event_jButtonBuscarMedicamento1MouseReleased
