@@ -25,6 +25,8 @@ import org.hibernate.*;
  */
 public class GestorFarmacia {
 
+    Receta rece;
+
    public boolean anadirMedicamento( String Nombre,String Descripcion, int ExistenciasMinimas, int StockActual){
 
         boolean exito;
@@ -254,16 +256,13 @@ public class GestorFarmacia {
 
     public Receta mostrarReceta(int idReceta){
 
-            ArrayList datosReceta = new ArrayList();
-            ArrayList datosMedicamentos = new ArrayList();
-            Set<MedicamentoRecetado> recetados = null;
+
             Receta rec = null;
             RecetaBD recetas = new RecetaBD();
             Medicamento med = null;
-            MedicamentoRecetado medRed = new MedicamentoRecetado();
-            ArrayList<ArrayList> aux2 = new ArrayList();
 
             rec = recetas.obtener(idReceta);
+            rece = rec;
 
             /*datosReceta.add(rec.getFecha());
             datosReceta.add(rec.getInstrucciones());
@@ -303,6 +302,8 @@ public class GestorFarmacia {
         MedicamentoBD mBD = new MedicamentoBD();
         String nombre;
         RecetaBD rBD = new RecetaBD();
+        MedicamentoRecetado  medRed = null;
+        MedicamentoRecetadoBD mRBD = new MedicamentoRecetadoBD();
 
         for( Iterator it = ListaCodBarras.iterator(); it.hasNext();){
             codBarras = (String)it.next();
@@ -310,7 +311,6 @@ public class GestorFarmacia {
             lote.decrementarExistencias(1);
             if(lote.getExistencias()==0){
                 loteBD.eliminarLote(codBarras);//En el diseño usa eliminar pero pasa como atributo codBarras al que le pertenece la función eliminarLote
-
             }
 
             else{
@@ -321,18 +321,10 @@ public class GestorFarmacia {
             med.actualizaStock(1);
             mBD.actualizar(med);
             nombre = med.getNombre();
-            Set<MedicamentoRecetado> recetados;
-            MedicamentoRecetado medRed = null;
-            //No hay ninguna función que se llame obtenerMedicamentoRecetado en MedicamentoRecetado
+            medRed = mRBD.obtener(nombre);
             medRed.setDispensado(true);
-           // rBD.actualizar(rec);//no puedo coger rec de la función anterior ya que es local a la función
-            //la anterior linea ha sido comentada por Nicolás
-
-
+            rBD.actualizar(rece);
             
-
-
-
 
         }
     }

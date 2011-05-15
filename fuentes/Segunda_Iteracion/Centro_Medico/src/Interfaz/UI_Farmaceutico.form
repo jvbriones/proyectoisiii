@@ -186,6 +186,164 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout"/>
       <SubComponents>
+        <Container class="javax.swing.JPanel" name="jPanelDispensar">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout$JLayeredPaneConstraintsDescription">
+              <JLayeredPaneConstraints x="0" y="0" width="-1" height="-1" layer="0" position="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelGestionarPaciente9" alignment="0" pref="612" max="32767" attributes="1"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jScrollPane6" alignment="0" min="-2" max="-2" attributes="1"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                                      <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jTextFieldDNIPaciente" min="-2" pref="100" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace pref="206" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace pref="135" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="jLabelError5" alignment="1" min="-2" pref="282" max="-2" attributes="0"/>
+                                  <Component id="jLabelErrorDNIPaciente" alignment="1" min="-2" pref="282" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="195" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace pref="167" max="-2" attributes="0"/>
+                              <Component id="jButtonObtenerRecetas" min="-2" pref="192" max="-2" attributes="1"/>
+                              <EmptySpace min="-2" pref="253" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabelGestionarPaciente9" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+                              <Component id="jScrollPane6" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jTextFieldDNIPaciente" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jLabelError5" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelErrorDNIPaciente" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jButtonObtenerRecetas" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="88" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabelGestionarPaciente9">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Lucida Grande" size="36" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Dispensar Medicamentos"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel15">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="_________________________________________________________________________"/>
+              </Properties>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane6">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="jTextAreaInfo2">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="66" green="cc" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="columns" type="int" value="17"/>
+                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Lucida Grande" size="18" style="0"/>
+                    </Property>
+                    <Property name="rows" type="int" value="3"/>
+                    <Property name="text" type="java.lang.String" value="&#xa;     Inserte DNI del paciente&#xa;"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JLabel" name="jLabel16">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="DNI : "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextFieldDNIPaciente">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldDNIPacienteActionPerformed"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldDNIPacienteKeyTyped"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButtonObtenerRecetas">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Obtener Recetas"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonObtenerRecetasMouseClicked"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonObtenerRecetasActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabelErrorDNIPaciente">
+              <Properties>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="ff" type="rgb"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Imagenes/Intro/Error.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="No existe paciente con ese DNI"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabelError5">
+              <Properties>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="ff" type="rgb"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Imagenes/Intro/Error.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Debe de introducir un DNI"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
         <Container class="javax.swing.JPanel" name="jPanelConsultarMedicamento">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout$JLayeredPaneConstraintsDescription">
@@ -298,7 +456,7 @@
                               <Component id="jLabelError2" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="49" max="32767" attributes="0"/>
+                      <EmptySpace pref="54" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
@@ -539,7 +697,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="scrollPaneMedicamentosBajoStock" min="-2" pref="202" max="-2" attributes="0"/>
-                      <EmptySpace pref="97" max="32767" attributes="0"/>
+                      <EmptySpace pref="115" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -752,7 +910,7 @@
                                                       <Component id="jTextFieldStockMinimo" min="-2" pref="65" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
-                                              <EmptySpace pref="77" max="32767" attributes="0"/>
+                                              <EmptySpace pref="82" max="32767" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
                                               <Component id="jButtonAnadir" min="-2" pref="105" max="-2" attributes="1"/>
@@ -772,7 +930,7 @@
                                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace pref="351" max="-2" attributes="0"/>
+                                      <EmptySpace pref="359" max="-2" attributes="0"/>
                                       <Component id="jLabelDescripcion" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="195" max="-2" attributes="0"/>
                                   </Group>
@@ -805,7 +963,7 @@
                                   <Component id="jLabelNombre" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldNombreMedicamento" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="40" max="32767" attributes="0"/>
+                              <EmptySpace pref="45" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabelStockMinimo" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldStockMinimo" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -996,8 +1154,8 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jButtonGestionarCita" pref="142" max="32767" attributes="1"/>
-                          <Component id="jButtonConsultarDatosPersonales" alignment="1" pref="142" max="32767" attributes="1"/>
+                          <Component id="jButtonGestionarCita" pref="143" max="32767" attributes="1"/>
+                          <Component id="jButtonConsultarDatosPersonales" alignment="1" pref="143" max="32767" attributes="1"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -1682,7 +1840,7 @@
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="50" pref="113" max="32767" attributes="0"/>
+                          <EmptySpace min="50" pref="115" max="32767" attributes="0"/>
                           <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="24" pref="24" max="24" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -1735,7 +1893,7 @@
                               <Component id="jButtonMenosAnioFechaFinTurno" min="-2" pref="40" max="-2" attributes="0"/>
                               <Component id="jRadioButtonNoche" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="64" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="66" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -2039,7 +2197,7 @@
                       </Group>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="218" max="32767" attributes="0"/>
+                      <EmptySpace pref="228" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jButtonFinalizar" alignment="0" min="-2" pref="117" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
@@ -2077,7 +2235,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                       <Component id="jButtonFinalizar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="714" max="32767" attributes="0"/>
+                      <EmptySpace pref="747" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2160,11 +2318,17 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Dispensar"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonDispensarFinalMouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButtonFinalizar">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Finalizar"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonFinalizarMouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldCodBarras2">
             </Component>
@@ -2224,7 +2388,7 @@
                       <Component id="scrollPaneRecetas" min="-2" pref="204" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                       <Component id="jButtonConsultarReceta" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="110" max="32767" attributes="0"/>
+                      <EmptySpace pref="113" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2371,11 +2535,6 @@
                       </Group>
                       <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="281" max="-2" attributes="0"/>
-                      <Component id="dateChooserCombo2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="472" max="32767" attributes="0"/>
-                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -2411,9 +2570,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="dateChooserCombo2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="39" max="32767" attributes="0"/>
+                      <EmptySpace pref="76" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2495,8 +2652,6 @@
                 <Property name="text" type="java.lang.String" value="Codigo de Barras "/>
               </Properties>
             </Component>
-            <Component class="datechooser.beans.DateChooserCombo" name="dateChooserCombo2">
-            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanelAnadirLote">
@@ -2542,8 +2697,7 @@
                               <EmptySpace min="190" pref="190" max="190" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="dateChooserCombo1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
                                       <Component id="jButtonAnadirMedicamento" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jLabelFechCad" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
@@ -2574,10 +2728,7 @@
                       <EmptySpace min="2" pref="2" max="2" attributes="0"/>
                       <Component id="jLabelError1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="2" pref="2" max="2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButtonAnadirMedicamento" min="-2" max="-2" attributes="0"/>
-                          <Component id="dateChooserCombo1" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="jButtonAnadirMedicamento" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="96" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -2638,166 +2789,6 @@
                   <Image iconType="3" name="/Imagenes/Intro/Error.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Faltan datos por introducir"/>
-              </Properties>
-            </Component>
-            <Component class="datechooser.beans.DateChooserCombo" name="dateChooserCombo1">
-            </Component>
-          </SubComponents>
-        </Container>
-        <Container class="javax.swing.JPanel" name="jPanelDispensar">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout$JLayeredPaneConstraintsDescription">
-              <JLayeredPaneConstraints x="0" y="0" width="-1" height="-1" layer="0" position="-1"/>
-            </Constraint>
-          </Constraints>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelGestionarPaciente9" alignment="0" pref="612" max="32767" attributes="1"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jScrollPane6" alignment="0" min="-2" max="-2" attributes="1"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                                      <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTextFieldDNIPaciente" min="-2" pref="100" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace pref="206" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="135" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jLabelError5" alignment="1" min="-2" pref="282" max="-2" attributes="0"/>
-                                  <Component id="jLabelErrorDNIPaciente" alignment="1" min="-2" pref="282" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="195" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="167" max="-2" attributes="0"/>
-                              <Component id="jButtonObtenerRecetas" min="-2" pref="192" max="-2" attributes="1"/>
-                              <EmptySpace min="-2" pref="253" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabelGestionarPaciente9" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
-                              <Component id="jScrollPane6" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jTextFieldDNIPaciente" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jLabelError5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabelErrorDNIPaciente" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jButtonObtenerRecetas" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="88" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabelGestionarPaciente9">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Lucida Grande" size="36" style="1"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Dispensar Medicamentos"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel15">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="_________________________________________________________________________"/>
-              </Properties>
-            </Component>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane6">
-              <AuxValues>
-                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-              </AuxValues>
-
-              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-              <SubComponents>
-                <Component class="javax.swing.JTextArea" name="jTextAreaInfo2">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="66" green="cc" red="ff" type="rgb"/>
-                    </Property>
-                    <Property name="columns" type="int" value="17"/>
-                    <Property name="editable" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Lucida Grande" size="18" style="0"/>
-                    </Property>
-                    <Property name="rows" type="int" value="3"/>
-                    <Property name="text" type="java.lang.String" value="&#xa;     Inserte DNI del paciente&#xa;"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
-            <Component class="javax.swing.JLabel" name="jLabel16">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="DNI : "/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextFieldDNIPaciente">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldDNIPacienteActionPerformed"/>
-                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldDNIPacienteKeyTyped"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonObtenerRecetas">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Obtener Recetas"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonObtenerRecetasMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonObtenerRecetasActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabelErrorDNIPaciente">
-              <Properties>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="ff" type="rgb"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Imagenes/Intro/Error.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="No existe paciente con ese DNI"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabelError5">
-              <Properties>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="0" green="0" red="ff" type="rgb"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Imagenes/Intro/Error.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Debe de introducir un DNI"/>
               </Properties>
             </Component>
           </SubComponents>
