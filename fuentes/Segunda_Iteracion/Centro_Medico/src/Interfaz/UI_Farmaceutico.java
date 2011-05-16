@@ -40,7 +40,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
     LoteMedicamento Lo = new LoteMedicamento();
     Set<Receta> resumenRecetas;
     Set<MedicamentoRecetado> smR;
-    Set<String> ListaCodBarras;
+    Set<String> ListaCodBarras = new HashSet<String>(0);
 
     /** Creates new form Principal_Administrador */
     public UI_Farmaceutico() {
