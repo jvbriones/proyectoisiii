@@ -1816,7 +1816,6 @@ public class UI_Radiologo extends javax.swing.JFrame {
        im.add(imag);
        String DNIRadiologo = jTextFieldDNIPersonal.getText();
        try{
-           System.out.println("Antes de entrar a la funcion");
            dev = gp.almacenarResultadoRadiologia(jTextFieldAlmacenarDni.getText(),im , jTextAreaComentario.getText(), tipo, DNIRadiologo);
            if(dev == true){
                  new InformacionExito().setVisible(true);

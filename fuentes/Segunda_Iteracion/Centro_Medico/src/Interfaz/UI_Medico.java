@@ -2345,6 +2345,8 @@ MedicamentoBD meBD = new MedicamentoBD();
 
       me = gesMed.recetarMedicamento(medica, poso, durac, dateFin);
 
+      //pantic, a partir de aquí no es muy bien que hacer, hasta dudo de si el diseño es correcto.
+
     }//GEN-LAST:event_jButtonRecetarOtroMedicamento1ActionPerformed
 
     private void jButtonSolicitarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonSolicitarMouseClicked

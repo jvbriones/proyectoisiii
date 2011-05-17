@@ -2422,10 +2422,11 @@ public class UI_Analista extends javax.swing.JFrame {
 
         if(jRadioButtonOrina.isSelected()){
             jTextFieldValorLinfocitos.setText("");
+           /*
             System.out.println("Cambio a orina");
             AtributoOrina ori1 = new AtributoOrina("pantic");
             AtributoOrina ori2 = new AtributoOrina("pope");
-            AtributoOrina ori3 = new AtributoOrina("niko");
+            AtributoOrina ori3 = new AtributoOrina("niko"
 
             ResultadoOrina resul1 = new ResultadoOrina(ori1,"0");
             ResultadoOrina resul2 = new ResultadoOrina(ori2,"0");
@@ -2439,6 +2440,8 @@ public class UI_Analista extends javax.swing.JFrame {
 
 
             jListAtributos.setModel(aux);
+            * */
+            
         }
     }//GEN-LAST:event_jRadioButtonOrinaItemStateChanged
 

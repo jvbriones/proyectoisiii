@@ -80,7 +80,7 @@ public class GestorMedico {
 
     public MedicamentoRecetado recetarMedicamento(Medicamento medica, String Posologia, int Duracion, Date FechaFin){
         MedicamentoRecetado me = new MedicamentoRecetado(medica, Posologia, Duracion, FechaFin, true);
-        System.out.println("hola");
+        //System.out.println("hola");
         return me;
 
     }
