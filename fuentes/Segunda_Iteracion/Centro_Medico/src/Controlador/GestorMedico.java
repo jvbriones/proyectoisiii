@@ -68,6 +68,7 @@ public class GestorMedico {
         for( Iterator it = medRec.iterator(); it.hasNext();) {
 	    aux = (MedicamentoRecetado)it.next();
             med = aux.getMedicamento();
+            System.out.println(med.getNombre());
             me = this.recetarMedicamento(med, aux.getPosologia(), aux.getDuracion(), aux.getFechaFin());
         }
 
@@ -79,6 +80,7 @@ public class GestorMedico {
 
     public MedicamentoRecetado recetarMedicamento(Medicamento medica, String Posologia, int Duracion, Date FechaFin){
         MedicamentoRecetado me = new MedicamentoRecetado(medica, Posologia, Duracion, FechaFin, true);
+        System.out.println("hola");
         return me;
 
     }

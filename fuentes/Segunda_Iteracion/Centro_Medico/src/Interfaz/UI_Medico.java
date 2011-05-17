@@ -37,6 +37,7 @@ import Controlador.*;
  */
 public class UI_Medico extends javax.swing.JFrame {
 
+      DefaultListModel modeloNombres=new DefaultListModel();
     /** Creates new form Principal_Administrador */
     public UI_Medico() {
         initComponents();
@@ -52,7 +53,7 @@ public class UI_Medico extends javax.swing.JFrame {
         /**Mostramos el panel Principal*/
         mostrarPanel("Principal");
         mostrarDatosPerso(usu);
-    
+
 
         /**Cargamos la foto de login*/
         jLabelTipoUsuarioIdentificado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo-Usuario-Personal.png"))); // NOI18N
@@ -2327,6 +2328,23 @@ MedicamentoBD meBD = new MedicamentoBD();
 
     private void jButtonRecetarOtroMedicamento1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRecetarOtroMedicamento1ActionPerformed
         // TODO add your handling code here:
+       String nombreMedica=null;
+       Receta re = new Receta();
+       GestorMedico gesMed= new GestorMedico();
+       jListMedicamentosRecetados.setModel(modeloNombres);
+       nombreMedica= (String)jListMedicamentos1.getSelectedValue();
+       modeloNombres.addElement(nombreMedica);
+       MedicamentoBD meBD = new MedicamentoBD();
+       Medicamento medica = new Medicamento();
+       medica = meBD.obtener(nombreMedica);
+       String poso = jTextFieldPosologia1.getText();
+       int durac = Integer.parseInt(jTextFieldDuracion1.getText());
+       Date dateFin = null;
+       dateFin = dateChooserCombo1.getSelectedDate().getTime();
+       MedicamentoRecetado me = new MedicamentoRecetado();
+
+      me = gesMed.recetarMedicamento(medica, poso, durac, dateFin);
+
     }//GEN-LAST:event_jButtonRecetarOtroMedicamento1ActionPerformed
 
     private void jButtonSolicitarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonSolicitarMouseClicked
@@ -2343,6 +2361,11 @@ MedicamentoBD meBD = new MedicamentoBD();
         // TODO add your handling code here:
         //despues de la operacion que muestre el panel principal
         mostrarPanel("Principal");
+
+
+
+
+
     }//GEN-LAST:event_jButtonTerminar1MouseClicked
 
     private void jTextFieldDNIAtenderPacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldDNIAtenderPacienteKeyTyped
