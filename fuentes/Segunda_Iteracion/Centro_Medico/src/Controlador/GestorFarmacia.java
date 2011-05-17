@@ -143,7 +143,9 @@ public class GestorFarmacia {
 	    if( Aux.getCodBarras().equals(CodBarras))
                 Lo = Aux;
                 
-            
+            else{
+                System.out.println("el lote no existe");
+            }
          }
          Connection con = session.close();
          

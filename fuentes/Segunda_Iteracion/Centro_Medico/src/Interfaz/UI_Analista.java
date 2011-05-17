@@ -106,6 +106,16 @@ public class UI_Analista extends javax.swing.JFrame {
         jLabelSalir = new javax.swing.JLabel();
         jLabelIcono = new javax.swing.JLabel();
         ZonaTrabajo = new javax.swing.JLayeredPane();
+        jPanelEliminarAtributo = new javax.swing.JPanel();
+        jLabelGestionarPaciente9 = new javax.swing.JLabel();
+        jButtonGuardarAtributo1 = new javax.swing.JButton();
+        jRadioButtonOrina2 = new javax.swing.JRadioButton();
+        jRadioButtonSangre2 = new javax.swing.JRadioButton();
+        jLabel12 = new javax.swing.JLabel();
+        jTextFieldNombreAtributo1 = new javax.swing.JTextField();
+        jLabelNombreAtributo1 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabelError2 = new javax.swing.JLabel();
         jPanelAgregarAtributo = new javax.swing.JPanel();
         jLabelGestionarPaciente8 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -122,16 +132,6 @@ public class UI_Analista extends javax.swing.JFrame {
         jTextFieldLimiteInf = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jPanelEliminarAtributo = new javax.swing.JPanel();
-        jLabelGestionarPaciente9 = new javax.swing.JLabel();
-        jButtonGuardarAtributo1 = new javax.swing.JButton();
-        jRadioButtonOrina2 = new javax.swing.JRadioButton();
-        jRadioButtonSangre2 = new javax.swing.JRadioButton();
-        jLabel12 = new javax.swing.JLabel();
-        jTextFieldNombreAtributo1 = new javax.swing.JTextField();
-        jLabelNombreAtributo1 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabelError2 = new javax.swing.JLabel();
         jPanelConsultarDatosPersonales = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabelGestionarPaciente4 = new javax.swing.JLabel();
@@ -298,6 +298,96 @@ public class UI_Analista extends javax.swing.JFrame {
         ZonaTrabajo.setMinimumSize(new java.awt.Dimension(902, 520));
         ZonaTrabajo.setPreferredSize(new java.awt.Dimension(912, 530));
 
+        jLabelGestionarPaciente9.setFont(new java.awt.Font("Lucida Grande", 1, 36));
+        jLabelGestionarPaciente9.setText("Eliminar Atributo Análisis");
+
+        jButtonGuardarAtributo1.setText("Eliminar");
+        jButtonGuardarAtributo1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonGuardarAtributo1MouseClicked(evt);
+            }
+        });
+
+        jRadioButtonOrina2.setText("Orina");
+
+        jRadioButtonSangre2.setText("Sangre");
+        jRadioButtonSangre2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonSangre2ActionPerformed(evt);
+            }
+        });
+
+        jLabel12.setText("Tipo  de Prueba");
+
+        jTextFieldNombreAtributo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldNombreAtributo1ActionPerformed(evt);
+            }
+        });
+
+        jLabelNombreAtributo1.setText("Nombre del atributo a eliminar:   ");
+
+        jLabel13.setText("_____________________________________________________________________________");
+
+        jLabelError2.setForeground(new java.awt.Color(255, 0, 0));
+        jLabelError2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Error.png"))); // NOI18N
+        jLabelError2.setText("Debe rellenar el campo \"Nombre\"");
+
+        org.jdesktop.layout.GroupLayout jPanelEliminarAtributoLayout = new org.jdesktop.layout.GroupLayout(jPanelEliminarAtributo);
+        jPanelEliminarAtributo.setLayout(jPanelEliminarAtributoLayout);
+        jPanelEliminarAtributoLayout.setHorizontalGroup(
+            jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelEliminarAtributoLayout.createSequentialGroup()
+                .addContainerGap(164, Short.MAX_VALUE)
+                .add(jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jPanelEliminarAtributoLayout.createSequentialGroup()
+                        .add(21, 21, 21)
+                        .add(jLabelGestionarPaciente9))
+                    .add(jPanelEliminarAtributoLayout.createSequentialGroup()
+                        .add(jLabelNombreAtributo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 242, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jTextFieldNombreAtributo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 125, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jLabel13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 591, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jPanelEliminarAtributoLayout.createSequentialGroup()
+                        .add(jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel12, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, jRadioButtonOrina2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, jRadioButtonSangre2)
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonGuardarAtributo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 115, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .add(71, 71, 71)
+                        .add(jLabelError2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 263, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .add(80, 80, 80))
+        );
+        jPanelEliminarAtributoLayout.setVerticalGroup(
+            jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanelEliminarAtributoLayout.createSequentialGroup()
+                .add(26, 26, 26)
+                .add(jLabelGestionarPaciente9)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jLabel13)
+                .add(42, 42, 42)
+                .add(jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jLabelNombreAtributo1)
+                    .add(jTextFieldNombreAtributo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jPanelEliminarAtributoLayout.createSequentialGroup()
+                        .add(32, 32, 32)
+                        .add(jLabel12)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jRadioButtonSangre2)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jRadioButtonOrina2)
+                        .add(30, 30, 30)
+                        .add(jButtonGuardarAtributo1))
+                    .add(jPanelEliminarAtributoLayout.createSequentialGroup()
+                        .add(108, 108, 108)
+                        .add(jLabelError2)))
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+
+        jPanelEliminarAtributo.setBounds(0, 0, 835, 360);
+        ZonaTrabajo.add(jPanelEliminarAtributo, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         jLabelGestionarPaciente8.setFont(new java.awt.Font("Lucida Grande", 1, 36));
         jLabelGestionarPaciente8.setText("Agregar Atributo Análisis");
 
@@ -408,7 +498,7 @@ public class UI_Analista extends javax.swing.JFrame {
                         .add(jPanelAgregarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                             .add(jTextFieldLimiteInf, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(jLabel4))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 36, Short.MAX_VALUE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 42, Short.MAX_VALUE)
                         .add(jButtonGuardarAtributo)
                         .add(28, 28, 28))
                     .add(jPanelAgregarAtributoLayout.createSequentialGroup()
@@ -424,96 +514,6 @@ public class UI_Analista extends javax.swing.JFrame {
 
         jPanelAgregarAtributo.setBounds(0, 0, 800, 480);
         ZonaTrabajo.add(jPanelAgregarAtributo, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        jLabelGestionarPaciente9.setFont(new java.awt.Font("Lucida Grande", 1, 36));
-        jLabelGestionarPaciente9.setText("Eliminar Atributo Análisis");
-
-        jButtonGuardarAtributo1.setText("Eliminar");
-        jButtonGuardarAtributo1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonGuardarAtributo1MouseClicked(evt);
-            }
-        });
-
-        jRadioButtonOrina2.setText("Orina");
-
-        jRadioButtonSangre2.setText("Sangre");
-        jRadioButtonSangre2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonSangre2ActionPerformed(evt);
-            }
-        });
-
-        jLabel12.setText("Tipo  de Prueba");
-
-        jTextFieldNombreAtributo1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNombreAtributo1ActionPerformed(evt);
-            }
-        });
-
-        jLabelNombreAtributo1.setText("Nombre del atributo a eliminar:   ");
-
-        jLabel13.setText("_____________________________________________________________________________");
-
-        jLabelError2.setForeground(new java.awt.Color(255, 0, 0));
-        jLabelError2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Error.png"))); // NOI18N
-        jLabelError2.setText("Debe rellenar el campo \"Nombre\"");
-
-        org.jdesktop.layout.GroupLayout jPanelEliminarAtributoLayout = new org.jdesktop.layout.GroupLayout(jPanelEliminarAtributo);
-        jPanelEliminarAtributo.setLayout(jPanelEliminarAtributoLayout);
-        jPanelEliminarAtributoLayout.setHorizontalGroup(
-            jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelEliminarAtributoLayout.createSequentialGroup()
-                .addContainerGap(164, Short.MAX_VALUE)
-                .add(jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanelEliminarAtributoLayout.createSequentialGroup()
-                        .add(21, 21, 21)
-                        .add(jLabelGestionarPaciente9))
-                    .add(jPanelEliminarAtributoLayout.createSequentialGroup()
-                        .add(jLabelNombreAtributo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 242, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jTextFieldNombreAtributo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 125, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jLabel13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 591, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jPanelEliminarAtributoLayout.createSequentialGroup()
-                        .add(jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                            .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel12, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .add(org.jdesktop.layout.GroupLayout.LEADING, jRadioButtonOrina2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
-                            .add(org.jdesktop.layout.GroupLayout.LEADING, jRadioButtonSangre2)
-                            .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonGuardarAtributo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 115, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .add(71, 71, 71)
-                        .add(jLabelError2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 263, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .add(80, 80, 80))
-        );
-        jPanelEliminarAtributoLayout.setVerticalGroup(
-            jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelEliminarAtributoLayout.createSequentialGroup()
-                .add(26, 26, 26)
-                .add(jLabelGestionarPaciente9)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jLabel13)
-                .add(42, 42, 42)
-                .add(jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabelNombreAtributo1)
-                    .add(jTextFieldNombreAtributo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(jPanelEliminarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanelEliminarAtributoLayout.createSequentialGroup()
-                        .add(32, 32, 32)
-                        .add(jLabel12)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jRadioButtonSangre2)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jRadioButtonOrina2)
-                        .add(30, 30, 30)
-                        .add(jButtonGuardarAtributo1))
-                    .add(jPanelEliminarAtributoLayout.createSequentialGroup()
-                        .add(108, 108, 108)
-                        .add(jLabelError2)))
-                .addContainerGap(27, Short.MAX_VALUE))
-        );
-
-        jPanelEliminarAtributo.setBounds(0, 0, -1, 360);
-        ZonaTrabajo.add(jPanelEliminarAtributo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelConsultarDatosPersonales.setPreferredSize(new java.awt.Dimension(901, 531));
 
@@ -1014,15 +1014,15 @@ public class UI_Analista extends javax.swing.JFrame {
                     .add(jPanelPrincipalLayout.createSequentialGroup()
                         .add(67, 67, 67)
                         .add(jLabelAlamcenarResultados, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 162, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(165, Short.MAX_VALUE))
+                .addContainerGap(172, Short.MAX_VALUE))
         );
         jPanelPrincipalLayout.setVerticalGroup(
             jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelPrincipalLayout.createSequentialGroup()
                 .add(29, 29, 29)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jButtonConsultarDatosPersonales, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(jButtonConsultarTurno, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .add(jButtonConsultarDatosPersonales, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
+                    .add(jButtonConsultarTurno, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelConsultarDatosPersonales)
@@ -1356,7 +1356,7 @@ public class UI_Analista extends javax.swing.JFrame {
                 .addContainerGap(409, Short.MAX_VALUE))
             .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(jPanelConsultarTurnoLayout.createSequentialGroup()
-                    .add(50, 113, Short.MAX_VALUE)
+                    .add(50, 115, Short.MAX_VALUE)
                     .add(jLabel9)
                     .add(24, 24, 24)
                     .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1401,10 +1401,10 @@ public class UI_Analista extends javax.swing.JFrame {
                         .add(jButtonMenosMesFechaFinTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(jButtonMenosAnioFechaFinTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(jRadioButtonNoche))
-                    .add(0, 64, Short.MAX_VALUE)))
+                    .add(0, 66, Short.MAX_VALUE)))
         );
 
-        jPanelConsultarTurno.setBounds(0, 0, 860, -1);
+        jPanelConsultarTurno.setBounds(0, 0, 860, 531);
         ZonaTrabajo.add(jPanelConsultarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente7.setFont(new java.awt.Font("Lucida Grande", 1, 36));
@@ -1577,7 +1577,7 @@ public class UI_Analista extends javax.swing.JFrame {
                 .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(scrollPaneComentarios, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
+                        .add(scrollPaneComentarios, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(jButtonAlmacenarResultadoRadiologo)
                         .add(37, 37, 37))
@@ -1595,7 +1595,7 @@ public class UI_Analista extends javax.swing.JFrame {
 
         jLabelUsuario.setText("Usuario:");
         jPanelUsuario.add(jLabelUsuario);
-        jLabelUsuario.setBounds(90, 0, 120, 18);
+        jLabelUsuario.setBounds(90, 0, 120, 17);
 
         jLabelTipoUsuario.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelTipoUsuario.setText("Tipo Usuario");
