@@ -3235,7 +3235,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         }
 
         else{
-            gF.dispensarMedicamentos((ArrayList<String>) ListaCodBarras);
+            gF.dispensarMedicamentos(ListaCodBarras);
         }
     }//GEN-LAST:event_jButtonFinalizarMouseClicked
 
