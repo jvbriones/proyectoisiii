@@ -24,6 +24,7 @@ import java.util.Set;
  * @author pantic
  */
 public class GestorMedico {
+    Receta re = null;
 
     public void atenderPaciente(String Dni) throws SQLException{
         GestorPacientes pacientes = new GestorPacientes();
@@ -49,30 +50,29 @@ public class GestorMedico {
      *
      */
 
-    public boolean realizarReceta(String Instrucciones, String JuicioDiagnostico){
+    public boolean realizarReceta(String Instrucciones, String JuicioDiagnostico,Set<Medicamento> medica, String Posologia, int Duracion, Date FechaFin){
         Date fecha = new Date();
-        Receta re = new Receta(Instrucciones,JuicioDiagnostico, fecha);
+        re = new Receta(Instrucciones,JuicioDiagnostico, fecha);
 
         ArrayList medicamentos;
         Set<MedicamentoRecetado> medRec;
-        MedicamentoRecetado aux;
+        Medicamento aux;
         Medicamento med = null;
         boolean exito;
         RecetaBD rBD = new RecetaBD();
         MedicamentoRecetado me;
 
-        medRec = re.getMedicamentosRecetados();
 
 
 
-        for( Iterator it = medRec.iterator(); it.hasNext();) {
-	    aux = (MedicamentoRecetado)it.next();
-            med = aux.getMedicamento();
+        for( Iterator it = medica.iterator(); it.hasNext();) {
+	    med = (Medicamento)it.next();
             System.out.println(med.getNombre());
-            me = this.recetarMedicamento(med, aux.getPosologia(), aux.getDuracion(), aux.getFechaFin());
+            me = this.recetarMedicamento(med, Posologia, Duracion, FechaFin);
         }
 
-        rBD.almacenar(re);// No existe la operación agregar por eso uso almacenar pero no me devuelve un bool
+        rBD.almacenar(re);
+
 
         return true;
 
@@ -80,7 +80,8 @@ public class GestorMedico {
 
     public MedicamentoRecetado recetarMedicamento(Medicamento medica, String Posologia, int Duracion, Date FechaFin){
         MedicamentoRecetado me = new MedicamentoRecetado(medica, Posologia, Duracion, FechaFin, true);
-        //System.out.println("hola");
+        re.getMedicamentosRecetados().add(me);
+
         return me;
 
     }
