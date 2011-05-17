@@ -5,5 +5,8 @@
     <id column="NOMBRE_ORINA" name="Nombre" type="string">
       <generator class="assigned"/>
     </id>
+    <property name="Unidad"/>
+    <property name="LimSup"/>
+    <property name="LimInf"/>
   </class>
 </hibernate-mapping>

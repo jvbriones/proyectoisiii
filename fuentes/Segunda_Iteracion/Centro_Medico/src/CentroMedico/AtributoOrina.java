@@ -15,20 +15,53 @@ import java.io.Serializable;
 
 public class AtributoOrina implements Serializable{
     private String Nombre;
+    private String Unidad;
+    private float LimSup;
+    private float LimInf;
+
+
 
     public AtributoOrina() {
     }
 
-    public AtributoOrina(String Nom){
-        this.Nombre=Nom;
+    public AtributoOrina(String Nombre, String Unidad, float LimSup, float LimInf) {
+        this.Nombre = Nombre;
+        this.Unidad = Unidad;
+        this.LimSup = LimSup;
+        this.LimInf = LimInf;
     }
+
 
 
     public String getNombre(){
         return Nombre;
     }
 
+    public float getLimInf() {
+        return LimInf;
+    }
+
+    public float getLimSup() {
+        return LimSup;
+    }
+
+    public String getUnidad() {
+        return Unidad;
+    }
+
     public void setNombre(String Nombre){
         this.Nombre=Nombre;
+    }
+
+    public void setLimInf(float LimInf) {
+        this.LimInf = LimInf;
+    }
+
+    public void setLimSup(float LimSup) {
+        this.LimSup = LimSup;
+    }
+
+    public void setUnidad(String Unidad) {
+        this.Unidad = Unidad;
     }
 }
