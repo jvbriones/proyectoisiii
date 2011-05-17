@@ -296,7 +296,7 @@ public class GestorFarmacia {
 
         }
 
-    public void dispensarMedicamentos(ArrayList<String> ListaCodBarras){
+    public void dispensarMedicamentos(Set<String> ListaCodBarras){
         String codBarras;
         LoteMedicamentoBD loteBD = new LoteMedicamentoBD();
         LoteMedicamento lote = null;
@@ -318,13 +318,18 @@ public class GestorFarmacia {
             else{
                 loteBD.actualizar(lote);
             }
-
+            System.out.println("dispensar medicamento");
+            System.out.println("1");
             med = lote.getMedicamento();
+            System.out.println("2");
             med.actualizaStock(1);
+            System.out.println("3");
             mBD.actualizar(med);
+            System.out.println("4");
             nombre = med.getNombre();
-            medRed = mRBD.obtener(nombre);
-            medRed.setDispensado(true);
+            System.out.println("5");
+            //medRed = mRBD.obtener(nombre);
+            //medRed.setDispensado(true);
             rBD.actualizar(rece);
             
 
