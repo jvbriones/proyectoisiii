@@ -2647,8 +2647,12 @@ public class UI_Analista extends javax.swing.JFrame {
             jTextFieldAnioFinTurno.setText(anioActual);
         }
 
-        if(formulario.equals("AgregarAtributo"))
+        if(formulario.equals("AgregarAtributo")){
             jTextFieldNombreAtributo.setText("");
+            jTextFieldUnidadMedida.setText("");
+            jTextFieldLimiteSup.setText("");
+            jTextFieldLimiteInf.setText("");
+        }
 
 
         if(formulario.equals("EliminarAtributo"))
