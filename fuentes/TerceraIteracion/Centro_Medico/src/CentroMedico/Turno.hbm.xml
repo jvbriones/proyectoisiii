@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="CentroMedico.Turno">
+    <id column="ID_TURNO" name="Id" type="integer">
+      <generator class="native"/>
+    </id>
+    <property name="HoraInicio"/>
+    <property name="HoraFin"/>
+  </class>
+</hibernate-mapping>

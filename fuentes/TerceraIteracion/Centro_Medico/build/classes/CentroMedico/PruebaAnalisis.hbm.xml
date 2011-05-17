@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="CentroMedico.PruebaAnalisis">
+    <id column="ID_PRUEBAANALISIS" name="Id" type="integer">
+      <generator class="native"/>
+    </id>
+    <property name="Comentario"/>
+    <one-to-one class="CentroMedico.Paciente" constrained="true" name="Paciente"/>
+    <joined-subclass name="CentroMedico.PruebaSangre">
+      <key column="ID_PRUEBASANGRE"/>
+      <set cascade="all" name="ResultadosSangre">
+        <key column="ID_PRUEBASANGRE"/>
+        <one-to-many class="CentroMedico.ResultadoSangre"/>
+      </set>
+    </joined-subclass>
+    <joined-subclass name="CentroMedico.PruebaOrina">
+      <key column="ID_PRUEBAORINA"/>
+      <set cascade="all" name="ResultadosOrina">
+        <key column="ID_PRUEBAORINA"/>
+        <one-to-many class="CentroMedico.ResultadoOrina"/>
+      </set>
+    </joined-subclass>
+  </class>
+</hibernate-mapping>

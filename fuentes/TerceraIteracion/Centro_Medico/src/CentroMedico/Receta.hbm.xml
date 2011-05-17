@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="CentroMedico.Receta">
+    <id column="ID_RECETA" name="Id" type="integer">
+      <generator class="native"/>
+    </id>
+    <property name="Instrucciones"/>
+    <property name="JuicioDiagnostico"/>
+    <property name="Fecha"/>
+    <set cascade="all" name="MedicamentosRecetados">
+      <key column="ID_RECETA"/>
+      <one-to-many class="CentroMedico.MedicamentoRecetado"/>
+    </set>
+    <many-to-one name="Paci" class="CentroMedico.Paciente" column="DNI_PACIENTE" cascade="all" unique="true"/>
+    <many-to-one name="Medi" class="CentroMedico.Medico" column="DNI_MEDICO" cascade="all" unique="true"/>
+  </class>
+</hibernate-mapping>
