@@ -488,6 +488,11 @@ public class UI_Medico extends javax.swing.JFrame {
         });
 
         jButtonCancelar1.setText("Cancelar");
+        jButtonCancelar1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonCancelar1MouseClicked(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout jPanelRealizarReceta1Layout = new org.jdesktop.layout.GroupLayout(jPanelRealizarReceta1);
         jPanelRealizarReceta1.setLayout(jPanelRealizarReceta1Layout);
@@ -661,7 +666,7 @@ public class UI_Medico extends javax.swing.JFrame {
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanelAtenderPaciente.setBounds(0, 0, 1003, 440);
+        jPanelAtenderPaciente.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelAtenderPaciente, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelPrincipal.setPreferredSize(new java.awt.Dimension(901, 531));
@@ -1422,7 +1427,7 @@ public class UI_Medico extends javax.swing.JFrame {
                     .add(0, 129, Short.MAX_VALUE)))
         );
 
-        jPanelConsultarTurno.setBounds(0, 0, 860, 531);
+        jPanelConsultarTurno.setBounds(0, 0, 860, -1);
         ZonaTrabajo.add(jPanelConsultarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel13.setText("_____________________________________________________________________________");
@@ -1525,7 +1530,7 @@ public class UI_Medico extends javax.swing.JFrame {
                 .add(42, 42, 42))
         );
 
-        jPanelSolicitarPrueba.setBounds(0, 0, 749, 418);
+        jPanelSolicitarPrueba.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelSolicitarPrueba, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente7.setFont(new java.awt.Font("Lucida Grande", 1, 48));
@@ -1629,7 +1634,7 @@ public class UI_Medico extends javax.swing.JFrame {
                 .addContainerGap(117, Short.MAX_VALUE))
         );
 
-        jPanelAtenderPacienteIntermedio.setBounds(0, 0, 1001, 480);
+        jPanelAtenderPacienteIntermedio.setBounds(0, 0, -1, 480);
         ZonaTrabajo.add(jPanelAtenderPacienteIntermedio, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         getContentPane().add(ZonaTrabajo);
@@ -2373,8 +2378,13 @@ MedicamentoBD meBD = new MedicamentoBD();
         Date dateFin = null;
         dateFin = dateChooserCombo1.getSelectedDate().getTime();
         MedicamentoRecetado me = new MedicamentoRecetado();
+        boolean exito;
 
-        gM.realizarReceta(ins, jD, meRe, poso, durac, dateFin);
+        exito = gM.realizarReceta(ins, jD, meRe, poso, durac, dateFin);
+
+        if( exito==true){
+                new InformacionExito().setVisible(true);
+        }
 
         mostrarPanel("Principal");
 
@@ -2404,6 +2414,11 @@ MedicamentoBD meBD = new MedicamentoBD();
             evt.consume();
 
     }//GEN-LAST:event_jTextFieldDNIAtenderPacienteKeyTyped
+
+    private void jButtonCancelar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonCancelar1MouseClicked
+        // TODO add your handling code here:
+        mostrarPanel("Principal");
+    }//GEN-LAST:event_jButtonCancelar1MouseClicked
 
 
     /*Comprueba que la fecha introducida es correcta
