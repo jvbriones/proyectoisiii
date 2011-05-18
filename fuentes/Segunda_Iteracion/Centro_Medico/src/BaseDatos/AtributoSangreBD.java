@@ -1,7 +1,10 @@
 package BaseDatos;
 
 import CentroMedico.AtributoSangre;
+import java.util.ArrayList;
+import java.util.List;
 import org.hibernate.Session;
+
 
 /**
  *  @author Juan Carlos Bermúdez
@@ -43,4 +46,15 @@ public class AtributoSangreBD {
         return atr;
     }
 
+    public ArrayList<AtributoSangre> obtenerListaAtributosSangre(){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+
+        List<AtributoSangre> result = (List<AtributoSangre>)session.createQuery("from AtributoSangre").list();
+        ArrayList<AtributoSangre> atributosSangre = new ArrayList<AtributoSangre>(result);
+
+        session.getTransaction().commit();
+        return atributosSangre;
+    }
 }

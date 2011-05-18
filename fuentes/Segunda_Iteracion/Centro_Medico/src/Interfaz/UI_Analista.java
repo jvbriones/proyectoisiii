@@ -20,6 +20,7 @@ import java.util.Calendar;
 import java.awt.Color;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
@@ -34,6 +35,11 @@ import javax.swing.JFileChooser;
  * @author Adrian
  */
 public class UI_Analista extends javax.swing.JFrame {
+
+    ArrayList<String> ro;
+    ArrayList<String> rs;
+    ArrayList<String> atrO;
+    ArrayList<String> atrS;
 
     /** Creates new form Principal_Administrador */
     public UI_Analista() {
@@ -227,6 +233,7 @@ public class UI_Analista extends javax.swing.JFrame {
         jTextFieldValorLinfocitos = new javax.swing.JTextField();
         jLabelError = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabelErrorDNI = new javax.swing.JLabel();
         jPanelEliminarAtributo = new javax.swing.JPanel();
         jLabelGestionarPaciente9 = new javax.swing.JLabel();
         jButtonGuardarAtributo1 = new javax.swing.JButton();
@@ -1345,7 +1352,7 @@ public class UI_Analista extends javax.swing.JFrame {
                     .add(0, 64, Short.MAX_VALUE)))
         );
 
-        jPanelConsultarTurno.setBounds(0, 0, 860, 531);
+        jPanelConsultarTurno.setBounds(0, 0, 860, -1);
         ZonaTrabajo.add(jPanelConsultarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente7.setFont(new java.awt.Font("Lucida Grande", 1, 36));
@@ -1435,6 +1442,15 @@ public class UI_Analista extends javax.swing.JFrame {
         jLabelError.setText("Debe rellenar todos los campos");
 
         jButton1.setText("Introducir Valor");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+
+        jLabelErrorDNI.setForeground(new java.awt.Color(255, 0, 0));
+        jLabelErrorDNI.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Error.png"))); // NOI18N
+        jLabelErrorDNI.setText("Debe rellenar todos los campos");
 
         org.jdesktop.layout.GroupLayout jPanelAlmacenarResultadosLayout = new org.jdesktop.layout.GroupLayout(jPanelAlmacenarResultados);
         jPanelAlmacenarResultados.setLayout(jPanelAlmacenarResultadosLayout);
@@ -1447,15 +1463,17 @@ public class UI_Analista extends javax.swing.JFrame {
                         .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(jLabel10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 809, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                                .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                                    .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                                        .add(jLabelAlmacenarDni)
-                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                        .add(jTextFieldAlmacenarDni, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 136, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                    .add(jLabelIAtributos)
-                                    .add(jLabelComentarios)
-                                    .add(scrollPaneImagenes, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)
-                                    .add(scrollPaneComentarios, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                                        .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
+                                            .add(jLabelAlmacenarDni)
+                                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                            .add(jTextFieldAlmacenarDni, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 136, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                        .add(jLabelIAtributos)
+                                        .add(jLabelComentarios)
+                                        .add(scrollPaneImagenes, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)
+                                        .add(scrollPaneComentarios, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .add(jLabelErrorDNI, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 276, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                 .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
                                         .add(77, 77, 77)
@@ -1490,18 +1508,20 @@ public class UI_Analista extends javax.swing.JFrame {
                 .add(jLabel10)
                 .add(32, 32, 32)
                 .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                        .add(jLabelAlmacenarDni)
-                        .add(jTextFieldAlmacenarDni, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                        .add(60, 60, 60)
-                        .add(jLabelIAtributos))
                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
                         .add(jLabelPrueba)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(jRadioButtonSangre)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jRadioButtonOrina)))
+                        .add(jRadioButtonOrina))
+                    .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
+                        .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(jLabelAlmacenarDni)
+                            .add(jTextFieldAlmacenarDni, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jLabelErrorDNI)
+                        .add(8, 8, 8)
+                        .add(jLabelIAtributos)))
                 .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
@@ -1618,7 +1638,7 @@ public class UI_Analista extends javax.swing.JFrame {
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
-        jPanelEliminarAtributo.setBounds(0, 0, 835, 360);
+        jPanelEliminarAtributo.setBounds(0, 0, -1, 360);
         ZonaTrabajo.add(jPanelEliminarAtributo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -2385,9 +2405,10 @@ public class UI_Analista extends javax.swing.JFrame {
 
     private void jButtonAlmacenarResultadoRadiologoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAlmacenarResultadoRadiologoMouseClicked
         // TODO add your handling code here:
-    /* comentado por Nicolás
+  
         if(compruebaFormulario("Almacenar")){
         GestorPruebas gp = new GestorPruebas();
+        boolean exito;
         String tipo = null;
         if(jRadioButtonSangre.isSelected()){
             tipo = "sangre";
@@ -2395,16 +2416,33 @@ public class UI_Analista extends javax.swing.JFrame {
         if(jRadioButtonOrina.isSelected()){
             tipo = "orina";
         }
+    
+       ArrayList Datos = new ArrayList();
+
+     
         try {
-            gp.almacenarResultadosAnalisis(jTextFieldAlmacenarDni.getText(), jTextFieldValorLinfocitos.getText(), scrollPaneImagenes.paramString(), tipo);
-        } catch (SQLException ex) {
+           if(tipo.equals("orina"))
+                exito = gp.almacenarResultadosAnalisis(jTextFieldAlmacenarDni.getText(), atrO, ro,jTextAreaComentarios.getText(), tipo, jTextFieldDNIPersonal.getText());
+           else if(tipo.equals("sangre"))
+               exito = gp.almacenarResultadosAnalisis(jTextFieldAlmacenarDni.getText(), atrS, rs,jTextAreaComentarios.getText(), tipo, jTextFieldDNIPersonal.getText());
+        } catch (Exception ex) {
             Logger.getLogger(UI_Analista.class.getName()).log(Level.SEVERE, null, ex);
         }
+       if(exito = false)
+           jLabelErrorDNI.setVisible(true);
+       else{
+                   InformacionExito info = new InformacionExito();
+                   info.setVisible(true);
+                   mostrarPanel("Principal");
+     
+     
+       }
+     
         }
         else
             jLabelError.setVisible(true);
      
-     */
+    
     }//GEN-LAST:event_jButtonAlmacenarResultadoRadiologoMouseClicked
 
     private void jTextFieldAlmacenarDniKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldAlmacenarDniKeyTyped
@@ -2449,6 +2487,19 @@ public class UI_Analista extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(jRadioButtonSangre.isSelected()){
             DefaultListModel aux=new DefaultListModel();
+            AtributoSangreBD sangreBD = new AtributoSangreBD();
+            ArrayList atributos = sangreBD.obtenerListaAtributosSangre();
+            Iterator it = atributos.iterator();
+            atrS = new ArrayList();
+            rs = new ArrayList();
+            while(it.hasNext()){
+                AtributoSangre atr = (AtributoSangre)it.next();
+                ResultadoSangre r = new ResultadoSangre();
+                String n = atr.getNombre();
+
+                String nombre = atr.getNombre();
+                aux.addElement(nombre);
+            }
             jListAtributos.setModel(aux);
         }
         jTextFieldValorLinfocitos.setText("");
@@ -2461,27 +2512,28 @@ public class UI_Analista extends javax.swing.JFrame {
 
         if(jRadioButtonOrina.isSelected()){
             jTextFieldValorLinfocitos.setText("");
-           /*
-            System.out.println("Cambio a orina");
-            AtributoOrina ori1 = new AtributoOrina("pantic");
-            AtributoOrina ori2 = new AtributoOrina("pope");
-            AtributoOrina ori3 = new AtributoOrina("niko"
-
-            ResultadoOrina resul1 = new ResultadoOrina(ori1,"0");
-            ResultadoOrina resul2 = new ResultadoOrina(ori2,"0");
-            ResultadoOrina resul3 = new ResultadoOrina(ori3,"0");
-
-
             DefaultListModel aux=new DefaultListModel();
-            aux.addElement(ori1.getNombre());
-            aux.addElement(ori2.getNombre());
-            aux.addElement(ori3.getNombre());
+            AtributoOrinaBD orinaBD = new AtributoOrinaBD();
+            ArrayList atributos = orinaBD.obtenerListaAtributosOrina();
+            Iterator it = atributos.iterator();
+            atrO = new ArrayList();
+            ro = new ArrayList();
+            while(it.hasNext()){
+                AtributoOrina atr = (AtributoOrina)it.next();
+                String n = atr.getNombre();
+                atrO.add(n);
+                
+                
 
-
+                String nombre = atr.getNombre();
+                aux.addElement(nombre);
+            }
             jListAtributos.setModel(aux);
-            * */
+
             
         }
+            
+        
     }//GEN-LAST:event_jRadioButtonOrinaItemStateChanged
 
     private void jListAtributosValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jListAtributosValueChanged
@@ -2545,6 +2597,15 @@ public class UI_Analista extends javax.swing.JFrame {
         if(jTextFieldNombreAtributo.getText().length() > 12)
                 evt.consume();
     }//GEN-LAST:event_jTextFieldNombreAtributoKeyTyped
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        if(jRadioButtonSangre.isSelected())
+                rs.add( jListAtributos.getSelectedIndex(), jTextFieldValorLinfocitos.getText());
+
+        else if(jRadioButtonOrina.isSelected())
+                ro.add(jListAtributos.getSelectedIndex(), jTextFieldValorLinfocitos.getText());
+    }//GEN-LAST:event_jButton1MouseClicked
 
 
     /*Comprueba que la fecha introducida es correcta
@@ -2666,7 +2727,9 @@ public class UI_Analista extends javax.swing.JFrame {
             jTextFieldNombreAtributo1.setText("");
 
         if(formulario.equals("AlmacenarResultados")){
+            jTextFieldAlmacenarDni.setText("");
             jTextAreaComentarios.setText("");
+            jTextFieldValorLinfocitos.setText("");
 
 
         }
@@ -2787,6 +2850,7 @@ public class UI_Analista extends javax.swing.JFrame {
             jPanelAlmacenarResultados.setVisible(true);
             jPanelAgregarAtributo.setVisible(false);
             jPanelEliminarAtributo.setVisible(false);
+            jLabelErrorDNI.setVisible(false);
 
 
             /**Activamos el marco*/
@@ -3054,6 +3118,7 @@ public class UI_Analista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelError;
     private javax.swing.JLabel jLabelError1;
     private javax.swing.JLabel jLabelError2;
+    private javax.swing.JLabel jLabelErrorDNI;
     private javax.swing.JLabel jLabelErrorRepe;
     private javax.swing.JLabel jLabelFechaFinTurno;
     private javax.swing.JLabel jLabelFechaInicioTurno;
