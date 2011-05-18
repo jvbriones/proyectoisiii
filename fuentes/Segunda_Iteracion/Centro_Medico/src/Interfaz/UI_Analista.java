@@ -2600,8 +2600,11 @@ public class UI_Analista extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-        if(jRadioButtonSangre.isSelected())
+        if(jRadioButtonSangre.isSelected()){
                 rs.add( jListAtributos.getSelectedIndex(), jTextFieldValorLinfocitos.getText());
+                System.out.println("index "+ jListAtributos.getSelectedIndex()+"valor " +jTextFieldValorLinfocitos.getText());
+
+        }
 
         else if(jRadioButtonOrina.isSelected())
                 ro.add(jListAtributos.getSelectedIndex(), jTextFieldValorLinfocitos.getText());
