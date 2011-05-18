@@ -18,7 +18,7 @@ import java.util.Iterator;
 public class GestorPruebas {
 
 
-    public boolean agregarAtributoSangre(String Nombre){
+    public boolean agregarAtributoSangre(String Nombre,float LimSup, float LimInf,String Unidad){
 
         boolean exito;
         AtributoSangre atributo = new AtributoSangre();
@@ -31,7 +31,7 @@ public class GestorPruebas {
         }
 
         else{
-            AtributoSangre At = new AtributoSangre(Nombre);
+            AtributoSangre At = new AtributoSangre(Nombre, Unidad, LimSup, LimInf);
             atribSBD.almacenar(At);
             exito = true;
         }
@@ -41,7 +41,7 @@ public class GestorPruebas {
 
     }
 
-    public boolean agregarAtributoOrina(String Nombre){
+    public boolean agregarAtributoOrina(String Nombre,float LimSup, float LimInf, String Unidad){
         boolean exito;
         AtributoOrina atributo = new AtributoOrina();
         AtributoOrinaBD atribOBD = new AtributoOrinaBD();
@@ -53,7 +53,7 @@ public class GestorPruebas {
         }
 
         else{
-            AtributoOrina At = new AtributoOrina(Nombre);
+            AtributoOrina At = new AtributoOrina(Nombre,LimSup,LimInf,Unidad);
             atribOBD.almacenar(At);
            
             exito = true;

@@ -24,7 +24,7 @@ public class AtributoOrina implements Serializable{
     public AtributoOrina() {
     }
 
-    public AtributoOrina(String Nombre, String Unidad, float LimSup, float LimInf) {
+    public AtributoOrina(String Nombre, float LimSup, float LimInf, String Unidad) {
         this.Nombre = Nombre;
         this.Unidad = Unidad;
         this.LimSup = LimSup;

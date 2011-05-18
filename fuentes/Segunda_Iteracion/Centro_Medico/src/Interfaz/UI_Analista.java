@@ -2307,9 +2307,13 @@ public class UI_Analista extends javax.swing.JFrame {
          String tipo;
          GestorPruebas gp = new GestorPruebas();
          boolean exito;
+         float limSup= Float.parseFloat(jTextFieldLimiteSup.getText());
+         float limInf= Float.parseFloat(jTextFieldLimiteInf.getText());
+         String medida= jTextFieldUnidadMedida.getText();
+
 
          if(jRadioButtonSangre1.isSelected()){
-             exito = gp.agregarAtributoSangre(jTextFieldNombreAtributo.getText());
+             exito = gp.agregarAtributoSangre(jTextFieldNombreAtributo.getText(),limSup,limInf,medida);
              if(!exito){
                  System.out.println("El atributo "+jTextFieldNombreAtributo.getText()+" ya existe");
                  jLabelErrorRepe.setVisible(true);
@@ -2324,7 +2328,10 @@ public class UI_Analista extends javax.swing.JFrame {
          }
 
          if(jRadioButtonOrina1.isSelected()){
-             exito = gp.agregarAtributoOrina(jTextFieldNombreAtributo.getText());
+
+            
+
+             exito = gp.agregarAtributoOrina(jTextFieldNombreAtributo.getText(),limSup,limInf,medida);
              if(!exito){
                  System.out.println("El atributo "+jTextFieldNombreAtributo.getText()+" ya existe");
                  new InformacionError().setVisible(true);
