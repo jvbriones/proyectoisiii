@@ -2885,12 +2885,13 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         String Nombre= jTextFieldNombreMedicamento.getText();
         int ExistenciasMinimas = Integer.parseInt(jTextFieldExistencias.getText());
         String Descripcion = jTextAreaConsulDescrip.getText();
-        int StockActual = Integer.parseInt(jTextFieldStockActual.getText());
+
+       // int StockActual = Integer.parseInt(jTextFieldStockActual.getText());
         //tomar datos de los campos,procesarlos y pasarselos a la siguiente funcion
        
         Me.setDescripcion(Descripcion);
         Me.setExistenciasMinimas(ExistenciasMinimas);
-        Me.setStockActual(StockActual);
+        //Me.setStockActual(StockActual);
         exito = gesFar.modificarMedicamento(Me);
 
 
@@ -3178,6 +3179,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
             GestorFarmacia gesFar= new GestorFarmacia();
             String Nombre = jTextFieldNombreMedicamento.getText();
             Me=gesFar.consultarMedicamento(Nombre); // tomar nombre del jtextfieldddd
+            jTextFieldStockActual.setEnabled(false);
             if( Me==null){
 
                 new InformacionError().setVisible(true);
