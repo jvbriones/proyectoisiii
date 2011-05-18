@@ -25,7 +25,6 @@ import org.hibernate.*;
  */
 public class GestorFarmacia {
 
-    Receta rece;
 
    public boolean anadirMedicamento( String Nombre,String Descripcion, int ExistenciasMinimas, int StockActual){
 
@@ -262,9 +261,11 @@ public class GestorFarmacia {
             Receta rec = null;
             RecetaBD recetas = new RecetaBD();
             Medicamento med = null;
+            System.out.println("mostrar receta");
 
             rec = recetas.obtener(idReceta);
-            rece = rec;
+            System.out.println("receta "+ rec.getId());
+
 
             /*datosReceta.add(rec.getFecha());
             datosReceta.add(rec.getInstrucciones());
@@ -296,7 +297,7 @@ public class GestorFarmacia {
 
         }
 
-    public void dispensarMedicamentos(Set<String> ListaCodBarras){
+    public void dispensarMedicamentos(Set<String> ListaCodBarras, Receta rece){
         String codBarras;
         LoteMedicamentoBD loteBD = new LoteMedicamentoBD();
         LoteMedicamento lote = null;
@@ -305,6 +306,7 @@ public class GestorFarmacia {
         String nombre;
         RecetaBD rBD = new RecetaBD();
         MedicamentoRecetado  medRed = null;
+        Set<MedicamentoRecetado> sMedRed;
         MedicamentoRecetadoBD mRBD = new MedicamentoRecetadoBD();
 
         for( Iterator it = ListaCodBarras.iterator(); it.hasNext();){
@@ -319,17 +321,25 @@ public class GestorFarmacia {
                 loteBD.actualizar(lote);
             }
             System.out.println("dispensar medicamento");
-            System.out.println("1");
             med = lote.getMedicamento();
-            System.out.println("2");
-            med.actualizaStock(1);
-            System.out.println("3");
+            System.out.println("Descripcion:"+med.getDescripcion());
+ 
+            med.actualizaStock(-1);
+            System.out.println("Stock despues: "+med.getStockActual());
             mBD.actualizar(med);
             System.out.println("4");
             nombre = med.getNombre();
             System.out.println("5");
             //medRed = mRBD.obtener(nombre);
             //medRed.setDispensado(true);
+            System.out.println("rece: "+ rece.getId());
+            sMedRed = rece.getMedicamentosRecetados();
+            for(Iterator it2 = sMedRed.iterator(); it2.hasNext();){
+                medRed = (MedicamentoRecetado) it2.next();
+                if(lote.getNombre().equals(medRed.getMedicamento().getNombre())){
+                    medRed.setDispensado(true);
+                }
+            }
             rBD.actualizar(rece);
             
 

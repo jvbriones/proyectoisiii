@@ -41,6 +41,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
     Set<Receta> resumenRecetas;
     Set<MedicamentoRecetado> smR;
     Set<String> ListaCodBarras = new HashSet<String>(0);
+    Receta recetag = null;
 
     /** Creates new form Principal_Administrador */
     public UI_Farmaceutico() {
@@ -2850,6 +2851,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         posicion = jList1.getSelectedIndex();
         Receta rec = null;
         Iterator it = resumenRecetas.iterator();
+        GestorFarmacia gF = new GestorFarmacia();
         //ListaCodBarras.clear();
 
         System.out.println("1");
@@ -2873,6 +2875,8 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         System.out.println("5");
 
         jListMedicamentosDispensar.setModel(listModel);
+
+        recetag = gF.mostrarReceta(rec.getId());
 
         mostrarPanel("DispensarFinal");
     }//GEN-LAST:event_jButtonConsultarRecetaMouseClicked
@@ -3167,7 +3171,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         }
 
         else{
-            gF.dispensarMedicamentos(ListaCodBarras);
+            gF.dispensarMedicamentos(ListaCodBarras, recetag);
         }
     }//GEN-LAST:event_jButtonFinalizarMouseClicked
 

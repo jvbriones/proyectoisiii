@@ -7,6 +7,6 @@
     </id>
     <property name="Existencias"/>
     <property name="FechaCaducidad"/>
-    <many-to-one class="CentroMedico.Medicamento" name="Medicamento" column="NOMBRE_MEDICAMENTO" not-null="true"/>
+    <many-to-one class="CentroMedico.Medicamento" name="Medicamento" column="NOMBRE_MEDICAMENTO" not-null="true" lazy="false"/>
   </class>
 </hibernate-mapping>
