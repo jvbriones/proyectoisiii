@@ -70,7 +70,7 @@ public class GestorMedico {
             System.out.println(med.getNombre());
             me = this.recetarMedicamento(med, Posologia, Duracion, FechaFin);
         }
-
+        
         rBD.almacenar(re);
 
 
