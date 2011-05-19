@@ -5,6 +5,7 @@
     <id column="DNI_USUARIO" name="DNI">
       <generator class="assigned"/>
     </id>
+    <discriminator column="discriminator_col" type="string"/>
     <property name="Nombre"/>
     <property name="Apellidos"/>
     <property name="Direccion"/>
@@ -18,24 +19,23 @@
     <joined-subclass name="CentroMedico.Paciente">
       <key column="DNI_PACIENTE"/>
     </joined-subclass>
-    <joined-subclass name="CentroMedico.PersonalMedico">
-      <key column="DNI_PERSONALMEDICO"/>
-      <one-to-one class="CentroMedico.Turno" constrained="true" lazy="false" name="Turn"/>
-      <joined-subclass name="CentroMedico.Medico">
-        <key column="DNI_MEDICO"/>
-      </joined-subclass>
-      <joined-subclass name="CentroMedico.Analista">
-        <key column="DNI_ANALISTA"/>
-      </joined-subclass>
-      <joined-subclass name="CentroMedico.Radiologo">
-        <key column="DNI_RADIOLOGO"/>
-      </joined-subclass>
-    </joined-subclass>
     <joined-subclass name="CentroMedico.Administrativo">
       <key column="DNI_ADMINISTRATIVO"/>
     </joined-subclass>
     <joined-subclass name="CentroMedico.Farmaceutico">
       <key column="DNI_FARMACEUTICO"/>
     </joined-subclass>
+    <joined-subclass name="CentroMedico.PersonalMedico">
+      <key column="DNI_PERSONALMEDICO"/>
+    </joined-subclass>
   </class>
-</hibernate-mapping>
+
+
+  <subclass name="CentroMedico.Radiologo" extends="CentroMedico.PersonalMedico" discriminator-value="DNI">
+  </subclass>
+  <subclass name="CentroMedico.Analista" extends="CentroMedico.PersonalMedico" discriminator-value="DNI">
+  </subclass>
+  <subclass name="CentroMedico.Medico" extends="CentroMedico.PersonalMedico" discriminator-value="DNI">
+  </subclass>
+
+  </hibernate-mapping>
