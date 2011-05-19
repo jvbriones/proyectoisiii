@@ -41,5 +41,4 @@ public class PruebaOrinaBD {
 
         return prueba;
     }
-
 }
