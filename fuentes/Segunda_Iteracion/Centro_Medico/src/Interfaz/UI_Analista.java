@@ -41,6 +41,7 @@ public class UI_Analista extends javax.swing.JFrame {
     ArrayList<String> atrO;
     ArrayList<String> atrS;
 
+
     /** Creates new form Principal_Administrador */
     public UI_Analista() {
         initComponents();
@@ -234,6 +235,8 @@ public class UI_Analista extends javax.swing.JFrame {
         jLabelError = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabelErrorDNI = new javax.swing.JLabel();
+        jLabelErrorLimite = new javax.swing.JLabel();
+        jLabelErrorLimite1 = new javax.swing.JLabel();
         jPanelEliminarAtributo = new javax.swing.JPanel();
         jLabelGestionarPaciente9 = new javax.swing.JLabel();
         jButtonGuardarAtributo1 = new javax.swing.JButton();
@@ -1452,6 +1455,13 @@ public class UI_Analista extends javax.swing.JFrame {
         jLabelErrorDNI.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Error.png"))); // NOI18N
         jLabelErrorDNI.setText("Debe rellenar todos los campos");
 
+        jLabelErrorLimite.setForeground(new java.awt.Color(255, 0, 0));
+        jLabelErrorLimite.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Error.png"))); // NOI18N
+        jLabelErrorLimite.setText("No se ha introducido el valor");
+
+        jLabelErrorLimite1.setForeground(new java.awt.Color(255, 0, 0));
+        jLabelErrorLimite1.setText("porque no está dentro de los límites");
+
         org.jdesktop.layout.GroupLayout jPanelAlmacenarResultadosLayout = new org.jdesktop.layout.GroupLayout(jPanelAlmacenarResultados);
         jPanelAlmacenarResultados.setLayout(jPanelAlmacenarResultadosLayout);
         jPanelAlmacenarResultadosLayout.setHorizontalGroup(
@@ -1476,28 +1486,34 @@ public class UI_Analista extends javax.swing.JFrame {
                                     .add(jLabelErrorDNI, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 276, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                 .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                                        .add(77, 77, 77)
-                                        .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                                            .add(jLabelPrueba, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 66, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                            .add(jLabelLinfocitos, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE)
-                                            .add(jRadioButtonOrina, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
-                                            .add(jRadioButtonSangre, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                        .add(90, 90, 90)
+                                        .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                            .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
+                                                .add(20, 20, 20)
+                                                .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                                                    .add(jLabelPrueba, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 66, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                                    .add(jLabelLinfocitos, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE)
+                                                    .add(jRadioButtonOrina, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                                                    .add(jRadioButtonSangre)))
+                                            .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
+                                                .add(43, 43, 43)
+                                                .add(jTextFieldValorLinfocitos, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 72, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                            .add(jButton1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 160, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                                        .add(24, 24, 24)
-                                        .add(jLabelError, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 263, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                        .add(37, 37, 37)
+                                        .add(jLabelErrorLimite, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 358, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                                        .add(100, 100, 100)
-                                        .add(jTextFieldValorLinfocitos, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 72, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                        .add(58, 58, 58)
+                                        .add(jLabelErrorLimite1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 269, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                                        .add(57, 57, 57)
-                                        .add(jButton1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 160, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))))
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                        .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                            .add(jLabelError, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 263, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                            .add(jButtonAlmacenarResultadoRadiologo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 116, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))))
                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
                         .add(107, 107, 107)
-                        .add(jLabelGestionarPaciente7))
-                    .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                        .add(291, 291, 291)
-                        .add(jButtonAlmacenarResultadoRadiologo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 116, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .add(jLabelGestionarPaciente7)))
+                .addContainerGap())
         );
         jPanelAlmacenarResultadosLayout.setVerticalGroup(
             jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1509,43 +1525,40 @@ public class UI_Analista extends javax.swing.JFrame {
                 .add(32, 32, 32)
                 .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                        .add(jLabelPrueba)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jRadioButtonSangre)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jRadioButtonOrina))
-                    .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
                         .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                             .add(jLabelAlmacenarDni)
                             .add(jTextFieldAlmacenarDni, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(jLabelErrorDNI)
                         .add(8, 8, 8)
-                        .add(jLabelIAtributos)))
-                .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
+                        .add(jLabelIAtributos)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(scrollPaneImagenes, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 84, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(17, 17, 17)
-                        .add(jLabelComentarios))
+                        .add(jLabelComentarios)
+                        .add(19, 19, 19)
+                        .add(scrollPaneComentarios, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE))
                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
+                        .add(jLabelPrueba)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jRadioButtonSangre)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jRadioButtonOrina)
                         .add(16, 16, 16)
                         .add(jLabelLinfocitos)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(jTextFieldValorLinfocitos, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 38, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jButton1)))
-                .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
+                        .add(jButton1)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(scrollPaneComentarios, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
+                        .add(jLabelErrorLimite)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jButtonAlmacenarResultadoRadiologo)
-                        .add(37, 37, 37))
-                    .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
-                        .add(65, 65, 65)
-                        .add(jLabelError)
-                        .addContainerGap())))
+                        .add(jLabelErrorLimite1)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 48, Short.MAX_VALUE)
+                        .add(jButtonAlmacenarResultadoRadiologo)))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jLabelError)
+                .add(44, 44, 44))
         );
 
         jPanelAlmacenarResultados.setBounds(10, 30, 870, 510);
@@ -2496,7 +2509,8 @@ public class UI_Analista extends javax.swing.JFrame {
                 AtributoSangre atr = (AtributoSangre)it.next();
                 ResultadoSangre r = new ResultadoSangre();
                 String n = atr.getNombre();
-
+                atrS.add(n);
+                rs.add("0");
                 String nombre = atr.getNombre();
                 aux.addElement(nombre);
             }
@@ -2522,9 +2536,7 @@ public class UI_Analista extends javax.swing.JFrame {
                 AtributoOrina atr = (AtributoOrina)it.next();
                 String n = atr.getNombre();
                 atrO.add(n);
-                
-                
-
+                ro.add("0");
                 String nombre = atr.getNombre();
                 aux.addElement(nombre);
             }
@@ -2544,17 +2556,19 @@ public class UI_Analista extends javax.swing.JFrame {
 
     private void jListAtributosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jListAtributosMouseClicked
         // TODO add your handling code here:
+
+        String valor;
+        int pos;
+
+        pos = jListAtributos.getSelectedIndex();
+
+        if(jRadioButtonSangre.isSelected())
+            valor = rs.get(pos);
+        else 
+            valor = ro.get(pos);
+
+        jTextFieldValorLinfocitos.setText(valor);
         
-        String nombre = jListAtributos.getSelectedValue().toString();
-        AtributoOrinaBD a = new AtributoOrinaBD();
-        AtributoOrina atributo;
-        atributo = a.obtener(nombre);
-        ResultadoOrina or = new ResultadoOrina();
-        or.setAtr(atributo);
-            if(or.getResultado() == null)
-                jTextFieldValorLinfocitos.setText("0");
-            else
-                jTextFieldValorLinfocitos.setText(or.getResultado());
     }//GEN-LAST:event_jListAtributosMouseClicked
 
     private void jTextFieldLimiteSupKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldLimiteSupKeyTyped
@@ -2601,13 +2615,36 @@ public class UI_Analista extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
         if(jRadioButtonSangre.isSelected()){
-                rs.add( jListAtributos.getSelectedIndex(), jTextFieldValorLinfocitos.getText());
+                AtributoSangreBD sangreBD = new AtributoSangreBD();
+                int pos = jListAtributos.getSelectedIndex();
+                AtributoSangre atr = sangreBD.obtener(atrS.get(pos));
+                if(atr.getLimInf() > Integer.parseInt(jTextFieldValorLinfocitos.getText()) || atr.getLimSup() < Integer.parseInt(jTextFieldValorLinfocitos.getText())){
+                    jLabelErrorLimite.setVisible(true);
+                    jLabelErrorLimite1.setVisible(true);
+                }
+                else{
+                    rs.add( jListAtributos.getSelectedIndex(), jTextFieldValorLinfocitos.getText());
+                    jLabelErrorLimite.setVisible(false);
+                    jLabelErrorLimite1.setVisible(false);
+                }
                 System.out.println("index "+ jListAtributos.getSelectedIndex()+"valor " +jTextFieldValorLinfocitos.getText());
 
         }
 
         else if(jRadioButtonOrina.isSelected())
-                ro.add(jListAtributos.getSelectedIndex(), jTextFieldValorLinfocitos.getText());
+        {
+                AtributoOrinaBD orinaBD = new AtributoOrinaBD();
+                int pos = jListAtributos.getSelectedIndex();
+                AtributoOrina atr = orinaBD.obtener(atrO.get(pos));
+                if(atr.getLimInf() > Integer.parseInt(jTextFieldValorLinfocitos.getText()) || atr.getLimSup() < Integer.parseInt(jTextFieldValorLinfocitos.getText()))
+                    jLabelErrorLimite.setVisible(true);
+                else{
+                    ro.add( jListAtributos.getSelectedIndex(), jTextFieldValorLinfocitos.getText());
+                    jLabelErrorLimite.setVisible(false);
+                }
+        }
+
+                
     }//GEN-LAST:event_jButton1MouseClicked
 
 
@@ -2755,6 +2792,8 @@ public class UI_Analista extends javax.swing.JFrame {
             jLabelError1.setVisible(false);
             jLabelError2.setVisible(false);
             jLabelErrorRepe.setVisible(false);
+            jLabelErrorLimite.setVisible(false);
+            jLabelErrorLimite1.setVisible(false);
             jLabelNombreAtributo1.setForeground(Color.black);
             jLabelNombreAtributo.setForeground(Color.black);
             jLabelAlmacenarDni.setForeground(Color.black);
@@ -3122,6 +3161,8 @@ public class UI_Analista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelError1;
     private javax.swing.JLabel jLabelError2;
     private javax.swing.JLabel jLabelErrorDNI;
+    private javax.swing.JLabel jLabelErrorLimite;
+    private javax.swing.JLabel jLabelErrorLimite1;
     private javax.swing.JLabel jLabelErrorRepe;
     private javax.swing.JLabel jLabelFechaFinTurno;
     private javax.swing.JLabel jLabelFechaInicioTurno;
