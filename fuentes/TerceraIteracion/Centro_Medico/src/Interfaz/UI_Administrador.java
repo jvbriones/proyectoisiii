@@ -27,6 +27,7 @@ import java.text.*;
  *
  * @author Adrian Selva
  * @author Pedro Luis
+ * @author Esteban Dorado
  */
 public class UI_Administrador extends javax.swing.JFrame {
 
@@ -132,6 +133,15 @@ public class UI_Administrador extends javax.swing.JFrame {
         jButtonConsultarPaciente = new javax.swing.JButton();
         jButtonLimpiarPaciente = new javax.swing.JButton();
         jButtonGuardarPaciente = new javax.swing.JButton();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
         jPanelPrincipal = new javax.swing.JPanel();
         jButtonEstadPersTipo = new javax.swing.JButton();
         jLabelEstadPersTipo1 = new javax.swing.JLabel();
@@ -189,6 +199,15 @@ public class UI_Administrador extends javax.swing.JFrame {
         jRadioButtonRadiologo = new javax.swing.JRadioButton();
         jRadioButtonMedico = new javax.swing.JRadioButton();
         jButtonGuardarPersonal = new javax.swing.JButton();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
         jLabelErrorPersonal = new javax.swing.JLabel();
         jPanelGestionarTurno = new javax.swing.JPanel();
         jButtonConsultarTurno = new javax.swing.JButton();
@@ -317,7 +336,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
 
-        jLabelErrorPaciente.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabelErrorPaciente.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelErrorPaciente.setForeground(new java.awt.Color(255, 0, 0));
         jLabelErrorPaciente.setText("ERROR: revise los campos en rojo");
 
@@ -329,7 +348,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabelCentroMedico.setText("Centro médico");
         getContentPane().add(jLabelCentroMedico);
-        jLabelCentroMedico.setBounds(177, 68, 104, 18);
+        jLabelCentroMedico.setBounds(177, 68, 69, 14);
 
         jLabelIconoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Inicio-Desactivado.png"))); // NOI18N
         jLabelIconoInicio.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -348,7 +367,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabelInicio.setText("Inicio");
         getContentPane().add(jLabelInicio);
-        jLabelInicio.setBounds(410, 120, 44, 18);
+        jLabelInicio.setBounds(410, 120, 44, 14);
 
         jLabelIconoAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Ayuda-Desactivado.png"))); // NOI18N
         jLabelIconoAyuda.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -382,11 +401,11 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabelAyuda.setText("Ayuda");
         getContentPane().add(jLabelAyuda);
-        jLabelAyuda.setBounds(500, 120, 44, 18);
+        jLabelAyuda.setBounds(500, 120, 44, 14);
 
         jLabelSalir.setText("Salir");
         getContentPane().add(jLabelSalir);
-        jLabelSalir.setBounds(590, 120, 29, 18);
+        jLabelSalir.setBounds(590, 120, 20, 14);
 
         jLabelIconoImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Imprimir-Desactivado.png"))); // NOI18N
         jLabelIconoImprimir.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -420,28 +439,28 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabelImprimir.setText("Imprimir");
         getContentPane().add(jLabelImprimir);
-        jLabelImprimir.setBounds(310, 160, 60, 18);
+        jLabelImprimir.setBounds(310, 160, 60, 14);
 
         jLabelGuardarPDF.setText("GuardarPDF");
         getContentPane().add(jLabelGuardarPDF);
-        jLabelGuardarPDF.setBounds(200, 160, 80, 18);
+        jLabelGuardarPDF.setBounds(200, 160, 80, 14);
 
         jPanelUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jPanelUsuario.setLayout(null);
 
         jLabelUsuario.setText("Usuario:");
         jPanelUsuario.add(jLabelUsuario);
-        jLabelUsuario.setBounds(90, 0, 56, 18);
+        jLabelUsuario.setBounds(90, 0, 40, 14);
 
         jLabelTipoUsuario.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelTipoUsuario.setText("Tipo Usuario");
         jPanelUsuario.add(jLabelTipoUsuario);
-        jLabelTipoUsuario.setBounds(90, 30, 120, 17);
+        jLabelTipoUsuario.setBounds(90, 30, 120, 18);
 
         jLabelNombreUsuario.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelNombreUsuario.setText("Nombre");
         jPanelUsuario.add(jLabelNombreUsuario);
-        jLabelNombreUsuario.setBounds(90, 60, 120, 17);
+        jLabelNombreUsuario.setBounds(90, 60, 120, 18);
         jPanelUsuario.add(jLabelTipoUsuarioIdentificado);
         jLabelTipoUsuarioIdentificado.setBounds(10, 10, 70, 70);
 
@@ -641,9 +660,9 @@ public class UI_Administrador extends javax.swing.JFrame {
         });
         jPanelGestionarPaciente.add(jButtonMasAnioPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 341, 50, 40));
 
-        jLabelInfoFotoPaciente.setFont(new java.awt.Font("Lucida Grande", 0, 10));
-        jLabelInfoFotoPaciente.setText("Tam max 130x150 pix");
-        jPanelGestionarPaciente.add(jLabelInfoFotoPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(464, 364, 120, 50));
+        jLabelInfoFotoPaciente.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
+        jLabelInfoFotoPaciente.setText("Tamaño máx 150x150 píxeles");
+        jPanelGestionarPaciente.add(jLabelInfoFotoPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 370, 150, 50));
 
         jTextFieldEmailPaciente.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -713,6 +732,51 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarPaciente.add(jButtonGuardarPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 450, -1, 39));
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel16.setText(" * ");
+        jPanelGestionarPaciente.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 90, -1, -1));
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel17.setText(" * ");
+        jPanelGestionarPaciente.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 160, -1, 30));
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel18.setText(" * ");
+        jPanelGestionarPaciente.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 90, -1, -1));
+
+        jLabel19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel19.setText(" * ");
+        jPanelGestionarPaciente.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 240, -1, -1));
+
+        jLabel20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel20.setText(" * ");
+        jPanelGestionarPaciente.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, -1, 30));
+
+        jLabel21.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel21.setText(" * ");
+        jPanelGestionarPaciente.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, -1, -1));
+
+        jLabel23.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel23.setText(" * ");
+        jPanelGestionarPaciente.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, -1, -1));
+
+        jLabel24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel24.setText(" * ");
+        jPanelGestionarPaciente.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 330, -1, -1));
+
+        jLabel34.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel34.setText(" Los campos con * son obligatorios");
+        jPanelGestionarPaciente.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 420, 270, -1));
 
         jPanelGestionarPaciente.setBounds(1, 0, 900, 530);
         ZonaTrabajo.add(jPanelGestionarPaciente, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -805,7 +869,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jLabelEstadPersFecha1)
                 .add(106, 106, 106)
                 .add(jLabelEstadPersTipo1)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 51, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 175, Short.MAX_VALUE)
                 .add(jLabelGestionarCita1)
                 .add(117, 117, 117))
             .add(jPanelPrincipalLayout.createSequentialGroup()
@@ -839,10 +903,10 @@ public class UI_Administrador extends javax.swing.JFrame {
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelPrincipalLayout.createSequentialGroup()
                 .add(29, 29, 29)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadPersTipo, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadCitas, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadPersFecha, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE))
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadPersTipo, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadCitas, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonEstadPersFecha, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelEstadCitas1)
@@ -851,9 +915,9 @@ public class UI_Administrador extends javax.swing.JFrame {
                     .add(jLabelGestionarCita1))
                 .add(45, 45, 45)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jButtonGestionarTurno, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
-                    .add(jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
-                    .add(jButtonGestionarPersonal, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE))
+                    .add(jButtonGestionarTurno, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+                    .add(jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+                    .add(jButtonGestionarPersonal, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelGestionarPaciente3)
@@ -866,6 +930,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         ZonaTrabajo.add(jPanelPrincipal, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarPersonal.setMinimumSize(new java.awt.Dimension(901, 510));
+        jPanelGestionarPersonal.setName("jLabelErrorPersonal"); // NOI18N
         jPanelGestionarPersonal.setPreferredSize(new java.awt.Dimension(901, 531));
         jPanelGestionarPersonal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1072,9 +1137,9 @@ public class UI_Administrador extends javax.swing.JFrame {
         jTextFieldContraseniaPersonal.setColumns(8);
         jPanelGestionarPersonal.add(jTextFieldContraseniaPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 266, -1, -1));
 
-        jLabelInfoFotoPersonal.setFont(new java.awt.Font("Lucida Grande", 0, 10));
-        jLabelInfoFotoPersonal.setText("Tam max 130x150 pix");
-        jPanelGestionarPersonal.add(jLabelInfoFotoPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 356, 120, 50));
+        jLabelInfoFotoPersonal.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
+        jLabelInfoFotoPersonal.setText("Tamaño máx 150x150 píxeles");
+        jPanelGestionarPersonal.add(jLabelInfoFotoPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(511, 356, 160, 50));
 
         jButtonLimpiarPersonal.setText("Limpiar");
         jButtonLimpiarPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1140,13 +1205,60 @@ public class UI_Administrador extends javax.swing.JFrame {
         });
         jPanelGestionarPersonal.add(jButtonGuardarPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 460, -1, 39));
 
-        jLabelErrorPersonal.setFont(new java.awt.Font("Lucida Grande", 1, 13));
-        jLabelErrorPersonal.setForeground(new java.awt.Color(255, 0, 0));
-        jLabelErrorPersonal.setText("ERROR: revise los campos en rojo");
-        jPanelGestionarPersonal.add(jLabelErrorPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 440, 230, -1));
+        jLabel25.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel25.setText(" * ");
+        jPanelGestionarPersonal.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, -1, 30));
 
-        jPanelGestionarPersonal.setBounds(0, 0, 901, 531);
+        jLabel26.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel26.setText(" * ");
+        jPanelGestionarPersonal.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 230, 30, 20));
+
+        jLabel27.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel27.setText(" * ");
+        jPanelGestionarPersonal.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, -1, -1));
+
+        jLabel28.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel28.setText(" * ");
+        jPanelGestionarPersonal.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 90, -1, -1));
+
+        jLabel29.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel29.setText(" * ");
+        jPanelGestionarPersonal.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 160, -1, 30));
+
+        jLabel30.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel30.setText(" * ");
+        jPanelGestionarPersonal.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 307, 20, 30));
+
+        jLabel31.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel31.setText(" * ");
+        jPanelGestionarPersonal.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, -1, -1));
+
+        jLabel32.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel32.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel32.setText(" * ");
+        jPanelGestionarPersonal.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 320, -1, -1));
+
+        jLabel33.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel33.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel33.setText(" * ");
+        jPanelGestionarPersonal.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, -1, -1));
+
+        jLabelErrorPersonal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabelErrorPersonal.setForeground(new java.awt.Color(255, 0, 0));
+        jLabelErrorPersonal.setText(" Los campos con * son obligatorios");
+        jLabelErrorPersonal.setName("jLabelErrorPersonal"); // NOI18N
+        jPanelGestionarPersonal.add(jLabelErrorPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, 270, 20));
+
+        jPanelGestionarPersonal.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelGestionarPersonal, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPanelGestionarPersonal.getAccessibleContext().setAccessibleName("jLabelErrorPersonal");
 
         jPanelGestionarTurno.setMaximumSize(new java.awt.Dimension(901, 531));
         jPanelGestionarTurno.setPreferredSize(new java.awt.Dimension(901, 531));
@@ -1205,7 +1317,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarTurno.add(jButtonGuardarTurno);
-        jButtonGuardarTurno.setBounds(340, 440, 68, 39);
+        jButtonGuardarTurno.setBounds(340, 440, 71, 39);
 
         jButtonLimpiarTurno.setText("Limpiar");
         jButtonLimpiarTurno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1219,11 +1331,11 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarTurno.add(jButtonLimpiarTurno);
-        jButtonLimpiarTurno.setBounds(220, 440, 62, 39);
+        jButtonLimpiarTurno.setBounds(220, 440, 65, 39);
 
         jLabelDNITurno.setText("DNI");
         jPanelGestionarTurno.add(jLabelDNITurno);
-        jLabelDNITurno.setBounds(350, 260, 25, 18);
+        jLabelDNITurno.setBounds(350, 260, 18, 14);
 
         jTextFieldDNIGestionarTurno.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -1231,14 +1343,14 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarTurno.add(jTextFieldDNIGestionarTurno);
-        jTextFieldDNIGestionarTurno.setBounds(390, 250, 95, 28);
+        jTextFieldDNIGestionarTurno.setBounds(390, 250, 95, 20);
 
         jTextAreaInfoConsultaTurno.setBackground(new java.awt.Color(255, 204, 102));
         jTextAreaInfoConsultaTurno.setColumns(17);
         jTextAreaInfoConsultaTurno.setEditable(false);
-        jTextAreaInfoConsultaTurno.setFont(new java.awt.Font("Lucida Grande", 0, 18));
+        jTextAreaInfoConsultaTurno.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jTextAreaInfoConsultaTurno.setRows(3);
-        jTextAreaInfoConsultaTurno.setText("Introduce el DNI del personal, una fecha y las horas que trabaja el personal para guardar\nsu turno. Si introduces un DNI y pulsas consultar se sabe el turno del DNI.");
+        jTextAreaInfoConsultaTurno.setText("Introduce el DNI del personal, una fecha y las horas que trabaja el personal para guardar\nsu turno. Si introduces un DNI y pulsas \"Consultar\" se sabe el turno del DNI.");
         jScrollPane3.setViewportView(jTextAreaInfoConsultaTurno);
 
         jPanelGestionarTurno.add(jScrollPane3);
@@ -1277,7 +1389,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarTurno.add(jTextFieldMesInicioTurno);
-        jTextFieldMesInicioTurno.setBounds(160, 350, 33, 28);
+        jTextFieldMesInicioTurno.setBounds(160, 350, 33, 20);
 
         jTextFieldAnioInicioTurno.setEditable(false);
         jTextFieldAnioInicioTurno.setText("1950");
@@ -1287,7 +1399,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarTurno.add(jTextFieldAnioInicioTurno);
-        jTextFieldAnioInicioTurno.setBounds(200, 350, 50, 28);
+        jTextFieldAnioInicioTurno.setBounds(200, 350, 50, 20);
 
         jButtonMasAnioFechaInicioTurno.setText("+");
         jButtonMasAnioFechaInicioTurno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1303,19 +1415,19 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarTurno.add(jButtonMasAnioFechaInicioTurno);
         jButtonMasAnioFechaInicioTurno.setBounds(200, 310, 50, 40);
 
-        jLabelGestionarPaciente6.setFont(new java.awt.Font("Lucida Grande", 1, 48));
+        jLabelGestionarPaciente6.setFont(new java.awt.Font("Lucida Grande", 1, 48)); // NOI18N
         jLabelGestionarPaciente6.setText("Gestionar Turno");
         jPanelGestionarTurno.add(jLabelGestionarPaciente6);
-        jLabelGestionarPaciente6.setBounds(260, 20, 438, 57);
+        jLabelGestionarPaciente6.setBounds(260, 20, 373, 62);
 
         jTextFieldDiaInicioTurno.setEditable(false);
         jTextFieldDiaInicioTurno.setText("1");
         jPanelGestionarTurno.add(jTextFieldDiaInicioTurno);
-        jTextFieldDiaInicioTurno.setBounds(110, 350, 33, 28);
+        jTextFieldDiaInicioTurno.setBounds(110, 350, 33, 20);
 
         jLabelFechaInicioTurno.setText("Fecha inicio");
         jPanelGestionarTurno.add(jLabelFechaInicioTurno);
-        jLabelFechaInicioTurno.setBounds(140, 290, 81, 18);
+        jLabelFechaInicioTurno.setBounds(140, 290, 55, 14);
 
         jButtonMasDiaFechaInicioTurno.setText("+");
         jButtonMasDiaFechaInicioTurno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1331,9 +1443,9 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarTurno.add(jButtonMasDiaFechaInicioTurno);
         jButtonMasDiaFechaInicioTurno.setBounds(100, 310, 50, 40);
 
-        jLabel5.setText("_____________________________________________________________________________");
+        jLabel5.setText("_________________________________________________________________");
         jPanelGestionarTurno.add(jLabel5);
-        jLabel5.setBounds(180, 70, 539, 18);
+        jLabel5.setBounds(252, 70, 390, 14);
 
         jButtonMasMesFechaInicioTurno.setText("+");
         jButtonMasMesFechaInicioTurno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1399,7 +1511,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarTurno.add(jTextFieldMesFinTurno);
-        jTextFieldMesFinTurno.setBounds(420, 350, 33, 28);
+        jTextFieldMesFinTurno.setBounds(420, 350, 33, 20);
 
         jTextFieldAnioFinTurno.setEditable(false);
         jTextFieldAnioFinTurno.setText("1950");
@@ -1409,7 +1521,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarTurno.add(jTextFieldAnioFinTurno);
-        jTextFieldAnioFinTurno.setBounds(460, 350, 50, 28);
+        jTextFieldAnioFinTurno.setBounds(460, 350, 50, 20);
 
         jButtonMasAnioFechaFinTurno.setText("+");
         jButtonMasAnioFechaFinTurno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1428,11 +1540,11 @@ public class UI_Administrador extends javax.swing.JFrame {
         jTextFieldDiaFinTurno.setEditable(false);
         jTextFieldDiaFinTurno.setText("1");
         jPanelGestionarTurno.add(jTextFieldDiaFinTurno);
-        jTextFieldDiaFinTurno.setBounds(370, 350, 33, 28);
+        jTextFieldDiaFinTurno.setBounds(370, 350, 33, 20);
 
         jLabelFechaFinTurno.setText("Fecha fin");
         jPanelGestionarTurno.add(jLabelFechaFinTurno);
-        jLabelFechaFinTurno.setBounds(400, 290, 74, 18);
+        jLabelFechaFinTurno.setBounds(400, 290, 74, 14);
 
         jButtonMasDiaFechaFinTurno.setText("+");
         jButtonMasDiaFechaFinTurno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1464,11 +1576,11 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabelTurnoTrabajo.setText("Turno de trabajo");
         jPanelGestionarTurno.add(jLabelTurnoTrabajo);
-        jLabelTurnoTrabajo.setBounds(610, 290, 110, 18);
+        jLabelTurnoTrabajo.setBounds(610, 290, 110, 14);
 
         jRadioButtonManiana.setText("Mañana (8h-16h)");
         jPanelGestionarTurno.add(jRadioButtonManiana);
-        jRadioButtonManiana.setBounds(600, 320, 150, 24);
+        jRadioButtonManiana.setBounds(600, 320, 150, 23);
 
         jRadioButtonTarde.setText("Tarde (16h-24h)");
         jRadioButtonTarde.addActionListener(new java.awt.event.ActionListener() {
@@ -1477,11 +1589,11 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarTurno.add(jRadioButtonTarde);
-        jRadioButtonTarde.setBounds(600, 350, 150, 24);
+        jRadioButtonTarde.setBounds(600, 350, 150, 23);
 
         jRadioButtonNoche.setText("Noche (24h-8h)");
         jPanelGestionarTurno.add(jRadioButtonNoche);
-        jRadioButtonNoche.setBounds(600, 380, 150, 24);
+        jRadioButtonNoche.setBounds(600, 380, 150, 23);
 
         jButtonBajaTurno.setText("Baja");
         jButtonBajaTurno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1492,13 +1604,13 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarTurno.add(jButtonBajaTurno);
         jButtonBajaTurno.setBounds(580, 440, 93, 39);
 
-        jLabelErrorGestionarTurno.setFont(new java.awt.Font("Lucida Grande", 1, 13));
+        jLabelErrorGestionarTurno.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabelErrorGestionarTurno.setForeground(new java.awt.Color(255, 0, 0));
         jLabelErrorGestionarTurno.setText("ERROR: revise los campos en rojo");
         jPanelGestionarTurno.add(jLabelErrorGestionarTurno);
-        jLabelErrorGestionarTurno.setBounds(320, 420, 249, 17);
+        jLabelErrorGestionarTurno.setBounds(320, 420, 215, 18);
 
-        jPanelGestionarTurno.setBounds(0, 0, 901, 531);
+        jPanelGestionarTurno.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelGestionarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarCita.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1513,7 +1625,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarCita.add(jButtonGuardarCita);
-        jButtonGuardarCita.setBounds(400, 440, 68, 39);
+        jButtonGuardarCita.setBounds(400, 440, 71, 39);
 
         jTextFieldDNIGestionarCitaPaciente.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -1521,11 +1633,11 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarCita.add(jTextFieldDNIGestionarCitaPaciente);
-        jTextFieldDNIGestionarCitaPaciente.setBounds(250, 220, 95, 28);
+        jTextFieldDNIGestionarCitaPaciente.setBounds(250, 220, 95, 20);
 
         jLabelDNIGestionarCita.setText("DNI Paciente");
         jPanelGestionarCita.add(jLabelDNIGestionarCita);
-        jLabelDNIGestionarCita.setBounds(160, 230, 90, 18);
+        jLabelDNIGestionarCita.setBounds(160, 230, 90, 14);
 
         jButtonLimpiarCita.setText("Limpiar");
         jButtonLimpiarCita.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1539,16 +1651,16 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelGestionarCita.add(jButtonLimpiarCita);
-        jButtonLimpiarCita.setBounds(280, 440, 62, 39);
+        jButtonLimpiarCita.setBounds(280, 440, 65, 39);
 
         jLabelGestionarPaciente5.setFont(new java.awt.Font("Lucida Grande", 1, 48));
         jLabelGestionarPaciente5.setText("Gestionar Cita Online");
         jPanelGestionarCita.add(jLabelGestionarPaciente5);
-        jLabelGestionarPaciente5.setBounds(180, 20, 577, 57);
+        jLabelGestionarPaciente5.setBounds(180, 20, 489, 62);
 
         jLabel4.setText("_____________________________________________________________________________");
         jPanelGestionarCita.add(jLabel4);
-        jLabel4.setBounds(180, 70, 539, 18);
+        jLabel4.setBounds(180, 70, 462, 14);
 
         jButtonCancelarCita.setText("Cancelar");
         jPanelGestionarCita.add(jButtonCancelarCita);
@@ -1579,15 +1691,20 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabelDNIGestionarCitaMedico.setText("DNI Médico");
         jPanelGestionarCita.add(jLabelDNIGestionarCitaMedico);
-        jLabelDNIGestionarCitaMedico.setBounds(460, 230, 80, 18);
+        jLabelDNIGestionarCitaMedico.setBounds(460, 230, 80, 14);
 
+        jTextFieldDNIGestionarCitaMedico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldDNIGestionarCitaMedicoActionPerformed(evt);
+            }
+        });
         jTextFieldDNIGestionarCitaMedico.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldDNIGestionarCitaMedicoKeyTyped(evt);
             }
         });
         jPanelGestionarCita.add(jTextFieldDNIGestionarCitaMedico);
-        jTextFieldDNIGestionarCitaMedico.setBounds(570, 220, 95, 28);
+        jTextFieldDNIGestionarCitaMedico.setBounds(570, 220, 95, 20);
 
         jTextFieldMesCita.setEditable(false);
         jTextFieldMesCita.setText("1");
@@ -1728,7 +1845,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                     .add(jButtonMenosDiaFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jButtonMenosMesFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jButtonMenosAnioFechaCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         jPanelGestionarCita.add(jPanelGestionarCitaFecha);
@@ -1836,7 +1953,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jPanelGestionarCitaHoraLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jButtonMenosHoraCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jButtonMenosMinutoCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         jPanelGestionarCita.add(jPanelGestionarCitaHora);
@@ -1864,7 +1981,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             .add(jPanelGestionarCitaAltaLayout.createSequentialGroup()
                 .addContainerGap()
                 .add(jPanelGestionarCitaAltaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jScrollPane9, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 416, Short.MAX_VALUE)
+                    .add(jScrollPane9, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 420, Short.MAX_VALUE)
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarCitaAltaLayout.createSequentialGroup()
                         .add(jLabelGestionarCitaAltaFecha, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 53, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(18, 18, 18)
@@ -1879,7 +1996,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarCitaAltaLayout.setVerticalGroup(
             jPanelGestionarCitaAltaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarCitaAltaLayout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
+                .addContainerGap(26, Short.MAX_VALUE)
                 .add(jPanelGestionarCitaAltaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelGestionarCitaAltaHora)
                     .add(jLabelGestionarCitaAltaFecha)
@@ -1910,10 +2027,15 @@ public class UI_Administrador extends javax.swing.JFrame {
                 jButtonAceptarCitaMouseClicked(evt);
             }
         });
+        jButtonAceptarCita.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAceptarCitaActionPerformed(evt);
+            }
+        });
         jPanelGestionarCita.add(jButtonAceptarCita);
         jButtonAceptarCita.setBounds(400, 440, 93, 39);
 
-        jPanelGestionarCita.setBounds(0, 0, 901, 531);
+        jPanelGestionarCita.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelGestionarCita, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadPersTipo.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1972,7 +2094,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jScrollPane5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 327, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanelEstadPersTipo.setBounds(0, 0, 901, 531);
+        jPanelEstadPersTipo.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelEstadPersTipo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadPersFecha.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -2038,7 +2160,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jScrollPane6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 327, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanelEstadPersFecha.setBounds(0, 0, 901, 531);
+        jPanelEstadPersFecha.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelEstadPersFecha, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadCitas.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -2118,16 +2240,16 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelEstadCitas.add(jTextFieldAnioEstadCitasInicial);
-        jTextFieldAnioEstadCitasInicial.setBounds(210, 320, 50, 28);
+        jTextFieldAnioEstadCitasInicial.setBounds(210, 320, 50, 20);
 
         jLabelFechaCita1.setText("Fecha inicial");
         jPanelEstadCitas.add(jLabelFechaCita1);
-        jLabelFechaCita1.setBounds(150, 260, 84, 18);
+        jLabelFechaCita1.setBounds(150, 260, 57, 14);
 
         jTextFieldDiaEstadCitasInicial.setEditable(false);
         jTextFieldDiaEstadCitasInicial.setText("1");
         jPanelEstadCitas.add(jTextFieldDiaEstadCitasInicial);
-        jTextFieldDiaEstadCitasInicial.setBounds(120, 320, 33, 28);
+        jTextFieldDiaEstadCitasInicial.setBounds(120, 320, 33, 20);
 
         jButtonMasMesEstadCitasInicial.setText("+");
         jButtonMasMesEstadCitasInicial.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -2159,12 +2281,12 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabel13.setText("_____________________________________________________________________________");
         jPanelEstadCitas.add(jLabel13);
-        jLabel13.setBounds(180, 70, 539, 18);
+        jLabel13.setBounds(180, 70, 462, 14);
 
         jLabelEstadCitas.setFont(new java.awt.Font("Lucida Grande", 1, 48));
         jLabelEstadCitas.setText("Estadísticas citas");
         jPanelEstadCitas.add(jLabelEstadCitas);
-        jLabelEstadCitas.setBounds(237, 20, 469, 57);
+        jLabelEstadCitas.setBounds(237, 20, 404, 62);
 
         jTextAreaInfoEstadCitas.setBackground(new java.awt.Color(255, 204, 102));
         jTextAreaInfoEstadCitas.setColumns(17);
@@ -2185,7 +2307,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelEstadCitas.add(jTextFieldMesEstadCitasInicial);
-        jTextFieldMesEstadCitasInicial.setBounds(170, 320, 33, 28);
+        jTextFieldMesEstadCitasInicial.setBounds(170, 320, 33, 20);
 
         jButtonMenosMesEstadCitasFinal.setText("-");
         jButtonMenosMesEstadCitasFinal.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -2251,16 +2373,16 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelEstadCitas.add(jTextFieldAnioEstadCitasFinal);
-        jTextFieldAnioEstadCitasFinal.setBounds(720, 320, 50, 28);
+        jTextFieldAnioEstadCitasFinal.setBounds(720, 320, 50, 20);
 
         jLabelFechaCita2.setText("Fecha final");
         jPanelEstadCitas.add(jLabelFechaCita2);
-        jLabelFechaCita2.setBounds(660, 260, 76, 18);
+        jLabelFechaCita2.setBounds(660, 260, 52, 14);
 
         jTextFieldDiaEstadCitasFinal.setEditable(false);
         jTextFieldDiaEstadCitasFinal.setText("1");
         jPanelEstadCitas.add(jTextFieldDiaEstadCitasFinal);
-        jTextFieldDiaEstadCitasFinal.setBounds(630, 320, 33, 28);
+        jTextFieldDiaEstadCitasFinal.setBounds(630, 320, 33, 20);
 
         jButtonMasMesEstadCitasFinal.setText("+");
         jButtonMasMesEstadCitasFinal.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -2298,7 +2420,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         });
         jPanelEstadCitas.add(jTextFieldMesEstadCitasFinal);
-        jTextFieldMesEstadCitasFinal.setBounds(680, 320, 33, 28);
+        jTextFieldMesEstadCitasFinal.setBounds(680, 320, 33, 20);
 
         jTextAreaEstadCitas.setBackground(new java.awt.Color(255, 204, 102));
         jTextAreaEstadCitas.setColumns(20);
@@ -2307,17 +2429,17 @@ public class UI_Administrador extends javax.swing.JFrame {
         jScrollPane7.setViewportView(jTextAreaEstadCitas);
 
         jPanelEstadCitas.add(jScrollPane7);
-        jScrollPane7.setBounds(315, 224, 262, 240);
+        jScrollPane7.setBounds(315, 224, 166, 240);
 
         jLabel14.setText("Fecha");
         jPanelEstadCitas.add(jLabel14);
-        jLabel14.setBounds(335, 201, 42, 18);
+        jLabel14.setBounds(335, 201, 29, 14);
 
         jLabel15.setText("Nº de citas");
         jPanelEstadCitas.add(jLabel15);
-        jLabel15.setBounds(469, 201, 76, 18);
+        jLabel15.setBounds(469, 201, 52, 14);
 
-        jPanelEstadCitas.setBounds(0, 0, 901, 531);
+        jPanelEstadCitas.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelEstadCitas, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         getContentPane().add(ZonaTrabajo);
@@ -4065,6 +4187,14 @@ public class UI_Administrador extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonAltaPacienteActionPerformed
 
+    private void jTextFieldDNIGestionarCitaMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDNIGestionarCitaMedicoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldDNIGestionarCitaMedicoActionPerformed
+
+    private void jButtonAceptarCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAceptarCitaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAceptarCitaActionPerformed
+
 
     /*Comprueba que la fecha introducida es correcta
      * 
@@ -4988,8 +5118,26 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
