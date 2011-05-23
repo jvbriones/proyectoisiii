@@ -115,7 +115,7 @@ public class Intro extends javax.swing.JFrame {
                     .add(jPanel1Layout.createSequentialGroup()
                         .add(121, 121, 121)
                         .add(jButton1)))
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -141,7 +141,7 @@ public class Intro extends javax.swing.JFrame {
         getContentPane().add(jLabelIcono, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 140, 150));
 
         jLabelCentroMedico1.setText("Centro Médico");
-        getContentPane().add(jLabelCentroMedico1, new org.netbeans.lib.awtextra.AbsoluteConstraints(177, 68, -1, -1));
+        getContentPane().add(jLabelCentroMedico1, new org.netbeans.lib.awtextra.AbsoluteConstraints(177, 68, 110, -1));
 
         jLabelIconoAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Ayuda-Desactivado.png"))); // NOI18N
         jLabelIconoAyuda.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -155,7 +155,7 @@ public class Intro extends javax.swing.JFrame {
                 jLabelIconoAyudaMouseExited(evt);
             }
         });
-        getContentPane().add(jLabelIconoAyuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 70, -1, -1));
+        getContentPane().add(jLabelIconoAyuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, -1, -1));
 
         jLabelIconoSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Salir-Desactivado.png"))); // NOI18N
         jLabelIconoSalir.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -169,13 +169,13 @@ public class Intro extends javax.swing.JFrame {
                 jLabelIconoSalirMouseExited(evt);
             }
         });
-        getContentPane().add(jLabelIconoSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 70, -1, -1));
+        getContentPane().add(jLabelIconoSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, -1, -1));
 
         jLabelAyuda.setText("Ayuda");
-        getContentPane().add(jLabelAyuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 120, -1, -1));
+        getContentPane().add(jLabelAyuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 120, -1, -1));
 
         jLabelSalir.setText("Salir");
-        getContentPane().add(jLabelSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 120, -1, -1));
+        getContentPane().add(jLabelSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 120, 40, 20));
 
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
