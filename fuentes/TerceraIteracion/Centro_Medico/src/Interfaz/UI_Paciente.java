@@ -324,6 +324,8 @@ public class UI_Paciente extends javax.swing.JFrame {
         ZonaTrabajo.setMinimumSize(new java.awt.Dimension(902, 520));
         ZonaTrabajo.setPreferredSize(new java.awt.Dimension(912, 530));
 
+        jPanelPrincipal.setAlignmentX(1.0F);
+        jPanelPrincipal.setAlignmentY(0.0F);
         jPanelPrincipal.setPreferredSize(new java.awt.Dimension(901, 531));
 
         jButtonGestionarPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Paciente.png"))); // NOI18N
@@ -384,7 +386,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(348, 348, 348))
         );
 
-        jPanelPrincipal.setBounds(0, -10, -1, 540);
+        jPanelPrincipal.setBounds(0, -10, 901, 540);
         ZonaTrabajo.add(jPanelPrincipal, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarPaciente.setPreferredSize(new java.awt.Dimension(901, 531));
@@ -567,7 +569,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jPanelGestionarPacienteLayout.setHorizontalGroup(
             jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarPacienteLayout.createSequentialGroup()
-                .addContainerGap(112, Short.MAX_VALUE)
+                .addContainerGap(111, Short.MAX_VALUE)
                 .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarPacienteLayout.createSequentialGroup()
                         .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -698,7 +700,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                                 .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                                     .add(jLabelFotoPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                     .add(jLabelFotografiaPaciente))))))
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
 
         jPanelGestionarPaciente.setBounds(1, 0, 900, 530);

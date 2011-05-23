@@ -31,47 +31,36 @@ public class PacBD {
     public boolean existePaciente(String Dni) throws SQLException {
         boolean existe;
 
-        Jdbc conexion = new Jdbc();
-        conexion.doConnection(IpDelServidor, NombreDB, user, pass);
-        String Consulta = "SELECT Dni FROM Pacientes WHERE Dni='"+Dni+"'";
-        ResultSet rs = conexion.consultaSelect(Consulta);
-        if(rs.next()) {
-            existe=true;
-        }
-        else {
-            existe=false;
-        }
-        conexion.closeConnection();
-        return existe;
+       Paciente Pac= obtener(Dni);
+       if (Pac!=null){
+           System.out.print("el tio existe\n");
+           return true;
+       }
+       else{
+           System.out.print( " el tio NO existe\n");
+           return false;
+       }
     }
 
     // Modificado con respecto al diseño
     public void almacenarPaciente(Paciente Paciente) {
-        String dni=Paciente.getDNI();
-        String nombre=Paciente.getNombre();
-        String apellidos=Paciente.getApellidos();
-        String direccion=Paciente.getDireccion();
-        String email=Paciente.getEmail();
-        String contrasena=Paciente.getContrasenia();
-        String telefono=Paciente.getTelefono();
-        Date fecNac=(Date) Paciente.getFecNac();
-        String lugarNac=Paciente.getLugarNac();
-        String foto=Paciente.getFoto();
-        String tipo=Paciente.getTipo();
+      
 
-        Jdbc conexion = new Jdbc();
-        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
+         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
-        // El diseño no se corresponde con al modelo de la base de datos
-        // Hay que ejecutar estas 2 sentencias
-        String Consulta = "INSERT INTO Usuarios VALUES ('"+dni+"','"+nombre+"','"+apellidos+"','"+contrasena+"','"+direccion+"','"+email+"','"+telefono+"',"+fecNac+",'"+lugarNac+"','"+foto+"','"+tipo+"')";
-        conexion.consultaUpdate(Consulta);
+        session.beginTransaction ();
+        session.save (Paciente);
+        session.getTransaction().commit();
 
-        Consulta = "INSERT INTO Pacientes VALUES ('"+dni+"')";
-        conexion.consultaUpdate(Consulta);
         
-        conexion.closeConnection();
-        
+    }
+
+    public Paciente obtener(String Dni) throws SQLException{
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+        Paciente Pac = (Paciente) session.get(Paciente.class, Dni);
+        return Pac;
     }
 
 
@@ -104,14 +93,7 @@ public class PacBD {
         return paciente;
     }
 */
-        public Paciente obtener(String Dni) throws SQLException{
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-
-        session.beginTransaction ();
-        Paciente paciente = (Paciente) session.get(Paciente.class, Dni);
-
-        return paciente;
-    }
+ 
 
     public void almacenar(Paciente paciente){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
