@@ -3173,6 +3173,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         else{
             gF.dispensarMedicamentos(ListaCodBarras, recetag);
         }
+        mostrarPanel("Principal");
     }//GEN-LAST:event_jButtonFinalizarMouseClicked
 
     private void jButtonConsultarMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarMouseReleased
