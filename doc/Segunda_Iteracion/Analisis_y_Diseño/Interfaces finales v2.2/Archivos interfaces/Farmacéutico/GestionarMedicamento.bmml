@@ -1,0 +1,129 @@
+<mockup version="1.0" skin="sketch" measuredW="1215" measuredH="614" mockupW="1111" mockupH="588">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="94" y="16" w="814" h="588" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <close>true</close>
+        <maximizeRestore>true</maximizeRestore>
+        <minimize>true</minimize>
+        <text>Centro%20Salud</text>
+        <topheight>28</topheight>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::HRule" x="94" y="154" w="814" h="-1" measuredW="100" measuredH="5" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Image" x="128" y="52" w="-1" h="-1" measuredW="77" measuredH="79" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Logotipo</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="112" y="131" w="-1" h="-1" measuredW="107" measuredH="23" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Centro%20%20de%20Salud</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::FieldSet" x="660" y="52" w="212" h="94" measuredW="200" measuredH="170" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties/>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="745" y="78" w="-1" h="-1" measuredW="77" measuredH="23" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Tipo%20Usuario</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="745" y="108" w="-1" h="-1" measuredW="99" measuredH="23" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Nombre%20Usuario</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Icon" x="675" y="75" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>ContactIcon%7Clarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::IconLabel" x="546" y="63" w="-1" h="-1" measuredW="48" measuredH="71" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>CircledXIcon%7Clarge</icon>
+        <text>Salir</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::IconLabel" x="477" y="63" w="-1" h="-1" measuredW="48" measuredH="71" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>HelpIcon%7Clarge</icon>
+        <text>Ayuda</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::IconLabel" x="414" y="63" w="-1" h="-1" measuredW="48" measuredH="71" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>HomeMobileIcon%7Clarge</icon>
+        <text>Inicio</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Label" x="303" y="182" w="432" h="55" measuredW="427" measuredH="56" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>40</size>
+        <text>Gestionar%20Medicamento</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::HRule" x="272" y="237" w="473" h="-1" measuredW="100" measuredH="5" zOrder="12" locked="false" isInGroup="-1"/>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::PointyButton" x="311" y="418" w="-1" h="-1" measuredW="59" measuredH="27" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%F1adir</text>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::CallOut" x="277" y="411" w="-1" h="-1" measuredW="34" measuredH="40" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>1</text>
+      </controlProperties>
+    </control>
+    <control controlID="22" controlTypeID="com.balsamiq.mockups::StickyNote" x="949" y="112" w="256" h="385" measuredW="109" measuredH="123" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>1-%20Se%20ejecuta%20el%20CU%20a%F1adirMedicamento.%20Y%20se%20informa%20del%20%E9xito%20o%20fracaso%20de%20la%20operaci%F3n.%20Fracasa%20si%20ya%20est%E1%20registrado%20ese%20nombre%2C%20mostrar%20ventana%20emergente%20con%20el%20mensaje%3A%20%22El%20medicamento%20XXXXX%20ya%20existe%22.%0A%20%0A2-%20Se%20ejecuta%20el%20CU%20consultarMedicamento%20y%20se%20muestra%20dicha%20interfaz.%0A%20%0AEl%20nombre%20no%20puede%20estar%20vac%EDo%20para%20ninguno%20de%20los%20dos%20casos.%20%0A%20%0A3-%20Este%20campo%20no%20se%20puede%20editar</text>
+      </controlProperties>
+    </control>
+    <control controlID="35" controlTypeID="com.balsamiq.mockups::PointyButton" x="626" y="418" w="-1" h="-1" measuredW="78" measuredH="27" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Consultar</text>
+      </controlProperties>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::CallOut" x="588" y="415" w="-1" h="-1" measuredW="37" measuredH="39" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>2</text>
+      </controlProperties>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::Label" x="328" y="293" w="-1" h="-1" measuredW="50" measuredH="23" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Nombre</text>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::Label" x="611" y="294" w="-1" h="-1" measuredW="72" measuredH="23" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Descripci%F3n</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::Label" x="311" y="347" w="-1" h="-1" measuredW="83" measuredH="23" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Stock%20m%EDnimo</text>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::TextArea" x="563" y="320" w="197" h="78" measuredW="200" measuredH="140" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Este%20medicamento...</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::TextInput" x="267" y="318" w="161" h="-1" measuredW="62" measuredH="27" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Bisolgrip</text>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::TextInput" x="318" y="370" w="70" h="-1" measuredW="28" measuredH="27" zOrder="23" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <text>25</text>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::CallOut" x="272" y="363" w="-1" h="-1" measuredW="36" measuredH="40" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>3</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
