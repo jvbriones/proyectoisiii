@@ -15,7 +15,7 @@ import java.util.*;
 
 public class PersonalMedico extends Usuario{
 
-    private Turno Turn=null;
+    private Turno Turno=null;
 
     public PersonalMedico() {
     }
@@ -32,17 +32,17 @@ public class PersonalMedico extends Usuario{
             String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto, String Tipo, Turno T1){
 
         super(Dni, Nombre, Apellidos, Direccion, Email, Contrasenia, Telefono, FecNac, LugarNac, Foto, Tipo);
-        this.Turn = T1;
+        this.Turno = T1;
     }
 
     //Método Get
-    public Turno getTurn(){
-        return Turn;
+    public Turno getTurno(){
+        return Turno;
     };
 
     //Método Set
-    public void setTurn( Turno T1){
-        this.Turn = T1;
+    public void setTurno( Turno T1){
+        this.Turno = T1;
     };
 
 }
