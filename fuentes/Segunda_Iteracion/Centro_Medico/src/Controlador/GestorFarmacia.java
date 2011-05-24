@@ -248,8 +248,8 @@ public class GestorFarmacia {
                 aux.add(doc.getApellidos());
                 aux.add(rec.getId());
                 resumenRecetas.add(aux);
-             }
-             * */
+             }*/
+             
 
             return almacenRecetas;
         }
