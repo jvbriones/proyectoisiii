@@ -2396,9 +2396,12 @@ MedicamentoBD meBD = new MedicamentoBD();
         Date dateFin = null;
         dateFin = dateChooserCombo1.getSelectedDate().getTime();
         MedicamentoRecetado me = new MedicamentoRecetado();
-        boolean exito;
-
-        exito = gM.realizarReceta(ins, jD, meRe, poso, durac, dateFin);
+        boolean exito = false;
+            try {
+                exito = gM.realizarReceta(ins, jD, meRe, poso, durac, dateFin, jTextFieldDNIAtenderPaciente.getText(), jTextFieldDNIPersonal.getText());
+            } catch (SQLException ex) {
+                Logger.getLogger(UI_Medico.class.getName()).log(Level.SEVERE, null, ex);
+            }
 
         if( exito==true){
                 new InformacionExito().setVisible(true);

@@ -12,6 +12,9 @@
  */
 
 package CentroMedico;
+import BaseDatos.MedicoBD;
+import BaseDatos.PacBD;
+import java.sql.SQLException;
 import java.util.Date;
 import java.util.Set;
 import java.util.HashSet;
@@ -34,11 +37,15 @@ public class Receta implements Serializable{
         this.Instrucciones = Instrucciones;
     }
 
-    public Receta(String Ins, String JD, Date F){
+    public Receta(String Ins, String JD, Date F, Paciente pa, String me ) throws SQLException{
         
         this.JuicioDiagnostico = JD;
         this.Instrucciones = Ins;
         this.Fecha = F;
+        this.Paci = pa;
+        //medi = medBD.obtener(me);
+
+
     }
 
 

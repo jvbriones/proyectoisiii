@@ -5,11 +5,14 @@
 
 package Controlador;
 
+import BaseDatos.MedicoBD;
 import BaseDatos.PacBD;
 import BaseDatos.RecetaBD;
+import BaseDatos.UsuarioBD;
 import CentroMedico.Cita;
 import CentroMedico.Medicamento;
 import CentroMedico.MedicamentoRecetado;
+import CentroMedico.Medico;
 import CentroMedico.Paciente;
 import CentroMedico.Receta;
 import java.lang.String;
@@ -50,9 +53,15 @@ public class GestorMedico {
      *
      */
 
-    public boolean realizarReceta(String Instrucciones, String JuicioDiagnostico,Set<Medicamento> medica, String Posologia, int Duracion, Date FechaFin){
+    public boolean realizarReceta(String Instrucciones, String JuicioDiagnostico,Set<Medicamento> medica, String Posologia, int Duracion, Date FechaFin, String paci, String medi) throws SQLException{
         Date fecha = new Date();
-        re = new Receta(Instrucciones,JuicioDiagnostico, fecha);
+        PacBD pac = new PacBD();
+        Paciente pacien;
+        MedicoBD medBD = new MedicoBD();
+        Medico medic;
+        pacien = pac.obtener(paci);
+        //tengo que obtener el medico
+        re = new Receta(Instrucciones,JuicioDiagnostico, fecha, pacien, medi);
 
         ArrayList medicamentos;
         Set<MedicamentoRecetado> medRec;
@@ -80,7 +89,9 @@ public class GestorMedico {
 
     public MedicamentoRecetado recetarMedicamento(Medicamento medica, String Posologia, int Duracion, Date FechaFin){
         MedicamentoRecetado me = new MedicamentoRecetado(medica, Posologia, Duracion, FechaFin, true);
-        re.getMedicamentosRecetados().add(me);
+        System.out.println("Medicamento recetado: "+me.getMedicamento().getNombre());
+        boolean fin;
+        re.getMedicamentosRecetados().add(me);     
 
         return me;
 
