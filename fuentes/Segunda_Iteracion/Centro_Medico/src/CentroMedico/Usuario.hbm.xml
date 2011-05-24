@@ -31,11 +31,11 @@
   </class>
 
 
-  <subclass name="CentroMedico.Radiologo" extends="CentroMedico.PersonalMedico" discriminator-value="DNI">
+  <subclass name="CentroMedico.Radiologo" extends="CentroMedico.PersonalMedico" discriminator-value="DNI" lazy="false">
   </subclass>
-  <subclass name="CentroMedico.Analista" extends="CentroMedico.PersonalMedico" discriminator-value="DNI">
+  <subclass name="CentroMedico.Analista" extends="CentroMedico.PersonalMedico" discriminator-value="DNI" lazy="false">
   </subclass>
-  <subclass name="CentroMedico.Medico" extends="CentroMedico.PersonalMedico" discriminator-value="DNI">
+  <subclass name="CentroMedico.Medico" extends="CentroMedico.PersonalMedico" discriminator-value="DNI" lazy="false">
   </subclass>
 
   </hibernate-mapping>
