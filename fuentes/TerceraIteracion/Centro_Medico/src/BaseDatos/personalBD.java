@@ -12,7 +12,10 @@
 package BaseDatos;
 
 import CentroMedico.Personal;
+import CentroMedico.Radiologo;
+import CentroMedico.Usuario;
 import java.sql.*;
+import org.hibernate.Session;
 
 
 /**
@@ -26,54 +29,47 @@ public class personalBD {
     String user="generico";
     String pass="generico";
 
-    public boolean existePersonal(String Dni) throws SQLException {
+
+
+   public boolean existePersonal(String Dni) throws SQLException {
         boolean existe;
 
-        Jdbc conexion = new Jdbc();
-        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "SELECT Dni FROM Personal WHERE Dni='"+Dni+"'";
-        ResultSet rs = conexion.consultaSelect(Consulta);
-        if(rs.next()) {
-            existe=true;
-        }
-        else {
-            existe=false;
-        }
-        conexion.closeConnection();
-        return existe;
+       Usuario Per= obtener(Dni);
+       if (Per!=null){
+           System.out.print("el tio existe\n");
+           return true;
+       }
+       else{
+           System.out.print( " el tio NO existe\n");
+           return false;
+       }
     }
 
     // Modificado con respecto al diseño
-    public void almacenarPersonal(Personal personal) {
-        String dni=personal.getDNI();
-        String nombre=personal.getNombre();
-        String apellidos=personal.getApellidos();
-        String direccion=personal.getDireccion();
-        String email=personal.getEmail();
-        String contrasena=personal.getContrasenia();
-        String telefono=personal.getTelefono();
-        Date fecNac=(Date) personal.getFecNac();
-        String lugarNac=personal.getLugarNac();
-        String foto=personal.getFoto();
-        String tipo=personal.getTipoPersonal();
+      public void almacenarPersonal(Personal Personal) {
 
-        Jdbc conexion = new Jdbc();
-        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
 
-        // El diseño no se corresponde con al modelo de la base de datos
-        // Hay que ejecutar estas 2 sentencias
-        String Consulta = "INSERT INTO Usuarios VALUES ('"+dni+"','"+nombre+"','"+apellidos+"','"+direccion+"','"+email+"','"+contrasena+"','"+telefono+"',"+fecNac+",'"+lugarNac+"','"+foto+"','"+tipo+"')";
-        conexion.consultaUpdate(Consulta);
 
-        Consulta = "INSERT INTO Personal VALUES ('"+dni+"','"+tipo+"')";
-        conexion.consultaUpdate(Consulta);
+         if (Personal.getTipoPersonal().equals("Radiologo")){
 
-        if(tipo.equals("Radiologo")){
-            Consulta = "INSERT INTO Radiologos VALUES ('"+dni+"')";
-            conexion.consultaUpdate(Consulta);
-        }
+             Radiologo radiologo=new Radiologo(Personal.getDNI(),Personal.getNombre(),Personal.getApellidos(),Personal.getDireccion(),Personal.getEmail(),Personal.getContrasenia(),Personal.getTelefono(),Personal.getFecNac(),Personal.getLugarNac(),Personal.getFoto());
+             RadiologoBD rad=new RadiologoBD();
+             rad.almacenar(radiologo);
+         }
+       
 
-        conexion.closeConnection();
 
     }
+
+       public Usuario obtener(String Dni) throws SQLException{
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+        System.out.println("llega");
+        Usuario Per = (Usuario) session.get(Usuario.class, Dni);
+        System.out.println("no llega");
+        return Per;
+    }
 }
+
+

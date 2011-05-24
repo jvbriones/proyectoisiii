@@ -10,6 +10,7 @@ import java.util.List;
  *  Clase para el almacenamiento, actualización, borrado, y obtención de objetos de la clase Radiologo en la base de datos.
  */
 public class RadiologoBD {
+
     public void almacenar(Radiologo radiologo){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 

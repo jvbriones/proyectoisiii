@@ -31,7 +31,7 @@
   </class>
 
 
-  <subclass name="CentroMedico.Radiologo" extends="CentroMedico.PersonalMedico" discriminator-value="DNI">
+  <subclass name="CentroMedico.Radiologo" extends="CentroMedico.PersonalMedico" discriminator-value="DNI_RADIOLOGO">
   </subclass>
   <subclass name="CentroMedico.Analista" extends="CentroMedico.PersonalMedico" discriminator-value="DNI">
   </subclass>
