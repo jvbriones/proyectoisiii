@@ -123,8 +123,6 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jList1 = new javax.swing.JList();
         jScrollPane13 = new javax.swing.JScrollPane();
         jList5 = new javax.swing.JList();
-        jScrollPane14 = new javax.swing.JScrollPane();
-        jList6 = new javax.swing.JList();
         jLabel17 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jPanelGestionarMedicamentos = new javax.swing.JPanel();
@@ -288,6 +286,8 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jButtonFinalizar = new javax.swing.JButton();
         jTextFieldCodBarras2 = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
+        jScrollPane14 = new javax.swing.JScrollPane();
+        jList6 = new javax.swing.JList();
         jPanelModificarLote = new javax.swing.JPanel();
         jLabelGestionarPaciente12 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
@@ -411,37 +411,29 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         });
         jScrollPane13.setViewportView(jList5);
 
-        jList6.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane14.setViewportView(jList6);
-
         org.jdesktop.layout.GroupLayout jPanel2Layout = new org.jdesktop.layout.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanel2Layout.createSequentialGroup()
-                .add(jScrollPane7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 124, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(jScrollPane7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 189, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jScrollPane13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 71, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jScrollPane14, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 93, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(jScrollPane13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 105, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(221, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jScrollPane7, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
-            .add(jScrollPane13, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
-            .add(jScrollPane14, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
+            .add(jPanel2Layout.createSequentialGroup()
+                .add(jScrollPane13, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
+                .add(12, 12, 12))
+            .add(jScrollPane7, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
         );
 
         scrollPaneRecetas.add(jPanel2);
 
         jLabel17.setText("Fecha");
 
-        jLabel19.setText("Medico");
+        jLabel19.setText("Receta");
 
         org.jdesktop.layout.GroupLayout jPanelDispensarConsultarLayout = new org.jdesktop.layout.GroupLayout(jPanelDispensarConsultar);
         jPanelDispensarConsultar.setLayout(jPanelDispensarConsultarLayout);
@@ -456,9 +448,9 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                 .addContainerGap(245, Short.MAX_VALUE)
                 .add(jPanelDispensarConsultarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelDispensarConsultarLayout.createSequentialGroup()
-                        .add(34, 34, 34)
+                        .add(76, 76, 76)
                         .add(jLabel17)
-                        .add(109, 109, 109)
+                        .add(107, 107, 107)
                         .add(jLabel19))
                     .add(scrollPaneRecetas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 323, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jButtonConsultarReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 127, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
@@ -473,8 +465,8 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                 .add(jLabel18)
                 .add(18, 18, 18)
                 .add(jPanelDispensarConsultarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel17)
-                    .add(jLabel19))
+                    .add(jLabel19)
+                    .add(jLabel17))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(scrollPaneRecetas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 204, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(41, 41, 41)
@@ -1802,6 +1794,13 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
         jLabel13.setText("Código de barras");
 
+        jList6.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane14.setViewportView(jList6);
+
         org.jdesktop.layout.GroupLayout jPanelDispensarFinalLayout = new org.jdesktop.layout.GroupLayout(jPanelDispensarFinal);
         jPanelDispensarFinal.setLayout(jPanelDispensarFinalLayout);
         jPanelDispensarFinalLayout.setHorizontalGroup(
@@ -1822,7 +1821,10 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                         .add(129, 129, 129))
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelDispensarFinalLayout.createSequentialGroup()
                         .add(jPanelDispensarFinalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                            .add(scrollPaneMedicamentosReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 494, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(jPanelDispensarFinalLayout.createSequentialGroup()
+                                .add(scrollPaneMedicamentosReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 382, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(jScrollPane14, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 102, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                             .add(jScrollPane8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 494, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                         .add(91, 91, 91))))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelDispensarFinalLayout.createSequentialGroup()
@@ -1850,7 +1852,9 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                     .add(jLabel20)
                     .add(jLabel23))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(scrollPaneMedicamentosReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 168, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(jPanelDispensarFinalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                    .add(jScrollPane14)
+                    .add(scrollPaneMedicamentosReceta, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE))
                 .add(25, 25, 25)
                 .add(jPanelDispensarFinalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabel13)
@@ -1858,10 +1862,10 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                     .add(jButtonDispensarFinal))
                 .add(35, 35, 35)
                 .add(jButtonFinalizar)
-                .addContainerGap(796, Short.MAX_VALUE))
+                .addContainerGap(927, Short.MAX_VALUE))
         );
 
-        jPanelDispensarFinal.setBounds(0, 0, 766, 1288);
+        jPanelDispensarFinal.setBounds(0, 0, 766, 1419);
         ZonaTrabajo.add(jPanelDispensarFinal, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente12.setFont(new java.awt.Font("Lucida Grande", 1, 36));
@@ -2863,16 +2867,19 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
             for(Iterator it = resumenRecetas.iterator(); it.hasNext();){
                 rec = (Receta) it.next();
                 med = rec.getMedi();
+
                 if(med == null){
                     System.out.println("no obtiene el medico");
                 }
+
                 listModel.addElement(rec.getFecha());
                  
-                 //listModel2.addElement(rec.getMedi().getNombre());
+                listModel2.addElement(rec.getId());
                  //listModel3.addElement(rec.getMedi().getApellidos());
              }
 
              jList1.setModel(listModel);
+             jList5.setModel(listModel2);
         }
         }
          else
@@ -2898,19 +2905,22 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
         System.out.println("2");
         DefaultListModel listModel = new DefaultListModel();
+        DefaultListModel listModel2 = new DefaultListModel();
         System.out.println("Receta: "+ rec.getId());
         smR = rec.getMedicamentosRecetados();
         System.out.println("3");
         for( Iterator itsmr = smR.iterator(); itsmr.hasNext();) {
             MedicamentoRecetado mR = new MedicamentoRecetado();
             mR = (MedicamentoRecetado) itsmr.next();
-            listModel.addElement(mR.getPosologia());
+            listModel.addElement(mR.getMedicamento().getNombre());
+            listModel2.addElement(mR.getMedicamento().getStockActual());
             System.out.println("4");
 
         }
         System.out.println("5");
 
         jListMedicamentosDispensar.setModel(listModel);
+        jList6.setModel(listModel2);
 
         recetag = gF.mostrarReceta(rec.getId());
 

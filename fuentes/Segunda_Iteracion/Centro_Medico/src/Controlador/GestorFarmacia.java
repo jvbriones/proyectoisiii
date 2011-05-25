@@ -217,6 +217,9 @@ public class GestorFarmacia {
     public Set<Receta> consultarResumenRecetas(String Dni) throws SQLException{
         ArrayList resumenRecetas = new ArrayList();
         GestorPacientes pacien = new GestorPacientes();
+
+                    System.out.println("EL DNI ES DE:" +Dni);
+
         Paciente pac = new Paciente();
         RecetaBD recetas = new RecetaBD();
         Receta rec = null;
