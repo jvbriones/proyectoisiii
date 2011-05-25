@@ -66,6 +66,7 @@ public class PacBD {
 
     /*
      * almacenar
+     * Guarda un objeto Paciente en la base de datos.
      */
     public void almacenar(Paciente paciente){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
@@ -75,6 +76,10 @@ public class PacBD {
         session.getTransaction().commit();
     }
 
+    /*
+     * actualizar
+     * Actualiza la información relativa a un paciente en la base de datos.
+     */
     public void actualizar (Paciente paciente){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
@@ -83,13 +88,15 @@ public class PacBD {
         session.getTransaction().commit();
     }
 
+    /*
+     * eliminar
+     * Elimina un objeto Paciente de la base de datos.
+     */
     public void eliminar(Paciente paciente){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
         session.delete (paciente);
         session.getTransaction().commit();
-
     }
-
 }
