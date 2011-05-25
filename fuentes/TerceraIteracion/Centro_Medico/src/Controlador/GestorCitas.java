@@ -31,15 +31,21 @@ public class GestorCitas {
 
     // GestorCitas NO DEBE COMUNICARSE DIRECTAMENTE CON LA CLASE PacienteBD
     // SINO QUE DEBERIA COMUNICARSE CON GestorPacientes, Y ESTE CON PacienteBD
+
+    /*
+     * Alta cita. Crea una nueva cita.
+     * @param Dni, identificador del paciente del que se va a crear una cita.
+     * @return Mensaje de respuesta con el resultado de la operación.
+     */
     public String alta_cita(String Dni) throws SQLException{
-        String datosCita=new String();
-        CitasBD bd_citas=new CitasBD();
+        String datosCita = "";
+        CitasBD bd_citas = new CitasBD();
         boolean existe;
 
-        existe=bd_citas.existeCita(Dni);
+        existe = bd_citas.existeCita(Dni);
 
         if(!existe){
-            PacBD bd_paciente=new PacBD();
+            PacBD bd_paciente = new PacBD();
             Paciente paciente;
 
             paciente=bd_paciente.obtener(Dni);
@@ -57,6 +63,11 @@ public class GestorCitas {
 
         return datosCita;
     }
+
+    public String alta_cita_online(String Dni) throws SQLException{
+        return "2Pac";
+    }
+
 
 //    public void setFecha(fecha){
 //    }
