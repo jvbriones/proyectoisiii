@@ -64,6 +64,9 @@ public class PacBD {
         return Pac;
     }
 
+    /*
+     * almacenar
+     */
     public void almacenar(Paciente paciente){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
