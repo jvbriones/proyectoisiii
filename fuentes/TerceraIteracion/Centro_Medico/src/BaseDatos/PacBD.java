@@ -31,7 +31,7 @@ public class PacBD {
     public boolean existePaciente(String Dni) throws SQLException {
         boolean existe;
 
-       Paciente Pac= obtener(Dni);
+       Paciente Pac = obtener(Dni);
        if (Pac!=null){
            System.out.print("el tio existe\n");
            return true;
@@ -44,7 +44,6 @@ public class PacBD {
 
     // Modificado con respecto al diseño
     public void almacenarPaciente(Paciente Paciente) {
-      
 
          Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
