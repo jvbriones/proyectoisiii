@@ -21,78 +21,48 @@ import org.hibernate.Session;
  * modificado por Juan Carlos Bermúdez. Añadidas las funciones almacenar, actualizar, eliminar y obtener.
  */
 public class PacBD {
+    String IpDelServidor = "localhost";
+    String NombreDB = "CentroMedico";
+    String user = "generico";
+    String pass = "generico";
 
-
-    String IpDelServidor="localhost";
-    String NombreDB="CentroMedico";
-    String user="generico";
-    String pass="generico";
-
+    /*
+     * existePaciente
+     */
     public boolean existePaciente(String Dni) throws SQLException {
-        boolean existe;
-
-       Paciente Pac = obtener(Dni);
-       if (Pac!=null){
-           System.out.print("el tio existe\n");
+        Paciente Pac = obtener(Dni);
+        
+        if (Pac != null){
+            System.out.print("ExistePaciente: Existe el paciente");
            return true;
        }
        else{
-           System.out.print( " el tio NO existe\n");
+           System.out.print( "ExistePaciente: No existe el paciente\n");
            return false;
        }
     }
 
-    // Modificado con respecto al diseño
+    /*
+     * almacenarPaciente
+     */
     public void almacenarPaciente(Paciente Paciente) {
-
-         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-
-        session.beginTransaction ();
-        session.save (Paciente);
-        session.getTransaction().commit();
-
-        
-    }
-
-    public Paciente obtener(String Dni) throws SQLException{
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
-        session.beginTransaction ();
+        session.beginTransaction();
+        session.save(Paciente);
+        session.getTransaction().commit();
+    }
+
+    /*
+     * obtener
+     * Devuelve un objeto Paciente.
+     */
+    public Paciente obtener(String Dni) throws SQLException{
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session.beginTransaction();
         Paciente Pac = (Paciente) session.get(Paciente.class, Dni);
         return Pac;
     }
-
-
-/*    public Paciente obtenerPaciente(String Dni) throws SQLException {
-
-        Paciente paciente;
-
-        Jdbc conexion = new Jdbc();
-        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "SELECT * FROM Paciente WHERE DNI_PACIENTE='"+Dni+"'";
-        ResultSet rs = conexion.consultaSelect(Consulta);
-        if(rs.next()) {
-            String dni=rs.getString("Dni");
-            String nombre=rs.getString("Nombre");
-            String apellidos=rs.getString("Apellidos");
-            String direccion=rs.getString("Direccion");
-            String email=rs.getString("Email");
-            String contrasena=rs.getString("Contrasena");
-            String telefono=rs.getString("Telefono"); //Estos campos han de coincidir exactamente con los de la tabla Usuarios en la BD
-            Date fecNac=rs.getDate("FechaNacimiento");//Si el Telefono es un Entero en la BD, aqui tendria que ser getInt("Telefono")
-            String lugarNac=rs.getString("LugarNacimiento");
-            String foto=rs.getString("Fotografia");
-
-            paciente = new Paciente(dni, nombre, apellidos, direccion, email, contrasena, telefono, fecNac, lugarNac, foto);
-        }
-        else{
-            paciente= null;
-        }
-        conexion.closeConnection();
-        return paciente;
-    }
-*/
- 
 
     public void almacenar(Paciente paciente){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
