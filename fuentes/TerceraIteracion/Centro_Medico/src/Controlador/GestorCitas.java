@@ -117,7 +117,7 @@ public class GestorCitas {
       
 
         cita.setEstado(false);
-        bd_citas.almacenarCita(cita);
+        bd_citas.almacenar(cita);
 
 
        return " cita cancelada";
