@@ -42,8 +42,33 @@ public class TurnoBD {
        }
     }
 
-    public void altaTurno(Turno tur) {
+    public void altaTurno(String Tipo,String Dni) {
 
+        Turno tur=new Turno();
+
+        if (Tipo.equals("Mañana")){
+            tur.setTipo("Mañana");
+            tur.setHoraInicio(null);
+            tur.setHoraFin(null);
+            tur.setId(1);
+
+        }
+
+         if (Tipo.equals("Tarde")){
+            tur.setTipo("Tarde");
+            tur.setHoraInicio(null);
+            tur.setHoraFin(null);
+            tur.setId(2);
+
+        }
+
+         if (Tipo.equals("Noche")){
+            tur.setTipo("Noche");
+            tur.setHoraInicio(null);
+            tur.setHoraFin(null);
+            tur.setId(3);
+
+        }
 
          Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
@@ -51,23 +76,6 @@ public class TurnoBD {
         session.save(tur);
         session.getTransaction().commit();
 
-    }
-
-    public boolean puedoBorrarTurno(String Dni) throws SQLException {
-        boolean puedo;
-
-        Jdbc conexion = new Jdbc();
-        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "SELECT * FROM Turnos WHERE Dni='"+Dni+"'";
-        ResultSet rs = conexion.consultaSelect(Consulta);
-        if(rs.next()) {
-            puedo=true;
-        }
-        else {
-            puedo=false;
-        }
-        conexion.closeConnection();
-        return puedo;
     }
 
     public void borraTurno(String Dni) throws SQLException {

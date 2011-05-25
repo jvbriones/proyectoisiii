@@ -34,7 +34,7 @@ public class personalBD {
    public boolean existePersonal(String Dni) throws SQLException {
         boolean existe;
 
-       Usuario Per= obtener(Dni);
+       Personal Per= obtener(Dni);
        if (Per!=null){
            System.out.print("el tio existe\n");
            return true;
@@ -61,12 +61,12 @@ public class personalBD {
 
     }
 
-       public Usuario obtener(String Dni) throws SQLException{
+       public Personal obtener(String Dni) throws SQLException{
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
         System.out.println("llega");
-        Usuario Per = (Usuario) session.get(Usuario.class, Dni);
+        Personal Per = (Personal) session.get(Personal.class, Dni);
         System.out.println("no llega");
         return Per;
     }

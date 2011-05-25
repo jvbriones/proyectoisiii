@@ -25,6 +25,7 @@ public class Turno implements Serializable{
     private int Id;
     private Date HoraInicio;
     private Date HoraFin;
+    private String Tipo;
 
     /*
      *
@@ -35,11 +36,12 @@ public class Turno implements Serializable{
     public Turno() {
     }
 
-    public Turno(int Id, Date HoraInicio, Date HoraFin){
+    public Turno(int Id, Date HoraInicio, Date HoraFin,String tipo){
 
         this.Id=Id;
         this.HoraInicio=HoraInicio;
         this.HoraFin=HoraFin;
+        this.Tipo=tipo;
     }
 
     /*
@@ -60,6 +62,10 @@ public class Turno implements Serializable{
         return HoraFin;
     }
 
+    public String getTipo(){
+        return Tipo;
+    }
+
     /*
      *
      * Metodos Asignadores
@@ -76,5 +82,9 @@ public class Turno implements Serializable{
 
     public void setHoraFin(Date HoraFin){
         this.HoraFin=HoraFin;
+    }
+
+    public void setTipo(String Tipo){
+        this.Tipo=Tipo;
     }
 }
