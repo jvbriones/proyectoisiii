@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="CentroMedico.Cita">
+    <composite-id>
+      <key-property column="FECHA_CITA" name="Fecha" type="date"/>
+      <key-many-to-one class="CentroMedico.Paciente" column="DNI_PACIENTE" name="Paciente"/>
+    </composite-id>
+    
+    <property name="Estado"/>
+    <property name="Tipo"/>
+    <many-to-one class="CentroMedico.PersonalMedico" name="PersonalMedico" column="DNI_PERSONALMEDICO"/>
+  </class>
+</hibernate-mapping>
