@@ -17,8 +17,11 @@ public class CitasBD {
      * HAY QUE CAMBIARLA A HIBERNATE
      */
     public boolean existeCita(String Dni) throws SQLException {
-        boolean existe;
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
+        Cita cita = obtenerCita(Dni);
+
+        boolean existe;
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, user,pass);
         String Consulta = "SELECT DniPaciente FROM Citas WHERE DniPaciente='"+Dni+"' And Estado=true";
