@@ -33,7 +33,7 @@ public class GestorTurnos {
         existe=bd_turno.existeTurno(tipo);
 
         if(!existe){
-            bd_turno.altaTurno(tipo);
+           // bd_turno.altaTurno(tipo);
             exito="Se creó un Turno de tipo "+tipo;
         }
         else{
@@ -82,7 +82,7 @@ public class GestorTurnos {
             TurnoBD bd_turno=new TurnoBD();
             SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
             
-            bd_turno.asignaTurno(Dni,fechaInicio,fechaFin,tipo);
+           // bd_turno.asignaTurno(Dni,fechaInicio,fechaFin,tipo);
             exito="El turno asignado al usuario "+Dni+" es "+tipo+" con esta fecha ";
             exito+=sdf.format(fechaInicio);
         }
@@ -105,7 +105,7 @@ public class GestorTurnos {
             // Esta variable es necesario tenerla para convertir tipo "Date" a String
             SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
 
-            bd_turno.modificaTurno(Dni,fechaInicio,fechaFin,tipo);
+          // bd_turno.modificaTurno(Dni,fechaInicio,fechaFin,tipo);
             exito="El turno asignado al usuario "+Dni+" es "+tipo+" con esta fecha ";
             exito+=sdf.format(fechaInicio);
         }
@@ -133,7 +133,7 @@ public class GestorTurnos {
                 Turno turno;
                 SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
                 
-                turno=bd_turno.obtenerTurno(Dni);
+                turno=bd_turno.obtener(Dni);
 //                String fechaI=new String(sdf.format(turno.getFechaInicio()));
   //              String tipo=new String(turno.getTipoTurno());
     //            String fechaF=new String(sdf.format(turno.getFechaFin()));

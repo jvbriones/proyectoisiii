@@ -1,63 +1,63 @@
 package BaseDatos;
 
-import CentroMedico.Paciente;
+import CentroMedico.Medico;
 import java.sql.*;
 import org.hibernate.Session;
 
-public class PacBD {
+public class MedicoBD {
     String IpDelServidor = "localhost";
     String NombreDB = "CentroMedico";
     String user = "generico";
     String pass = "generico";
 
     /*
-     * existePaciente
+     * Medico
      */
-    public boolean existePaciente(String Dni) throws SQLException {
-        Paciente Pac = obtener(Dni);
-        
-        if (Pac != null){
-            System.out.print("ExistePaciente: Existe el paciente");
+    public boolean existeMedico(String Dni) throws SQLException {
+        Medico med = obtener(Dni);
+
+        if (med != null){
+            System.out.print("ExisteMedico: Existe el paciente");
            return true;
        }
        else{
-           System.out.print( "ExistePaciente: No existe el paciente\n");
+           System.out.print( "ExisteMedico: No existe el paciente\n");
            return false;
        }
     }
 
     /*
-     * almacenarPaciente
+     * almacenarMedico
      */
-    public void almacenarPaciente(Paciente Paciente) {
+    public void almacenarMedico(Medico med) {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction();
-        session.save(Paciente);
+        session.save(med);
         session.getTransaction().commit();
     }
 
     /*
      * obtener
-     * Devuelve un objeto Paciente.
+     * Devuelve un objeto Medico
      */
-    public Paciente obtener(String Dni) throws SQLException{
+    public Medico obtener(String Dni) throws SQLException{
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction();
-        Paciente Pac = (Paciente) session.get(Paciente.class, Dni);
-        return Pac;
+        Medico med = (Medico) session.get(Medico.class, Dni);
+        return med;
     }
 
-  
+
     /*
      * actualizar
-     * Actualiza la información relativa a un paciente en la base de datos.
+     * Actualiza la información relativa a un medico en la base de datos.
      */
-    public void actualizar (Paciente paciente){
+    public void actualizar (Medico med){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
-        session.update (paciente);
+        session.update (med);
         session.getTransaction().commit();
     }
 
@@ -65,11 +65,11 @@ public class PacBD {
      * eliminar
      * Elimina un objeto Paciente de la base de datos.
      */
-    public void eliminar(Paciente paciente){
+    public void eliminar(Medico med){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
-        session.delete (paciente);
+        session.delete (med);
         session.getTransaction().commit();
     }
 }

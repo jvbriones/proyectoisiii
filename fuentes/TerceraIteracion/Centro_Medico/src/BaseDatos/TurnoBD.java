@@ -29,30 +29,27 @@ public class TurnoBD {
     String user="generico";
     String pass="generico";
 
-    public boolean existeTurno(String tipo) throws SQLException {
-        boolean existe;
+    public boolean existeTurno(String Dni) throws SQLException {
+         Turno tur = obtener(Dni);
 
-        Jdbc conexion = new Jdbc();
-        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "SELECT Dni FROM Turnos WHERE Tipo='"+tipo+"'";
-        ResultSet rs = conexion.consultaSelect(Consulta);
-        if(rs.next()) {
-            existe=true;
-        }
-        else {
-            existe=false;
-        }
-        conexion.closeConnection();
-        return existe;
+        if (tur != null){
+            System.out.print("ExisteTurno: Existe el Turno");
+           return true;
+       }
+       else{
+           System.out.print( "ExisteTurno: No existe el turno\n");
+           return false;
+       }
     }
 
-    public void altaTurno(String tipo) {
+    public void altaTurno(Turno tur) {
 
-        Jdbc conexion = new Jdbc();
-        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "INSERT INTO Turnos VALUES ('"+tipo+"')";
-        conexion.consultaUpdate(Consulta);
-        conexion.closeConnection();
+
+         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction();
+        session.save(tur);
+        session.getTransaction().commit();
 
     }
 
@@ -73,24 +70,20 @@ public class TurnoBD {
         return puedo;
     }
 
-    public void borraTurno(String Dni) {
+    public void borraTurno(String Dni) throws SQLException {
 
-        /*
-         Hay una incoherencia ya que en el diagrama de clases dice que esta
-         * función devuelve un boolean, y luego en el diagrama de secuencia
-         * por el contrario, no devuelove nada (void).
-         */
-        /*
-        Jdbc conexion = new Jdbc();
-        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
-        String Consulta = "DELETE * FROM Turnos WHERE Dni="+Dni;
-        conexion.consultaUpdate(Consulta);
-        conexion.closeConnection();
-        */
+             Turno tur=obtener(Dni);
 
+
+            Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+            session.beginTransaction ();
+            session.delete (tur);
+            session.getTransaction().commit();
+        
     }
     
-    public void asignaTurno(String Dni, Date fechaInicio, Date fechaFin, String tipo) {
+    /*public void asignaTurno(String Dni, Date fechaInicio, Date fechaFin, String tipo) {
 
         Jdbc conexion = new Jdbc();
         conexion.doConnection(IpDelServidor, NombreDB, user,pass);
@@ -98,9 +91,9 @@ public class TurnoBD {
         conexion.consultaUpdate(Consulta);
         conexion.closeConnection();
 
-    }
+    }*/
 
-    public void modificaTurno(String Dni, Date fechaInicio, Date fechaFin, String tipo) {
+   /* public void modificaTurno(String Dni, Date fechaInicio, Date fechaFin, String tipo) {
 
         /*
          Hay una incoherencia ya que en el diagrama de clases dice que esta
@@ -113,36 +106,14 @@ public class TurnoBD {
         String Consulta = "Update Turnos SET VALUES"+Dni+","+fechaInicio+","+fechaFin+","+tipo"WHERE Turno.Dni="+Dni;
         conexion.consultaUpdate(Consulta);
         conexion.closeConnection();
-        */
+      
 
     }
 
-    public Turno obtenerTurno(String Dni) throws SQLException {
-
-        Turno Turno=new Turno();
-
-        Jdbc conexion = new Jdbc();
-        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "SELECT * FROM Turnos WHERE Dni='"+Dni+"'";
-        ResultSet rs = conexion.consultaSelect(Consulta);
-        if(rs.next()) {
-            String dni=rs.getString("Dni");
-            Date fechaInicio=rs.getDate("FechaInicio");
-            Date fechaFin=rs.getDate("FechaFin");
-            String tipo=rs.getString("Tipo");
-
-//Se ha puesto esta línea entre comentarios porque es incoherente con la nueva clase Turno.
-//            Turno = new Turno(dni, fechaInicio, fechaFin, tipo);
-        }
-        else{
-            Turno= null;
-        }
-        conexion.closeConnection();
-        return Turno;
-    }
 
 
-    public ArrayList ConsultarTurnos(Date fecha) throws SQLException {
+*/
+   /* public ArrayList ConsultarTurnos(Date fecha) throws SQLException {
 
         ArrayList datos=new ArrayList();
 
@@ -160,6 +131,9 @@ public class TurnoBD {
         }
         return datos;
     }
+    *
+    * */
+  
     public void almacenar(Turno turno){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
@@ -169,15 +143,11 @@ public class TurnoBD {
 
     }
 
-    public Turno obtener (int Id){
+     public Turno obtener(String Dni) throws SQLException{
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-
-        session.beginTransaction ();
-
-        Turno turno= (Turno) session.get(Turno.class, Id);
-        session.getTransaction().commit();
-
-        return turno;
+        session.beginTransaction();
+        Turno tur = (Turno) session.get(Turno.class, Dni);
+        return tur;
     }
 
 
