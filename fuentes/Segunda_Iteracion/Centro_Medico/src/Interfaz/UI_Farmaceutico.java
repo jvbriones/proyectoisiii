@@ -113,6 +113,29 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jLabelSalir = new javax.swing.JLabel();
         jLabelIcono = new javax.swing.JLabel();
         ZonaTrabajo = new javax.swing.JLayeredPane();
+        jPanelConsultarMedicamento = new javax.swing.JPanel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabelGestionarPaciente13 = new javax.swing.JLabel();
+        jTextFieldNombreMedica = new javax.swing.JTextField();
+        jTextFieldExistencias = new javax.swing.JTextField();
+        jLabelNombreMedica = new javax.swing.JLabel();
+        jLabelExis = new javax.swing.JLabel();
+        jLabelDescrip = new javax.swing.JLabel();
+        scrollPanelDescripcion = new java.awt.ScrollPane();
+        jScrollPane12 = new javax.swing.JScrollPane();
+        jTextAreaConsulDescrip = new javax.swing.JTextArea();
+        jButtonModificarMedica = new javax.swing.JButton();
+        jButtonEliminarMedicamento = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabelCodLote = new javax.swing.JLabel();
+        jTextFieldCodLote = new javax.swing.JTextField();
+        jButtonConsultarLote = new javax.swing.JButton();
+        jButtonAnadirLote = new javax.swing.JButton();
+        jTextFieldStockActual = new javax.swing.JTextField();
+        jLabelStockActual = new javax.swing.JLabel();
+        jLabelError2 = new javax.swing.JLabel();
+        jOptionPaneConfirmar = new javax.swing.JOptionPane();
+        jLabelErrorLote = new javax.swing.JLabel();
         jPanelDispensarConsultar = new javax.swing.JPanel();
         jButtonConsultarReceta = new javax.swing.JButton();
         jLabelGestionarPaciente10 = new javax.swing.JLabel();
@@ -140,29 +163,6 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jLabelError3 = new javax.swing.JLabel();
         jLabelError4 = new javax.swing.JLabel();
         jLabelExisteMedica = new javax.swing.JLabel();
-        jPanelConsultarMedicamento = new javax.swing.JPanel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabelGestionarPaciente13 = new javax.swing.JLabel();
-        jTextFieldNombreMedica = new javax.swing.JTextField();
-        jTextFieldExistencias = new javax.swing.JTextField();
-        jLabelNombreMedica = new javax.swing.JLabel();
-        jLabelExis = new javax.swing.JLabel();
-        jLabelDescrip = new javax.swing.JLabel();
-        scrollPanelDescripcion = new java.awt.ScrollPane();
-        jScrollPane12 = new javax.swing.JScrollPane();
-        jTextAreaConsulDescrip = new javax.swing.JTextArea();
-        jButtonModificarMedica = new javax.swing.JButton();
-        jButtonEliminarMedicamento = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
-        jLabelCodLote = new javax.swing.JLabel();
-        jTextFieldCodLote = new javax.swing.JTextField();
-        jButtonConsultarLote = new javax.swing.JButton();
-        jButtonAnadirLote = new javax.swing.JButton();
-        jTextFieldStockActual = new javax.swing.JTextField();
-        jLabelStockActual = new javax.swing.JLabel();
-        jLabelError2 = new javax.swing.JLabel();
-        jOptionPaneConfirmar = new javax.swing.JOptionPane();
-        jLabelErrorLote = new javax.swing.JLabel();
         jPanelDispensar = new javax.swing.JPanel();
         jLabelGestionarPaciente9 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
@@ -378,180 +378,6 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         ZonaTrabajo.setMinimumSize(new java.awt.Dimension(902, 520));
         ZonaTrabajo.setPreferredSize(new java.awt.Dimension(912, 530));
 
-        jButtonConsultarReceta.setText("Consultar");
-        jButtonConsultarReceta.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonConsultarRecetaMouseClicked(evt);
-            }
-        });
-        jButtonConsultarReceta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonConsultarRecetaActionPerformed(evt);
-            }
-        });
-
-        jLabelGestionarPaciente10.setFont(new java.awt.Font("Lucida Grande", 1, 36));
-        jLabelGestionarPaciente10.setText("Dispensar Medicamentos");
-
-        jLabel18.setText("_________________________________________________________________________");
-
-        scrollPaneRecetas.setBackground(new java.awt.Color(254, 254, 254));
-
-        jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane7.setViewportView(jList1);
-
-        jList5.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane13.setViewportView(jList5);
-
-        org.jdesktop.layout.GroupLayout jPanel2Layout = new org.jdesktop.layout.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel2Layout.createSequentialGroup()
-                .add(jScrollPane7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 189, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jScrollPane13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 105, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(221, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel2Layout.createSequentialGroup()
-                .add(jScrollPane13, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
-                .add(12, 12, 12))
-            .add(jScrollPane7, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
-        );
-
-        scrollPaneRecetas.add(jPanel2);
-
-        jLabel17.setText("Fecha");
-
-        jLabel19.setText("Receta");
-
-        org.jdesktop.layout.GroupLayout jPanelDispensarConsultarLayout = new org.jdesktop.layout.GroupLayout(jPanelDispensarConsultar);
-        jPanelDispensarConsultar.setLayout(jPanelDispensarConsultarLayout);
-        jPanelDispensarConsultarLayout.setHorizontalGroup(
-            jPanelDispensarConsultarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelDispensarConsultarLayout.createSequentialGroup()
-                .add(146, 146, 146)
-                .add(jPanelDispensarConsultarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jLabel18)
-                    .add(jLabelGestionarPaciente10, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 582, Short.MAX_VALUE)))
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelDispensarConsultarLayout.createSequentialGroup()
-                .addContainerGap(245, Short.MAX_VALUE)
-                .add(jPanelDispensarConsultarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanelDispensarConsultarLayout.createSequentialGroup()
-                        .add(76, 76, 76)
-                        .add(jLabel17)
-                        .add(107, 107, 107)
-                        .add(jLabel19))
-                    .add(scrollPaneRecetas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 323, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButtonConsultarReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 127, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(160, 160, 160))
-        );
-        jPanelDispensarConsultarLayout.setVerticalGroup(
-            jPanelDispensarConsultarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelDispensarConsultarLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(jLabelGestionarPaciente10)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jLabel18)
-                .add(18, 18, 18)
-                .add(jPanelDispensarConsultarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel19)
-                    .add(jLabel17))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(scrollPaneRecetas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 204, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(41, 41, 41)
-                .add(jButtonConsultarReceta)
-                .addContainerGap(113, Short.MAX_VALUE))
-        );
-
-        jPanelDispensarConsultar.setBounds(0, 0, 728, 510);
-        ZonaTrabajo.add(jPanelDispensarConsultar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        jPanelGestionarMedicamentos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel11.setText("_______________________________________________________________________");
-        jPanelGestionarMedicamentos.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 61, -1, -1));
-
-        jLabelGestionarPaciente8.setFont(new java.awt.Font("Lucida Grande", 1, 36));
-        jLabelGestionarPaciente8.setText("Gestionar Medicamento");
-        jPanelGestionarMedicamentos.add(jLabelGestionarPaciente8, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 12, 515, -1));
-
-        jLabelNombre.setText("Nombre");
-        jPanelGestionarMedicamentos.add(jLabelNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 121, -1, -1));
-
-        jLabelStockMinimo.setText("Stock Minimo");
-        jPanelGestionarMedicamentos.add(jLabelStockMinimo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 194, -1, -1));
-
-        jLabelDescripcion.setText("Descripcion");
-        jPanelGestionarMedicamentos.add(jLabelDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(481, 97, -1, -1));
-
-        jTextFieldNombreMedicamento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNombreMedicamentoActionPerformed(evt);
-            }
-        });
-        jPanelGestionarMedicamentos.add(jTextFieldNombreMedicamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(241, 121, 132, -1));
-
-        jTextFieldStockMinimo.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldStockMinimoKeyTyped(evt);
-            }
-        });
-        jPanelGestionarMedicamentos.add(jTextFieldStockMinimo, new org.netbeans.lib.awtextra.AbsoluteConstraints(308, 189, 65, -1));
-
-        jTextAreaDescripcion.setColumns(20);
-        jTextAreaDescripcion.setRows(5);
-        jScrollPane3.setViewportView(jTextAreaDescripcion);
-
-        jPanelGestionarMedicamentos.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 121, 281, 126));
-
-        jButtonAnadir.setText("Añadir");
-        jButtonAnadir.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jButtonAnadirMouseReleased(evt);
-            }
-        });
-        jPanelGestionarMedicamentos.add(jButtonAnadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 265, 105, -1));
-
-        jButtonConsultar.setText("Consultar");
-        jButtonConsultar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonConsultarMouseClicked(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jButtonConsultarMouseReleased(evt);
-            }
-        });
-        jPanelGestionarMedicamentos.add(jButtonConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(526, 265, 107, -1));
-
-        jLabelError3.setForeground(new java.awt.Color(255, 0, 0));
-        jLabelError3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Error.png"))); // NOI18N
-        jLabelError3.setText("Faltan datos por introducir");
-        jPanelGestionarMedicamentos.add(jLabelError3, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 327, 254, -1));
-
-        jLabelError4.setForeground(new java.awt.Color(255, 0, 0));
-        jLabelError4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Error.png"))); // NOI18N
-        jLabelError4.setText("No existe medicamento con ese nombre");
-        jPanelGestionarMedicamentos.add(jLabelError4, new org.netbeans.lib.awtextra.AbsoluteConstraints(429, 327, 329, -1));
-
-        jLabelExisteMedica.setForeground(new java.awt.Color(255, 0, 0));
-        jLabelExisteMedica.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Error.png"))); // NOI18N
-        jLabelExisteMedica.setText("El medicamento ya existe");
-        jPanelGestionarMedicamentos.add(jLabelExisteMedica, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 378, 254, -1));
-
-        jPanelGestionarMedicamentos.setBounds(0, 0, 860, 430);
-        ZonaTrabajo.add(jPanelGestionarMedicamentos, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
         jLabel27.setText("____________________________________________________________________");
 
         jLabelGestionarPaciente13.setFont(new java.awt.Font("Lucida Grande", 1, 36));
@@ -559,7 +385,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
         jLabelNombreMedica.setText("Nombre del medicamento");
 
-        jLabelExis.setText("Existencias");
+        jLabelExis.setText("Existencias M.");
 
         jLabelDescrip.setText("Descripción");
 
@@ -755,6 +581,180 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
         jPanelConsultarMedicamento.setBounds(0, 0, 765, 485);
         ZonaTrabajo.add(jPanelConsultarMedicamento, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        jButtonConsultarReceta.setText("Consultar");
+        jButtonConsultarReceta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonConsultarRecetaMouseClicked(evt);
+            }
+        });
+        jButtonConsultarReceta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonConsultarRecetaActionPerformed(evt);
+            }
+        });
+
+        jLabelGestionarPaciente10.setFont(new java.awt.Font("Lucida Grande", 1, 36));
+        jLabelGestionarPaciente10.setText("Dispensar Medicamentos");
+
+        jLabel18.setText("_________________________________________________________________________");
+
+        scrollPaneRecetas.setBackground(new java.awt.Color(254, 254, 254));
+
+        jList1.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane7.setViewportView(jList1);
+
+        jList5.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane13.setViewportView(jList5);
+
+        org.jdesktop.layout.GroupLayout jPanel2Layout = new org.jdesktop.layout.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanel2Layout.createSequentialGroup()
+                .add(jScrollPane7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 189, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jScrollPane13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 105, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(221, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanel2Layout.createSequentialGroup()
+                .add(jScrollPane13, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
+                .add(12, 12, 12))
+            .add(jScrollPane7, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
+        );
+
+        scrollPaneRecetas.add(jPanel2);
+
+        jLabel17.setText("Fecha");
+
+        jLabel19.setText("Receta");
+
+        org.jdesktop.layout.GroupLayout jPanelDispensarConsultarLayout = new org.jdesktop.layout.GroupLayout(jPanelDispensarConsultar);
+        jPanelDispensarConsultar.setLayout(jPanelDispensarConsultarLayout);
+        jPanelDispensarConsultarLayout.setHorizontalGroup(
+            jPanelDispensarConsultarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelDispensarConsultarLayout.createSequentialGroup()
+                .add(146, 146, 146)
+                .add(jPanelDispensarConsultarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jLabel18)
+                    .add(jLabelGestionarPaciente10, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 582, Short.MAX_VALUE)))
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelDispensarConsultarLayout.createSequentialGroup()
+                .addContainerGap(245, Short.MAX_VALUE)
+                .add(jPanelDispensarConsultarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jPanelDispensarConsultarLayout.createSequentialGroup()
+                        .add(76, 76, 76)
+                        .add(jLabel17)
+                        .add(107, 107, 107)
+                        .add(jLabel19))
+                    .add(scrollPaneRecetas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 323, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jButtonConsultarReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 127, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(160, 160, 160))
+        );
+        jPanelDispensarConsultarLayout.setVerticalGroup(
+            jPanelDispensarConsultarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanelDispensarConsultarLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(jLabelGestionarPaciente10)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jLabel18)
+                .add(18, 18, 18)
+                .add(jPanelDispensarConsultarLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jLabel19)
+                    .add(jLabel17))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(scrollPaneRecetas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 204, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(41, 41, 41)
+                .add(jButtonConsultarReceta)
+                .addContainerGap(113, Short.MAX_VALUE))
+        );
+
+        jPanelDispensarConsultar.setBounds(0, 0, 728, 510);
+        ZonaTrabajo.add(jPanelDispensarConsultar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        jPanelGestionarMedicamentos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel11.setText("_______________________________________________________________________");
+        jPanelGestionarMedicamentos.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 61, -1, -1));
+
+        jLabelGestionarPaciente8.setFont(new java.awt.Font("Lucida Grande", 1, 36));
+        jLabelGestionarPaciente8.setText("Gestionar Medicamento");
+        jPanelGestionarMedicamentos.add(jLabelGestionarPaciente8, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 12, 515, -1));
+
+        jLabelNombre.setText("Nombre");
+        jPanelGestionarMedicamentos.add(jLabelNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 121, -1, -1));
+
+        jLabelStockMinimo.setText("Stock Minimo");
+        jPanelGestionarMedicamentos.add(jLabelStockMinimo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 194, -1, -1));
+
+        jLabelDescripcion.setText("Descripcion");
+        jPanelGestionarMedicamentos.add(jLabelDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(481, 97, -1, -1));
+
+        jTextFieldNombreMedicamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldNombreMedicamentoActionPerformed(evt);
+            }
+        });
+        jPanelGestionarMedicamentos.add(jTextFieldNombreMedicamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(241, 121, 132, -1));
+
+        jTextFieldStockMinimo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldStockMinimoKeyTyped(evt);
+            }
+        });
+        jPanelGestionarMedicamentos.add(jTextFieldStockMinimo, new org.netbeans.lib.awtextra.AbsoluteConstraints(308, 189, 65, -1));
+
+        jTextAreaDescripcion.setColumns(20);
+        jTextAreaDescripcion.setRows(5);
+        jScrollPane3.setViewportView(jTextAreaDescripcion);
+
+        jPanelGestionarMedicamentos.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 121, 281, 126));
+
+        jButtonAnadir.setText("Añadir");
+        jButtonAnadir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButtonAnadirMouseReleased(evt);
+            }
+        });
+        jPanelGestionarMedicamentos.add(jButtonAnadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 265, 105, -1));
+
+        jButtonConsultar.setText("Consultar");
+        jButtonConsultar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonConsultarMouseClicked(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jButtonConsultarMouseReleased(evt);
+            }
+        });
+        jPanelGestionarMedicamentos.add(jButtonConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(526, 265, 107, -1));
+
+        jLabelError3.setForeground(new java.awt.Color(255, 0, 0));
+        jLabelError3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Error.png"))); // NOI18N
+        jLabelError3.setText("Faltan datos por introducir");
+        jPanelGestionarMedicamentos.add(jLabelError3, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 327, 254, -1));
+
+        jLabelError4.setForeground(new java.awt.Color(255, 0, 0));
+        jLabelError4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Error.png"))); // NOI18N
+        jLabelError4.setText("No existe medicamento con ese nombre");
+        jPanelGestionarMedicamentos.add(jLabelError4, new org.netbeans.lib.awtextra.AbsoluteConstraints(429, 327, 329, -1));
+
+        jLabelExisteMedica.setForeground(new java.awt.Color(255, 0, 0));
+        jLabelExisteMedica.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Error.png"))); // NOI18N
+        jLabelExisteMedica.setText("El medicamento ya existe");
+        jPanelGestionarMedicamentos.add(jLabelExisteMedica, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 378, 254, -1));
+
+        jPanelGestionarMedicamentos.setBounds(0, 0, 860, 430);
+        ZonaTrabajo.add(jPanelGestionarMedicamentos, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente9.setFont(new java.awt.Font("Lucida Grande", 1, 36));
         jLabelGestionarPaciente9.setText("Dispensar Medicamentos");
@@ -964,7 +964,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                     .add(jLabel7))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(scrollPaneMedicamentosBajoStock, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 202, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addContainerGap(115, Short.MAX_VALUE))
         );
 
         jPanelComprobarStockMedicamentos.setBounds(0, 0, 810, 560);
@@ -1370,11 +1370,11 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
             }
         });
         jPanelConsultarDatosPersonales.add(jRadioButtonFarmaceutico);
-        jRadioButtonFarmaceutico.setBounds(440, 370, 130, 24);
+        jRadioButtonFarmaceutico.setBounds(440, 370, 130, 22);
 
         jRadioButtonAnalista.setText("Analista");
         jPanelConsultarDatosPersonales.add(jRadioButtonAnalista);
-        jRadioButtonAnalista.setBounds(440, 350, 100, 24);
+        jRadioButtonAnalista.setBounds(440, 350, 100, 22);
 
         jRadioButtonRadiologo.setText("Radiólogo");
         jRadioButtonRadiologo.addActionListener(new java.awt.event.ActionListener() {
@@ -1383,7 +1383,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
             }
         });
         jPanelConsultarDatosPersonales.add(jRadioButtonRadiologo);
-        jRadioButtonRadiologo.setBounds(440, 410, 120, 24);
+        jRadioButtonRadiologo.setBounds(440, 410, 120, 22);
 
         jRadioButtonMedico.setText("Médico");
         jRadioButtonMedico.addActionListener(new java.awt.event.ActionListener() {
@@ -1392,7 +1392,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
             }
         });
         jPanelConsultarDatosPersonales.add(jRadioButtonMedico);
-        jRadioButtonMedico.setBounds(440, 390, 110, 24);
+        jRadioButtonMedico.setBounds(440, 390, 110, 22);
 
         jPanelConsultarDatosPersonales.setBounds(-60, -15, 960, 830);
         ZonaTrabajo.add(jPanelConsultarDatosPersonales, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -1862,10 +1862,10 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                     .add(jButtonDispensarFinal))
                 .add(35, 35, 35)
                 .add(jButtonFinalizar)
-                .addContainerGap(927, Short.MAX_VALUE))
+                .addContainerGap(950, Short.MAX_VALUE))
         );
 
-        jPanelDispensarFinal.setBounds(0, 0, 766, 1419);
+        jPanelDispensarFinal.setBounds(0, 0, 766, 1464);
         ZonaTrabajo.add(jPanelDispensarFinal, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente12.setFont(new java.awt.Font("Lucida Grande", 1, 36));

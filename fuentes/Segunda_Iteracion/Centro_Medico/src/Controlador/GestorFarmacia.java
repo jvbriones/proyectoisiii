@@ -99,10 +99,17 @@ public class GestorFarmacia {
 
     public boolean anadirLoteMedicamento (String CodBarras,int Existencias, Date FechaCaducidad,Medicamento Me){
 
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session.beginTransaction ();
+
+
+
         LoteMedicamento Lo=new LoteMedicamento();
         LoteMedicamentoBD loBD = new LoteMedicamentoBD();
         MedicamentoBD meBD = new MedicamentoBD();
         Lo=loBD.obtener(CodBarras);
+
+
 
         if( Lo!=null)
             return false;
@@ -384,7 +391,8 @@ public class GestorFarmacia {
                  
                    lote = (LoteMedicamento)itLo.next();// como obtener de aquí un array cuando en el diseñoo aparece un array?
                    nombreLo=lote.getCodBarras();
-                  
+                   System.out.println(StockMinimoPermitido + " hola");
+
                    Date fechaCad = lote.getFechaCaducidad();
                 if( fechaActual.after(fechaCad)){
                     nExistencias +=lote.getExistencias();
@@ -399,7 +407,7 @@ public class GestorFarmacia {
             }
             
 
-           if( StockMinimoPermitido < StockActual){
+           if( StockMinimoPermitido > StockActual){
                    System.out.println(nombre);
                    
                    Atributos.add(nombre);
