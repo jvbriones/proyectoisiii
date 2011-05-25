@@ -14,7 +14,7 @@ public class CitasBD {
     /*
      * existencia
      * Comprueba si existen citas para un paciente concreto.
-     * HAY QUE CAMBIARLA
+     * HAY QUE CAMBIARLA A HIBERNATE
      */
     public boolean existeCita(String Dni) throws SQLException {
         boolean existe;
@@ -33,6 +33,11 @@ public class CitasBD {
         return existe;
     }
 
+    /*
+     * almacenarCita
+     * Dado un objeto Cita, lo almacena en la base de datos.
+     * HAY QUE CAMBIARLA A HIBERNATE
+     */
     public void almacenarCita(Cita cita) {
         String dni=cita.getPaciente().getDNI();
         String dniM=cita.getPersonalMedico().getDNI();
@@ -48,8 +53,12 @@ public class CitasBD {
 
     }
 
+    /*
+     * obtenerCita
+     * Obtiene la cita relativa a un usuario dado.
+     * HAY QUE CAMBIARLA A HIBERNATE
+     */
     public Cita obtenerCita(String Dni) throws SQLException {
-
         Cita cita=new Cita();
 
         Jdbc conexion = new Jdbc();
@@ -72,6 +81,11 @@ public class CitasBD {
         return cita;
     }
 
+    /*  (OPCIONAL)
+     * EstadisticasCitas
+     * Muestra las estadisticas relativas a las citas
+     * HABRIA QUE CAMBIARLA A HIBERNATE
+     */
     public ArrayList EstadisticasCitas(Date fecha_inicio, Date fecha_fin) throws SQLException {
         ArrayList datosAdmin = new ArrayList();
 
@@ -95,6 +109,12 @@ public class CitasBD {
         }
         return datosAdmin;
     }
+    
+    /*
+     * almacenar
+     * Guarda un objeto Cita en la base de datos.
+     * @param cita, Objeto Cita que es insertado
+     */
     public void almacenar(Cita cita){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
@@ -103,18 +123,12 @@ public class CitasBD {
         session.getTransaction().commit();
     }
 
-    //La clase cita no tiene este método todavía ya que no se va a utilizar, y no se implementa directamente porque tiene una clave compuesta.
-/*    public Cita obtener (Date fecha, String dniPaciente){
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-
-        session.beginTransaction ();
-
-        Cita cita= (Cita) session.get(Cita.class, Fecha);
-
-        return cita;
-    }
-*/
-    public void actualizar (Cita cita){
+    /*
+     * actualizar
+     * Actualiza una cita existente.
+     * @param cita, Objeto cita que es consultado.
+     */
+    public void actualizar(Cita cita){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
@@ -122,8 +136,13 @@ public class CitasBD {
         session.getTransaction().commit();
     }
 
+    /*
+     * eliminar
+     * Elimina una cita existente.
+     * @param cita, Objeto cita que es eliminado.
+     */
     public void eliminar (Cita cita){
-    Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
         session.delete ( cita );
