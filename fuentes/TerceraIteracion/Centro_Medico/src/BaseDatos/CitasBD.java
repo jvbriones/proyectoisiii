@@ -13,6 +13,8 @@ public class CitasBD {
 
     /*
      * existencia
+     * Comprueba si existen citas para un paciente concreto.
+     * HAY QUE CAMBIARLA
      */
     public boolean existeCita(String Dni) throws SQLException {
         boolean existe;
