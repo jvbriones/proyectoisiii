@@ -1,15 +1,3 @@
-/*
- * citasBD.java
- *
- * Informacion:
- * Clase encargada de comunicarse con la Capa de la BD para
- * realizar operaciones relacionadas con las citas.
- *
- * Proyecto ISIII UGR 10/11
- * Grupo M_1.2
- *
- * modificado por Juan Carlos Bermúdez. Añadidas las funciones almacenar, actualizar y eliminar
- */
 package BaseDatos;
 
 import CentroMedico.Cita;
@@ -17,19 +5,15 @@ import java.sql.*;
 import java.util.ArrayList;
 import org.hibernate.*;
 
-/**
- * @version     1.1     16/04/2011
- * @author      Sub_Equipo2
- */
 public class CitasBD {
+    String IpDelServidor = "localhost";
+    String NombreDB = "CentroMedico";
+    String user = "generico";
+    String pass = "generico";
 
-
-    String IpDelServidor="localhost";
-    String NombreDB="CentroMedico";
-    String user="generico";
-    String pass="generico";
-
-
+    /*
+     * existencia
+     */
     public boolean existeCita(String Dni) throws SQLException {
         boolean existe;
 
