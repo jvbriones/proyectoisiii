@@ -32,7 +32,7 @@ public class Usuario implements Serializable{
     private String Telefono=null;
     private Date FecNac=null;
     private String LugarNac=null;
-    private String Foto=null;
+    private byte[] Foto=null;
     private String Tipo;
 
 
@@ -45,7 +45,7 @@ public class Usuario implements Serializable{
     }
 
     public Usuario(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
-            String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto, String Tipo){
+            String Contrasenia, String Telefono, Date FecNac, String LugarNac, byte[] Foto, String Tipo){
         
         this.DNI=Dni;
         this.Nombre=Nombre;
@@ -102,7 +102,7 @@ public class Usuario implements Serializable{
         return  LugarNac;
     }
 
-    public String getFoto(){
+    public byte[] getFoto(){
         return  Foto;
     }
 
@@ -153,7 +153,7 @@ public class Usuario implements Serializable{
         this.LugarNac=LugarNac;
     }
 
-    public void setFoto(String Foto){
+    public void setFoto(byte[] Foto){
        this.Foto=Foto;
     }
 

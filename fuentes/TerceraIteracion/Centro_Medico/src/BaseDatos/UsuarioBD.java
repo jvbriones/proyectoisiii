@@ -70,7 +70,7 @@ public class UsuarioBD {
             String telefono=rs.getString("Telefono"); //Estos campos han de coincidir exactamente con los de la tabla Usuarios en la BD
             Date fecNac=rs.getDate("FecNac");//Si el Telefono es un Entero en la BD, aqui tendria que ser getInt("Telefono")
             String lugarNac=rs.getString("LugarNac");
-            String foto=rs.getString("Foto");
+            byte[] foto=rs.getBytes("Foto");
             String tipo=rs.getString("Tipo");
 
             usu = new Usuario(dni, nombre, apellidos, direccion, email, contrasena, telefono, fecNac, lugarNac, foto, tipo);
@@ -105,7 +105,7 @@ public class UsuarioBD {
             String telefono=rs.getString("Telefono"); //Estos campos han de coincidir exactamente con los de la tabla Usuarios en la BD
             Date fecNac=rs.getDate("FecNac");//Si el Telefono es un Entero en la BD, aqui tendria que ser getInt("Telefono")
             String lugarNac=rs.getString("LugarNac");
-            String foto=rs.getString("Foto");
+            byte[] foto=rs.getBytes("Foto");
             String tipo=rs.getString("Tipo");
 
             user = new Usuario(dni, nombre, apellidos, direccion, email, contrasena, telefono, fecNac, lugarNac, foto, tipo);
@@ -135,7 +135,7 @@ public class UsuarioBD {
         String telefono=user.getTelefono();
         Date fecNac=(Date) user.getFecNac();
         String lugarNac=user.getLugarNac();
-        String foto=user.getFoto();
+        byte[] foto=user.getFoto();
         String tipo=user.getTipo();
 
         Jdbc conexion = new Jdbc();

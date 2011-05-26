@@ -27,7 +27,7 @@ public class Personal extends Usuario{
    
 
     public Personal(String Dni, String Nombre, String Apellidos, String Direccion, String Email, String Contrasena,
-            String Telefono, Date FecNac, String LugarNac, String Foto, String TipoPersonal) {
+            String Telefono, Date FecNac, String LugarNac, byte[] Foto, String TipoPersonal) {
 
         super(Dni, Nombre, Apellidos, Direccion, Email, Contrasena, Telefono, FecNac, LugarNac, Foto, "Personal");
         this.TipoPersonal=TipoPersonal;
