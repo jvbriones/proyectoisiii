@@ -2,40 +2,59 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
   <class name="CentroMedico.Usuario">
-    <id column="DNI_USUARIO" name="DNI">
+    <id column="DNI_USUARIO" name="DNI" type="string">
       <generator class="assigned"/>
     </id>
-    <discriminator column="discriminator_col" type="string"/>
-    <property name="Nombre"/>
-    <property name="Apellidos"/>
-    <property name="Direccion"/>
-    <property name="Email"/>
-    <property name="Contrasenia"/>
-    <property name="Telefono"/>
-    <property name="FecNac"/>
-    <property name="LugarNac"/>
-    <property name="Foto"/>
-    <property name="Tipo"/>
-    <joined-subclass name="CentroMedico.Paciente">
-      <key column="DNI_PACIENTE"/>
-    </joined-subclass>
+    <property name="Nombre" type="string">
+        <column name="Nombre" length="60" not-null="true"/>
+    </property>
+    <property name="Apellidos" type="string">
+        <column name="Apellidos" length="120" not-null="true"/>
+    </property>
+    <property name="Direccion" type="string">
+        <column name="Direccion" length="250" not-null="true"/>
+    </property>
+    <property name="Email" type="string">
+        <column name="Email" length="80" not-null="true"/>
+    </property>
+    <property name="Contrasenia" type="string">
+        <column name="Contrasenia" length="60" not-null="false"/>
+    </property>
+    <property name="Telefono" type="string">
+        <column name="Telefono" length="9" not-null="true"/>
+    </property>
+    <property name="FecNac" type="date">
+        <column name="FecNac" not-null="true"/>
+    </property>
+    <property name="LugarNac" type="string">
+        <column name="LugarNac" length="20" not-null="true"/>
+    </property>
+    <property name="Foto" type="string">
+        <column name="Foto" not-null="false"/>
+    </property>
+    <property name="Tipo" type="string">
+        <column name="Tipo" length="20" not-null="true"/>
+    </property>
     <joined-subclass name="CentroMedico.Administrativo">
-      <key column="DNI_ADMINISTRATIVO"/>
+        <key column="DNI_ADMINISTRATIVO"/>
     </joined-subclass>
     <joined-subclass name="CentroMedico.Farmaceutico">
-      <key column="DNI_FARMACEUTICO"/>
+        <key column="DNI_FARMACEUTICO"/>
+    </joined-subclass>
+    <joined-subclass name="CentroMedico.Paciente">
+        <key column="DNI_PACIENTE"/>
     </joined-subclass>
     <joined-subclass name="CentroMedico.PersonalMedico">
-      <key column="DNI_PERSONALMEDICO"/>
+        <key column="DNI_PERSONALMEDICO"/>
+        <joined-subclass name="CentroMedico.Medico">
+            <key column="DNI_MEDICO"/>
+        </joined-subclass>
+        <joined-subclass name="CentroMedico.Analista">
+            <key column="DNI_ANALISTA"/>
+        </joined-subclass>
+        <joined-subclass name="CentroMedico.Radiologo">
+            <key column="DNI_RADIOLOGO"/>
+        </joined-subclass>
     </joined-subclass>
   </class>
-
-
-  <subclass name="CentroMedico.Radiologo" extends="CentroMedico.PersonalMedico" discriminator-value="DNI_RADIOLOGO">
-  </subclass>
-  <subclass name="CentroMedico.Analista" extends="CentroMedico.PersonalMedico" discriminator-value="DNI">
-  </subclass>
-  <subclass name="CentroMedico.Medico" extends="CentroMedico.PersonalMedico" discriminator-value="DNI">
-  </subclass>
-
-  </hibernate-mapping>
+</hibernate-mapping>
