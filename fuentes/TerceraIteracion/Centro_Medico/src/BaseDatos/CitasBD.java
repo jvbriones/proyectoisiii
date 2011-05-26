@@ -24,7 +24,6 @@ public class CitasBD {
      * @param cita, Objeto Cita a almacenar
      * @post No ofrece información sobre el estado de la operacion
      */
-
     public void almacenar(Cita cita){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         
