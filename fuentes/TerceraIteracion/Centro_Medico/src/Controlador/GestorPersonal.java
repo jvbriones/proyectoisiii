@@ -11,7 +11,6 @@
 
 package Controlador;
 
-import CentroMedico.Personal;
 import BaseDatos.personalBD;
 import CentroMedico.PersonalMedico;
 import java.sql.SQLException;

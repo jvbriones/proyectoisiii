@@ -14,7 +14,6 @@ package Controlador;
 import CentroMedico.Turno;
 import BaseDatos.TurnoBD;
 import BaseDatos.personalBD;
-import CentroMedico.Personal;
 import CentroMedico.PersonalMedico;
 import java.sql.SQLException;
 import java.util.Date;
@@ -33,7 +32,7 @@ public class GestorTurnos {
 
          String exito=new String();
         personalBD perb= new personalBD();
-        Personal per= new Personal();
+        PersonalMedico per= new PersonalMedico();
 
         //per = perb.obtener(Dni);
 

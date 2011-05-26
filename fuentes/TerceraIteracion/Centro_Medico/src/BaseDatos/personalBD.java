@@ -13,7 +13,6 @@ package BaseDatos;
 
 import CentroMedico.Analista;
 import CentroMedico.Medico;
-import CentroMedico.Personal;
 import CentroMedico.PersonalMedico;
 import CentroMedico.Radiologo;
 import CentroMedico.Usuario;
