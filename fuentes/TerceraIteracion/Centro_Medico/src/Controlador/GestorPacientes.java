@@ -25,7 +25,7 @@ import java.util.Date;
 
 public class GestorPacientes {
 
-    public boolean altaPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, byte[] Foto, String TipoUsuario) throws SQLException {
+    public boolean altaPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, String Foto, String TipoUsuario) throws SQLException {
         boolean existe;
         PacBD bd_paciente=new PacBD();
         String Datos=new String();

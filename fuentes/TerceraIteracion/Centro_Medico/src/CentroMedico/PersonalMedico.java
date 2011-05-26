@@ -23,13 +23,13 @@ public class PersonalMedico extends Usuario{
     
 
     public PersonalMedico (String Dni, String Nombre, String Apellidos, String Direccion,String Email,
-            String Contrasenia, String Telefono, Date FecNac, String LugarNac, byte[] Foto, String Tipo){
+            String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto, String Tipo){
 
         super(Dni, Nombre, Apellidos, Direccion, Email, Contrasenia, Telefono, FecNac, LugarNac, Foto, Tipo);
     }
 
     public PersonalMedico (String Dni, String Nombre, String Apellidos, String Direccion,String Email,
-            String Contrasenia, String Telefono, Date FecNac, String LugarNac, byte[] Foto, String Tipo, Turno T1){
+            String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto, String Tipo, Turno T1){
 
         super(Dni, Nombre, Apellidos, Direccion, Email, Contrasenia, Telefono, FecNac, LugarNac, Foto, Tipo);
         this.Turn = T1;

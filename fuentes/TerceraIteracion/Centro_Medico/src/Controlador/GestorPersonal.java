@@ -24,7 +24,7 @@ import java.util.Date;
 
 public class GestorPersonal {
 
-    public boolean altaPersonal(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, byte[] Foto, String TipoUsuario) throws SQLException {
+    public boolean altaPersonal(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, String Foto, String TipoUsuario) throws SQLException {
         boolean existe;
         personalBD bd_personal=new personalBD();
         String Datos=new String();

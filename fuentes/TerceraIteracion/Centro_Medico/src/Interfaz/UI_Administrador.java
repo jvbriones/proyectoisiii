@@ -3590,7 +3590,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
        
             try {
-                exito = gesPer.altaPersonal(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(), jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), sfotografia, tipoPersonal);
+                exito = gesPer.altaPersonal(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(), jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), laurl, tipoPersonal);
                 if(exito){
                     new InformacionExito().setVisible(true);
                     limpiarFormulario("GestionarPersonal");
@@ -3620,7 +3620,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             fechaNacimiento = dateChooserCombo1.getSelectedDate().getTime();
 
             try {
-                exito = gesPac.altaPaciente(jTextFieldDNIPaciente.getText(), jTextFieldNombrePaciente.getText(), jTextFieldApellidosPaciente.getText(), jTextFieldDireccionPaciente.getText(), jTextFieldEmailPaciente.getText(), jTextFieldTelefonoPaciente.getText(), fechaNacimiento, jTextFieldLugarNacimientoPaciente.getText(), sfotografia, "Paciente");
+                exito = gesPac.altaPaciente(jTextFieldDNIPaciente.getText(), jTextFieldNombrePaciente.getText(), jTextFieldApellidosPaciente.getText(), jTextFieldDireccionPaciente.getText(), jTextFieldEmailPaciente.getText(), jTextFieldTelefonoPaciente.getText(), fechaNacimiento, jTextFieldLugarNacimientoPaciente.getText(), laurl, "Paciente");
 
                 if(!exito){
                     new InformacionExito().setVisible(true);
@@ -3645,7 +3645,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         if(compruebaFormulario("GestionarPersonal")){
          GestorUsuarios gestUsu = new GestorUsuarios();
          Date fechaNacimiento = null;                        //HAY QUE PROCESARLA LEYÉNDOLA DEL FORMULARIOOOO
-         byte[] urlFoto = null;                              //HAY QUE GUARDAR LA FOTO Y PASAR LA RUTA DE DONDE ESTA
+         String urlFoto = null;                              //HAY QUE GUARDAR LA FOTO Y PASAR LA RUTA DE DONDE ESTA
          boolean exito;
 
          try{
@@ -3673,7 +3673,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         if(compruebaFormulario("GestionarPersonal")){
         GestorUsuarios gestUsu = new GestorUsuarios();
          Date fechaNacimiento = null;                        //HAY QUE PROCESARLA LEYÉNDOLA DEL FORMULARIOOOO
-         byte[] urlFoto = null;                              //HAY QUE GUARDAR LA FOTO Y PASAR LA RUTA DE DONDE ESTA
+         String urlFoto = null;                              //HAY QUE GUARDAR LA FOTO Y PASAR LA RUTA DE DONDE ESTA
          boolean exito;
          String tipoPersonal = "Analista";
          if(jRadioButtonAnalista.isSelected())
@@ -4259,35 +4259,35 @@ public class UI_Administrador extends javax.swing.JFrame {
             int resp = dlg.showOpenDialog(this);
             if (resp == JFileChooser.APPROVE_OPTION){
                 try{
-                    FileInputStream fil = null;
-                    InputStream inp = null;
+                    //FileInputStream fil = null;
+                    //InputStream inp = null;
                     File f=dlg.getSelectedFile();
                     laurl=f.getAbsolutePath();
                     System.out.println("laurl: "+laurl);
                     ImageIcon icono = new ImageIcon(dlg.getSelectedFile().getCanonicalPath());
                     Image imagen = icono.getImage();
-                    fil = new FileInputStream(laurl);
-                    inp = fil;
-                    BufferedImage im = javax.imageio.ImageIO.read(inp);
-                    if(im.getHeight()<=150 && im.getWidth()<=150){
+                    //fil = new FileInputStream(laurl);
+                    //inp = fil;
+                    //BufferedImage im = javax.imageio.ImageIO.read(inp);
+                    //if(im.getHeight()<=150 && im.getWidth()<=150){
                         ImageIcon aescala = new ImageIcon(imagen.getScaledInstance(130,150,Image.SCALE_SMOOTH));
                         jLabelFotoPersonal.setIcon(aescala); // NOI18N
-                        File file = new File(laurl);
-                        byte[] bFile = new byte[(int) file.length()];
-                        try {
-                             FileInputStream fileInputStream = new FileInputStream(file);
+                        //File file = new File(laurl);
+                        //byte[] bFile = new byte[(int) file.length()];
+                        //try {
+                          //   FileInputStream fileInputStream = new FileInputStream(file);
                              //convert file into array of bytes
-                             fileInputStream.read(bFile);
-                             fileInputStream.close();
-                        } catch (Exception e) {
-                             e.printStackTrace();
-                        }
-                        sfotografia=bFile;//Imagen que la tenemos guardada en memoria para guardarla despues cuando se guarde
-                    }else{
+                            // fileInputStream.read(bFile);
+                           //  fileInputStream.close();
+                        //} catch (Exception e) {
+                          //   e.printStackTrace();
+                        //}
+                        //sfotografia=bFile;//Imagen que la tenemos guardada en memoria para guardarla despues cuando se guarde
+                    //}else{
                         //ventana de aviso diciendo que la imagen tiene que ser como max 150x150
-                        System.out.println( "La fotografia tiene que ser de 150x150 pixeles.");
-                        new InformacionError().setVisible(true);
-                    }
+                       // System.out.println( "La fotografia tiene que ser de 150x150 pixeles.");
+                        //new InformacionError().setVisible(true);
+                   // }
                 }
                 catch(Exception ex){
                     System.err.print("Error al leer el archivo");
@@ -4300,35 +4300,35 @@ public class UI_Administrador extends javax.swing.JFrame {
             int resp = dlg.showOpenDialog(this);
             if (resp == JFileChooser.APPROVE_OPTION){
                 try{
-                    FileInputStream fil = null;
-                    InputStream inp = null;
+                    //FileInputStream fil = null;
+                    //InputStream inp = null;
                     File f=dlg.getSelectedFile();
                     laurl=f.getAbsolutePath();
                     System.out.println("laurl: "+laurl);
                     ImageIcon icono = new ImageIcon(dlg.getSelectedFile().getCanonicalPath());
                     Image imagen = icono.getImage();
-                    fil = new FileInputStream(laurl);
-                    inp = fil;
-                    BufferedImage im = javax.imageio.ImageIO.read(inp);
-                    if(im.getHeight()<=150 && im.getWidth()<=150){
+                    //fil = new FileInputStream(laurl);
+                    //inp = fil;
+                    //BufferedImage im = javax.imageio.ImageIO.read(inp);
+                    //if(im.getHeight()<=150 && im.getWidth()<=150){
                         ImageIcon aescala = new ImageIcon(imagen.getScaledInstance(130,150,Image.SCALE_SMOOTH));
                         jLabelFotoPaciente.setIcon(aescala); // NOI18N
-                        File file = new File(laurl);
-                        byte[] bFile = new byte[(int) file.length()];
-                        try {
-                             FileInputStream fileInputStream = new FileInputStream(file);
+                      //  File file = new File(laurl);
+                        //byte[] bFile = new byte[(int) file.length()];
+                        //try {
+                          //   FileInputStream fileInputStream = new FileInputStream(file);
                              //convert file into array of bytes
-                             fileInputStream.read(bFile);
-                             fileInputStream.close();
-                        } catch (Exception e) {
-                             e.printStackTrace();
-                        }
-                        sfotografia=bFile;//Imagen que la tenemos guardada en memoria para guardarla despues cuando se guarde
-                    }else{
+                            // fileInputStream.read(bFile);
+                             //fileInputStream.close();
+                        //} catch (Exception e) {
+                          //   e.printStackTrace();
+                        //}
+                        //sfotografia=bFile;//Imagen que la tenemos guardada en memoria para guardarla despues cuando se guarde
+                    //}else{
                         //ventana de aviso diciendo que la imagen tiene que ser como max 150x150
-                        System.out.println( "La fotografia tiene que ser de 150x150 pixeles.");
-                        new InformacionError().setVisible(true);
-                    }
+                      //  System.out.println( "La fotografia tiene que ser de 150x150 pixeles.");
+                        //new InformacionError().setVisible(true);
+                    //}
                 }
                 catch(Exception ex){
                     System.err.print("Error al leer el archivo");

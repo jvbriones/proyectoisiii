@@ -63,7 +63,7 @@ public class GestorUsuarios {
     }
 */
    public String modificarDatosPersonalesAdmin(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
-            String Contrasena, String Telefono, Date FecNac, String LugarNac, byte[] Fotografia) throws SQLException{
+            String Contrasena, String Telefono, Date FecNac, String LugarNac, String Fotografia) throws SQLException{
 
        UsuarioBD usuario_bd = new UsuarioBD();
        Usuario userAux =usuario_bd.obtenerUsuario(Dni);
@@ -85,7 +85,7 @@ public class GestorUsuarios {
     }
 
       public String modificarDatosPersonales(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
-            String Contrasena, String Telefono, Date FecNac, String LugarNac, byte[] Fotografia) throws SQLException{
+            String Contrasena, String Telefono, Date FecNac, String LugarNac, String Fotografia) throws SQLException{
 
        UsuarioBD usuario_bd = new UsuarioBD();
        String dni=user.getDNI();
@@ -127,7 +127,7 @@ public class GestorUsuarios {
             String telefono=userAux.getTelefono();
             Date fecNac=userAux.getFecNac();
             String lugarNac=userAux.getLugarNac();
-            byte[] foto=userAux.getFoto();
+            String foto=userAux.getFoto();
             String tipo=userAux.getTipo();
 
             String salida=dni + nombre;//hay que integrarlo con la interfaz
@@ -151,7 +151,7 @@ public class GestorUsuarios {
         String telefono=user.getTelefono();
         Date fecNac=user.getFecNac();
         String lugarNac=user.getLugarNac();
-        byte[] foto=user.getFoto();
+        String foto=user.getFoto();
         String tipo=user.getTipo();
 
         String salida= nombre;//hay que integrarlo con la interfaz
