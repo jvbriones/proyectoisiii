@@ -10,7 +10,6 @@ package BaseDatos;
 
 import CentroMedico.Cita;
 import java.sql.*;
-//import java.util.ArrayList;
 import org.hibernate.*;
 
 public class CitasBD {
@@ -38,8 +37,8 @@ public class CitasBD {
     /*
      * obtenerCita
      * Obtiene la cita relativa a un usuario dado.
-     * @param Dni, Identificación del paciente del que obtener la cita
-     * @return El objeto Cita oportuno
+     * @param Dni, Identificación del paciente del que obtener la cita.
+     * @return El objeto Cita oportuno o un objeto null.
      */
     public Cita obtenerCita(String Dni) throws SQLException {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
@@ -55,76 +54,54 @@ public class CitasBD {
      * actualizar
      * Actualiza una cita existente.
      * @param cita, Objeto cita que es consultado.
+     * @post No aporta información sobre la realización de la operación.
      */
     public void actualizar(Cita cita){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
-        session.update ( cita );
+        try{
+        session.update(cita);
+        System.out.println("Cita actualizada correctamente.");
+        }catch(HibernateException ex){
+            System.err.println(ex.getMessage());
+        }
         session.getTransaction().commit();
+
     }
 
    
-     /*
-      * Miguel. Creada Eliminar Cita
+    /*
      * eliminar
      * Elimina un objeto Cita de la base de datos.
+     * @param ci, Objeto Cita a eliminar.
+     * @post No se recibe información del procesado de la operación.
      */
     public void eliminar(Cita ci){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
-        session.beginTransaction ();
-        session.delete (ci);
+        session.beginTransaction();
+        session.delete(ci);
         session.getTransaction().commit();
     }
 
     /*
-     * existencia
-     * Comprueba si existen citas para un paciente concreto.
+     * existeCita
+     * Comprueba si existe una cita para un paciente concreto.
+     * @param Dni, identificación del paciente a consultar.
+     * @return True si existe cita, false en otro caso.
      */
     public boolean existeCita(String Dni) throws SQLException {
         Cita cit = obtenerCita(Dni);
 
         if (cit != null){
             System.out.print("ExisteCita: Existe la Cita");
-           return true;
+            return true;
        }
        else{
            System.out.print("ExisteCita: No existe la cita");
            return false;
        }
     }
-
-
-    /*  (OPCIONAL)
-     * EstadisticasCitas
-     * Muestra las estadisticas relativas a las citas
-     * HABRIA QUE CAMBIARLA A HIBERNATE
-
-    public ArrayList EstadisticasCitas(Date fecha_inicio, Date fecha_fin) throws SQLException {
-        ArrayList datosAdmin = new ArrayList();
-
-        Jdbc conexion = new Jdbc();
-        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "SELECT * FROM Citas WHERE "+fecha_inicio+"<Fecha AND Fecha<"+fecha_fin;
-        ResultSet rs = conexion.consultaSelect(Consulta);
-        while(rs.next()) {
-            String dni=rs.getString("DniPaciente");
-            String dniM=rs.getString("DniMedico");
-            Date fecha=rs.getDate("Fecha");
-            boolean estado=rs.getBoolean("Estado");
-            String dniA=rs.getString("DniAdministrativoCita");
-
-            datosAdmin.add(dni);
-            datosAdmin.add(dniM);
-            datosAdmin.add(fecha);
-            datosAdmin.add(estado);
-            datosAdmin.add(dniA);
-
-        }
-        return datosAdmin;
-    }
-     *   */
-
 
 }
