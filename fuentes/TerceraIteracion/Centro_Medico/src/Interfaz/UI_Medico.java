@@ -26,6 +26,11 @@ import javax.swing.JFileChooser;
 import javax.swing.DefaultListModel;
 import Controlador.*;
 
+import java.awt.image.*;
+import javax.imageio.ImageIO;
+import java.io.*;
+
+
 
 
 /**
@@ -2568,7 +2573,7 @@ MedicamentoBD meBD = new MedicamentoBD();
             jLabelIconoInicio.setVisible(true);
 
             /**Insertamos icono de foto anónima*/
-            jLabelFotoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
+            //jLabelFotoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
 
 
             /**Hacemos visible el panel seleccionado*/
@@ -2756,20 +2761,12 @@ MedicamentoBD meBD = new MedicamentoBD();
      *@param formulario, string que indica el formulario donde cargar la foto
      */
     private void cargarFoto(String formulario){
-
+        String laurl=null;
         if(formulario.equals("GestionarPersonal")){
             JFileChooser dlg = new JFileChooser();
             int resp = dlg.showOpenDialog(this);
             if (resp == JFileChooser.APPROVE_OPTION){
-                try{
-                    ImageIcon icono = new ImageIcon(dlg.getSelectedFile().getCanonicalPath());
-                    Image imagen = icono.getImage();
-                    ImageIcon aescala = new ImageIcon(imagen.getScaledInstance(130,150,Image.SCALE_SMOOTH));
-                    jLabelFotoPersonal.setIcon(aescala); // NOI18N
-                }
-                catch(Exception ex){
-                    System.err.print("Error al leer el archivo");
-                }
+                //No es necesaria esta funcion porque el medico no puede subir una foto suya..
             }
         }
 
@@ -2801,6 +2798,12 @@ MedicamentoBD meBD = new MedicamentoBD();
         String num_dia= String.valueOf(dia);
         String num_mes= String.valueOf(mes);
         String num_anio= String.valueOf(anio);
+        System.out.println("Tenemos la imagen");
+        System.out.print(usu.getFoto());
+
+        Image inImage = new ImageIcon(usu.getFoto()).getImage();
+        ImageIcon aescala = new ImageIcon(inImage.getScaledInstance(130,150,inImage.SCALE_SMOOTH));
+        jLabelFotoPersonal.setIcon(aescala); // NOI18N
 
 
         jTextFieldFechaNacimientoAnioPersonal.setText(num_anio);
