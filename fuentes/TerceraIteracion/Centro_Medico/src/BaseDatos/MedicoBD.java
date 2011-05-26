@@ -29,7 +29,7 @@ public class MedicoBD {
     /*
      * almacenarMedico
      */
-    public void almacenarMedico(Medico med) {
+    public void almacenar(Medico med) {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction();

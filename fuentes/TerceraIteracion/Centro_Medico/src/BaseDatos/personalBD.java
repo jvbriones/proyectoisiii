@@ -11,6 +11,8 @@
  */
 package BaseDatos;
 
+import CentroMedico.Analista;
+import CentroMedico.Medico;
 import CentroMedico.Personal;
 import CentroMedico.PersonalMedico;
 import CentroMedico.Radiologo;
@@ -57,7 +59,24 @@ public class personalBD {
              RadiologoBD rad=new RadiologoBD();
              rad.almacenar(radiologo);
          }
-       
+
+          if (Personal.getTipoPersonal().equals("Analista")){
+
+             Analista ana=new Analista(Personal.getDNI(),Personal.getNombre(),Personal.getApellidos(),Personal.getDireccion(),Personal.getEmail(),Personal.getContrasenia(),Personal.getTelefono(),Personal.getFecNac(),Personal.getLugarNac(),Personal.getFoto());
+             AnalistaBD analis=new AnalistaBD();
+             analis.almacenar(ana);
+         }
+
+         if (Personal.getTipoPersonal().equals("Medico")){
+
+             System.out.println("Es un medico el que vamos a introducir");
+
+             Medico med=new Medico(Personal.getDNI(),Personal.getNombre(),Personal.getApellidos(),Personal.getDireccion(),Personal.getEmail(),Personal.getContrasenia(),Personal.getTelefono(),Personal.getFecNac(),Personal.getLugarNac(),Personal.getFoto());
+             MedicoBD medico=new MedicoBD();
+             medico.almacenar(med);
+         }
+
+
 
 
     }

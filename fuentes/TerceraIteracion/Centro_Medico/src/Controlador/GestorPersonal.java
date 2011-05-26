@@ -33,6 +33,7 @@ public class GestorPersonal {
         existe=bd_personal.existePersonal(Dni);
 
         if(!existe) {
+             System.out.println("vamos a Introducirlo");
             String pas=new String();
             pas=generarContraseña();
             PersonalMedico personal=new PersonalMedico(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto, TipoUsuario);
