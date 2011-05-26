@@ -13,6 +13,7 @@ package Controlador;
 
 import CentroMedico.Personal;
 import BaseDatos.personalBD;
+import CentroMedico.PersonalMedico;
 import java.sql.SQLException;
 import java.util.Date;
 
@@ -34,7 +35,7 @@ public class GestorPersonal {
         if(!existe) {
             String pas=new String();
             pas=generarContraseña();
-            Personal personal=new Personal(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto, TipoUsuario);
+            PersonalMedico personal=new PersonalMedico(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto, TipoUsuario);
             bd_personal.almacenarPersonal(personal);
 
             Datos="Usuario Introducido con Éxito";

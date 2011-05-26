@@ -12,6 +12,7 @@
 package BaseDatos;
 
 import CentroMedico.Personal;
+import CentroMedico.PersonalMedico;
 import CentroMedico.Radiologo;
 import CentroMedico.Usuario;
 import java.sql.*;
@@ -34,7 +35,7 @@ public class personalBD {
    public boolean existePersonal(String Dni) throws SQLException {
         boolean existe;
 
-       Personal Per= obtener(Dni);
+       PersonalMedico Per= obtener(Dni);
        if (Per!=null){
            System.out.print("el tio existe\n");
            return true;
@@ -46,7 +47,7 @@ public class personalBD {
     }
 
     // Modificado con respecto al diseño
-      public void almacenarPersonal(Personal Personal) {
+      public void almacenarPersonal(PersonalMedico Personal) {
 
 
 
@@ -61,12 +62,12 @@ public class personalBD {
 
     }
 
-       public Personal obtener(String Dni) throws SQLException{
+       public PersonalMedico obtener(String Dni) throws SQLException{
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
         System.out.println("llega");
-        Personal Per = (Personal) session.get(Personal.class, Dni);
+        PersonalMedico Per = (PersonalMedico) session.get(PersonalMedico.class, Dni);
         System.out.println("no llega");
         return Per;
     }

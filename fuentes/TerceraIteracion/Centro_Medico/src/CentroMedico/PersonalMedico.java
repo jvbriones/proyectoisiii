@@ -45,4 +45,8 @@ public class PersonalMedico extends Usuario{
         this.Turn = T1;
     };
 
+    public String getTipoPersonal() {
+        return this.getTipo();
+    }
+
 }

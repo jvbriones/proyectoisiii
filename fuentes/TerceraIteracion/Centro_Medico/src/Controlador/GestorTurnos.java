@@ -35,7 +35,7 @@ public class GestorTurnos {
         personalBD perb= new personalBD();
         Personal per= new Personal();
 
-        per = perb.obtener(Dni);
+        //per = perb.obtener(Dni);
 
         if (per==null) System.out.println("No se puede asignar el Turno porque el Personal no Existe");
         else{
