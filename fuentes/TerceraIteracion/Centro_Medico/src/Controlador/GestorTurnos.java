@@ -27,31 +27,39 @@ import java.text.SimpleDateFormat;
 
 public class GestorTurnos {
     
-    public String altaTurno(String tipo,String Dni)throws SQLException {
+    public boolean altaTurno(String dni,String tipo,Date inicio,Date fin)throws SQLException {
         // MIguel.  Tipo es " mañana" "tarde " o "noche"
 
          String exito=new String();
         personalBD perb= new personalBD();
         PersonalMedico per= new PersonalMedico();
+        boolean bien=false;
 
         //per = perb.obtener(Dni);
 
-        if (per==null) System.out.println("No se puede asignar el Turno porque el Personal no Existe");
+        if (per==null){
+            bien=false;
+            System.out.println("No se puede asignar el Turno porque el Personal no Existe");
+        }
         else{
 
             boolean tiene_turno=false;
 
             // Miguel. Falta esta tiene_turno=per.tiene_turno();
 
-            if ( tiene_turno) exito="Ya existe un Turno del tipo "+tipo;
+            if ( tiene_turno){
+                bien=false;
+                exito="Ya existe un Turno del tipo "+tipo;
+            }
             else{
                 TurnoBD bd_turno=new TurnoBD();
-                bd_turno.altaTurno(tipo,Dni);
+                bd_turno.altaTurno(dni,"Mañana",inicio,fin);
                 exito="Se creó un Turno de tipo "+tipo;
+                bien=true;
                 }
         }
         
-        return exito;
+        return bien;
     }
 
     // ESTA FUNCION NO FUNCIONA, YA QUE "existeTurno" EN "turnoBD" SOLO
