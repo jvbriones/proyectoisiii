@@ -22,9 +22,9 @@ import java.io.Serializable;
  */
 public class Turno implements Serializable{
 
-    private int Id;
-    private Date HoraInicio;
-    private Date HoraFin;
+    private String dni;
+    private Date fechaInicio;
+    private Date fechaFin;
     private String Tipo;
 
     /*
@@ -36,11 +36,11 @@ public class Turno implements Serializable{
     public Turno() {
     }
 
-    public Turno(int Id, Date HoraInicio, Date HoraFin,String tipo){
+    public Turno(String dni, String tipo, Date fechaInicio, Date fechaFin){
 
-        this.Id=Id;
-        this.HoraInicio=HoraInicio;
-        this.HoraFin=HoraFin;
+        this.dni=dni;
+        this.fechaInicio=fechaInicio;
+        this.fechaFin=fechaFin;
         this.Tipo=tipo;
     }
 
@@ -50,16 +50,16 @@ public class Turno implements Serializable{
      *
      */
 
-    public int getId(){
-        return Id;
+    public String getDni(){
+        return dni;
     }
 
-    public Date getHoraInicio(){
-        return  HoraInicio;
+    public Date getfechaInicio(){
+        return  fechaInicio;
      }
 
-    public Date getHoraFin(){
-        return HoraFin;
+    public Date getfechaFin(){
+        return fechaFin;
     }
 
     public String getTipo(){
@@ -72,16 +72,16 @@ public class Turno implements Serializable{
      *
      */
 
-    public void setId(int Id){
-        this.Id=Id;
+    public void setDni(String dni){
+        this.dni=dni;
     }
 
-    public void setHoraInicio(Date HoraInicio){
-        this.HoraInicio=HoraInicio;
+    public void setFechaInicio(Date FechaInicio){
+        this.fechaInicio=FechaInicio;
      }
 
-    public void setHoraFin(Date HoraFin){
-        this.HoraFin=HoraFin;
+    public void setFechaFin(Date fechaFin){
+        this.fechaFin=fechaFin;
     }
 
     public void setTipo(String Tipo){

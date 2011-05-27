@@ -5,6 +5,7 @@
     <id column="ID_TURNO" name="Id" type="integer">
       <generator class="native"/>
     </id>
+    <property name="Tipo"/>
     <property name="HoraInicio"/>
     <property name="HoraFin"/>
   </class>
