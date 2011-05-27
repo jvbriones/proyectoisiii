@@ -2447,6 +2447,7 @@ public class UI_Analista extends javax.swing.JFrame {
                    InformacionExito info = new InformacionExito();
                    info.setVisible(true);
                    mostrarPanel("Principal");
+                   limpiarFormulario("AlmacenarResultados");
      
      
        }
