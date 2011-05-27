@@ -18,8 +18,7 @@
     <mapping resource="CentroMedico/MedicamentoRecetado.hbm.xml"/>
     <mapping resource="CentroMedico/PruebaAnalisis.hbm.xml"/>
     <mapping resource="CentroMedico/Receta.hbm.xml"/>
-    <mapping resource="CentroMedico/Turno.hbm.xml"/>
-    <mapping resource="CentroMedico/ResultadoSangre.hbm.xml"/>
+	<mapping resource="CentroMedico/ResultadoSangre.hbm.xml"/>
     <mapping resource="CentroMedico/CentroMedico.hbm.xml"/>
     <mapping resource="CentroMedico/ResultadoOrina.hbm.xml"/>
     <mapping resource="CentroMedico/PruebaRadiologia.hbm.xml"/>
