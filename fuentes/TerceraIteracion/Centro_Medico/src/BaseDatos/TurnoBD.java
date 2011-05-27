@@ -42,33 +42,25 @@ public class TurnoBD {
        }
     }
 
-    public void altaTurno(String Tipo,String Dni) {
+    public void altaTurno(String Dni,String Tipo,Date ini,Date fin) {
 
         Turno tur=new Turno();
 
         if (Tipo.equals("Mañana")){
             tur.setTipo("Mañana");
-            tur.setHoraInicio(null);
-            tur.setHoraFin(null);
-            tur.setId(1);
-
         }
 
          if (Tipo.equals("Tarde")){
             tur.setTipo("Tarde");
-            tur.setHoraInicio(null);
-            tur.setHoraFin(null);
-            tur.setId(2);
-
         }
 
          if (Tipo.equals("Noche")){
             tur.setTipo("Noche");
-            tur.setHoraInicio(null);
-            tur.setHoraFin(null);
-            tur.setId(3);
+    }
 
-        }
+            tur.setFechaInicio(ini);
+            tur.setFechaFin(fin);
+            tur.setDni(Dni);
 
          Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
