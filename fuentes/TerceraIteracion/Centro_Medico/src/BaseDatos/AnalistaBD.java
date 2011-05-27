@@ -40,9 +40,22 @@ public class AnalistaBD {
         session.beginTransaction ();
 
         Analista analista = (Analista) session.get(Analista.class, DNI);
-        session.getTransaction().commit();
+        //session.getTransaction().commit();
 
         return analista;
+    }
+
+    public boolean existe (String DNI){
+        boolean existe;
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+
+        Analista analista = (Analista) session.get(Analista.class, DNI);
+        //session.getTransaction().commit();
+
+        if(analista!=null) return true;
+        else return false;
     }
 
     public Set<Analista> obtenerListaAnalistas(){

@@ -12,10 +12,10 @@ import java.util.List;
 public class RadiologoBD {
 
     public void almacenar(Radiologo radiologo){
+      
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-
         session.beginTransaction ();
-        session.save ( radiologo );
+        session.save (radiologo);
         session.getTransaction().commit();
     }
 
@@ -41,9 +41,19 @@ public class RadiologoBD {
         session.beginTransaction ();
 
         Radiologo radiologo = (Radiologo) session.get(Radiologo.class, DNI);
-        session.getTransaction().commit();
+        //session.getTransaction().commit();
 
         return radiologo;
+    }
+     public boolean existe (String DNI){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+
+        Radiologo radiologo = (Radiologo) session.get(Radiologo.class, DNI);
+        if(radiologo !=null) return true;
+        else return false;
+
     }
 
     public Set<Radiologo> obtenerListaRadiologos(){

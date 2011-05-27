@@ -2778,26 +2778,29 @@ public class UI_Administrador extends javax.swing.JFrame {
             jLabelErrorPaciente.setVisible(false);
                 try{
                 GestorUsuarios gestUsu = new GestorUsuarios();
-                ArrayList datos = new ArrayList();
+                Usuario elusuario=gestUsu.obtenerUsuario(jTextFieldDNIPaciente.getText());
 
              //   datos = gestUsu.consultarDatosPersonalesAdmin(jTextFieldDNIPaciente.getText());
-
-                jTextFieldNombrePaciente.setText(datos.get(1).toString());
-                jTextFieldApellidosPaciente.setText(datos.get(2).toString());
-                jTextFieldDireccionPaciente.setText(datos.get(3).toString());
-                jTextFieldContraseniaPaciente.setText(datos.get(4).toString());
-                jTextFieldEmailPaciente.setText(datos.get(10).toString());
-                jTextFieldTelefonoPaciente.setText(datos.get(5).toString());
-                jTextFieldLugarNacimientoPaciente.setText(datos.get(7).toString());
-                String tipo = datos.get(9).toString();
-
-
+                if(elusuario !=null && elusuario.getTipo().equals("Paciente")){
+                jTextFieldNombrePaciente.setText(elusuario.getNombre());
+                jTextFieldApellidosPaciente.setText(elusuario.getApellidos());
+                jTextFieldDireccionPaciente.setText(elusuario.getDireccion());
+                jTextFieldContraseniaPaciente.setText(elusuario.getContrasenia());
+                jTextFieldEmailPaciente.setText(elusuario.getEmail());
+                jTextFieldTelefonoPaciente.setText(elusuario.getTelefono());
+                jTextFieldLugarNacimientoPaciente.setText(elusuario.getLugarNac());
 
                 jButtonGuardarPaciente.setVisible(true);
                 jButtonAltaPaciente.setVisible(false);
 
                 jLabelContraseniaPaciente.setVisible(true);
                 jTextFieldContraseniaPaciente.setVisible(true);
+                System.out.println("He mostrado el paciente");
+                }
+                else{
+                    System.out.println("No es paciente");
+                    jLabelErrorPaciente.setVisible(true);
+                    }
             }catch(Exception E){}
         }
         else
@@ -2823,28 +2826,31 @@ public class UI_Administrador extends javax.swing.JFrame {
             jLabelErrorPersonal.setVisible(false);
                 try{
                 GestorUsuarios gestUsu = new GestorUsuarios();
-                ArrayList datos = new ArrayList();
+                Usuario elusuario=gestUsu.obtenerUsuario(jTextFieldDNIPersonal.getText());
 
                 //datos = gestUsu.consultarDatosPersonalesAdmin(jTextFieldDNIPersonal.getText());
+                if(elusuario !=null && elusuario.getTipo()!="Paciente" && elusuario.getTipo()!="Administrativo"){
+                jTextFieldNombrePersonal.setText(elusuario.getNombre());
+                jTextFieldApellidosPersonal.setText(elusuario.getApellidos());
+                jTextFieldDireccionPersonal.setText(elusuario.getDireccion());
+                jTextFieldContraseniaPersonal.setText(elusuario.getContrasenia());
+                jTextFieldEmailPersonal.setText(elusuario.getEmail());
+                jTextFieldTelefonoPersonal.setText(elusuario.getTelefono());
+                jTextFieldLugarNacimientoPersonal.setText(elusuario.getLugarNac());
 
-                jTextFieldNombrePersonal.setText(datos.get(1).toString());
-                jTextFieldApellidosPersonal.setText(datos.get(2).toString());
-                jTextFieldDireccionPersonal.setText(datos.get(3).toString());
-                jTextFieldContraseniaPersonal.setText(datos.get(4).toString());
-                jTextFieldEmailPersonal.setText(datos.get(10).toString());
-                jTextFieldTelefonoPersonal.setText(datos.get(5).toString());
-                jTextFieldLugarNacimientoPersonal.setText(datos.get(7).toString());
-                String tipo = datos.get(9).toString();
-
-                if(tipo.equals("Analista"))
+                if(elusuario.getTipo().equals("Analista"))
                     jRadioButtonAnalista.setSelected(true);
-                else if(tipo.equals("Medico"))
+                else if(elusuario.getTipo().equals("Medico"))
                     jRadioButtonMedico.setSelected(true);
-                else if(tipo.equals("Farmaceutico"))
+                else if(elusuario.getTipo().equals("Farmaceutico"))
                     jRadioButtonFarmaceutico.setSelected(true);
-                else if(tipo.equals("Radiologo"))
+                else if(elusuario.getTipo().equals("Radiologo"))
                     jRadioButtonRadiologo.setSelected(true);
-
+                 }
+                else{
+                    System.out.println("No es paciente");
+                    jLabelErrorPersonal.setVisible(true);
+                    }
                 jButtonGuardarPersonal.setVisible(true);
                 jButtonAltaPersonal.setVisible(false);
 
@@ -3641,30 +3647,30 @@ public class UI_Administrador extends javax.swing.JFrame {
 
     private void jButtonGuardarPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarPacienteMouseClicked
         // TODO add your handling code here:
+            if(compruebaFormulario("GestionarPaciente")){
+                GestorPacientes gesPac = new GestorPacientes();
+                Date fechaNacimiento = null;                        //HAY QUE PROCESARLA LEYÉNDOLA DEL FORMULARIOOOO
+                boolean exito=false;
+                fechaNacimiento = dateChooserCombo1.getSelectedDate().getTime();
 
-        if(compruebaFormulario("GestionarPersonal")){
-         GestorUsuarios gestUsu = new GestorUsuarios();
-         Date fechaNacimiento = null;                        //HAY QUE PROCESARLA LEYÉNDOLA DEL FORMULARIOOOO
-         String urlFoto = null;                              //HAY QUE GUARDAR LA FOTO Y PASAR LA RUTA DE DONDE ESTA
-         boolean exito;
+                try {
+                    exito=gesPac.modificarPaciente(jTextFieldDNIPaciente.getText(), jTextFieldNombrePaciente.getText(), jTextFieldApellidosPaciente.getText(), jTextFieldDireccionPaciente.getText(), jTextFieldEmailPaciente.getText(), jTextFieldContraseniaPaciente.getText(),jTextFieldTelefonoPaciente.getText(), fechaNacimiento, jTextFieldLugarNacimientoPaciente.getText(), laurl);
 
-         try{
-          gestUsu.modificarDatosPersonalesAdmin(jTextFieldDNIPaciente.getText(), jTextFieldNombrePaciente.getText(), jTextFieldApellidosPaciente.getText(), jTextFieldDireccionPaciente.getText(), jTextFieldEmailPaciente.getText(), jTextFieldContraseniaPaciente.getText(), jTextFieldTelefonoPaciente.getText(), fechaNacimiento, jTextFieldLugarNacimientoPaciente.getText(), urlFoto);
-          new InformacionExito().setVisible(true);
-          limpiarFormulario("GestionarPersonal");
-          System.out.println("hola");
+                    if(exito){
+                        new InformacionExito().setVisible(true);
+                        }
+                    else{
 
-         }catch (SQLException ex) {
-                Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+                        System.out.println( "exito!!");
+                            new InformacionError().setVisible(true);
+                    }
+                }catch (SQLException ex) {
+                    Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
             }
-        }
         else
-            jLabelErrorPersonal.setVisible(true);
-
-        /*if(compruebaFormulario("GestionarPaciente")){
-             new InformacionExito().setVisible(true);
-        }else
-            jLabelErrorPaciente.setVisible(true);*/
+            jLabelErrorPaciente.setVisible(true);
     }//GEN-LAST:event_jButtonGuardarPacienteMouseClicked
 
     private void jButtonGuardarPersonalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarPersonalMouseClicked

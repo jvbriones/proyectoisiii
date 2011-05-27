@@ -159,6 +159,14 @@ public class GestorUsuarios {
 
     }
 
-
+    public Usuario consultarDatos(String Dni) throws SQLException{
+        UsuarioBD usuario_bd = new UsuarioBD();
+        boolean Existe=usuario_bd.existeUsuario(Dni);
+         Usuario userAux=null;
+        if(Existe){
+             userAux =usuario_bd.obtenerUsuario(Dni);
+    }
+        return userAux;
+    }
 
 }

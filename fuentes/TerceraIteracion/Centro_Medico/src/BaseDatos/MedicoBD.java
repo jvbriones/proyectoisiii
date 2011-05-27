@@ -1,75 +1,81 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 package BaseDatos;
 
 import CentroMedico.Medico;
-import java.sql.*;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 import org.hibernate.Session;
 
+/**
+ *
+ * @author Manolo5
+ */
 public class MedicoBD {
-    String IpDelServidor = "localhost";
-    String NombreDB = "CentroMedico";
-    String user = "generico";
-    String pass = "generico";
-
-    /*
-     * Medico
-     */
-    public boolean existeMedico(String Dni) throws SQLException {
-        Medico med = obtener(Dni);
-
-        if (med != null){
-            System.out.print("ExisteMedico: Existe el paciente");
-           return true;
-       }
-       else{
-           System.out.print( "ExisteMedico: No existe el paciente\n");
-           return false;
-       }
-    }
-
-    /*
-     * almacenarMedico
-     */
-    public void almacenar(Medico med) {
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-
-        session.beginTransaction();
-        session.save(med);
-        session.getTransaction().commit();
-    }
-
-    /*
-     * obtener
-     * Devuelve un objeto Medico
-     */
-    public Medico obtener(String Dni) throws SQLException{
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-        session.beginTransaction();
-        Medico med = (Medico) session.get(Medico.class, Dni);
-        return med;
-    }
-
-
-    /*
-     * actualizar
-     * Actualiza la información relativa a un medico en la base de datos.
-     */
-    public void actualizar (Medico med){
+     public void almacenar(Medico medico){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
-        session.update (med);
+        session.save ( medico );
         session.getTransaction().commit();
     }
 
-    /*
-     * eliminar
-     * Elimina un objeto Paciente de la base de datos.
-     */
-    public void eliminar(Medico med){
+
+    public void actualizar ( Medico medico){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
-        session.delete (med);
+        session.update(medico );
+      
+    }
+
+    public void eliminar (Medico medico){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+        session.delete(medico );
         session.getTransaction().commit();
     }
+
+    public Medico obtener (String DNI){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+
+        Medico medico = (Medico) session.get(Medico.class, DNI);
+        //session.getTransaction().commit();
+
+        return medico;
+    }
+
+    public boolean existe (String DNI){
+        boolean existe;
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+
+        Medico medico = (Medico) session.get(Medico.class, DNI);
+        //session.getTransaction().commit();
+
+        if(medico!=null) return true;
+        else return false;
+    }
+
+    public Set<Medico> obtenerListaMedicos(){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+
+        List<Medico> result = (List<Medico>)session.createQuery("from Medico").list();
+        Set<Medico> medicos = new HashSet<Medico>(result);
+
+        session.getTransaction().commit();
+        return medicos;
+    }
+
+
 }

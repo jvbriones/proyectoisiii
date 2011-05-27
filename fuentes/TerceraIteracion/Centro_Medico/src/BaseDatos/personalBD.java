@@ -14,6 +14,7 @@ package BaseDatos;
 import CentroMedico.Analista;
 import CentroMedico.Medico;
 import CentroMedico.PersonalMedico;
+import CentroMedico.PersonalMedico;
 import CentroMedico.Radiologo;
 import CentroMedico.Usuario;
 import java.sql.*;
@@ -53,7 +54,6 @@ public class personalBD {
 
 
          if (Personal.getTipoPersonal().equals("Radiologo")){
-
              Radiologo radiologo=new Radiologo(Personal.getDNI(),Personal.getNombre(),Personal.getApellidos(),Personal.getDireccion(),Personal.getEmail(),Personal.getContrasenia(),Personal.getTelefono(),Personal.getFecNac(),Personal.getLugarNac(),Personal.getFoto());
              RadiologoBD rad=new RadiologoBD();
              rad.almacenar(radiologo);

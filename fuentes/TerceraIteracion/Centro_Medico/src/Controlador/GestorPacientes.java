@@ -75,5 +75,12 @@ public class GestorPacientes {
         
         
     }
-
+   public boolean modificarPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Pass,String Telefono, Date FecNac, String LugarNac, String Foto ) throws SQLException {
+        boolean exito;
+        PacBD bd_paciente=new PacBD();
+        Paciente paciente=bd_paciente.obtener(Dni);
+        paciente.actualizar(Dni, Nombre, Apellidos, Direccion, Email,Pass,Telefono, FecNac, LugarNac, Foto);
+        bd_paciente.actualizar(paciente);
+        return true;
+}
 }
