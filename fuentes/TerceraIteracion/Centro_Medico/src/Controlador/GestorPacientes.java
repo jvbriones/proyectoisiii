@@ -25,10 +25,10 @@ import java.util.Date;
 
 public class GestorPacientes {
 
-    public boolean altaPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, String Foto, String TipoUsuario) throws SQLException {
+   public boolean altaPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, String Foto, String TipoUsuario) throws SQLException {
         boolean existe;
-        PacBD bd_paciente=new PacBD();
-        String Datos=new String();
+        PacBD bd_paciente = new PacBD();
+        String Datos = new String();
 
         existe=bd_paciente.existePaciente(Dni);
 
@@ -38,17 +38,17 @@ public class GestorPacientes {
             Paciente paciente=new Paciente(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto, TipoUsuario);
             bd_paciente.almacenarPaciente(paciente);
 
-            Datos="Usuario Introducido con Éxito";
+            Datos = "Usuario Introducido con Éxito";
         }
         else {
-            Datos="Usuario ya Existe";
+            Datos = "Usuario ya Existe";
         }
 
         return existe;
 
     }
 
-    private String generarContraseña() {
+   private String generarContraseña() {
         String numeros = "0123456789";
 	String mayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	String minusculas = "abcdefghijklmnopqrstuvwxyz";
@@ -63,7 +63,7 @@ public class GestorPacientes {
         return contrasena;
     }
     
-    public Paciente obtenerPaciente(String Dni) throws SQLException{
+   public Paciente obtenerPaciente(String Dni) throws SQLException{
     
         PacBD pac = new PacBD();
         Paciente p= new Paciente();
@@ -75,6 +75,7 @@ public class GestorPacientes {
         
         
     }
+
    public boolean modificarPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Pass,String Telefono, Date FecNac, String LugarNac, String Foto ) throws SQLException {
         boolean exito;
         PacBD bd_paciente=new PacBD();
@@ -83,4 +84,5 @@ public class GestorPacientes {
         bd_paciente.actualizar(paciente);
         return true;
 }
+
 }

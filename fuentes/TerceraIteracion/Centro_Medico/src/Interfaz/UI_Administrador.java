@@ -144,7 +144,6 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
         jLabelErrorPersonal = new javax.swing.JLabel();
-        dateChooserCombo2 = new datechooser.beans.DateChooserCombo();
         jPanelPrincipal = new javax.swing.JPanel();
         jButtonEstadPersTipo = new javax.swing.JButton();
         jLabelEstadPersTipo1 = new javax.swing.JLabel();
@@ -323,7 +322,6 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
-        dateChooserCombo1 = new datechooser.beans.DateChooserCombo();
 
         jLabelErrorPaciente.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelErrorPaciente.setForeground(new java.awt.Color(255, 0, 0));
@@ -696,14 +694,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabelErrorPersonal.setName("jLabelErrorPersonal"); // NOI18N
         jPanelGestionarPersonal.add(jLabelErrorPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, 270, 20));
 
-        try {
-            dateChooserCombo2.setDefaultPeriods(new datechooser.model.multiple.PeriodSet());
-        } catch (datechooser.model.exeptions.IncompatibleDataExeption e1) {
-            e1.printStackTrace();
-        }
-        jPanelGestionarPersonal.add(dateChooserCombo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 350, -1, -1));
-
-        jPanelGestionarPersonal.setBounds(0, 0, 901, 531);
+        jPanelGestionarPersonal.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelGestionarPersonal, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jPanelGestionarPersonal.getAccessibleContext().setAccessibleName("jLabelErrorPersonal");
 
@@ -1205,7 +1196,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarTurno.add(jLabelErrorGestionarTurno);
         jLabelErrorGestionarTurno.setBounds(320, 420, 215, 18);
 
-        jPanelGestionarTurno.setBounds(0, 0, 901, 531);
+        jPanelGestionarTurno.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelGestionarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarCita.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1265,6 +1256,11 @@ public class UI_Administrador extends javax.swing.JFrame {
         jButtonAltaCita.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonAltaCitaMouseClicked(evt);
+            }
+        });
+        jButtonAltaCita.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAltaCitaActionPerformed(evt);
             }
         });
         jPanelGestionarCita.add(jButtonAltaCita);
@@ -1630,7 +1626,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarCita.add(jButtonAceptarCita);
         jButtonAceptarCita.setBounds(400, 440, 93, 39);
 
-        jPanelGestionarCita.setBounds(0, 0, 901, 531);
+        jPanelGestionarCita.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelGestionarCita, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadPersTipo.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1689,7 +1685,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jScrollPane5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 327, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanelEstadPersTipo.setBounds(0, 0, 901, 531);
+        jPanelEstadPersTipo.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelEstadPersTipo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadPersFecha.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1755,7 +1751,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jScrollPane6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 327, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanelEstadPersFecha.setBounds(0, 0, 901, 531);
+        jPanelEstadPersFecha.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelEstadPersFecha, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadCitas.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -2034,7 +2030,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelEstadCitas.add(jLabel15);
         jLabel15.setBounds(469, 201, 52, 14);
 
-        jPanelEstadCitas.setBounds(0, 0, 901, 531);
+        jPanelEstadCitas.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelEstadCitas, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         getContentPane().add(ZonaTrabajo);
@@ -2257,7 +2253,6 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabel34.setForeground(new java.awt.Color(255, 0, 0));
         jLabel34.setText(" Los campos con * son obligatorios");
         jPanelGestionarPaciente.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 420, 270, -1));
-        jPanelGestionarPaciente.add(dateChooserCombo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, -1, -1));
 
         getContentPane().add(jPanelGestionarPaciente);
         jPanelGestionarPaciente.setBounds(10, 170, 900, 530);
@@ -2891,11 +2886,10 @@ public class UI_Administrador extends javax.swing.JFrame {
         jButtonConsultarCita.setVisible(false);
         jButtonAltaCita.setVisible(false);
 
-
         /**Mostramos los botones de fecha y hora  */
         jPanelGestionarCitaFecha.setVisible(true);
         jPanelGestionarCitaHora.setVisible(true);
-        
+
         /**Mostramos el campo DNI de médico*/
         jLabelDNIGestionarCitaMedico.setVisible(true);
         jTextFieldDNIGestionarCitaMedico.setVisible(true);
@@ -3430,6 +3424,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
     private void jButtonConsultarCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultarCitaActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButtonConsultarCitaActionPerformed
 
     private void jButtonMenosDiaFechaFinTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosDiaFechaFinTurnoMouseClicked
@@ -3730,6 +3725,10 @@ public class UI_Administrador extends javax.swing.JFrame {
     private void jButtonAceptarCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAceptarCitaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonAceptarCitaActionPerformed
+
+    private void jButtonAltaCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAltaCitaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAltaCitaActionPerformed
 
 
     /*Comprueba que la fecha introducida es correcta
@@ -4630,8 +4629,6 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JLayeredPane ZonaTrabajo;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
-    private datechooser.beans.DateChooserCombo dateChooserCombo1;
-    private datechooser.beans.DateChooserCombo dateChooserCombo2;
     private javax.swing.JButton jButtonAceptarCita;
     private javax.swing.JButton jButtonAltaCita;
     private javax.swing.JButton jButtonAltaPaciente;

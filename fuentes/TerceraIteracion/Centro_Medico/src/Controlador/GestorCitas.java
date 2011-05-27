@@ -38,30 +38,28 @@ public class GestorCitas {
      * @return Mensaje de respuesta con el resultado de la operación.
      */
     public String alta_cita(String Dni) throws SQLException{
-        String datosCita = "";
-        CitasBD bd_citas = new CitasBD();
-        boolean existe;
 
-        existe = bd_citas.existeCita(Dni);
+        CitasBD citasbd = new CitasBD();
+//        PacBD pacientebd = new PacBD();
 
-        if(!existe){
-            PacBD bd_paciente = new PacBD();
-            Paciente paciente;
-
-            paciente=bd_paciente.obtener(Dni);
-            
-            if(paciente==null){
-                datosCita="No existe el paciente";
+        if(citasbd.existeCita(Dni)){
+            //Ya existe una cita para este Paciente
+            //Mostrar la cita?
+            return "Ya existe una cita para este Paciente";
+        }else{
+            GestorPacientes gpac = new GestorPacientes();
+            if(gpac.obtenerPaciente(Dni) == null){
+                //Alta paciente
+                //Dar de alta al paciente?
+            }else{
+                
             }
-            else{
-                // Faltan cosas
-            }
-        }
-        else{
-            datosCita="El paciente ya tiene una cita asignada";
+            PacBD pacientebd = new PacBD();
+            Paciente paciente = pacientebd.obtener(Dni);
         }
 
-        return datosCita;
+        
+        return "datos";
     }
 
     public String alta_cita_online(String Dni) throws SQLException{

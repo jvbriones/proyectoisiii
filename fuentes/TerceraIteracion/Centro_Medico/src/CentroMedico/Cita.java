@@ -35,7 +35,6 @@ public class Cita implements Serializable{
      * Constructores
      *
      */
-
     public Cita() {
         this.Fecha = new Date(0);
     }
