@@ -70,4 +70,12 @@ public class GestorPersonal {
         existe=bd_personal.existePersonal(Dni);
         return existe;
     }
+       public boolean modificarPersonal(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Pass,String Telefono, Date FecNac, String LugarNac, String Foto,String Tipo) throws SQLException {
+        boolean exito;
+        personalBD bd_personal=new personalBD();
+        PersonalMedico personal=bd_personal.obtener(Dni);
+        personal.actualizar(Dni, Nombre, Apellidos, Direccion, Email,Pass,Telefono, FecNac, LugarNac, Foto,Tipo);
+        bd_personal.actualizar(personal);
+        return true;
+}
 }

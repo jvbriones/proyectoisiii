@@ -89,6 +89,13 @@ public class personalBD {
         System.out.println("no llega");
         return Per;
     }
+        public void actualizar (PersonalMedico personal){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+        session.update (personal);
+        session.getTransaction().commit();
+    }
 }
 
 

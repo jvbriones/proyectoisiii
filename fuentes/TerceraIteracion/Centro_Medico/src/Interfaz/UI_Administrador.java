@@ -2829,8 +2829,13 @@ public class UI_Administrador extends javax.swing.JFrame {
                 Usuario elusuario=gestUsu.obtenerUsuario(jTextFieldDNIPersonal.getText());
 
                 //datos = gestUsu.consultarDatosPersonalesAdmin(jTextFieldDNIPersonal.getText());
-                if(elusuario !=null && elusuario.getTipo()!="Paciente" && elusuario.getTipo()!="Administrativo"){
-                jTextFieldNombrePersonal.setText(elusuario.getNombre());
+                if(elusuario ==null || elusuario.getTipo().equals("Paciente") || elusuario.getTipo().equals("Administrativo")){
+                    System.out.println("No es paciente");
+                    jLabelErrorPersonal.setVisible(true);
+
+                 }
+                else{
+                        jTextFieldNombrePersonal.setText(elusuario.getNombre());
                 jTextFieldApellidosPersonal.setText(elusuario.getApellidos());
                 jTextFieldDireccionPersonal.setText(elusuario.getDireccion());
                 jTextFieldContraseniaPersonal.setText(elusuario.getContrasenia());
@@ -2846,10 +2851,6 @@ public class UI_Administrador extends javax.swing.JFrame {
                     jRadioButtonFarmaceutico.setSelected(true);
                 else if(elusuario.getTipo().equals("Radiologo"))
                     jRadioButtonRadiologo.setSelected(true);
-                 }
-                else{
-                    System.out.println("No es paciente");
-                    jLabelErrorPersonal.setVisible(true);
                     }
                 jButtonGuardarPersonal.setVisible(true);
                 jButtonAltaPersonal.setVisible(false);
@@ -3676,26 +3677,33 @@ public class UI_Administrador extends javax.swing.JFrame {
     private void jButtonGuardarPersonalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarPersonalMouseClicked
         // TODO add your handling code here:
 
-        if(compruebaFormulario("GestionarPersonal")){
-        GestorUsuarios gestUsu = new GestorUsuarios();
-         Date fechaNacimiento = null;                        //HAY QUE PROCESARLA LEYÉNDOLA DEL FORMULARIOOOO
-         String urlFoto = null;                              //HAY QUE GUARDAR LA FOTO Y PASAR LA RUTA DE DONDE ESTA
-         boolean exito;
-         String tipoPersonal = "Analista";
-         if(jRadioButtonAnalista.isSelected())
+            if(compruebaFormulario("GestionarPersonal")){
+            GestorPersonal gesPer = new GestorPersonal();
+            Date fechaNacimiento = null;                        //HAY QUE PROCESARLA LEYÉNDOLA DEL FORMULARIOOOO
+            byte[] urlFoto = null;                              //HAY QUE GUARDAR LA FOTO Y PASAR LA RUTA DE DONDE ESTA
+            boolean exito;
+             fechaNacimiento = dateChooserCombo2.getSelectedDate().getTime();
+            String tipoPersonal = "";
+            if(jRadioButtonAnalista.isSelected())
                 tipoPersonal = "Analista";
-         else if(jRadioButtonMedico.isSelected())
+            else if(jRadioButtonMedico.isSelected())
                 tipoPersonal = "Medico";
-         else if(jRadioButtonRadiologo.isSelected())
+            else if(jRadioButtonRadiologo.isSelected())
                 tipoPersonal = "Radiologo";
-         else if(jRadioButtonFarmaceutico.isSelected())
+            else if(jRadioButtonFarmaceutico.isSelected())
                 tipoPersonal = "Farmaceutico";
-        try{
-        gestUsu.modificarDatosPersonalesAdmin(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(), jTextFieldContraseniaPersonal.getText(), jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), urlFoto);
-        new InformacionExito().setVisible(true);
-        limpiarFormulario("GestionarPersonal");
 
-        }catch (SQLException ex) {
+
+            try {
+                exito = gesPer.modificarPersonal(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(), jTextFieldContraseniaPersonal.getText(),jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), laurl, tipoPersonal);
+                if(exito){
+                    new InformacionExito().setVisible(true);
+                    //limpiarFormulario("GestionarPersonal");
+                    }
+                else
+                    new InformacionError().setVisible(true);
+
+            } catch (SQLException ex) {
                 Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
             }
         }

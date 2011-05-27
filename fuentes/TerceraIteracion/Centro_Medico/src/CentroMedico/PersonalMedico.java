@@ -11,7 +11,10 @@
  */
 
 package CentroMedico;
+import java.sql.SQLException;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class PersonalMedico extends Usuario{
 
@@ -46,6 +49,25 @@ public class PersonalMedico extends Usuario{
    
     public String getTipoPersonal() {
         return this.getTipo();
+    }
+      public void actualizar(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
+            String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto,String Tipo){
+        try {
+            super.setDNI(Dni);
+        } catch (SQLException ex) {
+            Logger.getLogger(Paciente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        super.setNombre(Nombre);
+        super.setApellidos(Apellidos);
+        super.setDireccion(Direccion);
+        super.setEmail(Email);
+        super.setContrasenia(Contrasenia);
+        super.setTelefono(Telefono);
+        super.setFecNac(FecNac);
+        super.setLugarNac(LugarNac);
+        super.setFoto(Foto);
+        super.setTipo(Tipo);
+
     }
 
 }
