@@ -67,9 +67,9 @@ public class CitasBD {
 
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction ();
-        //Cita Ci = (Cita) session.get(Cita.class, Dni);        /*****ESTO PETA******/
-        Calendar hora = Calendar.getInstance();                /* PARCHE */
-        Cita Ci = new Cita(true, hora, "Tarde", Dni, "33333333A"); /* PARCHE */
+        Cita Ci = (Cita) session.get(Cita.class, Dni);        /*****ESTO PETA******/
+        //Calendar hora = Calendar.getInstance();                /* PARCHE */
+        //Cita Ci = new Cita(true, hora, "Tarde", Dni, "33333333A"); /* PARCHE */
         return Ci;
     }
 
