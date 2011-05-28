@@ -18,6 +18,28 @@ public class CitasBD {
     String user = "generico";
     String pass = "generico";
 
+
+    public String altaCita(Date fechaIni, Date fechaFin){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Date inicio = fechaIni;
+        inicio.setHours(8); //Iniciar a las 8.00AM
+        
+        session.beginTransaction();
+        
+        while(inicio.compareTo(fechaFin) < 0){
+
+
+
+            if(inicio.getHours() == 20)
+                inicio.setDate(inicio.getDate() + 1);
+            else
+                inicio.setHours(inicio.getHours()+1);
+        }
+
+        return "Yeyo";
+    }
+
+
     /*
      * almacenarCita
      * Dado un objeto Cita, lo almacena en la base de datos.
