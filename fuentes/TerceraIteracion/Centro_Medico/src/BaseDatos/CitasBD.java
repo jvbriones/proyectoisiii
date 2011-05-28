@@ -19,7 +19,6 @@ public class CitasBD {
     String user="generico";
     String pass="generico";
 
-
     /*
      * altaCita
      */
@@ -44,7 +43,6 @@ public class CitasBD {
         return "Yeyo";
 }
 
-
     /*
      * almacenarCita
      * Dado un objeto Cita, lo almacena en la base de datos.
@@ -59,7 +57,6 @@ public class CitasBD {
         session.getTransaction().commit();
     }
 
-    
     /*
      * obtenerCita
      * Obtiene la cita relativa a un usuario dado.
@@ -76,7 +73,6 @@ public class CitasBD {
         return Ci;
     }
 
-    
     /*
      * actualizar
      * Actualiza una cita existente.
@@ -97,7 +93,6 @@ public class CitasBD {
 
     }
 
-   
     /*
      * eliminar
      * Elimina un objeto Cita de la base de datos.
@@ -108,7 +103,7 @@ public class CitasBD {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction();
-        session.delete(ci);
+        session.delete(ci); /* NO FUNCIONA */
         session.getTransaction().commit();
     }
 
