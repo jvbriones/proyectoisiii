@@ -2770,8 +2770,68 @@ public class UI_Analista extends javax.swing.JFrame {
 
 
     private boolean compruebaFormulario(String formulario){
+        if(formulario.equals("GestionarPersonal")){
 
-        if(formulario.equals("Almacenar")){
+            if(!compruebaFecha("GestionarPersonal")){
+                jLabelFechaNacimientoPersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelFechaNacimientoPersonal.setForeground(Color.black);
+                }
+
+            if(jTextFieldNombrePersonal.getText().length() == 0){
+                jLabelNombrePersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelNombrePersonal.setForeground(Color.black);
+            }
+
+            if(jTextFieldApellidosPersonal.getText().length() == 0){
+                jLabelApellidosPersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelApellidosPersonal.setForeground(Color.black);
+            }
+
+            if(jTextFieldDNIPersonal.getText().length() != 9){
+                jLabelDNIPersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelDNIPersonal.setForeground(Color.black);
+            }
+
+            if(jTextFieldDireccionPersonal.getText().length() == 0){
+                jLabelDireccionPersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelDireccionPersonal.setForeground(Color.black);
+            }
+
+            if(jTextFieldEmailPersonal.getText().length() == 0){
+                jLabelEmailPersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelEmailPersonal.setForeground(Color.black);
+            }
+
+            if(jTextFieldTelefonoPersonal.getText().length() == 0){
+                jLabelTelefonoPersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelTelefonoPersonal.setForeground(Color.black);
+            }
+
+            if(jTextFieldLugarNacimientoPersonal.getText().length() == 0){
+                jLabelLugarNacimientoPersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelLugarNacimientoPersonal.setForeground(Color.black);
+            }
+
+            return true;
+
+    }
+      if(formulario.equals("Almacenar")){
 
             if(jTextFieldAlmacenarDni.getText().length() == 0){
                 jLabelAlmacenarDni.setForeground(Color.red);
