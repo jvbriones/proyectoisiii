@@ -30,7 +30,8 @@ public class TurnoBD {
     String pass="generico";
 
     public boolean existeTurno(String Dni) throws SQLException {
-         Turno tur = obtener(Dni);
+         //Turno tur = obtener(Dni);
+        Turno tur=null;
 
         if (tur != null){
             System.out.print("ExisteTurno: Existe el Turno");
@@ -65,7 +66,7 @@ public class TurnoBD {
          Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction();
-        session.save(tur);
+        //session.save(tur);
         session.getTransaction().commit();
 
     }
@@ -78,75 +79,18 @@ public class TurnoBD {
             Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
             session.beginTransaction ();
-            session.delete (tur);
+            //session.delete (tur);
             session.getTransaction().commit();
         
     }
     
-    /*public void asignaTurno(String Dni, Date fechaInicio, Date fechaFin, String tipo) {
-
-        Jdbc conexion = new Jdbc();
-        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "INSERT INTO Turnos VALUES ('"+Dni+"',"+fechaInicio+","+fechaFin+",'"+tipo+"')";
-        conexion.consultaUpdate(Consulta);
-        conexion.closeConnection();
-
-    }*/
-
-   /* public void modificaTurno(String Dni, Date fechaInicio, Date fechaFin, String tipo) {
-
-        /*
-         Hay una incoherencia ya que en el diagrama de clases dice que esta
-         * función devuelve un boolean, y luego en el diagrama de secuencia
-         * por el contrario, no devuelove nada (void).
-         */
-        /*
-        Jdbc conexion = new Jdbc();
-        conexion.doConnection("IpDelServidor", "NombreDB", "user","pass");
-        String Consulta = "Update Turnos SET VALUES"+Dni+","+fechaInicio+","+fechaFin+","+tipo"WHERE Turno.Dni="+Dni;
-        conexion.consultaUpdate(Consulta);
-        conexion.closeConnection();
-      
-
-    }
-
-
-
-*/
-   /* public ArrayList ConsultarTurnos(Date fecha) throws SQLException {
-
-        ArrayList datos=new ArrayList();
-
-        Jdbc conexion = new Jdbc();
-        conexion.doConnection(IpDelServidor, NombreDB, user,pass);
-        String Consulta = "SELECT Dni, FechaInicio FROM Turno WHERE FechaInicio="+fecha;
-        ResultSet rs = conexion.consultaSelect(Consulta);
-        while(rs.next()) {
-            String dni=rs.getString("Dni");
-            Date fechaAux=rs.getDate("Fecha");
-
-            datos.add(fechaAux);
-            datos.add(dni);
-
-        }
-        return datos;
-    }
-    *
-    * */
-  
-    public void almacenar(Turno turno){
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-
-        session.beginTransaction ();
-        session.save ( turno );
-        session.getTransaction().commit();
-
-    }
+ 
 
      public Turno obtener(String Dni) throws SQLException{
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction();
-        Turno tur = (Turno) session.get(Turno.class, Dni);
+ 
+       Turno tur = (Turno) session.get(Turno.class, Dni);
         return tur;
     }
 
@@ -160,12 +104,5 @@ public class TurnoBD {
         session.getTransaction().commit();
     }
 
-    public void eliminar (Turno turno){
-    Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-
-        session.beginTransaction ();
-        session.delete ( turno );
-        session.getTransaction().commit();
-    }
 
 }

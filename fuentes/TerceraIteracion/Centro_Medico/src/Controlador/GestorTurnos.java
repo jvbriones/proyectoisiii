@@ -30,34 +30,25 @@ public class GestorTurnos {
     public boolean altaTurno(String dni,String tipo,Date inicio,Date fin)throws SQLException {
         // MIguel.  Tipo es " mañana" "tarde " o "noche"
 
-         String exito=new String();
-        personalBD perb= new personalBD();
-        PersonalMedico per= new PersonalMedico();
+        String exito=new String();
+        TurnoBD turbd = new TurnoBD();
         boolean bien=false;
 
-        //per = perb.obtener(Dni);
+        boolean existe_turno=false;
 
-        if (per==null){
-            bien=false;
-            System.out.println("No se puede asignar el Turno porque el Personal no Existe");
-        }
-        else{
+          existe_turno=turbd.existeTurno(dni);
 
-            boolean tiene_turno=false;
-
-            // Miguel. Falta esta tiene_turno=per.tiene_turno();
-
-            if ( tiene_turno){
+            if ( existe_turno){
                 bien=false;
                 exito="Ya existe un Turno del tipo "+tipo;
             }
             else{
-                TurnoBD bd_turno=new TurnoBD();
-                bd_turno.altaTurno(dni,"Mañana",inicio,fin);
+             
+                turbd.altaTurno(dni,"Mañana",inicio,fin);
                 exito="Se creó un Turno de tipo "+tipo;
                 bien=true;
                 }
-        }
+        
         
         return bien;
     }

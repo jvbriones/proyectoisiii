@@ -2,11 +2,18 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
   <class name="CentroMedico.Turno">
-    <id column="ID_TURNO" name="Id" type="integer">
+    <id column="ID_TURNO" name="dni" type="integer">
       <generator class="native"/>
     </id>
-    <property name="Tipo"/>
-    <property name="FechaInicio"/>
-    <property name="FechaFin"/>
+     <property name="Tipo">
+        <column name="Tipo" not-null="true"/>
+    </property>
+    <property name="fechaInicio">
+      <column name="fechaInicio" not-null="true"/>
+    </property>
+
+    <property name="fechaFin">
+      <column name="fechaFin" not-null="true"/>
+    </property>
   </class>
 </hibernate-mapping>
