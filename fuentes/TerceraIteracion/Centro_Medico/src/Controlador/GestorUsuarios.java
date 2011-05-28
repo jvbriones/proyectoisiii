@@ -32,7 +32,7 @@ public class GestorUsuarios {
     public Usuario obtenerUsuario(String dni){
         UsuarioBD usuBD=new UsuarioBD();
         Usuario usu=null;
-        try {
+        try{
             usu= usuBD.obtener(dni);
         } catch (SQLException ex) {
             Logger.getLogger(GestorUsuarios.class.getName()).log(Level.SEVERE, null, ex);

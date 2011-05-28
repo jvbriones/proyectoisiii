@@ -35,8 +35,7 @@ public class UsuarioBD {
 
     }
 
-
-        public Usuario obtenerUsuarioNombre(String nombre) throws SQLException {
+    public Usuario obtenerUsuarioNombre(String nombre) throws SQLException {
 
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction ();
@@ -45,10 +44,6 @@ public class UsuarioBD {
 
 
     }
-
-
-
-
 
     public void almacenarUsuario(Usuario user) {
 
@@ -68,6 +63,7 @@ public class UsuarioBD {
         else return false;
 
     }
+
     public Usuario obtener(String Dni) throws SQLException{
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
