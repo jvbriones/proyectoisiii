@@ -39,6 +39,7 @@ import javax.swing.DefaultListModel;
  * @author Adrian Selva
  * @author Pedro Luis
  * @author Esteban Dorado
+ * @author Juan Miguel Cabrera
  */
 public class UI_Administrador extends javax.swing.JFrame {
 
@@ -3388,14 +3389,13 @@ public class UI_Administrador extends javax.swing.JFrame {
         if(1 != JOptionPane.showOptionDialog(null, "¿Cancelar la cita?", "Confirmación", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE, null, null, null)){
             
             GestorCitas gtcts = new GestorCitas();
-            try{
-                gtcts.cancelarCita(dni);
+            //try{
+                //gtcts.cancelarCita(dni);
                 JOptionPane.showMessageDialog(null, "Ha cancelado la cita", "Salir",JOptionPane.INFORMATION_MESSAGE);
                 mostrarPanel("Principal");
-            }catch(SQLException ex){
+            /*}catch(SQLException ex){
                 System.err.print(ex.getMessage());
-            }
-            
+            }*/
         }
     }//GEN-LAST:event_jButtonCancelarCitaMouseClicked
 
