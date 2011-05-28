@@ -11,7 +11,7 @@
         <column name="Fecha" type="date"/>
     </property>
     <property name="Estado">
-        <column name="Estado" type="Boolean"/>
+        <column name="Estado" type="boolean"/>
     </property>
 
      <property name="Tipo">
