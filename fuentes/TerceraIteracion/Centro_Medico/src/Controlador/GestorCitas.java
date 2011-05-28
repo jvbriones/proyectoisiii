@@ -29,6 +29,8 @@ import java.util.*;
 // Esta clase está sin terminar
 public class GestorCitas {
 
+    public GestorCitas(){}
+
     // GestorCitas NO DEBE COMUNICARSE DIRECTAMENTE CON LA CLASE PacienteBD
     // SINO QUE DEBERIA COMUNICARSE CON GestorPacientes, Y ESTE CON PacienteBD
 
@@ -66,6 +68,11 @@ public class GestorCitas {
         return "2Pac";
     }
 
+    public void cancelarCita(String dni)throws SQLException{
+        CitasBD citabd = new CitasBD();
+        citabd.eliminar(this.obtenerCita(dni));
+    }
+
     public String cancelarCitaOnline(Usuario usu) throws SQLException{
 
         CitasBD bd_citas=new CitasBD();
@@ -100,18 +107,18 @@ public class GestorCitas {
         // si dice que si, se viene aquí de nuevo, y se hace las operaciones del DS
         // si dice que no, desde la interfaz, se finaliza la operacion.
 
-
-
         cita.setEstado(false);
         bd_citas.almacenar(cita);
-
 
        return " cita cancelada";
     }
 
     public Cita obtenerCita(String dni) throws SQLException{
         CitasBD cita = new CitasBD();
-        return cita.obtenerCita(dni);
+        Cita ci = null;
+        ci = cita.obtenerCita(dni);
+
+        return ci;
     }
 
 //    public void setFecha(fecha){

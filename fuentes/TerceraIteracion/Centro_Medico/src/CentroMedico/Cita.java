@@ -30,26 +30,41 @@ public class Cita implements Serializable{
     private Paciente Paciente;
     private PersonalMedico PersonalMedico;
 
+    /* Atributos que faltan*/
+    private String DniPaciente;
+    private String DniMedico;
+
     /*
      *
      * Constructores
      *
      */
-    public Cita() {
+    //NO tiene sentido una cita que tenga solo fecha!
+    /*public Cita() {
         this.Fecha = new Date(0);
-    }
+    }*/
 
+    //Que puto sentido tiene este constructor?
     public Cita(Date Fecha, boolean Estado, String Tipo){
         this.Fecha=Fecha;
         this.Estado=Estado;
         this.Tipo=Tipo;
     }
+
+    /* Un constructor de verdad */
+    public Cita(boolean estado, Date fecha, String tipo, String dnipac, String dnimed){
+        
+        this.Estado=estado;
+        this.Fecha=fecha;
+        this.Tipo=tipo;
+        this.DniPaciente = dnipac;
+        this.DniMedico = dnimed;
+
+    }
+
     
-    /*
-     *
-     * Metodos Consultores
-     *
-     */
+    /********** Metodos Consultores **********/
+     
     public Date getFecha(){
         return Fecha;
     }
@@ -62,6 +77,11 @@ public class Cita implements Serializable{
         return Tipo;
     }
 
+    public String getDNIMedico(){
+        return this.DniMedico;
+    }
+
+    /* Estos metodos son bazofia */
     public Paciente getPaciente(){
         return Paciente;
     }
@@ -70,12 +90,9 @@ public class Cita implements Serializable{
         return  PersonalMedico;
     }
 
-    /*
-      *
-      * Metodos Asignadores
-      *
-      */
 
+    /********* Metodos Asignadores **********/
+      
     public void setFecha(Date Fecha){
         this.Fecha=Fecha;
     }

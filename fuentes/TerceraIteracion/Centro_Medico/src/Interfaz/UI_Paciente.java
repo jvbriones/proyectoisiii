@@ -23,7 +23,6 @@ import java.sql.SQLException;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 
-
 /**
  *
  * @author Nicolas_Sanchez
@@ -47,7 +46,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         mostrarDatosPaciente(usu);
 
         /** Conectamos con la BD y tomamos los datos del paciente*/
-       
+
         /**Ponemos icono de paciente logueado*/
         jLabelTipoUsuarioIdentificado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo-Usuario-Paciente.png"))); // NOI18N
     }
@@ -55,7 +54,7 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void identificarPaciente( String nombreUsuario) throws SQLException{
 
         //trabajar con paciente no se puede, ya que su BD está mal
-       
+
         Usuario paci=null;
         usuarioBD usu_bd=new usuarioBD ();
         paci=usu_bd.obtenerUsuario(nombreUsuario);
@@ -64,9 +63,9 @@ public class UI_Paciente extends javax.swing.JFrame {
         cargarDatosCitaPaciente(paci);
 
     }
- 
+
  */
-    
+
     private void mostrarDatosPaciente(Usuario usu) throws SQLException{
 
         Calendar calendar = Calendar.getInstance();
@@ -80,7 +79,6 @@ public class UI_Paciente extends javax.swing.JFrame {
         String num_mes= String.valueOf(mes);
         String num_anio= String.valueOf(anio);
 
-
         jTextFieldFechaNacimientoAnioPaciente.setText(num_anio);
         jTextFieldFechaNacimientoDiaPaciente.setText(num_dia);
         jTextFieldFechaNacimientoMesPaciente.setText(num_mes);
@@ -92,13 +90,6 @@ public class UI_Paciente extends javax.swing.JFrame {
         jTextFieldDireccionPaciente.setText(usu.getDireccion());
         jTextFieldEmailPaciente.setText(usu.getEmail());
         jTextFieldLugarNacimientoPaciente.setText(usu.getLugarNac());
-
-        
-      
-       
-       
-        
-
     }
 
     private void cargarDatosCitaPaciente( Usuario usu )throws SQLException{
@@ -123,8 +114,6 @@ public class UI_Paciente extends javax.swing.JFrame {
             String num_dia= String.valueOf(dia);
             String num_mes= String.valueOf(mes);
             String num_anio= String.valueOf(anio);
-
-
 
             jTextFieldDNIMedico.setText(nueva_cita.getPersonalMedico().getDNI());
             jTextFieldDNIPacienteCita.setText(nueva_cita.getPaciente().getDNI());

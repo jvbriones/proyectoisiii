@@ -12,7 +12,6 @@
 package Controlador;
 
 import CentroMedico.Usuario;
-import BaseDatos.UsuarioBD;
 import java.sql.SQLException;
 import java.util.*;
 import BaseDatos.UsuarioBD;

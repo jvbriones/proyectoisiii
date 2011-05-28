@@ -13,12 +13,15 @@ import java.sql.*;
 import org.hibernate.*;
 
 public class CitasBD {
-    String IpDelServidor = "localhost";
-    String NombreDB = "CentroMedico";
-    String user = "generico";
-    String pass = "generico";
+    String IpDelServidor="localhost";
+    String NombreDB="CentroMedico";
+    String user="generico";
+    String pass="generico";
 
 
+    /*
+     * altaCita
+     */
     public String altaCita(Date fechaIni, Date fechaFin){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         Date inicio = fechaIni;
@@ -62,15 +65,16 @@ public class CitasBD {
      * @return El objeto Cita oportuno o un objeto null.
      */
     public Cita obtenerCita(String Dni) throws SQLException {
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
-        session.beginTransaction();
-        Cita ci = (Cita) session.get(Cita.class, Dni);
-        
-        return ci;
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session.beginTransaction ();
+        //Cita Ci = (Cita) session.get(Cita.class, Dni);        /*****ESTO PETA******/
+        Date hora = new Date(0);                                   /* PARCHE */
+        Cita Ci = new Cita(true, hora, "Tarde", Dni, "33333333A"); /* PARCHE */
+        return Ci;
     }
 
-
+    
     /*
      * actualizar
      * Actualiza una cita existente.
@@ -82,8 +86,8 @@ public class CitasBD {
 
         session.beginTransaction ();
         try{
-        session.update(cita);
-        System.out.println("Cita actualizada correctamente.");
+            session.update(cita);
+            System.out.println("Cita actualizada correctamente.");
         }catch(HibernateException ex){
             System.err.println(ex.getMessage());
         }
