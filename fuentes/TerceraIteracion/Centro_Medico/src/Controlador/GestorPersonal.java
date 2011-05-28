@@ -11,8 +11,12 @@
 
 package Controlador;
 
+import BaseDatos.FarmaceuticoBD;
+import BaseDatos.UsuarioBD;
 import BaseDatos.personalBD;
+import CentroMedico.Farmaceutico;
 import CentroMedico.PersonalMedico;
+import CentroMedico.Usuario;
 import java.sql.SQLException;
 import java.util.Date;
 
@@ -74,6 +78,14 @@ public class GestorPersonal {
         boolean exito;
         personalBD bd_personal=new personalBD();
         PersonalMedico personal=bd_personal.obtener(Dni);
+        personal.actualizar(Dni, Nombre, Apellidos, Direccion, Email,Pass,Telefono, FecNac, LugarNac, Foto,Tipo);
+        bd_personal.actualizar(personal);
+        return true;
+}
+       public boolean modificarPersonalFarmacia(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Pass,String Telefono, Date FecNac, String LugarNac, String Foto,String Tipo) throws SQLException {
+        boolean exito;
+        FarmaceuticoBD bd_personal=new FarmaceuticoBD();
+        Farmaceutico personal=bd_personal.obtener(Dni);
         personal.actualizar(Dni, Nombre, Apellidos, Direccion, Email,Pass,Telefono, FecNac, LugarNac, Foto,Tipo);
         bd_personal.actualizar(personal);
         return true;
