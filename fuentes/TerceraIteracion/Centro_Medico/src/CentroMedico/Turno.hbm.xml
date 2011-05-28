@@ -6,7 +6,7 @@
       <generator class="native"/>
     </id>
     <property name="Tipo"/>
-    <property name="HoraInicio"/>
-    <property name="HoraFin"/>
+    <property name="FechaInicio"/>
+    <property name="FechaFin"/>
   </class>
 </hibernate-mapping>
