@@ -13,6 +13,7 @@
     <mapping resource="CentroMedico/AtributoOrina.hbm.xml"/>
     <mapping resource="CentroMedico/AtributoSangre.hbm.xml"/>
     <mapping resource="CentroMedico/Imagen.hbm.xml"/>
+	<mapping resource="CentroMedico/Turno.hbm.xml"/>
     <mapping resource="CentroMedico/LoteMedicamento.hbm.xml"/>
     <mapping resource="CentroMedico/Medicamento.hbm.xml"/>
     <mapping resource="CentroMedico/MedicamentoRecetado.hbm.xml"/>
