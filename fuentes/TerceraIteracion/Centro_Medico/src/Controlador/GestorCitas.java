@@ -98,7 +98,6 @@ public class GestorCitas {
         mes=mes+1;//mes, de 0 a 11
         int anio = calendar.get(Calendar.YEAR);  //año
 
-
         // desde la interfaz se manda un mensaje por pantalla para eliminar la cita
         // si dice que si, se viene aquí de nuevo, y se hace las operaciones del DS
         // si dice que no, desde la interfaz, se finaliza la operacion.
