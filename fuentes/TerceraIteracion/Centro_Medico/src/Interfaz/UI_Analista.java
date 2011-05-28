@@ -14,12 +14,14 @@ package Interfaz;
 import java.awt.Image;
 import CentroMedico.*;
 import BaseDatos.*;
+import Controlador.GestorPersonal;
 import Controlador.GestorPruebas;
 import java.util.Calendar.*;
 import java.util.Calendar;
 import java.awt.Color;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -1721,6 +1723,30 @@ public class UI_Analista extends javax.swing.JFrame {
 
     private void jButtonGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarMouseClicked
         // TODO add your handling code here:
+         if(compruebaFormulario("GestionarPersonal")){
+            GestorPersonal gesPer = new GestorPersonal();
+            Date fechaNacimiento = null;                        //HAY QUE PROCESARLA LEYÉNDOLA DEL FORMULARIOOOO
+            byte[] urlFoto = null;                              //HAY QUE GUARDAR LA FOTO Y PASAR LA RUTA DE DONDE ESTA
+            boolean exito;
+            String url=null;
+
+            fechaNacimiento = dateChooserCombo2.getSelectedDate().getTime();
+            String tipoPersonal = "Analista";
+           
+            try {
+                exito = gesPer.modificarPersonal(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(),jTextFieldContraseniaPersonal.getText(), jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), url, tipoPersonal);
+                if(exito){
+                    new InformacionExito().setVisible(true);
+                    limpiarFormulario("GestionarPersonal");
+                    }
+                else
+                    new InformacionError().setVisible(true);
+
+            } catch (SQLException ex) {
+                Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
 }//GEN-LAST:event_jButtonGuardarMouseClicked
 
     private void jButtonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGuardarActionPerformed
@@ -2380,7 +2406,7 @@ public class UI_Analista extends javax.swing.JFrame {
         int diaActual;
         int mesActual;
         int anioActual;
-
+        Calendar fecha;
         if(persona.equals("GestionarPersonal")){
            fecha=dateChooserCombo2.getSelectedDate();
            dia=fecha.get(Calendar.DATE);
@@ -2543,6 +2569,12 @@ public class UI_Analista extends javax.swing.JFrame {
             /**Hacemos visible el botón jLabelIconoInicio*/
             jLabelInicio.setVisible(true);
             jLabelIconoInicio.setVisible(true);
+
+             jRadioButtonAnalista.setSelected(true);
+             jRadioButtonRadiologo.setEnabled(false);
+             jRadioButtonFarmaceutico.setEnabled(false);
+             jRadioButtonMedico.setEnabled(false);
+
 
             /**Insertamos icono de foto anónima*/
             jLabelFotoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
@@ -2723,9 +2755,9 @@ public class UI_Analista extends javax.swing.JFrame {
         String num_anio= String.valueOf(anio);
 
 
-        jTextFieldFechaNacimientoAnioPersonal.setText(num_anio);
-        jTextFieldFechaNacimientoDiaPersonal.setText(num_dia);
-        jTextFieldFechaNacimientoMesersonal.setText(num_mes);
+        //jTextFieldFechaNacimientoAnioPersonal.setText(num_anio);
+        //jTextFieldFechaNacimientoDiaPersonal.setText(num_dia);
+        //jTextFieldFechaNacimientoMesersonal.setText(num_mes);
         jTextFieldNombrePersonal.setText(usu.getNombre());
         jTextFieldContraseniaPersonal.setText(usu.getContrasenia());
         jTextFieldDNIPersonal.setText(usu.getDNI());
