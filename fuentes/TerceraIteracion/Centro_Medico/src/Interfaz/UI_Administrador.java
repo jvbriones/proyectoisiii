@@ -3334,7 +3334,32 @@ public class UI_Administrador extends javax.swing.JFrame {
             GestorUsuarios gtuser = new GestorUsuarios();
             Usuario usr = gtuser.obtenerUsuario(dni);
             if(usr != null){
-                jTextAreaInfoCitaOnline.setText("Introduce el DNI del paciente y pulse en la opción que desee\n\t\t¡El DNI ya existe!");
+                try{
+                    GestorCitas gtcts = new GestorCitas();
+                    Cita ct = gtcts.obtenerCita(dni);
+                    if(ct != null){
+                        jTextAreaInfoCitaOnline.setText("Introduce el DNI del paciente y pulse en la opción que desee\n\t¡Ya tiene una cita asignada!");
+                    }else{
+                        jButtonGuardarCita.setVisible(true);
+                        jButtonVolver.setVisible(true);
+                        jTextAreaInfoCitaOnline.setText("Estás añadiendo una cita, puedes guardar los cambios o cancelarla");
+                        jButtonConsultarCita.setVisible(false);
+                        jButtonAltaCita.setVisible(false);
+
+                        /**Mostramos los botones de fecha y hora  */
+                        jPanelGestionarCitaFecha.setVisible(true);
+                        jPanelGestionarCitaHora.setVisible(true);
+
+                        /**Mostramos el campo DNI de médico*/
+                        jLabelDNIGestionarCitaMedico.setVisible(true);
+                        jTextFieldDNIGestionarCitaMedico.setVisible(true);
+                        jTextFieldDNIGestionarCitaMedico.setEditable(false);
+                        jTextFieldDNIGestionarCitaPaciente.setText(dni);
+                        jTextFieldDNIGestionarCitaPaciente.setEditable(false);
+                    }
+                }catch(SQLException ex){
+                    System.out.println(ex.getMessage());
+                }
             }else{
                 mostrarPanel("GestionarPaciente");
                 jTextFieldDNIPaciente.setText(dni);
