@@ -201,23 +201,14 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jLabelDNIPersonal = new javax.swing.JLabel();
         jTextFieldLugarNacimientoPersonal = new javax.swing.JTextField();
         jLabelTelefonoPersonal = new javax.swing.JLabel();
-        jTextFieldFechaNacimientoMesersonal = new javax.swing.JTextField();
         jLabelLugarNacimientoPersonal = new javax.swing.JLabel();
         jLabelDireccionPersonal = new javax.swing.JLabel();
-        jButtonMenosAnioPersona = new javax.swing.JButton();
         jLabelApellidosPersonal = new javax.swing.JLabel();
         jTextFieldApellidosPersonal = new javax.swing.JTextField();
-        jButtonMasDiaPersonal = new javax.swing.JButton();
-        jButtonMenosMesPersonal = new javax.swing.JButton();
-        jButtonMenosDiaPersonal = new javax.swing.JButton();
         jLabelEmailPersonal = new javax.swing.JLabel();
         jTextFieldDireccionPersonal = new javax.swing.JTextField();
-        jTextFieldFechaNacimientoDiaPersonal = new javax.swing.JTextField();
-        jButtonMasAnioPersonal = new javax.swing.JButton();
         jTextFieldEmailPersonal = new javax.swing.JTextField();
-        jTextFieldFechaNacimientoAnioPersonal = new javax.swing.JTextField();
         jTextFieldContraseniaPersonal = new javax.swing.JTextField();
-        jButtonMasMesPersonal = new javax.swing.JButton();
         jLabelFechaNacimientoPersonal = new javax.swing.JLabel();
         jButtonGuardar = new javax.swing.JButton();
         jButtonFotoPersonal = new javax.swing.JButton();
@@ -227,6 +218,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jRadioButtonAnalista = new javax.swing.JRadioButton();
         jRadioButtonRadiologo = new javax.swing.JRadioButton();
         jRadioButtonMedico = new javax.swing.JRadioButton();
+        dateChooserCombo3 = new datechooser.beans.DateChooserCombo();
         jPanelConsultarTurno = new javax.swing.JPanel();
         jButtonMenosDiaFechaInicioTurno = new javax.swing.JButton();
         jButtonMenosMesFechaInicioTurno = new javax.swing.JButton();
@@ -1006,7 +998,6 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jPanelConsultarDatosPersonales.add(jLabelGestionarPaciente4);
         jLabelGestionarPaciente4.setBounds(257, 20, 440, 62);
 
-        jTextFieldNombrePersonal.setEditable(false);
         jTextFieldNombrePersonal.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldNombrePersonalKeyTyped(evt);
@@ -1020,7 +1011,6 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jPanelConsultarDatosPersonales.add(jLabelFotoPersonal);
         jLabelFotoPersonal.setBounds(720, 330, 130, 150);
 
-        jTextFieldTelefonoPersonal.setEditable(false);
         jTextFieldTelefonoPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldTelefonoPersonalKeyTyped(evt);
@@ -1033,7 +1023,6 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jPanelConsultarDatosPersonales.add(jLabelContraseniaPersonal);
         jLabelContraseniaPersonal.setBounds(729, 250, 100, 14);
 
-        jTextFieldDNIPersonal.setEditable(false);
         jTextFieldDNIPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldDNIPersonalKeyTyped(evt);
@@ -1054,7 +1043,6 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jPanelConsultarDatosPersonales.add(jLabelDNIPersonal);
         jLabelDNIPersonal.setBounds(757, 96, 40, 14);
 
-        jTextFieldLugarNacimientoPersonal.setEditable(false);
         jTextFieldLugarNacimientoPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldLugarNacimientoPersonalKeyTyped(evt);
@@ -1067,16 +1055,6 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jPanelConsultarDatosPersonales.add(jLabelTelefonoPersonal);
         jLabelTelefonoPersonal.setBounds(157, 250, 70, 14);
 
-        jTextFieldFechaNacimientoMesersonal.setEditable(false);
-        jTextFieldFechaNacimientoMesersonal.setText("1");
-        jTextFieldFechaNacimientoMesersonal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldFechaNacimientoMesersonalActionPerformed(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jTextFieldFechaNacimientoMesersonal);
-        jTextFieldFechaNacimientoMesersonal.setBounds(217, 377, 33, 20);
-
         jLabelLugarNacimientoPersonal.setText("Lugar nacimiento");
         jPanelConsultarDatosPersonales.add(jLabelLugarNacimientoPersonal);
         jLabelLugarNacimientoPersonal.setBounds(350, 250, 140, 14);
@@ -1085,25 +1063,10 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jPanelConsultarDatosPersonales.add(jLabelDireccionPersonal);
         jLabelDireccionPersonal.setBounds(157, 172, 80, 14);
 
-        jButtonMenosAnioPersona.setText("-");
-        jButtonMenosAnioPersona.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMenosAnioPersonaMouseClicked(evt);
-            }
-        });
-        jButtonMenosAnioPersona.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMenosAnioPersonaActionPerformed(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jButtonMenosAnioPersona);
-        jButtonMenosAnioPersona.setBounds(257, 407, 50, 40);
-
         jLabelApellidosPersonal.setText("Apellidos");
         jPanelConsultarDatosPersonales.add(jLabelApellidosPersonal);
         jLabelApellidosPersonal.setBounds(407, 96, 80, 14);
 
-        jTextFieldApellidosPersonal.setEditable(false);
         jTextFieldApellidosPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldApellidosPersonalKeyTyped(evt);
@@ -1112,53 +1075,10 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jPanelConsultarDatosPersonales.add(jTextFieldApellidosPersonal);
         jTextFieldApellidosPersonal.setBounds(407, 126, 290, 20);
 
-        jButtonMasDiaPersonal.setText("+");
-        jButtonMasDiaPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMasDiaPersonalMouseClicked(evt);
-            }
-        });
-        jButtonMasDiaPersonal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMasDiaPersonalActionPerformed(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jButtonMasDiaPersonal);
-        jButtonMasDiaPersonal.setBounds(157, 337, 50, 40);
-
-        jButtonMenosMesPersonal.setText("-");
-        jButtonMenosMesPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMenosMesPersonalMouseClicked(evt);
-            }
-        });
-        jButtonMenosMesPersonal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMenosMesPersonalActionPerformed(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jButtonMenosMesPersonal);
-        jButtonMenosMesPersonal.setBounds(207, 407, 50, 40);
-
-        jButtonMenosDiaPersonal.setText("-");
-        jButtonMenosDiaPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMenosDiaPersonalMouseClicked(evt);
-            }
-        });
-        jButtonMenosDiaPersonal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMenosDiaPersonalActionPerformed(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jButtonMenosDiaPersonal);
-        jButtonMenosDiaPersonal.setBounds(157, 407, 50, 40);
-
         jLabelEmailPersonal.setText("Email");
         jPanelConsultarDatosPersonales.add(jLabelEmailPersonal);
         jLabelEmailPersonal.setBounds(567, 172, 80, 14);
 
-        jTextFieldDireccionPersonal.setEditable(false);
         jTextFieldDireccionPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldDireccionPersonalKeyTyped(evt);
@@ -1167,26 +1087,6 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jPanelConsultarDatosPersonales.add(jTextFieldDireccionPersonal);
         jTextFieldDireccionPersonal.setBounds(157, 192, 370, 20);
 
-        jTextFieldFechaNacimientoDiaPersonal.setEditable(false);
-        jTextFieldFechaNacimientoDiaPersonal.setText("1");
-        jPanelConsultarDatosPersonales.add(jTextFieldFechaNacimientoDiaPersonal);
-        jTextFieldFechaNacimientoDiaPersonal.setBounds(167, 377, 33, 20);
-
-        jButtonMasAnioPersonal.setText("+");
-        jButtonMasAnioPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMasAnioPersonalMouseClicked(evt);
-            }
-        });
-        jButtonMasAnioPersonal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMasAnioPersonalActionPerformed(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jButtonMasAnioPersonal);
-        jButtonMasAnioPersonal.setBounds(257, 337, 50, 40);
-
-        jTextFieldEmailPersonal.setEditable(false);
         jTextFieldEmailPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldEmailPersonalKeyTyped(evt);
@@ -1195,29 +1095,9 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         jPanelConsultarDatosPersonales.add(jTextFieldEmailPersonal);
         jTextFieldEmailPersonal.setBounds(567, 192, 289, 20);
 
-        jTextFieldFechaNacimientoAnioPersonal.setEditable(false);
-        jTextFieldFechaNacimientoAnioPersonal.setText("1950");
-        jPanelConsultarDatosPersonales.add(jTextFieldFechaNacimientoAnioPersonal);
-        jTextFieldFechaNacimientoAnioPersonal.setBounds(257, 377, 50, 20);
-
         jTextFieldContraseniaPersonal.setColumns(8);
-        jTextFieldContraseniaPersonal.setEditable(false);
         jPanelConsultarDatosPersonales.add(jTextFieldContraseniaPersonal);
         jTextFieldContraseniaPersonal.setBounds(729, 270, 70, 20);
-
-        jButtonMasMesPersonal.setText("+");
-        jButtonMasMesPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMasMesPersonalMouseClicked(evt);
-            }
-        });
-        jButtonMasMesPersonal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMasMesPersonalActionPerformed(evt);
-            }
-        });
-        jPanelConsultarDatosPersonales.add(jButtonMasMesPersonal);
-        jButtonMasMesPersonal.setBounds(207, 337, 50, 40);
 
         jLabelFechaNacimientoPersonal.setText("Fecha nacimiento");
         jPanelConsultarDatosPersonales.add(jLabelFechaNacimientoPersonal);
@@ -1290,6 +1170,8 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         });
         jPanelConsultarDatosPersonales.add(jRadioButtonMedico);
         jRadioButtonMedico.setBounds(440, 390, 110, 23);
+        jPanelConsultarDatosPersonales.add(dateChooserCombo3);
+        dateChooserCombo3.setBounds(160, 340, 155, 20);
 
         jPanelConsultarDatosPersonales.setBounds(-60, -15, 960, 830);
         ZonaTrabajo.add(jPanelConsultarDatosPersonales, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -2162,122 +2044,6 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         // TODO add your handling code here:
         mostrarPanel("Principal");
     }//GEN-LAST:event_jLabelIconoInicioMouseClicked
-
-    private void jTextFieldFechaNacimientoMesersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFechaNacimientoMesersonalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldFechaNacimientoMesersonalActionPerformed
-
-    private void jButtonMenosAnioPersonaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosAnioPersonaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMenosAnioPersonaActionPerformed
-
-    private void jButtonMasDiaPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasDiaPersonalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMasDiaPersonalActionPerformed
-
-    private void jButtonMenosMesPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosMesPersonalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMenosMesPersonalActionPerformed
-
-    private void jButtonMenosDiaPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosDiaPersonalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMenosDiaPersonalActionPerformed
-
-    private void jButtonMasAnioPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasAnioPersonalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMasAnioPersonalActionPerformed
-
-    private void jButtonMasMesPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasMesPersonalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMasMesPersonalActionPerformed
-
-    private void jButtonMasDiaPersonalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasDiaPersonalMouseClicked
-        // TODO add your handling code here:
-        int num = 0;
-        
-        num = Integer.parseInt(jTextFieldFechaNacimientoDiaPersonal.getText());
-
-        if(num < 31)
-            num ++;
-        
-        String numString;
-        numString = String.valueOf(num);
-        jTextFieldFechaNacimientoDiaPersonal.setText(numString);
-    }//GEN-LAST:event_jButtonMasDiaPersonalMouseClicked
-
-    private void jButtonMenosDiaPersonalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosDiaPersonalMouseClicked
-        // TODO add your handling code here:
-        int num = 0;
-
-        num = Integer.parseInt(jTextFieldFechaNacimientoDiaPersonal.getText());
-
-        if(num > 1)
-            num --;
-
-        String numString;
-        numString = String.valueOf(num);
-        jTextFieldFechaNacimientoDiaPersonal.setText(numString);
-    }//GEN-LAST:event_jButtonMenosDiaPersonalMouseClicked
-
-    private void jButtonMasMesPersonalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasMesPersonalMouseClicked
-        // TODO add your handling code here:
-        int num = 0;
-
-        num = Integer.parseInt(jTextFieldFechaNacimientoMesersonal.getText());
-
-        if(num < 12)
-            num ++;
-
-        String numString;
-        numString = String.valueOf(num);
-        jTextFieldFechaNacimientoMesersonal.setText(numString);
-    }//GEN-LAST:event_jButtonMasMesPersonalMouseClicked
-
-    private void jButtonMenosMesPersonalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosMesPersonalMouseClicked
-        // TODO add your handling code here:
-        int num = 0;
-
-        num = Integer.parseInt(jTextFieldFechaNacimientoMesersonal.getText());
-
-        if(num > 1)
-            num --;
-
-        String numString;
-        numString = String.valueOf(num);
-        jTextFieldFechaNacimientoMesersonal.setText(numString);
-    }//GEN-LAST:event_jButtonMenosMesPersonalMouseClicked
-
-    private void jButtonMasAnioPersonalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasAnioPersonalMouseClicked
-        // TODO add your handling code here:
-        int num = 0;
-        int anioActual = 0;
-
-        num = Integer.parseInt(jTextFieldFechaNacimientoAnioPersonal.getText());
-
-        Calendar fechaActual = Calendar.getInstance();
-        anioActual = fechaActual.get(Calendar.YEAR);
-
-        if(num < anioActual)
-            num ++;
-
-        String numString;
-        numString = String.valueOf(num);
-        jTextFieldFechaNacimientoAnioPersonal.setText(numString);
-    }//GEN-LAST:event_jButtonMasAnioPersonalMouseClicked
-
-    private void jButtonMenosAnioPersonaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosAnioPersonaMouseClicked
-        // TODO add your handling code here:
-        int num = 0;
-
-        num = Integer.parseInt(jTextFieldFechaNacimientoAnioPersonal.getText());
-
-        if(num > 1900)
-            num --;
-
-        String numString;
-        numString = String.valueOf(num);
-        jTextFieldFechaNacimientoAnioPersonal.setText(numString);
-    }//GEN-LAST:event_jButtonMenosAnioPersonaMouseClicked
 
     private void jButtonGestionarCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGestionarCitaMouseClicked
         // TODO add your handling code here:
@@ -3982,6 +3748,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup3;
     private datechooser.beans.DateChooserCombo dateChooserCombo1;
     private datechooser.beans.DateChooserCombo dateChooserCombo2;
+    private datechooser.beans.DateChooserCombo dateChooserCombo3;
     private javax.swing.JButton jButtonAnadir;
     private javax.swing.JButton jButtonAnadirLote;
     private javax.swing.JButton jButtonAnadirMedicamento;
@@ -4001,22 +3768,16 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
     private javax.swing.JButton jButtonGuardar;
     private javax.swing.JButton jButtonMasAnioFechaFinTurno;
     private javax.swing.JButton jButtonMasAnioFechaInicioTurno;
-    private javax.swing.JButton jButtonMasAnioPersonal;
     private javax.swing.JButton jButtonMasDiaFechaFinTurno;
     private javax.swing.JButton jButtonMasDiaFechaInicioTurno;
-    private javax.swing.JButton jButtonMasDiaPersonal;
     private javax.swing.JButton jButtonMasMesFechaFinTurno;
     private javax.swing.JButton jButtonMasMesFechaInicioTurno;
-    private javax.swing.JButton jButtonMasMesPersonal;
     private javax.swing.JButton jButtonMenosAnioFechaFinTurno;
     private javax.swing.JButton jButtonMenosAnioFechaInicioTurno;
-    private javax.swing.JButton jButtonMenosAnioPersona;
     private javax.swing.JButton jButtonMenosDiaFechaFinTurno;
     private javax.swing.JButton jButtonMenosDiaFechaInicioTurno;
-    private javax.swing.JButton jButtonMenosDiaPersonal;
     private javax.swing.JButton jButtonMenosMesFechaFinTurno;
     private javax.swing.JButton jButtonMenosMesFechaInicioTurno;
-    private javax.swing.JButton jButtonMenosMesPersonal;
     private javax.swing.JButton jButtonModificarLote;
     private javax.swing.JButton jButtonModificarMedica;
     private javax.swing.JButton jButtonObtenerRecetas;
@@ -4175,9 +3936,6 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldExistenc;
     private javax.swing.JTextField jTextFieldExistencias;
     private javax.swing.JTextField jTextFieldExistencias1;
-    private javax.swing.JTextField jTextFieldFechaNacimientoAnioPersonal;
-    private javax.swing.JTextField jTextFieldFechaNacimientoDiaPersonal;
-    private javax.swing.JTextField jTextFieldFechaNacimientoMesersonal;
     private javax.swing.JTextField jTextFieldLugarNacimientoPersonal;
     private javax.swing.JTextField jTextFieldMesFinTurno;
     private javax.swing.JTextField jTextFieldMesInicioTurno;
