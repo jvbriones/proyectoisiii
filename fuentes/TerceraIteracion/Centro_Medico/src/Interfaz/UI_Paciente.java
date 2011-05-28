@@ -12,12 +12,13 @@
 package Interfaz;
 
 import java.awt.Image;
+import javax.swing.JOptionPane;
 import Controlador.*;
 import CentroMedico.*;
 import BaseDatos.*;
 import java.util.Calendar.*;
 import java.util.Calendar;
-
+import java.util.Date;
 import java.sql.SQLException;
 
 import javax.swing.ImageIcon;
@@ -29,6 +30,8 @@ import javax.swing.JFileChooser;
  */
 public class UI_Paciente extends javax.swing.JFrame {
 
+    private Usuario user;
+
     /** Creates new form Principal_Administrador */
     public UI_Paciente() {
         initComponents();
@@ -37,6 +40,9 @@ public class UI_Paciente extends javax.swing.JFrame {
     public UI_Paciente(Usuario usu, String tipoUsuario) throws SQLException{
         initComponents();
 
+        //Iniciar el objeto usuario
+        user = usu;
+        
         /**Ponemos las etiquetas del usuario que ha entrado*/
         jLabelNombreUsuario.setText(usu.getNombre());
         jLabelTipoUsuario.setText(tipoUsuario);
@@ -50,21 +56,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         /**Ponemos icono de paciente logueado*/
         jLabelTipoUsuarioIdentificado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo-Usuario-Paciente.png"))); // NOI18N
     }
-/* Comentado por Nicolás
-    private void identificarPaciente( String nombreUsuario) throws SQLException{
 
-        //trabajar con paciente no se puede, ya que su BD está mal
-
-        Usuario paci=null;
-        usuarioBD usu_bd=new usuarioBD ();
-        paci=usu_bd.obtenerUsuario(nombreUsuario);
-
-        mostrarDatosPaciente(paci);
-        cargarDatosCitaPaciente(paci);
-
-    }
-
- */
 
     private void mostrarDatosPaciente(Usuario usu) throws SQLException{
 
@@ -247,7 +239,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jLabelCentroMedico.setText("Centro Médico");
         getContentPane().add(jLabelCentroMedico);
-        jLabelCentroMedico.setBounds(177, 68, 69, 14);
+        jLabelCentroMedico.setBounds(177, 68, 90, 14);
 
         jLabelIconoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Inicio-Desactivado.png"))); // NOI18N
         jLabelIconoInicio.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -304,7 +296,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jLabelSalir.setText("Salir");
         getContentPane().add(jLabelSalir);
-        jLabelSalir.setBounds(590, 120, 20, 14);
+        jLabelSalir.setBounds(590, 120, 40, 14);
 
         jLabelIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Logo-Centro-Medico.png"))); // NOI18N
         getContentPane().add(jLabelIcono);
@@ -375,7 +367,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(348, 348, 348))
         );
 
-        jPanelPrincipal.setBounds(0, -10, 901, 540);
+        jPanelPrincipal.setBounds(-9, -10, 910, 540);
         ZonaTrabajo.add(jPanelPrincipal, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarPaciente.setPreferredSize(new java.awt.Dimension(901, 531));
@@ -954,7 +946,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jTextAreaInfo1.setEditable(false);
         jTextAreaInfo1.setFont(new java.awt.Font("Lucida Grande", 0, 18));
         jTextAreaInfo1.setRows(3);
-        jTextAreaInfo1.setText("Tienes 4 opciones para realizar con la cita online: \nSi desea pedir una cita, dale a \"Alta\". \nEn cambio, si desea ver la cita que tiene, dale a \"Consultar\". \nPor otro lado, si desea modificar la cita que tiene, dale a \"Modificar\". \nPor último, si desea cancelar la cita que tiene asignada, dale a \"Cancelar\".");
+        jTextAreaInfo1.setText("Tiene 4 opciones para realizar con la cita online: \nPara solicitar una cita, pulsar \"Alta\". \nPara consultar una cita, pulsar \"Consultar\". \nPara modificar una cita, pulsar \"Modificar\". \nPara cancelar una cita, pulsar \"Cancelar\".");
         jScrollPane2.setViewportView(jTextAreaInfo1);
 
         jPanelGestionarCitaOnline.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 780, 130));
@@ -1083,7 +1075,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jLabelUsuario.setText("Usuario:");
         jPanelUsuario.add(jLabelUsuario);
-        jLabelUsuario.setBounds(90, 0, 40, 14);
+        jLabelUsuario.setBounds(90, 0, 80, 14);
 
         jLabelTipoUsuario.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelTipoUsuario.setText("Tipo Usuario");
@@ -1624,12 +1616,35 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void jButtonConsultarCita1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarCita1MouseClicked
         // TODO add your handling code here:
-        mostrarPanel("ConsultarCitaOnline");
+        try{
+            GestorCitas gtcts = new GestorCitas();
+            Cita ct = gtcts.obtenerCita(user.getDNI());
+
+            if(ct == null){
+                JOptionPane.showMessageDialog(null, "No tiene ninguna cita concertada","Consultar", JOptionPane.INFORMATION_MESSAGE);
+            }else{
+                mostrarPanel("ConsultarCitaOnline");
+                Date fechacita = ct.getFecha();
+                jTextFieldMinutoCita.setText(String.valueOf(fechacita.getMinutes()));
+                jTextFieldHoraCita.setText(String.valueOf(fechacita.getHours()));
+                jTextFieldDiaCita.setText(String.valueOf(fechacita.getDay()));
+                jTextFieldMesCita.setText(String.valueOf(fechacita.getMonth()));
+                jTextFieldAnioCita.setText(String.valueOf(fechacita.getYear()));
+                jTextFieldDNIMedico.setText(ct.getDNIMedico());
+                jTextFieldDNIPaciente.setText(user.getDNI());
+                jTextFieldDNIPaciente.setEditable(false);
+                jTextFieldDNIMedico.setEditable(false);
+            }
+        }catch(SQLException ex){
+            System.err.println(ex.getMessage());
+            jTextAreaInfo1.setText("¡Se produjo un error!\n\tPerdone las molestias");
+        }
     }//GEN-LAST:event_jButtonConsultarCita1MouseClicked
 
     private void jButtonModificarCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonModificarCitaMouseClicked
         // TODO add your handling code here:
         mostrarPanel("ConsultarCitaOnline");
+
     }//GEN-LAST:event_jButtonModificarCitaMouseClicked
 
 

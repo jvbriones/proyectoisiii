@@ -121,6 +121,11 @@ public class GestorCitas {
         return ci;
     }
 
+    public boolean existeCita(Date fecha){
+        return true;
+
+    }
+
 //    public void setFecha(fecha){
 //    }
 

@@ -37,7 +37,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="177" y="68" width="-1" height="-1"/>
+          <AbsoluteConstraints x="177" y="68" width="90" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -118,7 +118,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="590" y="120" width="-1" height="-1"/>
+          <AbsoluteConstraints x="590" y="120" width="40" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -161,7 +161,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout$JLayeredPaneConstraintsDescription">
-              <JLayeredPaneConstraints x="0" y="-10" width="-1" height="540" layer="0" position="-1"/>
+              <JLayeredPaneConstraints x="-9" y="-10" width="910" height="540" layer="0" position="-1"/>
             </Constraint>
           </Constraints>
 
@@ -188,7 +188,7 @@
                               <Component id="jLabelGestionarCita1" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="388" max="32767" attributes="0"/>
+                      <EmptySpace pref="397" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1092,7 +1092,7 @@
                       <Font name="Lucida Grande" size="18" style="0"/>
                     </Property>
                     <Property name="rows" type="int" value="3"/>
-                    <Property name="text" type="java.lang.String" value="Tienes 4 opciones para realizar con la cita online: &#xa;Si desea pedir una cita, dale a &quot;Alta&quot;. &#xa;En cambio, si desea ver la cita que tiene, dale a &quot;Consultar&quot;. &#xa;Por otro lado, si desea modificar la cita que tiene, dale a &quot;Modificar&quot;. &#xa;Por &#xfa;ltimo, si desea cancelar la cita que tiene asignada, dale a &quot;Cancelar&quot;."/>
+                    <Property name="text" type="java.lang.String" value="Tiene 4 opciones para realizar con la cita online: &#xa;Para solicitar una cita, pulsar &quot;Alta&quot;. &#xa;Para consultar una cita, pulsar &quot;Consultar&quot;. &#xa;Para modificar una cita, pulsar &quot;Modificar&quot;. &#xa;Para cancelar una cita, pulsar &quot;Cancelar&quot;."/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -1301,7 +1301,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="90" y="0" width="-1" height="-1"/>
+              <AbsoluteConstraints x="90" y="0" width="80" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
