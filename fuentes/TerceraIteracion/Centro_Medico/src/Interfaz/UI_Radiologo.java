@@ -14,12 +14,14 @@ package Interfaz;
 import java.awt.Image;
 import CentroMedico.*;
 import BaseDatos.*;
+import Controlador.GestorPersonal;
 import Controlador.GestorPruebas;
 import java.util.Calendar.*;
 import java.util.Calendar;
 import java.awt.Color;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
@@ -1221,7 +1223,29 @@ public class UI_Radiologo extends javax.swing.JFrame {
 
     private void jButtonGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarMouseClicked
         // TODO add your handling code here:
-        
+         if(compruebaFormulario("GestionarPersonal")){
+            GestorPersonal gesPer = new GestorPersonal();
+            Date fechaNacimiento = null;                        //HAY QUE PROCESARLA LEYÉNDOLA DEL FORMULARIOOOO
+            byte[] urlFoto = null;                              //HAY QUE GUARDAR LA FOTO Y PASAR LA RUTA DE DONDE ESTA
+            boolean exito;
+            String url=null;
+
+            fechaNacimiento = dateChooserCombo2.getSelectedDate().getTime();
+            String tipoPersonal = "Radiologo";
+
+            try {
+                exito = gesPer.modificarPersonal(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(),jTextFieldContraseniaPersonal.getText(), jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), url, tipoPersonal);
+                if(exito){
+                    new InformacionExito().setVisible(true);
+                    limpiarFormulario("GestionarPersonal");
+                    }
+                else
+                    new InformacionError().setVisible(true);
+
+            } catch (SQLException ex) {
+                Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
 }//GEN-LAST:event_jButtonGuardarMouseClicked
 
     private void jButtonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGuardarActionPerformed
@@ -1635,18 +1659,18 @@ public class UI_Radiologo extends javax.swing.JFrame {
         int diaActual;
         int mesActual;
         int anioActual;
-
-        if(persona.equals("GestionarPaciente")){
-            dia = Integer.parseInt(jTextFieldFechaNacimientoDiaPersonal.getText());
-            mes = Integer.parseInt(jTextFieldFechaNacimientoMesersonal.getText());
-            anio = Integer.parseInt(jTextFieldFechaNacimientoAnioPersonal.getText());
+ Calendar fecha;
+        if(persona.equals("GestionarPersonal")){
+           fecha=dateChooserCombo2.getSelectedDate();
+           dia=fecha.get(Calendar.DATE);
+           mes=fecha.get(Calendar.MONTH)+1;
+           anio=fecha.get(Calendar.YEAR);
         }
 
-
-        Calendar fechaActual = Calendar.getInstance();
-        diaActual = fechaActual.get(Calendar.DATE);
-        mesActual = fechaActual.get(Calendar.MONTH);
-        anioActual = fechaActual.get(Calendar.YEAR);
+         Date fechaa= new Date();
+         diaActual=fechaa.getDate();
+         mesActual=fechaa.getMonth()+1;
+         anioActual=fechaa.getYear()+1901;
 
 
         /**Si se sale de los rangos*/
@@ -1770,6 +1794,12 @@ public class UI_Radiologo extends javax.swing.JFrame {
             /**Hacemos visible el botón jLabelIconoInicio*/
             jLabelInicio.setVisible(true);
             jLabelIconoInicio.setVisible(true);
+
+             jRadioButtonAnalista.setEnabled(false);
+             jRadioButtonRadiologo.setSelected(true);
+             jRadioButtonFarmaceutico.setEnabled(false);
+             jRadioButtonMedico.setEnabled(false);
+
 
             /**Insertamos icono de foto anónima*/
             jLabelFotoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
@@ -1917,9 +1947,9 @@ public class UI_Radiologo extends javax.swing.JFrame {
         String num_anio= String.valueOf(anio);
 
 
-        jTextFieldFechaNacimientoAnioPersonal.setText(num_anio);
-        jTextFieldFechaNacimientoDiaPersonal.setText(num_dia);
-        jTextFieldFechaNacimientoMesersonal.setText(num_mes);
+//        jTextFieldFechaNacimientoAnioPersonal.setText(num_anio);
+  //      jTextFieldFechaNacimientoDiaPersonal.setText(num_dia);
+    //    jTextFieldFechaNacimientoMesersonal.setText(num_mes);
         jTextFieldNombrePersonal.setText(usu.getNombre());
         jTextFieldContraseniaPersonal.setText(usu.getContrasenia());
         jTextFieldDNIPersonal.setText(usu.getDNI());
@@ -1933,6 +1963,67 @@ public class UI_Radiologo extends javax.swing.JFrame {
 
     private boolean compruebaFormulario(String formulario){
         System.out.println("dentro de comprueba formulario");
+        if(formulario.equals("GestionarPersonal")){
+
+            if(!compruebaFecha("GestionarPersonal")){
+                jLabelFechaNacimientoPersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelFechaNacimientoPersonal.setForeground(Color.black);
+                }
+
+            if(jTextFieldNombrePersonal.getText().length() == 0){
+                jLabelNombrePersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelNombrePersonal.setForeground(Color.black);
+            }
+
+            if(jTextFieldApellidosPersonal.getText().length() == 0){
+                jLabelApellidosPersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelApellidosPersonal.setForeground(Color.black);
+            }
+
+            if(jTextFieldDNIPersonal.getText().length() != 9){
+                jLabelDNIPersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelDNIPersonal.setForeground(Color.black);
+            }
+
+            if(jTextFieldDireccionPersonal.getText().length() == 0){
+                jLabelDireccionPersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelDireccionPersonal.setForeground(Color.black);
+            }
+
+            if(jTextFieldEmailPersonal.getText().length() == 0){
+                jLabelEmailPersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelEmailPersonal.setForeground(Color.black);
+            }
+
+            if(jTextFieldTelefonoPersonal.getText().length() == 0){
+                jLabelTelefonoPersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelTelefonoPersonal.setForeground(Color.black);
+            }
+
+            if(jTextFieldLugarNacimientoPersonal.getText().length() == 0){
+                jLabelLugarNacimientoPersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelLugarNacimientoPersonal.setForeground(Color.black);
+            }
+
+            return true;
+
+    }
 
         if(formulario.equals("Almacenar")){
 
