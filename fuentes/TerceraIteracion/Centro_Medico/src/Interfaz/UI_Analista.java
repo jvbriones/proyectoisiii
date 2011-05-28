@@ -142,23 +142,14 @@ public class UI_Analista extends javax.swing.JFrame {
         jLabelDNIPersonal = new javax.swing.JLabel();
         jTextFieldLugarNacimientoPersonal = new javax.swing.JTextField();
         jLabelTelefonoPersonal = new javax.swing.JLabel();
-        jTextFieldFechaNacimientoMesersonal = new javax.swing.JTextField();
         jLabelLugarNacimientoPersonal = new javax.swing.JLabel();
         jLabelDireccionPersonal = new javax.swing.JLabel();
-        jButtonMenosAnioPersona = new javax.swing.JButton();
         jLabelApellidosPersonal = new javax.swing.JLabel();
         jTextFieldApellidosPersonal = new javax.swing.JTextField();
-        jButtonMasDiaPersonal = new javax.swing.JButton();
-        jButtonMenosMesPersonal = new javax.swing.JButton();
-        jButtonMenosDiaPersonal = new javax.swing.JButton();
         jLabelEmailPersonal = new javax.swing.JLabel();
         jTextFieldDireccionPersonal = new javax.swing.JTextField();
-        jTextFieldFechaNacimientoDiaPersonal = new javax.swing.JTextField();
-        jButtonMasAnioPersonal = new javax.swing.JButton();
         jTextFieldEmailPersonal = new javax.swing.JTextField();
-        jTextFieldFechaNacimientoAnioPersonal = new javax.swing.JTextField();
         jTextFieldContraseniaPersonal = new javax.swing.JTextField();
-        jButtonMasMesPersonal = new javax.swing.JButton();
         jLabelFechaNacimientoPersonal = new javax.swing.JLabel();
         jButtonGuardar = new javax.swing.JButton();
         jButtonFotoPersonal = new javax.swing.JButton();
@@ -168,6 +159,7 @@ public class UI_Analista extends javax.swing.JFrame {
         jRadioButtonAnalista = new javax.swing.JRadioButton();
         jRadioButtonRadiologo = new javax.swing.JRadioButton();
         jRadioButtonMedico = new javax.swing.JRadioButton();
+        dateChooserCombo2 = new datechooser.beans.DateChooserCombo();
         jPanelPrincipal = new javax.swing.JPanel();
         jButtonConsultarDatosPersonales = new javax.swing.JButton();
         jLabelConsultarDatosPersonales = new javax.swing.JLabel();
@@ -444,7 +436,7 @@ public class UI_Analista extends javax.swing.JFrame {
                         .add(jPanelAgregarAtributoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                             .add(jTextFieldLimiteInf, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(jLabelLimInf))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 36, Short.MAX_VALUE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 75, Short.MAX_VALUE)
                         .add(jButtonGuardarAtributo)
                         .add(28, 28, 28))
                     .add(jPanelAgregarAtributoLayout.createSequentialGroup()
@@ -470,7 +462,6 @@ public class UI_Analista extends javax.swing.JFrame {
         jLabelGestionarPaciente4.setFont(new java.awt.Font("Lucida Grande", 1, 48));
         jLabelGestionarPaciente4.setText("Gestionar Personal");
 
-        jTextFieldNombrePersonal.setEditable(false);
         jTextFieldNombrePersonal.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldNombrePersonalKeyTyped(evt);
@@ -480,7 +471,6 @@ public class UI_Analista extends javax.swing.JFrame {
         jLabelFotoPersonal.setBackground(new java.awt.Color(255, 255, 255));
         jLabelFotoPersonal.setForeground(new java.awt.Color(255, 255, 255));
 
-        jTextFieldTelefonoPersonal.setEditable(false);
         jTextFieldTelefonoPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldTelefonoPersonalKeyTyped(evt);
@@ -489,7 +479,6 @@ public class UI_Analista extends javax.swing.JFrame {
 
         jLabelContraseniaPersonal.setText("Contraseña");
 
-        jTextFieldDNIPersonal.setEditable(false);
         jTextFieldDNIPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldDNIPersonalKeyTyped(evt);
@@ -502,7 +491,6 @@ public class UI_Analista extends javax.swing.JFrame {
 
         jLabelDNIPersonal.setText("DNI");
 
-        jTextFieldLugarNacimientoPersonal.setEditable(false);
         jTextFieldLugarNacimientoPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldLugarNacimientoPersonalKeyTyped(evt);
@@ -511,123 +499,33 @@ public class UI_Analista extends javax.swing.JFrame {
 
         jLabelTelefonoPersonal.setText("Teléfono");
 
-        jTextFieldFechaNacimientoMesersonal.setEditable(false);
-        jTextFieldFechaNacimientoMesersonal.setText("1");
-        jTextFieldFechaNacimientoMesersonal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldFechaNacimientoMesersonalActionPerformed(evt);
-            }
-        });
-
         jLabelLugarNacimientoPersonal.setText("Lugar nacimiento");
 
         jLabelDireccionPersonal.setText("Dirección");
 
-        jButtonMenosAnioPersona.setText("-");
-        jButtonMenosAnioPersona.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMenosAnioPersonaMouseClicked(evt);
-            }
-        });
-        jButtonMenosAnioPersona.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMenosAnioPersonaActionPerformed(evt);
-            }
-        });
-
         jLabelApellidosPersonal.setText("Apellidos");
 
-        jTextFieldApellidosPersonal.setEditable(false);
         jTextFieldApellidosPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldApellidosPersonalKeyTyped(evt);
             }
         });
 
-        jButtonMasDiaPersonal.setText("+");
-        jButtonMasDiaPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMasDiaPersonalMouseClicked(evt);
-            }
-        });
-        jButtonMasDiaPersonal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMasDiaPersonalActionPerformed(evt);
-            }
-        });
-
-        jButtonMenosMesPersonal.setText("-");
-        jButtonMenosMesPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMenosMesPersonalMouseClicked(evt);
-            }
-        });
-        jButtonMenosMesPersonal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMenosMesPersonalActionPerformed(evt);
-            }
-        });
-
-        jButtonMenosDiaPersonal.setText("-");
-        jButtonMenosDiaPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMenosDiaPersonalMouseClicked(evt);
-            }
-        });
-        jButtonMenosDiaPersonal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMenosDiaPersonalActionPerformed(evt);
-            }
-        });
-
         jLabelEmailPersonal.setText("Email");
 
-        jTextFieldDireccionPersonal.setEditable(false);
         jTextFieldDireccionPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldDireccionPersonalKeyTyped(evt);
             }
         });
 
-        jTextFieldFechaNacimientoDiaPersonal.setEditable(false);
-        jTextFieldFechaNacimientoDiaPersonal.setText("1");
-
-        jButtonMasAnioPersonal.setText("+");
-        jButtonMasAnioPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMasAnioPersonalMouseClicked(evt);
-            }
-        });
-        jButtonMasAnioPersonal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMasAnioPersonalActionPerformed(evt);
-            }
-        });
-
-        jTextFieldEmailPersonal.setEditable(false);
         jTextFieldEmailPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldEmailPersonalKeyTyped(evt);
             }
         });
 
-        jTextFieldFechaNacimientoAnioPersonal.setEditable(false);
-        jTextFieldFechaNacimientoAnioPersonal.setText("1950");
-
         jTextFieldContraseniaPersonal.setColumns(8);
-        jTextFieldContraseniaPersonal.setEditable(false);
-
-        jButtonMasMesPersonal.setText("+");
-        jButtonMasMesPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMasMesPersonalMouseClicked(evt);
-            }
-        });
-        jButtonMasMesPersonal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMasMesPersonalActionPerformed(evt);
-            }
-        });
 
         jLabelFechaNacimientoPersonal.setText("Fecha nacimiento");
 
@@ -736,22 +634,8 @@ public class UI_Analista extends javax.swing.JFrame {
                 .add(157, 157, 157)
                 .add(jPanelConsultarDatosPersonalesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jLabelFechaNacimientoPersonal, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 140, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jPanelConsultarDatosPersonalesLayout.createSequentialGroup()
-                        .add(jButtonMasDiaPersonal, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(jButtonMasMesPersonal, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(jButtonMasAnioPersonal, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanelConsultarDatosPersonalesLayout.createSequentialGroup()
-                        .add(10, 10, 10)
-                        .add(jTextFieldFechaNacimientoDiaPersonal, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 33, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(17, 17, 17)
-                        .add(jTextFieldFechaNacimientoMesersonal, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 33, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(7, 7, 7)
-                        .add(jTextFieldFechaNacimientoAnioPersonal, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanelConsultarDatosPersonalesLayout.createSequentialGroup()
-                        .add(jButtonMenosDiaPersonal, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(jButtonMenosMesPersonal, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(jButtonMenosAnioPersona, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .add(123, 123, 123)
+                    .add(dateChooserCombo2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(108, 108, 108)
                 .add(jPanelConsultarDatosPersonalesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelConsultarDatosPersonalesLayout.createSequentialGroup()
                         .add(10, 10, 10)
@@ -817,20 +701,8 @@ public class UI_Analista extends javax.swing.JFrame {
                 .add(jPanelConsultarDatosPersonalesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelConsultarDatosPersonalesLayout.createSequentialGroup()
                         .add(jLabelFechaNacimientoPersonal)
-                        .add(2, 2, 2)
-                        .add(jPanelConsultarDatosPersonalesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jButtonMasDiaPersonal, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jButtonMasMesPersonal, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jButtonMasAnioPersonal, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .add(jPanelConsultarDatosPersonalesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jTextFieldFechaNacimientoDiaPersonal, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jTextFieldFechaNacimientoMesersonal, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jTextFieldFechaNacimientoAnioPersonal, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .add(2, 2, 2)
-                        .add(jPanelConsultarDatosPersonalesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jButtonMenosDiaPersonal, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jButtonMenosMesPersonal, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jButtonMenosAnioPersona, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                        .add(dateChooserCombo2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                     .add(jPanelConsultarDatosPersonalesLayout.createSequentialGroup()
                         .add(13, 13, 13)
                         .add(jLabel8)
@@ -962,15 +834,15 @@ public class UI_Analista extends javax.swing.JFrame {
                     .add(jPanelPrincipalLayout.createSequentialGroup()
                         .add(67, 67, 67)
                         .add(jLabelAlamcenarResultados, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 162, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(165, Short.MAX_VALUE))
+                .addContainerGap(172, Short.MAX_VALUE))
         );
         jPanelPrincipalLayout.setVerticalGroup(
             jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelPrincipalLayout.createSequentialGroup()
                 .add(29, 29, 29)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jButtonConsultarDatosPersonales, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(jButtonConsultarTurno, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .add(jButtonConsultarDatosPersonales, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+                    .add(jButtonConsultarTurno, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelConsultarDatosPersonales)
@@ -1235,7 +1107,7 @@ public class UI_Analista extends javax.swing.JFrame {
             .add(jPanelConsultarTurnoLayout.createSequentialGroup()
                 .add(273, 273, 273)
                 .add(jLabelGestionarPaciente6)
-                .addContainerGap(152, Short.MAX_VALUE))
+                .addContainerGap(214, Short.MAX_VALUE))
             .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(jPanelConsultarTurnoLayout.createSequentialGroup()
                     .add(0, 40, Short.MAX_VALUE)
@@ -1301,10 +1173,10 @@ public class UI_Analista extends javax.swing.JFrame {
             .add(jPanelConsultarTurnoLayout.createSequentialGroup()
                 .add(65, 65, 65)
                 .add(jLabelGestionarPaciente6)
-                .addContainerGap(409, Short.MAX_VALUE))
+                .addContainerGap(404, Short.MAX_VALUE))
             .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(jPanelConsultarTurnoLayout.createSequentialGroup()
-                    .add(50, 113, Short.MAX_VALUE)
+                    .add(50, 121, Short.MAX_VALUE)
                     .add(jLabel9)
                     .add(24, 24, 24)
                     .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1349,7 +1221,7 @@ public class UI_Analista extends javax.swing.JFrame {
                         .add(jButtonMenosMesFechaFinTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(jButtonMenosAnioFechaFinTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(jRadioButtonNoche))
-                    .add(0, 64, Short.MAX_VALUE)))
+                    .add(0, 73, Short.MAX_VALUE)))
         );
 
         jPanelConsultarTurno.setBounds(0, 0, 860, -1);
@@ -1538,7 +1410,7 @@ public class UI_Analista extends javax.swing.JFrame {
                 .add(jPanelAlmacenarResultadosLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelAlmacenarResultadosLayout.createSequentialGroup()
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(scrollPaneComentarios, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
+                        .add(scrollPaneComentarios, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(jButtonAlmacenarResultadoRadiologo)
                         .add(37, 37, 37))
@@ -1635,7 +1507,7 @@ public class UI_Analista extends javax.swing.JFrame {
                     .add(jPanelEliminarAtributoLayout.createSequentialGroup()
                         .add(108, 108, 108)
                         .add(jLabelError2)))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
 
         jPanelEliminarAtributo.setBounds(0, 0, -1, 360);
@@ -1646,17 +1518,17 @@ public class UI_Analista extends javax.swing.JFrame {
 
         jLabelUsuario.setText("Usuario:");
         jPanelUsuario.add(jLabelUsuario);
-        jLabelUsuario.setBounds(90, 0, 120, 18);
+        jLabelUsuario.setBounds(90, 0, 120, 14);
 
         jLabelTipoUsuario.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelTipoUsuario.setText("Tipo Usuario");
         jPanelUsuario.add(jLabelTipoUsuario);
-        jLabelTipoUsuario.setBounds(90, 30, 120, 17);
+        jLabelTipoUsuario.setBounds(90, 30, 120, 18);
 
         jLabelNombreUsuario.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelNombreUsuario.setText("Nombre");
         jPanelUsuario.add(jLabelNombreUsuario);
-        jLabelNombreUsuario.setBounds(90, 60, 120, 17);
+        jLabelNombreUsuario.setBounds(90, 60, 120, 18);
         jPanelUsuario.add(jLabelTipoUsuarioIdentificado);
         jLabelTipoUsuarioIdentificado.setBounds(10, 10, 70, 70);
 
@@ -1776,122 +1648,6 @@ public class UI_Analista extends javax.swing.JFrame {
         // TODO add your handling code here:
         mostrarPanel("Principal");
     }//GEN-LAST:event_jLabelIconoInicioMouseClicked
-
-    private void jTextFieldFechaNacimientoMesersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFechaNacimientoMesersonalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldFechaNacimientoMesersonalActionPerformed
-
-    private void jButtonMenosAnioPersonaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosAnioPersonaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMenosAnioPersonaActionPerformed
-
-    private void jButtonMasDiaPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasDiaPersonalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMasDiaPersonalActionPerformed
-
-    private void jButtonMenosMesPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosMesPersonalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMenosMesPersonalActionPerformed
-
-    private void jButtonMenosDiaPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosDiaPersonalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMenosDiaPersonalActionPerformed
-
-    private void jButtonMasAnioPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasAnioPersonalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMasAnioPersonalActionPerformed
-
-    private void jButtonMasMesPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasMesPersonalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMasMesPersonalActionPerformed
-
-    private void jButtonMasDiaPersonalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasDiaPersonalMouseClicked
-        // TODO add your handling code here:
-        int num = 0;
-        
-        num = Integer.parseInt(jTextFieldFechaNacimientoDiaPersonal.getText());
-
-        if(num < 31)
-            num ++;
-        
-        String numString;
-        numString = String.valueOf(num);
-        jTextFieldFechaNacimientoDiaPersonal.setText(numString);
-    }//GEN-LAST:event_jButtonMasDiaPersonalMouseClicked
-
-    private void jButtonMenosDiaPersonalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosDiaPersonalMouseClicked
-        // TODO add your handling code here:
-        int num = 0;
-
-        num = Integer.parseInt(jTextFieldFechaNacimientoDiaPersonal.getText());
-
-        if(num > 1)
-            num --;
-
-        String numString;
-        numString = String.valueOf(num);
-        jTextFieldFechaNacimientoDiaPersonal.setText(numString);
-    }//GEN-LAST:event_jButtonMenosDiaPersonalMouseClicked
-
-    private void jButtonMasMesPersonalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasMesPersonalMouseClicked
-        // TODO add your handling code here:
-        int num = 0;
-
-        num = Integer.parseInt(jTextFieldFechaNacimientoMesersonal.getText());
-
-        if(num < 12)
-            num ++;
-
-        String numString;
-        numString = String.valueOf(num);
-        jTextFieldFechaNacimientoMesersonal.setText(numString);
-    }//GEN-LAST:event_jButtonMasMesPersonalMouseClicked
-
-    private void jButtonMenosMesPersonalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosMesPersonalMouseClicked
-        // TODO add your handling code here:
-        int num = 0;
-
-        num = Integer.parseInt(jTextFieldFechaNacimientoMesersonal.getText());
-
-        if(num > 1)
-            num --;
-
-        String numString;
-        numString = String.valueOf(num);
-        jTextFieldFechaNacimientoMesersonal.setText(numString);
-    }//GEN-LAST:event_jButtonMenosMesPersonalMouseClicked
-
-    private void jButtonMasAnioPersonalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasAnioPersonalMouseClicked
-        // TODO add your handling code here:
-        int num = 0;
-        int anioActual = 0;
-
-        num = Integer.parseInt(jTextFieldFechaNacimientoAnioPersonal.getText());
-
-        Calendar fechaActual = Calendar.getInstance();
-        anioActual = fechaActual.get(Calendar.YEAR);
-
-        if(num < anioActual)
-            num ++;
-
-        String numString;
-        numString = String.valueOf(num);
-        jTextFieldFechaNacimientoAnioPersonal.setText(numString);
-    }//GEN-LAST:event_jButtonMasAnioPersonalMouseClicked
-
-    private void jButtonMenosAnioPersonaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosAnioPersonaMouseClicked
-        // TODO add your handling code here:
-        int num = 0;
-
-        num = Integer.parseInt(jTextFieldFechaNacimientoAnioPersonal.getText());
-
-        if(num > 1900)
-            num --;
-
-        String numString;
-        numString = String.valueOf(num);
-        jTextFieldFechaNacimientoAnioPersonal.setText(numString);
-    }//GEN-LAST:event_jButtonMenosAnioPersonaMouseClicked
 
     private void jButtonConsultarTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarTurnoMouseClicked
         // TODO add your handling code here:
@@ -2625,17 +2381,17 @@ public class UI_Analista extends javax.swing.JFrame {
         int mesActual;
         int anioActual;
 
-        if(persona.equals("GestionarPaciente")){
-            dia = Integer.parseInt(jTextFieldFechaNacimientoDiaPersonal.getText());
-            mes = Integer.parseInt(jTextFieldFechaNacimientoMesersonal.getText());
-            anio = Integer.parseInt(jTextFieldFechaNacimientoAnioPersonal.getText());
+        if(persona.equals("GestionarPersonal")){
+           fecha=dateChooserCombo2.getSelectedDate();
+           dia=fecha.get(Calendar.DATE);
+           mes=fecha.get(Calendar.MONTH)+1;
+           anio=fecha.get(Calendar.YEAR);
         }
 
-
-        Calendar fechaActual = Calendar.getInstance();
-        diaActual = fechaActual.get(Calendar.DATE);
-        mesActual = fechaActual.get(Calendar.MONTH);
-        anioActual = fechaActual.get(Calendar.YEAR);
+         Date fechaa= new Date();
+         diaActual=fechaa.getDate();
+         mesActual=fechaa.getMonth()+1;
+         anioActual=fechaa.getYear()+1901;
 
 
         /**Si se sale de los rangos*/
@@ -3066,6 +2822,7 @@ public class UI_Analista extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.ButtonGroup buttonGroup5;
+    private datechooser.beans.DateChooserCombo dateChooserCombo2;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonAlmacenarResultado;
     private javax.swing.JButton jButtonAlmacenarResultado1;
@@ -3079,22 +2836,16 @@ public class UI_Analista extends javax.swing.JFrame {
     private javax.swing.JButton jButtonGuardarAtributo1;
     private javax.swing.JButton jButtonMasAnioFechaFinTurno;
     private javax.swing.JButton jButtonMasAnioFechaInicioTurno;
-    private javax.swing.JButton jButtonMasAnioPersonal;
     private javax.swing.JButton jButtonMasDiaFechaFinTurno;
     private javax.swing.JButton jButtonMasDiaFechaInicioTurno;
-    private javax.swing.JButton jButtonMasDiaPersonal;
     private javax.swing.JButton jButtonMasMesFechaFinTurno;
     private javax.swing.JButton jButtonMasMesFechaInicioTurno;
-    private javax.swing.JButton jButtonMasMesPersonal;
     private javax.swing.JButton jButtonMenosAnioFechaFinTurno;
     private javax.swing.JButton jButtonMenosAnioFechaInicioTurno;
-    private javax.swing.JButton jButtonMenosAnioPersona;
     private javax.swing.JButton jButtonMenosDiaFechaFinTurno;
     private javax.swing.JButton jButtonMenosDiaFechaInicioTurno;
-    private javax.swing.JButton jButtonMenosDiaPersonal;
     private javax.swing.JButton jButtonMenosMesFechaFinTurno;
     private javax.swing.JButton jButtonMenosMesFechaInicioTurno;
-    private javax.swing.JButton jButtonMenosMesPersonal;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -3195,9 +2946,6 @@ public class UI_Analista extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldDiaInicioTurno;
     private javax.swing.JTextField jTextFieldDireccionPersonal;
     private javax.swing.JTextField jTextFieldEmailPersonal;
-    private javax.swing.JTextField jTextFieldFechaNacimientoAnioPersonal;
-    private javax.swing.JTextField jTextFieldFechaNacimientoDiaPersonal;
-    private javax.swing.JTextField jTextFieldFechaNacimientoMesersonal;
     private javax.swing.JTextField jTextFieldLimiteInf;
     private javax.swing.JTextField jTextFieldLimiteSup;
     private javax.swing.JTextField jTextFieldLugarNacimientoPersonal;
