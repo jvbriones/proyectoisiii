@@ -873,7 +873,7 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabelFotografiaPaciente" min="-2" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="dateChooserCombo1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="dateChooserCombo2" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="jButtonModificarPaciente" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -999,7 +999,7 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabelFotografiaPaciente" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="dateChooserCombo1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="dateChooserCombo2" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
@@ -1131,7 +1131,7 @@
                 <Property name="text" type="java.lang.String" value="Fecha nacimiento"/>
               </Properties>
             </Component>
-            <Component class="datechooser.beans.DateChooserCombo" name="dateChooserCombo1">
+            <Component class="datechooser.beans.DateChooserCombo" name="dateChooserCombo2">
             </Component>
             <Component class="javax.swing.JButton" name="jButtonModificarPaciente">
               <Properties>

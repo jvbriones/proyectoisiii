@@ -211,7 +211,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jTextFieldEmailPaciente = new javax.swing.JTextField();
         jTextFieldContraseniaPaciente = new javax.swing.JTextField();
         jLabelFechaNacimientoPaciente = new javax.swing.JLabel();
-        dateChooserCombo1 = new datechooser.beans.DateChooserCombo();
+        dateChooserCombo2 = new datechooser.beans.DateChooserCombo();
         jButtonModificarPaciente = new javax.swing.JButton();
         jPanelUsuario = new javax.swing.JPanel();
         jLabelUsuario = new javax.swing.JLabel();
@@ -820,7 +820,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                                 .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                                     .add(jLabelFotografiaPaciente)
                                     .add(jPanelGestionarPacienteLayout.createSequentialGroup()
-                                        .add(dateChooserCombo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .add(dateChooserCombo2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                                         .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                                             .add(jButtonModificarPaciente)
@@ -917,7 +917,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                                     .add(jPanelGestionarPacienteLayout.createSequentialGroup()
                                         .add(jLabelFotografiaPaciente)
                                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                                        .add(dateChooserCombo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                        .add(dateChooserCombo2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                     .add(jPanelGestionarPacienteLayout.createSequentialGroup()
                                         .add(59, 59, 59)
                                         .add(jButtonModificarPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 45, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
@@ -1409,6 +1409,31 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void jButtonModificarPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonModificarPacienteMouseClicked
         // TODO add your handling code here:
+         if(compruebaFormulario("GestionarPaciente")){
+            GestorPacientes gesPac = new GestorPacientes();
+            Date fechaNacimiento = null;                        //HAY QUE PROCESARLA LEYÉNDOLA DEL FORMULARIOOOO
+            byte[] urlFoto = null;                              //HAY QUE GUARDAR LA FOTO Y PASAR LA RUTA DE DONDE ESTA
+            boolean exito;
+
+
+            fechaNacimiento = dateChooserCombo2.getSelectedDate().getTime();
+
+            try {
+                exito = gesPac.altaPaciente(jTextFieldDNIPaciente.getText(), jTextFieldNombrePaciente.getText(), jTextFieldApellidosPaciente.getText(), jTextFieldDireccionPaciente.getText(), jTextFieldEmailPaciente.getText(), jTextFieldTelefonoPaciente.getText(), fechaNacimiento, jTextFieldLugarNacimientoPaciente.getText(), laurl, "Paciente");
+
+                if(!exito){
+                    new InformacionExito().setVisible(true);
+                    }
+                else{
+
+                    System.out.println( "exito!!");
+                        new InformacionError().setVisible(true);
+                }
+            }catch (SQLException ex) {
+                Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        }
         
     }//GEN-LAST:event_jButtonModificarPacienteMouseClicked
 
@@ -1418,22 +1443,27 @@ public class UI_Paciente extends javax.swing.JFrame {
      *@param persona, string que indica si se trata del formulario de Paciente o Personal
      *@return booleano diciendo si es válido o no
      */
-    private boolean compruebaFecha(String persona){
-        
+   private boolean compruebaFecha(String formulario){
+
         int dia = 0;
         int mes = 0;
         int anio = 0;
         int diaActual;
         int mesActual;
         int anioActual;
+        Calendar fecha;
 
-        if(persona.equals("GestionarPaciente")){
-            dia = Integer.parseInt(jTextFieldFechaNacimientoDiaPaciente.getText());
-            mes = Integer.parseInt(jTextFieldFechaNacimientoMesPaciente.getText());
-            anio = Integer.parseInt(jTextFieldFechaNacimientoAnioPaciente.getText());
+        if(formulario.equals("GestionarPaciente")){
+            fecha=dateChooserCombo2.getSelectedDate();
+
+           dia=fecha.get(Calendar.DATE);
+           mes=fecha.get(Calendar.MONTH)+1;
+           anio=fecha.get(Calendar.YEAR);
+
         }
 
-        if(persona.equals("GestionarCitaOnline")){
+
+        if(formulario.equals("GestionarCitaOnline")){
             dia = Integer.parseInt(jTextFieldDiaCita.getText());
             mes = Integer.parseInt(jTextFieldMesCita.getText());
             anio = Integer.parseInt(jTextFieldAnioCita.getText());
@@ -1679,7 +1709,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLayeredPane ZonaTrabajo;
-    private datechooser.beans.DateChooserCombo dateChooserCombo1;
+    private datechooser.beans.DateChooserCombo dateChooserCombo2;
     private javax.swing.JButton jButtonAceptarCita;
     private javax.swing.JButton jButtonCancelar;
     private javax.swing.JButton jButtonConsultarCita1;
