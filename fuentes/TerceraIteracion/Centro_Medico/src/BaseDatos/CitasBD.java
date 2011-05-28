@@ -11,6 +11,7 @@ package BaseDatos;
 import CentroMedico.Cita;
 import java.sql.*;
 import org.hibernate.*;
+import java.util.*;
 
 public class CitasBD {
     String IpDelServidor="localhost";
@@ -22,10 +23,9 @@ public class CitasBD {
     /*
      * altaCita
      */
-    public String altaCita(Date fechaIni, Date fechaFin){
+    public String altaCita(Calendar fechaIni, Calendar fechaFin){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-        Date inicio = fechaIni;
-        inicio.setHours(8); //Iniciar a las 8.00AM
+        Calendar inicio = fechaIni;
         
         session.beginTransaction();
         
@@ -33,14 +33,16 @@ public class CitasBD {
 
 
 
-            if(inicio.getHours() == 20)
+/*            if(inicio.getHours() == 20)
                 inicio.setDate(inicio.getDate() + 1);
             else
                 inicio.setHours(inicio.getHours()+1);
-        }
+        }*/
 
         return "Yeyo";
     }
+        return "Yeyo";
+}
 
 
     /*
@@ -69,7 +71,7 @@ public class CitasBD {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction ();
         //Cita Ci = (Cita) session.get(Cita.class, Dni);        /*****ESTO PETA******/
-        Date hora = new Date(0);                                   /* PARCHE */
+        Calendar hora = Calendar.getInstance();                /* PARCHE */
         Cita Ci = new Cita(true, hora, "Tarde", Dni, "33333333A"); /* PARCHE */
         return Ci;
     }

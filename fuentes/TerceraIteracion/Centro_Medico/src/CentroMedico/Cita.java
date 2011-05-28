@@ -13,7 +13,7 @@ package CentroMedico;
 
 import java.util.*;
 import java.io.Serializable;
-
+import java.util.Calendar.*;
 
 /**
  * @version     1.1     16/04/2011
@@ -24,7 +24,8 @@ import java.io.Serializable;
 public class Cita implements Serializable{
 
     private boolean Estado;
-    private Date Fecha;
+    //private Date Fecha; Utilizamos Calendar
+    private Calendar Fecha;
     private String Tipo;
 
     private Paciente Paciente;
@@ -45,14 +46,14 @@ public class Cita implements Serializable{
     }*/
 
     //Que puto sentido tiene este constructor?
-    public Cita(Date Fecha, boolean Estado, String Tipo){
+    public Cita(Calendar Fecha, boolean Estado, String Tipo){
         this.Fecha=Fecha;
         this.Estado=Estado;
         this.Tipo=Tipo;
     }
 
     /* Un constructor de verdad */
-    public Cita(boolean estado, Date fecha, String tipo, String dnipac, String dnimed){
+    public Cita(boolean estado, Calendar fecha, String tipo, String dnipac, String dnimed){
         
         this.Estado=estado;
         this.Fecha=fecha;
@@ -61,11 +62,10 @@ public class Cita implements Serializable{
         this.DniMedico = dnimed;
 
     }
-
     
     /********** Metodos Consultores **********/
      
-    public Date getFecha(){
+    public Calendar getFecha(){
         return Fecha;
     }
     
@@ -75,6 +75,10 @@ public class Cita implements Serializable{
 
     public String getTipo(){
         return Tipo;
+    }
+
+    public String getDNIPaciente(){
+        return DniPaciente;
     }
 
     public String getDNIMedico(){
@@ -90,10 +94,9 @@ public class Cita implements Serializable{
         return  PersonalMedico;
     }
 
-
     /********* Metodos Asignadores **********/
       
-    public void setFecha(Date Fecha){
+    public void setFecha(Calendar Fecha){
         this.Fecha=Fecha;
     }
 

@@ -3302,13 +3302,13 @@ public class UI_Administrador extends javax.swing.JFrame {
                         jTextFieldDNIGestionarCitaPaciente.setEditable(false);
 
                         /*Mostramos la fecha y la hora de la cita consultada*/
-                        Date fechacita = ct.getFecha();
+                        Calendar fechacita = ct.getFecha();
 
-                        jTextFieldMinutoCita.setText(String.valueOf(fechacita.getMinutes()));
-                        jTextFieldHoraCita.setText(String.valueOf(fechacita.getHours()));
-                        jTextFieldDiaCita.setText(String.valueOf(fechacita.getDay()));
-                        jTextFieldMesCita.setText(String.valueOf(fechacita.getMonth()));
-                        jTextFieldAnioCita.setText(String.valueOf(fechacita.getYear()));
+                        jTextFieldMinutoCita.setText(String.valueOf(fechacita.get(Calendar.MINUTE)));
+                        jTextFieldHoraCita.setText(String.valueOf(fechacita.get(Calendar.HOUR)));
+                        jTextFieldDiaCita.setText(String.valueOf(fechacita.get(Calendar.DATE)));
+                        jTextFieldMesCita.setText(String.valueOf(fechacita.get(Calendar.MONTH)));
+                        jTextFieldAnioCita.setText(String.valueOf(fechacita.get(Calendar.YEAR)));
 
                     }
                 }catch(SQLException ex){

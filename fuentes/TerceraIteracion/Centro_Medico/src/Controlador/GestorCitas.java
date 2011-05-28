@@ -91,12 +91,8 @@ public class GestorCitas {
         Cita cita=null;
         cita=bd_citas.obtenerCita(Dni);
 
-        Date fecha=null;
-        fecha=cita.getFecha();
-
-
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(fecha);
+        Calendar calendar = null;
+        calendar = cita.getFecha();
         int dia = calendar.get(Calendar.DAY_OF_MONTH);   //dia del mes
         int mes = calendar.get(Calendar.MONTH);
         mes=mes+1;//mes, de 0 a 11
@@ -115,10 +111,8 @@ public class GestorCitas {
 
     public Cita obtenerCita(String dni) throws SQLException{
         CitasBD cita = new CitasBD();
-        Cita ci = null;
-        ci = cita.obtenerCita(dni);
 
-        return ci;
+        return cita.obtenerCita(dni);
     }
 
     public boolean existeCita(Date fecha){
