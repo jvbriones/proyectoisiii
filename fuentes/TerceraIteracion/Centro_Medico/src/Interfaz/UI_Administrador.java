@@ -2127,6 +2127,7 @@ public class UI_Administrador extends javax.swing.JFrame {
     private void jButtonGestionarPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGestionarPacienteMouseClicked
         // TODO add your handling code here:
         mostrarPanel("GestionarPaciente");
+        
     }//GEN-LAST:event_jButtonGestionarPacienteMouseClicked
 
     private void jButtonGestionarPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGestionarPacienteActionPerformed
@@ -2894,7 +2895,7 @@ public class UI_Administrador extends javax.swing.JFrame {
        
             try {
                 exito = gesPer.altaPersonal(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(), jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), laurl, tipoPersonal);
-                if(exito){
+                if(!exito){
                     new InformacionExito().setVisible(true);
                     limpiarFormulario("GestionarPersonal");
                     }
