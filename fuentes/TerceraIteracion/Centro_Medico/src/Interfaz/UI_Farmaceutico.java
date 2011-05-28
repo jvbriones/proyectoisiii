@@ -2117,6 +2117,31 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
     private void jButtonGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarMouseClicked
         // TODO add your handling code here:
+        if(compruebaFormulario("GestionarPersonal")){
+            GestorPersonal gesPer = new GestorPersonal();
+            Date fechaNacimiento = null;                        //HAY QUE PROCESARLA LEYÉNDOLA DEL FORMULARIOOOO
+            byte[] urlFoto = null;                              //HAY QUE GUARDAR LA FOTO Y PASAR LA RUTA DE DONDE ESTA
+            boolean exito;
+            String url=null;
+
+            fechaNacimiento = dateChooserCombo2.getSelectedDate().getTime();
+            String tipoPersonal = "Farmaceutico";
+
+            try {
+                exito = gesPer.modificarPersonalFarmacia(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(),jTextFieldContraseniaPersonal.getText(), jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), url, tipoPersonal);
+                if(exito){
+                    new InformacionExito().setVisible(true);
+                    limpiarFormulario("GestionarPersonal");
+                    }
+                else
+                    new InformacionError().setVisible(true);
+
+            } catch (SQLException ex) {
+                Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+
 }//GEN-LAST:event_jButtonGuardarMouseClicked
 
     private void jButtonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGuardarActionPerformed
@@ -3027,6 +3052,64 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
      *@return booleano diciendo si es válido o no
      */
     
+private boolean compruebaFecha(String persona){
+
+        int dia = 0;
+        int mes = 0;
+        int anio = 0;
+        int diaActual;
+        int mesActual;
+        int anioActual;
+        Calendar fecha;
+        if(persona.equals("GestionarPersonal")){
+           fecha=dateChooserCombo2.getSelectedDate();
+           dia=fecha.get(Calendar.DATE);
+           mes=fecha.get(Calendar.MONTH)+1;
+           anio=fecha.get(Calendar.YEAR);
+        }
+
+         Date fechaa= new Date();
+         diaActual=fechaa.getDate();
+         mesActual=fechaa.getMonth()+1;
+         anioActual=fechaa.getYear()+1901;
+
+
+        /**Si se sale de los rangos*/
+        if((dia <= 0)
+                || (dia > 31)
+                || (mes <= 0)
+                || (mes > 12)
+                || (anio < 1900)
+                || (anio > anioActual) ){
+            return false;
+        }
+
+        /**Si ha nacido en el año actual, hay que ver que el mes no sea mayor que el actual*/
+        /**Si ha nacido en el año y mes actual, hay que comprobar que el dia sea menor que el actual*/
+        if(anio == anioActual){
+            if(mes > mesActual){
+                return false;
+            } else{
+                if(dia > diaActual){
+                    return false;
+                }
+            }
+        }
+
+        /**Si estamos en un mes que tiene 30 días o 29 en el caso de febrero, hay que comprobar que no se pase*/
+        if(mes%2 == 0){
+            if((mes == 2) && (dia >29)){
+                return false;
+            }else{
+                if(dia > 30){
+                    return false;
+                }
+            }
+        }
+
+        return true;
+
+    }
 
 
      /*Borra el formulario elegido
@@ -3174,6 +3257,10 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
             jLabelInicio.setVisible(true);
             jLabelIconoInicio.setVisible(true);
 
+            jRadioButtonAnalista.setEnabled(false);
+             jRadioButtonRadiologo.setEnabled(false);
+             jRadioButtonFarmaceutico.setSelected(true);
+             jRadioButtonMedico.setEnabled(false);
             /**Insertamos icono de foto anónima*/
             jLabelFotoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
 
@@ -3589,9 +3676,9 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         String num_anio= String.valueOf(anio);
 
 
-        jTextFieldFechaNacimientoAnioPersonal.setText(num_anio);
-        jTextFieldFechaNacimientoDiaPersonal.setText(num_dia);
-        jTextFieldFechaNacimientoMesersonal.setText(num_mes);
+//        jTextFieldFechaNacimientoAnioPersonal.setText(num_anio);
+  //      jTextFieldFechaNacimientoDiaPersonal.setText(num_dia);
+    //    jTextFieldFechaNacimientoMesersonal.setText(num_mes);
         jTextFieldNombrePersonal.setText(usu.getNombre());
         jTextFieldContraseniaPersonal.setText(usu.getContrasenia());
         jTextFieldDNIPersonal.setText(usu.getDNI());
@@ -3605,6 +3692,67 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
   private boolean compruebaFormulario(String formulario){
 
+           if(formulario.equals("GestionarPersonal")){
+
+            if(!compruebaFecha("GestionarPersonal")){
+                jLabelFechaNacimientoPersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelFechaNacimientoPersonal.setForeground(Color.black);
+                }
+
+            if(jTextFieldNombrePersonal.getText().length() == 0){
+                jLabelNombrePersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelNombrePersonal.setForeground(Color.black);
+            }
+
+            if(jTextFieldApellidosPersonal.getText().length() == 0){
+                jLabelApellidosPersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelApellidosPersonal.setForeground(Color.black);
+            }
+
+            if(jTextFieldDNIPersonal.getText().length() != 9){
+                jLabelDNIPersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelDNIPersonal.setForeground(Color.black);
+            }
+
+            if(jTextFieldDireccionPersonal.getText().length() == 0){
+                jLabelDireccionPersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelDireccionPersonal.setForeground(Color.black);
+            }
+
+            if(jTextFieldEmailPersonal.getText().length() == 0){
+                jLabelEmailPersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelEmailPersonal.setForeground(Color.black);
+            }
+
+            if(jTextFieldTelefonoPersonal.getText().length() == 0){
+                jLabelTelefonoPersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelTelefonoPersonal.setForeground(Color.black);
+            }
+
+            if(jTextFieldLugarNacimientoPersonal.getText().length() == 0){
+                jLabelLugarNacimientoPersonal.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelLugarNacimientoPersonal.setForeground(Color.black);
+            }
+
+            return true;
+
+    }
         if(formulario.equals("GestionarMedicamento")){
             if(jTextFieldNombreMedicamento.getText().length() == 0){
                 jLabelNombre.setForeground(Color.red);
