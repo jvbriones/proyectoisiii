@@ -44,7 +44,7 @@ public class CitasBD {
 
         session.beginTransaction();
         Cita ci = (Cita) session.get(Cita.class, Dni);
-
+        
         return ci;
     }
 

@@ -66,13 +66,6 @@ public class GestorCitas {
         return "2Pac";
     }
 
-
-//    public void setFecha(fecha){
-//    }
-
-//    public String alta_citaonline(){
-//    }
-
     public String cancelarCitaOnline(Usuario usu) throws SQLException{
 
         CitasBD bd_citas=new CitasBD();
@@ -94,7 +87,7 @@ public class GestorCitas {
         Date fecha=null;
         fecha=cita.getFecha();
 
-        
+
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(fecha);
         int dia = calendar.get(Calendar.DAY_OF_MONTH);   //dia del mes
@@ -109,17 +102,25 @@ public class GestorCitas {
 
 
 
-
-
-
-      
-
         cita.setEstado(false);
         bd_citas.almacenar(cita);
 
 
        return " cita cancelada";
     }
+
+    public Cita obtenerCita(String dni) throws SQLException{
+        CitasBD cita = new CitasBD();
+        return cita.obtenerCita(dni);
+    }
+
+//    public void setFecha(fecha){
+//    }
+
+//    public String alta_citaonline(){
+//    }
+
+
 
     /*
     public String cancelarCita(String Dni) throws SQLException{
