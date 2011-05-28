@@ -16,9 +16,13 @@ import javax.swing.JOptionPane;
 import Controlador.*;
 import CentroMedico.*;
 import BaseDatos.*;
+import java.awt.Color;
 import java.util.Calendar.*;
 import java.util.Calendar;
 import java.sql.SQLException;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
@@ -69,9 +73,9 @@ public class UI_Paciente extends javax.swing.JFrame {
         String num_mes= String.valueOf(mes);
         String num_anio= String.valueOf(anio);
 
-        jTextFieldFechaNacimientoAnioPaciente.setText(num_anio);
-        jTextFieldFechaNacimientoDiaPaciente.setText(num_dia);
-        jTextFieldFechaNacimientoMesPaciente.setText(num_mes);
+        //jTextFieldFechaNacimientoAnioPaciente.setText(num_anio);
+        //jTextFieldFechaNacimientoDiaPaciente.setText(num_dia);
+        //jTextFieldFechaNacimientoMesPaciente.setText(num_mes);
         jTextFieldNombrePaciente.setText(usu.getNombre());
         jTextFieldContraseniaPaciente.setText(usu.getContrasenia());
         jTextFieldDNIPaciente.setText(usu.getDNI());
@@ -1414,12 +1418,12 @@ public class UI_Paciente extends javax.swing.JFrame {
             Date fechaNacimiento = null;                        //HAY QUE PROCESARLA LEYÉNDOLA DEL FORMULARIOOOO
             byte[] urlFoto = null;                              //HAY QUE GUARDAR LA FOTO Y PASAR LA RUTA DE DONDE ESTA
             boolean exito;
-
+            String url;
 
             fechaNacimiento = dateChooserCombo2.getSelectedDate().getTime();
 
             try {
-                exito = gesPac.altaPaciente(jTextFieldDNIPaciente.getText(), jTextFieldNombrePaciente.getText(), jTextFieldApellidosPaciente.getText(), jTextFieldDireccionPaciente.getText(), jTextFieldEmailPaciente.getText(), jTextFieldTelefonoPaciente.getText(), fechaNacimiento, jTextFieldLugarNacimientoPaciente.getText(), laurl, "Paciente");
+                exito = gesPac.modificarPaciente(jTextFieldDNIPaciente.getText(), jTextFieldNombrePaciente.getText(), jTextFieldApellidosPaciente.getText(), jTextFieldDireccionPaciente.getText(), jTextFieldEmailPaciente.getText(),jTextFieldContraseniaPaciente.getText(), jTextFieldTelefonoPaciente.getText(), fechaNacimiento, jTextFieldLugarNacimientoPaciente.getText(), url);
 
                 if(!exito){
                     new InformacionExito().setVisible(true);
@@ -1565,7 +1569,69 @@ public class UI_Paciente extends javax.swing.JFrame {
         }
 
     }
+     private boolean compruebaFormulario(String formulario){
 
+        if(formulario.equals("GestionarPaciente")){
+
+            if(!compruebaFecha("GestionarPaciente")){
+                jLabelFechaNacimientoPaciente.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelFechaNacimientoPaciente.setForeground(Color.black);
+                }
+
+            if(jTextFieldNombrePaciente.getText().length() == 0){
+                jLabelNombrePaciente.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelNombrePaciente.setForeground(Color.black);
+            }
+
+            if(jTextFieldApellidosPaciente.getText().length() == 0){
+                jLabelApellidosPaciente.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelApellidosPaciente.setForeground(Color.black);
+            }
+
+            if(jTextFieldDNIPaciente.getText().length() != 9){
+                jLabelDNIPaciente.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelDNIPaciente.setForeground(Color.black);
+            }
+
+            if(jTextFieldDireccionPaciente.getText().length() == 0){
+                jLabelDireccionPaciente.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelDireccionPaciente.setForeground(Color.black);
+            }
+
+            if(jTextFieldEmailPaciente.getText().length() == 0){
+                jLabelEmailPaciente.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelEmailPaciente.setForeground(Color.black);
+            }
+
+            if(jTextFieldTelefonoPaciente.getText().length() == 0){
+                jLabelTelefonoPaciente.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelTelefonoPaciente.setForeground(Color.black);
+            }
+
+            if(jTextFieldLugarNacimientoPaciente.getText().length() == 0){
+                jLabelLugarNacimientoPaciente.setForeground(Color.red);
+                return false;
+                }else{
+                jLabelLugarNacimientoPaciente.setForeground(Color.black);
+            }
+
+            return true;
+
+        }
   
     /*Muestra el panel elegido en ZonaTrabajo
      *
