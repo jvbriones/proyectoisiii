@@ -95,7 +95,7 @@ public class Cita implements Serializable{
     }
 
     /********* Metodos Asignadores **********/
-      
+
     public void setFecha(Calendar Fecha){
         this.Fecha=Fecha;
     }
