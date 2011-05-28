@@ -19,17 +19,3 @@
     <many-to-one class="CentroMedico.Paciente" name="Paciente" column="DNI_PACIENTE"/>
   </class>
 </hibernate-mapping>
-
-
-
-    private boolean Estado;
-    //private Date Fecha; Utilizamos Calendar
-    private Calendar Fecha;
-    private String Tipo;
-
-    private Paciente Paciente;
-    private PersonalMedico PersonalMedico;
-
-    /* Atributos que faltan*/
-    private String DniPaciente;
-    private String DniMedico;
