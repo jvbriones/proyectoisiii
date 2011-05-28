@@ -3429,7 +3429,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         }
 
         if(formulario.equals("GestionarPersonal")){
-              fecha=dateChooserCombo2.getSelectedDate();
+          fecha=dateChooserCombo2.getSelectedDate();
 
            dia=fecha.get(Calendar.DATE);
            mes=fecha.get(Calendar.MONTH)+1;
