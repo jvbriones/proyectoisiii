@@ -188,7 +188,7 @@
                               <Component id="jLabelGestionarCita1" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="388" max="32767" attributes="0"/>
+                      <EmptySpace pref="397" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -863,36 +863,24 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="112" max="32767" attributes="0"/>
+                      <EmptySpace pref="111" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabelFechaNacimientoPaciente" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="215" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabelFechaNacimientoPaciente" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelFotografiaPaciente" min="-2" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jButtonMasDiaPaciente" min="-2" pref="50" max="-2" attributes="0"/>
-                                              <Component id="jButtonMasMesPaciente" min="-2" pref="50" max="-2" attributes="0"/>
-                                              <Component id="jButtonMasAnioPaciente" min="-2" pref="50" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="10" pref="10" max="10" attributes="0"/>
-                                              <Component id="jTextFieldFechaNacimientoDiaPaciente" min="-2" pref="33" max="-2" attributes="0"/>
-                                              <EmptySpace min="17" pref="17" max="17" attributes="0"/>
-                                              <Component id="jTextFieldFechaNacimientoMesPaciente" min="-2" pref="33" max="-2" attributes="0"/>
-                                              <EmptySpace min="7" pref="7" max="7" attributes="0"/>
-                                              <Component id="jTextFieldFechaNacimientoAnioPaciente" min="-2" pref="50" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jButtonMenosDiaPaciente" min="-2" pref="50" max="-2" attributes="0"/>
-                                              <Component id="jButtonMenosMesPaciente" min="-2" pref="50" max="-2" attributes="0"/>
-                                              <Component id="jButtonMenosAnioPaciente" min="-2" pref="50" max="-2" attributes="0"/>
+                                              <Component id="dateChooserCombo1" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jButtonModificarPaciente" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabelFotoPaciente" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                                              </Group>
                                           </Group>
                                       </Group>
-                                      <EmptySpace min="-2" pref="215" max="-2" attributes="0"/>
-                                      <Component id="jLabelFotografiaPaciente" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                                      <Component id="jLabelFotoPaciente" min="-2" pref="130" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jTextFieldDireccionPaciente" min="-2" pref="370" max="-2" attributes="0"/>
@@ -1004,35 +992,27 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="19" pref="19" max="19" attributes="0"/>
                                       <Component id="jLabelFechaNacimientoPaciente" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="4" pref="4" max="4" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jButtonMasDiaPaciente" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
-                                          <Component id="jButtonMasMesPaciente" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
-                                          <Component id="jButtonMasAnioPaciente" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jTextFieldFechaNacimientoDiaPaciente" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextFieldFechaNacimientoMesPaciente" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextFieldFechaNacimientoAnioPaciente" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="2" pref="2" max="2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jButtonMenosDiaPaciente" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
-                                          <Component id="jButtonMenosMesPaciente" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
-                                          <Component id="jButtonMenosAnioPaciente" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
-                                      </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="30" pref="30" max="30" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabelFotoPaciente" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
-                                          <Component id="jLabelFotografiaPaciente" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jLabelFotografiaPaciente" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="dateChooserCombo1" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                                              <Component id="jButtonModificarPaciente" min="-2" pref="45" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jLabelFotoPaciente" min="-2" pref="150" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
                                   </Group>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="88" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1052,9 +1032,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldNombrePaciente">
-              <Properties>
-                <Property name="editable" type="boolean" value="false"/>
-              </Properties>
               <Events>
                 <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldNombrePacienteKeyTyped"/>
               </Events>
@@ -1070,9 +1047,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldTelefonoPaciente">
-              <Properties>
-                <Property name="editable" type="boolean" value="false"/>
-              </Properties>
               <Events>
                 <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldTelefonoPacienteKeyTyped"/>
               </Events>
@@ -1083,9 +1057,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldDNIPaciente">
-              <Properties>
-                <Property name="editable" type="boolean" value="false"/>
-              </Properties>
               <Events>
                 <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldDNIPacienteKeyTyped"/>
               </Events>
@@ -1106,9 +1077,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldLugarNacimientoPaciente">
-              <Properties>
-                <Property name="editable" type="boolean" value="false"/>
-              </Properties>
               <Events>
                 <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldLugarNacimientoPacienteKeyTyped"/>
               </Events>
@@ -1117,15 +1085,6 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Tel&#xe9;fono"/>
               </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextFieldFechaNacimientoMesPaciente">
-              <Properties>
-                <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="1"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldFechaNacimientoMesPacienteActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelLugarNacimientoPaciente">
               <Properties>
@@ -1137,57 +1096,14 @@
                 <Property name="text" type="java.lang.String" value="Direcci&#xf3;n"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButtonMenosAnioPaciente">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="-"/>
-                <Property name="enabled" type="boolean" value="false"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonMenosAnioPacienteMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMenosAnioPacienteActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabelApellidosPaciente">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Apellidos"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldApellidosPaciente">
-              <Properties>
-                <Property name="editable" type="boolean" value="false"/>
-              </Properties>
               <Events>
                 <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldApellidosPacienteKeyTyped"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonMasDiaPaciente">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="+"/>
-                <Property name="enabled" type="boolean" value="false"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonMasDiaPacienteMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMasDiaPacienteActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonMenosMesPaciente">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="-"/>
-                <Property name="enabled" type="boolean" value="false"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonMenosMesPacienteMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMenosMesPacienteActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonMenosDiaPaciente">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="-"/>
-                <Property name="enabled" type="boolean" value="false"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonMenosDiaPacienteMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMenosDiaPacienteActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelEmailPaciente">
@@ -1196,64 +1112,34 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldDireccionPaciente">
-              <Properties>
-                <Property name="editable" type="boolean" value="false"/>
-              </Properties>
               <Events>
                 <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldDireccionPacienteKeyTyped"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextFieldFechaNacimientoDiaPaciente">
-              <Properties>
-                <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="1"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonMasAnioPaciente">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="+"/>
-                <Property name="enabled" type="boolean" value="false"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonMasAnioPacienteMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMasAnioPacienteActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldEmailPaciente">
-              <Properties>
-                <Property name="editable" type="boolean" value="false"/>
-              </Properties>
               <Events>
                 <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldEmailPacienteKeyTyped"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextFieldFechaNacimientoAnioPaciente">
-              <Properties>
-                <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="1950"/>
-                <Property name="enabled" type="boolean" value="false"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldContraseniaPaciente">
               <Properties>
                 <Property name="columns" type="int" value="8"/>
-                <Property name="editable" type="boolean" value="false"/>
               </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonMasMesPaciente">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="+"/>
-                <Property name="enabled" type="boolean" value="false"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonMasMesPacienteMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMasMesPacienteActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelFechaNacimientoPaciente">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Fecha nacimiento"/>
               </Properties>
+            </Component>
+            <Component class="datechooser.beans.DateChooserCombo" name="dateChooserCombo1">
+            </Component>
+            <Component class="javax.swing.JButton" name="jButtonModificarPaciente">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Modificar"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonModificarPacienteMouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

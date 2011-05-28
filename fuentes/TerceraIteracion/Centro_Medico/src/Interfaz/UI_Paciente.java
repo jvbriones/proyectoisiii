@@ -202,24 +202,17 @@ public class UI_Paciente extends javax.swing.JFrame {
         jLabelDNIPaciente = new javax.swing.JLabel();
         jTextFieldLugarNacimientoPaciente = new javax.swing.JTextField();
         jLabelTelefonoPaciente = new javax.swing.JLabel();
-        jTextFieldFechaNacimientoMesPaciente = new javax.swing.JTextField();
         jLabelLugarNacimientoPaciente = new javax.swing.JLabel();
         jLabelDireccionPaciente = new javax.swing.JLabel();
-        jButtonMenosAnioPaciente = new javax.swing.JButton();
         jLabelApellidosPaciente = new javax.swing.JLabel();
         jTextFieldApellidosPaciente = new javax.swing.JTextField();
-        jButtonMasDiaPaciente = new javax.swing.JButton();
-        jButtonMenosMesPaciente = new javax.swing.JButton();
-        jButtonMenosDiaPaciente = new javax.swing.JButton();
         jLabelEmailPaciente = new javax.swing.JLabel();
         jTextFieldDireccionPaciente = new javax.swing.JTextField();
-        jTextFieldFechaNacimientoDiaPaciente = new javax.swing.JTextField();
-        jButtonMasAnioPaciente = new javax.swing.JButton();
         jTextFieldEmailPaciente = new javax.swing.JTextField();
-        jTextFieldFechaNacimientoAnioPaciente = new javax.swing.JTextField();
         jTextFieldContraseniaPaciente = new javax.swing.JTextField();
-        jButtonMasMesPaciente = new javax.swing.JButton();
         jLabelFechaNacimientoPaciente = new javax.swing.JLabel();
+        dateChooserCombo1 = new datechooser.beans.DateChooserCombo();
+        jButtonModificarPaciente = new javax.swing.JButton();
         jPanelUsuario = new javax.swing.JPanel();
         jLabelUsuario = new javax.swing.JLabel();
         jLabelTipoUsuario = new javax.swing.JLabel();
@@ -485,7 +478,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jPanelGestionarCitaOnline.add(jPanelBotones, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 580, 60));
 
-        jPanelGestionarCitaOnline.setBounds(0, 0, 901, 531);
+        jPanelGestionarCitaOnline.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelGestionarCitaOnline, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelConsultarCitaOnline.setMinimumSize(new java.awt.Dimension(901, 510));
@@ -728,7 +721,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         });
         jPanelConsultarCitaOnline.add(jTextFieldDNIPacienteCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 90, -1));
 
-        jPanelConsultarCitaOnline.setBounds(0, 0, 901, 531);
+        jPanelConsultarCitaOnline.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelConsultarCitaOnline, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarPaciente.setPreferredSize(new java.awt.Dimension(901, 531));
@@ -738,7 +731,6 @@ public class UI_Paciente extends javax.swing.JFrame {
         jLabelGestionarPaciente4.setFont(new java.awt.Font("Lucida Grande", 1, 48));
         jLabelGestionarPaciente4.setText("Consulta Datos Paciente");
 
-        jTextFieldNombrePaciente.setEditable(false);
         jTextFieldNombrePaciente.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldNombrePacienteKeyTyped(evt);
@@ -748,7 +740,6 @@ public class UI_Paciente extends javax.swing.JFrame {
         jLabelFotoPaciente.setBackground(new java.awt.Color(255, 255, 255));
         jLabelFotoPaciente.setForeground(new java.awt.Color(255, 255, 255));
 
-        jTextFieldTelefonoPaciente.setEditable(false);
         jTextFieldTelefonoPaciente.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldTelefonoPacienteKeyTyped(evt);
@@ -757,7 +748,6 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jLabelContraseniaPaciente.setText("Contraseña");
 
-        jTextFieldDNIPaciente.setEditable(false);
         jTextFieldDNIPaciente.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldDNIPacienteKeyTyped(evt);
@@ -770,7 +760,6 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jLabelDNIPaciente.setText("DNI");
 
-        jTextFieldLugarNacimientoPaciente.setEditable(false);
         jTextFieldLugarNacimientoPaciente.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldLugarNacimientoPacienteKeyTyped(evt);
@@ -779,132 +768,42 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jLabelTelefonoPaciente.setText("Teléfono");
 
-        jTextFieldFechaNacimientoMesPaciente.setEditable(false);
-        jTextFieldFechaNacimientoMesPaciente.setText("1");
-        jTextFieldFechaNacimientoMesPaciente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldFechaNacimientoMesPacienteActionPerformed(evt);
-            }
-        });
-
         jLabelLugarNacimientoPaciente.setText("Lugar nacimiento");
 
         jLabelDireccionPaciente.setText("Dirección");
 
-        jButtonMenosAnioPaciente.setText("-");
-        jButtonMenosAnioPaciente.setEnabled(false);
-        jButtonMenosAnioPaciente.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMenosAnioPacienteMouseClicked(evt);
-            }
-        });
-        jButtonMenosAnioPaciente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMenosAnioPacienteActionPerformed(evt);
-            }
-        });
-
         jLabelApellidosPaciente.setText("Apellidos");
 
-        jTextFieldApellidosPaciente.setEditable(false);
         jTextFieldApellidosPaciente.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldApellidosPacienteKeyTyped(evt);
             }
         });
 
-        jButtonMasDiaPaciente.setText("+");
-        jButtonMasDiaPaciente.setEnabled(false);
-        jButtonMasDiaPaciente.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMasDiaPacienteMouseClicked(evt);
-            }
-        });
-        jButtonMasDiaPaciente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMasDiaPacienteActionPerformed(evt);
-            }
-        });
-
-        jButtonMenosMesPaciente.setText("-");
-        jButtonMenosMesPaciente.setEnabled(false);
-        jButtonMenosMesPaciente.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMenosMesPacienteMouseClicked(evt);
-            }
-        });
-        jButtonMenosMesPaciente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMenosMesPacienteActionPerformed(evt);
-            }
-        });
-
-        jButtonMenosDiaPaciente.setText("-");
-        jButtonMenosDiaPaciente.setEnabled(false);
-        jButtonMenosDiaPaciente.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMenosDiaPacienteMouseClicked(evt);
-            }
-        });
-        jButtonMenosDiaPaciente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMenosDiaPacienteActionPerformed(evt);
-            }
-        });
-
         jLabelEmailPaciente.setText("Email");
 
-        jTextFieldDireccionPaciente.setEditable(false);
         jTextFieldDireccionPaciente.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldDireccionPacienteKeyTyped(evt);
             }
         });
 
-        jTextFieldFechaNacimientoDiaPaciente.setEditable(false);
-        jTextFieldFechaNacimientoDiaPaciente.setText("1");
-
-        jButtonMasAnioPaciente.setText("+");
-        jButtonMasAnioPaciente.setEnabled(false);
-        jButtonMasAnioPaciente.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMasAnioPacienteMouseClicked(evt);
-            }
-        });
-        jButtonMasAnioPaciente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMasAnioPacienteActionPerformed(evt);
-            }
-        });
-
-        jTextFieldEmailPaciente.setEditable(false);
         jTextFieldEmailPaciente.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldEmailPacienteKeyTyped(evt);
             }
         });
 
-        jTextFieldFechaNacimientoAnioPaciente.setEditable(false);
-        jTextFieldFechaNacimientoAnioPaciente.setText("1950");
-        jTextFieldFechaNacimientoAnioPaciente.setEnabled(false);
-
         jTextFieldContraseniaPaciente.setColumns(8);
-        jTextFieldContraseniaPaciente.setEditable(false);
-
-        jButtonMasMesPaciente.setText("+");
-        jButtonMasMesPaciente.setEnabled(false);
-        jButtonMasMesPaciente.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonMasMesPacienteMouseClicked(evt);
-            }
-        });
-        jButtonMasMesPaciente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMasMesPacienteActionPerformed(evt);
-            }
-        });
 
         jLabelFechaNacimientoPaciente.setText("Fecha nacimiento");
+
+        jButtonModificarPaciente.setText("Modificar");
+        jButtonModificarPaciente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonModificarPacienteMouseClicked(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout jPanelGestionarPacienteLayout = new org.jdesktop.layout.GroupLayout(jPanelGestionarPaciente);
         jPanelGestionarPaciente.setLayout(jPanelGestionarPacienteLayout);
@@ -916,27 +815,16 @@ public class UI_Paciente extends javax.swing.JFrame {
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarPacienteLayout.createSequentialGroup()
                         .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(jPanelGestionarPacienteLayout.createSequentialGroup()
-                                .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                    .add(jLabelFechaNacimientoPaciente)
-                                    .add(jPanelGestionarPacienteLayout.createSequentialGroup()
-                                        .add(jButtonMasDiaPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                        .add(jButtonMasMesPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                        .add(jButtonMasAnioPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                    .add(jPanelGestionarPacienteLayout.createSequentialGroup()
-                                        .add(10, 10, 10)
-                                        .add(jTextFieldFechaNacimientoDiaPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 33, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                        .add(17, 17, 17)
-                                        .add(jTextFieldFechaNacimientoMesPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 33, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                        .add(7, 7, 7)
-                                        .add(jTextFieldFechaNacimientoAnioPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                    .add(jPanelGestionarPacienteLayout.createSequentialGroup()
-                                        .add(jButtonMenosDiaPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                        .add(jButtonMenosMesPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                        .add(jButtonMenosAnioPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                                .add(jLabelFechaNacimientoPaciente)
                                 .add(215, 215, 215)
-                                .add(jLabelFotografiaPaciente)
-                                .add(34, 34, 34)
-                                .add(jLabelFotoPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 130, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(jLabelFotografiaPaciente)
+                                    .add(jPanelGestionarPacienteLayout.createSequentialGroup()
+                                        .add(dateChooserCombo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                        .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                            .add(jButtonModificarPaciente)
+                                            .add(jLabelFotoPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 130, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))
                             .add(jPanelGestionarPacienteLayout.createSequentialGroup()
                                 .add(jTextFieldDireccionPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 370, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .add(40, 40, 40)
@@ -1022,27 +910,20 @@ public class UI_Paciente extends javax.swing.JFrame {
                         .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(jPanelGestionarPacienteLayout.createSequentialGroup()
                                 .add(19, 19, 19)
-                                .add(jLabelFechaNacimientoPaciente)
-                                .add(4, 4, 4)
-                                .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                    .add(jButtonMasDiaPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .add(jButtonMasMesPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .add(jButtonMasAnioPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                    .add(jTextFieldFechaNacimientoDiaPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .add(jTextFieldFechaNacimientoMesPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .add(jTextFieldFechaNacimientoAnioPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                .add(2, 2, 2)
-                                .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                    .add(jButtonMenosDiaPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .add(jButtonMenosMesPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .add(jButtonMenosAnioPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                                .add(jLabelFechaNacimientoPaciente))
                             .add(jPanelGestionarPacienteLayout.createSequentialGroup()
                                 .add(30, 30, 30)
                                 .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                    .add(jLabelFotoPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                    .add(jLabelFotografiaPaciente))))))
-                .addContainerGap(87, Short.MAX_VALUE))
+                                    .add(jPanelGestionarPacienteLayout.createSequentialGroup()
+                                        .add(jLabelFotografiaPaciente)
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                                        .add(dateChooserCombo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                    .add(jPanelGestionarPacienteLayout.createSequentialGroup()
+                                        .add(59, 59, 59)
+                                        .add(jButtonModificarPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 45, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                        .add(jLabelFotoPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanelGestionarPaciente.setBounds(1, 0, 900, 530);
@@ -1163,127 +1044,11 @@ public class UI_Paciente extends javax.swing.JFrame {
         // TODO add your handling code here:
 }//GEN-LAST:event_jTextFieldMesCitaActionPerformed
 
-    private void jTextFieldFechaNacimientoMesPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFechaNacimientoMesPacienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldFechaNacimientoMesPacienteActionPerformed
-
-    private void jButtonMenosAnioPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosAnioPacienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMenosAnioPacienteActionPerformed
-
-    private void jButtonMasDiaPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasDiaPacienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMasDiaPacienteActionPerformed
-
-    private void jButtonMenosMesPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosMesPacienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMenosMesPacienteActionPerformed
-
-    private void jButtonMenosDiaPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosDiaPacienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMenosDiaPacienteActionPerformed
-
-    private void jButtonMasAnioPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasAnioPacienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMasAnioPacienteActionPerformed
-
-    private void jButtonMasMesPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMasMesPacienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonMasMesPacienteActionPerformed
-
     private void jButtonVolverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonVolverMouseClicked
         // TODO add your handling code here:
         jTextFieldDNIPacienteCita.setEditable(true);
         mostrarPanel("GestionarCitaOnline");
     }//GEN-LAST:event_jButtonVolverMouseClicked
-
-    private void jButtonMasDiaPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasDiaPacienteMouseClicked
-        // TODO add your handling code here:
-        int num = 0;
-        
-        num = Integer.parseInt(jTextFieldFechaNacimientoDiaPaciente.getText());
-
-        if(num < 31)
-            num ++;
-        
-        String numString;
-        numString = String.valueOf(num);
-        jTextFieldFechaNacimientoDiaPaciente.setText(numString);
-    }//GEN-LAST:event_jButtonMasDiaPacienteMouseClicked
-
-    private void jButtonMenosDiaPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosDiaPacienteMouseClicked
-        // TODO add your handling code here:
-        int num = 0;
-
-        num = Integer.parseInt(jTextFieldFechaNacimientoDiaPaciente.getText());
-
-        if(num > 1)
-            num --;
-
-        String numString;
-        numString = String.valueOf(num);
-        jTextFieldFechaNacimientoDiaPaciente.setText(numString);
-    }//GEN-LAST:event_jButtonMenosDiaPacienteMouseClicked
-
-    private void jButtonMasMesPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasMesPacienteMouseClicked
-        // TODO add your handling code here:
-        int num = 0;
-
-        num = Integer.parseInt(jTextFieldFechaNacimientoMesPaciente.getText());
-
-        if(num < 12)
-            num ++;
-
-        String numString;
-        numString = String.valueOf(num);
-        jTextFieldFechaNacimientoMesPaciente.setText(numString);
-    }//GEN-LAST:event_jButtonMasMesPacienteMouseClicked
-
-    private void jButtonMenosMesPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosMesPacienteMouseClicked
-        // TODO add your handling code here:
-        int num = 0;
-
-        num = Integer.parseInt(jTextFieldFechaNacimientoMesPaciente.getText());
-
-        if(num > 1)
-            num --;
-
-        String numString;
-        numString = String.valueOf(num);
-        jTextFieldFechaNacimientoMesPaciente.setText(numString);
-    }//GEN-LAST:event_jButtonMenosMesPacienteMouseClicked
-
-    private void jButtonMasAnioPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasAnioPacienteMouseClicked
-        // TODO add your handling code here:
-        int num = 0;
-        int anioActual = 0;
-
-        num = Integer.parseInt(jTextFieldFechaNacimientoAnioPaciente.getText());
-
-        Calendar fechaActual = Calendar.getInstance();
-        anioActual = fechaActual.get(Calendar.YEAR);
-
-        if(num < anioActual)
-            num ++;
-
-        String numString;
-        numString = String.valueOf(num);
-        jTextFieldFechaNacimientoAnioPaciente.setText(numString);
-    }//GEN-LAST:event_jButtonMasAnioPacienteMouseClicked
-
-    private void jButtonMenosAnioPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosAnioPacienteMouseClicked
-        // TODO add your handling code here:
-        int num = 0;
-
-        num = Integer.parseInt(jTextFieldFechaNacimientoAnioPaciente.getText());
-
-        if(num > 1900)
-            num --;
-
-        String numString;
-        numString = String.valueOf(num);
-        jTextFieldFechaNacimientoAnioPaciente.setText(numString);
-    }//GEN-LAST:event_jButtonMenosAnioPacienteMouseClicked
 
     private void jButtonMasDiaFechaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasDiaFechaMouseClicked
         // TODO add your handling code here:
@@ -1642,6 +1407,11 @@ public class UI_Paciente extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonConsultarCita1MouseClicked
 
+    private void jButtonModificarPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonModificarPacienteMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButtonModificarPacienteMouseClicked
+
 
     /*Comprueba que la fecha introducida es correcta
      * 
@@ -1909,28 +1679,24 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLayeredPane ZonaTrabajo;
+    private datechooser.beans.DateChooserCombo dateChooserCombo1;
     private javax.swing.JButton jButtonAceptarCita;
     private javax.swing.JButton jButtonCancelar;
     private javax.swing.JButton jButtonConsultarCita1;
     private javax.swing.JButton jButtonGestionarCita;
     private javax.swing.JButton jButtonGestionarPaciente;
     private javax.swing.JButton jButtonMasAnioFecha;
-    private javax.swing.JButton jButtonMasAnioPaciente;
     private javax.swing.JButton jButtonMasDiaFecha;
-    private javax.swing.JButton jButtonMasDiaPaciente;
     private javax.swing.JButton jButtonMasHora;
     private javax.swing.JButton jButtonMasMesFecha;
-    private javax.swing.JButton jButtonMasMesPaciente;
     private javax.swing.JButton jButtonMasMinuto;
-    private javax.swing.JButton jButtonMenosAnioPaciente;
     private javax.swing.JButton jButtonMenosAnioPersonal;
     private javax.swing.JButton jButtonMenosDiaFecha;
-    private javax.swing.JButton jButtonMenosDiaPaciente;
     private javax.swing.JButton jButtonMenosHora;
     private javax.swing.JButton jButtonMenosMesFecha;
-    private javax.swing.JButton jButtonMenosMesPaciente;
     private javax.swing.JButton jButtonMenosMinuto;
     private javax.swing.JButton jButtonModificarCitaOnline;
+    private javax.swing.JButton jButtonModificarPaciente;
     private javax.swing.JButton jButtonPedirAltaCita;
     private javax.swing.JButton jButtonVolver;
     private javax.swing.JLabel jLabel1;
@@ -1994,9 +1760,6 @@ public class UI_Paciente extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldDiaCita;
     private javax.swing.JTextField jTextFieldDireccionPaciente;
     private javax.swing.JTextField jTextFieldEmailPaciente;
-    private javax.swing.JTextField jTextFieldFechaNacimientoAnioPaciente;
-    private javax.swing.JTextField jTextFieldFechaNacimientoDiaPaciente;
-    private javax.swing.JTextField jTextFieldFechaNacimientoMesPaciente;
     private javax.swing.JTextField jTextFieldHoraCita;
     private javax.swing.JTextField jTextFieldLugarNacimientoPaciente;
     private javax.swing.JTextField jTextFieldMesCita;
