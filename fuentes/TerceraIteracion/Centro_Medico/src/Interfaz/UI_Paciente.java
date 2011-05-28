@@ -1418,7 +1418,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             Date fechaNacimiento = null;                        //HAY QUE PROCESARLA LEYÉNDOLA DEL FORMULARIOOOO
             byte[] urlFoto = null;                              //HAY QUE GUARDAR LA FOTO Y PASAR LA RUTA DE DONDE ESTA
             boolean exito;
-            String url;
+            String url=null;
 
             fechaNacimiento = dateChooserCombo2.getSelectedDate().getTime();
 
@@ -1629,14 +1629,18 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jLabelLugarNacimientoPaciente.setForeground(Color.black);
             }
 
+             }
+        
             return true;
 
-        }
+       
   
+     }
     /*Muestra el panel elegido en ZonaTrabajo
      *
      *@param panel, string que indica el panel a mostrar
      */
+        
     private void mostrarPanel(String panel){
 
 
