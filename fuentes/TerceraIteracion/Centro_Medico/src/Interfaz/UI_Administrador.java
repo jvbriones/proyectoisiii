@@ -3279,7 +3279,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }else{
                 try{
                     GestorCitas gtcts = new GestorCitas();
-                    Cita ct = gtcts.obtenerCita(dni);
+                    Cita ct = gtcts.ObtenerCita(dni);
                     
                     if(ct == null){
                         jTextAreaInfoCitaOnline.setText("Introduce el DNI del paciente y pulse en la opción que desee\n\tEl DNI introducido no tiene asignada ninguna cita");
@@ -3299,18 +3299,18 @@ public class UI_Administrador extends javax.swing.JFrame {
                         /**Mostramos el campo DNI de médico*/
                         jLabelDNIGestionarCitaMedico.setVisible(true);
                         jTextFieldDNIGestionarCitaMedico.setVisible(true);
-                        jTextFieldDNIGestionarCitaMedico.setText(ct.getDNIMedico());
+                        jTextFieldDNIGestionarCitaMedico.setText(ct.getPersonalMedico().getDNI());
                         jTextFieldDNIGestionarCitaMedico.setEditable(false);
                         jTextFieldDNIGestionarCitaPaciente.setEditable(false);
 
                         /*Mostramos la fecha y la hora de la cita consultada*/
-                        Calendar fechacita = ct.getFecha();
+                        Date fechacita = ct.getFecha();
 
-                        jTextFieldMinutoCita.setText(String.valueOf(fechacita.get(Calendar.MINUTE)));
-                        jTextFieldHoraCita.setText(String.valueOf(fechacita.get(Calendar.HOUR)));
-                        jTextFieldDiaCita.setText(String.valueOf(fechacita.get(Calendar.DATE)));
-                        jTextFieldMesCita.setText(String.valueOf(fechacita.get(Calendar.MONTH)));
-                        jTextFieldAnioCita.setText(String.valueOf(fechacita.get(Calendar.YEAR)));
+                        jTextFieldMinutoCita.setText(String.valueOf(fechacita.getMinutes()));
+                        jTextFieldHoraCita.setText(String.valueOf(fechacita.getHours()));
+                        jTextFieldDiaCita.setText(String.valueOf(fechacita.getDay()));
+                        jTextFieldMesCita.setText(String.valueOf(fechacita.getMonth()));
+                        jTextFieldAnioCita.setText(String.valueOf(fechacita.getYear()));
 
                     }
                 }catch(SQLException ex){
@@ -3336,7 +3336,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             if(usr != null){
                 try{
                     GestorCitas gtcts = new GestorCitas();
-                    Cita ct = gtcts.obtenerCita(dni);
+                    Cita ct = gtcts.ObtenerCita(dni);
                     if(ct != null){
                         jTextAreaInfoCitaOnline.setText("Introduce el DNI del paciente y pulse en la opción que desee\n\t¡Ya tiene una cita asignada!");
                     }else{

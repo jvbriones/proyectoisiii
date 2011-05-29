@@ -43,7 +43,7 @@ public class GestorCitas {
         CitasBD citasbd = new CitasBD();
 //      PacBD pacientebd = new PacBD();
 
-        if(citasbd.existeCita(Dni)){
+        if(citasbd.ExisteCita(Dni)){
             //Ya existe una cita para este Paciente
             //Mostrar la cita?
             return "Ya existe una cita para este Paciente";
@@ -75,8 +75,9 @@ public class GestorCitas {
      * @param dni, Identificacion del paciente que quiere cancelar la cita
      */
     public void CancelarCita(String dni)throws SQLException{
+
         CitasBD citabd = new CitasBD();
-        citabd.eliminar(this.obtenerCita(dni));
+        citabd.Eliminar(this.ObtenerCita(dni));
     }
 
     //Este metodo no hará falta
@@ -88,14 +89,14 @@ public class GestorCitas {
         Dni=usu.getDNI();
 
         boolean existe;
-        existe=bd_citas.existeCita(Dni);
+        existe=bd_citas.ExisteCita(Dni);
 
         if(!existe) {
             return "No existe Ninguna cita con ese "+Dni;
         }
 
         Cita cita=null;
-        cita=bd_citas.obtenerCita(Dni);
+        cita=bd_citas.ObtenerCita(Dni);
 
         Date fecha = null;
         fecha = cita.getFecha();
@@ -109,7 +110,7 @@ public class GestorCitas {
         // si dice que no, desde la interfaz, se finaliza la operacion.
 
         cita.setEstado(false);
-        bd_citas.almacenar(cita);
+        bd_citas.Almacenar(cita);
 
        return "Cita cancelada";
     }
@@ -120,9 +121,10 @@ public class GestorCitas {
      * @return Objeto 'Cita', si no existe la cita devuelve un objeto 'null'
      */
     public Cita ObtenerCita(String dni) throws SQLException{
+
         CitasBD cita = new CitasBD();
 
-        return cita.obtenerCita(dni);
+        return cita.ObtenerCita(dni);
     }
 
     /* HAY QUE MODIFICARLO

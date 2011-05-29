@@ -19,28 +19,13 @@ public class CitasBD {
     String user="generico";
     String pass="generico";
 
-    /*
+    /* SIN HACER
      * altaCita
      */
-    public String altaCita(Calendar fechaIni, Calendar fechaFin){
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-        Calendar inicio = fechaIni;
-        
+    public String AltaCita(Calendar fechaIni, Calendar fechaFin){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();        
         session.beginTransaction();
-        
-        while(inicio.compareTo(fechaFin) < 0){
-
-
-
-/*            if(inicio.getHours() == 20)
-                inicio.setDate(inicio.getDate() + 1);
-            else
-                inicio.setHours(inicio.getHours()+1);
-        }*/
-
-        return "Yeyo";
-    }
-        return "Yeyo";
+        return "";
 }
 
     /*
@@ -49,7 +34,7 @@ public class CitasBD {
      * @param cita, Objeto Cita a almacenar
      * @post No ofrece información sobre el estado de la operacion
      */
-    public void almacenar(Cita cita){
+    public void Almacenar(Cita cita){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         
         session.beginTransaction();
@@ -57,13 +42,13 @@ public class CitasBD {
         session.getTransaction().commit();
     }
 
-    /*
+    /*  NO FUNCIONA!
      * obtenerCita
      * Obtiene la cita relativa a un usuario dado.
      * @param Dni, Identificación del paciente del que obtener la cita.
      * @return El objeto Cita oportuno o un objeto null.
      */
-    public Cita obtenerCita(String Dni) throws SQLException {
+    public Cita ObtenerCita(String Dni) throws SQLException {
 
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction ();
@@ -73,13 +58,13 @@ public class CitasBD {
         return Ci;
     }
 
-    /*
+    /* SIN HACER
      * actualizar
      * Actualiza una cita existente.
      * @param cita, Objeto cita que es consultado.
      * @post No aporta información sobre la realización de la operación.
      */
-    public void actualizar(Cita cita){
+    public void Actualizar(Cita cita){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
@@ -93,13 +78,13 @@ public class CitasBD {
 
     }
 
-    /*
+    /* NO FUNCIONA
      * eliminar
      * Elimina un objeto Cita de la base de datos.
      * @param ci, Objeto Cita a eliminar.
      * @post No se recibe información del procesado de la operación.
      */
-    public void eliminar(Cita ci){
+    public void Eliminar(Cita ci){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction();
@@ -107,14 +92,14 @@ public class CitasBD {
         session.getTransaction().commit();
     }
 
-    /*
+    /* NO FUNCIONA
      * existeCita
      * Comprueba si existe una cita para un paciente concreto.
      * @param Dni, identificación del paciente a consultar.
      * @return True si existe cita, false en otro caso.
      */
-    public boolean existeCita(String Dni) throws SQLException {
-        Cita cit = obtenerCita(Dni);
+    public boolean ExisteCita(String Dni) throws SQLException {
+        Cita cit = ObtenerCita(Dni);
 
         if (cit != null){
             System.out.print("ExisteCita: Existe la Cita");

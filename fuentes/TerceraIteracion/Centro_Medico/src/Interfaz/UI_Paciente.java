@@ -92,17 +92,17 @@ public class UI_Paciente extends javax.swing.JFrame {
         Cita nueva_cita = null;
         boolean existe;
 
-        existe=cita_bd.existeCita(usu.getDNI());
+        existe=cita_bd.ExisteCita(usu.getDNI());
 
         if(existe){
 
-            nueva_cita = cita_bd.obtenerCita(usu.getDNI());
+            nueva_cita = cita_bd.ObtenerCita(usu.getDNI());
 
-            Calendar calendar = nueva_cita.getFecha();
-            int dia = calendar.get(Calendar.DAY_OF_MONTH);   //dia del mes
-            int mes = calendar.get(Calendar.MONTH);
-            mes=mes+1;//mes, de 0 a 11
-            int anio = calendar.get(Calendar.YEAR);  //año
+            Date fecha = null;
+            int dia = fecha.getDay();
+            int mes = fecha.getMonth();
+            ++mes;
+            int anio = fecha.getYear();  //año
 
             String num_dia= String.valueOf(dia);
             String num_mes= String.valueOf(mes);
@@ -1241,7 +1241,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         // TODO add your handling code here:
         GestorCitas gtcts = new GestorCitas();
         try{
-            if(gtcts.obtenerCita(user.getDNI()) != null){
+            if(gtcts.ObtenerCita(user.getDNI()) != null){
                 JOptionPane.showMessageDialog(null, "Ya tiene una cita asignada", "Alta cita",JOptionPane.WARNING_MESSAGE);
             }else{
                 jPanelAltaCita.setVisible(true);
@@ -1390,21 +1390,21 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         try{
             GestorCitas gtcts = new GestorCitas();
-            Cita ct = gtcts.obtenerCita(user.getDNI());
+            Cita ct = gtcts.ObtenerCita(user.getDNI());
 
             if(ct == null){
                 JOptionPane.showMessageDialog(null, "No tiene ninguna cita concertada","Consultar", JOptionPane.INFORMATION_MESSAGE);
             }else{
                 mostrarPanel("ConsultarCitaOnline");
-                Calendar fechacita = ct.getFecha();
+                Date fechacita = ct.getFecha();
 
-              jTextFieldMinutoCita.setText(String.valueOf(fechacita.get(Calendar.MINUTE)));
-                jTextFieldHoraCita.setText(String.valueOf(fechacita.get(Calendar.HOUR)));
-                jTextFieldDiaCita.setText(String.valueOf(fechacita.get(Calendar.DATE)));
-                jTextFieldMesCita.setText(String.valueOf(fechacita.get(Calendar.MONTH)));
-                jTextFieldAnioCita.setText(String.valueOf(fechacita.get(Calendar.YEAR)));
+              jTextFieldMinutoCita.setText(String.valueOf(fechacita.getMinutes()));
+                jTextFieldHoraCita.setText(String.valueOf(fechacita.getHours()));
+                jTextFieldDiaCita.setText(String.valueOf(fechacita.getDay()));
+                jTextFieldMesCita.setText(String.valueOf(fechacita.getMonth()));
+                jTextFieldAnioCita.setText(String.valueOf(fechacita.getYear()));
 
-                jTextFieldDNIMedico.setText(ct.getDNIMedico());
+                jTextFieldDNIMedico.setText(ct.getPersonalMedico().getDNI());
                 jTextFieldDNIPacienteCita.setText(user.getDNI());
                 jTextFieldDNIPacienteCita.setEditable(false);
                 jTextFieldDNIMedico.setEditable(false);
