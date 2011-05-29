@@ -2477,14 +2477,14 @@ public class UI_Administrador extends javax.swing.JFrame {
              fechaInicio = dateChooserCombo3.getSelectedDate().getTime();
              fechaFin = dateChooserCombo4.getSelectedDate().getTime();
 
-             String tip;
+             String tip="";
 
-             //if ( Casilla Marcada == mañana ) tip="Mañana";
-             //if ( Casilla Marcada == tarde ) tip="Tarde";
-             //if ( Casilla Marcada == noche ) tip="Noche";
+             if (jRadioButtonManiana.isEnabled()) tip="Mañana";
+             else if (jRadioButtonTarde.isEnabled()) tip="Tarde";
+             else if (jRadioButtonNoche.isEnabled()) tip="Noche";
 
               try {
-                exito = gesTur.altaTurno(jTextFieldDNIGestionarTurno.getText(), "Mañana",fechaInicio,fechaFin);
+                exito = gesTur.altaTurno(jTextFieldDNIGestionarTurno.getText(), tip,fechaInicio,fechaFin);
 
                 if(exito){
                     new InformacionExito().setVisible(true);

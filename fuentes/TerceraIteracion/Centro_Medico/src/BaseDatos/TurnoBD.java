@@ -30,8 +30,7 @@ public class TurnoBD {
     String pass="generico";
 
     public boolean existeTurno(String Dni) throws SQLException {
-         //Turno tur = obtener(Dni);
-        Turno tur=null;
+         Turno tur = obtener(Dni);
 
         if (tur != null){
             System.out.print("ExisteTurno: Existe el Turno");
@@ -62,11 +61,13 @@ public class TurnoBD {
             tur.setFechaInicio(ini);
             tur.setFechaFin(fin);
             tur.setDni(Dni);
+            
+            System.out.println(" El turno tiene dni = "+tur.getDni());
 
          Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction();
-        //session.save(tur);
+        session.save(tur);
         session.getTransaction().commit();
 
     }
@@ -79,7 +80,7 @@ public class TurnoBD {
             Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
             session.beginTransaction ();
-            //session.delete (tur);
+            session.delete (tur);
             session.getTransaction().commit();
         
     }

@@ -44,7 +44,7 @@ public class GestorTurnos {
             }
             else{
              
-                turbd.altaTurno(dni,"Mañana",inicio,fin);
+                turbd.altaTurno(dni,tipo,inicio,fin);
                 exito="Se creó un Turno de tipo "+tipo;
                 bien=true;
                 }
