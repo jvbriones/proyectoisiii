@@ -11,9 +11,10 @@
 package CentroMedico;
 
 import java.sql.SQLException;
-import java util.*;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.io.Serializable;
 
 /**
  * @version 1.0	29/05/2011
@@ -46,7 +47,7 @@ public class Enfermedad implements Serializable{
 
 	public String getNombre(){
 
-		return this.ID
+		return this.ID;
 	}
 
 	public String getDescripcion(){
@@ -56,7 +57,8 @@ public class Enfermedad implements Serializable{
 
 	public String getFechaDet(){
 
-		return this.FechaDet;
+            return "";
+		//return this.FechaDet;
 	}
 
 	public String getVolante(){

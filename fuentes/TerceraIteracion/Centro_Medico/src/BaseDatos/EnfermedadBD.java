@@ -1,7 +1,7 @@
 package BaseDatos;
 
 import CentroMedico.Enfermedad;
-imoprt java.sql.*;
+import java.sql.*;
 import org.hibernate.Session;
 
 public class EnfermedadBD{
@@ -13,12 +13,15 @@ public class EnfermedadBD{
 
 	public void Almacenar(Enfermedad enfmd){}
 
-	public Enfermedad Obtener(Integer id){}
+	public Enfermedad Obtener(Integer id){
+
+            return new Enfermedad();
+        }
 
 	public void Actualizar(Enfermedad enfmd){}
 
 	public void Eliminar(Enfermedad enfmd){}
 
-	public Collection ObtenerEnfermedades(String dni){}
+	//public Collection ObtenerEnfermedades(String dni){}
 
 }
