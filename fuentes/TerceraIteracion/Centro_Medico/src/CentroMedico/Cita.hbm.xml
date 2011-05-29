@@ -8,15 +8,17 @@
     </id>
      
     <property name="Fecha">
-        <column name="Fecha" type="date"/>
+        <column name="Fecha" />
     </property>
+	
     <property name="Estado">
-        <column name="Estado" type="string"/>
+        <column name="Estado" />
     </property>
 
      <property name="Tipo">
         <column name="Tipo"/>
     </property>
+	
     <many-to-one class="CentroMedico.PersonalMedico" name="PersonalMedico" column="DNI_PERSONALMEDICO"/>
     <many-to-one class="CentroMedico.Paciente" name="Paciente" column="DNI_PACIENTE"/>
   </class>
