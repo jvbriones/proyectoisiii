@@ -82,11 +82,41 @@ public class Cita implements Serializable{
         return  PersonalMedico;
     }
 
+    public boolean isEstado() {
+        return Estado;
+    }
+
+    public int getId() {
+        return id;
+    }
+
 
     /********* Metodos Asignadores **********/
 
     public void setEstado(boolean Estado ){
         this.Estado=Estado;
     }
+
+    public void setFecha(Date Fecha) {
+        this.Fecha = Fecha;
+    }
+
+    public void setPaciente(Paciente Paciente) {
+        this.Paciente = Paciente;
+    }
+
+    public void setPersonalMedico(PersonalMedico PersonalMedico) {
+        this.PersonalMedico = PersonalMedico;
+    }
+
+    public void setTipo(String Tipo) {
+        this.Tipo = Tipo;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    
 
 }
