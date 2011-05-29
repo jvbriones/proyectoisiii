@@ -24,6 +24,7 @@ import java.util.Calendar.*;
 
 public class Cita implements Serializable{
 
+    private int id;
     private boolean Estado;
     private Date Fecha;
     private String Tipo;
