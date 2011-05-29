@@ -22,27 +22,26 @@ import java.util.*;
 
 
 /**
- * @version     1.1     16/04/2011
+ * @version     1.2     29/05/2011
  * @author      Sub_Equipo2
  */
 
 // Esta clase está sin terminar
+// GestorCitas NO DEBE COMUNICARSE DIRECTAMENTE CON LA CLASE PacienteBD
+// SINO QUE DEBERIA COMUNICARSE CON GestorPacientes, Y ESTE CON PacienteBD
 public class GestorCitas {
 
     public GestorCitas(){}
 
-    // GestorCitas NO DEBE COMUNICARSE DIRECTAMENTE CON LA CLASE PacienteBD
-    // SINO QUE DEBERIA COMUNICARSE CON GestorPacientes, Y ESTE CON PacienteBD
-
-    /*
+    /* FUNCION SIN TERMINAR
      * Alta cita. Crea una nueva cita.
      * @param Dni, identificador del paciente del que se va a crear una cita.
      * @return Mensaje de respuesta con el resultado de la operación.
      */
-    public String alta_cita(String Dni) throws SQLException{
+    public String AltaCita(String Dni) throws SQLException{
 
         CitasBD citasbd = new CitasBD();
-//        PacBD pacientebd = new PacBD();
+//      PacBD pacientebd = new PacBD();
 
         if(citasbd.existeCita(Dni)){
             //Ya existe una cita para este Paciente
@@ -64,16 +63,24 @@ public class GestorCitas {
         return "datos";
     }
 
-    public String alta_cita_online(String Dni) throws SQLException{
-        return "2Pac";
+    /*  FUNCION SIN TERMINAR
+     *  AltaCita
+     */
+    public String AltaCitaOnline(String Dni) throws SQLException{
+        return "";
     }
 
-    public void cancelarCita(String dni)throws SQLException{
+    /*
+     * Cancelar cita
+     * @param dni, Identificacion del paciente que quiere cancelar la cita
+     */
+    public void CancelarCita(String dni)throws SQLException{
         CitasBD citabd = new CitasBD();
         citabd.eliminar(this.obtenerCita(dni));
     }
 
-    public String cancelarCitaOnline(Usuario usu) throws SQLException{
+    //Este metodo no hará falta
+    public String CancelarCitaOnline(Usuario usu) throws SQLException{
 
         CitasBD bd_citas=new CitasBD();
 
@@ -84,19 +91,18 @@ public class GestorCitas {
         existe=bd_citas.existeCita(Dni);
 
         if(!existe) {
-            //this.mostrarErrorCita();
             return "No existe Ninguna cita con ese "+Dni;
         }
 
         Cita cita=null;
         cita=bd_citas.obtenerCita(Dni);
 
-        Calendar calendar = null;
-        calendar = cita.getFecha();
-        int dia = calendar.get(Calendar.DAY_OF_MONTH);   //dia del mes
-        int mes = calendar.get(Calendar.MONTH);
-        mes=mes+1;//mes, de 0 a 11
-        int anio = calendar.get(Calendar.YEAR);  //año
+        Date fecha = null;
+        fecha = cita.getFecha();
+        int dia = fecha.getDay();
+        int mes = fecha.getMonth();
+        ++mes;//mes, de 0 a 11
+        int anio = fecha.getYear();
 
         // desde la interfaz se manda un mensaje por pantalla para eliminar la cita
         // si dice que si, se viene aquí de nuevo, y se hace las operaciones del DS
@@ -105,60 +111,30 @@ public class GestorCitas {
         cita.setEstado(false);
         bd_citas.almacenar(cita);
 
-       return " cita cancelada";
+       return "Cita cancelada";
     }
 
-    public Cita obtenerCita(String dni) throws SQLException{
+    /*
+     * Obtener Cita
+     * @param dni, Identificacion del paciente del que se obtiene la cita.
+     * @return Objeto 'Cita', si no existe la cita devuelve un objeto 'null'
+     */
+    public Cita ObtenerCita(String dni) throws SQLException{
         CitasBD cita = new CitasBD();
 
         return cita.obtenerCita(dni);
     }
 
-    public boolean existeCita(Date fecha){
+    /* HAY QUE MODIFICARLO
+     * ExisteCita
+     */
+    public boolean ExisteCita(Date fecha){
         return true;
-
     }
 
-//    public void setFecha(fecha){
-//    }
-
-//    public String alta_citaonline(){
-//    }
-
-
-
-    /*
-    public String cancelarCita(String Dni) throws SQLException{
-
-        citasBD bd_citas=new citasBD();
-
-        boolean existe;
-        existe=bd_citas.existeCita(Dni);
-
-        if(!existe) {
-            this.mostrarErrorCita();
-            return "No existe Ninguna cita con ese "+Dni;
-        }
-
-        Cita cita=new Cita();
-        cita=bd_citas.obtenerCita(Dni);
-
-        Date fecha=new Date();
-        fecha=cita.getFecha();
-
-        //no se como se hace
-
-        cita.setEstado(False);
-        bd_citas.almacenarCita(cita);
-        //falta
-
-    }
-
-//    public String mostrarErrorCita(){
-//    }
 
     public String ConsultarCita(String Dni) throws SQLException{
-
+    /*
         citasBD bd_citas=new citasBD();
         PacBD bd_pac=new PacBD();
 
@@ -188,14 +164,15 @@ public class GestorCitas {
 
         datos="Para este "+Dni+" no hay una cita con el Medico "+DniM+" y Fecha "+fecha;
         return datos;
-
+        */
+        return "";
     }
 
 //    public String MostrarErrorPaciente(){
 //    }
 
     public String ConsultarCitaOnline() throws SQLException{
-
+    /*
         citasBD bd_citas=new citasBD();
         PacBD bd_pac=new PacBD();
 
@@ -229,14 +206,8 @@ public class GestorCitas {
 
         datos="Para este "+Dni+" no hay una cita con el Medico "+DniM+" y Fecha "+fecha;
         return datos;
-
+        */
+        return "";
     }
-
-//    public boolean ModificarCita(Dni){
-//    }
-
-//    public boolean ModificarCitaOnline(){
-//    }
-
-    //public Arraylist EstadisticasCitas(fecha_inicio,fecha_fin){}*/
+    
 }

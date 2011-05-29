@@ -16,56 +16,52 @@ import java.io.Serializable;
 import java.util.Calendar.*;
 
 /**
- * @version     1.1     16/04/2011
+ * @version     1.2     27//2011
  * @author      Sub_Equipo2
  * modificado por Juan Carlos
+ * modificado por Juan Cabrera
  */
 
 public class Cita implements Serializable{
 
     private boolean Estado;
-    //private Date Fecha; Utilizamos Calendar
-    private Calendar Fecha;
+    private Date Fecha;
     private String Tipo;
-
     private Paciente Paciente;
     private PersonalMedico PersonalMedico;
 
-    /* Atributos que faltan*/
-    private String DniPaciente;
-    private String DniMedico;
 
-    /*
-     *
-     * Constructores
-     *
-     */
-    //NO tiene sentido una cita que tenga solo fecha!
-    /*public Cita() {
-        this.Fecha = new Date(0);
-    }*/
-
-    //Que puto sentido tiene este constructor?
-    public Cita(Calendar Fecha, boolean Estado, String Tipo){
-        this.Fecha=Fecha;
-        this.Estado=Estado;
-        this.Tipo=Tipo;
-    }
-
-    /* Un constructor de verdad */
-    public Cita(boolean estado, Calendar fecha, String tipo, String dnipac, String dnimed){
+    /********** Constructores **********/
+    public Cita(boolean estado, Date fecha, String tipo, Paciente paciente, PersonalMedico pmedico){
         
         this.Estado=estado;
         this.Fecha=fecha;
         this.Tipo=tipo;
-        this.DniPaciente = dnipac;
-        this.DniMedico = dnimed;
+        this.Paciente = paciente;
+        this.PersonalMedico = pmedico;
 
     }
-    
+
+    public Cita(Date fecha, Paciente paciente, PersonalMedico pmedico){
+
+        this.Estado = true;
+        this.Fecha = fecha;
+        this.Paciente = paciente;
+        this.PersonalMedico = pmedico;
+        if(Fecha.getHours() < 16){
+            this.Tipo = "Mañana";
+        } else {
+            if(Fecha.getHours() < 24)
+                this.Tipo = "Tarde";
+            else
+                this.Tipo = "Noche";
+        }
+    }
+
+
     /********** Metodos Consultores **********/
      
-    public Calendar getFecha(){
+    public Date getFecha(){
         return Fecha;
     }
     
@@ -77,15 +73,6 @@ public class Cita implements Serializable{
         return Tipo;
     }
 
-    public String getDNIPaciente(){
-        return DniPaciente;
-    }
-
-    public String getDNIMedico(){
-        return this.DniMedico;
-    }
-
-    /* Estos metodos son bazofia */
     public Paciente getPaciente(){
         return Paciente;
     }
@@ -94,25 +81,11 @@ public class Cita implements Serializable{
         return  PersonalMedico;
     }
 
-    /********* Metodos Asignadores **********/
 
-    public void setFecha(Calendar Fecha){
-        this.Fecha=Fecha;
-    }
+    /********* Metodos Asignadores **********/
 
     public void setEstado(boolean Estado ){
         this.Estado=Estado;
     }
 
-    public void setTipo(String Tipo){
-        this.Tipo=Tipo;
-    }
-
-    public void setPaciente(Paciente Paciente){
-        this.Paciente=Paciente;
-    }
-
-    public void setPersonalMedico( PersonalMedico PersonalMedico){
-        this.PersonalMedico=PersonalMedico;
-    }
 }
