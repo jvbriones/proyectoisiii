@@ -3,8 +3,8 @@
 <hibernate-mapping>
   <class name="CentroMedico.Cita">
            
-    <id name="id" column="id" unsaved-value="null">
-      <generator class="increment"/>
+    <id name="id" column="id" >
+      <generator class="assigned"/>
     </id>
      
     <property name="Fecha">
