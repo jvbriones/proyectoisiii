@@ -9,9 +9,12 @@
 package BaseDatos;
 
 import CentroMedico.Cita;
+import CentroMedico.Paciente;
+import BaseDatos.PacBD;
 import java.sql.*;
 import org.hibernate.*;
 import java.util.*;
+import java.util.Date;
 
 public class CitasBD {
     String IpDelServidor="localhost";
@@ -48,13 +51,18 @@ public class CitasBD {
      * @param Dni, Identificación del paciente del que obtener la cita.
      * @return El objeto Cita oportuno o un objeto null.
      */
-    public Cita ObtenerCita(String Dni) throws SQLException {
+    public Cita ObtenerCita(Paciente pac) throws SQLException {
 
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction ();
-        Cita Ci = (Cita) session.get(Cita.class, Dni);        /*****ESTO PETA******/
-        //Calendar hora = Calendar.getInstance();                /* PARCHE */
-        //Cita Ci = new Cita(true, hora, "Tarde", Dni, "33333333A"); /* PARCHE */
+        //Cita Ci = (Cita) session.get(Cita.class, pac);        /*****ESTO PETA******/
+
+        Date hora = new Date();           /* PARCHE */
+
+        //PacBD pac = new PacBD();
+        personalBD per = new personalBD();
+        Cita Ci = new Cita(true, hora, "Tarde", pac, per.obtener("33333333A")); /* PARCHE */
+
         return Ci;
     }
 
@@ -98,8 +106,8 @@ public class CitasBD {
      * @param Dni, identificación del paciente a consultar.
      * @return True si existe cita, false en otro caso.
      */
-    public boolean ExisteCita(String Dni) throws SQLException {
-        Cita cit = ObtenerCita(Dni);
+    public boolean ExisteCita(Paciente pac) throws SQLException {
+        Cita cit = ObtenerCita(pac);
 
         if (cit != null){
             System.out.print("ExisteCita: Existe la Cita");

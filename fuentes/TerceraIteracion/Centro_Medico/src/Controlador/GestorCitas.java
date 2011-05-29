@@ -11,8 +11,6 @@
 
 package Controlador;
 
-import BaseDatos.PacBD;
-import CentroMedico.Paciente;
 import BaseDatos.CitasBD;
 import java.sql.SQLException;
 import CentroMedico.Usuario;
@@ -33,15 +31,37 @@ public class GestorCitas {
 
     public GestorCitas(){}
 
-    /* FUNCION SIN TERMINAR
-     * Alta cita. Crea una nueva cita.
-     * @param Dni, identificador del paciente del que se va a crear una cita.
-     * @return Mensaje de respuesta con el resultado de la operación.
-     */
-    public String AltaCita(String Dni) throws SQLException{
 
+    /*
+     * Obtener Cita ~ ConsultarCita
+     * @param dni, Identificacion del paciente del que se obtiene la cita.
+     * @return Objeto 'Cita', si no existe la cita devuelve un objeto 'null'
+     */
+    public Cita ObtenerCita(String dni) throws SQLException{
+
+        GestorPacientes gstpac = new GestorPacientes();
+        CitasBD cita = new CitasBD();
+
+        return cita.ObtenerCita(gstpac.obtenerPaciente(dni));
+    }
+
+
+    /*
+     * Cancelar cita ~~ Cancelar cita online
+     * @param dni, Identificacion del paciente que quiere cancelar la cita
+     */
+    public void CancelarCita(String dni)throws SQLException{
+
+        CitasBD citabd = new CitasBD();
+        citabd.Eliminar(this.ObtenerCita(dni));
+    }
+
+    /** DE AQUI HACIA ABAJO NO SE VA A IMPLEMENTAR NADA **/
+
+    /* FUNCION SIN TERMINAR */
+    public String AltaCita(String Dni) throws SQLException{
+    /*
         CitasBD citasbd = new CitasBD();
-//      PacBD pacientebd = new PacBD();
 
         if(citasbd.ExisteCita(Dni)){
             //Ya existe una cita para este Paciente
@@ -59,30 +79,18 @@ public class GestorCitas {
             Paciente paciente = pacientebd.obtener(Dni);
         }
 
-        
+        */
         return "datos";
     }
 
-    /*  FUNCION SIN TERMINAR
-     *  AltaCita
-     */
+    /*  FUNCION SIN TERMINAR */
     public String AltaCitaOnline(String Dni) throws SQLException{
         return "";
     }
 
-    /*
-     * Cancelar cita
-     * @param dni, Identificacion del paciente que quiere cancelar la cita
-     */
-    public void CancelarCita(String dni)throws SQLException{
-
-        CitasBD citabd = new CitasBD();
-        citabd.Eliminar(this.ObtenerCita(dni));
-    }
-
     //Este metodo no hará falta
     public String CancelarCitaOnline(Usuario usu) throws SQLException{
-
+    /*
         CitasBD bd_citas=new CitasBD();
 
         String Dni=new String();
@@ -112,29 +120,16 @@ public class GestorCitas {
         cita.setEstado(false);
         bd_citas.Almacenar(cita);
 
-       return "Cita cancelada";
+       return "Cita cancelada";*/
+        return "";
     }
 
-    /*
-     * Obtener Cita
-     * @param dni, Identificacion del paciente del que se obtiene la cita.
-     * @return Objeto 'Cita', si no existe la cita devuelve un objeto 'null'
-     */
-    public Cita ObtenerCita(String dni) throws SQLException{
-
-        CitasBD cita = new CitasBD();
-
-        return cita.ObtenerCita(dni);
-    }
-
-    /* HAY QUE MODIFICARLO
-     * ExisteCita
-     */
+    /* HAY QUE MODIFICARLO */
     public boolean ExisteCita(Date fecha){
         return true;
     }
 
-
+    // SI tenemos ObtenerCita para qué este método?
     public String ConsultarCita(String Dni) throws SQLException{
     /*
         citasBD bd_citas=new citasBD();
@@ -169,9 +164,6 @@ public class GestorCitas {
         */
         return "";
     }
-
-//    public String MostrarErrorPaciente(){
-//    }
 
     public String ConsultarCitaOnline() throws SQLException{
     /*

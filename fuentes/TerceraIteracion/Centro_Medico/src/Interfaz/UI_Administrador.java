@@ -3299,7 +3299,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                         /**Mostramos el campo DNI de médico*/
                         jLabelDNIGestionarCitaMedico.setVisible(true);
                         jTextFieldDNIGestionarCitaMedico.setVisible(true);
-                        jTextFieldDNIGestionarCitaMedico.setText(ct.getPersonalMedico().getDNI());
+                        jTextFieldDNIGestionarCitaMedico.setText("Inventado");
                         jTextFieldDNIGestionarCitaMedico.setEditable(false);
                         jTextFieldDNIGestionarCitaPaciente.setEditable(false);
 
@@ -3406,16 +3406,12 @@ public class UI_Administrador extends javax.swing.JFrame {
 
     private void jButtonCancelarCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonCancelarCitaMouseClicked
         // TODO add your handling code here:
-        String dni = jTextFieldDNIGestionarCitaPaciente.getText();
-        if(dni.isEmpty()){
-            jTextAreaInfoCitaOnline.setText("\tNo existe ninguna cita");
-        }
-
-        if(1 != JOptionPane.showOptionDialog(null, "¿Cancelar la cita?", "Confirmación", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE, null, null, null)){
+       if(1 != JOptionPane.showOptionDialog(null, "¿Cancelar la cita?", "Confirmación", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE, null, null, null)){
             
-            GestorCitas gtcts = new GestorCitas();
+            //GestorCitas gtcts = new GestorCitas();
             //try{
                 //gtcts.cancelarCita(dni);
+                limpiarFormulario("GestionarCita");
                 JOptionPane.showMessageDialog(null, "Ha cancelado la cita", "Salir",JOptionPane.INFORMATION_MESSAGE);
                 mostrarPanel("Principal");
             /*}catch(SQLException ex){
@@ -3629,12 +3625,14 @@ public class UI_Administrador extends javax.swing.JFrame {
         }
 
         if(formulario.equals("GestionarCita")){
-            jTextFieldDNIGestionarCitaMedico.setText(null);
-            jTextFieldDiaCita.setText(diaActual);
-            jTextFieldMesCita.setText(mesActual);
-            jTextFieldAnioCita.setText(anioActual);
-            jTextFieldHoraCita.setText(horaActual);
-            jTextFieldMinutoCita.setText(minutoActual);
+        
+            jTextFieldDNIGestionarCitaMedico.setText("");
+            jTextFieldDNIGestionarCitaPaciente.setText("");
+            jTextFieldMinutoCita.setText("");
+            jTextFieldHoraCita.setText("");
+            jTextFieldDiaCita.setText("");
+            jTextFieldMesCita.setText("");
+            jTextFieldAnioCita.setText("");
         }
 
         if(formulario.equals("EstadCitas")){
@@ -3789,6 +3787,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             jPanelGestionarTurno.setBorder(null);
 
         }
+
 
         if(panel.equals("GestionarCitaOnline")){
 

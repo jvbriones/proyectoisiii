@@ -117,6 +117,4 @@ public class Cita implements Serializable{
         this.id = id;
     }
 
-    
-
 }

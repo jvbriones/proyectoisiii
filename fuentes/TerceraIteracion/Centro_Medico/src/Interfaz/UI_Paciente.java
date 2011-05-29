@@ -92,11 +92,11 @@ public class UI_Paciente extends javax.swing.JFrame {
         Cita nueva_cita = null;
         boolean existe;
 
-        existe=cita_bd.ExisteCita(usu.getDNI());
+        Paciente pac = (Paciente) usu;
+        existe=cita_bd.ExisteCita(pac);
 
         if(existe){
-
-            nueva_cita = cita_bd.ObtenerCita(usu.getDNI());
+            nueva_cita = cita_bd.ObtenerCita(pac);
 
             Date fecha = null;
             int dia = fecha.getDay();
@@ -1398,17 +1398,17 @@ public class UI_Paciente extends javax.swing.JFrame {
                 mostrarPanel("ConsultarCitaOnline");
                 Date fechacita = ct.getFecha();
 
-              jTextFieldMinutoCita.setText(String.valueOf(fechacita.getMinutes()));
+                jTextFieldMinutoCita.setText(String.valueOf(fechacita.getMinutes()));
                 jTextFieldHoraCita.setText(String.valueOf(fechacita.getHours()));
                 jTextFieldDiaCita.setText(String.valueOf(fechacita.getDay()));
                 jTextFieldMesCita.setText(String.valueOf(fechacita.getMonth()));
                 jTextFieldAnioCita.setText(String.valueOf(fechacita.getYear()));
 
-                jTextFieldDNIMedico.setText(ct.getPersonalMedico().getDNI());
+                jTextFieldDNIMedico.setText("inventado");
+                System.out.println(user.getDNI());
                 jTextFieldDNIPacienteCita.setText(user.getDNI());
                 jTextFieldDNIPacienteCita.setEditable(false);
                 jTextFieldDNIMedico.setEditable(false);
-                jTextFieldAnioCita.setEditable(false);
             }
         }catch(SQLException ex){
             System.err.println(ex.getMessage());
@@ -1575,7 +1575,8 @@ public class UI_Paciente extends javax.swing.JFrame {
         }
 
     }
-     private boolean compruebaFormulario(String formulario){
+
+    private boolean compruebaFormulario(String formulario){
 
         if(formulario.equals("GestionarPaciente")){
 
@@ -1732,6 +1733,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelGestionarCitaOnline.setVisible(false);
             jPanelConsultarCitaOnline.setVisible(true);
 
+            jTextFieldAnioCita.setEditable(false);
 
             /**Activamos el marco*/
             jPanelPrincipal.setBorder(null);
