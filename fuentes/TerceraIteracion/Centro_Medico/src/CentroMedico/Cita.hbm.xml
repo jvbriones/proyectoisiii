@@ -15,7 +15,7 @@
     </property>
 
      <property name="Tipo">
-        <column name="Tipo" type="string"/>
+        <column name="Tipo"/>
     </property>
     <many-to-one class="CentroMedico.PersonalMedico" name="PersonalMedico" column="DNI_PERSONALMEDICO"/>
     <many-to-one class="CentroMedico.Paciente" name="Paciente" column="DNI_PACIENTE"/>
