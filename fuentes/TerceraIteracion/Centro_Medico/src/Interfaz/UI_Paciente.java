@@ -28,8 +28,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 
 /**
- *
  * @author Nicolas_Sanchez
+ * @author Juan_Cabrera
  */
 public class UI_Paciente extends javax.swing.JFrame {
 
