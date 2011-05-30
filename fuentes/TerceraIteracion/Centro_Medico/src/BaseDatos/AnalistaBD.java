@@ -1,5 +1,6 @@
 package BaseDatos;
 import CentroMedico.Analista;
+import java.sql.SQLException;
 import org.hibernate.Session;
 import java.util.Set;
 import java.util.HashSet;
@@ -40,7 +41,7 @@ public class AnalistaBD {
         session.beginTransaction ();
 
         Analista analista = (Analista) session.get(Analista.class, DNI);
-        //session.getTransaction().commit();
+        session.getTransaction().commit();
 
         return analista;
     }
@@ -57,6 +58,23 @@ public class AnalistaBD {
         if(analista!=null) return true;
         else return false;
     }
+
+    /*
+     * existePaciente
+     */
+    public boolean existeAnalista(String Dni) throws SQLException {
+        Analista analista = obtener(Dni);
+
+        if (analista != null){
+            System.out.print("existeAnalista: Existe el analista");
+           return true;
+       }
+       else{
+           System.out.print( "existeAnalista: No existe el analista\n");
+           return false;
+       }
+    }
+
 
     public Set<Analista> obtenerListaAnalistas(){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();

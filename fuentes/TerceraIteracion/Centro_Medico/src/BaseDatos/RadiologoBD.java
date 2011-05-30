@@ -41,7 +41,7 @@ public class RadiologoBD {
         session.beginTransaction ();
 
         Radiologo radiologo = (Radiologo) session.get(Radiologo.class, DNI);
-        //session.getTransaction().commit();
+        session.getTransaction().commit();
 
         return radiologo;
     }

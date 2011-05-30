@@ -14,8 +14,6 @@ package BaseDatos;
 
 import CentroMedico.Turno;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Date;
 import org.hibernate.*;
 
 /**
@@ -23,12 +21,6 @@ import org.hibernate.*;
  * @author      Sub_Equipo2
  */
 public class TurnoBD {
-
-    String IpDelServidor="localhost";
-    String NombreDB="CentroMedico";
-    String user="generico";
-    String pass="generico";
-
     public boolean existeTurno(String Dni) throws SQLException {
          Turno tur = obtener(Dni);
 
@@ -42,7 +34,7 @@ public class TurnoBD {
        }
     }
 
-    public void altaTurno(String Dni,String Tipo,Date ini,Date fin) {
+/*    public void altaTurno(String Dni,String Tipo,Date ini,Date fin) {
 
         Turno tur=new Turno();
 
@@ -71,31 +63,32 @@ public class TurnoBD {
         session.getTransaction().commit();
 
     }
+*/
 
-    public void borraTurno(String Dni) throws SQLException {
+    public void almacenar(Turno Turno){
 
-             Turno tur=obtener(Dni);
-
-
-            Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-
-            session.beginTransaction ();
-            session.delete (tur);
-            session.getTransaction().commit();
-        
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session.beginTransaction ();
+        session.save (Turno);
+        session.getTransaction().commit();
     }
-    
- 
+
+    public void eliminar (Turno Turno){
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+        session.delete( Turno );
+        session.getTransaction().commit();
+    }
 
      public Turno obtener(String Dni) throws SQLException{
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction();
  
-       Turno tur = (Turno) session.get(Turno.class, Dni);
+        Turno tur = (Turno) session.get(Turno.class, Dni);
+        session.getTransaction().commit();
         return tur;
     }
-
-
 
     public void actualizar (Turno turno){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();

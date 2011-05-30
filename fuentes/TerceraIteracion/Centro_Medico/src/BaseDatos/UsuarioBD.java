@@ -10,12 +10,8 @@ import java.sql.*;
  *  Lo ideal sería que al final de la iteración 3 todo el proyecto fuese integrado con las nuevas funciones, permitiendo el borrado de las antiguas.
  */
 public class UsuarioBD {
-    String IpDelServidor="localhost";
-    String NombreDB="CentroMedico";
-    String user="generico";
-    String pass="generico";
 
-    public boolean validacion(String Dni, String Pass) throws SQLException {
+/*    public boolean validacion(String Dni, String Pass) throws SQLException {
 
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction ();
@@ -25,35 +21,7 @@ public class UsuarioBD {
         else return false;
 
     }
-
-    public Usuario obtenerUsuario(String Dni) throws SQLException {
-
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-        session.beginTransaction ();
-        Usuario User = (Usuario) session.get(Usuario.class, Dni);
-        return User;
-
-    }
-
-    public Usuario obtenerUsuarioNombre(String nombre) throws SQLException {
-
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-        session.beginTransaction ();
-        Usuario User = (Usuario) session.get(Usuario.class, nombre);
-        return User;
-
-
-    }
-
-    public void almacenarUsuario(Usuario user) {
-
-     Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-        session.beginTransaction ();
-        session.save (user);
-        session.getTransaction().commit();
-
-    }
-
+*/
     public boolean existeUsuario(String Dni) throws SQLException {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction ();
@@ -64,12 +32,13 @@ public class UsuarioBD {
 
     }
 
-    public Usuario obtener(String Dni) throws SQLException{
+    public Usuario obtener(String Dni){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
         Usuario User = (Usuario) session.get(Usuario.class, Dni);
-        return User;
+        session.getTransaction().commit();
+       return User;
     }
     //public Usuario obtenerUsuarioNombre(String nombre) throws SQLException {}
 
@@ -86,7 +55,7 @@ public class UsuarioBD {
 
         session.beginTransaction ();
         session.update (User);
-       // session.getTransaction().commit();
+        session.getTransaction().commit();
     }
 
     public void eliminar(Usuario User){
