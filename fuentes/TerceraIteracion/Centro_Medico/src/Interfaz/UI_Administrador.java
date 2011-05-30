@@ -3431,8 +3431,10 @@ public class UI_Administrador extends javax.swing.JFrame {
                     System.out.println(ex.getMessage());
                 }
             }else{
-                mostrarPanel("GestionarPaciente");
-                jTextFieldDNIPaciente.setText(dni);
+                if(1 != JOptionPane.showOptionDialog(null, "¿Agregar nuevo paciente?", "No existe paciente", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null)){
+                    mostrarPanel("GestionarPaciente");
+                    jTextFieldDNIPaciente.setText(dni);
+                }
             }
         }
 }//GEN-LAST:event_jButtonAltaCitaMouseClicked
