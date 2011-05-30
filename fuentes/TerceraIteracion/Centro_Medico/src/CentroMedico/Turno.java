@@ -87,4 +87,14 @@ public class Turno implements Serializable{
     public void setTipo(String Tipo){
         this.Tipo=Tipo;
     }
+
+    public void actualizar(String dni,String tipo, Date fechainicio, Date fechafin) {
+  
+        this.Tipo=tipo;
+        this.dni=dni;
+        this.fechaInicio=fechainicio;
+        this.fechaFin=fechafin;
+        
+        
+    }
 }

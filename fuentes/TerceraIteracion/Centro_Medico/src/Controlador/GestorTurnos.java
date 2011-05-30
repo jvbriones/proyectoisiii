@@ -31,19 +31,27 @@ public class GestorTurnos {
         // MIguel.  Tipo es " mañana" "tarde " o "noche"
 
         String exito=new String();
+        personalBD personal= new personalBD();
+        
         TurnoBD turbd = new TurnoBD();
         boolean bien=false;
 
         boolean existe_turno=false;
+        boolean existe_personal=false;
 
           existe_turno=turbd.existeTurno(dni);
+          existe_personal=personal.existePersonal(dni);
+          
 
-            if ( existe_turno){
+            if (existe_turno || !existe_personal){
                 bien=false;
                 exito="Ya existe un Turno del tipo "+tipo;
+                
             }
-            else{
              
+           else{
+             
+                
                 turbd.altaTurno(dni,tipo,inicio,fin);
                 exito="Se creó un Turno de tipo "+tipo;
                 bien=true;

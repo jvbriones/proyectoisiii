@@ -146,6 +146,10 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabelErrorGestionarTurno = new javax.swing.JLabel();
         dateChooserCombo3 = new datechooser.beans.DateChooserCombo();
         dateChooserCombo4 = new datechooser.beans.DateChooserCombo();
+        fechainiciomostrar1 = new javax.swing.JTextField();
+        fechainiciomostrar2 = new javax.swing.JTextField();
+        fechainiciomostrar3 = new javax.swing.JTextField();
+        jLabelFechaInicioTurno1 = new javax.swing.JLabel();
         jPanelGestionarPersonal = new javax.swing.JPanel();
         jTextFieldTelefonoPersonal = new javax.swing.JTextField();
         jLabelTelefonoPersonal = new javax.swing.JLabel();
@@ -515,6 +519,11 @@ public class UI_Administrador extends javax.swing.JFrame {
                 jButtonGestionarTurnoMouseClicked(evt);
             }
         });
+        jButtonGestionarTurno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGestionarTurnoActionPerformed(evt);
+            }
+        });
 
         jLabelGestionarTurno1.setText("Gestionar Turno");
 
@@ -696,7 +705,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabelFechaFinTurno.setText("Fecha fin");
         jPanelGestionarTurno.add(jLabelFechaFinTurno);
-        jLabelFechaFinTurno.setBounds(390, 300, 74, 14);
+        jLabelFechaFinTurno.setBounds(390, 290, 74, 14);
 
         jLabelTurnoTrabajo.setText("Turno de trabajo");
         jPanelGestionarTurno.add(jLabelTurnoTrabajo);
@@ -719,7 +728,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarTurno.add(jRadioButtonNoche);
         jRadioButtonNoche.setBounds(600, 380, 150, 23);
 
-        jButtonBajaTurno.setText("Baja");
+        jButtonBajaTurno.setText("Modificar");
         jButtonBajaTurno.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonBajaTurnoMouseClicked(evt);
@@ -750,6 +759,16 @@ public class UI_Administrador extends javax.swing.JFrame {
         }
         jPanelGestionarTurno.add(dateChooserCombo4);
         dateChooserCombo4.setBounds(390, 330, 155, 20);
+        jPanelGestionarTurno.add(fechainiciomostrar1);
+        fechainiciomostrar1.setBounds(140, 320, 160, 20);
+        jPanelGestionarTurno.add(fechainiciomostrar2);
+        fechainiciomostrar2.setBounds(390, 320, 160, 20);
+        jPanelGestionarTurno.add(fechainiciomostrar3);
+        fechainiciomostrar3.setBounds(140, 390, 160, 20);
+
+        jLabelFechaInicioTurno1.setText("Tipo");
+        jPanelGestionarTurno.add(jLabelFechaInicioTurno1);
+        jLabelFechaInicioTurno1.setBounds(140, 370, 20, 14);
 
         jPanelGestionarTurno.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelGestionarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -1430,7 +1449,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabelDNIGestionarCita.setBounds(160, 230, 90, 14);
 
         jLabelGestionarPaciente5.setBackground(java.awt.Color.white);
-        jLabelGestionarPaciente5.setFont(new java.awt.Font("Lucida Grande", 1, 48)); // NOI18N
+        jLabelGestionarPaciente5.setFont(new java.awt.Font("Lucida Grande", 1, 48));
         jLabelGestionarPaciente5.setText("Gestionar Cita");
         jPanelGestionarCita.add(jLabelGestionarPaciente5);
         jLabelGestionarPaciente5.setBounds(260, 20, 340, 62);
@@ -1875,7 +1894,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabel3.setText("___________________________________________________________________");
         jPanelGestionarPaciente.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 59, -1, -1));
 
-        jLabelGestionarPaciente4.setFont(new java.awt.Font("Lucida Grande", 1, 48));
+        jLabelGestionarPaciente4.setFont(new java.awt.Font("Lucida Grande", 1, 48)); // NOI18N
         jLabelGestionarPaciente4.setText("Gestionar Paciente");
         jPanelGestionarPaciente.add(jLabelGestionarPaciente4, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 20, -1, -1));
 
@@ -1977,7 +1996,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarPaciente.add(jLabelEmailPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(509, 172, -1, -1));
         jPanelGestionarPaciente.add(jTextFieldDireccionPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 192, 370, -1));
 
-        jLabelInfoFotoPaciente.setFont(new java.awt.Font("Lucida Grande", 0, 10));
+        jLabelInfoFotoPaciente.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
         jLabelInfoFotoPaciente.setText("Tamaño máx 150x150 píxeles");
         jPanelGestionarPaciente.add(jLabelInfoFotoPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 370, 150, 50));
 
@@ -2457,16 +2476,54 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jScrollPane3.setVisible(false);
         jScrollPane4.setVisible(true);
-        jButtonGuardarTurno.setVisible(true);
+        jButtonGuardarTurno.setVisible(false);
         jButtonAltaTurno.setVisible(false);
         jTextAreaInfoConsultaTurno.setVisible(false);
         jTextAreaInfoTurno.setVisible(true);
         jButtonBajaTurno.setVisible(true);
+        
+        dateChooserCombo3.setVisible(false);
+        dateChooserCombo4.setVisible(false);
+        
+        
+        fechainiciomostrar1.setVisible(true);
+        fechainiciomostrar2.setVisible(true);
+        fechainiciomostrar3.setVisible(true);
+        
+        jLabelFechaInicioTurno1.setVisible(true);
+        jLabelTurnoTrabajo.setVisible(false);
+        jRadioButtonManiana.setVisible(false);
+        jRadioButtonTarde.setVisible(false);
+        jRadioButtonNoche.setVisible(false);
+        
+        
+        TurnoBD turbd= new TurnoBD();
+        Turno turno;
+        try {
+            turno = turbd.obtener(jTextFieldDNIGestionarTurno.getText());
+            
+            
+            if ( turno !=null){
+        fechainiciomostrar1.setText(turno.getfechaInicio().toString());
+        fechainiciomostrar2.setText(turno.getfechaFin().toString());
+        fechainiciomostrar3.setText(turno.getTipo());
+        
+            }
+           // else  new InformacionError().setVisible(true);
+            
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    
+        
     }//GEN-LAST:event_jButtonConsultarTurnoMouseClicked
 
     private void jButtonAltaTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAltaTurnoMouseClicked
         // TODO add your handling code here:
 
+       
         if(compruebaFormulario("GestionarTurno")){
 
            GestorTurnos gesTur = new GestorTurnos();
@@ -2479,9 +2536,9 @@ public class UI_Administrador extends javax.swing.JFrame {
 
              String tip="";
 
-             if (jRadioButtonManiana.isEnabled()) tip="Mañana";
-             else if (jRadioButtonTarde.isEnabled()) tip="Tarde";
-             else if (jRadioButtonNoche.isEnabled()) tip="Noche";
+             if (jRadioButtonManiana.isSelected()) tip="Mañana";
+             if (jRadioButtonTarde.isSelected()) tip="Tarde";
+             if (jRadioButtonNoche.isSelected()) tip="Noche";
 
               try {
                 exito = gesTur.altaTurno(jTextFieldDNIGestionarTurno.getText(), tip,fechaInicio,fechaFin);
@@ -2507,11 +2564,6 @@ public class UI_Administrador extends javax.swing.JFrame {
 
     private void jButtonGuardarTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarTurnoMouseClicked
         // TODO add your handling code here:
-
-        if(!compruebaFormulario("GestionarTurno"))
-             new InformacionExito().setVisible(true);
-        else
-            jLabelErrorGestionarTurno.setVisible(true);
     }//GEN-LAST:event_jButtonGuardarTurnoMouseClicked
 
     private void jButtonLimpiarTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonLimpiarTurnoMouseClicked
@@ -2587,6 +2639,8 @@ public class UI_Administrador extends javax.swing.JFrame {
         mostrarPanel("EstadPersFecha");
     }//GEN-LAST:event_jButtonEstadPersFechaMouseClicked
 
+    
+    
     private void jButtonMenosMesEstadCitasInicialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMenosMesEstadCitasInicialMouseClicked
         // TODO add your handling code here:
 
@@ -2861,7 +2915,23 @@ public class UI_Administrador extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButtonTardeActionPerformed
 
     private void jButtonBajaTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonBajaTurnoMouseClicked
-        // TODO add your handling code here:
+      
+        
+        TurnoBD turnobd=new TurnoBD();
+        try {
+          
+        Turno turno=turnobd.obtener(jTextFieldDNIGestionarTurno.getText());
+        turno.actualizar(jTextFieldDNIGestionarTurno.getText(),fechainiciomostrar3.getText(),null,null);
+        turnobd.actualizar(turno);
+        
+        
+       
+        } catch (SQLException ex) {
+            Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+         
+        
     }//GEN-LAST:event_jButtonBajaTurnoMouseClicked
 
     private void jTextFieldEmailPacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldEmailPacienteKeyTyped
@@ -3424,6 +3494,10 @@ public class UI_Administrador extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonConsultarPacienteActionPerformed
 
+    private void jButtonGestionarTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGestionarTurnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonGestionarTurnoActionPerformed
+
 
     /*Comprueba que la fecha introducida es correcta
      * 
@@ -3925,9 +3999,15 @@ public class UI_Administrador extends javax.swing.JFrame {
             /**Hacemos visible el botón jLabelIconoInicio*/
             jLabelInicio.setVisible(true);
             jLabelIconoInicio.setVisible(true);
-            jButtonBajaTurno.setVisible(false);
-
-            /**Hacemos visible el panel seleccionado*/
+            jButtonBajaTurno.setVisible(true);
+            
+            fechainiciomostrar1.setVisible(false);
+             fechainiciomostrar2.setVisible(false);
+              fechainiciomostrar3.setVisible(false);
+              
+              jButtonBajaTurno.setVisible(false);
+              
+              jLabelFechaInicioTurno1.setVisible(false);
             jPanelPrincipal.setVisible(false);
             jPanelEstadCitas.setVisible(false);
             jPanelEstadPersFecha.setVisible(false);
@@ -4310,6 +4390,9 @@ public class UI_Administrador extends javax.swing.JFrame {
     private datechooser.beans.DateChooserCombo dateChooserCombo2;
     private datechooser.beans.DateChooserCombo dateChooserCombo3;
     private datechooser.beans.DateChooserCombo dateChooserCombo4;
+    private javax.swing.JTextField fechainiciomostrar1;
+    private javax.swing.JTextField fechainiciomostrar2;
+    private javax.swing.JTextField fechainiciomostrar3;
     private javax.swing.JButton jButtonAceptarCita;
     private javax.swing.JButton jButtonAltaCita;
     private javax.swing.JButton jButtonAltaPaciente;
@@ -4423,6 +4506,7 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelFechaCita2;
     private javax.swing.JLabel jLabelFechaFinTurno;
     private javax.swing.JLabel jLabelFechaInicioTurno;
+    private javax.swing.JLabel jLabelFechaInicioTurno1;
     private javax.swing.JLabel jLabelFechaNacimientoPaciente;
     private javax.swing.JLabel jLabelFechaNacimientoPersonal;
     private javax.swing.JLabel jLabelFotoPaciente;
