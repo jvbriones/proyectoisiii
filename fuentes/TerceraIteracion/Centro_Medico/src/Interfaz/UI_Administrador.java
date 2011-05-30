@@ -3381,6 +3381,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                         jTextFieldDiaCita.setText(String.valueOf(fechacita.getDay()));
                         jTextFieldMesCita.setText(String.valueOf(fechacita.getMonth()));
                         jTextFieldAnioCita.setText(String.valueOf(fechacita.getYear()));
+                        
 
                     }
                 }catch(SQLException ex){
