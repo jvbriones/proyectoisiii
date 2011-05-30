@@ -3,6 +3,8 @@ package BaseDatos;
 import CentroMedico.Enfermedad;
 import java.sql.*;
 import org.hibernate.Session;
+import org.hibernate.*;
+import java.util.ArrayList;
 
 public class EnfermedadBD{
 
@@ -11,17 +13,61 @@ public class EnfermedadBD{
 	String user = "generico";
 	String pass = "generico";
 
-	public void Almacenar(Enfermedad enfmd){}
+        /*
+         * Almacenar
+         */
+	public void Almacenar(Enfermedad enfmd){
+            Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
-	public Enfermedad Obtener(Integer id){
-
-            return new Enfermedad();
+            session.beginTransaction();
+            session.save(enfmd);
+            session.getTransaction().commit();
         }
 
-	public void Actualizar(Enfermedad enfmd){}
+        /*  FALTA REVISAR EL ATRIBUTO
+         * Obtener
+         */
+	public Enfermedad Obtener(Integer id){
 
-	public void Eliminar(Enfermedad enfmd){}
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session.beginTransaction ();
+        Enfermedad enfmd = (Enfermedad) session.get(Enfermedad.class, id);
+            return enfmd;
+        }
 
-	//public Collection ObtenerEnfermedades(String dni){}
+        /* 
+         * Actualizar
+         */
+	public void Actualizar(Enfermedad enfmd){
+
+            Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+            session.beginTransaction ();
+            try{
+                session.update(enfmd);
+                System.out.println("Cita actualizada correctamente.");
+            }catch(HibernateException ex){
+                System.err.println(ex.getMessage());
+            }
+            session.getTransaction().commit();
+
+        }
+
+        /*
+         * Eliminar
+         */
+	public void Eliminar(Enfermedad enfmd){
+
+            Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+            session.beginTransaction();
+            session.delete(enfmd); /* NO FUNCIONA */
+            session.getTransaction().commit();
+        }
+
+        /*
+         * ObtenerEnfermedades
+         */
+	public ArrayList ObtenerEnfermedades(String dni){
+            return new ArrayList();
+        }
 
 }

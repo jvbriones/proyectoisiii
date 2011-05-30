@@ -56,6 +56,30 @@ public class GestorCitas {
         citabd.Eliminar(this.ObtenerCita(dni));
     }
 
+
+    /*  ¿¿¿¿DONDE ESTAN LOS ARGUMENTOS????
+     * ObtenerListaCitasAnalista
+     */
+    public ArrayList ObtenerListaCitasAnalista() throws SQLException{
+        return new ArrayList();
+    }
+
+    /*  ¿¿¿¿¿DONDE ESTAN LOS ARGUMENTOS?????
+     * ObtenerListaCitasRadiologo
+     */
+    public ArrayList ObtenerListaCitasRadiologo() throws SQLException{
+        return new ArrayList();
+    }
+
+
+    /*
+     * VerCitas
+     */
+    public ArrayList VerCitas(String dnipac) throws SQLException{
+        return new ArrayList();
+    }
+
+
     /** DE AQUI HACIA ABAJO NO SE VA A IMPLEMENTAR NADA **/
 
     /* FUNCION SIN TERMINAR */

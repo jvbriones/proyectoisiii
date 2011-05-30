@@ -15,6 +15,7 @@ import java.sql.*;
 import org.hibernate.*;
 import java.util.*;
 import java.util.Date;
+import java.util.ArrayList;
 
 public class CitasBD {
     String IpDelServidor="localhost";
@@ -118,5 +119,20 @@ public class CitasBD {
            return false;
        }
     }
+
+    /*
+     * Ver Citas
+     */
+    public ArrayList VerCitas(Paciente pac) throws SQLException{
+        return new ArrayList();
+    }
+
+    /*  ¿¿¿¿¿¿¿¿¿¿¿¡¡¡¡¡¡¡SIN ARGUMENTOS???!!!!!?!!!!!!!!
+     *  ObtenerTodasCitas
+     */
+    public ArrayList ObtenerTodasCitas() throws SQLException{
+        return new ArrayList();
+    }
+
 
 }
