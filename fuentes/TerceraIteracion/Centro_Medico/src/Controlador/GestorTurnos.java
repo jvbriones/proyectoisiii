@@ -51,8 +51,18 @@ public class GestorTurnos {
              
            else{
              
+                PersonalMedico personalmed = new PersonalMedico();
+                personalmed=personal.obtener(dni);
                 
-                turbd.altaTurno(dni,tipo,inicio,fin);
+                Turno tur=new Turno();
+                
+                tur.setDNI(dni);
+                tur.setHoraFin(fin);
+                tur.setHoraInicio(inicio);
+                tur.setTipo(tipo);
+                
+                personal.almacenarPersonal(personalmed);
+                
                 exito="Se creó un Turno de tipo "+tipo;
                 bien=true;
                 }
@@ -74,7 +84,10 @@ public class GestorTurnos {
 
         if(existe){
 
-            bd_turno.borraTurno(Dni);
+            Turno tur= new Turno();
+            bd_turno.obtener(Dni);
+            
+            bd_turno.eliminar(tur);
                existeSalida="El turno del usuario identificado por "+Dni+" se dió de baja";
         }
             
