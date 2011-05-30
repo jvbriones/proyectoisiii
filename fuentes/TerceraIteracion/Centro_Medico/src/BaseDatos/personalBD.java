@@ -12,6 +12,7 @@
 package BaseDatos;
 
 import CentroMedico.Analista;
+import CentroMedico.Farmaceutico;
 import CentroMedico.Medico;
 import CentroMedico.PersonalMedico;
 import CentroMedico.PersonalMedico;
@@ -75,6 +76,14 @@ public class personalBD {
              medico.almacenar(med);
          }
 
+            if (Personal.getTipoPersonal().equals("Farmaceutico")){
+
+            // System.out.println("Es un medico el que vamos a introducir");
+
+            Farmaceutico farma =new Farmaceutico(Personal.getDNI(),Personal.getNombre(),Personal.getApellidos(),Personal.getDireccion(),Personal.getEmail(),Personal.getContrasenia(),Personal.getTelefono(),Personal.getFecNac(),Personal.getLugarNac(),Personal.getFoto());
+             FarmaceuticoBD farmabd=new FarmaceuticoBD();
+             farmabd.almacenar(farma);
+         }
 
 
 
