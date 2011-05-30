@@ -26,13 +26,13 @@ public class Usuario implements Serializable{
     private String DNI;
     private String Nombre;
     private String Apellidos;
-    private String Direccion=null;
-    private String Email=null;
-    private String Contrasenia=null;
-    private String Telefono=null;
-    private Date FecNac=null;
-    private String LugarNac=null;
-    private String Foto=null;
+    private String Direccion;
+    private String Email;
+    private String Contrasenia;
+    private String Telefono;
+    private Date FecNac;
+    private String LugarNac;
+    private String Foto;
     private String Tipo;
 
 
@@ -41,12 +41,22 @@ public class Usuario implements Serializable{
      * Constructores
      *
      */
+
+    /*
+        Constructor por defecto de la clase Usuario. Pone todos sus atributos como NULL.
+     */
     public Usuario() {
     }
 
+
+    /**
+     * Constructor por parámetros de la clase Usuario.
+     * Da el valor de entrada a cada uno de los parámetros.
+     * Este constructor inicializa todos los atributos de la clase.
+     */
     public Usuario(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
             String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto, String Tipo){
-        
+   
         this.DNI=Dni;
         this.Nombre=Nombre;
         this.Apellidos=Apellidos;
@@ -59,7 +69,6 @@ public class Usuario implements Serializable{
         this.Foto=Foto;
         this.Tipo=Tipo;
     }
-
     /*
      * 
      * Metodos Consultores
@@ -67,7 +76,7 @@ public class Usuario implements Serializable{
      */
     
     public String getDNI(){
-        return DNI;
+        return this.DNI;
     }
 
     public String getNombre(){
@@ -116,7 +125,7 @@ public class Usuario implements Serializable{
       *
       */
 
-    public void setDNI(String Dni) throws SQLException{
+    public void setDNI(String Dni){
         this.DNI=Dni;
     }
 

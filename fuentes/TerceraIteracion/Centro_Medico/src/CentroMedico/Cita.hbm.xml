@@ -3,23 +3,16 @@
 <hibernate-mapping>
   <class name="CentroMedico.Cita">
            
-    <id name="id" column="id" >
+    <id name="Id" column="ID_CITA" >
       <generator class="assigned"/>
     </id>
      
-    <property name="Fecha">
-        <column name="Fecha" />
-    </property>
+    <property name="Fecha"/>
 	
-    <property name="Estado">
-        <column name="Estado" />
-    </property>
-
-     <property name="Tipo">
-        <column name="Tipo"/>
-    </property>
+    <property name="Estado"/>
+    
+     <property name="Tipo"/>
 	
-    <many-to-one class="CentroMedico.PersonalMedico" name="PersonalMedico" column="DNI_PERSONALMEDICO"/>
-    <many-to-one class="CentroMedico.Paciente" name="Paciente" column="DNI_PACIENTE"/>
+    <many-to-one class="CentroMedico.Paciente" name="DNIPaciente" column="DNI_PACIENTE"/>
   </class>
 </hibernate-mapping>

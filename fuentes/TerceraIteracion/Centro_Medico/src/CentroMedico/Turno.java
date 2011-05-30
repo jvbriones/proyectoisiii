@@ -22,9 +22,9 @@ import java.io.Serializable;
  */
 public class Turno implements Serializable{
 
-    private String dni;
-    private Date fechaInicio;
-    private Date fechaFin;
+    private String DNI;
+    private Date HoraInicio;
+    private Date HoraFin;
     private String Tipo;
 
     /*
@@ -36,12 +36,12 @@ public class Turno implements Serializable{
     public Turno() {
     }
 
-    public Turno(String dni, String tipo, Date fechaInicio, Date fechaFin){
+    public Turno(String DNI, Date HoraInicio, Date HoraFin, String Tipo){
 
-        this.dni=dni;
-        this.fechaInicio=fechaInicio;
-        this.fechaFin=fechaFin;
-        this.Tipo=tipo;
+        this.DNI=DNI;
+        this.HoraInicio=HoraInicio;
+        this.HoraFin=HoraFin;
+        this.Tipo=Tipo;
     }
 
     /*
@@ -50,21 +50,22 @@ public class Turno implements Serializable{
      *
      */
 
-    public String getDni(){
-        return dni;
+    public String getDNI(){
+        return DNI;
     }
 
-    public Date getfechaInicio(){
-        return  fechaInicio;
+    public Date getHoraInicio(){
+        return  HoraInicio;
      }
 
-    public Date getfechaFin(){
-        return fechaFin;
+    public Date getHoraFin(){
+        return HoraFin;
     }
 
-    public String getTipo(){
+    public String getTipo() {
         return Tipo;
     }
+
 
     /*
      *
@@ -72,29 +73,20 @@ public class Turno implements Serializable{
      *
      */
 
-    public void setDni(String dni){
-        this.dni=dni;
+    public void setDNI(String DNI){
+        this.DNI=DNI;
     }
 
-    public void setFechaInicio(Date FechaInicio){
-        this.fechaInicio=FechaInicio;
+    public void setHoraInicio(Date HoraInicio){
+        this.HoraInicio=HoraInicio;
      }
 
-    public void setFechaFin(Date fechaFin){
-        this.fechaFin=fechaFin;
+    public void setHoraFin(Date HoraFin){
+        this.HoraFin=HoraFin;
     }
 
-    public void setTipo(String Tipo){
-        this.Tipo=Tipo;
+    public void setTipo(String Tipo) {
+        this.Tipo = Tipo;
     }
 
-    public void actualizar(String dni,String tipo, Date fechainicio, Date fechafin) {
-  
-        this.Tipo=tipo;
-        this.dni=dni;
-        this.fechaInicio=fechainicio;
-        this.fechaFin=fechafin;
-        
-        
-    }
 }

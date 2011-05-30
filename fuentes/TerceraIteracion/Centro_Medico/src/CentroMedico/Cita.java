@@ -24,31 +24,31 @@ import java.util.Calendar.*;
 
 public class Cita implements Serializable{
 
-    private int id;
+    private int Id;
     private boolean Estado;
     private Date Fecha;
     private String Tipo;
-    private Paciente Paciente;
-    private PersonalMedico PersonalMedico;
+    private String DNIPaciente;
+    private String DNIMedico;
 
 
     /********** Constructores **********/
-    public Cita(boolean estado, Date fecha, String tipo, Paciente paciente, PersonalMedico pmedico){
+    public Cita(boolean estado, Date fecha, String tipo, String DNIpaciente, String DNImedico){
         
         this.Estado=estado;
         this.Fecha=fecha;
         this.Tipo=tipo;
-        this.Paciente = paciente;
-        this.PersonalMedico = pmedico;
+        this.DNIPaciente = DNIpaciente;
+        this.DNIMedico = DNImedico;
 
     }
 
-    public Cita(Date fecha, Paciente paciente, PersonalMedico pmedico){
+    public Cita(Date fecha, String DNIpaciente, String DNImedico){
 
         this.Estado = true;
         this.Fecha = fecha;
-        this.Paciente = paciente;
-        this.PersonalMedico = pmedico;
+        this.DNIPaciente = DNIpaciente;
+        this.DNIMedico = DNImedico;
         if(Fecha.getHours() < 16){
             this.Tipo = "Mañana";
         } else {
@@ -74,12 +74,12 @@ public class Cita implements Serializable{
         return Tipo;
     }
 
-    public Paciente getPaciente(){
-        return Paciente;
+    public String getDNIPaciente(){
+        return DNIPaciente;
     }
 
-    public PersonalMedico getPersonalMedico(){
-        return  PersonalMedico;
+    public String getDNIMedico(){
+        return  DNIMedico;
     }
 
     public boolean isEstado() {
@@ -87,7 +87,7 @@ public class Cita implements Serializable{
     }
 
     public int getId() {
-        return id;
+        return Id;
     }
 
 
@@ -101,20 +101,20 @@ public class Cita implements Serializable{
         this.Fecha = Fecha;
     }
 
-    public void setPaciente(Paciente Paciente) {
-        this.Paciente = Paciente;
+    public void setDNIPaciente(String DNIPaciente) {
+        this.DNIPaciente = DNIPaciente;
     }
 
-    public void setPersonalMedico(PersonalMedico PersonalMedico) {
-        this.PersonalMedico = PersonalMedico;
+    public void setDNIMedico(String DNIMedico) {
+        this.DNIMedico = DNIMedico;
     }
 
     public void setTipo(String Tipo) {
         this.Tipo = Tipo;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(int Id) {
+        this.Id = Id;
     }
 
 }

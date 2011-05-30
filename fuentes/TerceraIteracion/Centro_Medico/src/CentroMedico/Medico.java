@@ -13,13 +13,11 @@ package CentroMedico;
 
 import java.util.*;
 
-
 /**
  * @version     1.1     16/04/2011
  * @author      Sub_Equipo2
  * modificado por Juan Carlos
  */
-
 public class Medico extends PersonalMedico{
 
     public Medico() {

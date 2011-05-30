@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-  <class name="CentroMedico.Usuario">
-    <id column="DNI_USUARIO" name="DNI">
+  <class name="CentroMedico.Usuario" >
+    <id name="DNI" column="DNI_USUARIO">
       <generator class="assigned"/>
     </id>
     <property name="Nombre">
@@ -43,9 +43,11 @@
     </joined-subclass>
     <joined-subclass name="CentroMedico.Paciente">
         <key column="DNI_PACIENTE"/>
+        <many-to-one class="CentroMedico.Medico" name="DNIMedico" column="DNI_MEDICO"/>
     </joined-subclass>
     <joined-subclass name="CentroMedico.PersonalMedico">
         <key column="DNI_PERSONALMEDICO"/>
+        <one-to-one name="Turno" class="CentroMedico.Turno" cascade="all"/>
         <joined-subclass name="CentroMedico.Medico">
             <key column="DNI_MEDICO"/>
         </joined-subclass>
@@ -56,5 +58,7 @@
             <key column="DNI_RADIOLOGO"/>
         </joined-subclass>
     </joined-subclass>
+
+
   </class>
 </hibernate-mapping>
