@@ -29,14 +29,11 @@ public class GestorUsuarios {
 
     public GestorUsuarios(){}
 
-    public Usuario obtenerUsuario(String dni){
+    public Usuario obtenerUsuario(String dni) throws SQLException {
         UsuarioBD usuBD=new UsuarioBD();
         Usuario usu=null;
-        try{
-            usu= usuBD.obtener(dni);
-        } catch (SQLException ex) {
-            Logger.getLogger(GestorUsuarios.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        usu= usuBD.obtener(dni);
+       
         return usu;
     }
 
@@ -65,7 +62,7 @@ public class GestorUsuarios {
             String Contrasena, String Telefono, Date FecNac, String LugarNac, String Fotografia) throws SQLException{
 
        UsuarioBD usuario_bd = new UsuarioBD();
-       Usuario userAux =usuario_bd.obtenerUsuario(Dni);
+       Usuario userAux =usuario_bd.obtener(Dni);
 
        userAux.setDNI(Dni);
        userAux.setNombre(Nombre);
@@ -78,7 +75,7 @@ public class GestorUsuarios {
        userAux.setLugarNac( LugarNac);
        userAux.setFoto( Fotografia);
 
-       usuario_bd.almacenarUsuario(userAux);
+       usuario_bd.almacenar(userAux);
 
        return "Operacion Realizada con Exito";
     }
@@ -104,7 +101,7 @@ public class GestorUsuarios {
        user.setLugarNac( LugarNac);
        user.setFoto( Fotografia);
 
-       usuario_bd.almacenarUsuario(user);
+       usuario_bd.almacenar(user);
 
        return "Operacion Realizada con Exito";
     }
@@ -115,7 +112,7 @@ public class GestorUsuarios {
         boolean Existe=usuario_bd.existeUsuario(DNI);
 
         if(Existe){
-            Usuario userAux =usuario_bd.obtenerUsuario(DNI);
+            Usuario userAux =usuario_bd.obtener(DNI);
 
             String dni=userAux.getDNI();
             String nombre=userAux.getNombre();
@@ -163,7 +160,7 @@ public class GestorUsuarios {
         boolean Existe=usuario_bd.existeUsuario(Dni);
          Usuario userAux=null;
         if(Existe){
-             userAux =usuario_bd.obtenerUsuario(Dni);
+             userAux =usuario_bd.obtener(Dni);
     }
         return userAux;
     }

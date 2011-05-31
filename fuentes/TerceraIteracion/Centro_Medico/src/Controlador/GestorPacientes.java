@@ -11,7 +11,7 @@
 
 package Controlador;
 
-import BaseDatos.PacBD;
+import BaseDatos.PacienteBD;
 import CentroMedico.Paciente;
 import java.sql.SQLException;
 import java.util.Calendar;
@@ -27,7 +27,7 @@ public class GestorPacientes {
 
    public boolean altaPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, String Foto, String TipoUsuario) throws SQLException {
         boolean existe;
-        PacBD bd_paciente = new PacBD();
+        PacienteBD bd_paciente = new PacienteBD();
         String Datos = new String();
 
         existe=bd_paciente.existePaciente(Dni);
@@ -35,8 +35,8 @@ public class GestorPacientes {
         if(!existe) {
             String pas=new String();
             pas=generarContraseña();
-            Paciente paciente=new Paciente(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto, TipoUsuario);
-            bd_paciente.almacenarPaciente(paciente);
+            Paciente paciente=new Paciente(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto);
+            bd_paciente.almacenar(paciente);
 
             Datos = "Usuario Introducido con Éxito";
         }
@@ -65,7 +65,7 @@ public class GestorPacientes {
     
    public Paciente obtenerPaciente(String Dni) throws SQLException{
     
-        PacBD pac = new PacBD();
+        PacienteBD pac = new PacienteBD();
         Paciente p= new Paciente();
 
         System.out.println("antes de obtener paciente");
@@ -78,7 +78,7 @@ public class GestorPacientes {
 
    public boolean modificarPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Pass,String Telefono, Date FecNac, String LugarNac, String Foto ) throws SQLException {
         boolean exito;
-        PacBD bd_paciente=new PacBD();
+        PacienteBD bd_paciente=new PacienteBD();
         Paciente paciente=bd_paciente.obtener(Dni);
         paciente.actualizar(Dni, Nombre, Apellidos, Direccion, Email,Pass,Telefono, FecNac, LugarNac, Foto);
         bd_paciente.actualizar(paciente);

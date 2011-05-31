@@ -5,7 +5,7 @@
 
 package Controlador;
 
-import BaseDatos.PacBD;
+import BaseDatos.PacienteBD;
 import BaseDatos.RecetaBD;
 import CentroMedico.Cita;
 import CentroMedico.Medicamento;

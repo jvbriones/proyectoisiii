@@ -12,8 +12,8 @@
 package Controlador;
 
 import BaseDatos.FarmaceuticoBD;
+import BaseDatos.PersonalMedicoBD;
 import BaseDatos.UsuarioBD;
-import BaseDatos.personalBD;
 import CentroMedico.Farmaceutico;
 import CentroMedico.PersonalMedico;
 import CentroMedico.Usuario;
@@ -30,7 +30,7 @@ public class GestorPersonal {
 
     public boolean altaPersonal(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, String Foto, String TipoUsuario) throws SQLException {
         boolean existe;
-        personalBD bd_personal=new personalBD();
+        PersonalMedicoBD bd_personal=new PersonalMedicoBD();
         String Datos=new String();
 
         existe=bd_personal.existePersonal(Dni);
@@ -40,7 +40,7 @@ public class GestorPersonal {
             String pas=new String();
             pas=generarContraseña();
             PersonalMedico personal=new PersonalMedico(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto, TipoUsuario);
-            bd_personal.almacenarPersonal(personal);
+            bd_personal.almacenar(personal);
 
             Datos="Usuario Introducido con Éxito";
         }
@@ -51,7 +51,28 @@ public class GestorPersonal {
         return existe;
 
     }
+    public boolean altaFarmaceutico(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, String Foto, String TipoUsuario) throws SQLException {
+        boolean existe;
+        FarmaceuticoBD bd_farmaceutico=new FarmaceuticoBD();
+        String Datos=new String();
 
+        existe=bd_farmaceutico.existe(Dni);
+
+        if(!existe) {
+             System.out.println("vamos a Introducirlo");
+            String pas=new String();
+            pas=generarContraseña();
+            Farmaceutico personal=new Farmaceutico(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto);
+            bd_farmaceutico.almacenar(personal);
+
+            Datos="Usuario Introducido con Éxito";
+        }
+        else {
+            Datos="Usuario ya Existe";
+        }
+
+        return existe;
+    }
     private String generarContraseña() {
         String numeros = "0123456789";
 	String mayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -69,14 +90,14 @@ public class GestorPersonal {
 
     public boolean existePersonal(String Dni) throws SQLException {
         boolean existe;
-        personalBD bd_personal=new personalBD();
+        PersonalMedicoBD bd_personal=new PersonalMedicoBD();
         
         existe=bd_personal.existePersonal(Dni);
         return existe;
     }
        public boolean modificarPersonal(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Pass,String Telefono, Date FecNac, String LugarNac, String Foto,String Tipo) throws SQLException {
         boolean exito;
-        personalBD bd_personal=new personalBD();
+        PersonalMedicoBD bd_personal=new PersonalMedicoBD();
         PersonalMedico personal=bd_personal.obtener(Dni);
         personal.actualizar(Dni, Nombre, Apellidos, Direccion, Email,Pass,Telefono, FecNac, LugarNac, Foto,Tipo);
         bd_personal.actualizar(personal);
