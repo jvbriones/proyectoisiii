@@ -23,17 +23,20 @@ public class Enfermedad implements Serializable{
 	/** Atributos **/
 	private	int	Id;
         private String  nombre;
+        private String  Nombre;
 	private	String	Tipo;
 	private	Date	FechaDet;
 	private	String	Descripcion;
 	private	String	Volante;
+        private Set<Enfermedad> Enfermedades=new HashSet<Enfermedad>(0);
 
 	/** Constructores **/
 	
 	public Enfermedad(){}
 
-	public Enfermedad(int id, String tipo, Date fecha, String descripcion, String volante){
-	  this.Id = id;
+
+	public Enfermedad(String Nombre, String tipo, Date fecha, String descripcion, String volante){
+	  this.Nombre = Nombre;
 	  this.Tipo = tipo;
 	  this.FechaDet = fecha;
 	  this.Descripcion = descripcion;
@@ -85,7 +88,9 @@ public class Enfermedad implements Serializable{
 
 		this.Volante = volante;
 	}
-	
+	public void anadirEnfermedad(Enfermedad enfermedad){
+            Enfermedades.add(enfermedad);
+        }
   }
 
 
