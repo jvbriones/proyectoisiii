@@ -37,12 +37,13 @@ public class Receta implements Serializable{
         this.Instrucciones = Instrucciones;
     }
 
-    public Receta(String Ins, String JD, Date F, Paciente pa, String me ) throws SQLException{
+    public Receta(String Ins, String JD, Date F, Paciente pa, Medico me ) throws SQLException{
         
         this.JuicioDiagnostico = JD;
         this.Instrucciones = Ins;
         this.Fecha = F;
         this.Paci = pa;
+        this.Medi = me;
         //medi = medBD.obtener(me);
 
 
