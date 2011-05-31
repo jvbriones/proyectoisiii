@@ -23,6 +23,7 @@ public class PersonalMedico extends Usuario{
             String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto, String Tipo){
 
         super(Dni, Nombre, Apellidos, Direccion, Email, Contrasenia, Telefono, FecNac, LugarNac, Foto, Tipo);
+        this.Turno=null;
     }
 
     public PersonalMedico (String Dni, String Nombre, String Apellidos, String Direccion,String Email,
@@ -42,5 +43,21 @@ public class PersonalMedico extends Usuario{
         this.Turno = T1;
     };
 
-
+    public String getTipo(){
+         return super.getTipo();
+    }
+    public void actualizar(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
+            String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto,String Tipo){
+        setDNI(Dni);
+        setNombre(Nombre);
+        setApellidos(Apellidos);
+        setDireccion(Direccion);
+        setEmail(Email);
+        setContrasenia(Contrasenia);
+        setTelefono(Telefono);
+        setFecNac(FecNac);
+        setLugarNac(LugarNac);
+        setFoto(Foto);
+    
+    }
 }
