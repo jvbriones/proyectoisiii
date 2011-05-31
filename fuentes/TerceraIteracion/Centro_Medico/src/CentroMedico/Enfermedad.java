@@ -10,10 +10,7 @@
 
 package CentroMedico;
 
-import java.sql.SQLException;
 import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.io.Serializable;
 
 /**
@@ -24,7 +21,7 @@ import java.io.Serializable;
 public class Enfermedad implements Serializable{
 
 	/** Atributos **/
-	private	String	ID;
+	private	int	Id;
 	private	String	Tipo;
 	private	Date	FechaDet;
 	private	String	Descripcion;
@@ -34,8 +31,8 @@ public class Enfermedad implements Serializable{
 	
 	public Enfermedad(){}
 
-	public Enfermedad(String id, String tipo, Date fecha, String descripcion, String volante){
-	  this.ID = id;
+	public Enfermedad(int id, String tipo, Date fecha, String descripcion, String volante){
+	  this.Id = id;
 	  this.Tipo = tipo;
 	  this.FechaDet = fecha;
 	  this.Descripcion = descripcion;
@@ -45,9 +42,9 @@ public class Enfermedad implements Serializable{
 
 	/** Metodos GET **/
 
-	public String getNombre(){
+	public int getNombre(){
 
-		return this.ID;
+		return this.Id;
 	}
 
 	public String getDescripcion(){
@@ -68,9 +65,9 @@ public class Enfermedad implements Serializable{
 
 	/** Metodos SET **/
 	
-	public void setNombre(String nombre){
+	public void setNombre(int id){
 
-		this.ID = nombre;
+		this.Id = id;
 	}
 
 	public void setDescripcion(String descrip){
