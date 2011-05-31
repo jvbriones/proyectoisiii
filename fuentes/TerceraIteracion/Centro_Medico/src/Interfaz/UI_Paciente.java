@@ -974,7 +974,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jPanelGestionarRecetas.setPreferredSize(new java.awt.Dimension(901, 531));
 
         jList2.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            String[] strings = { "Receta 1      Doctor 1", "Receta 2        Doctor 2", "Receta 3        Doctor 3", "Receta 4        Doctor 4", "Receta 5\t\t\t        Doctor 5" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
@@ -1037,7 +1037,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                                 .add(jLabelMedico))
                             .add(jLabelGestionarPaciente6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 294, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(jLabel8))))
-                .addContainerGap(584, Short.MAX_VALUE))
+                .addContainerGap(223, Short.MAX_VALUE))
         );
         jPanelGestionarRecetasLayout.setVerticalGroup(
             jPanelGestionarRecetasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
