@@ -11,8 +11,8 @@
 
 package Controlador;
 
-import CentroMedico.Personal;
-import BaseDatos.personalBD;
+import CentroMedico.*;
+import BaseDatos.*;
 import java.sql.SQLException;
 import java.util.Date;
 
@@ -25,17 +25,23 @@ import java.util.Date;
 public class GestorPersonal {
 
     public boolean altaPersonal(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, String Foto, String TipoUsuario) throws SQLException {
-        boolean existe;
-        personalBD bd_personal=new personalBD();
+        boolean existe=true;
+        PersonalMedicoBD bd_personal=new PersonalMedicoBD();
+        PersonalMedico pm =null;
+
         String Datos=new String();
 
-        existe=bd_personal.existePersonal(Dni);
+
+        pm = bd_personal.obtener(Dni);
+        if( pm ==null)
+            existe =false;
+
 
         if(!existe) {
             String pas=new String();
             pas=generarContraseña();
-            Personal personal=new Personal(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto, TipoUsuario);
-            bd_personal.almacenarPersonal(personal);
+            PersonalMedico personal=new PersonalMedico(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto, TipoUsuario);
+            bd_personal.almacenar(personal);
 
             Datos="Usuario Introducido con Éxito";
         }
@@ -63,10 +69,15 @@ public class GestorPersonal {
     }
 
     public boolean existePersonal(String Dni) throws SQLException {
-        boolean existe;
-        personalBD bd_personal=new personalBD();
-        
-        existe=bd_personal.existePersonal(Dni);
-        return existe;
+        boolean existe=true;
+        PersonalMedicoBD bd_personal=new PersonalMedicoBD();
+        PersonalMedico pm = null;
+
+
+        pm=bd_personal.obtener(Dni);
+        if(pm==null)
+            return false;
+        else
+            return true;
     }
 }

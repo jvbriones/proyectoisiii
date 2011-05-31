@@ -135,6 +135,9 @@ public class GestorPruebas {
         PruebaSangreBD pSBD = new PruebaSangreBD();
         PruebaOrinaBD pOBD = new PruebaOrinaBD();
 
+         PersonalMedicoBD pm_BD=new PersonalMedicoBD();
+         PersonalMedico pm=null;
+
         paciente = gP.obtenerPaciente(DniPaciente);
 
         if(paciente == null){

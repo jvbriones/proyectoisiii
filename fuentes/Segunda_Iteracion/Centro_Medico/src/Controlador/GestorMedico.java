@@ -5,16 +5,8 @@
 
 package Controlador;
 
-import BaseDatos.MedicoBD;
-import BaseDatos.PacBD;
-import BaseDatos.RecetaBD;
-import BaseDatos.UsuarioBD;
-import CentroMedico.Cita;
-import CentroMedico.Medicamento;
-import CentroMedico.MedicamentoRecetado;
-import CentroMedico.Medico;
-import CentroMedico.Paciente;
-import CentroMedico.Receta;
+import BaseDatos.*;
+import CentroMedico.*;
 import java.lang.String;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -58,10 +50,14 @@ public class GestorMedico {
         PacBD pac = new PacBD();
         Paciente pacien;
         MedicoBD medBD = new MedicoBD();
+        PersonalMedicoBD pm = new PersonalMedicoBD();
         Medico medic;
         pacien = pac.obtener(paci);
-        //tengo que obtener el medico
-        re = new Receta(Instrucciones,JuicioDiagnostico, fecha, pacien, medi);
+       // medic = medBD.obtener(medi);
+        PersonalMedico m;
+        m = pm.obtener(medi);
+       // medic = (Medico)us.obtener(medi);
+        re = new Receta(Instrucciones,JuicioDiagnostico, fecha, pacien, m);
 
         ArrayList medicamentos;
         Set<MedicamentoRecetado> medRec;

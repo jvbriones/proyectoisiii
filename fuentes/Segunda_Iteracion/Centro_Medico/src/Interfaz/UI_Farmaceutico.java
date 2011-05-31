@@ -2862,7 +2862,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
              DefaultListModel listModel = new DefaultListModel();
              DefaultListModel listModel2 = new DefaultListModel();
              DefaultListModel listModel3 = new DefaultListModel();
-             Medico med = null;
+             PersonalMedico med = null;
              Receta rec;
             for(Iterator it = resumenRecetas.iterator(); it.hasNext();){
                 rec = (Receta) it.next();

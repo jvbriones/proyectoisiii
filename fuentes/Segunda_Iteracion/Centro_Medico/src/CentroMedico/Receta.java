@@ -26,7 +26,7 @@ public class Receta implements Serializable{
     private String JuicioDiagnostico;
     private Date Fecha;
 
-    private Medico Medi;
+    private PersonalMedico Pm;
     private Paciente Paci;
     private Set <MedicamentoRecetado> MedicamentosRecetados = new HashSet<MedicamentoRecetado>(0);
 
@@ -37,13 +37,13 @@ public class Receta implements Serializable{
         this.Instrucciones = Instrucciones;
     }
 
-    public Receta(String Ins, String JD, Date F, Paciente pa, Medico me ) throws SQLException{
+    public Receta(String Ins, String JD, Date F, Paciente pa, PersonalMedico pm ) throws SQLException{
         
         this.JuicioDiagnostico = JD;
         this.Instrucciones = Ins;
         this.Fecha = F;
         this.Paci = pa;
-        this.Medi = me;
+        this.Pm = pm;
         //medi = medBD.obtener(me);
 
 
@@ -66,8 +66,8 @@ public class Receta implements Serializable{
         return JuicioDiagnostico;
     }
 
-    public Medico getMedi() {
-        return Medi;
+    public PersonalMedico getMedi() {
+        return Pm;
     }
 
     public Paciente getPaci() {
@@ -95,7 +95,7 @@ public class Receta implements Serializable{
     }
 
     public void setMedi(Medico Medi) {
-        this.Medi=Medi;
+        this.Pm=Medi;
     }
 
     public void setPaci(Paciente Paci) {
