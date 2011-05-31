@@ -11,7 +11,7 @@
 
 package Controlador;
 
-import BaseDatos.CitasBD;
+import BaseDatos.CitaBD;
 import java.sql.SQLException;
 import CentroMedico.Usuario;
 import CentroMedico.Cita;
@@ -37,12 +37,11 @@ public class GestorCitas {
      * @param dni, Identificacion del paciente del que se obtiene la cita.
      * @return Objeto 'Cita', si no existe la cita devuelve un objeto 'null'
      */
-    public Cita ObtenerCita(String dni) throws SQLException{
-
+    public Cita ObtenerCita(int id) throws SQLException{
         GestorPacientes gstpac = new GestorPacientes();
-        CitasBD cita = new CitasBD();
+        CitaBD cita = new CitaBD();
 
-        return cita.ObtenerCita(gstpac.obtenerPaciente(dni));
+        return cita.obtener(id);
     }
 
 
@@ -50,12 +49,12 @@ public class GestorCitas {
      * Cancelar cita ~~ Cancelar cita online
      * @param dni, Identificacion del paciente que quiere cancelar la cita
      */
-    public void CancelarCita(String dni)throws SQLException{
+/*    public void CancelarCita(String dni)throws SQLException{
 
         CitasBD citabd = new CitasBD();
         citabd.Eliminar(this.ObtenerCita(dni));
     }
-
+*/
 
     /*  ¿¿¿¿DONDE ESTAN LOS ARGUMENTOS????
      * ObtenerListaCitasAnalista

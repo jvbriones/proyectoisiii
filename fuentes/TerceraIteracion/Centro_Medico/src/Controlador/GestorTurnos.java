@@ -13,7 +13,7 @@ package Controlador;
 
 import CentroMedico.Turno;
 import BaseDatos.TurnoBD;
-import BaseDatos.personalBD;
+import BaseDatos.PersonalMedicoBD;
 import CentroMedico.PersonalMedico;
 import java.sql.SQLException;
 import java.util.Date;
@@ -31,7 +31,7 @@ public class GestorTurnos {
         // MIguel.  Tipo es " mañana" "tarde " o "noche"
 
         String exito=new String();
-        personalBD personal= new personalBD();
+        PersonalMedicoBD personal= new PersonalMedicoBD();
         
         TurnoBD turbd = new TurnoBD();
         boolean bien=false;
@@ -61,7 +61,7 @@ public class GestorTurnos {
                 tur.setHoraInicio(inicio);
                 tur.setTipo(tipo);
                 
-                personal.almacenarPersonal(personalmed);
+                personal.almacenar(personalmed);
                 
                 exito="Se creó un Turno de tipo "+tipo;
                 bien=true;

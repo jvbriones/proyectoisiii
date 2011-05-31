@@ -186,7 +186,7 @@ public class GestorPruebas {
     public boolean almacenarResultadoRadiologia(String DNIPaciente, ArrayList<Imagen> imag, String Comentario, String TipoPrueba, String DNIRadiologo) throws SQLException{
 
         //No concuerda el diagrama de secuencia con el de clases
-        PacBD pBD = new PacBD();
+        PacienteBD pBD = new PacienteBD();
         RadiologoBD radiologoBD = new RadiologoBD();
 
         Paciente paciente = null;
