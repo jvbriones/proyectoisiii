@@ -144,8 +144,6 @@ public class UI_Administrador extends javax.swing.JFrame {
         jRadioButtonNoche = new javax.swing.JRadioButton();
         jButtonBajaTurno = new javax.swing.JButton();
         jLabelErrorGestionarTurno = new javax.swing.JLabel();
-        dateChooserCombo3 = new datechooser.beans.DateChooserCombo();
-        dateChooserCombo4 = new datechooser.beans.DateChooserCombo();
         fechainiciomostrar1 = new javax.swing.JTextField();
         fechainiciomostrar2 = new javax.swing.JTextField();
         fechainiciomostrar3 = new javax.swing.JTextField();
@@ -193,7 +191,6 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
         jLabelErrorPersonal = new javax.swing.JLabel();
-        dateChooserCombo2 = new datechooser.beans.DateChooserCombo();
         jPanelGestionarCita = new javax.swing.JPanel();
         jPanelGestionarCitaAlta = new javax.swing.JPanel();
         jScrollPane9 = new javax.swing.JScrollPane();
@@ -318,7 +315,6 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
-        dateChooserCombo1 = new datechooser.beans.DateChooserCombo();
 
         jLabelErrorPaciente.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelErrorPaciente.setForeground(new java.awt.Color(255, 0, 0));
@@ -742,23 +738,6 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabelErrorGestionarTurno.setText("ERROR: revise los campos en rojo");
         jPanelGestionarTurno.add(jLabelErrorGestionarTurno);
         jLabelErrorGestionarTurno.setBounds(320, 420, 215, 18);
-
-        try {
-            dateChooserCombo3.setDefaultPeriods(new datechooser.model.multiple.PeriodSet());
-        } catch (datechooser.model.exeptions.IncompatibleDataExeption e1) {
-            e1.printStackTrace();
-        }
-        dateChooserCombo3.setShowOneMonth(true);
-        jPanelGestionarTurno.add(dateChooserCombo3);
-        dateChooserCombo3.setBounds(140, 330, 155, 20);
-
-        try {
-            dateChooserCombo4.setDefaultPeriods(new datechooser.model.multiple.PeriodSet());
-        } catch (datechooser.model.exeptions.IncompatibleDataExeption e1) {
-            e1.printStackTrace();
-        }
-        jPanelGestionarTurno.add(dateChooserCombo4);
-        dateChooserCombo4.setBounds(390, 330, 155, 20);
         jPanelGestionarTurno.add(fechainiciomostrar1);
         fechainiciomostrar1.setBounds(140, 320, 160, 20);
         jPanelGestionarTurno.add(fechainiciomostrar2);
@@ -770,7 +749,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarTurno.add(jLabelFechaInicioTurno1);
         jLabelFechaInicioTurno1.setBounds(140, 370, 20, 14);
 
-        jPanelGestionarTurno.setBounds(0, 0, 901, 531);
+        jPanelGestionarTurno.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelGestionarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarPersonal.setAlignmentX(1.0F);
@@ -910,6 +889,11 @@ public class UI_Administrador extends javax.swing.JFrame {
                 jButtonConsultarPersonalMouseClicked(evt);
             }
         });
+        jButtonConsultarPersonal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonConsultarPersonalActionPerformed(evt);
+            }
+        });
         jPanelGestionarPersonal.add(jButtonConsultarPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 460, 93, 39));
 
         jLabel1.setText("Tipo personal");
@@ -1005,9 +989,8 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabelErrorPersonal.setText(" Los campos con * son obligatorios");
         jLabelErrorPersonal.setName("jLabelErrorPersonal"); // NOI18N
         jPanelGestionarPersonal.add(jLabelErrorPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, 270, 20));
-        jPanelGestionarPersonal.add(dateChooserCombo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, -1, -1));
 
-        jPanelGestionarPersonal.setBounds(0, 0, 901, 531);
+        jPanelGestionarPersonal.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelGestionarPersonal, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jPanelGestionarPersonal.getAccessibleContext().setAccessibleName("jLabelErrorPersonal");
 
@@ -1464,7 +1447,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarCita.add(jLabelDNIGestionarCitaMedico);
         jLabelDNIGestionarCitaMedico.setBounds(460, 230, 80, 14);
 
-        jPanelGestionarCita.setBounds(0, 0, 901, 531);
+        jPanelGestionarCita.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelGestionarCita, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadPersTipo.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1523,7 +1506,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jScrollPane5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 327, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanelEstadPersTipo.setBounds(0, 0, 901, 531);
+        jPanelEstadPersTipo.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelEstadPersTipo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadPersFecha.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1589,7 +1572,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jScrollPane6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 327, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanelEstadPersFecha.setBounds(0, 0, 901, 531);
+        jPanelEstadPersFecha.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelEstadPersFecha, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadCitas.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1868,7 +1851,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelEstadCitas.add(jLabel15);
         jLabel15.setBounds(469, 201, 52, 14);
 
-        jPanelEstadCitas.setBounds(0, 0, 901, 531);
+        jPanelEstadCitas.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelEstadCitas, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         getContentPane().add(ZonaTrabajo);
@@ -1894,7 +1877,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabel3.setText("___________________________________________________________________");
         jPanelGestionarPaciente.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 59, -1, -1));
 
-        jLabelGestionarPaciente4.setFont(new java.awt.Font("Lucida Grande", 1, 48)); // NOI18N
+        jLabelGestionarPaciente4.setFont(new java.awt.Font("Lucida Grande", 1, 48));
         jLabelGestionarPaciente4.setText("Gestionar Paciente");
         jPanelGestionarPaciente.add(jLabelGestionarPaciente4, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 20, -1, -1));
 
@@ -1996,7 +1979,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarPaciente.add(jLabelEmailPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(509, 172, -1, -1));
         jPanelGestionarPaciente.add(jTextFieldDireccionPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 192, 370, -1));
 
-        jLabelInfoFotoPaciente.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
+        jLabelInfoFotoPaciente.setFont(new java.awt.Font("Lucida Grande", 0, 10));
         jLabelInfoFotoPaciente.setText("Tamaño máx 150x150 píxeles");
         jPanelGestionarPaciente.add(jLabelInfoFotoPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 370, 150, 50));
 
@@ -2096,7 +2079,6 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabel34.setForeground(new java.awt.Color(255, 0, 0));
         jLabel34.setText(" Los campos con * son obligatorios");
         jPanelGestionarPaciente.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 420, 270, -1));
-        jPanelGestionarPaciente.add(dateChooserCombo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 360, -1, -1));
 
         getContentPane().add(jPanelGestionarPaciente);
         jPanelGestionarPaciente.setBounds(10, 170, 900, 530);
@@ -2965,7 +2947,10 @@ public class UI_Administrador extends javax.swing.JFrame {
 
        
             try {
-                exito = gesPer.altaPersonal(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(), jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), laurl, tipoPersonal);
+                if(tipoPersonal!="Farmaceutico")
+                    exito = gesPer.altaPersonal(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(), jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), laurl, tipoPersonal);
+                else
+                    exito = gesPer.altaFarmaceutico(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(), jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), laurl, tipoPersonal);
                 if(!exito){
                     new InformacionExito().setVisible(true);
                     limpiarFormulario("GestionarPersonal");
@@ -3064,13 +3049,18 @@ public class UI_Administrador extends javax.swing.JFrame {
 
 
             try {
-                exito = gesPer.modificarPersonal(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(), jTextFieldContraseniaPersonal.getText(),jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), laurl, tipoPersonal);
+                if(tipoPersonal!="Farmaceutico")
+                         exito = gesPer.modificarPersonal(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(), jTextFieldContraseniaPersonal.getText(),jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), laurl, tipoPersonal);
+                else
+                         exito = gesPer.modificarPersonalFarmacia(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(), jTextFieldContraseniaPersonal.getText(),jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), laurl, tipoPersonal);
+
                 if(exito){
-                    new InformacionExito().setVisible(true);
+                        new InformacionExito().setVisible(true);
                     //limpiarFormulario("GestionarPersonal");
                     }
-                else
-                    new InformacionError().setVisible(true);
+                    else
+                        new InformacionError().setVisible(true);
+
 
             } catch (SQLException ex) {
                 Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
@@ -3500,6 +3490,10 @@ public class UI_Administrador extends javax.swing.JFrame {
     private void jButtonGestionarTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGestionarTurnoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonGestionarTurnoActionPerformed
+
+    private void jButtonConsultarPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultarPersonalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonConsultarPersonalActionPerformed
 
 
     /*Comprueba que la fecha introducida es correcta
@@ -4389,10 +4383,6 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JLayeredPane ZonaTrabajo;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
-    private datechooser.beans.DateChooserCombo dateChooserCombo1;
-    private datechooser.beans.DateChooserCombo dateChooserCombo2;
-    private datechooser.beans.DateChooserCombo dateChooserCombo3;
-    private datechooser.beans.DateChooserCombo dateChooserCombo4;
     private javax.swing.JTextField fechainiciomostrar1;
     private javax.swing.JTextField fechainiciomostrar2;
     private javax.swing.JTextField fechainiciomostrar3;

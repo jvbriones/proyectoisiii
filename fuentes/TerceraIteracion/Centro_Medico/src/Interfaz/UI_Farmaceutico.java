@@ -2602,7 +2602,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
      if(compruebaFormulario("dispensar")){
         GestorFarmacia gestFar = new GestorFarmacia();
         resumenRecetas = null;
-        PacBD pac = new PacBD();
+        PacienteBD pac = new PacienteBD();
         Paciente pacien = null;
 
         try {
