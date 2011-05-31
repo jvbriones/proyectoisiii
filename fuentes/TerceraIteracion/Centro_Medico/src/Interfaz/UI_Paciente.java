@@ -483,26 +483,25 @@ public class UI_Paciente extends javax.swing.JFrame {
                         .add(39, 39, 39)
                         .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(jButtonGestionarPruebas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .add(24, 24, 24)))
+                            .add(jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelPrincipalLayout.createSequentialGroup()
+                    .add(jPanelPrincipalLayout.createSequentialGroup()
                         .add(152, 152, 152)
                         .add(jLabelGestionarCita1)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 83, Short.MAX_VALUE)
+                        .add(113, 113, 113)
                         .add(jLabel9)
-                        .add(147, 147, 147))
+                        .addContainerGap())
                     .add(jPanelPrincipalLayout.createSequentialGroup()
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 93, Short.MAX_VALUE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 67, Short.MAX_VALUE)
                         .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(jPanelPrincipalLayout.createSequentialGroup()
                                 .add(jButtonConsultarHistorialClinico, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap())
                             .add(jPanelPrincipalLayout.createSequentialGroup()
                                 .add(jButtonGestionarCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .add(81, 81, 81)
-                                .add(jButtonGestionarRecetas, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
-                                .add(117, 117, 117))))))
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 102, Short.MAX_VALUE)
+                                .add(jButtonGestionarRecetas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(96, 96, 96))))))
             .add(jPanelPrincipalLayout.createSequentialGroup()
                 .add(105, 105, 105)
                 .add(jLabel11)
@@ -514,15 +513,15 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanelPrincipalLayout.createSequentialGroup()
                 .add(28, 28, 28)
-                .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jButtonGestionarRecetas, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
-                    .add(jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(jButtonGestionarRecetas, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel9)
                     .add(jLabelGestionarCita1)
-                    .add(jLabelGestionarPaciente3))
+                    .add(jLabelGestionarPaciente3)
+                    .add(jLabel9))
                 .add(78, 78, 78)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jButtonGestionarPruebas)
@@ -1371,16 +1370,16 @@ public class UI_Paciente extends javax.swing.JFrame {
         jPanelVerPruebas.setMinimumSize(new java.awt.Dimension(900, 530));
         jPanelVerPruebas.setPreferredSize(new java.awt.Dimension(900, 530));
 
-        jLabel18.setFont(new java.awt.Font("Ubuntu", 1, 48)); // NOI18N
+        jLabel18.setFont(new java.awt.Font("Ubuntu", 1, 48));
         jLabel18.setText("Consultar Prueba");
 
-        jLabel19.setFont(new java.awt.Font("Ubuntu", 0, 22)); // NOI18N
+        jLabel19.setFont(new java.awt.Font("Ubuntu", 0, 22));
         jLabel19.setText("Lista de pruebas");
 
-        jLabel20.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel20.setFont(new java.awt.Font("Ubuntu", 1, 15));
         jLabel20.setText("Tipo de prueba");
 
-        jLabel21.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel21.setFont(new java.awt.Font("Ubuntu", 1, 15));
         jLabel21.setText("id prueba");
 
         jList4.setModel(new javax.swing.AbstractListModel() {
@@ -1450,16 +1449,16 @@ public class UI_Paciente extends javax.swing.JFrame {
         jPanelConsultarHistorial.setMinimumSize(new java.awt.Dimension(900, 530));
         jPanelConsultarHistorial.setPreferredSize(new java.awt.Dimension(900, 530));
 
-        jLabel13.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Ubuntu", 1, 15));
         jLabel13.setText("Fecha detección");
 
-        jLabel14.setFont(new java.awt.Font("Ubuntu", 1, 48)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Ubuntu", 1, 48));
         jLabel14.setText("Historial Clínico");
 
-        jLabel15.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Ubuntu", 1, 15));
         jLabel15.setText("Nombre");
 
-        jLabel17.setFont(new java.awt.Font("Ubuntu", 0, 22)); // NOI18N
+        jLabel17.setFont(new java.awt.Font("Ubuntu", 0, 22));
         jLabel17.setText("Lista de enfermedades");
 
         jList3.setModel(new javax.swing.AbstractListModel() {
@@ -1536,16 +1535,16 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jPanelPruebaRadiologia.setMinimumSize(new java.awt.Dimension(900, 530));
 
-        jLabel22.setFont(new java.awt.Font("Ubuntu", 0, 22)); // NOI18N
+        jLabel22.setFont(new java.awt.Font("Ubuntu", 0, 22));
         jLabel22.setText("Lista de pruebas");
 
-        jLabel23.setFont(new java.awt.Font("Ubuntu", 1, 48)); // NOI18N
+        jLabel23.setFont(new java.awt.Font("Ubuntu", 1, 48));
         jLabel23.setText("Consultar Prueba del Radiólogo");
 
-        jLabel24.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel24.setFont(new java.awt.Font("Ubuntu", 1, 15));
         jLabel24.setText("Tipo de prueba");
 
-        jLabel25.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel25.setFont(new java.awt.Font("Ubuntu", 1, 15));
         jLabel25.setText("Imagen");
 
         jList5.setModel(new javax.swing.AbstractListModel() {
@@ -1555,7 +1554,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         });
         jScrollPane9.setViewportView(jList5);
 
-        jLabel39.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel39.setFont(new java.awt.Font("Ubuntu", 1, 15));
         jLabel39.setText("Analista");
 
         org.jdesktop.layout.GroupLayout jPanelPruebaRadiologiaLayout = new org.jdesktop.layout.GroupLayout(jPanelPruebaRadiologia);
@@ -1569,7 +1568,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                     .add(jLabel23, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(80, Short.MAX_VALUE))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelPruebaRadiologiaLayout.createSequentialGroup()
-                .addContainerGap(399, Short.MAX_VALUE)
+                .addContainerGap(350, Short.MAX_VALUE)
                 .add(jLabel22)
                 .add(388, 388, 388))
             .add(jPanelPruebaRadiologiaLayout.createSequentialGroup()
@@ -1610,16 +1609,16 @@ public class UI_Paciente extends javax.swing.JFrame {
         jPanelPruebaAnalista.setMinimumSize(new java.awt.Dimension(900, 530));
         jPanelPruebaAnalista.setPreferredSize(new java.awt.Dimension(949, 530));
 
-        jLabel26.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel26.setFont(new java.awt.Font("Ubuntu", 1, 15));
         jLabel26.setText("Tipo de prueba");
 
-        jLabel27.setFont(new java.awt.Font("Ubuntu", 1, 48)); // NOI18N
+        jLabel27.setFont(new java.awt.Font("Ubuntu", 1, 48));
         jLabel27.setText("Consultar Prueba del Analista");
 
-        jLabel28.setFont(new java.awt.Font("Ubuntu", 0, 22)); // NOI18N
+        jLabel28.setFont(new java.awt.Font("Ubuntu", 0, 22));
         jLabel28.setText("Lista de pruebas");
 
-        jLabel29.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel29.setFont(new java.awt.Font("Ubuntu", 1, 15));
         jLabel29.setText("Resultado");
 
         jList6.setModel(new javax.swing.AbstractListModel() {
@@ -1629,7 +1628,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         });
         jScrollPane10.setViewportView(jList6);
 
-        jLabel40.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel40.setFont(new java.awt.Font("Ubuntu", 1, 15));
         jLabel40.setText("Analista");
 
         org.jdesktop.layout.GroupLayout jPanelPruebaAnalistaLayout = new org.jdesktop.layout.GroupLayout(jPanelPruebaAnalista);
@@ -1656,7 +1655,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                     .add(jPanelPruebaAnalistaLayout.createSequentialGroup()
                         .add(147, 147, 147)
                         .add(jScrollPane10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 576, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(152, Short.MAX_VALUE))
+                .addContainerGap(103, Short.MAX_VALUE))
         );
         jPanelPruebaAnalistaLayout.setVerticalGroup(
             jPanelPruebaAnalistaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1682,13 +1681,13 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jPanelVerCita.setMinimumSize(new java.awt.Dimension(900, 530));
 
-        jLabel30.setFont(new java.awt.Font("Ubuntu", 1, 48)); // NOI18N
+        jLabel30.setFont(new java.awt.Font("Ubuntu", 1, 48));
         jLabel30.setText("Consultar Citas");
 
-        jLabel31.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel31.setFont(new java.awt.Font("Ubuntu", 1, 15));
         jLabel31.setText("Hora");
 
-        jLabel32.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel32.setFont(new java.awt.Font("Ubuntu", 1, 15));
         jLabel32.setText("Fecha");
 
         jList7.setModel(new javax.swing.AbstractListModel() {
@@ -1747,21 +1746,21 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jPanelDetalleCita.setMinimumSize(new java.awt.Dimension(900, 530));
 
-        jLabel35.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel35.setFont(new java.awt.Font("Ubuntu", 1, 18));
         jLabel35.setText("Fecha");
 
-        jLabel36.setFont(new java.awt.Font("Ubuntu", 1, 48)); // NOI18N
+        jLabel36.setFont(new java.awt.Font("Ubuntu", 1, 48));
         jLabel36.setText("Información Detallada de la Cita");
 
         jScrollPane13.setViewportView(jTextPane3);
 
-        jLabel37.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel37.setFont(new java.awt.Font("Ubuntu", 1, 18));
         jLabel37.setText("Hora");
 
-        jLabel38.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel38.setFont(new java.awt.Font("Ubuntu", 1, 18));
         jLabel38.setText("Tipo de Cita");
 
-        jLabel41.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel41.setFont(new java.awt.Font("Ubuntu", 1, 18));
         jLabel41.setText("Estado");
 
         jScrollPane14.setViewportView(jTextPane4);
@@ -1770,19 +1769,19 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jScrollPane16.setViewportView(jTextPane6);
 
-        jLabel33.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel33.setFont(new java.awt.Font("Ubuntu", 1, 18));
         jLabel33.setText("Paciente");
 
-        jLabel34.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel34.setFont(new java.awt.Font("Ubuntu", 1, 18));
         jLabel34.setText("DNI");
 
-        jLabel42.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel42.setFont(new java.awt.Font("Ubuntu", 1, 18));
         jLabel42.setText("Nombre");
 
-        jLabel43.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel43.setFont(new java.awt.Font("Ubuntu", 1, 18));
         jLabel43.setText("Email");
 
-        jLabel44.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel44.setFont(new java.awt.Font("Ubuntu", 1, 18));
         jLabel44.setText("Teléfono");
 
         jScrollPane12.setViewportView(jTextPane7);
@@ -1814,7 +1813,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(jScrollPane18, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 151, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jScrollPane19, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 237, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(163, Short.MAX_VALUE))
             .add(jPanelDetalleCitaLayout.createSequentialGroup()
                 .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
                     .add(org.jdesktop.layout.GroupLayout.LEADING, jPanelDetalleCitaLayout.createSequentialGroup()
@@ -1849,7 +1848,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                         .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(jLabel43)
                             .add(jScrollPane14, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 80, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(149, Short.MAX_VALUE))
+                .addContainerGap(257, Short.MAX_VALUE))
         );
         jPanelDetalleCitaLayout.setVerticalGroup(
             jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
