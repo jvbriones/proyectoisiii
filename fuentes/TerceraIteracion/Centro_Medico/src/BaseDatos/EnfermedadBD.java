@@ -5,6 +5,7 @@ import java.sql.*;
 import org.hibernate.Session;
 import org.hibernate.*;
 import java.util.ArrayList;
+import java.util.Set;
 
 public class EnfermedadBD{
 
@@ -66,8 +67,8 @@ public class EnfermedadBD{
         /*
          * ObtenerEnfermedades
          */
-	public ArrayList ObtenerEnfermedades(String dni){
-            return new ArrayList();
-        }
+	//public Set<Enfermedad> ObtenerEnfermedades(String dni){
+          //  return new Set;
+        //}
 
 }
