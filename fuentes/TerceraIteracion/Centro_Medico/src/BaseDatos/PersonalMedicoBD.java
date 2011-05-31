@@ -145,10 +145,23 @@ public class PersonalMedicoBD {
 
     public void actualizar (PersonalMedico PersonalMedico){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-
         session.beginTransaction ();
         session.update (PersonalMedico);
         session.getTransaction().commit();
     }
+
+       public boolean existePersonal(String Dni) throws SQLException {
+
+       PersonalMedico Per= obtener(Dni);
+       if (Per!=null){
+           System.out.print("el tio existe\n");
+           return true;
+       }
+       else{
+           System.out.print( " el tio NO existe\n");
+           return false;
+       }
+    }
+
 
 }
