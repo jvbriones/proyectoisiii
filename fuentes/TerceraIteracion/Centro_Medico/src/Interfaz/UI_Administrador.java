@@ -108,21 +108,6 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabelTipoUsuarioIdentificado = new javax.swing.JLabel();
         jLabelIcono = new javax.swing.JLabel();
         ZonaTrabajo = new javax.swing.JLayeredPane();
-        jPanelPrincipal = new javax.swing.JPanel();
-        jButtonEstadPersTipo = new javax.swing.JButton();
-        jLabelEstadPersTipo1 = new javax.swing.JLabel();
-        jLabelEstadCitas1 = new javax.swing.JLabel();
-        jLabelEstadPersFecha1 = new javax.swing.JLabel();
-        jButtonEstadPersFecha = new javax.swing.JButton();
-        jButtonGestionarPaciente = new javax.swing.JButton();
-        jButtonGestionarPersonal = new javax.swing.JButton();
-        jButtonEstadCitas = new javax.swing.JButton();
-        jButtonGestionarTurno = new javax.swing.JButton();
-        jLabelGestionarTurno1 = new javax.swing.JLabel();
-        jLabelGestionarPersonal1 = new javax.swing.JLabel();
-        jLabelGestionarPaciente3 = new javax.swing.JLabel();
-        jLabelGestionarCita1 = new javax.swing.JLabel();
-        jButtonGestionarCita = new javax.swing.JButton();
         jPanelGestionarTurno = new javax.swing.JPanel();
         jButtonConsultarTurno = new javax.swing.JButton();
         jButtonAltaTurno = new javax.swing.JButton();
@@ -148,6 +133,23 @@ public class UI_Administrador extends javax.swing.JFrame {
         fechainiciomostrar2 = new javax.swing.JTextField();
         fechainiciomostrar3 = new javax.swing.JTextField();
         jLabelFechaInicioTurno1 = new javax.swing.JLabel();
+        dateChooserCombo3 = new datechooser.beans.DateChooserCombo();
+        dateChooserCombo4 = new datechooser.beans.DateChooserCombo();
+        jPanelPrincipal = new javax.swing.JPanel();
+        jButtonEstadPersTipo = new javax.swing.JButton();
+        jLabelEstadPersTipo1 = new javax.swing.JLabel();
+        jLabelEstadCitas1 = new javax.swing.JLabel();
+        jLabelEstadPersFecha1 = new javax.swing.JLabel();
+        jButtonEstadPersFecha = new javax.swing.JButton();
+        jButtonGestionarPaciente = new javax.swing.JButton();
+        jButtonGestionarPersonal = new javax.swing.JButton();
+        jButtonEstadCitas = new javax.swing.JButton();
+        jButtonGestionarTurno = new javax.swing.JButton();
+        jLabelGestionarTurno1 = new javax.swing.JLabel();
+        jLabelGestionarPersonal1 = new javax.swing.JLabel();
+        jLabelGestionarPaciente3 = new javax.swing.JLabel();
+        jLabelGestionarCita1 = new javax.swing.JLabel();
+        jButtonGestionarCita = new javax.swing.JButton();
         jPanelGestionarPersonal = new javax.swing.JPanel();
         jTextFieldTelefonoPersonal = new javax.swing.JTextField();
         jLabelTelefonoPersonal = new javax.swing.JLabel();
@@ -191,6 +193,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
         jLabelErrorPersonal = new javax.swing.JLabel();
+        dateChooserCombo2 = new datechooser.beans.DateChooserCombo();
         jPanelGestionarCita = new javax.swing.JPanel();
         jPanelGestionarCitaAlta = new javax.swing.JPanel();
         jScrollPane9 = new javax.swing.JScrollPane();
@@ -315,6 +318,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
+        dateChooserCombo1 = new datechooser.beans.DateChooserCombo();
 
         jLabelErrorPaciente.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelErrorPaciente.setForeground(new java.awt.Color(255, 0, 0));
@@ -453,6 +457,155 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         ZonaTrabajo.setMinimumSize(new java.awt.Dimension(902, 520));
         ZonaTrabajo.setPreferredSize(new java.awt.Dimension(912, 530));
+
+        jPanelGestionarTurno.setMaximumSize(new java.awt.Dimension(901, 531));
+        jPanelGestionarTurno.setPreferredSize(new java.awt.Dimension(901, 531));
+        jPanelGestionarTurno.setLayout(null);
+
+        jButtonConsultarTurno.setText("Consultar");
+        jButtonConsultarTurno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonConsultarTurnoMouseClicked(evt);
+            }
+        });
+        jPanelGestionarTurno.add(jButtonConsultarTurno);
+        jButtonConsultarTurno.setBounds(460, 440, 93, 39);
+
+        jButtonAltaTurno.setText("Alta");
+        jButtonAltaTurno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonAltaTurnoMouseClicked(evt);
+            }
+        });
+        jPanelGestionarTurno.add(jButtonAltaTurno);
+        jButtonAltaTurno.setBounds(340, 440, 93, 39);
+
+        jButtonGuardarTurno.setText("Guardar");
+        jButtonGuardarTurno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonGuardarTurnoMouseClicked(evt);
+            }
+        });
+        jPanelGestionarTurno.add(jButtonGuardarTurno);
+        jButtonGuardarTurno.setBounds(340, 440, 71, 39);
+
+        jButtonLimpiarTurno.setText("Limpiar");
+        jButtonLimpiarTurno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonLimpiarTurnoMouseClicked(evt);
+            }
+        });
+        jButtonLimpiarTurno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLimpiarTurnoActionPerformed(evt);
+            }
+        });
+        jPanelGestionarTurno.add(jButtonLimpiarTurno);
+        jButtonLimpiarTurno.setBounds(220, 440, 65, 39);
+
+        jLabelDNITurno.setText("DNI");
+        jPanelGestionarTurno.add(jLabelDNITurno);
+        jLabelDNITurno.setBounds(350, 260, 18, 14);
+
+        jTextFieldDNIGestionarTurno.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldDNIGestionarTurnoKeyTyped(evt);
+            }
+        });
+        jPanelGestionarTurno.add(jTextFieldDNIGestionarTurno);
+        jTextFieldDNIGestionarTurno.setBounds(390, 250, 95, 20);
+
+        jTextAreaInfoConsultaTurno.setBackground(new java.awt.Color(255, 204, 102));
+        jTextAreaInfoConsultaTurno.setColumns(17);
+        jTextAreaInfoConsultaTurno.setEditable(false);
+        jTextAreaInfoConsultaTurno.setFont(new java.awt.Font("Lucida Grande", 0, 18));
+        jTextAreaInfoConsultaTurno.setRows(3);
+        jTextAreaInfoConsultaTurno.setText("Introduce el DNI del personal, una fecha y las horas que trabaja el personal para guardar\nsu turno. Si introduces un DNI y pulsas \"Consultar\" se sabe el turno del DNI.");
+        jScrollPane3.setViewportView(jTextAreaInfoConsultaTurno);
+
+        jPanelGestionarTurno.add(jScrollPane3);
+        jScrollPane3.setBounds(60, 110, 780, 120);
+
+        jTextAreaInfoTurno.setBackground(new java.awt.Color(255, 204, 102));
+        jTextAreaInfoTurno.setColumns(17);
+        jTextAreaInfoTurno.setEditable(false);
+        jTextAreaInfoTurno.setFont(new java.awt.Font("Lucida Grande", 0, 18));
+        jTextAreaInfoTurno.setRows(3);
+        jTextAreaInfoTurno.setText("Modifica la fecha y la shorts en trabajar del trabajador con el DNI del formulario,\nluego dale a \"Guardar\" y se actualizará su turno de trabajo. \nSi deseas consultar el turno de otro DNI, introdúcuelo y dale a \"Consultar\"");
+        jScrollPane4.setViewportView(jTextAreaInfoTurno);
+
+        jPanelGestionarTurno.add(jScrollPane4);
+        jScrollPane4.setBounds(60, 110, 780, 120);
+
+        jLabelGestionarPaciente6.setFont(new java.awt.Font("Lucida Grande", 1, 48));
+        jLabelGestionarPaciente6.setText("Gestionar Turno");
+        jPanelGestionarTurno.add(jLabelGestionarPaciente6);
+        jLabelGestionarPaciente6.setBounds(260, 20, 373, 62);
+
+        jLabelFechaInicioTurno.setText("Fecha inicio");
+        jPanelGestionarTurno.add(jLabelFechaInicioTurno);
+        jLabelFechaInicioTurno.setBounds(140, 300, 55, 14);
+
+        jLabel5.setText("_________________________________________________________________");
+        jPanelGestionarTurno.add(jLabel5);
+        jLabel5.setBounds(252, 70, 390, 14);
+
+        jLabelFechaFinTurno.setText("Fecha fin");
+        jPanelGestionarTurno.add(jLabelFechaFinTurno);
+        jLabelFechaFinTurno.setBounds(390, 300, 74, 14);
+
+        jLabelTurnoTrabajo.setText("Turno de trabajo");
+        jPanelGestionarTurno.add(jLabelTurnoTrabajo);
+        jLabelTurnoTrabajo.setBounds(610, 290, 110, 14);
+
+        jRadioButtonManiana.setText("Mañana (8h-16h)");
+        jPanelGestionarTurno.add(jRadioButtonManiana);
+        jRadioButtonManiana.setBounds(600, 320, 150, 23);
+
+        jRadioButtonTarde.setText("Tarde (16h-24h)");
+        jRadioButtonTarde.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonTardeActionPerformed(evt);
+            }
+        });
+        jPanelGestionarTurno.add(jRadioButtonTarde);
+        jRadioButtonTarde.setBounds(600, 350, 150, 23);
+
+        jRadioButtonNoche.setText("Noche (24h-8h)");
+        jPanelGestionarTurno.add(jRadioButtonNoche);
+        jRadioButtonNoche.setBounds(600, 380, 150, 23);
+
+        jButtonBajaTurno.setText("Modificar");
+        jButtonBajaTurno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonBajaTurnoMouseClicked(evt);
+            }
+        });
+        jPanelGestionarTurno.add(jButtonBajaTurno);
+        jButtonBajaTurno.setBounds(580, 440, 93, 39);
+
+        jLabelErrorGestionarTurno.setFont(new java.awt.Font("Lucida Grande", 1, 13));
+        jLabelErrorGestionarTurno.setForeground(new java.awt.Color(255, 0, 0));
+        jLabelErrorGestionarTurno.setText("ERROR: revise los campos en rojo");
+        jPanelGestionarTurno.add(jLabelErrorGestionarTurno);
+        jLabelErrorGestionarTurno.setBounds(320, 420, 215, 18);
+        jPanelGestionarTurno.add(fechainiciomostrar1);
+        fechainiciomostrar1.setBounds(140, 320, 160, 20);
+        jPanelGestionarTurno.add(fechainiciomostrar2);
+        fechainiciomostrar2.setBounds(390, 320, 160, 20);
+        jPanelGestionarTurno.add(fechainiciomostrar3);
+        fechainiciomostrar3.setBounds(140, 390, 160, 20);
+
+        jLabelFechaInicioTurno1.setText("Tipo");
+        jPanelGestionarTurno.add(jLabelFechaInicioTurno1);
+        jLabelFechaInicioTurno1.setBounds(140, 370, 20, 14);
+        jPanelGestionarTurno.add(dateChooserCombo3);
+        dateChooserCombo3.setBounds(140, 330, 155, 20);
+        jPanelGestionarTurno.add(dateChooserCombo4);
+        dateChooserCombo4.setBounds(390, 330, 155, 20);
+
+        jPanelGestionarTurno.setBounds(0, 0, 901, 531);
+        ZonaTrabajo.add(jPanelGestionarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelPrincipal.setMaximumSize(new java.awt.Dimension(901, 531));
         jPanelPrincipal.setMinimumSize(new java.awt.Dimension(901, 531));
@@ -606,151 +759,6 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jPanelPrincipal.setBounds(-9, -20, 910, 550);
         ZonaTrabajo.add(jPanelPrincipal, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        jPanelGestionarTurno.setMaximumSize(new java.awt.Dimension(901, 531));
-        jPanelGestionarTurno.setPreferredSize(new java.awt.Dimension(901, 531));
-        jPanelGestionarTurno.setLayout(null);
-
-        jButtonConsultarTurno.setText("Consultar");
-        jButtonConsultarTurno.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonConsultarTurnoMouseClicked(evt);
-            }
-        });
-        jPanelGestionarTurno.add(jButtonConsultarTurno);
-        jButtonConsultarTurno.setBounds(460, 440, 93, 39);
-
-        jButtonAltaTurno.setText("Alta");
-        jButtonAltaTurno.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonAltaTurnoMouseClicked(evt);
-            }
-        });
-        jPanelGestionarTurno.add(jButtonAltaTurno);
-        jButtonAltaTurno.setBounds(340, 440, 93, 39);
-
-        jButtonGuardarTurno.setText("Guardar");
-        jButtonGuardarTurno.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonGuardarTurnoMouseClicked(evt);
-            }
-        });
-        jPanelGestionarTurno.add(jButtonGuardarTurno);
-        jButtonGuardarTurno.setBounds(340, 440, 71, 39);
-
-        jButtonLimpiarTurno.setText("Limpiar");
-        jButtonLimpiarTurno.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonLimpiarTurnoMouseClicked(evt);
-            }
-        });
-        jButtonLimpiarTurno.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonLimpiarTurnoActionPerformed(evt);
-            }
-        });
-        jPanelGestionarTurno.add(jButtonLimpiarTurno);
-        jButtonLimpiarTurno.setBounds(220, 440, 65, 39);
-
-        jLabelDNITurno.setText("DNI");
-        jPanelGestionarTurno.add(jLabelDNITurno);
-        jLabelDNITurno.setBounds(350, 260, 18, 14);
-
-        jTextFieldDNIGestionarTurno.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextFieldDNIGestionarTurnoKeyTyped(evt);
-            }
-        });
-        jPanelGestionarTurno.add(jTextFieldDNIGestionarTurno);
-        jTextFieldDNIGestionarTurno.setBounds(390, 250, 95, 20);
-
-        jTextAreaInfoConsultaTurno.setBackground(new java.awt.Color(255, 204, 102));
-        jTextAreaInfoConsultaTurno.setColumns(17);
-        jTextAreaInfoConsultaTurno.setEditable(false);
-        jTextAreaInfoConsultaTurno.setFont(new java.awt.Font("Lucida Grande", 0, 18));
-        jTextAreaInfoConsultaTurno.setRows(3);
-        jTextAreaInfoConsultaTurno.setText("Introduce el DNI del personal, una fecha y las horas que trabaja el personal para guardar\nsu turno. Si introduces un DNI y pulsas \"Consultar\" se sabe el turno del DNI.");
-        jScrollPane3.setViewportView(jTextAreaInfoConsultaTurno);
-
-        jPanelGestionarTurno.add(jScrollPane3);
-        jScrollPane3.setBounds(60, 110, 780, 120);
-
-        jTextAreaInfoTurno.setBackground(new java.awt.Color(255, 204, 102));
-        jTextAreaInfoTurno.setColumns(17);
-        jTextAreaInfoTurno.setEditable(false);
-        jTextAreaInfoTurno.setFont(new java.awt.Font("Lucida Grande", 0, 18));
-        jTextAreaInfoTurno.setRows(3);
-        jTextAreaInfoTurno.setText("Modifica la fecha y la shorts en trabajar del trabajador con el DNI del formulario,\nluego dale a \"Guardar\" y se actualizará su turno de trabajo. \nSi deseas consultar el turno de otro DNI, introdúcuelo y dale a \"Consultar\"");
-        jScrollPane4.setViewportView(jTextAreaInfoTurno);
-
-        jPanelGestionarTurno.add(jScrollPane4);
-        jScrollPane4.setBounds(60, 110, 780, 120);
-
-        jLabelGestionarPaciente6.setFont(new java.awt.Font("Lucida Grande", 1, 48));
-        jLabelGestionarPaciente6.setText("Gestionar Turno");
-        jPanelGestionarTurno.add(jLabelGestionarPaciente6);
-        jLabelGestionarPaciente6.setBounds(260, 20, 373, 62);
-
-        jLabelFechaInicioTurno.setText("Fecha inicio");
-        jPanelGestionarTurno.add(jLabelFechaInicioTurno);
-        jLabelFechaInicioTurno.setBounds(140, 300, 55, 14);
-
-        jLabel5.setText("_________________________________________________________________");
-        jPanelGestionarTurno.add(jLabel5);
-        jLabel5.setBounds(252, 70, 390, 14);
-
-        jLabelFechaFinTurno.setText("Fecha fin");
-        jPanelGestionarTurno.add(jLabelFechaFinTurno);
-        jLabelFechaFinTurno.setBounds(390, 290, 74, 14);
-
-        jLabelTurnoTrabajo.setText("Turno de trabajo");
-        jPanelGestionarTurno.add(jLabelTurnoTrabajo);
-        jLabelTurnoTrabajo.setBounds(610, 290, 110, 14);
-
-        jRadioButtonManiana.setText("Mañana (8h-16h)");
-        jPanelGestionarTurno.add(jRadioButtonManiana);
-        jRadioButtonManiana.setBounds(600, 320, 150, 23);
-
-        jRadioButtonTarde.setText("Tarde (16h-24h)");
-        jRadioButtonTarde.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonTardeActionPerformed(evt);
-            }
-        });
-        jPanelGestionarTurno.add(jRadioButtonTarde);
-        jRadioButtonTarde.setBounds(600, 350, 150, 23);
-
-        jRadioButtonNoche.setText("Noche (24h-8h)");
-        jPanelGestionarTurno.add(jRadioButtonNoche);
-        jRadioButtonNoche.setBounds(600, 380, 150, 23);
-
-        jButtonBajaTurno.setText("Modificar");
-        jButtonBajaTurno.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonBajaTurnoMouseClicked(evt);
-            }
-        });
-        jPanelGestionarTurno.add(jButtonBajaTurno);
-        jButtonBajaTurno.setBounds(580, 440, 93, 39);
-
-        jLabelErrorGestionarTurno.setFont(new java.awt.Font("Lucida Grande", 1, 13));
-        jLabelErrorGestionarTurno.setForeground(new java.awt.Color(255, 0, 0));
-        jLabelErrorGestionarTurno.setText("ERROR: revise los campos en rojo");
-        jPanelGestionarTurno.add(jLabelErrorGestionarTurno);
-        jLabelErrorGestionarTurno.setBounds(320, 420, 215, 18);
-        jPanelGestionarTurno.add(fechainiciomostrar1);
-        fechainiciomostrar1.setBounds(140, 320, 160, 20);
-        jPanelGestionarTurno.add(fechainiciomostrar2);
-        fechainiciomostrar2.setBounds(390, 320, 160, 20);
-        jPanelGestionarTurno.add(fechainiciomostrar3);
-        fechainiciomostrar3.setBounds(140, 390, 160, 20);
-
-        jLabelFechaInicioTurno1.setText("Tipo");
-        jPanelGestionarTurno.add(jLabelFechaInicioTurno1);
-        jLabelFechaInicioTurno1.setBounds(140, 370, 20, 14);
-
-        jPanelGestionarTurno.setBounds(0, 0, -1, -1);
-        ZonaTrabajo.add(jPanelGestionarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarPersonal.setAlignmentX(1.0F);
         jPanelGestionarPersonal.setMinimumSize(new java.awt.Dimension(901, 510));
@@ -989,8 +997,9 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabelErrorPersonal.setText(" Los campos con * son obligatorios");
         jLabelErrorPersonal.setName("jLabelErrorPersonal"); // NOI18N
         jPanelGestionarPersonal.add(jLabelErrorPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, 270, 20));
+        jPanelGestionarPersonal.add(dateChooserCombo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, -1, -1));
 
-        jPanelGestionarPersonal.setBounds(0, 0, -1, -1);
+        jPanelGestionarPersonal.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelGestionarPersonal, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jPanelGestionarPersonal.getAccessibleContext().setAccessibleName("jLabelErrorPersonal");
 
@@ -1447,7 +1456,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelGestionarCita.add(jLabelDNIGestionarCitaMedico);
         jLabelDNIGestionarCitaMedico.setBounds(460, 230, 80, 14);
 
-        jPanelGestionarCita.setBounds(0, 0, -1, -1);
+        jPanelGestionarCita.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelGestionarCita, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadPersTipo.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1506,7 +1515,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jScrollPane5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 327, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanelEstadPersTipo.setBounds(0, 0, -1, -1);
+        jPanelEstadPersTipo.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelEstadPersTipo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadPersFecha.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1572,7 +1581,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 .add(jScrollPane6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 327, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanelEstadPersFecha.setBounds(0, 0, -1, -1);
+        jPanelEstadPersFecha.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelEstadPersFecha, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelEstadCitas.setMaximumSize(new java.awt.Dimension(901, 531));
@@ -1851,7 +1860,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jPanelEstadCitas.add(jLabel15);
         jLabel15.setBounds(469, 201, 52, 14);
 
-        jPanelEstadCitas.setBounds(0, 0, -1, -1);
+        jPanelEstadCitas.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelEstadCitas, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         getContentPane().add(ZonaTrabajo);
@@ -2079,6 +2088,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         jLabel34.setForeground(new java.awt.Color(255, 0, 0));
         jLabel34.setText(" Los campos con * son obligatorios");
         jPanelGestionarPaciente.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 420, 270, -1));
+        jPanelGestionarPaciente.add(dateChooserCombo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 360, -1, -1));
 
         getContentPane().add(jPanelGestionarPaciente);
         jPanelGestionarPaciente.setBounds(10, 170, 900, 530);
@@ -2513,8 +2523,8 @@ public class UI_Administrador extends javax.swing.JFrame {
             Date fechaFin=null;
             boolean exito;
 
- //            fechaInicio = dateChooserCombo3.getSelectedDate().getTime();
-   //          fechaFin = dateChooserCombo4.getSelectedDate().getTime();
+            fechaInicio = dateChooserCombo3.getSelectedDate().getTime();
+             fechaFin = dateChooserCombo4.getSelectedDate().getTime();
 
              String tip="";
 
@@ -2934,7 +2944,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             byte[] urlFoto = null;                              //HAY QUE GUARDAR LA FOTO Y PASAR LA RUTA DE DONDE ESTA
             boolean exito;
 
-//            fechaNacimiento = dateChooserCombo2.getSelectedDate().getTime();
+           fechaNacimiento = dateChooserCombo2.getSelectedDate().getTime();
             String tipoPersonal = "Analista";
             if(jRadioButtonAnalista.isSelected())
                 tipoPersonal = "Analista";
@@ -4388,6 +4398,10 @@ public class UI_Administrador extends javax.swing.JFrame {
     private javax.swing.JLayeredPane ZonaTrabajo;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
+    private datechooser.beans.DateChooserCombo dateChooserCombo1;
+    private datechooser.beans.DateChooserCombo dateChooserCombo2;
+    private datechooser.beans.DateChooserCombo dateChooserCombo3;
+    private datechooser.beans.DateChooserCombo dateChooserCombo4;
     private javax.swing.JTextField fechainiciomostrar1;
     private javax.swing.JTextField fechainiciomostrar2;
     private javax.swing.JTextField fechainiciomostrar3;
