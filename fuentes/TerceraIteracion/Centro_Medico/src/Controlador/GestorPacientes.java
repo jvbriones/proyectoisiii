@@ -129,7 +129,7 @@ public class GestorPacientes {
        Set<Receta> recetas=null;
        RecetaBD receta= new RecetaBD();
        
-        recetas=receta.obtenerRecetas(DNIPaciente);
+        recetas=receta.obtenerRecetasPaciente(DNIPaciente);
      
        return recetas;
            

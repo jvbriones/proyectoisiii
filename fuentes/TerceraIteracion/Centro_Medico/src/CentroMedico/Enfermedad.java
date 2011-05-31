@@ -59,6 +59,14 @@ public class Enfermedad implements Serializable{
         this.Id = Id;
     }
 
+    public Date getFechaDet() {
+        return FechaDet;
+    }
+
+    public String getTipo() {
+        return Tipo;
+    }
+
 
 	/** Metodos GET **/
 
@@ -74,11 +82,6 @@ public class Enfermedad implements Serializable{
 		return this.Descripcion;
 	}
 
-	public String getFechaDet(){
-
-            return "";
-		//return this.FechaDet;
-	}
 
 	public String getVolante(){
 
