@@ -43,7 +43,7 @@
     </joined-subclass>
     <joined-subclass name="CentroMedico.Paciente">
         <key column="DNI_PACIENTE"/>
-        <many-to-one class="CentroMedico.Medico" name="DNIMedico" column="DNI_MEDICO"/>
+        <many-to-one name="Cita" class="CentroMedico.Cita" column="ID_CITA" unique="true" cascade="all" lazy = "false"/>
     </joined-subclass>
     <joined-subclass name="CentroMedico.PersonalMedico">
         <key column="DNI_PERSONALMEDICO"/>

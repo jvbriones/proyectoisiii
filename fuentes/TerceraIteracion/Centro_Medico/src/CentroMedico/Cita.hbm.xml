@@ -4,15 +4,13 @@
   <class name="CentroMedico.Cita">
            
     <id name="Id" column="ID_CITA" >
-      <generator class="assigned"/>
+      <generator class="native"/>
     </id>
-     
     <property name="Fecha"/>
-	
     <property name="Estado"/>
-    
-     <property name="Tipo"/>
-	
-    <many-to-one class="CentroMedico.Paciente" name="DNIPaciente" column="DNI_PACIENTE"/>
+    <property name="Tipo"/>
+    <property name="DNIPaciente"/>
+    <property name="DNIMedico"/>
+
   </class>
 </hibernate-mapping>

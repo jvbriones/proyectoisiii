@@ -31,7 +31,7 @@ public class Cita implements Serializable{
     private String DNIPaciente;
     private String DNIMedico;
 
-
+    public Cita(){};
     /********** Constructores **********/
     public Cita(boolean estado, Date fecha, String tipo, String DNIpaciente, String DNImedico){
         
