@@ -27,4 +27,17 @@ public class Farmaceutico extends Usuario{
             String Telefono, Date FecNac, String LugarNac, String Foto) {
         super(Dni, Nombre, Apellidos, Direccion, Email, Contrasena, Telefono, FecNac, LugarNac, Foto, "Farmaceutico");
     }
+    public void actualizar(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
+            String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto,String Tipo){
+        super.setDNI(Dni);
+        super.setNombre(Nombre);
+        super.setApellidos(Apellidos);
+        super.setDireccion(Direccion);
+        super.setEmail(Email);
+        super.setContrasenia(Contrasenia);
+        super.setTelefono(Telefono);
+        super.setFecNac(FecNac);
+        super.setLugarNac(LugarNac);
+        super.setFoto(Foto);
+    }
 }
