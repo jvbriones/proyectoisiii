@@ -24,7 +24,7 @@ import java.util.logging.Logger;
  */
 public class Paciente extends Usuario {
     private Cita Cita;
-    private Set <Enfermedad> Enfermedades = new HashSet<Enfermedad>(0);
+    private Set<Enfermedad> Enfermedades =  new HashSet<Enfermedad>(0);
 
 
     public Cita getCita() {
@@ -49,5 +49,23 @@ public class Paciente extends Usuario {
     public Paciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
             String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto){
         super(Dni, Nombre, Apellidos, Direccion, Email, Contrasenia, Telefono, FecNac, LugarNac, Foto, "Paciente");
+    }
+    public void actualizar(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
+            String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto){
+          setDNI(Dni);
+        setNombre(Nombre);
+        setApellidos(Apellidos);
+        setDireccion(Direccion);
+        setEmail(Email);
+        setContrasenia(Contrasenia);
+        setTelefono(Telefono);
+        setFecNac(FecNac);
+        setLugarNac(LugarNac);
+        setFoto(Foto);
+
+    
+    }
+    public void anadirEnfermedad(Enfermedad enfermedad){
+        Enfermedades.add(enfermedad);
     }
 }
