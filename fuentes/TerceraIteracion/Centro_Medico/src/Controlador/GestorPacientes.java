@@ -11,11 +11,17 @@
 
 package Controlador;
 
+import BaseDatos.EnfermedadBD;
 import BaseDatos.PacienteBD;
+import BaseDatos.RecetaBD;
+import CentroMedico.Enfermedad;
 import CentroMedico.Paciente;
+import CentroMedico.Receta;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Set;
 
 
 /**
@@ -84,5 +90,63 @@ public class GestorPacientes {
         bd_paciente.actualizar(paciente);
         return true;
 }
+
+   
+   // Hecho por Miguel
+   public Set<Enfermedad> consultarInfoClinicaPaciente(String DNIPaciente) throws SQLException{
+       PacienteBD PacBD = new PacienteBD();
+         Set<Enfermedad> enf=null;
+           
+       boolean existe=PacBD.existePaciente(DNIPaciente);
+       String mensaje="";
+       if (!existe) {
+            mensaje="No existe el Paciente con ese DNI";
+            System.out.println(mensaje);
+            enf=null;
+       }
+       else{
+       
+           EnfermedadBD enfermedad = new EnfermedadBD();
+          // enf= enfermedad.ObtenerEnfermedades(DNIPaciente);
+       }
+       return enf;
+           
+       }
+       
+   // Hecho por Miguel
+   
+   public Set<Enfermedad> consultarInformacionClinica(String DNIPaciente) throws SQLException{
+       Set<Enfermedad> enf=null;
+       
+        EnfermedadBD enfermedad = new EnfermedadBD();
+          // enf= enfermedad.ObtenerEnfermedades(DNIPaciente);
+     
+       return enf;
+           
+       }
+   
+    public Set<Receta> obtenerRecetas(String DNIPaciente) throws SQLException{
+       Set<Receta> recetas=null;
+       RecetaBD receta= new RecetaBD();
+       
+        recetas=receta.obtenerRecetas(DNIPaciente);
+     
+       return recetas;
+           
+       }
+    
+    public Receta seleccionarReceta(int idReceta) throws SQLException{
+ 
+       RecetaBD recetabd= new RecetaBD();
+       
+        Receta receta=recetabd.obtener(idReceta);
+     
+       return receta;
+           
+       }
+    
+    
+       
+       
 
 }
