@@ -31,4 +31,17 @@ public class Paciente extends Usuario {
             String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto){
         super(Dni, Nombre, Apellidos, Direccion, Email, Contrasenia, Telefono, FecNac, LugarNac, Foto, "Paciente");
     }
+    public void actualizar(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
+            String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto){
+        super.setDNI(Dni);
+        super.setNombre(Nombre);
+        super.setApellidos(Apellidos);
+        super.setDireccion(Direccion);
+        super.setEmail(Email);
+        super.setContrasenia(Contrasenia);
+        super.setTelefono(Telefono);
+        super.setFecNac(FecNac);
+        super.setLugarNac(LugarNac);
+        super.setFoto(Foto);
+    }
 }
