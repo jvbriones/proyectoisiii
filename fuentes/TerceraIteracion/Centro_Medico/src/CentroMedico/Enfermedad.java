@@ -22,6 +22,7 @@ public class Enfermedad implements Serializable{
 
 	/** Atributos **/
 	private	int	Id;
+        private String  nombre;
 	private	String	Tipo;
 	private	Date	FechaDet;
 	private	String	Descripcion;
