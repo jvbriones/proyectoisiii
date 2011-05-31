@@ -8,6 +8,7 @@ package Controlador;
 import BaseDatos.PacienteBD;
 import BaseDatos.RecetaBD;
 import CentroMedico.Cita;
+import CentroMedico.Enfermedad;
 import CentroMedico.Medicamento;
 import CentroMedico.MedicamentoRecetado;
 import CentroMedico.Paciente;
@@ -83,6 +84,19 @@ public class GestorMedico {
         re.getMedicamentosRecetados().add(me);
 
         return me;
+
+    }
+    public boolean anadirEnfermedad(String Nombre,String Tipo, Date FechaDet,String Descripcion,String Volante,Paciente Paci){
+
+
+        PacienteBD pac=new PacienteBD();
+        Enfermedad enfe = new Enfermedad(Nombre,Tipo,FechaDet,Descripcion,Volante);
+        Paci.anadirEnfermedad(enfe);
+        pac.actualizar(Paci);
+        return true;
+
+
+
 
     }
 /*
