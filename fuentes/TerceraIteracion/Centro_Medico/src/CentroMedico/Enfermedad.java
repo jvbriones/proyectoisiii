@@ -43,12 +43,30 @@ public class Enfermedad implements Serializable{
 	  this.Volante = volante;
   }
 
+    public Set<Enfermedad> getEnfermedades() {
+        return Enfermedades;
+    }
+
+    public void setEnfermedades(Set<Enfermedad> Enfermedades) {
+        this.Enfermedades = Enfermedades;
+    }
+
+    public int getId() {
+        return Id;
+    }
+
+    public void setId(int Id) {
+        this.Id = Id;
+    }
+
 
 	/** Metodos GET **/
 
-	public int getNombre(){
 
-		return this.Id;
+
+	public String getNombre(){
+
+		return this.Nombre;
 	}
 
 	public String getDescripcion(){
@@ -69,9 +87,9 @@ public class Enfermedad implements Serializable{
 
 	/** Metodos SET **/
 	
-	public void setNombre(int id){
+	public void setNombre(String nombre){
 
-		this.Id = id;
+		this.Nombre = nombre;
 	}
 
 	public void setDescripcion(String descrip){
@@ -88,6 +106,9 @@ public class Enfermedad implements Serializable{
 
 		this.Volante = volante;
 	}
+        public void setTipo(String tipo){
+            this.Tipo=tipo;
+        }
 	public void anadirEnfermedad(Enfermedad enfermedad){
             Enfermedades.add(enfermedad);
         }
