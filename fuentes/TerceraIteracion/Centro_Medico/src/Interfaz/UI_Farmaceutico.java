@@ -2605,11 +2605,8 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
         PacienteBD pac = new PacienteBD();
         Paciente pacien = null;
 
-        try {
             pacien = pac.obtener(jTextFieldDNIPaciente.getText());
-        } catch (SQLException ex) {
-            Logger.getLogger(UI_Farmaceutico.class.getName()).log(Level.SEVERE, null, ex);
-        }
+       
         if(pacien == null)
             jLabelErrorDNIPaciente.setVisible(true);
         else{

@@ -88,7 +88,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void cargarDatosCitaPaciente( Usuario usu )throws SQLException{
 
-        CitaBD cita_bd=new CitaBD();
+       /* CitaBD cita_bd=new CitaBD();
         Cita nueva_cita = null;
         boolean existe;
 
@@ -108,8 +108,8 @@ public class UI_Paciente extends javax.swing.JFrame {
             String num_mes= String.valueOf(mes);
             String num_anio= String.valueOf(anio);
 
-            jTextFieldDNIMedico.setText(nueva_cita.getPersonalMedico().getDNI());
-            jTextFieldDNIPacienteCita.setText(nueva_cita.getPaciente().getDNI());
+          //  jTextFieldDNIMedico.setText(nueva_cita.getPersonalMedico().getDNI());
+          //  jTextFieldDNIPacienteCita.setText(nueva_cita.getPaciente().getDNI());
             jTextFieldAnioCita.setText(num_anio);
             jTextFieldDiaCita.setText(num_dia);
             jTextFieldMesCita.setText(num_mes);
@@ -122,7 +122,7 @@ public class UI_Paciente extends javax.swing.JFrame {
            
 
 
-
+*/
     }
 
     /** This method is called from within the constructor to
@@ -1240,7 +1240,7 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void jButtonPedirAltaCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonPedirAltaCitaMouseClicked
         // TODO add your handling code here:
         GestorCitas gtcts = new GestorCitas();
-        try{
+        /*try{
             if(gtcts.ObtenerCita(user.getDNI()) != null){
                 JOptionPane.showMessageDialog(null, "Ya tiene una cita asignada", "Alta cita",JOptionPane.WARNING_MESSAGE);
             }else{
@@ -1249,7 +1249,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             }
         }catch(SQLException ex){
             System.err.println(ex.getMessage());
-        }
+        }*/
     }//GEN-LAST:event_jButtonPedirAltaCitaMouseClicked
 
     private void jTextFieldTelefonoPacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldTelefonoPacienteKeyTyped
@@ -1388,7 +1388,7 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void jButtonConsultarCita1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarCita1MouseClicked
         // TODO add your handling code here:
 
-        try{
+        /*try{
             GestorCitas gtcts = new GestorCitas();
             Cita ct = gtcts.ObtenerCita(user.getDNI());
 
@@ -1414,6 +1414,8 @@ public class UI_Paciente extends javax.swing.JFrame {
             System.err.println(ex.getMessage());
             jTextAreaInfo1.setText("¡Se produjo un error!\n\tPerdone las molestias");
         }
+         */
+
     }//GEN-LAST:event_jButtonConsultarCita1MouseClicked
 
     private void jButtonModificarPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonModificarPacienteMouseClicked

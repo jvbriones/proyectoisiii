@@ -2464,8 +2464,8 @@ public class UI_Administrador extends javax.swing.JFrame {
         jTextAreaInfoTurno.setVisible(true);
         jButtonBajaTurno.setVisible(true);
         
-        dateChooserCombo3.setVisible(false);
-        dateChooserCombo4.setVisible(false);
+//        dateChooserCombo3.setVisible(false);
+  //      dateChooserCombo4.setVisible(false);
         
         
         fechainiciomostrar1.setVisible(true);
@@ -2486,9 +2486,9 @@ public class UI_Administrador extends javax.swing.JFrame {
             
             
             if ( turno !=null){
-        fechainiciomostrar1.setText(turno.getfechaInicio().toString());
-        fechainiciomostrar2.setText(turno.getfechaFin().toString());
-        fechainiciomostrar3.setText(turno.getTipo());
+//        fechainiciomostrar1.setText(turno.getfechaInicio().toString());
+  //      fechainiciomostrar2.setText(turno.getfechaFin().toString());
+    //    fechainiciomostrar3.setText(turno.getTipo());
         
             }
            // else  new InformacionError().setVisible(true);
@@ -2513,8 +2513,8 @@ public class UI_Administrador extends javax.swing.JFrame {
             Date fechaFin=null;
             boolean exito;
 
-             fechaInicio = dateChooserCombo3.getSelectedDate().getTime();
-             fechaFin = dateChooserCombo4.getSelectedDate().getTime();
+ //            fechaInicio = dateChooserCombo3.getSelectedDate().getTime();
+   //          fechaFin = dateChooserCombo4.getSelectedDate().getTime();
 
              String tip="";
 
@@ -2903,7 +2903,7 @@ public class UI_Administrador extends javax.swing.JFrame {
         try {
           
         Turno turno=turnobd.obtener(jTextFieldDNIGestionarTurno.getText());
-        turno.actualizar(jTextFieldDNIGestionarTurno.getText(),fechainiciomostrar3.getText(),null,null);
+//        turno.actualizar(jTextFieldDNIGestionarTurno.getText(),fechainiciomostrar3.getText(),null,null);
         turnobd.actualizar(turno);
         
         
@@ -2934,7 +2934,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             byte[] urlFoto = null;                              //HAY QUE GUARDAR LA FOTO Y PASAR LA RUTA DE DONDE ESTA
             boolean exito;
 
-            fechaNacimiento = dateChooserCombo2.getSelectedDate().getTime();
+//            fechaNacimiento = dateChooserCombo2.getSelectedDate().getTime();
             String tipoPersonal = "Analista";
             if(jRadioButtonAnalista.isSelected())
                 tipoPersonal = "Analista";
@@ -2977,7 +2977,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             boolean exito;
 
 
-            fechaNacimiento = dateChooserCombo1.getSelectedDate().getTime();
+//            fechaNacimiento = dateChooserCombo1.getSelectedDate().getTime();
 
             try {
                 exito = gesPac.altaPaciente(jTextFieldDNIPaciente.getText(), jTextFieldNombrePaciente.getText(), jTextFieldApellidosPaciente.getText(), jTextFieldDireccionPaciente.getText(), jTextFieldEmailPaciente.getText(), jTextFieldTelefonoPaciente.getText(), fechaNacimiento, jTextFieldLugarNacimientoPaciente.getText(), laurl, "Paciente");
@@ -3005,7 +3005,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 GestorPacientes gesPac = new GestorPacientes();
                 Date fechaNacimiento = null;                        //HAY QUE PROCESARLA LEYÉNDOLA DEL FORMULARIOOOO
                 boolean exito=false;
-                fechaNacimiento = dateChooserCombo1.getSelectedDate().getTime();
+//                fechaNacimiento = dateChooserCombo1.getSelectedDate().getTime();
 
                 try {
                     exito=gesPac.modificarPaciente(jTextFieldDNIPaciente.getText(), jTextFieldNombrePaciente.getText(), jTextFieldApellidosPaciente.getText(), jTextFieldDireccionPaciente.getText(), jTextFieldEmailPaciente.getText(), jTextFieldContraseniaPaciente.getText(),jTextFieldTelefonoPaciente.getText(), fechaNacimiento, jTextFieldLugarNacimientoPaciente.getText(), laurl);
@@ -3036,7 +3036,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             byte[] urlFoto = null;                              //HAY QUE GUARDAR LA FOTO Y PASAR LA RUTA DE DONDE ESTA
             boolean exito;
             
-             fechaNacimiento = dateChooserCombo2.getSelectedDate().getTime();
+//             fechaNacimiento = dateChooserCombo2.getSelectedDate().getTime();
             String tipoPersonal = "";
             if(jRadioButtonAnalista.isSelected())
                 tipoPersonal = "Analista";
@@ -3328,7 +3328,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
     private void jButtonConsultarCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarCitaMouseClicked
         // TODO add your handling code here:
-        String dni = jTextFieldDNIGestionarCitaPaciente.getText();
+       /* String dni = jTextFieldDNIGestionarCitaPaciente.getText();
         if(dni.isEmpty()){
             jTextAreaInfoCitaOnline.setText("Introduce el DNI del paciente y pulse en la opción que desee\n\t\t¡No se introdujo un DNI!");
         }else{
@@ -3344,7 +3344,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                     if(ct == null){
                         jTextAreaInfoCitaOnline.setText("Introduce el DNI del paciente y pulse en la opción que desee\n\tEl DNI introducido no tiene asignada ninguna cita");
                     }else{
-                        /**Mostramos el botón guardar y ocultamos el de alta, así como paneles de texto */
+                        
                         jButtonGuardarCita.setVisible(true);
                         jButtonVolver.setVisible(true);
                         jButtonCancelarCita.setVisible(true);
@@ -3352,18 +3352,18 @@ public class UI_Administrador extends javax.swing.JFrame {
                         jButtonConsultarCita.setVisible(false);
                         jButtonAltaCita.setVisible(false);
 
-                        /**Mostramos los botones de fecha y hora  */
+                        
                         jPanelGestionarCitaFecha.setVisible(true);
                         jPanelGestionarCitaHora.setVisible(true);
 
-                        /**Mostramos el campo DNI de médico*/
+                        
                         jLabelDNIGestionarCitaMedico.setVisible(true);
                         jTextFieldDNIGestionarCitaMedico.setVisible(true);
                         jTextFieldDNIGestionarCitaMedico.setText("Inventado");
                         jTextFieldDNIGestionarCitaMedico.setEditable(false);
                         jTextFieldDNIGestionarCitaPaciente.setEditable(false);
 
-                        /*Mostramos la fecha y la hora de la cita consultada*/
+                        
                         Date fechacita = ct.getFecha();
 
                         jTextFieldMinutoCita.setText(String.valueOf(fechacita.getMinutes()));
@@ -3380,6 +3380,9 @@ public class UI_Administrador extends javax.swing.JFrame {
                 }
             }
         }
+
+        
+        */
 }//GEN-LAST:event_jButtonConsultarCitaMouseClicked
 
     private void jButtonAltaCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAltaCitaActionPerformed
@@ -3388,7 +3391,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
     private void jButtonAltaCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAltaCitaMouseClicked
         // TODO add your handling code here:
-        String dni = jTextFieldDNIGestionarCitaPaciente.getText();
+       /* String dni = jTextFieldDNIGestionarCitaPaciente.getText();
         if(dni.isEmpty()){
             jTextAreaInfoCitaOnline.setText("Introduce el DNI del paciente y pulse en la opción que desee\n\t\t¡No se introdujo un DNI!");
         }else{
@@ -3407,11 +3410,11 @@ public class UI_Administrador extends javax.swing.JFrame {
                         jButtonConsultarCita.setVisible(false);
                         jButtonAltaCita.setVisible(false);
 
-                        /**Mostramos los botones de fecha y hora  */
+         
                         jPanelGestionarCitaFecha.setVisible(true);
                         jPanelGestionarCitaHora.setVisible(true);
 
-                        /**Mostramos el campo DNI de médico*/
+         
                         jLabelDNIGestionarCitaMedico.setVisible(true);
                         jTextFieldDNIGestionarCitaMedico.setVisible(true);
                         jTextFieldDNIGestionarCitaMedico.setEditable(false);
@@ -3428,6 +3431,8 @@ public class UI_Administrador extends javax.swing.JFrame {
                 }
             }
         }
+        
+        */
 }//GEN-LAST:event_jButtonAltaCitaMouseClicked
 
     private void jButtonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVolverActionPerformed
@@ -3512,38 +3517,38 @@ public class UI_Administrador extends javax.swing.JFrame {
         Calendar fecha;
 
         if(formulario.equals("GestionarPaciente")){
-            fecha=dateChooserCombo1.getSelectedDate();
+//            fecha=dateChooserCombo1.getSelectedDate();
 
-           dia=fecha.get(Calendar.DATE);
-           mes=fecha.get(Calendar.MONTH)+1;
-           anio=fecha.get(Calendar.YEAR);
+//           dia=fecha.get(Calendar.DATE);
+  //         mes=fecha.get(Calendar.MONTH)+1;
+    //       anio=fecha.get(Calendar.YEAR);
 
         }
 
         if(formulario.equals("GestionarPersonal")){
-          fecha=dateChooserCombo2.getSelectedDate();
+      //    fecha=dateChooserCombo2.getSelectedDate();
 
-           dia=fecha.get(Calendar.DATE);
-           mes=fecha.get(Calendar.MONTH)+1;
-           anio=fecha.get(Calendar.YEAR);
+        //   dia=fecha.get(Calendar.DATE);
+          // mes=fecha.get(Calendar.MONTH)+1;
+//           anio=fecha.get(Calendar.YEAR);
         }
 
         if(formulario.equals("CompruebaTurnoInicio")){
-             fecha=dateChooserCombo3.getSelectedDate();
+/*             fecha=dateChooserCombo3.getSelectedDate();
 
            dia=fecha.get(Calendar.DATE);
            mes=fecha.get(Calendar.MONTH)+1;
            anio=fecha.get(Calendar.YEAR);
-        
+  */
         }
 
         if(formulario.equals("CompruebaTurnoFin")){
 
-              fecha=dateChooserCombo4.getSelectedDate();
+//              fecha=dateChooserCombo4.getSelectedDate();
 
-           dia=fecha.get(Calendar.DATE);
-           mes=fecha.get(Calendar.MONTH)+1;
-           anio=fecha.get(Calendar.YEAR);
+//           dia=fecha.get(Calendar.DATE);
+  //         mes=fecha.get(Calendar.MONTH)+1;
+    //       anio=fecha.get(Calendar.YEAR);
         }
 
         if(formulario.equals("CompruebaEstadCitasInicio")){
