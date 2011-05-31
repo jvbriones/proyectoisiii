@@ -23,6 +23,8 @@ import java.util.Calendar;
 import java.sql.SQLException;
 import java.util.Date;
 import java.util.Set;
+import java.util.ArrayList;
+import java.lang.reflect.Array;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -366,10 +368,10 @@ public class UI_Paciente extends javax.swing.JFrame {
                         .add(jLabelGestionarPaciente3)))
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelPrincipalLayout.createSequentialGroup()
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 120, Short.MAX_VALUE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 105, Short.MAX_VALUE)
                         .add(jButtonGestionarCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(81, 81, 81)
-                        .add(jButtonGestionarRecetas, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                        .add(jButtonGestionarRecetas, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
                         .add(117, 117, 117))
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelPrincipalLayout.createSequentialGroup()
                         .add(152, 152, 152)
@@ -637,7 +639,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         });
         jPanelConsultarCitaOnline.add(jTextFieldDNIPacienteCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 90, -1));
 
-        jPanelConsultarCitaOnline.setBounds(0, 0, 901, 531);
+        jPanelConsultarCitaOnline.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelConsultarCitaOnline, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarCitaOnline.setMinimumSize(new java.awt.Dimension(901, 510));
@@ -760,7 +762,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jPanelGestionarCitaOnline.add(jPanelBotones, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 580, 60));
 
-        jPanelGestionarCitaOnline.setBounds(0, 0, 901, 531);
+        jPanelGestionarCitaOnline.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelGestionarCitaOnline, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarPaciente.setPreferredSize(new java.awt.Dimension(901, 531));
@@ -1022,14 +1024,10 @@ public class UI_Paciente extends javax.swing.JFrame {
                         .add(396, 396, 396)
                         .add(jLabelListaRecetas))
                     .add(jPanelGestionarRecetasLayout.createSequentialGroup()
-                        .add(260, 260, 260)
-                        .add(jPanelGestionarRecetasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jPanelGestionarRecetasLayout.createSequentialGroup()
-                                .add(66, 66, 66)
-                                .add(jButtonConsultarReceta)
-                                .add(100, 100, 100)
-                                .add(jButtonTerminarReceta))
-                            .add(org.jdesktop.layout.GroupLayout.TRAILING, jScrollPane4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 418, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                        .add(326, 326, 326)
+                        .add(jButtonConsultarReceta)
+                        .add(100, 100, 100)
+                        .add(jButtonTerminarReceta))
                     .add(jPanelGestionarRecetasLayout.createSequentialGroup()
                         .add(312, 312, 312)
                         .add(jPanelGestionarRecetasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1038,8 +1036,11 @@ public class UI_Paciente extends javax.swing.JFrame {
                                 .add(187, 187, 187)
                                 .add(jLabelMedico))
                             .add(jLabelGestionarPaciente6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 294, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jLabel8))))
-                .addContainerGap(223, Short.MAX_VALUE))
+                            .add(jLabel8)))
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarRecetasLayout.createSequentialGroup()
+                        .addContainerGap(260, Short.MAX_VALUE)
+                        .add(jScrollPane4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 376, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(264, Short.MAX_VALUE))
         );
         jPanelGestionarRecetasLayout.setVerticalGroup(
             jPanelGestionarRecetasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1060,7 +1061,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(jPanelGestionarRecetasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jButtonConsultarReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 45, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jButtonTerminarReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 45, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(165, Short.MAX_VALUE))
+                .addContainerGap(164, Short.MAX_VALUE))
         );
 
         jPanelGestionarRecetas.setBounds(1, 0, 900, 530);
@@ -1578,21 +1579,14 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void jButtonConsultarRecetaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarRecetaMouseClicked
         // TODO add your handling code here:
-        String dni = user.getDNI();
-        GestorPacientes gstpac = new GestorPacientes();
 
-        try{
-            Set<Receta> recetas = gstpac.obtenerRecetas(dni);
-            String elemento;
-            DefaultListModel modelo = new DefaultListModel();
-            for(int i = 0; i < recetas.size(); i++){
-                //elemento = recetas.get(i).getFecha() + "\t\t\t" + recetas.get(i).getMedico;
-                //modelo.addElement(elemento);
-            }
-            jList2.setModel(modelo);
-        }catch(SQLException ex){
-            System.err.println(ex.getStackTrace());
-        }
+        String recetaelegida = (String) jList2.getSelectedValue();
+        int[] indicereceta = jList2.getSelectedIndices();
+        GestorPacientes gstpac = new GestorPacientes();
+        //Set<Receta> recetas = gstpac.obtenerRecetas(user.getDNI());
+        //recetas.t;
+        //gstpac.seleccionarReceta(recetas.get(i).getId())
+
        
     }//GEN-LAST:event_jButtonConsultarRecetaMouseClicked
 
@@ -1612,6 +1606,26 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void jButtonGestionarRecetasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGestionarRecetasMouseClicked
         // TODO add your handling code here:
         mostrarPanel("GestionarRecetas");
+        String dni = user.getDNI();
+        GestorPacientes gstpac = new GestorPacientes();
+
+        try{
+            DefaultListModel modelo = new DefaultListModel();
+            Set<Receta> setreceta = gstpac.obtenerRecetas(dni);
+            ArrayList<Receta> arrayreceta = new ArrayList<Receta> (setreceta);
+            Date fecharec; arrayreceta.get(0).getFecha();
+            Medico medicorec;  arrayreceta.get(0).getMedi();
+            String elemento, tabula = "                                         ";
+
+            for(int i = 0; i < arrayreceta.size(); i++){
+                elemento = "    " + arrayreceta.get(i).getFecha().toString() + tabula + arrayreceta.get(i).getMedi().getDNI();
+                modelo.addElement(elemento);
+            }
+            jList2.setModel(modelo);
+        }catch(SQLException ex){
+            System.err.println(ex.getStackTrace());
+        }
+
     }//GEN-LAST:event_jButtonGestionarRecetasMouseClicked
 
 
@@ -1935,7 +1949,6 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelGestionarRecetas.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
             }
-
 
     }
 
