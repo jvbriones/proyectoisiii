@@ -13,6 +13,7 @@ package Interfaz;
 
 import java.awt.Image;
 import javax.swing.JOptionPane;
+import javax.swing.*;
 import Controlador.*;
 import CentroMedico.*;
 import BaseDatos.*;
@@ -21,6 +22,7 @@ import java.util.Calendar.*;
 import java.util.Calendar;
 import java.sql.SQLException;
 import java.util.Date;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -1576,6 +1578,22 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void jButtonConsultarRecetaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarRecetaMouseClicked
         // TODO add your handling code here:
+        String dni = user.getDNI();
+        GestorPacientes gstpac = new GestorPacientes();
+
+        try{
+            Set<Receta> recetas = gstpac.obtenerRecetas(dni);
+            String elemento;
+            DefaultListModel modelo = new DefaultListModel();
+            for(int i = 0; i < recetas.size(); i++){
+                //elemento = recetas.get(i).getFecha() + "\t\t\t" + recetas.get(i).getMedico;
+                //modelo.addElement(elemento);
+            }
+            jList2.setModel(modelo);
+        }catch(SQLException ex){
+            System.err.println(ex.getStackTrace());
+        }
+       
     }//GEN-LAST:event_jButtonConsultarRecetaMouseClicked
 
     private void jButtonGestionarRecetasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGestionarRecetasActionPerformed

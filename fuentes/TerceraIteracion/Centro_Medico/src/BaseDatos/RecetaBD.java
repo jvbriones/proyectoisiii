@@ -12,6 +12,7 @@ import java.util.List;
  *  Clase para el almacenamiento, actualización, borrado, y obtención de objetos de la clase Receta en la base de datos.
  */
 public class RecetaBD {
+
     public void almacenar(Receta Rec){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
@@ -28,6 +29,7 @@ public class RecetaBD {
         session.getTransaction().commit();
       return Rec;
     }
+
     public void actualizar (Receta Rec){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
@@ -36,6 +38,7 @@ public class RecetaBD {
         session.getTransaction().commit();
 
     }
+
     public void eliminar (Receta Rec){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
@@ -54,6 +57,7 @@ public class RecetaBD {
 
         return recetas;
     }
+
 }
 
 

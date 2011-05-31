@@ -125,11 +125,11 @@ public class GestorPacientes {
            
        }
    
-    public Set<Receta> obtenerRecetas(String DNIPaciente) throws SQLException{
-       Set<Receta> recetas=null;
-       RecetaBD receta= new RecetaBD();
+   public Set<Receta> obtenerRecetas(String DNIPaciente) throws SQLException{
+       Set<Receta> recetas = null;
+       RecetaBD receta = new RecetaBD();
        
-        recetas=receta.obtenerRecetasPaciente(DNIPaciente);
+        recetas = receta.obtenerRecetasPaciente(DNIPaciente);
      
        return recetas;
            
