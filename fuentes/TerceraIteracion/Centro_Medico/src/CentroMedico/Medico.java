@@ -19,6 +19,15 @@ import java.util.*;
  * modificado por Juan Carlos
  */
 public class Medico extends PersonalMedico{
+    private Set<Cita> Citas = new HashSet<Cita>(0);
+
+    public Set<Cita> getCitas() {
+        return Citas;
+    }
+
+    public void setCitas(Set<Cita> Citas) {
+        this.Citas = Citas;
+    }
 
     public Medico() {
     }
