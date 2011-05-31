@@ -24,6 +24,8 @@ import java.util.logging.Logger;
  */
 public class Paciente extends Usuario {
     private Cita Cita;
+    private Set <Enfermedad> Enfermedades = new HashSet<Enfermedad>(0);
+
 
     public Cita getCita() {
         return Cita;
@@ -31,6 +33,14 @@ public class Paciente extends Usuario {
 
     public void setCita(Cita Cita) {
         this.Cita = Cita;
+    }
+
+    public Set<Enfermedad> getEnfermedades() {
+        return Enfermedades;
+    }
+
+    public void setEnfermedades(Set<Enfermedad> Enfermedades) {
+        this.Enfermedades = Enfermedades;
     }
 
     public Paciente() {
