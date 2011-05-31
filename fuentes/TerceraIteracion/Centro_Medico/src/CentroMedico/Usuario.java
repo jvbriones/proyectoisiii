@@ -80,43 +80,43 @@ public class Usuario implements Serializable{
     }
 
     public String getNombre(){
-        return  Nombre;
+        return  this.Nombre;
      }
 
     public String getApellidos(){
-        return Apellidos;
+        return this.Apellidos;
     }
 
     public String getDireccion(){
-        return  Direccion;
+        return  this.Direccion;
      }
 
     public String getEmail(){
-        return Email;
+        return this.Email;
     }
 
     public String getContrasenia(){
-        return  Contrasenia;
+        return  this.Contrasenia;
      }
 
     public String getTelefono(){
-        return  Telefono;
+        return  this.Telefono;
      }
 
     public Date getFecNac(){
-        return FecNac;
+        return this.FecNac;
     }
 
     public String getLugarNac(){
-        return  LugarNac;
+        return  this.LugarNac;
     }
 
     public String getFoto(){
-        return  Foto;
+        return  this.Foto;
     }
 
      public String getTipo(){
-        return Tipo;
+        return this.Tipo;
     }
 
      /*
