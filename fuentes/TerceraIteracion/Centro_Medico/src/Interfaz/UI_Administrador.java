@@ -2379,7 +2379,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 GestorUsuarios gestUsu = new GestorUsuarios();
                 Usuario elusuario=gestUsu.obtenerUsuario(jTextFieldDNIPaciente.getText());
 
-             //   datos = gestUsu.consultarDatosPersonalesAdmin(jTextFieldDNIPaciente.getText());
+               // datos = gestUsu.consultarDatosPersonalesAdmin(jTextFieldDNIPaciente.getText());
                 if(elusuario !=null && elusuario.getTipo().equals("Paciente")){
                 jTextFieldNombrePaciente.setText(elusuario.getNombre());
                 jTextFieldApellidosPaciente.setText(elusuario.getApellidos());
@@ -2987,7 +2987,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             boolean exito;
 
 
-//            fechaNacimiento = dateChooserCombo1.getSelectedDate().getTime();
+            fechaNacimiento = dateChooserCombo1.getSelectedDate().getTime();
 
             try {
                 exito = gesPac.altaPaciente(jTextFieldDNIPaciente.getText(), jTextFieldNombrePaciente.getText(), jTextFieldApellidosPaciente.getText(), jTextFieldDireccionPaciente.getText(), jTextFieldEmailPaciente.getText(), jTextFieldTelefonoPaciente.getText(), fechaNacimiento, jTextFieldLugarNacimientoPaciente.getText(), laurl, "Paciente");
@@ -3015,7 +3015,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 GestorPacientes gesPac = new GestorPacientes();
                 Date fechaNacimiento = null;                        //HAY QUE PROCESARLA LEYÉNDOLA DEL FORMULARIOOOO
                 boolean exito=false;
-//                fechaNacimiento = dateChooserCombo1.getSelectedDate().getTime();
+                fechaNacimiento = dateChooserCombo1.getSelectedDate().getTime();
 
                 try {
                     exito=gesPac.modificarPaciente(jTextFieldDNIPaciente.getText(), jTextFieldNombrePaciente.getText(), jTextFieldApellidosPaciente.getText(), jTextFieldDireccionPaciente.getText(), jTextFieldEmailPaciente.getText(), jTextFieldContraseniaPaciente.getText(),jTextFieldTelefonoPaciente.getText(), fechaNacimiento, jTextFieldLugarNacimientoPaciente.getText(), laurl);
@@ -3046,7 +3046,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             byte[] urlFoto = null;                              //HAY QUE GUARDAR LA FOTO Y PASAR LA RUTA DE DONDE ESTA
             boolean exito;
             
-//             fechaNacimiento = dateChooserCombo2.getSelectedDate().getTime();
+             fechaNacimiento = dateChooserCombo2.getSelectedDate().getTime();
             String tipoPersonal = "";
             if(jRadioButtonAnalista.isSelected())
                 tipoPersonal = "Analista";
@@ -3527,38 +3527,38 @@ public class UI_Administrador extends javax.swing.JFrame {
         Calendar fecha;
 
         if(formulario.equals("GestionarPaciente")){
-//            fecha=dateChooserCombo1.getSelectedDate();
+         fecha=dateChooserCombo1.getSelectedDate();
 
-//           dia=fecha.get(Calendar.DATE);
-  //         mes=fecha.get(Calendar.MONTH)+1;
-    //       anio=fecha.get(Calendar.YEAR);
+             dia=fecha.get(Calendar.DATE);
+          mes=fecha.get(Calendar.MONTH)+1;
+           anio=fecha.get(Calendar.YEAR);
 
         }
 
         if(formulario.equals("GestionarPersonal")){
-      //    fecha=dateChooserCombo2.getSelectedDate();
+       fecha=dateChooserCombo2.getSelectedDate();
 
-        //   dia=fecha.get(Calendar.DATE);
-          // mes=fecha.get(Calendar.MONTH)+1;
-//           anio=fecha.get(Calendar.YEAR);
+         dia=fecha.get(Calendar.DATE);
+         mes=fecha.get(Calendar.MONTH)+1;
+         anio=fecha.get(Calendar.YEAR);
         }
 
         if(formulario.equals("CompruebaTurnoInicio")){
-/*             fecha=dateChooserCombo3.getSelectedDate();
+            fecha=dateChooserCombo3.getSelectedDate();
 
            dia=fecha.get(Calendar.DATE);
            mes=fecha.get(Calendar.MONTH)+1;
            anio=fecha.get(Calendar.YEAR);
-  */
+  
         }
 
         if(formulario.equals("CompruebaTurnoFin")){
 
-//              fecha=dateChooserCombo4.getSelectedDate();
+             fecha=dateChooserCombo4.getSelectedDate();
 
-//           dia=fecha.get(Calendar.DATE);
-  //         mes=fecha.get(Calendar.MONTH)+1;
-    //       anio=fecha.get(Calendar.YEAR);
+          dia=fecha.get(Calendar.DATE);
+         mes=fecha.get(Calendar.MONTH)+1;
+    anio=fecha.get(Calendar.YEAR);
         }
 
         if(formulario.equals("CompruebaEstadCitasInicio")){
