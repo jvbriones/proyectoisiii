@@ -44,6 +44,10 @@
     <joined-subclass name="CentroMedico.Paciente">
         <key column="DNI_PACIENTE"/>
         <many-to-one name="Cita" class="CentroMedico.Cita" column="ID_CITA" unique="true" cascade="all" lazy = "false"/>
+        <set cascade="all" name="Enfermedades" lazy="false">
+            <key column="ID_ENFERMEDAD"/>
+            <one-to-many class="CentroMedico.Enfermedad"/>
+        </set>
     </joined-subclass>
     <joined-subclass name="CentroMedico.PersonalMedico">
         <key column="DNI_PERSONALMEDICO"/>
