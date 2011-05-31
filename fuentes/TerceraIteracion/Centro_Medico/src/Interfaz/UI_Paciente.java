@@ -339,6 +339,11 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonGestionarCitaMouseClicked(evt);
             }
         });
+        jButtonGestionarCita.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGestionarCitaActionPerformed(evt);
+            }
+        });
 
         jButtonGestionarRecetas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/RealizarReceta.png"))); // NOI18N
         jButtonGestionarRecetas.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1040,7 +1045,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarRecetasLayout.createSequentialGroup()
                         .addContainerGap(260, Short.MAX_VALUE)
                         .add(jScrollPane4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 376, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(264, Short.MAX_VALUE))
+                .addContainerGap(265, Short.MAX_VALUE))
         );
         jPanelGestionarRecetasLayout.setVerticalGroup(
             jPanelGestionarRecetasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1061,7 +1066,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(jPanelGestionarRecetasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jButtonConsultarReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 45, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jButtonTerminarReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 45, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(164, Short.MAX_VALUE))
+                .addContainerGap(165, Short.MAX_VALUE))
         );
 
         jPanelGestionarRecetas.setBounds(1, 0, 900, 530);
@@ -1277,7 +1282,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void jButtonGestionarCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGestionarCitaMouseClicked
         // TODO add your handling code here:
-        mostrarPanel("GestionarCitaOnline");
+        mostrarPanel("ConsultarCitaOnline");
     }//GEN-LAST:event_jButtonGestionarCitaMouseClicked
 
     private void jButtonMasHoraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasHoraMouseClicked
@@ -1580,14 +1585,24 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void jButtonConsultarRecetaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarRecetaMouseClicked
         // TODO add your handling code here:
 
-        String recetaelegida = (String) jList2.getSelectedValue();
-        int[] indicereceta = jList2.getSelectedIndices();
-        GestorPacientes gstpac = new GestorPacientes();
-        //Set<Receta> recetas = gstpac.obtenerRecetas(user.getDNI());
+        int receta_index = jList2.getSelectedIndex();
+        if(receta_index != -1){
+            GestorPacientes gstpac = new GestorPacientes();
+            try{
+                Set<Receta> set_recetas = gstpac.obtenerRecetas(user.getDNI());
+                ArrayList<Receta> array_receta = new ArrayList<Receta> (set_recetas);
+                Receta receta = gstpac.seleccionarReceta(array_receta.get(receta_index).getId());
+
+            }
+            catch(SQLException ex){
+                System.err.println(ex.getStackTrace());
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "No seleccionó ninguna receta", "Selección receta",JOptionPane.INFORMATION_MESSAGE);
+        }
         //recetas.t;
         //gstpac.seleccionarReceta(recetas.get(i).getId())
 
-       
     }//GEN-LAST:event_jButtonConsultarRecetaMouseClicked
 
     private void jButtonGestionarRecetasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGestionarRecetasActionPerformed
@@ -1597,6 +1612,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void jButtonTerminarRecetaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonTerminarRecetaMouseClicked
         // TODO add your handling code here:
+        mostrarPanel("Principal");
     }//GEN-LAST:event_jButtonTerminarRecetaMouseClicked
 
     private void jButtonConsultarRecetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultarRecetaActionPerformed
@@ -1608,25 +1624,35 @@ public class UI_Paciente extends javax.swing.JFrame {
         mostrarPanel("GestionarRecetas");
         String dni = user.getDNI();
         GestorPacientes gstpac = new GestorPacientes();
+        //Vaciar el panel
+        DefaultListModel modelo = new DefaultListModel();
+        modelo.addElement("");//Inicializando la lista vacia
+        jList2.setModel(modelo);
 
-        try{
-            DefaultListModel modelo = new DefaultListModel();
-            Set<Receta> setreceta = gstpac.obtenerRecetas(dni);
-            ArrayList<Receta> arrayreceta = new ArrayList<Receta> (setreceta);
-            Date fecharec; arrayreceta.get(0).getFecha();
-            Medico medicorec;  arrayreceta.get(0).getMedi();
-            String elemento, tabula = "                                         ";
+        try{            
+            Set<Receta> set_receta = gstpac.obtenerRecetas(dni);
+            if(!set_receta.isEmpty()){
+                ArrayList<Receta> array_receta = new ArrayList<Receta> (set_receta);
+                Date fecharec; array_receta.get(0).getFecha();
+                Medico medicorec;  array_receta.get(0).getMedi();
+                String elemento, tabula = "                                         ";
 
-            for(int i = 0; i < arrayreceta.size(); i++){
-                elemento = "    " + arrayreceta.get(i).getFecha().toString() + tabula + arrayreceta.get(i).getMedi().getDNI();
-                modelo.addElement(elemento);
+                for(int i = 0; i < array_receta.size(); i++){
+                    elemento = "    " + array_receta.get(i).getFecha().toString() + tabula + array_receta.get(i).getMedi().getDNI();
+                    modelo.addElement(elemento);
+                }
+            }else{
+                JOptionPane.showMessageDialog(null, "¡No tiene recetas disponibles!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
             }
-            jList2.setModel(modelo);
         }catch(SQLException ex){
             System.err.println(ex.getStackTrace());
         }
 
     }//GEN-LAST:event_jButtonGestionarRecetasMouseClicked
+
+    private void jButtonGestionarCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGestionarCitaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonGestionarCitaActionPerformed
 
 
     /*Comprueba que la fecha introducida es correcta
@@ -1844,6 +1870,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelGestionarPaciente.setVisible(false);
             jPanelGestionarCitaOnline.setVisible(false);
             jPanelConsultarCitaOnline.setVisible(false);
+            jPanelGestionarRecetas.setVisible(false);
 
 
             /**Activamos el marco*/
@@ -1868,6 +1895,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelGestionarPaciente.setVisible(true);
             jPanelGestionarCitaOnline.setVisible(false);
             jPanelConsultarCitaOnline.setVisible(false);
+            jPanelGestionarRecetas.setVisible(false);
 
 
             /**Activamos el marco*/
@@ -1891,6 +1919,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelGestionarPaciente.setVisible(false);
             jPanelGestionarCitaOnline.setVisible(true);
             jPanelConsultarCitaOnline.setVisible(false);
+            jPanelGestionarRecetas.setVisible(false);
 
 
             /**Activamos el marco*/
@@ -1916,6 +1945,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelGestionarPaciente.setVisible(false);
             jPanelGestionarCitaOnline.setVisible(false);
             jPanelConsultarCitaOnline.setVisible(true);
+            jPanelGestionarRecetas.setVisible(false);
 
             jTextFieldAnioCita.setEditable(false);
 
