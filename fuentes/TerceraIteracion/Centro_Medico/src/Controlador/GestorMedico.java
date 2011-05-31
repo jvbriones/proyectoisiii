@@ -95,9 +95,22 @@ public class GestorMedico {
         pac.actualizar(Paci);
         return true;
 
+    }
+    public boolean modificarEnfermedad(Enfermedad enfe,Paciente paciente){
 
+          Set<Enfermedad> enfermedades= paciente.getEnfermedades();
+          PacienteBD pac_BD = new PacienteBD();
+      for( Iterator it = enfermedades.iterator(); it.hasNext();){
 
+          Enfermedad aux= (Enfermedad)it.next();
+          if( aux.getId() == enfe.getId())
+                aux=enfe;
+      }
 
+      pac_BD.actualizar(paciente);
+
+      return true; 
+        
     }
 /*
     public void guardarVolante(String Volante){
