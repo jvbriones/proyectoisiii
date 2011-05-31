@@ -2103,9 +2103,10 @@ public class UI_Radiologo extends javax.swing.JFrame {
             if (resp == JFileChooser.APPROVE_OPTION){
                 try{
                     String ruta = dlg.getSelectedFile().getAbsolutePath();
-                    DefaultListModel aux=new DefaultListModel();
-                    aux.addElement(ruta);
-                    jListImagenes.setModel(aux);
+                    DefaultListModel modelo = (DefaultListModel)jListImagenes.getModel();
+                    modelo.addElement(ruta);
+                   
+                    jListImagenes.setModel(modelo);
 
 
                 }

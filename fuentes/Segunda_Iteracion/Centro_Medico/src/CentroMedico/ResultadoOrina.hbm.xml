@@ -6,6 +6,7 @@
       <generator class="native"/>
     </id>
     <property name="Resultado"/>
-    <one-to-one class="CentroMedico.AtributoOrina" constrained="true" lazy="false" name="Atr"/>
+    <many-to-one name="Atr" class="CentroMedico.AtributoOrina"  column="NOMBRE_ATRIBUTO_ORINA"   not-null="true"/>
+
   </class>
 </hibernate-mapping>
