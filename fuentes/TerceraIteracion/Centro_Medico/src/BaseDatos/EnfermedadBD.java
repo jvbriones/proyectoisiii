@@ -8,16 +8,10 @@ import java.util.ArrayList;
 import java.util.Set;
 
 public class EnfermedadBD{
-
-	String	IpDelServidor = "localhost";
-	String	NombreDB = "CentroMedico";
-	String user = "generico";
-	String pass = "generico";
-
         /*
-         * Almacenar
+         * almacenar
          */
-	public void Almacenar(Enfermedad enfmd){
+	public void almacenar(Enfermedad enfmd){
             Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
             session.beginTransaction();
@@ -28,18 +22,19 @@ public class EnfermedadBD{
         /*  FALTA REVISAR EL ATRIBUTO
          * Obtener
          */
-	public Enfermedad Obtener(Integer id){
+	public Enfermedad obtener(Integer id){
 
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction ();
         Enfermedad enfmd = (Enfermedad) session.get(Enfermedad.class, id);
+        session.getTransaction().commit();
             return enfmd;
         }
 
         /* 
-         * Actualizar
+         * actualizar
          */
-	public void Actualizar(Enfermedad enfmd){
+	public void actualizar(Enfermedad enfmd){
 
             Session session = HibernateUtil.getSessionFactory().getCurrentSession();
             session.beginTransaction ();
@@ -54,9 +49,9 @@ public class EnfermedadBD{
         }
 
         /*
-         * Eliminar
+         * eliminar
          */
-	public void Eliminar(Enfermedad enfmd){
+	public void eliminar(Enfermedad enfmd){
 
             Session session = HibernateUtil.getSessionFactory().getCurrentSession();
             session.beginTransaction();
