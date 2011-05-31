@@ -18,12 +18,11 @@ public class PruebaRadiologia implements Serializable{
     private String Comentario;
 
     private Paciente Paciente;
-    private Radiologo Radiologo;
-
+    private PersonalMedico Radiologo;
     public PruebaRadiologia() {
     }
 
-    public PruebaRadiologia(String com, Paciente Pac, Radiologo Rad){
+    public PruebaRadiologia(String com, Paciente Pac, PersonalMedico Rad){
         this.Comentario=com;
         this.Paciente = Pac;
         this.Radiologo=Rad;
@@ -43,7 +42,7 @@ public class PruebaRadiologia implements Serializable{
         return Paciente;
     }
 
-    public Radiologo getRadiologo() {
+    public PersonalMedico getRadiologo() {
         return Radiologo;
     }
 

@@ -18,14 +18,14 @@ public class PruebaAnalisis implements Serializable{
     private String Comentario;
 
     private Paciente Paciente;
-    private Analista Analista;
+    private PersonalMedico Pm;
 
     public PruebaAnalisis() {
     }
-    public PruebaAnalisis(String com, Paciente pac, Analista an){
+    public PruebaAnalisis(String com, Paciente pac, PersonalMedico pm){
         this.Comentario=com;
         this.Paciente = pac;
-        this.Analista = an;
+        this.Pm = pm;
     }
 
     public int getId (){
@@ -36,8 +36,8 @@ public class PruebaAnalisis implements Serializable{
         return Comentario;
     }
 
-    public Analista getAnalista (){
-        return Analista;
+    public PersonalMedico getAnalista (){
+        return Pm;
     }
 
     public Paciente getPaciente (){
@@ -56,7 +56,7 @@ public class PruebaAnalisis implements Serializable{
         this.Paciente=Paciente;
     }
 
-    public void setAnalista (Analista Analista){
-        this.Analista=Analista;
+    public void setAnalista (PersonalMedico Analista){
+        this.Pm=Analista;
     }
 }

@@ -145,11 +145,11 @@ public class GestorPruebas {
             return false;
         }
 
-        analista = aBD.obtener(DniAnalista);
+        pm = pm_BD.obtener(DniAnalista);
 
         if(TipoAnalisis.equals("sangre")){
 
-            PruebaSangre pruebaS = new PruebaSangre(Comentario,paciente, analista);
+            PruebaSangre pruebaS = new PruebaSangre(Comentario,paciente, pm);
 
             Iterator itRes = listaResultados.iterator();
             for( Iterator it = listaAtributos.iterator(); it.hasNext();) {
@@ -166,7 +166,7 @@ public class GestorPruebas {
         }
 
         if(TipoAnalisis.equals("orina")){
-            PruebaOrina pruebaO = new PruebaOrina(Comentario, paciente, analista);
+            PruebaOrina pruebaO = new PruebaOrina(Comentario, paciente, pm);
 
             Iterator itRes = listaResultados.iterator();
             for( Iterator it = listaAtributos.iterator(); it.hasNext();) {
@@ -191,14 +191,16 @@ public class GestorPruebas {
         //No concuerda el diagrama de secuencia con el de clases
         PacBD pBD = new PacBD();
         RadiologoBD radiologoBD = new RadiologoBD();
+        PersonalMedicoBD pm_BD=new PersonalMedicoBD();
+        PersonalMedico pm=null;
 
         Paciente paciente = null;
         Radiologo radiologo = null;
         Imagen aux;
-        System.out.println(TipoPrueba);
+        //System.out.println(TipoPrueba);
 
         paciente = pBD.obtener(DNIPaciente);
-        radiologo = radiologoBD.obtener(DNIRadiologo);
+        pm = pm_BD.obtener(DNIRadiologo);
         if(paciente == null){
             System.out.println("No existe el paciente con ese DNI");
             return false;
@@ -206,7 +208,7 @@ public class GestorPruebas {
 
         if(TipoPrueba == "Radiografia"){
 
-            Radiografia prueba = new Radiografia(Comentario, paciente, radiologo);
+            Radiografia prueba = new Radiografia(Comentario, paciente, pm);
             RadiografiaBD rBD = new RadiografiaBD();
 
 
@@ -220,7 +222,7 @@ public class GestorPruebas {
         }
 
         if(TipoPrueba == "Resonancia"){
-            Resonancia prueba = new Resonancia(Comentario,paciente, radiologo);
+            Resonancia prueba = new Resonancia(Comentario,paciente, pm);
             ResonanciaBD rBD = new ResonanciaBD();
 
             for( Iterator it = imag.iterator(); it.hasNext();) {

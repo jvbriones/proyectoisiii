@@ -6,8 +6,8 @@
       <generator class="native"/>
     </id>
     <property name="Comentario"/>
-    <many-to-one name="Paciente" class="CentroMedico.Paciente" column="DNI_PACIENTE" cascade="all" unique="true"/>
-    <many-to-one name="Analista" class="CentroMedico.Analista" column="DNI_ANALISTA" cascade="all" unique="true"/>
+    <many-to-one name="Paciente" class="CentroMedico.Paciente" column="DNI_PACIENTE" cascade="all"/>
+    <many-to-one name="Analista" class="CentroMedico.Analista" column="DNI_ANALISTA" cascade="all" />
     <joined-subclass name="CentroMedico.PruebaSangre">
       <key column="ID_PRUEBASANGRE"/>
       <set cascade="all" name="ResultadosSangre">

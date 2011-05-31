@@ -20,7 +20,7 @@ public class Radiografia extends PruebaRadiologia{
     public Radiografia() {
     }
 
-    public Radiografia(String Comentario, Paciente Pac, Radiologo Rad) {
+    public Radiografia(String Comentario, Paciente Pac, PersonalMedico Rad) {
         super(Comentario, Pac, Rad);
 
     }
