@@ -6,6 +6,7 @@
       <generator class="native"/>
     </id>
     <property name="Comentario"/>
+    <property name="Acceso"/>
     <many-to-one name="Paciente" class="CentroMedico.Paciente" column="DNI_PACIENTE" cascade="all" unique="true"/>
     <many-to-one name="Analista" class="CentroMedico.Analista" column="DNI_ANALISTA" cascade="all" unique="true"/>
     <joined-subclass name="CentroMedico.PruebaSangre">
