@@ -2513,6 +2513,28 @@ public class UI_Paciente extends javax.swing.JFrame {
         // TODO add your handling code here:
         String dni = user.getDNI();
         //Set<Prueba> set_pruebas = gstpac.obtenerPruebas(dni); SIN HACER
+
+        DefaultListModel modelo = new DefaultListModel();
+        modelo.addElement("");//Inicializando la lista vacia
+        jList4.setModel(modelo);
+
+/*        try{
+            //Set<Prueba> set_pruebas = gstpac.obtenerPruebas(dni);   //obtenerPruebas SIN HACER// NO EXISTE LA CLASE PRUEBA
+            if(!set_pruebas.isEmpty()){
+                //ArrayList<Prueba> array_prueba = new ArrayList<Prueba> (set_pruebas);
+                String elemento, tabula = "                                     ";
+
+                for(int i = 0; i < array_prueba.size(); i++){
+                    elemento = "    " + array_prueba.get(i).getId().toString() + tabula + array_prueba.get(i).getTipo(); //NO existe getTipo()
+                    modelo.addElement(elemento);
+                }
+            }else{
+                JOptionPane.showMessageDialog(null, "¡No tiene recetas disponibles!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
+            }
+        }catch(SQLException ex){
+            System.err.println(ex.getStackTrace());
+        }*/
+
     }//GEN-LAST:event_jButtonGestionarPruebasMouseClicked
 
 
