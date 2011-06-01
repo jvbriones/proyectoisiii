@@ -2817,7 +2817,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             jLabelIconoInicio.setVisible(true);
 
             /**Insertamos icono de foto anónima*/
-            jLabelFotoPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
+            //jLabelFotoPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
 
 
             /**Hacemos visible el panel seleccionado*/
@@ -2834,6 +2834,9 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelGestionarPaciente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
             jPanelGestionarCitaOnline.setBorder(null);
             jPanelConsultarCitaOnline.setBorder(null);
+                      
+            
+            
         }
 
         if(panel.equals("GestionarCitaOnline")){
