@@ -1,5 +1,10 @@
 package BaseDatos;
 import CentroMedico.PruebaAnalisis;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 import org.hibernate.Session;
 
 /**
@@ -41,6 +46,17 @@ public class PruebaAnalisisBD {
         session.getTransaction().commit();
 
         return prueba;
+    }
+    public ArrayList obtenerPruebasAnalisis( String dniPaciente)throws SQLException{
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+
+        List<PruebaAnalisis> result = (List<PruebaAnalisis>)session.createQuery("from PruebaAnalisis").list();
+        Set<PruebaAnalisis> analisis = new HashSet<PruebaAnalisis>(result);
+
+        session.getTransaction().commit();
+        return (ArrayList) analisis;
     }
 
 }
