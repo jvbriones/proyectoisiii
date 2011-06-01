@@ -75,6 +75,20 @@ public class UI_Paciente extends javax.swing.JFrame {
         String num_mes= String.valueOf(mes);
         String num_anio= String.valueOf(anio);
 
+        //Codigo para cargar la imagen del usuario en el formulario
+        try{
+            
+            ImageIcon icono = new ImageIcon(usu.getFoto());
+            Image imagen = icono.getImage();
+            ImageIcon aescala = new ImageIcon(imagen.getScaledInstance(150,150,Image.SCALE_SMOOTH));
+             jLabelFotoPaciente.setIcon(aescala); // NOI18N
+        }
+        catch(Exception ex){
+            System.err.print("Error al leer el archivo");
+        }
+        System.out.println("Esto entra y poque fala..");
+        
+        
         //jTextFieldFechaNacimientoAnioPaciente.setText(num_anio);
         //jTextFieldFechaNacimientoDiaPaciente.setText(num_dia);
         //jTextFieldFechaNacimientoMesPaciente.setText(num_mes);
@@ -2942,7 +2956,7 @@ public class UI_Paciente extends javax.swing.JFrame {
      */
     private void cargarFoto(String formulario){
 
-        if(formulario.equals("GestionarPaciente")){
+       /* if(formulario.equals("GestionarPaciente")){
             JFileChooser dlg = new JFileChooser();
             int resp = dlg.showOpenDialog(this);
             if (resp == JFileChooser.APPROVE_OPTION){
@@ -2957,7 +2971,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 }
             }
         }
-
+*/
     }
 
 

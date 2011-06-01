@@ -4078,8 +4078,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                         sfotografia=bFile;//Imagen que cogemos del formulario
                     }else{
                         //ventana de aviso diciendo que la imagen tiene que ser como max 150x150
-                        System.out.println( "La fotografia tiene que ser de 150x150 pixeles.");
-                        new InformacionError().setVisible(true);
+                        JOptionPane.showMessageDialog(null, "La imagen tiene que ser como maximo 150x150 pixeles", "Selección fotografía",JOptionPane.ERROR_MESSAGE);
                     }
                 }
                 catch(Exception ex){
@@ -4119,8 +4118,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                         sfotografia=bFile;//Imagen que cogemos del formulario
                     }else{
                         //ventana de aviso diciendo que la imagen tiene que ser como max 150x150
-                        System.out.println( "La fotografia tiene que ser de 150x150 pixeles.");
-                        new InformacionError().setVisible(true);
+                        JOptionPane.showMessageDialog(null, "La imagen tiene que ser como maximo 150x150 pixeles", "Selección fotografía",JOptionPane.ERROR_MESSAGE);
                     }
                 }
                 catch(Exception ex){

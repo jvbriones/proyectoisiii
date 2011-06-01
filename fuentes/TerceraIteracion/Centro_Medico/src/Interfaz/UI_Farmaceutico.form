@@ -437,9 +437,9 @@
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="0" pref="252" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="254" max="32767" attributes="0"/>
                           <Component id="jOptionPaneConfirmar" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="251" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="253" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -488,9 +488,9 @@
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="0" pref="197" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="210" max="32767" attributes="0"/>
                           <Component id="jOptionPaneConfirmar" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="198" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="210" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -699,7 +699,7 @@
                       <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelGestionarPaciente9" alignment="0" pref="612" max="32767" attributes="1"/>
+                          <Component id="jLabelGestionarPaciente9" alignment="0" pref="659" max="32767" attributes="1"/>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -714,7 +714,7 @@
                               <EmptySpace pref="253" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="135" max="-2" attributes="0"/>
+                              <EmptySpace pref="182" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Component id="jLabelError5" alignment="1" min="-2" pref="282" max="-2" attributes="0"/>
                                   <Component id="jLabelErrorDNIPaciente" alignment="1" min="-2" pref="282" max="-2" attributes="0"/>
@@ -722,7 +722,7 @@
                               <EmptySpace min="-2" pref="195" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="167" max="-2" attributes="0"/>
+                              <EmptySpace pref="214" max="-2" attributes="0"/>
                               <Component id="jButtonObtenerRecetas" min="-2" pref="192" max="-2" attributes="1"/>
                               <EmptySpace min="-2" pref="253" max="-2" attributes="0"/>
                           </Group>
@@ -873,7 +873,7 @@
                           <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelGestionarPaciente7" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="168" max="32767" attributes="0"/>
+                      <EmptySpace pref="73" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -894,7 +894,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="scrollPaneMedicamentosBajoStock" min="-2" pref="202" max="-2" attributes="0"/>
-                      <EmptySpace pref="90" max="32767" attributes="0"/>
+                      <EmptySpace pref="97" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1137,8 +1137,8 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jButtonGestionarCita" pref="146" max="32767" attributes="1"/>
-                          <Component id="jButtonConsultarDatosPersonales" alignment="1" pref="146" max="32767" attributes="1"/>
+                          <Component id="jButtonGestionarCita" pref="142" max="32767" attributes="1"/>
+                          <Component id="jButtonConsultarDatosPersonales" alignment="1" pref="142" max="32767" attributes="1"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -1607,7 +1607,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="273" max="-2" attributes="0"/>
                       <Component id="jLabelGestionarPaciente6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="214" max="32767" attributes="0"/>
+                      <EmptySpace pref="152" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
@@ -1684,11 +1684,11 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                       <Component id="jLabelGestionarPaciente6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="404" max="32767" attributes="0"/>
+                      <EmptySpace pref="409" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="50" pref="121" max="32767" attributes="0"/>
+                          <EmptySpace min="50" pref="113" max="32767" attributes="0"/>
                           <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="24" pref="24" max="24" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -1741,7 +1741,7 @@
                               <Component id="jButtonMenosAnioFechaFinTurno" min="-2" pref="40" max="-2" attributes="0"/>
                               <Component id="jRadioButtonNoche" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="73" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="64" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -2022,12 +2022,12 @@
                       <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel22" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelGestionarPaciente11" alignment="0" pref="584" max="32767" attributes="1"/>
+                          <Component id="jLabelGestionarPaciente11" alignment="0" pref="627" max="32767" attributes="1"/>
                       </Group>
                       <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="181" max="32767" attributes="0"/>
+                      <EmptySpace pref="224" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="jLabel20" min="-2" pref="330" max="-2" attributes="0"/>
@@ -2083,7 +2083,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                       <Component id="jButtonFinalizar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="778" max="32767" attributes="0"/>
+                      <EmptySpace pref="779" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2236,7 +2236,7 @@
                       <Component id="scrollPaneRecetas" min="-2" pref="204" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                       <Component id="jButtonConsultarReceta" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="122" max="32767" attributes="0"/>
+                      <EmptySpace pref="110" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

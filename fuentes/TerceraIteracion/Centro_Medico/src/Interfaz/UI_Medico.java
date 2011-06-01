@@ -13,24 +13,24 @@
 package Interfaz;
 
 import java.awt.Image;
-import CentroMedico.*;
-import BaseDatos.*;
 import java.util.*;
 
+import javax.swing.*;
+import Controlador.*;
+import CentroMedico.*;
+import BaseDatos.*;
 import java.awt.Color;
+import java.util.Calendar.*;
+import java.util.Calendar;
 import java.sql.SQLException;
+import java.util.Date;
+import java.util.Set;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
-import javax.swing.DefaultListModel;
-import Controlador.*;
-
-import java.awt.image.*;
-import javax.imageio.ImageIO;
-import java.io.*;
-
-
 
 
 /**
@@ -3353,10 +3353,17 @@ MedicamentoBD meBD = new MedicamentoBD();
         System.out.println("Tenemos la imagen");
         System.out.print(usu.getFoto());
 
-        Image inImage = new ImageIcon(usu.getFoto()).getImage();
-        ImageIcon aescala = new ImageIcon(inImage.getScaledInstance(130,150,inImage.SCALE_SMOOTH));
-        jLabelFotoPersonal.setIcon(aescala); // NOI18N
-
+        //Codigo para cargar la imagen del usuario en el formulario
+        try{
+            
+            ImageIcon icono = new ImageIcon(usu.getFoto());
+            Image imagen = icono.getImage();
+            ImageIcon aescala = new ImageIcon(imagen.getScaledInstance(150,150,Image.SCALE_SMOOTH));
+            jLabelFotoPersonal.setIcon(aescala); // NOI18N
+        }
+        catch(Exception ex){
+            System.err.print("Error al leer el archivo");
+        }
 
 //        jTextFieldFechaNacimientoAnioPersonal.setText(num_anio);
   //      jTextFieldFechaNacimientoDiaPersonal.setText(num_dia);
