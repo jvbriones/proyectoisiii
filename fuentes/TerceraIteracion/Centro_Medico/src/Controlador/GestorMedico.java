@@ -5,18 +5,25 @@
 
 package Controlador;
 
+import BaseDatos.CitaBD;
 import BaseDatos.PacienteBD;
+import BaseDatos.PruebaAnalisisBD;
+import BaseDatos.PruebaRadiologiaBD;
 import BaseDatos.RecetaBD;
 import CentroMedico.Cita;
 import CentroMedico.Enfermedad;
 import CentroMedico.Medicamento;
 import CentroMedico.MedicamentoRecetado;
 import CentroMedico.Paciente;
+import CentroMedico.PersonalMedico;
+import CentroMedico.PruebaAnalisis;
+import CentroMedico.PruebaRadiologia;
 import CentroMedico.Receta;
 import java.lang.String;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -88,7 +95,7 @@ public class GestorMedico {
     }
     public boolean anadirEnfermedad(String Nombre,String Tipo, Date FechaDet,String Descripcion,String Volante,Paciente Paci){
 
-
+        
         PacienteBD pac=new PacienteBD();
         Enfermedad enfe = new Enfermedad(Nombre,Tipo,FechaDet,Descripcion,Volante);
         Paci.anadirEnfermedad(enfe);
@@ -111,6 +118,55 @@ public class GestorMedico {
 
       return true; 
         
+    }
+    public HashMap<String,ArrayList<String>> consultarHistorialPacientes(String dniMedico) throws SQLException{
+        HashMap<String,ArrayList<String>> histo= new HashMap<String,ArrayList<String>>();
+        ArrayList<String> Atributos=new ArrayList<String>();
+        CitaBD citabd=new CitaBD();
+        PacienteBD pacbd=new PacienteBD();
+        ArrayList Citas=citabd.ObtenerTodasCitas();
+        Cita ci;
+        String dniMedicoCita;
+        String dniPaciente;
+        Paciente paci;
+        for(Iterator itCi=Citas.iterator();itCi.hasNext();){
+            ci=(Cita) itCi.next();
+            dniMedicoCita=ci.getDNIMedico();
+            if(dniMedicoCita.equals(dniMedico)){
+                dniPaciente=ci.getDNIPaciente();
+                paci=pacbd.obtener(dniPaciente);
+                Atributos.add(paci.getNombre());
+                Atributos.add(paci.getApellidos());
+                histo.put(dniPaciente, Atributos);
+            }
+        }
+        return histo;
+
+    }
+    public ArrayList<ArrayList> consultarHistorialPruebasPaciente( String dniPaciente) throws SQLException{
+        PruebaAnalisisBD pabd=new PruebaAnalisisBD();
+        PruebaRadiologiaBD prbd=new PruebaRadiologiaBD();
+        ArrayList<PruebaAnalisis> pan=pabd.obtenerPruebasAnalisis(dniPaciente);
+        ArrayList<PruebaRadiologia> pra=prbd.obtenerPruebasRadiologia(dniPaciente);
+        ArrayList<ArrayList> pruebas=new ArrayList<ArrayList>();
+        ArrayList pruebasAnalisis=new ArrayList();
+        ArrayList pruebasRadiologia=new ArrayList();
+        PruebaAnalisis pa;
+        PruebaRadiologia pr;
+        int id;
+        for(Iterator itPan=pan.iterator();itPan.hasNext();){
+            pa=(PruebaAnalisis) itPan.next();
+            id=pa.getId();
+            pruebasAnalisis.add(id);
+        }
+        pruebas.add(pruebasAnalisis);
+         for(Iterator itPra=pra.iterator();itPra.hasNext();){
+            pr=(PruebaRadiologia) itPra.next();
+            id=pr.getId();
+            pruebasRadiologia.add(id);
+        }
+        pruebas.add(pruebasRadiologia);
+        return pruebas;
     }
 /*
     public void guardarVolante(String Volante){
