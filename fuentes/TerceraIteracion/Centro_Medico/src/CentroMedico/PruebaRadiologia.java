@@ -16,7 +16,8 @@ import java.io.Serializable;
 public class PruebaRadiologia implements Serializable{
     private int Id;
     private String Comentario;
-
+    private boolean Acceso;
+    
     private Paciente Paciente;
     private Radiologo Radiologo;
 
@@ -47,6 +48,13 @@ public class PruebaRadiologia implements Serializable{
         return Radiologo;
     }
 
+    public boolean isAcceso() {
+        return Acceso;
+    }
+
+
+
+
     public void setId(int Id){
         this.Id=Id;
     }
@@ -62,5 +70,10 @@ public class PruebaRadiologia implements Serializable{
     public void setRadiologo(Radiologo Radiologo) {
         this.Radiologo = Radiologo;
     }
+
+    public void setAcceso(boolean Acceso) {
+        this.Acceso = Acceso;
+    }
+
 
 }
