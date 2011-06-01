@@ -23,6 +23,7 @@ public class PruebaAnalisis implements Serializable{
 
     public PruebaAnalisis() {
     }
+
     public PruebaAnalisis(String com, Paciente pac, Analista an){
         this.Comentario=com;
         this.Paciente = pac;
@@ -48,8 +49,6 @@ public class PruebaAnalisis implements Serializable{
     public boolean isAcceso() {
         return Acceso;
     }
-
-
 
     public void setId (int Id){
         this.Id=Id;
