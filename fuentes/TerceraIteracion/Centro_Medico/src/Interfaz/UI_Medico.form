@@ -789,10 +789,13 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="123" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="10" pref="10" max="10" attributes="0"/>
+                              <Component id="jLabelGestionarPaciente3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <Component id="jButtonConsultarDatosPersonales" alignment="0" min="-2" pref="194" max="-2" attributes="0"/>
-                          <Component id="jLabelGestionarPaciente3" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                               <Component id="jLabel1" alignment="1" min="-2" pref="162" max="-2" attributes="0"/>
                               <Component id="jButtonConsultarCitas" alignment="1" min="-2" pref="192" max="-2" attributes="0"/>
@@ -800,37 +803,32 @@
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jButtonGestionarCita" alignment="0" min="-2" pref="194" max="-2" attributes="0"/>
-                                          <Component id="jButtonAtenderPaciente" alignment="0" min="-2" pref="192" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="168" max="-2" attributes="0"/>
-                                      <Component id="jLabelConsultarTurno" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="jButtonGestionarCita" alignment="0" min="-2" pref="194" max="-2" attributes="0"/>
+                                  <Component id="jButtonAtenderPaciente" alignment="0" min="-2" pref="192" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jButtonHistoriales" min="-2" pref="194" max="-2" attributes="0"/>
-                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                      <Component id="jButtonInformacionClinica" alignment="1" min="-2" pref="194" max="-2" attributes="0"/>
-                                      <Component id="jLabel4" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace pref="115" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="168" max="-2" attributes="0"/>
+                              <Component id="jLabelConsultarTurno" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="144" max="-2" attributes="0"/>
                               <Component id="jLabel2" min="-2" pref="142" max="-2" attributes="0"/>
-                              <EmptySpace pref="209" max="32767" attributes="0"/>
-                              <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                      <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonInforClinicaPac" alignment="0" min="-2" pref="192" max="-2" attributes="0"/>
+                          <Component id="jButtonConsHistorialPacientes" alignment="0" min="-2" pref="192" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="10" pref="10" max="10" attributes="0"/>
+                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="115" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -839,27 +837,34 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButtonConsultarDatosPersonales" pref="138" max="32767" attributes="1"/>
-                          <Component id="jButtonGestionarCita" pref="138" max="32767" attributes="1"/>
-                          <Component id="jButtonHistoriales" pref="138" max="32767" attributes="0"/>
+                          <Component id="jButtonConsultarDatosPersonales" min="-2" pref="143" max="-2" attributes="1"/>
+                          <Component id="jButtonGestionarCita" min="-2" pref="143" max="-2" attributes="1"/>
+                          <Component id="jButtonConsHistorialPacientes" min="-2" pref="143" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabelGestionarPaciente3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelConsultarTurno" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="jLabelConsultarTurno" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelGestionarPaciente3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="1">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jButtonAtenderPaciente" min="-2" pref="143" max="-2" attributes="0"/>
-                                  <Component id="jButtonInformacionClinica" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="jButtonInforClinicaPac" min="-2" pref="143" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -868,7 +873,7 @@
                               <Component id="jLabel1" min="-2" pref="21" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -941,20 +946,6 @@
                 <Property name="text" type="java.lang.String" value="jButton1"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButtonHistoriales">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/fuentes/TerceraIteracion/Centro_Medico/src/Imagenes/Principal/prueba.png"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonInformacionClinica">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/fuentes/TerceraIteracion/Centro_Medico/src/Imagenes/Principal/carpeta.png"/>
-                </Property>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Consultar Historial Pacientes"/>
@@ -964,6 +955,26 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Consultar Informaci&#xf3;n Cl&#xed;nica del Paciente"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButtonConsHistorialPacientes">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Imagenes/Principal/carpeta.png"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonConsHistorialPacientesMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButtonInforClinicaPac">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Imagenes/Principal/prueba.png"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonInforClinicaPacMouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

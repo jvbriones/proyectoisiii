@@ -28,7 +28,7 @@ import java.util.Date;
 
 public class GestorPersonal {
 
-    public boolean altaPersonal(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, String Foto, String TipoUsuario) throws SQLException {
+    public boolean altaPersonal(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, byte[] Foto, String TipoUsuario) throws SQLException {
         boolean existe;
         PersonalMedicoBD bd_personal=new PersonalMedicoBD();
         String Datos=new String();
@@ -51,7 +51,7 @@ public class GestorPersonal {
         return existe;
 
     }
-    public boolean altaFarmaceutico(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, String Foto, String TipoUsuario) throws SQLException {
+    public boolean altaFarmaceutico(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, byte[] Foto, String TipoUsuario) throws SQLException {
         boolean existe;
         FarmaceuticoBD bd_farmaceutico=new FarmaceuticoBD();
         String Datos=new String();
@@ -95,7 +95,7 @@ public class GestorPersonal {
         existe=bd_personal.existePersonal(Dni);
         return existe;
     }
-       public boolean modificarPersonal(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Pass,String Telefono, Date FecNac, String LugarNac, String Foto,String Tipo) throws SQLException {
+       public boolean modificarPersonal(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Pass,String Telefono, Date FecNac, String LugarNac, byte[] Foto,String Tipo) throws SQLException {
         boolean exito;
         PersonalMedicoBD bd_personal=new PersonalMedicoBD();
         PersonalMedico personal=bd_personal.obtener(Dni);
@@ -103,7 +103,7 @@ public class GestorPersonal {
         bd_personal.actualizar(personal);
         return true;
 }
-       public boolean modificarPersonalFarmacia(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Pass,String Telefono, Date FecNac, String LugarNac, String Foto,String Tipo) throws SQLException {
+       public boolean modificarPersonalFarmacia(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Pass,String Telefono, Date FecNac, String LugarNac, byte[] Foto,String Tipo) throws SQLException {
         boolean exito;
         FarmaceuticoBD bd_personal=new FarmaceuticoBD();
         Farmaceutico personal=bd_personal.obtener(Dni);

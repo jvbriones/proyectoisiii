@@ -32,7 +32,7 @@ public class Usuario implements Serializable{
     private String Telefono;
     private Date FecNac;
     private String LugarNac;
-    private String Foto;
+    private byte[] Foto;
     private String Tipo;
 
 
@@ -55,7 +55,7 @@ public class Usuario implements Serializable{
      * Este constructor inicializa todos los atributos de la clase.
      */
     public Usuario(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
-            String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto, String Tipo){
+            String Contrasenia, String Telefono, Date FecNac, String LugarNac, byte[] Foto, String Tipo){
    
         this.DNI=Dni;
         this.Nombre=Nombre;
@@ -111,7 +111,7 @@ public class Usuario implements Serializable{
         return  this.LugarNac;
     }
 
-    public String getFoto(){
+    public byte[] getFoto(){
         return  this.Foto;
     }
 
@@ -162,7 +162,7 @@ public class Usuario implements Serializable{
         this.LugarNac=LugarNac;
     }
 
-    public void setFoto(String Foto){
+    public void setFoto(byte[] Foto){
        this.Foto=Foto;
     }
 

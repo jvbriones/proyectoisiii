@@ -29,7 +29,7 @@
     <property name="LugarNac">
         <column name="LugarNac" not-null="true"/>
     </property>
-    <property name="Foto">
+    <property name="Foto" type="binary">
         <column name="Foto" not-null="false"/>
     </property>
     <property name="Tipo">

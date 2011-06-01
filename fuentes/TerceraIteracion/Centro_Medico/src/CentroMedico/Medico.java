@@ -33,7 +33,7 @@ public class Medico extends PersonalMedico{
     }
 
     public Medico(String Dni, String Nombre, String Apellidos, String Direccion, String Email, String Contrasena,
-            String Telefono, Date FecNac, String LugarNac, String Foto) {
+            String Telefono, Date FecNac, String LugarNac, byte[] Foto) {
 
         super(Dni, Nombre, Apellidos, Direccion, Email, Contrasena, Telefono, FecNac, LugarNac, Foto, "Medico");
 

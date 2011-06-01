@@ -47,11 +47,11 @@ public class Paciente extends Usuario {
     }
   
     public Paciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
-            String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto){
+            String Contrasenia, String Telefono, Date FecNac, String LugarNac, byte[] Foto){
         super(Dni, Nombre, Apellidos, Direccion, Email, Contrasenia, Telefono, FecNac, LugarNac, Foto, "Paciente");
     }
     public void actualizar(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
-            String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto){
+            String Contrasenia, String Telefono, Date FecNac, String LugarNac, byte[] Foto){
           setDNI(Dni);
         setNombre(Nombre);
         setApellidos(Apellidos);

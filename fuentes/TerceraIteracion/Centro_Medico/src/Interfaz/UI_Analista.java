@@ -1734,7 +1734,7 @@ public class UI_Analista extends javax.swing.JFrame {
             String tipoPersonal = "Analista";
            
             try {
-                exito = gesPer.modificarPersonal(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(),jTextFieldContraseniaPersonal.getText(), jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), url, tipoPersonal);
+                exito = gesPer.modificarPersonal(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(),jTextFieldContraseniaPersonal.getText(), jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), sfotografia, tipoPersonal);
                 if(exito){
                     new InformacionExito().setVisible(true);
                     limpiarFormulario("GestionarPersonal");
@@ -2715,7 +2715,7 @@ public class UI_Analista extends javax.swing.JFrame {
                 try{
                     ImageIcon icono = new ImageIcon(dlg.getSelectedFile().getCanonicalPath());
                     Image imagen = icono.getImage();
-                    ImageIcon aescala = new ImageIcon(imagen.getScaledInstance(130,150,Image.SCALE_SMOOTH));
+                    ImageIcon aescala = new ImageIcon(imagen.getScaledInstance(150,150,Image.SCALE_SMOOTH));
                     jLabelFotoPersonal.setIcon(aescala); // NOI18N
                 }
                 catch(Exception ex){
@@ -2906,7 +2906,7 @@ public class UI_Analista extends javax.swing.JFrame {
     }
 */
  
-
+    byte[] sfotografia;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLayeredPane ZonaTrabajo;
     private javax.swing.ButtonGroup buttonGroup1;

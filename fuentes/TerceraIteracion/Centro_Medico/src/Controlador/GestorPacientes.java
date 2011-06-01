@@ -31,7 +31,7 @@ import java.util.Set;
 
 public class GestorPacientes {
 
-   public boolean altaPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, String Foto, String TipoUsuario) throws SQLException {
+   public boolean altaPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, byte[] Foto, String TipoUsuario) throws SQLException {
         boolean existe;
         PacienteBD bd_paciente = new PacienteBD();
         String Datos = new String();
@@ -82,7 +82,7 @@ public class GestorPacientes {
         
     }
 
-   public boolean modificarPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Pass,String Telefono, Date FecNac, String LugarNac, String Foto ) throws SQLException {
+   public boolean modificarPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Pass,String Telefono, Date FecNac, String LugarNac, byte[] Foto ) throws SQLException {
         boolean exito;
         PacienteBD bd_paciente=new PacienteBD();
         Paciente paciente=bd_paciente.obtener(Dni);

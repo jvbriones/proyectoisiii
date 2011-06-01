@@ -24,11 +24,11 @@ public class Farmaceutico extends Usuario{
     }
 
     public Farmaceutico(String Dni, String Nombre, String Apellidos, String Direccion, String Email, String Contrasena,
-            String Telefono, Date FecNac, String LugarNac, String Foto) {
+            String Telefono, Date FecNac, String LugarNac, byte[] Foto) {
         super(Dni, Nombre, Apellidos, Direccion, Email, Contrasena, Telefono, FecNac, LugarNac, Foto, "Farmaceutico");
     }
     public void actualizar(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
-            String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto,String Tipo){
+            String Contrasenia, String Telefono, Date FecNac, String LugarNac, byte[] Foto,String Tipo){
         super.setDNI(Dni);
         super.setNombre(Nombre);
         super.setApellidos(Apellidos);

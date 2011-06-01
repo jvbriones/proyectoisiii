@@ -20,14 +20,14 @@ public class PersonalMedico extends Usuario{
     }
 
     public PersonalMedico (String Dni, String Nombre, String Apellidos, String Direccion,String Email,
-            String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto, String Tipo){
+            String Contrasenia, String Telefono, Date FecNac, String LugarNac, byte[] Foto, String Tipo){
 
         super(Dni, Nombre, Apellidos, Direccion, Email, Contrasenia, Telefono, FecNac, LugarNac, Foto, Tipo);
         this.Turno=null;
     }
 
     public PersonalMedico (String Dni, String Nombre, String Apellidos, String Direccion,String Email,
-            String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto, String Tipo, Turno T1){
+            String Contrasenia, String Telefono, Date FecNac, String LugarNac, byte[] Foto, String Tipo, Turno T1){
 
         super(Dni, Nombre, Apellidos, Direccion, Email, Contrasenia, Telefono, FecNac, LugarNac, Foto, Tipo);
         this.Turno = T1;
@@ -47,7 +47,7 @@ public class PersonalMedico extends Usuario{
          return super.getTipo();
     }
     public void actualizar(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
-            String Contrasenia, String Telefono, Date FecNac, String LugarNac, String Foto,String Tipo){
+            String Contrasenia, String Telefono, Date FecNac, String LugarNac, byte[] Foto,String Tipo){
         setDNI(Dni);
         setNombre(Nombre);
         setApellidos(Apellidos);
