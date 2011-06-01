@@ -132,7 +132,15 @@ public class CitaBD {
      *  ObtenerTodasCitas
      */
     public ArrayList ObtenerTodasCitas() throws SQLException{
-        return new ArrayList();
+       Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+
+        List<Cita> result = (List<Cita>)session.createQuery("from Cita").list();
+        Set<Cita> citas = new HashSet<Cita>(result);
+
+        session.getTransaction().commit();
+        return (ArrayList) citas;
     }
 
 
