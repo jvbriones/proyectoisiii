@@ -456,6 +456,11 @@ public class UI_Paciente extends javax.swing.JFrame {
         jLabel9.setText("Gestionar Recetas");
 
         jButtonGestionarPruebas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fuentes/TerceraIteracion/Centro_Medico/src/Imagenes/Principal/prueba.png"))); // NOI18N
+        jButtonGestionarPruebas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonGestionarPruebasMouseClicked(evt);
+            }
+        });
         jButtonGestionarPruebas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonGestionarPruebasActionPerformed(evt);
@@ -475,59 +480,56 @@ public class UI_Paciente extends javax.swing.JFrame {
             .add(jPanelPrincipalLayout.createSequentialGroup()
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelPrincipalLayout.createSequentialGroup()
-                        .add(65, 65, 65)
-                        .add(jLabelGestionarPaciente3))
-                    .add(jPanelPrincipalLayout.createSequentialGroup()
                         .add(39, 39, 39)
                         .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jButtonGestionarPruebas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
+                            .add(jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(jButtonGestionarPruebas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                    .add(jPanelPrincipalLayout.createSequentialGroup()
+                        .add(65, 65, 65)
+                        .add(jLabelGestionarPaciente3)))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 80, Short.MAX_VALUE)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelPrincipalLayout.createSequentialGroup()
-                        .add(152, 152, 152)
-                        .add(jLabelGestionarCita1)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 172, Short.MAX_VALUE)
-                        .add(jLabel9)
-                        .add(155, 155, 155))
-                    .add(jPanelPrincipalLayout.createSequentialGroup()
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 75, Short.MAX_VALUE)
                         .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jPanelPrincipalLayout.createSequentialGroup()
-                                .add(jButtonConsultarHistorialClinico, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap())
+                            .add(jButtonConsultarHistorialClinico, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(jPanelPrincipalLayout.createSequentialGroup()
                                 .add(jButtonGestionarCita, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 109, Short.MAX_VALUE)
-                                .add(jButtonGestionarRecetas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .add(96, 96, 96))))))
+                                .add(113, 113, 113)
+                                .add(jButtonGestionarRecetas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                        .add(96, 96, 96))
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelPrincipalLayout.createSequentialGroup()
+                        .add(jLabelGestionarCita1)
+                        .add(233, 233, 233)
+                        .add(jLabel9)
+                        .add(130, 130, 130))))
             .add(jPanelPrincipalLayout.createSequentialGroup()
-                .add(105, 105, 105)
+                .add(91, 91, 91)
                 .add(jLabel11)
-                .add(137, 137, 137)
+                .add(173, 173, 173)
                 .add(jLabel12)
-                .addContainerGap(451, Short.MAX_VALUE))
+                .addContainerGap(438, Short.MAX_VALUE))
         );
         jPanelPrincipalLayout.setVerticalGroup(
             jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanelPrincipalLayout.createSequentialGroup()
                 .add(28, 28, 28)
-                .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
-                    .add(jButtonGestionarRecetas, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                    .add(jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(jButtonGestionarRecetas, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelGestionarCita1)
-                    .add(jLabelGestionarPaciente3)
-                    .add(jLabel9))
-                .add(78, 78, 78)
+                    .add(jLabel9)
+                    .add(jLabelGestionarPaciente3))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 88, Short.MAX_VALUE)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jButtonGestionarPruebas)
                     .add(jButtonConsultarHistorialClinico))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabel11)
-                    .add(jLabel12))
+                    .add(jLabel12, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 14, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .add(100, 100, 100))
         );
 
@@ -980,6 +982,11 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonModificarPacienteMouseClicked(evt);
             }
         });
+        jButtonModificarPaciente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonModificarPacienteActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout jPanelGestionarPacienteLayout = new org.jdesktop.layout.GroupLayout(jPanelGestionarPaciente);
         jPanelGestionarPaciente.setLayout(jPanelGestionarPacienteLayout);
@@ -1175,7 +1182,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarRecetasLayout.createSequentialGroup()
                         .addContainerGap(260, Short.MAX_VALUE)
                         .add(jScrollPane4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 376, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(265, Short.MAX_VALUE))
+                .addContainerGap(264, Short.MAX_VALUE))
         );
         jPanelGestionarRecetasLayout.setVerticalGroup(
             jPanelGestionarRecetasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1196,7 +1203,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(jPanelGestionarRecetasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jButtonConsultarReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 45, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jButtonTerminarReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 45, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(165, Short.MAX_VALUE))
+                .addContainerGap(164, Short.MAX_VALUE))
         );
 
         jPanelGestionarRecetas.setBounds(1, 0, 900, 530);
@@ -1316,7 +1323,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                             .add(jPanelConsultarRecetaLayout.createSequentialGroup()
                                 .add(92, 92, 92)
                                 .add(jLabel18FechaReceta)))))
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelConsultarRecetaLayout.setVerticalGroup(
             jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1342,7 +1349,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                         .add(jPanelConsultarRecetaLayout.createSequentialGroup()
                             .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                             .add(jScrollPane5))))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 15, Short.MAX_VALUE)
                 .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
                     .add(jLabelMedicoReceta)
                     .add(jPanelConsultarRecetaLayout.createSequentialGroup()
@@ -1811,7 +1818,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(jScrollPane18, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 151, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jScrollPane19, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 237, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(155, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
             .add(jPanelDetalleCitaLayout.createSequentialGroup()
                 .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
                     .add(org.jdesktop.layout.GroupLayout.LEADING, jPanelDetalleCitaLayout.createSequentialGroup()
@@ -1846,7 +1853,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                         .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(jLabel43)
                             .add(jScrollPane14, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 80, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(247, Short.MAX_VALUE))
+                .addContainerGap(148, Short.MAX_VALUE))
         );
         jPanelDetalleCitaLayout.setVerticalGroup(
             jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -2497,6 +2504,16 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void jButtonConsPruebaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsPruebaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonConsPruebaActionPerformed
+
+    private void jButtonModificarPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarPacienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonModificarPacienteActionPerformed
+
+    private void jButtonGestionarPruebasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGestionarPruebasMouseClicked
+        // TODO add your handling code here:
+        String dni = user.getDNI();
+        //Set<Prueba> set_pruebas = gstpac.obtenerPruebas(dni); SIN HACER
+    }//GEN-LAST:event_jButtonGestionarPruebasMouseClicked
 
 
     /*Comprueba que la fecha introducida es correcta
