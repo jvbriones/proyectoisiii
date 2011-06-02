@@ -295,6 +295,8 @@ public class UI_Medico extends javax.swing.JFrame {
         jScrollPane14 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
         jButtonSaveEnfer = new javax.swing.JButton();
+        jLabel57 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
         jPanelConsInfHisPaciente = new javax.swing.JPanel();
         jLabel36 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
@@ -334,6 +336,8 @@ public class UI_Medico extends javax.swing.JFrame {
         jScrollPane17 = new javax.swing.JScrollPane();
         jTextArea4 = new javax.swing.JTextArea();
         jButtonAddEnferma = new javax.swing.JButton();
+        jLabel56 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
         jPanelHistorialPac = new javax.swing.JPanel();
         jLabel51 = new javax.swing.JLabel();
         jLabel52 = new javax.swing.JLabel();
@@ -514,7 +518,7 @@ public class UI_Medico extends javax.swing.JFrame {
                         .add(jTextFieldDuracion1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 219, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(120, 120, 120)
                         .add(dateChooserCombo1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .add(202, 202, 202))
+                .add(223, 223, 223))
             .add(jPanel2Layout.createSequentialGroup()
                 .add(36, 36, 36)
                 .add(jLabel25)
@@ -733,9 +737,9 @@ public class UI_Medico extends javax.swing.JFrame {
                     .add(jLabel6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 72, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(scrollPaneVolante, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 329, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jButton3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 239, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(288, Short.MAX_VALUE))
+                .addContainerGap(361, Short.MAX_VALUE))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelAtenderPacienteLayout.createSequentialGroup()
-                .addContainerGap(503, Short.MAX_VALUE)
+                .addContainerGap(576, Short.MAX_VALUE)
                 .add(jPanelAtenderPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelAtenderPacienteLayout.createSequentialGroup()
                         .add(23, 23, 23)
@@ -776,7 +780,7 @@ public class UI_Medico extends javax.swing.JFrame {
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanelAtenderPaciente.setBounds(0, 0, 1155, 427);
+        jPanelAtenderPaciente.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelAtenderPaciente, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelPrincipal.setPreferredSize(new java.awt.Dimension(901, 531));
@@ -1417,7 +1421,7 @@ public class UI_Medico extends javax.swing.JFrame {
                 .addContainerGap(404, Short.MAX_VALUE))
             .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(jPanelConsultarTurnoLayout.createSequentialGroup()
-                    .add(50, 61, Short.MAX_VALUE)
+                    .add(50, 62, Short.MAX_VALUE)
                     .add(jLabel9)
                     .add(24, 24, 24)
                     .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1462,10 +1466,10 @@ public class UI_Medico extends javax.swing.JFrame {
                         .add(jButtonMenosMesFechaFinTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(jButtonMenosAnioFechaFinTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(jRadioButtonNoche))
-                    .add(0, 133, Short.MAX_VALUE)))
+                    .add(0, 132, Short.MAX_VALUE)))
         );
 
-        jPanelConsultarTurno.setBounds(0, 0, 860, 531);
+        jPanelConsultarTurno.setBounds(0, 0, 860, -1);
         ZonaTrabajo.add(jPanelConsultarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel13.setText("_____________________________________________________________________________");
@@ -1568,7 +1572,7 @@ public class UI_Medico extends javax.swing.JFrame {
                 .add(42, 42, 42))
         );
 
-        jPanelSolicitarPrueba.setBounds(0, 0, 749, 381);
+        jPanelSolicitarPrueba.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelSolicitarPrueba, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabelGestionarPaciente7.setFont(new java.awt.Font("Lucida Grande", 1, 48));
@@ -1636,9 +1640,9 @@ public class UI_Medico extends javax.swing.JFrame {
                         .add(jLabelDNIPac, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 39, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(18, 18, 18)
                         .add(jTextFieldDNIAtenderPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 134, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(484, Short.MAX_VALUE))
+                .addContainerGap(548, Short.MAX_VALUE))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelAtenderPacienteIntermedioLayout.createSequentialGroup()
-                .addContainerGap(589, Short.MAX_VALUE)
+                .addContainerGap(653, Short.MAX_VALUE)
                 .add(jButtonAceptar, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 93, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(466, 466, 466))
             .add(jPanelAtenderPacienteIntermedioLayout.createSequentialGroup()
@@ -1648,7 +1652,7 @@ public class UI_Medico extends javax.swing.JFrame {
                         .add(jLabelError)
                         .add(15, 15, 15))
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, jLabelErrorDniPaciente))
-                .addContainerGap(636, Short.MAX_VALUE))
+                .addContainerGap(700, Short.MAX_VALUE))
         );
         jPanelAtenderPacienteIntermedioLayout.setVerticalGroup(
             jPanelAtenderPacienteIntermedioLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1672,7 +1676,7 @@ public class UI_Medico extends javax.swing.JFrame {
                 .addContainerGap(118, Short.MAX_VALUE))
         );
 
-        jPanelAtenderPacienteIntermedio.setBounds(0, 0, 1148, 480);
+        jPanelAtenderPacienteIntermedio.setBounds(0, 0, -1, 480);
         ZonaTrabajo.add(jPanelAtenderPacienteIntermedio, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelInformacionClinic.setMinimumSize(new java.awt.Dimension(900, 530));
@@ -1857,6 +1861,13 @@ public class UI_Medico extends javax.swing.JFrame {
         jScrollPane14.setViewportView(jTextArea2);
 
         jButtonSaveEnfer.setText("Guardar");
+        jButtonSaveEnfer.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonSaveEnferMouseClicked(evt);
+            }
+        });
+
+        jLabel57.setText("Tipo");
 
         org.jdesktop.layout.GroupLayout jPanelModEnferLayout = new org.jdesktop.layout.GroupLayout(jPanelModEnfer);
         jPanelModEnfer.setLayout(jPanelModEnferLayout);
@@ -1870,19 +1881,6 @@ public class UI_Medico extends javax.swing.JFrame {
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(jScrollPane11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 158, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                     .add(jPanelModEnferLayout.createSequentialGroup()
-                        .add(111, 111, 111)
-                        .add(jLabel32)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jPanelModEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jLabel34)
-                            .add(jScrollPane12, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 102, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .add(90, 90, 90)
-                        .add(jLabel33)
-                        .add(18, 18, 18)
-                        .add(jPanelModEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jLabel35)
-                            .add(dateChooserCombo3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                    .add(jPanelModEnferLayout.createSequentialGroup()
                         .add(128, 128, 128)
                         .add(jScrollPane13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 199, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(92, 92, 92)
@@ -1894,13 +1892,29 @@ public class UI_Medico extends javax.swing.JFrame {
                             .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel23, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .add(jPanelModEnferLayout.createSequentialGroup()
                         .add(339, 339, 339)
-                        .add(jButtonSaveEnfer)))
+                        .add(jButtonSaveEnfer))
+                    .add(jPanelModEnferLayout.createSequentialGroup()
+                        .add(111, 111, 111)
+                        .add(jPanelModEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jLabel32)
+                            .add(jLabel57))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jPanelModEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                            .add(jTextField7)
+                            .add(jLabel34)
+                            .add(jScrollPane12, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE))
+                        .add(90, 90, 90)
+                        .add(jLabel33)
+                        .add(18, 18, 18)
+                        .add(jPanelModEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jLabel35)
+                            .add(dateChooserCombo3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(221, Short.MAX_VALUE))
         );
         jPanelModEnferLayout.setVerticalGroup(
             jPanelModEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanelModEnferLayout.createSequentialGroup()
-                .add(45, 45, 45)
+                .add(80, 80, 80)
                 .add(jLabel23)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jSeparator3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
@@ -1914,17 +1928,22 @@ public class UI_Medico extends javax.swing.JFrame {
                     .add(jScrollPane12, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jLabel33)
                     .add(dateChooserCombo3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(40, 40, 40)
+                .add(18, 18, 18)
+                .add(jPanelModEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jLabel57)
+                    .add(jTextField7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(8, 8, 8)
                 .add(jPanelModEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabel34)
                     .add(jLabel35))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jPanelModEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                    .add(jScrollPane14)
-                    .add(jScrollPane13, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE))
-                .add(20, 20, 20)
-                .add(jButtonSaveEnfer)
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jPanelModEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jPanelModEnferLayout.createSequentialGroup()
+                        .add(jScrollPane13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 128, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(20, 20, 20)
+                        .add(jButtonSaveEnfer))
+                    .add(jScrollPane14, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jPanelModEnfer.setBounds(1, 0, 900, 530);
@@ -2140,6 +2159,15 @@ public class UI_Medico extends javax.swing.JFrame {
         jScrollPane17.setViewportView(jTextArea4);
 
         jButtonAddEnferma.setText("Guardar");
+        jButtonAddEnferma.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonAddEnfermaMouseClicked(evt);
+            }
+        });
+
+        jLabel56.setText("Tipo");
+
+        jTextField6.setText("jTextField6");
 
         org.jdesktop.layout.GroupLayout jPanelAddEnferLayout = new org.jdesktop.layout.GroupLayout(jPanelAddEnfer);
         jPanelAddEnfer.setLayout(jPanelAddEnferLayout);
@@ -2163,18 +2191,22 @@ public class UI_Medico extends javax.swing.JFrame {
                         .add(jScrollPane16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 242, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(74, 74, 74)
                         .add(jScrollPane17, 0, 0, Short.MAX_VALUE))
-                    .add(jPanelAddEnferLayout.createSequentialGroup()
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jPanelAddEnferLayout.createSequentialGroup()
                         .add(133, 133, 133)
-                        .add(jLabel47)
+                        .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel56, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel47, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .add(18, 18, 18)
-                        .add(jTextField5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 145, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 69, Short.MAX_VALUE)
+                        .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                            .add(jTextField6)
+                            .add(jTextField5, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 71, Short.MAX_VALUE)
                         .add(jLabel48)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(jLabel50)
                             .add(dateChooserCombo4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(201, Short.MAX_VALUE))
+                .addContainerGap(199, Short.MAX_VALUE))
             .add(jPanelAddEnferLayout.createSequentialGroup()
                 .add(221, 221, 221)
                 .add(jLabel49)
@@ -2202,7 +2234,11 @@ public class UI_Medico extends javax.swing.JFrame {
                         .add(jLabel47)
                         .add(jLabel48))
                     .add(dateChooserCombo4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(37, 37, 37)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jLabel56)
+                    .add(jTextField6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(12, 12, 12)
                 .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabel49)
                     .add(jLabel50))
@@ -2212,7 +2248,7 @@ public class UI_Medico extends javax.swing.JFrame {
                     .add(jScrollPane16, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE))
                 .add(21, 21, 21)
                 .add(jButtonAddEnferma)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         jPanelAddEnfer.setBounds(1, 0, 900, 530);
@@ -3008,6 +3044,31 @@ MedicamentoBD meBD = new MedicamentoBD();
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonInforClinicaPacMouseClicked
 
+    private void jButtonAddEnfermaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAddEnfermaMouseClicked
+        // TODO add your handling code here:
+        System.out.println("El juanmi es un cabron");
+        PacienteBD paci=new PacienteBD();
+        Paciente paciente=paci.obtener(jTextField4.getText());
+        if(paciente !=null){
+            GestorMedico gestormedico=new GestorMedico();
+            Date fechaDet = null;
+            fechaDet = dateChooserCombo4.getSelectedDate().getTime();
+            gestormedico.anadirEnfermedad(jTextField5.getText(),jTextField7.getText(),fechaDet,jTextArea3.getText(),jTextArea4.getText(),paciente);
+    }//GEN-LAST:event_jButtonAddEnfermaMouseClicked
+    }
+        private void jButtonSaveEnferMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonSaveEnferMouseClicked
+            // TODO add your handling code here:
+        System.out.println("El juanmi es un cabron");
+        PacienteBD paci=new PacienteBD();
+        Paciente paciente=paci.obtener(jTextPane3.getText());
+        if(paciente !=null){
+            GestorMedico gestormedico=new GestorMedico();
+            Date fechaDet = null;
+            fechaDet = dateChooserCombo4.getSelectedDate().getTime();
+            gestormedico.anadirEnfermedad(jTextPane4.getText(),jTextField6.getText(),fechaDet,jTextArea1.getText(),jTextArea2.getText(),paciente);
+    }
+        }//GEN-LAST:event_jButtonSaveEnferMouseClicked
+    
 
     /*Comprueba que la fecha introducida es correcta
      * 
@@ -3656,6 +3717,8 @@ MedicamentoBD meBD = new MedicamentoBD();
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -3773,6 +3836,8 @@ MedicamentoBD meBD = new MedicamentoBD();
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextFieldAnioFinTurno;
     private javax.swing.JTextField jTextFieldAnioInicioTurno;
     private javax.swing.JTextField jTextFieldApellidosPersonal;
