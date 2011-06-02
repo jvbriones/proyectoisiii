@@ -21,7 +21,7 @@ public class RecetaBD {
         session.getTransaction().commit();
     }
     
-    public Receta obtener (int Id){
+    public Receta obtenerReceta(int Id){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
@@ -47,12 +47,11 @@ public class RecetaBD {
         session.getTransaction().commit();
     }
 
-    public Set<Receta> obtenerRecetasPaciente (String dni){
+    public Set<Receta> obtenerRecetas (String dni){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction ();
 
         List<Receta> result = (List<Receta>)session.createQuery("from Receta where DNI_PACIENTE='"+dni+"'").list();
-
         Set<Receta> recetas = new HashSet<Receta>(result);
 
         return recetas;

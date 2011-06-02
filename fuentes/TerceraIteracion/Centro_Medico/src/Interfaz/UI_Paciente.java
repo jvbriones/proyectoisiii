@@ -19,6 +19,7 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.util.Set;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.lang.reflect.Array;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -469,7 +470,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             }
         });
 
-        jLabel9.setText("Gestionar Recetas");
+        jLabel9.setText("Consultar Recetas");
 
         jLabel11.setText("Consultar Pruebas");
 
@@ -1345,9 +1346,6 @@ public class UI_Paciente extends javax.swing.JFrame {
                                 .add(18, 18, 18)
                                 .add(jTextFieldEmailMedicoReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 147, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
                     .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                        .add(337, 337, 337)
-                        .add(jButtonVolverReceta))
-                    .add(jPanelConsultarRecetaLayout.createSequentialGroup()
                         .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(jPanelConsultarRecetaLayout.createSequentialGroup()
                                 .add(48, 48, 48)
@@ -1368,7 +1366,10 @@ public class UI_Paciente extends javax.swing.JFrame {
                                 .add(jTextFieldFechaReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                             .add(jPanelConsultarRecetaLayout.createSequentialGroup()
                                 .add(92, 92, 92)
-                                .add(jLabel18FechaReceta)))))
+                                .add(jLabel18FechaReceta))))
+                    .add(jPanelConsultarRecetaLayout.createSequentialGroup()
+                        .add(380, 380, 380)
+                        .add(jButtonVolverReceta)))
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelConsultarRecetaLayout.setVerticalGroup(
@@ -2452,19 +2453,24 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void jButtonConsultarRecetaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarRecetaMouseClicked
         // TODO add your handling code here:
         int receta_index = jList2.getSelectedIndex();
-        if(receta_index != -1){
-            GestorPacientes gstpac = new GestorPacientes();
+        if(receta_index != -1){            
             try{
-                Set<Receta> set_recetas = gstpac.obtenerRecetas(user.getDNI());
-                ArrayList<Receta> array_receta = new ArrayList<Receta> (set_recetas);
-                Receta receta = gstpac.seleccionarReceta(array_receta.get(receta_index - 1).getId());
+                Receta receta = gstpac.seleccionarReceta(receta_index);
+                //Set<Receta> set_recetas = gstpac.obtenerRecetas(user.getDNI());
+                //ArrayList<Receta> array_receta = new ArrayList<Receta> (set_recetas);
+                //Receta receta = gstpac.seleccionarReceta(array_receta.get(receta_index - 1).getId());
+                //Receta receta = new Receta();
+                //Iterator<Receta> it = set_recetas.iterator();
+
+                //for(int i = 0; i < receta_index; i++)
+                    //receta = it.next();
 
                 //Mostrar los datos de la receta
                 jTextPane2.setText(receta.getJuicioDiagnostico());
                 jTextPane1.setText(receta.getInstrucciones());
                 jTextFieldFechaReceta.setText(receta.getFecha().toString());
                 jTextFieldDNIMedicoReceta.setText(receta.getMedi().getDNI());
-                jTextFieldNombreMedicoReceta.setText(receta.getMedi().getNombre() + " " + receta.getMedi().getApellidos());
+                jTextFieldNombreMedicoReceta.setText(receta.getMedi().getNombre());
                 jTextFieldTelefonoMedicoReceta.setText(receta.getMedi().getTelefono());
                 jTextFieldEmailMedicoReceta.setText(receta.getMedi().getEmail());
                 mostrarPanel("ConsultarReceta");
@@ -2500,13 +2506,20 @@ public class UI_Paciente extends javax.swing.JFrame {
         try{            
             Set<Receta> set_receta = gstpac.obtenerRecetas(dni);
             if(!set_receta.isEmpty()){
-                ArrayList<Receta> array_receta = new ArrayList<Receta> (set_receta);
+                //ArrayList<Receta> array_receta = new ArrayList<Receta> (set_receta);
+                Receta recet;
                 String elemento, tabula = "                                     ";
 
-                for(int i = 0; i < array_receta.size(); i++){
-                    elemento = "    " + array_receta.get(i).getFecha().toString() + tabula + array_receta.get(i).getMedi().getDNI();
+                for(Iterator<Receta> it = set_receta.iterator(); it.hasNext();){
+                    recet = it.next();
+                    elemento = "    " + recet.getFecha().toString() + tabula + recet.getMedi().getDNI();
                     modelo.addElement(elemento);
                 }
+
+                /*for(int i = 0; i < array_receta.size(); i++){
+                    elemento = "    " + array_receta.get(i).getFecha().toString() + tabula + array_receta.get(i).getMedi().getDNI();
+                    modelo.addElement(elemento);
+                }*/
             }else{
                 JOptionPane.showMessageDialog(null, "¡No tiene recetas disponibles!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
             }

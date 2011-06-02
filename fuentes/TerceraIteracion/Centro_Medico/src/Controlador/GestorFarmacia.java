@@ -235,7 +235,7 @@ public class GestorFarmacia {
 
 
         else{
-            almacenRecetas = recetas.obtenerRecetasPaciente(Dni);
+            almacenRecetas = recetas.obtenerRecetas(Dni);
             /*for( Iterator it = almacenRecetas.iterator(); it.hasNext();) {
                 rec = (Receta)it.next();
                 System.out.println("Receta: "+ rec.getJuicioDiagnostico());
@@ -263,7 +263,7 @@ public class GestorFarmacia {
             Medicamento med = null;
             System.out.println("mostrar receta");
 
-            rec = recetas.obtener(idReceta);
+            rec = recetas.obtenerReceta(idReceta);
             System.out.println("receta "+ rec.getId());
 
 

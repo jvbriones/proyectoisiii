@@ -25,8 +25,8 @@ import java.util.Set;
 
 
 /**
- * @version     1.1     16/04/2011
- * @author      Sub_Equipo2
+ * @version     1.1     02/06/2011
+ * @author      Sub_Equipo2, Sub_Equipo3
  */
 
 public class GestorPacientes {
@@ -91,8 +91,6 @@ public class GestorPacientes {
         return true;
 }
 
-   
-   // Hecho por Miguel
    public Set<Enfermedad> consultarInfoClinicaPaciente(String DNIPaciente) throws SQLException{
        PacienteBD PacBD = new PacienteBD();
          Set<Enfermedad> enf=null;
@@ -112,9 +110,7 @@ public class GestorPacientes {
        return enf;
            
        }
-       
-   // Hecho por Miguel
-   
+          
    public Set<Enfermedad> consultarInformacionClinica(String DNIPaciente) throws SQLException{
        Set<Enfermedad> enf=null;
        
@@ -125,21 +121,21 @@ public class GestorPacientes {
            
        }
    
-   public Set<Receta> obtenerRecetas(String DNIPaciente) throws SQLException{
+   public Set<Receta> obtenerRecetas(String dni) throws SQLException{
        Set<Receta> recetas = null;
        RecetaBD receta = new RecetaBD();
        
-        recetas = receta.obtenerRecetasPaciente(DNIPaciente);
+        recetas = receta.obtenerRecetas(dni);
      
        return recetas;
            
        }
     
-    public Receta seleccionarReceta(int idReceta) throws SQLException{
+   public Receta seleccionarReceta(int idReceta) throws SQLException{
  
        RecetaBD recetabd= new RecetaBD();
        
-        Receta receta=recetabd.obtener(idReceta);
+       Receta receta=recetabd.obtenerReceta(idReceta);
      
        return receta;
            
