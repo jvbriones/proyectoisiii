@@ -16,17 +16,10 @@ import BaseDatos.PacienteBD;
 import BaseDatos.RecetaBD;
 import BaseDatos.PruebaAnalisisBD;
 import BaseDatos.PruebaRadiologiaBD;
-import CentroMedico.Enfermedad;
-import CentroMedico.Paciente;
-import CentroMedico.PruebaAnalisis;
-import CentroMedico.PruebaRadiologia;
+import CentroMedico.*;
 import CentroMedico.Receta;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collection;
-import java.util.Date;
-import java.util.Set;
+import java.util.*;
 
 
 /**
@@ -136,8 +129,8 @@ public class GestorPacientes {
            
        }
 
-   /*public ArrayList<ArrayList<String> > obtenerPruebas(String dni) throws SQLException{
-       Collection<PruebaAnalisis> pan = null;
+   public ArrayList<ArrayList<String> > obtenerPruebas(String dni) throws SQLException{
+       /*<PruebaAnalisis> pan = null;
        Collection<PruebaRadiologia> pra = null;
        PruebaAnalisisBD pruebaAnaBD = new PruebaAnalisisBD();
        PruebaRadiologiaBD pruebaRadioBD = new PruebaRadiologiaBD();
@@ -170,9 +163,10 @@ public class GestorPacientes {
 
        Pruebas.añadir(pruebasRadiologia);
 
-     return Pruebas;
+       return Pruebas;*/
+       return new ArrayList<ArrayList <String> >();
    }
-*/
+
    public Receta seleccionarReceta(int idReceta) throws SQLException{
  
        RecetaBD recetabd= new RecetaBD();
@@ -183,8 +177,5 @@ public class GestorPacientes {
            
        }
     
-    
-       
-       
 
 }
