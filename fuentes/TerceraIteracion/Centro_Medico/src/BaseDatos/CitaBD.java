@@ -131,7 +131,7 @@ public class CitaBD {
     /*  ¿¿¿¿¿¿¿¿¿¿¿¡¡¡¡¡¡¡SIN ARGUMENTOS???!!!!!?!!!!!!!!
      *  ObtenerTodasCitas
      */
-    public ArrayList ObtenerTodasCitas() throws SQLException{
+    public Set<Cita> ObtenerTodasCitas() throws SQLException{
        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
@@ -140,7 +140,7 @@ public class CitaBD {
         Set<Cita> citas = new HashSet<Cita>(result);
 
         session.getTransaction().commit();
-        return (ArrayList) citas;
+        return  citas;
     }
 
 
