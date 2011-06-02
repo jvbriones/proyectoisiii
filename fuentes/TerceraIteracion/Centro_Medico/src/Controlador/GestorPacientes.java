@@ -18,10 +18,13 @@ import BaseDatos.PruebaAnalisisBD;
 import BaseDatos.PruebaRadiologiaBD;
 import CentroMedico.Enfermedad;
 import CentroMedico.Paciente;
+import CentroMedico.PruebaAnalisis;
+import CentroMedico.PruebaRadiologia;
 import CentroMedico.Receta;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
 import java.util.Set;
 
@@ -133,7 +136,7 @@ public class GestorPacientes {
            
        }
 
-   public ArrayList<ArrayList<String> > obtenerPruebas(String dni) throws SQLException{
+   /*public ArrayList<ArrayList<String> > obtenerPruebas(String dni) throws SQLException{
        Collection<PruebaAnalisis> pan = null;
        Collection<PruebaRadiologia> pra = null;
        PruebaAnalisisBD pruebaAnaBD = new PruebaAnalisisBD();
@@ -147,29 +150,29 @@ public class GestorPacientes {
 
        for(int i = 0; i < pan.size(); i++){
            if(pan.get(i).getAcceso()){
-               PruebaAnalisis pa = pan.siguiente();
-               int id = pa.getId();
-               pruebasAnalisis.añadir(id);
-           }
+             PruebaAnalisis pa = pan.siguiente();
+             int id = pa.getId();
+             pruebasAnalisis.add(String.valueOf(id));
+         }
        }
 
-       Pruebas.añadir(pruebasAnalisis);
+      Pruebas.añadir(pruebasAnalisis);
 
        ArrayList<String> pruebasRadiologia = new ArrayList<String>();
 
        for(int i = 0; i < pra.size(); i++){
            if(pra.get(i).getAcceso()){
-               PruebaRadiologia pr = pra.siguiente();
+           PruebaRadiologia pr = pra.siguiente();
                int id = pr.getId();
-               pruebasRadiologia.añadir(id);
+               //pruebasRadiologia.añadir(id);
            }
        }
 
        Pruebas.añadir(pruebasRadiologia);
 
-       return Pruebas;
+     return Pruebas;
    }
-
+*/
    public Receta seleccionarReceta(int idReceta) throws SQLException{
  
        RecetaBD recetabd= new RecetaBD();
