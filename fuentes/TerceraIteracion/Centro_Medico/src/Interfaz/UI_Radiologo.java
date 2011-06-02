@@ -1802,7 +1802,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
 
 
             /**Insertamos icono de foto anónima*/
-            jLabelFotoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
+            //jLabelFotoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
 
 
             /**Hacemos visible el panel seleccionado*/

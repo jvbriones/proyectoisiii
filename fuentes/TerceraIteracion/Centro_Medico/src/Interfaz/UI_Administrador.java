@@ -3650,7 +3650,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             jLabelTelefonoPaciente.setBackground(Color.black);
             jLabelLugarNacimientoPaciente.setBackground(Color.black);
             jLabelFechaNacimientoPaciente.setBackground(Color.black);
-
+            jLabelFotoPaciente.setIcon(null);
         }
 
         if(formulario.equals("GestionarPersonal")){
@@ -3674,6 +3674,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             jLabelTelefonoPersonal.setBackground(Color.black);
             jLabelLugarNacimientoPersonal.setBackground(Color.black);
             jLabelFechaNacimientoPersonal.setBackground(Color.black);
+            jLabelFotoPersonal.setIcon(null);
         }
 
          if(formulario.equals("GestionarCitaOnline")){
