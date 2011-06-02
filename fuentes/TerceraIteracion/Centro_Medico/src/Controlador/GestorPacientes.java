@@ -16,7 +16,10 @@ import BaseDatos.PacienteBD;
 import BaseDatos.RecetaBD;
 import BaseDatos.PruebaAnalisisBD;
 import BaseDatos.PruebaRadiologiaBD;
-import CentroMedico.*;
+import CentroMedico.Enfermedad;
+import CentroMedico.Paciente;
+import CentroMedico.PruebaAnalisis;
+import CentroMedico.PruebaRadiologia;
 import CentroMedico.Receta;
 import java.sql.SQLException;
 import java.util.*;
@@ -130,41 +133,43 @@ public class GestorPacientes {
        }
 
    public ArrayList<ArrayList<String> > obtenerPruebas(String dni) throws SQLException{
-       /*<PruebaAnalisis> pan = null;
-       Collection<PruebaRadiologia> pra = null;
+
        PruebaAnalisisBD pruebaAnaBD = new PruebaAnalisisBD();
+       ArrayList pan = pruebaAnaBD.obtenerPruebasAnalisis(dni);
+
        PruebaRadiologiaBD pruebaRadioBD = new PruebaRadiologiaBD();
-
-       pan = pruebaAnaBD.obtenerPruebasAnalisis(dni);
-       pra = pruebaRadioBD.obtenerPruebasRadiologia(dni);
-
-       ArrayList<ArrayList<String> > Pruebas = new ArrayList<ArrayList<String > >();
+       ArrayList pra = pruebaRadioBD.obtenerPruebasRadiologia(dni);
+       
+       ArrayList< ArrayList<String> > Pruebas = new ArrayList<ArrayList<String> >();
        ArrayList<String> pruebasAnalisis = new ArrayList<String>();
 
+       PruebaAnalisis pa;
        for(int i = 0; i < pan.size(); i++){
-           if(pan.get(i).getAcceso()){
-             PruebaAnalisis pa = pan.siguiente();
-             int id = pa.getId();
-             pruebasAnalisis.add(String.valueOf(id));
-         }
-       }
-
-      Pruebas.añadir(pruebasAnalisis);
-
-       ArrayList<String> pruebasRadiologia = new ArrayList<String>();
-
-       for(int i = 0; i < pra.size(); i++){
-           if(pra.get(i).getAcceso()){
-           PruebaRadiologia pr = pra.siguiente();
-               int id = pr.getId();
-               //pruebasRadiologia.añadir(id);
+           pa = (PruebaAnalisis) pan.get(i);
+           if(pa.isAcceso()){
+               int id = pa.getId();
+               pruebasAnalisis.add(String.valueOf(id));
+               pruebasAnalisis.add("Analisis");
            }
        }
 
-       Pruebas.añadir(pruebasRadiologia);
+       Pruebas.add(pruebasAnalisis);
 
-       return Pruebas;*/
-       return new ArrayList<ArrayList <String> >();
+       ArrayList<String> pruebasRadiologia = new ArrayList<String>();
+
+       PruebaRadiologia pr;
+       for(int i = 0; i < pra.size(); i++){
+           pr = (PruebaRadiologia) pra.get(i);
+           if(pr.isAcceso()){
+               int id = pr.getId();
+               pruebasRadiologia.add(String.valueOf(id));
+               pruebasRadiologia.add("Radiologia");
+           }
+       }
+
+      Pruebas.add(pruebasRadiologia);
+
+       return Pruebas;
    }
 
    public Receta seleccionarReceta(int idReceta) throws SQLException{
@@ -176,6 +181,5 @@ public class GestorPacientes {
        return receta;
            
        }
-    
 
 }

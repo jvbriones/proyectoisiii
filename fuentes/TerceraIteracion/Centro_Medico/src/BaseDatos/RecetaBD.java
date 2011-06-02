@@ -28,6 +28,7 @@ public class RecetaBD {
         session.beginTransaction ();
         Receta Rec = (Receta) session.get(Receta.class, Id);
         session.getTransaction().commit();
+        
       return Rec;
     }
 

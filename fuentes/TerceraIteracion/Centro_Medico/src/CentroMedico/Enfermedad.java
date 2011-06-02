@@ -22,55 +22,34 @@ public class Enfermedad implements Serializable{
 
 	/** Atributos **/
 	private	int	Id;
-        private String  nombre;
         private String  Nombre;
 	private	String	Tipo;
 	private	Date	FechaDet;
 	private	String	Descripcion;
 	private	String	Volante;
-        private Set<Enfermedad> Enfermedades=new HashSet<Enfermedad>(0);
+        private Set<Enfermedad> Enfermedades = new HashSet<Enfermedad>(0);
 
 	/** Constructores **/
 	
 	public Enfermedad(){}
 
-
-	public Enfermedad(String Nombre, String tipo, Date fecha, String descripcion, String volante){
-	  this.Nombre = Nombre;
-	  this.Tipo = tipo;
-	  this.FechaDet = fecha;
-	  this.Descripcion = descripcion;
-	  this.Volante = volante;
-  }
-
-    public Set<Enfermedad> getEnfermedades() {
-        return Enfermedades;
-    }
-
-    public void setEnfermedades(Set<Enfermedad> Enfermedades) {
-        this.Enfermedades = Enfermedades;
-    }
-
-    public int getId() {
-        return Id;
-    }
-
-    public void setId(int Id) {
-        this.Id = Id;
-    }
-
-    public Date getFechaDet() {
-        return FechaDet;
-    }
-
-    public String getTipo() {
-        return Tipo;
-    }
-
+        public Enfermedad(String Nombre, String tipo, Date fecha, String descripcion, String volante){
+              this.Nombre = Nombre;
+              this.Tipo = tipo;
+              this.FechaDet = fecha;
+              this.Descripcion = descripcion;
+              this.Volante = volante;
+      }
 
 	/** Metodos GET **/
 
+        public int getId() {
+        return Id;
+    }
 
+        public String getTipo() {
+        return Tipo;
+    }
 
 	public String getNombre(){
 
@@ -82,11 +61,15 @@ public class Enfermedad implements Serializable{
 		return this.Descripcion;
 	}
 
-
 	public String getVolante(){
 
 		return this.Volante;
 	}
+
+        public Date getFechaDet() {
+        return FechaDet;
+    }
+
 
 	/** Metodos SET **/
 	
@@ -109,13 +92,28 @@ public class Enfermedad implements Serializable{
 
 		this.Volante = volante;
 	}
+
         public void setTipo(String tipo){
             this.Tipo=tipo;
         }
-	public void anadirEnfermedad(Enfermedad enfermedad){
+
+        public void anadirEnfermedad(Enfermedad enfermedad){
             Enfermedades.add(enfermedad);
         }
-  }
+
+        public Set<Enfermedad> getEnfermedades() {
+            return Enfermedades;
+        }
+
+        public void setEnfermedades(Set<Enfermedad> Enfermedades) {
+            this.Enfermedades = Enfermedades;
+        }
+
+        public void setId(int Id) {
+            this.Id = Id;
+        }
+
+}
 
 
 
