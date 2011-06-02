@@ -42,13 +42,16 @@ public class Ayuda extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 204, 102));
+        setLocation(new java.awt.Point(320, 200));
+        setPreferredSize(new java.awt.Dimension(650, 300));
         setResizable(false);
+        setSize(new java.awt.Dimension(650, 300));
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
-        jLabel1.setText("v. 0.8 alfa");
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24));
+        jLabel1.setText("v. 0.4");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(260, 86, 110, 39);
+        jLabel1.setBounds(260, 86, 66, 39);
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 24));
         jLabel2.setText("Centro de Salud");
@@ -59,18 +62,17 @@ public class Ayuda extends javax.swing.JFrame {
         getContentPane().add(jLabel3);
         jLabel3.setBounds(20, 20, 139, 173);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel4.setText("Licencia:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(210, 170, 60, 14);
+        jLabel4.setBounds(210, 180, 60, 16);
 
-        jLabel5.setText("Este software es open source. Todo el código de este software");
+        jLabel5.setText("Este es un software libre, por lo que tiene licencia");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(220, 190, 310, 20);
+        jLabel5.setBounds(210, 200, 320, 16);
 
-        jLabel6.setText("tiene la licencia GNU GPL v3.0");
+        jLabel6.setText("GNU GPL v3.0");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(220, 220, 150, 14);
+        jLabel6.setBounds(210, 220, 110, 16);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
