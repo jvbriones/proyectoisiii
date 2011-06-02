@@ -124,7 +124,7 @@ public class GestorMedico {
         ArrayList<String> Atributos=new ArrayList<String>();
         CitaBD citabd=new CitaBD();
         PacienteBD pacbd=new PacienteBD();
-        ArrayList Citas=citabd.ObtenerTodasCitas();
+        Set<Cita> Citas=citabd.ObtenerTodasCitas();
         Cita ci;
         String dniMedicoCita;
         String dniPaciente;
@@ -137,6 +137,7 @@ public class GestorMedico {
                 paci=pacbd.obtener(dniPaciente);
                 Atributos.add(paci.getNombre());
                 Atributos.add(paci.getApellidos());
+                //Atributos.add(paci.getEmail());
                 histo.put(dniPaciente, Atributos);
             }
         }
