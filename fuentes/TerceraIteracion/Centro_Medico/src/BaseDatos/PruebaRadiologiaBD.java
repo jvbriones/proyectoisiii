@@ -54,8 +54,7 @@ public class PruebaRadiologiaBD {
 
         session.beginTransaction ();
 
-        List<PruebaRadiologia> result = (List<PruebaRadiologia>)session.createQuery("from PruebaRadiologia").list();
-        //Set<PruebaRadiologia> analisis = new HashSet<PruebaRadiologia>(result);
+        List<PruebaRadiologia> result = (List<PruebaRadiologia>)session.createQuery("from PruebaRadiologia where DNI_PACIENTE='" + dniPaciente + "'").list();
         ArrayList<PruebaRadiologia> radiologia = new ArrayList<PruebaRadiologia>(result);
         session.getTransaction().commit();
         

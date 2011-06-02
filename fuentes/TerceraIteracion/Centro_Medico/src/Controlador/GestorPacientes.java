@@ -152,8 +152,8 @@ public class GestorPacientes {
                pruebasAnalisis.add("Analisis");
            }
        }
-
-       Pruebas.add(pruebasAnalisis);
+       if(!pruebasAnalisis.isEmpty())
+        Pruebas.add(pruebasAnalisis);
 
        ArrayList<String> pruebasRadiologia = new ArrayList<String>();
 
@@ -167,7 +167,8 @@ public class GestorPacientes {
            }
        }
 
-      Pruebas.add(pruebasRadiologia);
+      if(!pruebasRadiologia.isEmpty())
+        Pruebas.add(pruebasRadiologia);
 
        return Pruebas;
    }

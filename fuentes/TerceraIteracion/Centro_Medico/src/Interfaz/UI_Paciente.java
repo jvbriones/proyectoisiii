@@ -2521,6 +2521,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         String dni = user.getDNI();
 
         //Vaciar el panel
+        String elemento, tabula = "                                     ";
         DefaultListModel modelo = new DefaultListModel();
         modelo.addElement("");//Inicializando la lista vacia
         jList2.setModel(modelo);
@@ -2529,7 +2530,6 @@ public class UI_Paciente extends javax.swing.JFrame {
             Set<Receta> set_receta = gstpac.obtenerRecetas(dni);
             if(!set_receta.isEmpty()){
                 Receta recet;
-                String elemento, tabula = "                                     ";
 
                 for(Iterator<Receta> it = set_receta.iterator(); it.hasNext();){
                     recet = it.next();
@@ -2538,7 +2538,6 @@ public class UI_Paciente extends javax.swing.JFrame {
                 }
             }else{
                 JOptionPane.showMessageDialog(null, "¡No tiene recetas disponibles!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
-                modelo.addElement("No tiene recetas disponibles");//Inicializando la lista vacia
             }
         }catch(SQLException ex){
             System.err.println(ex.getStackTrace());
@@ -2589,15 +2588,14 @@ public class UI_Paciente extends javax.swing.JFrame {
         mostrarPanel("VerPruebas");
 
         //Vaciar el panel
+        String elemento, tabula = "                                         ";
         DefaultListModel modelo = new DefaultListModel();
         modelo.addElement("");//Inicializando la lista vacia
         jList4.setModel(modelo);
 
         try{
-
             ArrayList<ArrayList<String> > Pruebas = gstpac.obtenerPruebas(dni);
-            if(!Pruebas.isEmpty()){
-                String elemento, tabula = "                                         ";
+            if(!Pruebas.isEmpty()){    
                 ArrayList<String> pruebas;
                 for(Iterator<ArrayList <String>> it = Pruebas.iterator(); it.hasNext();){
                     pruebas = it.next();
@@ -2606,7 +2604,6 @@ public class UI_Paciente extends javax.swing.JFrame {
                 }
             }else{
                 JOptionPane.showMessageDialog(null, "¡No tiene pruebas disponibles!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
-                modelo.addElement("No tiene pruebas disponibles");
             }
         }catch(SQLException ex){
             System.err.println(ex.getStackTrace());
