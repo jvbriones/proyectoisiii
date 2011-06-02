@@ -1,0 +1,107 @@
+<mockup version="1.0" skin="sketch" measuredW="1250" measuredH="621" mockupW="1180" mockupH="606">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="70" y="15" w="859" h="606" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <close>true</close>
+        <maximizeRestore>true</maximizeRestore>
+        <minimize>true</minimize>
+        <text>Centro%20Salud</text>
+        <topheight>28</topheight>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::HRule" x="70" y="153" w="859" h="-1" measuredW="100" measuredH="5" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Image" x="115" y="48" w="-1" h="-1" measuredW="77" measuredH="79" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Logotipo</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="99" y="127" w="-1" h="-1" measuredW="111" measuredH="25" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Centro%20%20de%20Salud</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::FieldSet" x="681" y="51" w="212" h="94" measuredW="200" measuredH="170" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties/>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="766" y="77" w="-1" h="-1" measuredW="83" measuredH="25" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Tipo%20Usuario</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="766" y="107" w="-1" h="-1" measuredW="105" measuredH="25" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Nombre%20Usuario</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Icon" x="696" y="74" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>ContactIcon%7Clarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::IconLabel" x="567" y="62" w="-1" h="-1" measuredW="48" measuredH="73" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>CircledXIcon%7Clarge</icon>
+        <text>Salir</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::IconLabel" x="498" y="62" w="-1" h="-1" measuredW="48" measuredH="73" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>HelpIcon%7Clarge</icon>
+        <text>Ayuda</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::IconLabel" x="435" y="62" w="-1" h="-1" measuredW="48" measuredH="73" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>HomeMobileIcon%7Clarge</icon>
+        <text>Inicio</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Label" x="187" y="184" w="-1" h="-1" measuredW="624" measuredH="62" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>40</size>
+        <text>Consultar%20Pruebas%20de%20Radiolog%EDa</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::HRule" x="181" y="246" w="636" h="-1" measuredW="100" measuredH="5" zOrder="12" locked="false" isInGroup="-1"/>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::StickyNote" x="970" y="165" w="280" h="374" measuredW="109" measuredH="123" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>1-%20Termina%20y%20volvemos%20a%20la%20pantalla%20de%20inicio.</text>
+      </controlProperties>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::List" x="225" y="313" w="541" h="168" measuredW="100" measuredH="126" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%20%20%20%20%20%20%20Radiolog%EDa%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20ruta%20de%20la%20imagen%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Juan%20Ortega</text>
+      </controlProperties>
+    </control>
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::Label" x="252" y="284" w="-1" h="-1" measuredW="100" measuredH="25" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Tipo%20de%20Prueba</text>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::Label" x="649" y="285" w="-1" h="-1" measuredW="55" measuredH="25" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Analista</text>
+      </controlProperties>
+    </control>
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::Button" x="454" y="511" w="-1" h="-1" measuredW="80" measuredH="28" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Terminar</text>
+      </controlProperties>
+    </control>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::CallOut" x="418" y="481" w="36" h="40" measuredW="38" measuredH="40" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>1</text>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::Label" x="438" y="253" w="-1" h="-1" measuredW="110" measuredH="25" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Lista%20de%20pruebas</text>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::Label" x="454" y="284" w="-1" h="-1" measuredW="50" measuredH="25" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Imagen</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
