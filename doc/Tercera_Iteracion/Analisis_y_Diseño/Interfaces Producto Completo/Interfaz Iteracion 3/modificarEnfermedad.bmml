@@ -80,7 +80,7 @@
     <control controlID="22" controlTypeID="com.balsamiq.mockups::HRule" x="280" y="229" w="443" h="-1" measuredW="100" measuredH="5" zOrder="15" locked="false" isInGroup="-1"/>
     <control controlID="24" controlTypeID="com.balsamiq.mockups::StickyNote" x="970" y="165" w="280" h="374" measuredW="109" measuredH="123" zOrder="16" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>1-%20Se%20comprueba%20el%20DNI%0A%20%0A2-%20Se%20informa%20del%20%E9xito%20o%20fracaso%20de%20la%20operaci%F3n%20mediante%20una%20ventana%20emergente%2C%20termina%20y%20vuelve%20al%20panel%20principal</text>
+        <text>1-%20Se%20comprueba%20el%20DNI%0A%20%0A2-%20Se%20informa%20del%20%E9xito%20o%20fracaso%20de%20la%20operaci%F3n%20mediante%20una%20ventana%20emergente%2C%20termina%20y%20vuelve%20a%20%22consultarInformacionClinicaPaciente%22</text>
       </controlProperties>
     </control>
     <control controlID="30" controlTypeID="com.balsamiq.mockups::TextInput" x="369" y="307" w="86" h="-1" measuredW="46" measuredH="29" zOrder="17" locked="false" isInGroup="-1">
@@ -103,36 +103,46 @@
         <text>Fecha%20Detecci%F3n</text>
       </controlProperties>
     </control>
-    <control controlID="35" controlTypeID="com.balsamiq.mockups::Label" x="331" y="362" w="-1" h="-1" measuredW="80" measuredH="25" zOrder="21" locked="false" isInGroup="-1">
+    <control controlID="35" controlTypeID="com.balsamiq.mockups::Label" x="313" y="360" w="-1" h="-1" measuredW="80" measuredH="25" zOrder="21" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Descripcci%F3n</text>
       </controlProperties>
     </control>
-    <control controlID="38" controlTypeID="com.balsamiq.mockups::TextArea" x="295" y="391" w="160" h="119" measuredW="200" measuredH="140" zOrder="22" locked="false" isInGroup="-1">
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::TextArea" x="273" y="388" w="160" h="119" measuredW="200" measuredH="140" zOrder="22" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Descripci%F3n%20de%20la%20enfermedad%2C%20su%20gravedad%2C%20etc...</text>
       </controlProperties>
     </control>
-    <control controlID="39" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="436" y="392" w="-1" h="118" measuredW="16" measuredH="100" zOrder="23" locked="false" isInGroup="-1"/>
-    <control controlID="40" controlTypeID="com.balsamiq.mockups::TextArea" x="559" y="390" w="147" h="119" measuredW="200" measuredH="140" zOrder="24" locked="false" isInGroup="-1">
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="417" y="388" w="-1" h="118" measuredW="16" measuredH="100" zOrder="23" locked="false" isInGroup="-1"/>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::TextArea" x="455" y="387" w="147" h="119" measuredW="200" measuredH="140" zOrder="24" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Descripci%F3n%20del%20volante</text>
       </controlProperties>
     </control>
-    <control controlID="41" controlTypeID="com.balsamiq.mockups::Label" x="603" y="361" w="-1" h="-1" measuredW="51" measuredH="25" zOrder="25" locked="false" isInGroup="-1">
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::Label" x="502" y="361" w="-1" h="-1" measuredW="51" measuredH="25" zOrder="25" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Volante</text>
       </controlProperties>
     </control>
-    <control controlID="42" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="688" y="393" w="-1" h="117" measuredW="16" measuredH="100" zOrder="26" locked="false" isInGroup="-1"/>
-    <control controlID="44" controlTypeID="com.balsamiq.mockups::Button" x="466" y="525" w="-1" h="-1" measuredW="80" measuredH="28" zOrder="27" locked="false" isInGroup="-1">
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="583" y="388" w="-1" h="117" measuredW="16" measuredH="100" zOrder="26" locked="false" isInGroup="-1"/>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::Button" x="477" y="526" w="-1" h="-1" measuredW="75" measuredH="28" zOrder="27" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>Terminar</text>
+        <text>Guardar</text>
       </controlProperties>
     </control>
     <control controlID="45" controlTypeID="com.balsamiq.mockups::CallOut" x="440" y="499" w="-1" h="-1" measuredW="37" measuredH="40" zOrder="28" locked="false" isInGroup="-1">
       <controlProperties>
         <text>2</text>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::Label" x="629" y="435" w="-1" h="-1" measuredW="30" measuredH="25" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Tipo</text>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::RadioButtonGroup" x="681" y="409" w="-1" h="-1" measuredW="146" measuredH="75" zOrder="30" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%28o%29%20Alergia%0A%28%20%29%20Enfermedad%20cr%F3nica%0A%28%20%29%20Otros</text>
       </controlProperties>
     </control>
   </controls>

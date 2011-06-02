@@ -1,4 +1,4 @@
-<mockup version="1.0" skin="sketch" measuredW="908" measuredH="604" mockupW="814" mockupH="588">
+<mockup version="1.0" skin="sketch" measuredW="1131" measuredH="604" mockupW="1037" mockupH="588">
   <controls>
     <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="94" y="16" w="814" h="588" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
@@ -126,19 +126,29 @@
         <text>Nombre</text>
       </controlProperties>
     </control>
-    <control controlID="58" controlTypeID="com.balsamiq.mockups::Button" x="453" y="465" w="-1" h="-1" measuredW="80" measuredH="28" zOrder="25" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text>Terminar</text>
-      </controlProperties>
-    </control>
-    <control controlID="59" controlTypeID="com.balsamiq.mockups::Label" x="556" y="361" w="-1" h="-1" measuredW="59" measuredH="25" zOrder="26" locked="false" isInGroup="-1">
+    <control controlID="59" controlTypeID="com.balsamiq.mockups::Label" x="556" y="361" w="-1" h="-1" measuredW="59" measuredH="25" zOrder="25" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Tel%E9fono</text>
       </controlProperties>
     </control>
-    <control controlID="60" controlTypeID="com.balsamiq.mockups::Label" x="710" y="364" w="-1" h="-1" measuredW="37" measuredH="25" zOrder="27" locked="false" isInGroup="-1">
+    <control controlID="60" controlTypeID="com.balsamiq.mockups::Label" x="710" y="364" w="-1" h="-1" measuredW="37" measuredH="25" zOrder="26" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Email</text>
+      </controlProperties>
+    </control>
+    <control controlID="61" controlTypeID="com.balsamiq.mockups::Button" x="454" y="469" w="-1" h="-1" measuredW="82" measuredH="28" zOrder="27" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Ver%20Citas</text>
+      </controlProperties>
+    </control>
+    <control controlID="62" controlTypeID="com.balsamiq.mockups::CallOut" x="411" y="437" w="-1" h="-1" measuredW="38" measuredH="40" zOrder="28" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>1</text>
+      </controlProperties>
+    </control>
+    <control controlID="63" controlTypeID="com.balsamiq.mockups::StickyNote" x="972" y="182" w="159" h="123" measuredW="109" measuredH="123" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>1-%20Volvemos%20a%20la%20interfaz%20anterior%20%22verCitas%22</text>
       </controlProperties>
     </control>
   </controls>

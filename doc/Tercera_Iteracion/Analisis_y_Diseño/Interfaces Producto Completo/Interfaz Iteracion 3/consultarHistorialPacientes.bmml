@@ -73,45 +73,35 @@
         <text>Nombre</text>
       </controlProperties>
     </control>
-    <control controlID="58" controlTypeID="com.balsamiq.mockups::Button" x="554" y="536" w="-1" h="-1" measuredW="80" measuredH="28" zOrder="15" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text>Terminar</text>
-      </controlProperties>
-    </control>
-    <control controlID="59" controlTypeID="com.balsamiq.mockups::Label" x="533" y="262" w="-1" h="-1" measuredW="59" measuredH="25" zOrder="16" locked="false" isInGroup="-1">
+    <control controlID="59" controlTypeID="com.balsamiq.mockups::Label" x="533" y="262" w="-1" h="-1" measuredW="59" measuredH="25" zOrder="15" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Tel%E9fono</text>
       </controlProperties>
     </control>
-    <control controlID="60" controlTypeID="com.balsamiq.mockups::Label" x="686" y="262" w="-1" h="-1" measuredW="37" measuredH="25" zOrder="17" locked="false" isInGroup="-1">
+    <control controlID="60" controlTypeID="com.balsamiq.mockups::Label" x="686" y="262" w="-1" h="-1" measuredW="37" measuredH="25" zOrder="16" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Email</text>
       </controlProperties>
     </control>
-    <control controlID="62" controlTypeID="com.balsamiq.mockups::TextArea" x="231" y="288" w="568" h="233" measuredW="200" measuredH="140" zOrder="18" locked="false" isInGroup="-1">
+    <control controlID="62" controlTypeID="com.balsamiq.mockups::TextArea" x="231" y="288" w="568" h="233" measuredW="200" measuredH="140" zOrder="17" locked="false" isInGroup="-1">
       <controlProperties>
         <text>%20%2033334444A%09%7C%09Pepe%20Hidalgo%09%7C%09958678754%09%09%7C%09blabla@ugr.es</text>
       </controlProperties>
     </control>
-    <control controlID="63" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="783" y="292" w="-1" h="224" measuredW="16" measuredH="100" zOrder="19" locked="false" isInGroup="-1"/>
-    <control controlID="64" controlTypeID="com.balsamiq.mockups::Button" x="338" y="537" w="-1" h="-1" measuredW="138" measuredH="28" zOrder="20" locked="false" isInGroup="-1">
+    <control controlID="63" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="783" y="292" w="-1" h="224" measuredW="16" measuredH="100" zOrder="18" locked="false" isInGroup="-1"/>
+    <control controlID="64" controlTypeID="com.balsamiq.mockups::Button" x="425" y="536" w="-1" h="-1" measuredW="138" measuredH="28" zOrder="19" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Historial%20Paciente</text>
       </controlProperties>
     </control>
-    <control controlID="65" controlTypeID="com.balsamiq.mockups::CallOut" x="296" y="504" w="-1" h="-1" measuredW="38" measuredH="39" zOrder="21" locked="false" isInGroup="-1">
+    <control controlID="65" controlTypeID="com.balsamiq.mockups::CallOut" x="387" y="508" w="-1" h="-1" measuredW="38" measuredH="40" zOrder="20" locked="false" isInGroup="-1">
       <controlProperties>
         <text>1</text>
       </controlProperties>
     </control>
-    <control controlID="66" controlTypeID="com.balsamiq.mockups::CallOut" x="519" y="499" w="-1" h="-1" measuredW="38" measuredH="40" zOrder="22" locked="false" isInGroup="-1">
+    <control controlID="67" controlTypeID="com.balsamiq.mockups::StickyNote" x="972" y="120" w="229" h="287" measuredW="109" measuredH="123" zOrder="21" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>2</text>
-      </controlProperties>
-    </control>
-    <control controlID="67" controlTypeID="com.balsamiq.mockups::StickyNote" x="972" y="120" w="229" h="287" measuredW="109" measuredH="123" zOrder="23" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text>1-%20Comprobamos%20que%20tengamos%20un%20paciente%20seleccionado%20y%20pasamos%20a%20la%20interfaz%20consultarInformacionClinicaPaciente.%0A%20%0A2-%20Terminamos%20y%20volvemos%20a%20inicio.</text>
+        <text>1-%20Comprobamos%20que%20tengamos%20un%20paciente%20seleccionado%20y%20pasamos%20a%20la%20interfaz%20consultarInformacionClinicaPaciente.%0A%20</text>
       </controlProperties>
     </control>
   </controls>

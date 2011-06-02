@@ -65,37 +65,37 @@
     <control controlID="14" controlTypeID="com.balsamiq.mockups::HRule" x="401" y="246" w="242" h="-1" measuredW="100" measuredH="5" zOrder="12" locked="false" isInGroup="-1"/>
     <control controlID="26" controlTypeID="com.balsamiq.mockups::StickyNote" x="970" y="165" w="280" h="374" measuredW="109" measuredH="123" zOrder="13" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>1-%20Nos%20vamos%20a%20la%20interfaz%20consultarPruebasRadiologia.%0A%20%0A2-%20Nos%20vamos%20a%20la%20interfaz%20consultarPruebasAnalisis.</text>
+        <text>1-%20Si%20la%20prueba%20seleccionada%20a%20consultar%20es%20de%20tipo%20Radiolog%EDa%2C%20nos%20iremos%20a%20la%20IU%20consultarPruebaRadiologia%20y%20si%20es%20de%20tipo%20Analasis%20nos%20iremos%20a%20consultarPruebaAnalisis</text>
       </controlProperties>
     </control>
-    <control controlID="45" controlTypeID="com.balsamiq.mockups::CallOut" x="293" y="281" w="36" h="40" measuredW="38" measuredH="40" zOrder="14" locked="false" isInGroup="-1">
+    <control controlID="52" controlTypeID="com.balsamiq.mockups::Label" x="467" y="251" w="-1" h="-1" measuredW="109" measuredH="25" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Lista%20de%20Pruebas</text>
+      </controlProperties>
+    </control>
+    <control controlID="53" controlTypeID="com.balsamiq.mockups::TextArea" x="385" y="312" w="273" h="140" measuredW="200" measuredH="140" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%20%20%20%20%20%20%2018%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Radiolog%EDa</text>
+      </controlProperties>
+    </control>
+    <control controlID="54" controlTypeID="com.balsamiq.mockups::Label" x="411" y="287" w="-1" h="-1" measuredW="64" measuredH="25" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>id%20Prueba</text>
+      </controlProperties>
+    </control>
+    <control controlID="55" controlTypeID="com.balsamiq.mockups::Label" x="554" y="289" w="-1" h="-1" measuredW="78" measuredH="25" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Tipo%20Prueba</text>
+      </controlProperties>
+    </control>
+    <control controlID="56" controlTypeID="com.balsamiq.mockups::Button" x="457" y="489" w="-1" h="-1" measuredW="130" measuredH="28" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Consultar%20Prueba</text>
+      </controlProperties>
+    </control>
+    <control controlID="57" controlTypeID="com.balsamiq.mockups::CallOut" x="421" y="458" w="-1" h="-1" measuredW="38" measuredH="40" zOrder="19" locked="false" isInGroup="-1">
       <controlProperties>
         <text>1</text>
-      </controlProperties>
-    </control>
-    <control controlID="47" controlTypeID="com.balsamiq.mockups::Image" x="333" y="312" w="-1" h="-1" measuredW="77" measuredH="79" zOrder="15" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text/>
-      </controlProperties>
-    </control>
-    <control controlID="48" controlTypeID="com.balsamiq.mockups::Image" x="596" y="311" w="-1" h="-1" measuredW="77" measuredH="79" zOrder="16" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text/>
-      </controlProperties>
-    </control>
-    <control controlID="49" controlTypeID="com.balsamiq.mockups::Label" x="297" y="417" w="-1" h="-1" measuredW="147" measuredH="25" zOrder="17" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text>Ver%20Pruebas%20Radiolog%EDa</text>
-      </controlProperties>
-    </control>
-    <control controlID="50" controlTypeID="com.balsamiq.mockups::Label" x="567" y="416" w="-1" h="-1" measuredW="133" measuredH="25" zOrder="18" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text>Ver%20Pruebas%20An%E1lisis</text>
-      </controlProperties>
-    </control>
-    <control controlID="51" controlTypeID="com.balsamiq.mockups::CallOut" x="560" y="277" w="36" h="40" measuredW="38" measuredH="40" zOrder="19" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text>2</text>
       </controlProperties>
     </control>
   </controls>

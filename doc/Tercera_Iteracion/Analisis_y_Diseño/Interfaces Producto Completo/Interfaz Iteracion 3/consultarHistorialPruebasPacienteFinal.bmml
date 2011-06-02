@@ -73,14 +73,14 @@
         <text>12345678A</text>
       </controlProperties>
     </control>
-    <control controlID="25" controlTypeID="com.balsamiq.mockups::CallOut" x="554" y="234" w="-1" h="-1" measuredW="38" measuredH="40" zOrder="15" locked="false" isInGroup="-1">
+    <control controlID="25" controlTypeID="com.balsamiq.mockups::CallOut" x="554" y="234" w="-1" h="-1" measuredW="38" measuredH="45" zOrder="15" locked="false" isInGroup="-1">
       <controlProperties>
         <text>1</text>
       </controlProperties>
     </control>
     <control controlID="26" controlTypeID="com.balsamiq.mockups::StickyNote" x="970" y="165" w="280" h="374" measuredW="109" measuredH="123" zOrder="16" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>1-%20Se%20comprueba%20el%20DNI.%0A%20%0A2-%20Vamos%20a%20la%20interfaz%20accederPacientePrueba.%0A%20%0A3-%20Termina%20y%20volvemos%20a%20la%20pantalla%20de%20inicio.</text>
+        <text>1-%20Se%20comprueba%20el%20DNI.%0A%20%0A2-%20Vamos%20a%20la%20interfaz%20accederPacientePrueba.</text>
       </controlProperties>
     </control>
     <control controlID="27" controlTypeID="com.balsamiq.mockups::List" x="378" y="320" w="277" h="168" measuredW="100" measuredH="126" zOrder="17" locked="false" isInGroup="-1">
@@ -98,22 +98,12 @@
         <text>ID</text>
       </controlProperties>
     </control>
-    <control controlID="34" controlTypeID="com.balsamiq.mockups::Button" x="558" y="520" w="-1" h="-1" measuredW="80" measuredH="28" zOrder="20" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text>Terminar</text>
-      </controlProperties>
-    </control>
-    <control controlID="45" controlTypeID="com.balsamiq.mockups::CallOut" x="525" y="488" w="36" h="40" measuredW="37" measuredH="40" zOrder="21" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text>3</text>
-      </controlProperties>
-    </control>
-    <control controlID="46" controlTypeID="com.balsamiq.mockups::Button" x="403" y="520" w="-1" h="-1" measuredW="82" measuredH="28" zOrder="22" locked="false" isInGroup="-1">
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::Button" x="475" y="515" w="-1" h="-1" measuredW="82" measuredH="28" zOrder="20" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Consultar</text>
       </controlProperties>
     </control>
-    <control controlID="47" controlTypeID="com.balsamiq.mockups::CallOut" x="367" y="488" w="36" h="40" measuredW="37" measuredH="40" zOrder="23" locked="false" isInGroup="-1">
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::CallOut" x="442" y="492" w="36" h="40" measuredW="38" measuredH="40" zOrder="21" locked="false" isInGroup="-1">
       <controlProperties>
         <text>2</text>
       </controlProperties>

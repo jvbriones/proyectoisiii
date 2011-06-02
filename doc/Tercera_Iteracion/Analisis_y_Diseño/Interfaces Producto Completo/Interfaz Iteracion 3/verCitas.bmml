@@ -63,7 +63,7 @@
       </controlProperties>
     </control>
     <control controlID="14" controlTypeID="com.balsamiq.mockups::HRule" x="396" y="227" w="214" h="-1" measuredW="100" measuredH="5" zOrder="12" locked="false" isInGroup="-1"/>
-    <control controlID="19" controlTypeID="com.balsamiq.mockups::CallOut" x="414" y="399" w="-1" h="-1" measuredW="38" measuredH="40" zOrder="13" locked="false" isInGroup="-1">
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::CallOut" x="434" y="392" w="-1" h="-1" measuredW="38" measuredH="45" zOrder="13" locked="false" isInGroup="-1">
       <controlProperties>
         <text>1</text>
       </controlProperties>
@@ -89,19 +89,9 @@
         <text>Hora</text>
       </controlProperties>
     </control>
-    <control controlID="57" controlTypeID="com.balsamiq.mockups::CallOut" x="540" y="399" w="-1" h="-1" measuredW="37" measuredH="45" zOrder="18" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text>2</text>
-      </controlProperties>
-    </control>
-    <control controlID="58" controlTypeID="com.balsamiq.mockups::Button" x="394" y="439" w="-1" h="-1" measuredW="82" measuredH="28" zOrder="19" locked="false" isInGroup="-1">
+    <control controlID="58" controlTypeID="com.balsamiq.mockups::Button" x="462" y="423" w="-1" h="-1" measuredW="82" measuredH="28" zOrder="18" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Consultar</text>
-      </controlProperties>
-    </control>
-    <control controlID="59" controlTypeID="com.balsamiq.mockups::Button" x="525" y="439" w="-1" h="-1" measuredW="80" measuredH="28" zOrder="20" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text>Terminar</text>
       </controlProperties>
     </control>
   </controls>
