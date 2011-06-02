@@ -172,53 +172,61 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
-                      <Component id="jLabelGestionarPaciente3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="204" max="-2" attributes="0"/>
-                      <Component id="jLabelGestionarCita1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="208" max="-2" attributes="0"/>
-                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="288" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
+                      <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="725" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                                      <Component id="jButtonGestionarPaciente" min="-2" pref="194" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jButtonGestionarPruebas" min="-2" pref="194" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="jButtonGestionarPaciente" min="-2" pref="194" max="-2" attributes="0"/>
+                                  <Component id="jButtonGestionarPruebas" min="-2" pref="194" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jButtonGestionarCita" alignment="1" min="-2" pref="200" max="-2" attributes="1"/>
-                                  <Component id="jButtonGestionarHistorial" alignment="1" min="-2" pref="194" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                              <Component id="jLabelGestionarPaciente3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="jLabelGestionarCita1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="243" max="32767" attributes="0"/>
+                              <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="jButtonGestionarCita" alignment="1" min="-2" pref="200" max="-2" attributes="1"/>
+                                      <Component id="jButtonGestionarHistorial" alignment="1" min="-2" pref="194" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                      <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
-                                      <Component id="jButtonGestionarRecetas" min="-2" pref="194" max="-2" attributes="1"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="jButtonGestionarRecetas" min="-2" pref="194" max="-2" attributes="1"/>
+                                          <Component id="jButtonGestionarCitass" min="-2" pref="194" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace pref="15" max="32767" attributes="0"/>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
-                                      <Component id="jButtonGestionarCitass" min="-2" pref="194" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jLabel45" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
-                              <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="224" max="-2" attributes="0"/>
-                              <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="208" max="-2" attributes="0"/>
-                              <Component id="jLabel45" min="-2" max="-2" attributes="0"/>
-                          </Group>
                       </Group>
-                      <EmptySpace pref="203" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -232,14 +240,12 @@
                           <Component id="jButtonGestionarPaciente" alignment="0" max="32767" attributes="1"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="jLabelGestionarPaciente3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabelGestionarCita1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="jLabel9" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel9" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                          <Component id="jLabelGestionarPaciente3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelGestionarCita1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jButtonGestionarCitass" min="-2" max="-2" attributes="1"/>
@@ -253,8 +259,8 @@
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel12" min="-2" pref="14" max="-2" attributes="0"/>
                                   <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel12" alignment="0" min="-2" pref="14" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -1292,12 +1298,6 @@
                               <Component id="jLabelListaRecetas" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="326" max="-2" attributes="0"/>
-                              <Component id="jButtonConsultarReceta" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
-                              <Component id="jButtonTerminarReceta" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="312" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
@@ -1315,6 +1315,11 @@
                           </Group>
                       </Group>
                       <EmptySpace pref="264" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="407" max="-2" attributes="0"/>
+                      <Component id="jButtonConsultarReceta" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="414" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1336,10 +1341,7 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jScrollPane4" min="-2" pref="121" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButtonConsultarReceta" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                          <Component id="jButtonTerminarReceta" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="jButtonConsultarReceta" min="-2" pref="45" max="-2" attributes="0"/>
                       <EmptySpace pref="164" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -1397,14 +1399,6 @@
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonConsultarRecetaMouseClicked"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonConsultarRecetaActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonTerminarReceta">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Terminar"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonTerminarRecetaMouseClicked"/>
               </Events>
             </Component>
           </SubComponents>
@@ -1478,7 +1472,7 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="337" max="-2" attributes="0"/>
-                              <Component id="jButtonTerminarReceta1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButtonVolverReceta" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -1513,7 +1507,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="110" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1547,7 +1541,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="15" max="32767" attributes="0"/>
+                      <EmptySpace pref="16" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="jLabelMedicoReceta" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
@@ -1567,7 +1561,7 @@
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                      <Component id="jButtonTerminarReceta1" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="jButtonVolverReceta" min="-2" pref="45" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1592,12 +1586,12 @@
                 <Property name="text" type="java.lang.String" value="Instrucciones"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButtonTerminarReceta1">
+            <Component class="javax.swing.JButton" name="jButtonVolverReceta">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Terminar"/>
+                <Property name="text" type="java.lang.String" value="Volver"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonTerminarReceta1MouseClicked"/>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonVolverRecetaMouseClicked"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelJuicioReceta">
