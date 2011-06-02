@@ -51,6 +51,7 @@ public class GestorTurnos {
              
            else{
              
+                System.out.println("no existe el turno y existe el personal");
                 PersonalMedico personalmed = new PersonalMedico();
                 personalmed=personal.obtener(dni);
                 
@@ -61,7 +62,9 @@ public class GestorTurnos {
                 tur.setHoraInicio(inicio);
                 tur.setTipo(tipo);
                 
-                personal.almacenar(personalmed);
+                personalmed.setTurno(tur);
+                
+                personal.actualizar(personalmed);
                 
                 exito="Se creó un Turno de tipo "+tipo;
                 bien=true;
