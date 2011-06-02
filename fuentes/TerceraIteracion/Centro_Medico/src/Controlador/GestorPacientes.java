@@ -14,6 +14,8 @@ package Controlador;
 import BaseDatos.EnfermedadBD;
 import BaseDatos.PacienteBD;
 import BaseDatos.RecetaBD;
+import BaseDatos.PruebaAnalisisBD;
+import BaseDatos.PruebaRadiologiaBD;
 import CentroMedico.Enfermedad;
 import CentroMedico.Paciente;
 import CentroMedico.Receta;
@@ -130,7 +132,44 @@ public class GestorPacientes {
        return recetas;
            
        }
-    
+
+   public ArrayList<ArrayList<String> > obtenerPruebas(String dni) throws SQLException{
+       Collection<PruebaAnalisis> pan = null;
+       Collection<PruebaRadiologia> pra = null;
+       PruebaAnalisisBD pruebaAnaBD = new PruebaAnalisisBD();
+       PruebaRadiologiaBD pruebaRadioBD = new PruebaRadiologiaBD();
+
+       pan = pruebaAnaBD.obtenerPruebasAnalisis(dni);
+       pra = pruebaRadioBD.obtenerPruebasRadiologia(dni);
+
+       ArrayList<ArrayList<String> > Pruebas = new ArrayList<ArrayList<String > >();
+       ArrayList<String> pruebasAnalisis = new ArrayList<String>();
+
+       for(int i = 0; i < pan.size(); i++){
+           if(pan.get(i).getAcceso()){
+               PruebaAnalisis pa = pan.siguiente();
+               int id = pa.getId();
+               pruebasAnalisis.añadir(id);
+           }
+       }
+
+       Pruebas.añadir(pruebasAnalisis);
+
+       ArrayList<String> pruebasRadiologia = new ArrayList<String>();
+
+       for(int i = 0; i < pra.size(); i++){
+           if(pra.get(i).getAcceso()){
+               PruebaRadiologia pr = pra.siguiente();
+               int id = pr.getId();
+               pruebasRadiologia.añadir(id);
+           }
+       }
+
+       Pruebas.añadir(pruebasRadiologia);
+
+       return Pruebas;
+   }
+
    public Receta seleccionarReceta(int idReceta) throws SQLException{
  
        RecetaBD recetabd= new RecetaBD();

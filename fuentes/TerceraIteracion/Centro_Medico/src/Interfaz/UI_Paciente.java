@@ -2500,7 +2500,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         //Vaciar el panel
         DefaultListModel modelo = new DefaultListModel();
-        modelo.addElement("");//Inicializando la lista vacia
+        modelo.addElement("No tiene recetas disponibles");//Inicializando la lista vacia
         jList2.setModel(modelo);
 
         try{            
@@ -2568,6 +2568,31 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void jButtonGestionarPruebasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGestionarPruebasMouseClicked
         // TODO add your handling code here:
+        String dni = user.getDNI();
+
+        //Vaciar el panel
+        DefaultListModel modelo = new DefaultListModel();
+        modelo.addElement("No tiene pruebas disponibles");//Inicializando la lista vacia
+        jList4.setModel(modelo);
+
+/*        try{
+            Collection pruebas = gstpac.obtenerPruebas(dni);
+            if(!pruebas.isEmpty()){
+                Prueba prueba;
+                String elemento, tabula = "                                     ";
+
+                for(Iterator<Prueba> it = pruebas.iterator(); it.hasNext();){
+                    prueba = it.next();
+                    elemento = "    " + prueba.getId() + tabula + prueba.getTipo();
+                    modelo.addElement(elemento);
+                }
+            }else{
+                JOptionPane.showMessageDialog(null, "¡No tiene pruebas disponibles!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
+            }
+        }catch(SQLException ex){
+            System.err.println(ex.getStackTrace());
+        }*/
+        
     }//GEN-LAST:event_jButtonGestionarPruebasMouseClicked
 
     private void jButtonGestionarPruebasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGestionarPruebasActionPerformed
