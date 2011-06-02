@@ -502,7 +502,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabelDNITurno.setText("DNI");
         jPanelGestionarTurno.add(jLabelDNITurno);
-        jLabelDNITurno.setBounds(350, 260, 18, 14);
+        jLabelDNITurno.setBounds(320, 250, 30, 20);
 
         jTextFieldDNIGestionarTurno.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -541,7 +541,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabelFechaInicioTurno.setText("Fecha inicio");
         jPanelGestionarTurno.add(jLabelFechaInicioTurno);
-        jLabelFechaInicioTurno.setBounds(140, 300, 55, 14);
+        jLabelFechaInicioTurno.setBounds(140, 300, 80, 20);
 
         jLabel5.setText("_________________________________________________________________");
         jPanelGestionarTurno.add(jLabel5);
@@ -595,9 +595,21 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         jLabelFechaInicioTurno1.setText("Tipo");
         jPanelGestionarTurno.add(jLabelFechaInicioTurno1);
-        jLabelFechaInicioTurno1.setBounds(140, 370, 20, 14);
+        jLabelFechaInicioTurno1.setBounds(140, 370, 50, 20);
+
+        try {
+            dateChooserCombo3.setDefaultPeriods(new datechooser.model.multiple.PeriodSet());
+        } catch (datechooser.model.exeptions.IncompatibleDataExeption e1) {
+            e1.printStackTrace();
+        }
         jPanelGestionarTurno.add(dateChooserCombo3);
         dateChooserCombo3.setBounds(140, 330, 155, 20);
+
+        try {
+            dateChooserCombo4.setDefaultPeriods(new datechooser.model.multiple.PeriodSet());
+        } catch (datechooser.model.exeptions.IncompatibleDataExeption e1) {
+            e1.printStackTrace();
+        }
         jPanelGestionarTurno.add(dateChooserCombo4);
         dateChooserCombo4.setBounds(390, 330, 155, 20);
 
@@ -2471,8 +2483,8 @@ public class UI_Administrador extends javax.swing.JFrame {
         jTextAreaInfoTurno.setVisible(true);
         jButtonBajaTurno.setVisible(true);
         
-//        dateChooserCombo3.setVisible(false);
-  //      dateChooserCombo4.setVisible(false);
+        dateChooserCombo3.setVisible(false);
+        dateChooserCombo4.setVisible(false);
         
         
         fechainiciomostrar1.setVisible(true);
@@ -2487,23 +2499,26 @@ public class UI_Administrador extends javax.swing.JFrame {
         
         
         TurnoBD turbd= new TurnoBD();
-        Turno turno;
-        try {
-            turno = turbd.obtener(jTextFieldDNIGestionarTurno.getText());
-            
-            
-            if ( turno !=null){
-//        fechainiciomostrar1.setText(turno.getfechaInicio().toString());
-  //      fechainiciomostrar2.setText(turno.getfechaFin().toString());
-    //    fechainiciomostrar3.setText(turno.getTipo());
+        PersonalMedicoBD personalbd= new PersonalMedicoBD();
+        PersonalMedico personal= new PersonalMedico();
         
+     
+            personal=personalbd.obtener(jTextFieldDNIGestionarTurno.getText());
+            
+            if ( personal!=null ){
+                System.out.println("El DNI Es de un PersonalMedico");
+                
+            fechainiciomostrar1.setText(personal.getTurno().getHoraInicio().toString());
+            fechainiciomostrar2.setText(personal.getTurno().getHoraFin().toString());
+            fechainiciomostrar3.setText(personal.getTurno().getTipo());
+            new InformacionExito().setVisible(true);
             }
-           // else  new InformacionError().setVisible(true);
+            else{
+                                System.out.println("El DNI NO Es de un PersonalMedico");
+                new InformacionError().setVisible(true);
+            }
             
-            
-        } catch (SQLException ex) {
-            Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-        }
+       
         
     
         
@@ -2515,13 +2530,13 @@ public class UI_Administrador extends javax.swing.JFrame {
        
         if(compruebaFormulario("GestionarTurno")){
 
-           GestorTurnos gesTur = new GestorTurnos();
-            Date fechaInicio = null;                        //HAY QUE PROCESARLA LEYÉNDOLA DEL FORMULARIOOOO
-            Date fechaFin=null;
+            PersonalMedicoBD personalbd=new PersonalMedicoBD();
+            PersonalMedico personal=new PersonalMedico();
+           
+           
+            Date fechaInicio = dateChooserCombo3.getSelectedDate().getTime();                       //HAY QUE PROCESARLA LEYÉNDOLA DEL FORMULARIOOOO
+            Date fechaFin=dateChooserCombo4.getSelectedDate().getTime();
             boolean exito;
-
-            fechaInicio = dateChooserCombo3.getSelectedDate().getTime();
-             fechaFin = dateChooserCombo4.getSelectedDate().getTime();
 
              String tip="";
 
@@ -2529,19 +2544,25 @@ public class UI_Administrador extends javax.swing.JFrame {
              if (jRadioButtonTarde.isSelected()) tip="Tarde";
              if (jRadioButtonNoche.isSelected()) tip="Noche";
 
-              try {
-                exito = gesTur.altaTurno(jTextFieldDNIGestionarTurno.getText(), tip,fechaInicio,fechaFin);
+              
+                   personal=personalbd.obtener(jTextFieldDNIGestionarTurno.getText());
+                  if (personal!=null){ 
+                  Turno tur=new Turno();;
+                  tur.setDNI(jTextFieldDNIGestionarTurno.getText());
+                  tur.setHoraFin(fechaFin);
+                  tur.setHoraInicio(fechaInicio);
+                  tur.setTipo(tip);
+                  
+                  personal.setTurno(tur);
+                personalbd.actualizar(personal);
 
-                if(exito){
-                    new InformacionExito().setVisible(true);
-                    }
+                     new InformacionExito().setVisible(true);
+                   }
+                
                 else{
+                      System.out.println("El dni NO corresponde a un PersonalMedico");
                         new InformacionError().setVisible(true);
-                }
-            }catch (SQLException ex) {
-                Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
+                   }
         }
           
 
@@ -2906,18 +2927,28 @@ public class UI_Administrador extends javax.swing.JFrame {
     private void jButtonBajaTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonBajaTurnoMouseClicked
       
         
-        TurnoBD turnobd=new TurnoBD();
-        try {
+        PersonalMedico personal=new PersonalMedico();
+        PersonalMedicoBD personalbd= new PersonalMedicoBD();
+    
           
-        Turno turno=turnobd.obtener(jTextFieldDNIGestionarTurno.getText());
-//        turno.actualizar(jTextFieldDNIGestionarTurno.getText(),fechainiciomostrar3.getText(),null,null);
-        turnobd.actualizar(turno);
+        personal=personalbd.obtener(jTextFieldDNIGestionarTurno.getText());
         
+        if ( personal!= null){
+            
         
-       
-        } catch (SQLException ex) {
-            Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+            Turno tur=new Turno();
+            tur.setDNI(jTextFieldDNIGestionarTurno.getText());
+            tur.setHoraInicio(null);
+            tur.setHoraFin(null);
+            tur.setTipo(fechainiciomostrar3.getText());
+        
+            personal.setTurno(tur);
+            
+           personalbd.actualizar(personal);
+            new InformacionExito().setVisible(true);
         }
+        else new InformacionError().setVisible(true);
+        
         
          
         
