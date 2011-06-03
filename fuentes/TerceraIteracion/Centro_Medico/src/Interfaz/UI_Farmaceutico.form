@@ -378,7 +378,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace pref="47" max="32767" attributes="0"/>
+                      <EmptySpace pref="51" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
@@ -484,7 +484,7 @@
                               <Component id="jLabelErrorLote" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="84" max="32767" attributes="0"/>
+                      <EmptySpace pref="109" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
@@ -711,7 +711,7 @@
                                       <Component id="jTextFieldDNIPaciente" min="-2" pref="100" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="253" max="-2" attributes="0"/>
+                              <EmptySpace pref="300" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace pref="182" max="-2" attributes="0"/>
@@ -873,7 +873,7 @@
                           <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelGestionarPaciente7" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="73" max="32767" attributes="0"/>
+                      <EmptySpace pref="168" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -894,7 +894,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="scrollPaneMedicamentosBajoStock" min="-2" pref="202" max="-2" attributes="0"/>
-                      <EmptySpace pref="113" max="32767" attributes="0"/>
+                      <EmptySpace pref="90" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1137,8 +1137,8 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jButtonGestionarCita" pref="142" max="32767" attributes="1"/>
-                          <Component id="jButtonConsultarDatosPersonales" alignment="1" pref="142" max="32767" attributes="1"/>
+                          <Component id="jButtonGestionarCita" pref="146" max="32767" attributes="1"/>
+                          <Component id="jButtonConsultarDatosPersonales" alignment="1" pref="146" max="32767" attributes="1"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -1303,7 +1303,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="730" y="330" width="150" height="150"/>
+                  <AbsoluteConstraints x="680" y="360" width="150" height="150"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -1353,7 +1353,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="610" y="330" width="100" height="-1"/>
+                  <AbsoluteConstraints x="720" y="330" width="100" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -1491,33 +1491,6 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JButton" name="jButtonFotoPersonal">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="A&#xf1;adir foto"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonFotoPersonalMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonFotoPersonalActionPerformed"/>
-              </Events>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="590" y="350" width="120" height="-1"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabelInfoFotoPersonal">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Lucida Grande" size="10" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Tama&#xf1;o m&#xe1;x. 150x150 p&#xed;xeles"/>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="570" y="380" width="160" height="-1"/>
-                </Constraint>
-              </Constraints>
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel8">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Tipo personal"/>
@@ -1607,7 +1580,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="273" max="-2" attributes="0"/>
                       <Component id="jLabelGestionarPaciente6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="152" max="32767" attributes="0"/>
+                      <EmptySpace pref="214" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
@@ -1684,11 +1657,11 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                       <Component id="jLabelGestionarPaciente6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="409" max="32767" attributes="0"/>
+                      <EmptySpace pref="404" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="50" pref="113" max="32767" attributes="0"/>
+                          <EmptySpace min="50" pref="121" max="32767" attributes="0"/>
                           <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="24" pref="24" max="24" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -1741,7 +1714,7 @@
                               <Component id="jButtonMenosAnioFechaFinTurno" min="-2" pref="40" max="-2" attributes="0"/>
                               <Component id="jRadioButtonNoche" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="64" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="73" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -2045,7 +2018,7 @@
                       </Group>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="283" max="32767" attributes="0"/>
+                      <EmptySpace pref="326" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jButtonFinalizar" alignment="0" min="-2" pref="117" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
@@ -2236,7 +2209,7 @@
                       <Component id="scrollPaneRecetas" min="-2" pref="204" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                       <Component id="jButtonConsultarReceta" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="110" max="32767" attributes="0"/>
+                      <EmptySpace pref="122" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
