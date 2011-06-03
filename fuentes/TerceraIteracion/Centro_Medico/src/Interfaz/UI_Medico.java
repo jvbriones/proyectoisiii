@@ -891,7 +891,11 @@ public class UI_Medico extends javax.swing.JFrame {
                         .add(10, 10, 10)
                         .add(jLabel4))
                     .add(jLabel16))
+<<<<<<< .mine
+                .addContainerGap(42, Short.MAX_VALUE))
+=======
                 .addContainerGap(181, Short.MAX_VALUE))
+>>>>>>> .r1025
         );
         jPanelPrincipalLayout.setVerticalGroup(
             jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -3137,7 +3141,7 @@ MedicamentoBD meBD = new MedicamentoBD();
           
              jTextPane2.setText(jTextPane1.getText());
               DefaultListModel modeloEnfermedades = new DefaultListModel();
-              String espacio = "                                   ";
+              String espacio = "                                                   ";
               Enfermedad enfermedad= null;
               
               for ( Iterator it = enf.iterator(); it.hasNext();){
