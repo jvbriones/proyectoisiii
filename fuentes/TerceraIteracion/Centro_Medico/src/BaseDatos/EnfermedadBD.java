@@ -32,7 +32,6 @@ public class EnfermedadBD{
         session.getTransaction().commit();
             return enfmd;
         }
-
         /* 
          * actualizar
          */

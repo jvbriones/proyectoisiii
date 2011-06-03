@@ -109,7 +109,6 @@ public class GestorMedico {
           Set<Enfermedad> enfermedades= paciente.getEnfermedades();
           PacienteBD pac_BD = new PacienteBD();
       for( Iterator it = enfermedades.iterator(); it.hasNext();){
-
           Enfermedad aux= (Enfermedad)it.next();
           if( aux.getId() == enfe.getId())
                 aux=enfe;
