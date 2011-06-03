@@ -16,6 +16,7 @@ import BaseDatos.PersonalMedicoBD;
 import BaseDatos.UsuarioBD;
 import CentroMedico.Farmaceutico;
 import CentroMedico.PersonalMedico;
+import CentroMedico.Turno;
 import CentroMedico.Usuario;
 import java.sql.SQLException;
 import java.util.Date;
@@ -40,6 +41,8 @@ public class GestorPersonal {
             String pas=new String();
             pas=generarContraseña();
             PersonalMedico personal=new PersonalMedico(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto, TipoUsuario);
+            Turno tur=null;
+            personal.setTurno(tur);
             bd_personal.almacenar(personal);
 
             Datos="Usuario Introducido con Éxito";
