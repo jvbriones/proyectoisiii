@@ -2233,15 +2233,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             if(Character.isDigit(teclaPresionada) == false)
                 evt.consume();
 
-        if(jTextFieldTelefonoPaciente.getText().length() == 9){
-            if(Character.isDigit(teclaPresionada) == true){
-                evt.consume();
-            }else{
-                evt.consume();
-            }
-        }
-
-        if(jTextFieldTelefonoPaciente.getText().length() > 9)
+        if(jTextFieldTelefonoPaciente.getText().length() >= 9)
             evt.consume();
     }//GEN-LAST:event_jTextFieldTelefonoPacienteKeyTyped
 
@@ -2276,11 +2268,19 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         /**Limitamos a que el DNI siempre sea correcto sintácticamente*/
         char teclaPresionada = evt.getKeyChar();
-        if(jTextFieldTelefonoPaciente.getText().length() < 9)
+
+        if(jTextFieldDNIPaciente.getText().length() < 8)
             if(Character.isDigit(teclaPresionada) == false)
                 evt.consume();
 
-        if(jTextFieldTelefonoPaciente.getText().length() >= 9)
+        if(jTextFieldDNIPaciente.getText().length() == 8)
+            if(Character.isDigit(teclaPresionada) == true){
+                evt.consume();
+            }else if(Character.isLowerCase(teclaPresionada)){
+                jTextFieldDNIPaciente.setText(jTextFieldDNIPersonal.getText().toUpperCase());
+            }
+
+        if(jTextFieldDNIPersonal.getText().length() > 8)
             evt.consume();
             
     }//GEN-LAST:event_jTextFieldDNIPacienteKeyTyped
