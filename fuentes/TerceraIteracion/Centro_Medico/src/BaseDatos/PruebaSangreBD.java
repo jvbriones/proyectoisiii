@@ -1,4 +1,5 @@
 package BaseDatos;
+
 import CentroMedico.PruebaSangre;
 import org.hibernate.Session;
 
@@ -7,6 +8,7 @@ import org.hibernate.Session;
  *  Clase para el almacenamiento, actualización, borrado, y obtención de objetos de la clase PruebaSangre en la base de datos.
  */
 public class PruebaSangreBD {
+
     public void almacenar(PruebaSangre prueba){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
@@ -14,7 +16,6 @@ public class PruebaSangreBD {
         session.save ( prueba );
         session.getTransaction().commit();
     }
-
 
     public void actualizar (PruebaSangre prueba){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();

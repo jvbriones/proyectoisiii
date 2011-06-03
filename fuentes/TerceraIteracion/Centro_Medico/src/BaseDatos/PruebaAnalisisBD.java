@@ -1,10 +1,9 @@
 package BaseDatos;
+
 import CentroMedico.PruebaAnalisis;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import org.hibernate.Session;
 
 /**
@@ -12,6 +11,7 @@ import org.hibernate.Session;
  *  Clase para el almacenamiento, actualización, borrado, y obtención de objetos de la clase PruebaAnalisis en la base de datos.
  */
 public class PruebaAnalisisBD {
+
     public void almacenar(PruebaAnalisis prueba){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
@@ -19,7 +19,6 @@ public class PruebaAnalisisBD {
         session.save ( prueba );
         session.getTransaction().commit();
     }
-
 
     public void actualizar (PruebaAnalisis prueba){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
@@ -59,5 +58,5 @@ public class PruebaAnalisisBD {
 
         return analisis;
     }
-
+    
 }

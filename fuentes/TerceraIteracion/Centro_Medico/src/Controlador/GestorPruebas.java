@@ -10,6 +10,7 @@ import CentroMedico.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Set;
 
 /**
  * @author pantic
@@ -215,7 +216,7 @@ public class GestorPruebas {
 
         }
 
-        if(TipoPrueba == "Resonancia"){
+        if(TipoPrueba.equals("Resonancia")){
             Resonancia prueba = new Resonancia(Comentario,paciente, radiologo);
             ResonanciaBD rBD = new ResonanciaBD();
 
@@ -232,17 +233,35 @@ public class GestorPruebas {
 
      }
 
-    public ArrayList<ArrayList<String> > ConsultarPruebaAnalisis(int idPrueba, String tipo){
+    public ArrayList<String > ConsultarPruebaAnalisis(int idPrueba, String tipo){
 
         ArrayList<String> Resultados = new ArrayList<String>();
-        PruebaAnalisisBD paBD = new PruebaAnalisisBD();
-        PruebaAnalisis pa = paBD.obtener(idPrueba);
+        PruebaSangreBD psBD = new PruebaSangreBD();
 
-        /*if(pa.getTipo == "Sangre"){ //No EXISTE EL ATRIBUTO TIPO
+        Resultados.add(psBD.obtener(idPrueba).getComentario());
+        Resultados.add(psBD.obtener(idPrueba).getAnalista().getNombre() + " " + psBD.obtener(idPrueba).getAnalista().getApellidos());
 
-        }*/
+      /*  if(psBD.obtener(idPrueba).getTipo().equals("Sangre")){ //No EXISTE EL ATRIBUTO TIPO
+            PruebaSangre ps = psBD.obtener(idPrueba);
+            Set<ResultadoSangre> resulSangre = ps.getResultadosSangre();
+            for(Iterator<ResultadoSangre> it = resulSangre.iterator(); it.hasNext();){
+                ResultadoSangre res = it.next();
+                String resultado = res.getResultado();
+                Resultados.add(resultado);
+            }
+        }else
+            if(psBD.obtener(idPrueba).getTipo().equals("Orina")){
+                PruebaOrinaBD poBD = new PruebaOrinaBD();
+                PruebaOrina o = poBD.obtener(idPrueba);
+                Set<ResultadoOrina> resulOri = o.getResultadosOrina();
+                for(Iterator<ResultadoOrina> it = resulOri.iterator(); it.hasNext(); ){
+                    ResultadoOrina ori = it.next();
+                    String resultado = ori.getResultado();
+                    Resultados.add(resultado);
+                }
+            }*/
 
-        return new ArrayList<ArrayList<String> >();
+        return Resultados;
     }
 
 }
