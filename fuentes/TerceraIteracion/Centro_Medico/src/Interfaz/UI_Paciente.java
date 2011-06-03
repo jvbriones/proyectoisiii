@@ -2670,7 +2670,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             ArrayList<String> resultado = gstpru.ConsultarPruebaAnalisis(idPrueba, tipo);
         }else
             if(seleccion.contains("Radiologia")){
-                ArrayList<String> resultado = gstpru.ConsultarPruebaRadiologia(idPrueba, tipo);
+                //ArrayList<String> resultado = gstpru.ConsultarPruebaRadiologia(idPrueba, tipo);
             }
 
 
