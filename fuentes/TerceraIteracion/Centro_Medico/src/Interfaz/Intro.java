@@ -115,7 +115,7 @@ public class Intro extends javax.swing.JFrame {
                     .add(jPanel1Layout.createSequentialGroup()
                         .add(121, 121, 121)
                         .add(jButton1)))
-                .addContainerGap(106, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -172,7 +172,7 @@ public class Intro extends javax.swing.JFrame {
         getContentPane().add(jLabelIconoSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 70, -1, -1));
 
         jLabelAyuda.setText("Ayuda");
-        getContentPane().add(jLabelAyuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 120, 40, -1));
+        getContentPane().add(jLabelAyuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 50, -1));
 
         jLabelSalir.setText("Salir");
         getContentPane().add(jLabelSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, 50, 20));
