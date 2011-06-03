@@ -44,6 +44,7 @@ public class UI_Medico extends javax.swing.JFrame {
       DefaultListModel modeloNombres=new DefaultListModel();
       Set<Medicamento> meRe = new HashSet<Medicamento>(0);
       GestorMedico gestormedico=new GestorMedico();
+      GestorPacientes gestorpacientes=new GestorPacientes();
       Paciente paciente;
     /** Creates new form Principal_Administrador */
     public UI_Medico() {
@@ -3118,19 +3119,34 @@ MedicamentoBD meBD = new MedicamentoBD();
         }//GEN-LAST:event_jButtonModEnfermedMouseClicked
 
         private void jButtonBusquedaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonBusquedaMouseClicked
+        try {
             // TODO add your handling code here:
-            PacienteBD pacientebd=new PacienteBD();
-            paciente=pacientebd.obtener(jTextPane1.getText());
-             //jPanelInformacionClinic.setVisible(false);
-             //jPanelConsInformacionClinic.setVisible(true);
-             jTextPane2.setText(paciente.getDNI());
+        
+            ArrayList<Enfermedad> enf=gestorpacientes.consultarInfoClinicaPaciente(jTextPane1.getText());
+        
+          
+             jTextPane2.setText(jTextPane1.getText());
               DefaultListModel modeloEnfermedades = new DefaultListModel();
-              String prueba="Nicolas                                   gripe";
-              modeloEnfermedades.addElement(prueba);
+              String espacio = "                                   ";
+              Enfermedad enfermedad= null;
+              
+              for ( Iterator it = enf.iterator(); it.hasNext();){
+                enfermedad = (Enfermedad)it.next();
+                String total="";
+                total=enfermedad.getNombre()+espacio+enfermedad.getFechaDet();
+                  modeloEnfermedades.addElement(total);
+                  
+                  
+              }
+          
+           
               jList1.setModel(modeloEnfermedades);
              jPanelInformacionClinic.setVisible(false);
              jPanelConsInformacionClinic.setVisible(true);
 
+             } catch (SQLException ex) {
+            Logger.getLogger(UI_Medico.class.getName()).log(Level.SEVERE, null, ex);
+        }
         }//GEN-LAST:event_jButtonBusquedaMouseClicked
 
         private void jButtonConsPrueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsPrueMouseClicked
