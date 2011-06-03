@@ -174,7 +174,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
                       <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="755" max="32767" attributes="0"/>
+                      <EmptySpace pref="756" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -217,7 +217,7 @@
                                           <Component id="jButtonConsultarRecetas" min="-2" pref="194" max="-2" attributes="1"/>
                                           <Component id="jButtonGestionarCitass" min="-2" pref="194" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="15" max="32767" attributes="0"/>
+                                      <EmptySpace pref="16" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
@@ -987,7 +987,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="21" max="32767" attributes="0"/>
+                      <EmptySpace pref="22" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="10" pref="10" max="10" attributes="0"/>
@@ -1310,17 +1310,17 @@
                               <Component id="jScrollPane4" min="-2" pref="376" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="264" max="32767" attributes="0"/>
+                      <EmptySpace pref="265" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="407" max="-2" attributes="0"/>
                       <Component id="jButtonConsultarReceta" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="414" max="32767" attributes="0"/>
+                      <EmptySpace pref="415" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="402" max="-2" attributes="0"/>
                       <Component id="jLabelListaRecetas" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="434" max="32767" attributes="0"/>
+                      <EmptySpace pref="435" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1343,7 +1343,7 @@
                       <Component id="jScrollPane4" min="-2" pref="121" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jButtonConsultarReceta" min="-2" pref="45" max="-2" attributes="0"/>
-                      <EmptySpace pref="164" max="32767" attributes="0"/>
+                      <EmptySpace pref="165" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1515,7 +1515,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="105" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2191,7 +2191,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="101" max="32767" attributes="0"/>
+                      <EmptySpace pref="150" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2294,30 +2294,31 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="322" max="-2" attributes="0"/>
+                      <Component id="jSeparator5" min="-2" max="-2" attributes="1"/>
+                      <EmptySpace pref="578" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace pref="330" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="322" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jSeparator5" alignment="0" max="32767" attributes="1"/>
-                                  <Component id="jLabel30" alignment="0" max="32767" attributes="1"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="362" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                               <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
                               <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="411" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
                               <Component id="jButtonConsCita" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="330" max="-2" attributes="0"/>
-                              <Component id="jScrollPane11" min="-2" pref="267" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="jScrollPane11" alignment="0" min="-2" pref="267" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="223" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="303" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="353" max="-2" attributes="0"/>
+                      <Component id="jLabel30" max="32767" attributes="1"/>
+                      <EmptySpace min="-2" pref="338" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2328,7 +2329,7 @@
                       <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSeparator5" min="-2" pref="10" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel32" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel31" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2337,7 +2338,7 @@
                       <Component id="jScrollPane11" min="-2" pref="212" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jButtonConsCita" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2348,7 +2349,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Ubuntu" size="48" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Consultar Citas"/>
+                <Property name="text" type="java.lang.String" value="Ver Citas"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator5">

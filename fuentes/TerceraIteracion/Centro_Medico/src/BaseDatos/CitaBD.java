@@ -63,10 +63,10 @@ public class CitaBD {
 
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction ();
-        ArrayList<Cita> result = (ArrayList<Cita>)session.createQuery("FROM Cita WHERE DNIPaciente='" + pac.getDNI() + "'");
-        session.getTransaction().commit();
+        List<Cita> result = (List<Cita>)session.createQuery("from Cita where DNIPaciente0'"+pac.getDNI()+"'").list();
+        ArrayList result2 = new ArrayList(result);
 
-        return  result;
+        return result2;
     }
 
     /* SIN HACER
@@ -78,39 +78,26 @@ public class CitaBD {
         return "";
 }
 
-    /*
-     * almacenarCita
-     * Dado un objeto Cita, lo almacena en la base de datos.
-     * @param cita, Objeto Cita a almacenar
-     * @post No ofrece información sobre el estado de la operacion
-     */
-
     /*  NO FUNCIONA!
      * obtenerCita
-     * Obtiene la cita relativa a un usuario dado.
-     * @param Dni, Identificación del paciente del que obtener la cita.
-     * @return El objeto Cita oportuno o un objeto null.
      */
-/*    public Cita ObtenerCita(Paciente pac) throws SQLException {
+    public Cita ObtenerCita(Paciente pac) throws SQLException {
 
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction ();
         //Cita Ci = (Cita) session.get(Cita.class, pac);        /*****ESTO PETA******/
 
-  /*      Date hora = new Date();           /* PARCHE */
+        Date hora = new Date();           /* PARCHE */
 
-/*        //PacBD pac = new PacBD();
-        personalBD per = new personalBD();
-        Cita Ci = new Cita(true, hora, "Tarde", pac, per.obtener("33333333A")); /* PARCHE */
-/*
-        return Ci;
+        //PacBD pac = new PacBD();
+        //personalBD per = new personalBD();
+        //Cita Ci = new Cita(true, hora, "Tarde", pac, per.obtener("33333333A")); /* PARCHE */
+
+        return new Cita();
     }
-*/
+
     /* NO FUNCIONA
      * existeCita
-     * Comprueba si existe una cita para un paciente concreto.
-     * @param Dni, identificación del paciente a consultar.
-     * @return True si existe cita, false en otro caso.
      */
     public boolean ExisteCita(int id) throws SQLException {
         Cita cit = obtener(id);
@@ -139,6 +126,5 @@ public class CitaBD {
         session.getTransaction().commit();
         return  citas;
     }
-
 
 }

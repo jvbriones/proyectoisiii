@@ -22,6 +22,7 @@ import java.util.Set;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.lang.reflect.Array;
+import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -37,6 +38,7 @@ public class UI_Paciente extends javax.swing.JFrame {
     private Usuario user;
     private GestorPacientes gstpac;
     private GestorPruebas gstpru;
+    private GestorCitas gstcit;
 
     /** Creates new form Principal_Administrador */
     public UI_Paciente() {
@@ -531,7 +533,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             .add(jPanelPrincipalLayout.createSequentialGroup()
                 .add(87, 87, 87)
                 .add(jLabel11)
-                .addContainerGap(756, Short.MAX_VALUE))
+                .addContainerGap(755, Short.MAX_VALUE))
             .add(jPanelPrincipalLayout.createSequentialGroup()
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelPrincipalLayout.createSequentialGroup()
@@ -564,7 +566,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
                                     .add(jButtonConsultarRecetas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                     .add(jButtonGestionarCitass, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(16, Short.MAX_VALUE))
+                                .addContainerGap(15, Short.MAX_VALUE))
                             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelPrincipalLayout.createSequentialGroup()
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                                 .add(jLabel45)
@@ -1060,7 +1062,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jPanelGestionarPacienteLayout.setHorizontalGroup(
             jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarPacienteLayout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
+                .addContainerGap(22, Short.MAX_VALUE)
                 .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelGestionarPacienteLayout.createSequentialGroup()
                         .add(10, 10, 10)
@@ -1394,7 +1396,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                             .add(jPanelConsultarRecetaLayout.createSequentialGroup()
                                 .add(28, 28, 28)
                                 .add(jTextFieldFechaReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(662, Short.MAX_VALUE))
+                .addContainerGap(105, Short.MAX_VALUE))
         );
         jPanelConsultarRecetaLayout.setVerticalGroup(
             jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1751,7 +1753,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                                 .add(jLabel29)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                                 .add(jTextField3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 38, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(101, Short.MAX_VALUE))
+                .addContainerGap(150, Short.MAX_VALUE))
         );
         jPanelPruebaAnalistaLayout.setVerticalGroup(
             jPanelPruebaAnalistaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1781,7 +1783,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jPanelVerCita.setMinimumSize(new java.awt.Dimension(900, 530));
 
         jLabel30.setFont(new java.awt.Font("Ubuntu", 1, 48));
-        jLabel30.setText("Consultar Citas");
+        jLabel30.setText("Ver Citas");
 
         jLabel31.setFont(new java.awt.Font("Ubuntu", 1, 15));
         jLabel31.setText("Hora");
@@ -1803,24 +1805,26 @@ public class UI_Paciente extends javax.swing.JFrame {
         jPanelVerCitaLayout.setHorizontalGroup(
             jPanelVerCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanelVerCitaLayout.createSequentialGroup()
+                .add(322, 322, 322)
+                .add(jSeparator5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(578, Short.MAX_VALUE))
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelVerCitaLayout.createSequentialGroup()
+                .addContainerGap(330, Short.MAX_VALUE)
                 .add(jPanelVerCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelVerCitaLayout.createSequentialGroup()
-                        .add(322, 322, 322)
-                        .add(jPanelVerCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                            .add(jSeparator5)
-                            .add(jLabel30, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .add(jPanelVerCitaLayout.createSequentialGroup()
-                        .add(362, 362, 362)
+                        .add(32, 32, 32)
                         .add(jLabel32)
                         .add(110, 110, 110)
                         .add(jLabel31))
                     .add(jPanelVerCitaLayout.createSequentialGroup()
-                        .add(411, 411, 411)
+                        .add(81, 81, 81)
                         .add(jButtonConsCita))
-                    .add(jPanelVerCitaLayout.createSequentialGroup()
-                        .add(330, 330, 330)
-                        .add(jScrollPane11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 267, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(223, Short.MAX_VALUE))
+                    .add(jScrollPane11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 267, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(303, 303, 303))
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelVerCitaLayout.createSequentialGroup()
+                .add(353, 353, 353)
+                .add(jLabel30, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(338, 338, 338))
         );
         jPanelVerCitaLayout.setVerticalGroup(
             jPanelVerCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1829,7 +1833,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(jLabel30)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jSeparator5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(73, 73, 73)
+                .add(29, 29, 29)
                 .add(jPanelVerCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabel32)
                     .add(jLabel31))
@@ -1837,7 +1841,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(jScrollPane11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 212, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(18, 18, 18)
                 .add(jButtonConsCita)
-                .add(57, 57, 57))
+                .add(101, 101, 101))
         );
 
         jPanelVerCita.setBounds(1, 0, 900, 530);
@@ -2652,6 +2656,30 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void jButtonGestionarCitassMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGestionarCitassMouseClicked
         // TODO add your handling code here:
+        mostrarPanel("VerCitas");
+
+        SimpleDateFormat formatofecha = new SimpleDateFormat("dd.MM.yyyy");
+        SimpleDateFormat formatohora = new SimpleDateFormat("hh:mm");
+        String elemento, tabula = "                                     ";
+        DefaultListModel modelo = new DefaultListModel();
+        modelo.addElement("");//Inicializando la lista vacia
+        jList7.setModel(modelo);
+
+        try{
+            ArrayList<Cita> array_citas = gstcit.VerCitas(user.getDNI());
+            if(!array_citas.isEmpty()){
+                for(int i = 0; i < array_citas.size(); i++){
+                    elemento = formatofecha.format(array_citas.get(i).getFecha()) + tabula + formatohora.format(array_citas.get(i).getFecha());
+                    modelo.addElement(elemento);
+                }
+            }else{
+                JOptionPane.showMessageDialog(null, "¡No tiene citas disponibles!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
+            }
+        }catch(SQLException ex){
+            System.err.println(ex.getStackTrace());
+        }
+
+
     }//GEN-LAST:event_jButtonGestionarCitassMouseClicked
 
     private void jButtonGestionarCitassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGestionarCitassActionPerformed
@@ -2885,7 +2913,6 @@ public class UI_Paciente extends javax.swing.JFrame {
         
     private void mostrarPanel(String panel){
 
-
         if(panel.equals("Principal")){
 
             /**Hacemos visible el botón jLabelIconoInicio*/
@@ -2900,6 +2927,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelVerRecetas.setVisible(false);
             jPanelConsultarReceta.setVisible(false);
             jPanelVerPruebas.setVisible(false);
+            jPanelVerCita.setVisible(false);
 
 
             /**Activamos el marco*/
@@ -2927,6 +2955,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelVerRecetas.setVisible(false);
             jPanelConsultarReceta.setVisible(false);
             jPanelVerPruebas.setVisible(false);
+            jPanelVerCita.setVisible(false);
 
 
             /**Activamos el marco*/
@@ -2934,9 +2963,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelGestionarPaciente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
             jPanelGestionarCitaOnline.setBorder(null);
             jPanelConsultarCitaOnline.setBorder(null);
-                      
-            
-            
+
         }
 
         if(panel.equals("GestionarCitaOnline")){
@@ -2956,6 +2983,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelVerRecetas.setVisible(false);
             jPanelConsultarReceta.setVisible(false);
             jPanelVerPruebas.setVisible(false);
+            jPanelVerCita.setVisible(false);
 
 
             /**Activamos el marco*/
@@ -2984,6 +3012,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelVerRecetas.setVisible(false);
             jPanelConsultarReceta.setVisible(false);
             jPanelVerPruebas.setVisible(false);
+            jPanelVerCita.setVisible(false);
 
             jTextFieldAnioCita.setEditable(false);
 
@@ -3009,6 +3038,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelVerRecetas.setVisible(true);
             jPanelConsultarReceta.setVisible(false);
             jPanelVerPruebas.setVisible(false);
+            jPanelVerCita.setVisible(false);
 
 
             /**Activamos el marco*/
@@ -3034,6 +3064,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelVerRecetas.setVisible(false);
             jPanelConsultarReceta.setVisible(true);
             jPanelVerPruebas.setVisible(false);
+            jPanelVerCita.setVisible(false);
 
             /** Bloquear campos texto **/
             jTextPane2.setEditable(false);
@@ -3068,6 +3099,38 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelVerRecetas.setVisible(false);
             jPanelConsultarReceta.setVisible(false);
             jPanelVerPruebas.setVisible(true);
+            jPanelVerCita.setVisible(false);
+
+            
+            /**Activamos el marco*/
+            jPanelPrincipal.setBorder(null);
+            jPanelGestionarPaciente.setBorder(null);
+            jPanelGestionarCitaOnline.setBorder(null);
+            jPanelConsultarCitaOnline.setBorder(null);
+            jPanelVerRecetas.setBorder(null);
+            jPanelVerPruebas.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+            jPanelVerCita.setBorder(null);
+
+        }
+
+        if(panel.equals("VerCitas")){
+
+            /**Hacemos visible el botón jLabelIconoInicio*/
+            jLabelInicio.setVisible(true);
+            jLabelIconoInicio.setVisible(true);
+
+            /**Hacemos visible el panel seleccionado*/
+            jPanelPrincipal.setVisible(false);
+            jPanelGestionarPaciente.setVisible(false);
+            jPanelGestionarCitaOnline.setVisible(false);
+            jPanelConsultarCitaOnline.setVisible(false);
+            jPanelVerRecetas.setVisible(false);
+            jPanelConsultarReceta.setVisible(false);
+            jPanelVerPruebas.setVisible(false);
+            jPanelConsultarHistorial.setVisible(false);
+            jPanelPruebaRadiologia.setVisible(false);
+            jPanelPruebaAnalista.setVisible(false);
+            jPanelVerCita.setVisible(true);
 
 
             /**Activamos el marco*/
@@ -3075,7 +3138,13 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelGestionarPaciente.setBorder(null);
             jPanelGestionarCitaOnline.setBorder(null);
             jPanelConsultarCitaOnline.setBorder(null);
-            jPanelVerRecetas.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+            jPanelVerRecetas.setBorder(null);
+            jPanelConsultarReceta.setBorder(null);
+            jPanelVerPruebas.setBorder(null);
+            jPanelConsultarHistorial.setBorder(null);
+            jPanelPruebaRadiologia.setBorder(null);
+            jPanelPruebaAnalista.setBorder(null);
+            jPanelVerCita.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         }
 

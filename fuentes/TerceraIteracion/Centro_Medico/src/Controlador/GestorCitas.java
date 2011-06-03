@@ -12,8 +12,10 @@
 package Controlador;
 
 import BaseDatos.CitaBD;
+import BaseDatos.PacienteBD;
 import java.sql.SQLException;
 import CentroMedico.Usuario;
+import CentroMedico.Paciente;
 import CentroMedico.Cita;
 
 import java.util.*;
@@ -24,13 +26,10 @@ import java.util.*;
  * @author      Sub_Equipo2
  */
 
-// Esta clase está sin terminar
-// GestorCitas NO DEBE COMUNICARSE DIRECTAMENTE CON LA CLASE PacienteBD
-// SINO QUE DEBERIA COMUNICARSE CON GestorPacientes, Y ESTE CON PacienteBD
+
 public class GestorCitas {
 
     public GestorCitas(){}
-
 
     /*
      * Obtener Cita ~ ConsultarCita
@@ -49,12 +48,12 @@ public class GestorCitas {
      * Cancelar cita ~~ Cancelar cita online
      * @param dni, Identificacion del paciente que quiere cancelar la cita
      */
-/*    public void CancelarCita(String dni)throws SQLException{
+    public void CancelarCita(String dni)throws SQLException{
 
-        CitasBD citabd = new CitasBD();
-        citabd.Eliminar(this.ObtenerCita(dni));
+        CitaBD citabd = new CitaBD();
+        //citabd.Eliminar(this.ObtenerCita(dni));
     }
-*/
+
 
     /*  ¿¿¿¿DONDE ESTAN LOS ARGUMENTOS????
      * ObtenerListaCitasAnalista
@@ -74,8 +73,18 @@ public class GestorCitas {
     /*
      * VerCitas
      */
-    public ArrayList VerCitas(String dnipac) throws SQLException{
-        return new ArrayList();
+    public ArrayList<Cita> VerCitas(String dnipac) throws SQLException{
+
+        PacienteBD pacBD = new PacienteBD();        
+        Paciente pac = pacBD.obtener(dnipac);
+        CitaBD citaBD = new CitaBD();
+        
+        ArrayList<Cita> citas = citaBD.VerCitas(pac);
+
+        if(citas.isEmpty())
+            return new ArrayList<Cita>();
+
+        return citas;
     }
 
 

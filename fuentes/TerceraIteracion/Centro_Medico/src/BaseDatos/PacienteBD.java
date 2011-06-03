@@ -1,4 +1,5 @@
 package BaseDatos;
+
 import CentroMedico.*;
 import org.hibernate.Session;
 import java.sql.*;
@@ -43,9 +44,6 @@ public class PacienteBD {
 
     }
 
-        /*
-     * existePaciente
-     */
     public boolean existePaciente(String Dni) throws SQLException {
         Paciente Pac = obtener(Dni);
 
