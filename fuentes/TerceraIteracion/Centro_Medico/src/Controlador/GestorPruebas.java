@@ -264,4 +264,40 @@ public class GestorPruebas {
         return Resultados;
     }
 
+    public ArrayList<String > ConsultarPruebaRadiologia(int idPrueba, String tipo){
+
+        ArrayList<String> Resultados = new ArrayList<String>();
+        PruebaRadiologiaBD prBD = new PruebaRadiologiaBD();
+        PruebaRadiologia pru = prBD.obtener(idPrueba);
+
+        Resultados.add(pru.getComentario());
+        Resultados.add(pru.getPaciente().getNombre());
+        Resultados.add(pru.getPaciente().getApellidos());
+
+        /*if(pru.getTipo().equals("Resonancia")){ //No EXISTE EL ATRIBUTO TIPO
+            ResonanciaBD resoBD = new ResonanciaBD();
+            Resonancia res = resoBD.obtener(idPrueba);
+            Set<Imagen> im = res.getResonancias();
+
+            for(Iterator<Imagen> it = im.iterator(); it.hasNext();){
+                Imagen imag = it.next();
+                String ruta = imag.getRuta();
+                Resultados.add(ruta);
+            }
+        }else
+            if(pru.getTipo().equals("Radiografia")){
+                RadiografiaBD radioBD = new RadiografiaBD();
+                Radiografia rad = radioBD.obtener(idPrueba);
+                Set<Imagen> im = rad.getRadiografias();
+
+                for(Iterator<Imagen> it = im.iterator(); it.hasNext(); ){
+                    Imagen imag = it.next();
+                    String ruta = imag.getRuta();
+                    Resultados.add(ruta);
+                }
+            }*/
+
+        return Resultados;
+    }
+
 }
