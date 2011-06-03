@@ -78,6 +78,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         String num_mes= String.valueOf(mes);
         String num_anio= String.valueOf(anio);
 
+        sfotografia=usu.getFoto();
         //Codigo para cargar la imagen del usuario en el formulario
         try{
             
@@ -103,6 +104,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jTextFieldDireccionPaciente.setText(usu.getDireccion());
         jTextFieldEmailPaciente.setText(usu.getEmail());
         jTextFieldLugarNacimientoPaciente.setText(usu.getLugarNac());
+        jTextFieldDNIPaciente.setEditable(false);
     }
 
     private void cargarDatosCitaPaciente( Usuario usu )throws SQLException{
@@ -2303,7 +2305,11 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         /**Comprobamos que no se teclee una letra*/
         char teclaPresionada = evt.getKeyChar();
-        if(Character.isDigit(teclaPresionada) == false)
+        if(jTextFieldTelefonoPersonal.getText().length() < 9)
+            if(Character.isDigit(teclaPresionada) == false)
+                evt.consume();
+
+        if(jTextFieldTelefonoPersonal.getText().length() >= 9)
             evt.consume();
     }//GEN-LAST:event_jTextFieldTelefonoPacienteKeyTyped
 
