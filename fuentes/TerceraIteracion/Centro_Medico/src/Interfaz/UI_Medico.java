@@ -195,24 +195,6 @@ public class UI_Medico extends javax.swing.JFrame {
         jButtonModEnfermed = new javax.swing.JButton();
         jButtonConsPrue = new javax.swing.JButton();
         jButtonAddEnfer = new javax.swing.JButton();
-        jPanelAddEnfer = new javax.swing.JPanel();
-        jLabel45 = new javax.swing.JLabel();
-        jSeparator6 = new javax.swing.JSeparator();
-        jLabel46 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel47 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jLabel48 = new javax.swing.JLabel();
-        dateChooserCombo4 = new datechooser.beans.DateChooserCombo();
-        jLabel49 = new javax.swing.JLabel();
-        jLabel50 = new javax.swing.JLabel();
-        jScrollPane16 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
-        jScrollPane17 = new javax.swing.JScrollPane();
-        jTextArea4 = new javax.swing.JTextArea();
-        jButtonAddEnferma = new javax.swing.JButton();
-        jLabel56 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
         jPanelConsInfHisPaciente = new javax.swing.JPanel();
         jLabel36 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
@@ -232,6 +214,24 @@ public class UI_Medico extends javax.swing.JFrame {
         jScrollPane18 = new javax.swing.JScrollPane();
         jList3 = new javax.swing.JList();
         jSeparator7 = new javax.swing.JSeparator();
+        jPanelAddEnfer = new javax.swing.JPanel();
+        jLabel45 = new javax.swing.JLabel();
+        jSeparator6 = new javax.swing.JSeparator();
+        jLabel46 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel47 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel48 = new javax.swing.JLabel();
+        dateChooserCombo4 = new datechooser.beans.DateChooserCombo();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        jScrollPane16 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
+        jScrollPane17 = new javax.swing.JScrollPane();
+        jTextArea4 = new javax.swing.JTextArea();
+        jButtonAddEnferma = new javax.swing.JButton();
+        jLabel56 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
         jPanelConsultarDatosPersonales = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabelGestionarPaciente4 = new javax.swing.JLabel();
@@ -891,11 +891,7 @@ public class UI_Medico extends javax.swing.JFrame {
                         .add(10, 10, 10)
                         .add(jLabel4))
                     .add(jLabel16))
-<<<<<<< .mine
-                .addContainerGap(42, Short.MAX_VALUE))
-=======
-                .addContainerGap(181, Short.MAX_VALUE))
->>>>>>> .r1025
+                .addContainerGap(76, Short.MAX_VALUE))
         );
         jPanelPrincipalLayout.setVerticalGroup(
             jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1098,129 +1094,6 @@ public class UI_Medico extends javax.swing.JFrame {
         jPanelConsInformacionClinic.setBounds(1, 0, 900, 530);
         ZonaTrabajo.add(jPanelConsInformacionClinic, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jPanelAddEnfer.setMinimumSize(new java.awt.Dimension(900, 530));
-        jPanelAddEnfer.setPreferredSize(new java.awt.Dimension(900, 530));
-
-        jLabel45.setFont(new java.awt.Font("Ubuntu", 1, 48));
-        jLabel45.setText("Añadir Enfermedad");
-
-        jLabel46.setFont(new java.awt.Font("Ubuntu", 0, 18));
-        jLabel46.setText("Se va a almacenar una enfermedad para el paciente");
-
-        jLabel47.setFont(new java.awt.Font("Ubuntu", 1, 15));
-        jLabel47.setText("Nombre");
-
-        jLabel48.setFont(new java.awt.Font("Ubuntu", 1, 15));
-        jLabel48.setText("Fecha detección");
-
-        jLabel49.setFont(new java.awt.Font("Ubuntu", 1, 15));
-        jLabel49.setText("Descripción");
-
-        jLabel50.setFont(new java.awt.Font("Ubuntu", 1, 15));
-        jLabel50.setText("Volante");
-
-        jTextArea3.setColumns(20);
-        jTextArea3.setRows(5);
-        jScrollPane16.setViewportView(jTextArea3);
-
-        jTextArea4.setColumns(20);
-        jTextArea4.setRows(5);
-        jScrollPane17.setViewportView(jTextArea4);
-
-        jButtonAddEnferma.setText("Guardar");
-        jButtonAddEnferma.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonAddEnfermaMouseClicked(evt);
-            }
-        });
-
-        jLabel56.setText("Tipo");
-
-        org.jdesktop.layout.GroupLayout jPanelAddEnferLayout = new org.jdesktop.layout.GroupLayout(jPanelAddEnfer);
-        jPanelAddEnfer.setLayout(jPanelAddEnferLayout);
-        jPanelAddEnferLayout.setHorizontalGroup(
-            jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelAddEnferLayout.createSequentialGroup()
-                .addContainerGap(232, Short.MAX_VALUE)
-                .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jSeparator6)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel45, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .add(227, 227, 227))
-            .add(jPanelAddEnferLayout.createSequentialGroup()
-                .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jPanelAddEnferLayout.createSequentialGroup()
-                        .add(166, 166, 166)
-                        .add(jLabel46)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jTextField4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 112, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jPanelAddEnferLayout.createSequentialGroup()
-                        .add(153, 153, 153)
-                        .add(jScrollPane16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 242, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(74, 74, 74)
-                        .add(jScrollPane17, 0, 0, Short.MAX_VALUE))
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jPanelAddEnferLayout.createSequentialGroup()
-                        .add(133, 133, 133)
-                        .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                            .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel56, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel47, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .add(18, 18, 18)
-                        .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                            .add(jTextField6)
-                            .add(jTextField5, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 71, Short.MAX_VALUE)
-                        .add(jLabel48)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jLabel50)
-                            .add(dateChooserCombo4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(199, Short.MAX_VALUE))
-            .add(jPanelAddEnferLayout.createSequentialGroup()
-                .add(221, 221, 221)
-                .add(jLabel49)
-                .addContainerGap(594, Short.MAX_VALUE))
-            .add(jPanelAddEnferLayout.createSequentialGroup()
-                .add(395, 395, 395)
-                .add(jButtonAddEnferma)
-                .addContainerGap(434, Short.MAX_VALUE))
-        );
-        jPanelAddEnferLayout.setVerticalGroup(
-            jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelAddEnferLayout.createSequentialGroup()
-                .add(46, 46, 46)
-                .add(jLabel45)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jSeparator6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(29, 29, 29)
-                .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel46)
-                    .add(jTextField4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(22, 22, 22)
-                .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                        .add(jTextField5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(jLabel47)
-                        .add(jLabel48))
-                    .add(dateChooserCombo4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel56)
-                    .add(jTextField6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(12, 12, 12)
-                .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel49)
-                    .add(jLabel50))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                    .add(jScrollPane17)
-                    .add(jScrollPane16, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE))
-                .add(21, 21, 21)
-                .add(jButtonAddEnferma)
-                .addContainerGap(42, Short.MAX_VALUE))
-        );
-
-        jPanelAddEnfer.setBounds(1, 0, 900, 530);
-        ZonaTrabajo.add(jPanelAddEnfer, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
         jPanelConsInfHisPaciente.setMinimumSize(new java.awt.Dimension(900, 530));
         jPanelConsInfHisPaciente.setPreferredSize(new java.awt.Dimension(900, 530));
 
@@ -1373,6 +1246,129 @@ public class UI_Medico extends javax.swing.JFrame {
 
         jPanelHistorialPac.setBounds(1, 0, 900, 530);
         ZonaTrabajo.add(jPanelHistorialPac, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        jPanelAddEnfer.setMinimumSize(new java.awt.Dimension(900, 530));
+        jPanelAddEnfer.setPreferredSize(new java.awt.Dimension(900, 530));
+
+        jLabel45.setFont(new java.awt.Font("Ubuntu", 1, 48));
+        jLabel45.setText("Añadir Enfermedad");
+
+        jLabel46.setFont(new java.awt.Font("Ubuntu", 0, 18));
+        jLabel46.setText("Se va a almacenar una enfermedad para el paciente");
+
+        jLabel47.setFont(new java.awt.Font("Ubuntu", 1, 15));
+        jLabel47.setText("Nombre");
+
+        jLabel48.setFont(new java.awt.Font("Ubuntu", 1, 15));
+        jLabel48.setText("Fecha detección");
+
+        jLabel49.setFont(new java.awt.Font("Ubuntu", 1, 15));
+        jLabel49.setText("Descripción");
+
+        jLabel50.setFont(new java.awt.Font("Ubuntu", 1, 15));
+        jLabel50.setText("Volante");
+
+        jTextArea3.setColumns(20);
+        jTextArea3.setRows(5);
+        jScrollPane16.setViewportView(jTextArea3);
+
+        jTextArea4.setColumns(20);
+        jTextArea4.setRows(5);
+        jScrollPane17.setViewportView(jTextArea4);
+
+        jButtonAddEnferma.setText("Guardar");
+        jButtonAddEnferma.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonAddEnfermaMouseClicked(evt);
+            }
+        });
+
+        jLabel56.setText("Tipo");
+
+        org.jdesktop.layout.GroupLayout jPanelAddEnferLayout = new org.jdesktop.layout.GroupLayout(jPanelAddEnfer);
+        jPanelAddEnfer.setLayout(jPanelAddEnferLayout);
+        jPanelAddEnferLayout.setHorizontalGroup(
+            jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelAddEnferLayout.createSequentialGroup()
+                .addContainerGap(232, Short.MAX_VALUE)
+                .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jSeparator6)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel45, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .add(227, 227, 227))
+            .add(jPanelAddEnferLayout.createSequentialGroup()
+                .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jPanelAddEnferLayout.createSequentialGroup()
+                        .add(166, 166, 166)
+                        .add(jLabel46)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jTextField4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 112, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jPanelAddEnferLayout.createSequentialGroup()
+                        .add(153, 153, 153)
+                        .add(jScrollPane16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 242, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(74, 74, 74)
+                        .add(jScrollPane17, 0, 0, Short.MAX_VALUE))
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, jPanelAddEnferLayout.createSequentialGroup()
+                        .add(133, 133, 133)
+                        .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel56, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel47, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .add(18, 18, 18)
+                        .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                            .add(jTextField6)
+                            .add(jTextField5, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 71, Short.MAX_VALUE)
+                        .add(jLabel48)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jLabel50)
+                            .add(dateChooserCombo4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(199, Short.MAX_VALUE))
+            .add(jPanelAddEnferLayout.createSequentialGroup()
+                .add(221, 221, 221)
+                .add(jLabel49)
+                .addContainerGap(594, Short.MAX_VALUE))
+            .add(jPanelAddEnferLayout.createSequentialGroup()
+                .add(395, 395, 395)
+                .add(jButtonAddEnferma)
+                .addContainerGap(434, Short.MAX_VALUE))
+        );
+        jPanelAddEnferLayout.setVerticalGroup(
+            jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanelAddEnferLayout.createSequentialGroup()
+                .add(46, 46, 46)
+                .add(jLabel45)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jSeparator6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(29, 29, 29)
+                .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jLabel46)
+                    .add(jTextField4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(22, 22, 22)
+                .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                        .add(jTextField5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(jLabel47)
+                        .add(jLabel48))
+                    .add(dateChooserCombo4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jLabel56)
+                    .add(jTextField6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(12, 12, 12)
+                .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jLabel49)
+                    .add(jLabel50))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jPanelAddEnferLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                    .add(jScrollPane17)
+                    .add(jScrollPane16, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE))
+                .add(21, 21, 21)
+                .add(jButtonAddEnferma)
+                .addContainerGap(42, Short.MAX_VALUE))
+        );
+
+        jPanelAddEnfer.setBounds(1, 0, 900, 530);
+        ZonaTrabajo.add(jPanelAddEnfer, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelConsultarDatosPersonales.setPreferredSize(new java.awt.Dimension(901, 531));
         jPanelConsultarDatosPersonales.setLayout(null);
@@ -3090,20 +3086,12 @@ MedicamentoBD meBD = new MedicamentoBD();
         // TODO add your handling code here:
         System.out.println("El juanmi es un cabron");
         PacienteBD paci=new PacienteBD();
-        boolean exito=false;
         Paciente paciente=paci.obtener(jTextField4.getText());
         if(paciente !=null){  
             Date fechaDet = null;
             fechaDet = dateChooserCombo4.getSelectedDate().getTime();
             gestormedico.anadirEnfermedad(jTextField5.getText(),jTextField7.getText(),fechaDet,jTextArea3.getText(),jTextArea4.getText(),paciente);
-            exito=true;
     }//GEN-LAST:event_jButtonAddEnfermaMouseClicked
-    if(exito){
-         new InformacionExito().setVisible(true);
-    }
- else{
-        new InformacionError().setVisible(true);
- }
     }
         private void jButtonSaveEnferMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonSaveEnferMouseClicked
             // TODO add your handling code here:
@@ -3120,10 +3108,8 @@ MedicamentoBD meBD = new MedicamentoBD();
 
         private void jButtonAddEnferMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAddEnferMouseClicked
             // TODO add your handling code here:
-            jTextField4.setText(jTextPane2.getText());
             jPanelConsInformacionClinic.setVisible(false);
             jPanelAddEnfer.setVisible(true);
-
         }//GEN-LAST:event_jButtonAddEnferMouseClicked
 
         private void jButtonModEnfermedMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonModEnfermedMouseClicked
@@ -3141,7 +3127,7 @@ MedicamentoBD meBD = new MedicamentoBD();
           
              jTextPane2.setText(jTextPane1.getText());
               DefaultListModel modeloEnfermedades = new DefaultListModel();
-              String espacio = "                                                   ";
+              String espacio = "                                   ";
               Enfermedad enfermedad= null;
               
               for ( Iterator it = enf.iterator(); it.hasNext();){
