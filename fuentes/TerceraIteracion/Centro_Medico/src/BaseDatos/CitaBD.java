@@ -59,11 +59,15 @@ public class CitaBD {
         return Cita;
     }
 
+    public ArrayList<Cita> VerCitas(Paciente pac) throws SQLException{
 
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session.beginTransaction ();
+        ArrayList<Cita> result = (ArrayList<Cita>)session.createQuery("FROM Cita WHERE DNIPaciente='" + pac.getDNI() + "'");
+        session.getTransaction().commit();
 
-
-
-
+        return  result;
+    }
 
     /* SIN HACER
      * altaCita
@@ -119,13 +123,6 @@ public class CitaBD {
            System.out.print("ExisteCita: No existe la cita");
            return false;
        }
-    }
-
-    /*
-     * Ver Citas
-     */
-    public ArrayList VerCitas(Paciente pac) throws SQLException{
-        return new ArrayList();
     }
 
     /*  ¿¿¿¿¿¿¿¿¿¿¿¡¡¡¡¡¡¡SIN ARGUMENTOS???!!!!!?!!!!!!!!
