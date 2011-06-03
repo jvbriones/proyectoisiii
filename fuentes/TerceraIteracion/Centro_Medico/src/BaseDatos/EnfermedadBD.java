@@ -5,6 +5,8 @@ import java.sql.*;
 import org.hibernate.Session;
 import org.hibernate.*;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class EnfermedadBD{
@@ -62,8 +64,16 @@ public class EnfermedadBD{
         /*
          * ObtenerEnfermedades
          */
-	//public Set<Enfermedad> ObtenerEnfermedades(String dni){
-          //  return new Set;
-        //}
+        
+	public ArrayList<Enfermedad> ObtenerEnfermedades(String dni){
+             Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+
+        session.beginTransaction ();
+
+        List<Enfermedad> result = (List<Enfermedad>)session.createQuery("from Enfermedad where DNI_PACIENTE='" + dni + "'").list();
+        ArrayList<Enfermedad> enf = new ArrayList<Enfermedad>(result);
+        session.getTransaction().commit();
+        return enf;
+        }
 
 }
