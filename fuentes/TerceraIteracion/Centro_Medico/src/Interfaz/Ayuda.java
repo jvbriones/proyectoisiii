@@ -40,39 +40,46 @@ public class Ayuda extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel7 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 204, 102));
-        setLocation(new java.awt.Point(320, 200));
-        setPreferredSize(new java.awt.Dimension(650, 300));
+        setMinimumSize(new java.awt.Dimension(644, 309));
         setResizable(false);
-        setSize(new java.awt.Dimension(650, 300));
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24));
-        jLabel1.setText("v. 0.4");
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 2, 20)); // NOI18N
+        jLabel1.setText("versión 0.8 Beta");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(260, 86, 66, 39);
+        jLabel1.setBounds(310, 90, 170, 39);
 
-        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 24));
-        jLabel2.setText("Centro de Salud");
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
+        jLabel2.setText("Centro Médico");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(202, 39, 196, 39);
+        jLabel2.setBounds(230, 40, 300, 39);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Logo-Centro-Medico.png"))); // NOI18N
         getContentPane().add(jLabel3);
         jLabel3.setBounds(20, 20, 139, 173);
 
+        jLabel4.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel4.setText("Licencia:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(210, 180, 60, 16);
+        jLabel4.setBounds(210, 160, 80, 18);
 
-        jLabel5.setText("Este es un software libre, por lo que tiene licencia");
+        jLabel5.setText("La aplicación es software libre, ha sido desarrollada por ");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(210, 200, 320, 16);
+        jLabel5.setBounds(190, 190, 420, 18);
 
-        jLabel6.setText("GNU GPL v3.0");
+        jLabel6.setText("la empresa XXXXXX  bajo la licencia GNU GPL v.3");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(210, 220, 110, 16);
+        jLabel6.setBounds(200, 220, 370, 18);
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(170, 140, 440, 10);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/gplv3-88x31.png"))); // NOI18N
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(60, 210, 88, 30);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -93,6 +100,8 @@ public class Ayuda extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 
 }
