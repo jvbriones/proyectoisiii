@@ -12,8 +12,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
- *
  * @author pantic
+ * @author Juan Cabrera
  */
 public class GestorPruebas {
 
@@ -181,8 +181,7 @@ public class GestorPruebas {
 
         return true;
     }
-
-    
+   
     public boolean almacenarResultadoRadiologia(String DNIPaciente, ArrayList<Imagen> imag, String Comentario, String TipoPrueba, String DNIRadiologo) throws SQLException{
 
         //No concuerda el diagrama de secuencia con el de clases
@@ -232,6 +231,18 @@ public class GestorPruebas {
 
 
      }
-     
+
+    public ArrayList<ArrayList<String> > ConsultarPruebaAnalisis(int idPrueba, String tipo){
+
+        ArrayList<String> Resultados = new ArrayList<String>();
+        PruebaAnalisisBD paBD = new PruebaAnalisisBD();
+        PruebaAnalisis pa = paBD.obtener(idPrueba);
+
+        /*if(pa.getTipo == "Sangre"){ //No EXISTE EL ATRIBUTO TIPO
+
+        }*/
+
+        return new ArrayList<ArrayList<String> >();
+    }
 
 }
