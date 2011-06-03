@@ -69,5 +69,5 @@ public class PruebaAnalisis implements Serializable{
     public void setAcceso(boolean Acceso) {
         this.Acceso = Acceso;
     }
-    
+
 }
