@@ -45,7 +45,7 @@
         <key column="DNI_PACIENTE"/>
         <many-to-one name="Cita" class="CentroMedico.Cita" column="ID_CITA" unique="true" cascade="all" lazy = "false"/>
         <set cascade="all" name="Enfermedades" lazy="false">
-            <key column="ID_ENFERMEDAD"/>
+            <key column="DNI_PACIENTE"/>
             <one-to-many class="CentroMedico.Enfermedad"/>
         </set>
     </joined-subclass>
