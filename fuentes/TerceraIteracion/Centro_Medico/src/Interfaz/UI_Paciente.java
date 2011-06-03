@@ -2677,6 +2677,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             }
         }catch(SQLException ex){
             System.err.println(ex.getStackTrace());
+            JOptionPane.showMessageDialog(null, "¡Se produjo un error!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
         }
 
 

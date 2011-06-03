@@ -54,8 +54,9 @@ public class RecetaBD {
         session.beginTransaction ();
 
         List<Receta> result = (List<Receta>)session.createQuery("from Receta where DNI_PACIENTE='"+dni+"'").list();
+        
         Set<Receta> recetas = new HashSet<Receta>(result);
-
+        session.getTransaction().commit();
         return recetas;
     }
 
