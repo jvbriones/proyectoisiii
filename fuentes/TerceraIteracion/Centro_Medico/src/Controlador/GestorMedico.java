@@ -99,6 +99,7 @@ public class GestorMedico {
         PacienteBD pac=new PacienteBD();
         Enfermedad enfe = new Enfermedad(Nombre,Tipo,FechaDet,Descripcion,Volante);
         Paci.anadirEnfermedad(enfe);
+        System.out.println("Nombre paciente:"+Paci.getNombre());
         pac.actualizar(Paci);
         return true;
 
@@ -121,7 +122,7 @@ public class GestorMedico {
     }
     public HashMap<String,ArrayList<String>> consultarHistorialPacientes(String dniMedico) throws SQLException{
         HashMap<String,ArrayList<String>> histo= new HashMap<String,ArrayList<String>>();
-        ArrayList<String> Atributos=new ArrayList<String>();
+     /*   ArrayList<String> Atributos=new ArrayList<String>();
         CitaBD citabd=new CitaBD();
         PacienteBD pacbd=new PacienteBD();
         Set<Cita> Citas=citabd.ObtenerTodasCitas();
@@ -129,18 +130,21 @@ public class GestorMedico {
         String dniMedicoCita;
         String dniPaciente;
         Paciente paci;
+        PersonalMedico pm;
         for(Iterator itCi=Citas.iterator();itCi.hasNext();){
             ci=(Cita) itCi.next();
-            dniMedicoCita=ci.getDNIMedico();
+            pm=ci.getPersonalMedico();
+            paci=ci.getPaciente();
+            dniMedicoCita=pm.getDNI();
+            dniPaciente=ci.getDNIPaciente();
             if(dniMedicoCita.equals(dniMedico)){
-                dniPaciente=ci.getDNIPaciente();
-                paci=pacbd.obtener(dniPaciente);
+                //dniPaciente=ci.getDNIPaciente();
                 Atributos.add(paci.getNombre());
                 Atributos.add(paci.getApellidos());
                 //Atributos.add(paci.getEmail());
                 histo.put(dniPaciente, Atributos);
             }
-        }
+        }*/
         return histo;
 
     }
@@ -158,13 +162,13 @@ public class GestorMedico {
         for(Iterator itPan=pan.iterator();itPan.hasNext();){
             pa=(PruebaAnalisis) itPan.next();
             id=pa.getId();
-            pruebasAnalisis.add(id);
+            pruebasAnalisis.add(pa);
         }
         pruebas.add(pruebasAnalisis);
          for(Iterator itPra=pra.iterator();itPra.hasNext();){
             pr=(PruebaRadiologia) itPra.next();
             id=pr.getId();
-            pruebasRadiologia.add(id);
+            pruebasRadiologia.add(pr);
         }
         pruebas.add(pruebasRadiologia);
         return pruebas;
