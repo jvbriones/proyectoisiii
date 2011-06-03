@@ -92,9 +92,9 @@ public class GestorPacientes {
         return true;
 }
 
-   public Set<Enfermedad> consultarInfoClinicaPaciente(String DNIPaciente) throws SQLException{
+   public ArrayList<Enfermedad> consultarInfoClinicaPaciente(String DNIPaciente) throws SQLException{
        PacienteBD PacBD = new PacienteBD();
-         Set<Enfermedad> enf=null;
+         ArrayList<Enfermedad> enf=null;
            
        boolean existe=PacBD.existePaciente(DNIPaciente);
        String mensaje="";
@@ -106,7 +106,8 @@ public class GestorPacientes {
        else{
        
            EnfermedadBD enfermedad = new EnfermedadBD();
-          // enf= enfermedad.ObtenerEnfermedades(DNIPaciente);
+         
+          enf= enfermedad.ObtenerEnfermedades(DNIPaciente);
        }
        return enf;
            
