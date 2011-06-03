@@ -475,37 +475,43 @@
                           <Component id="jLabelFechaNacimientoPersonal" min="-2" pref="140" max="-2" attributes="0"/>
                           <Component id="dateChooserCombo2" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace min="10" pref="10" max="10" attributes="0"/>
-                              <Component id="jLabel8" min="-2" pref="110" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
+                              <Component id="jButtonGuardar" min="-2" pref="130" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="10" pref="10" max="10" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel8" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
                                   <Component id="jRadioButtonMedico" min="-2" pref="110" max="-2" attributes="0"/>
                                   <Component id="jRadioButtonFarmaceutico" min="-2" pref="130" max="-2" attributes="0"/>
                                   <Component id="jRadioButtonRadiologo" min="-2" pref="120" max="-2" attributes="0"/>
                                   <Component id="jRadioButtonAnalista" min="-2" pref="100" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Component id="jButtonGuardar" min="-2" pref="130" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="20" pref="20" max="20" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace min="20" pref="20" max="20" attributes="0"/>
-                              <Component id="jLabelFotografiaersonal" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="jButtonFotoPersonal" min="-2" pref="120" max="-2" attributes="0"/>
+                                      <EmptySpace min="10" pref="10" max="10" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="jLabelFotografiaersonal" min="-2" pref="100" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
-                          <Component id="jButtonFotoPersonal" min="-2" pref="120" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="10" pref="10" max="10" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                               <Component id="jLabelInfoFotoPersonal" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="10" pref="10" max="10" attributes="0"/>
-                      <Component id="jLabelFotoPersonal" min="-2" pref="130" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <Component id="jLabelFotoPersonal" min="-2" pref="150" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -563,36 +569,40 @@
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="13" pref="13" max="13" attributes="0"/>
-                              <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="2" pref="2" max="2" attributes="0"/>
+                              <Component id="jLabelFotoPersonal" min="-2" pref="150" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="13" pref="13" max="13" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <EmptySpace min="40" pref="40" max="40" attributes="0"/>
-                                      <Component id="jRadioButtonMedico" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="2" pref="2" max="2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="40" pref="40" max="40" attributes="0"/>
+                                              <Component id="jRadioButtonMedico" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="20" pref="20" max="20" attributes="0"/>
+                                              <Component id="jRadioButtonFarmaceutico" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="60" pref="60" max="60" attributes="0"/>
+                                              <Component id="jRadioButtonRadiologo" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="jRadioButtonAnalista" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                      <Component id="jButtonGuardar" min="-2" pref="39" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="20" pref="20" max="20" attributes="0"/>
-                                      <Component id="jRadioButtonFarmaceutico" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabelFotografiaersonal" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jButtonFotoPersonal" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jLabelInfoFotoPersonal" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="60" pref="60" max="60" attributes="0"/>
-                                      <Component id="jRadioButtonRadiologo" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="jRadioButtonAnalista" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="26" pref="26" max="26" attributes="0"/>
-                              <Component id="jButtonGuardar" min="-2" pref="39" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="13" pref="13" max="13" attributes="0"/>
-                              <Component id="jLabelFotografiaersonal" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="2" pref="2" max="2" attributes="0"/>
-                              <Component id="jButtonFotoPersonal" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabelInfoFotoPersonal" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="13" pref="13" max="13" attributes="0"/>
-                              <Component id="jLabelFotoPersonal" min="-2" pref="150" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -736,7 +746,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Lucida Grande" size="10" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Tam max 130x150 pix"/>
+                <Property name="text" type="java.lang.String" value="Tama&#xf1;o m&#xe1;x. 150x150 p&#xed;xeles"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel8">
@@ -988,18 +998,17 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="273" max="-2" attributes="0"/>
                       <Component id="jLabelGestionarPaciente6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="152" max="32767" attributes="0"/>
+                      <EmptySpace pref="193" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="0" pref="40" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="60" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="120" pref="120" max="120" attributes="0"/>
                                   <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Component id="jScrollPane4" min="-2" pref="780" max="-2" attributes="0"/>
-                              <Component id="jScrollPane5" min="-2" pref="780" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <EmptySpace min="290" pref="290" max="290" attributes="0"/>
                                   <Component id="jLabelDNITurno" min="-2" max="-2" attributes="0"/>
@@ -1055,7 +1064,7 @@
                                   <Component id="jRadioButtonNoche" min="-2" pref="150" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="0" pref="40" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="61" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -1072,10 +1081,7 @@
                           <EmptySpace min="50" pref="113" max="32767" attributes="0"/>
                           <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="24" pref="24" max="24" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jScrollPane4" min="-2" pref="120" max="-2" attributes="0"/>
-                              <Component id="jScrollPane5" min="-2" pref="120" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="jScrollPane4" min="-2" pref="120" max="-2" attributes="0"/>
                           <EmptySpace min="20" pref="20" max="20" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
@@ -1189,29 +1195,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMenosAnioFechaInicioTurnoActionPerformed"/>
               </Events>
             </Component>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane5">
-              <AuxValues>
-                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-              </AuxValues>
-
-              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-              <SubComponents>
-                <Component class="javax.swing.JTextArea" name="jTextAreaInfoTurno">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="66" green="cc" red="ff" type="rgb"/>
-                    </Property>
-                    <Property name="columns" type="int" value="17"/>
-                    <Property name="editable" type="boolean" value="false"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Lucida Grande" size="18" style="0"/>
-                    </Property>
-                    <Property name="rows" type="int" value="3"/>
-                    <Property name="text" type="java.lang.String" value="Modifica la fecha y la shorts en trabajar del trabajador con el DNI del formulario,&#xa;luego dale a &quot;Guardar&quot; y se actualizar&#xe1; su turno de trabajo. &#xa;Si deseas consultar el turno de otro DNI, introd&#xfa;cuelo y dale a &quot;Consultar&quot;"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
             <Component class="javax.swing.JTextField" name="jTextFieldMesInicioTurno">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
@@ -1839,7 +1822,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="90" y="0" width="120" height="-1"/>
+              <AbsoluteConstraints x="80" y="10" width="120" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -1852,7 +1835,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="90" y="30" width="120" height="-1"/>
+              <AbsoluteConstraints x="90" y="40" width="120" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
