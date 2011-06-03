@@ -48,12 +48,12 @@ public class Ayuda extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 2, 20)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 2, 20));
         jLabel1.setText("versión 0.8 Beta");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(310, 90, 170, 39);
 
-        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 36));
         jLabel2.setText("Centro Médico");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(230, 40, 300, 39);
@@ -62,18 +62,18 @@ public class Ayuda extends javax.swing.JFrame {
         getContentPane().add(jLabel3);
         jLabel3.setBounds(20, 20, 139, 173);
 
-        jLabel4.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Ubuntu", 1, 15));
         jLabel4.setText("Licencia:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(210, 160, 80, 18);
+        jLabel4.setBounds(210, 160, 80, 20);
 
         jLabel5.setText("La aplicación es software libre, ha sido desarrollada por ");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(190, 190, 420, 18);
+        jLabel5.setBounds(190, 190, 420, 14);
 
-        jLabel6.setText("la empresa XXXXXX  bajo la licencia GNU GPL v.3");
+        jLabel6.setText("la empresa ProyectoISIII  bajo la licencia GNU GPL v.3");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(200, 220, 370, 18);
+        jLabel6.setBounds(200, 220, 370, 14);
         getContentPane().add(jSeparator1);
         jSeparator1.setBounds(170, 140, 440, 10);
 
