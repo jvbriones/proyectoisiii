@@ -2666,7 +2666,13 @@ public class UI_Paciente extends javax.swing.JFrame {
         int idPrueba = 0;
         String tipo = "";
 
-        ArrayList<String> resultado = gstpru.ConsultarPruebaAnalisis(idPrueba, tipo);
+        if(seleccion.contains("Analisis")){
+            ArrayList<String> resultado = gstpru.ConsultarPruebaAnalisis(idPrueba, tipo);
+        }else
+            if(seleccion.contains("Radiologia")){
+                ArrayList<String> resultado = gstpru.ConsultarPruebaRadiologia(idPrueba, tipo);
+            }
+
 
         //PONER DATOS
         jTextField1.setText(tipo);
