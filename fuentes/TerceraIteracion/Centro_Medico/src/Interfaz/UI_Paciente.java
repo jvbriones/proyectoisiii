@@ -2916,6 +2916,8 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void mostrarPanel(String panel){
 
         if(panel.equals("Principal")){
+            
+            
 
             /**Hacemos visible el botón jLabelIconoInicio*/
             jLabelInicio.setVisible(false);
