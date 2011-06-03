@@ -2305,11 +2305,11 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         /**Comprobamos que no se teclee una letra*/
         char teclaPresionada = evt.getKeyChar();
-        if(jTextFieldTelefonoPersonal.getText().length() < 9)
+        if(jTextFieldTelefonoPaciente.getText().length() < 9)
             if(Character.isDigit(teclaPresionada) == false)
                 evt.consume();
 
-        if(jTextFieldTelefonoPersonal.getText().length() >= 9)
+        if(jTextFieldTelefonoPaciente.getText().length() >= 9)
             evt.consume();
     }//GEN-LAST:event_jTextFieldTelefonoPacienteKeyTyped
 
