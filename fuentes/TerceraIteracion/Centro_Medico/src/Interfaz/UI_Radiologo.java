@@ -1140,7 +1140,19 @@ public class UI_Radiologo extends javax.swing.JFrame {
 
         /**Comprobamos que no se teclee una letra*/
         char teclaPresionada = evt.getKeyChar();
-        if(Character.isDigit(teclaPresionada) == false)
+        if(jTextFieldTelefonoPersonal.getText().length() < 9)
+            if(Character.isDigit(teclaPresionada) == false)
+                evt.consume();
+
+        if(jTextFieldTelefonoPersonal.getText().length() == 9){
+            if(Character.isDigit(teclaPresionada) == true){
+                evt.consume();
+            }else{
+                evt.consume();
+            }
+        }
+
+        if(jTextFieldTelefonoPersonal.getText().length() > 9)
             evt.consume();
     }//GEN-LAST:event_jTextFieldTelefonoPersonalKeyTyped
 
