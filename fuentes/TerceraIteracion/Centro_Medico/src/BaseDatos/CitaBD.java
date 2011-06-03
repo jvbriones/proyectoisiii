@@ -63,7 +63,7 @@ public class CitaBD {
 
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction ();
-        List<Cita> result = (List<Cita>)session.createQuery("from Cita where DNIPaciente0'"+pac.getDNI()+"'").list();
+        List<Cita> result = (List<Cita>)session.createQuery("from Cita where DNIPaciente'"+pac.getDNI()+"'").list();
         ArrayList result2 = new ArrayList(result);
 
         return result2;

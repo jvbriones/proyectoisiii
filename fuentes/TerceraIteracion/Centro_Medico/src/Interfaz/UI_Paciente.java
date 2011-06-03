@@ -2664,9 +2664,10 @@ public class UI_Paciente extends javax.swing.JFrame {
         DefaultListModel modelo = new DefaultListModel();
         modelo.addElement("");//Inicializando la lista vacia
         jList7.setModel(modelo);
-
+        String dni = user.getDNI();
         try{
-            ArrayList<Cita> array_citas = gstcit.VerCitas(user.getDNI());
+            ArrayList<Cita> array_citas = new ArrayList();
+            array_citas = gstcit.VerCitas(dni);
             if(!array_citas.isEmpty()){
                 for(int i = 0; i < array_citas.size(); i++){
                     elemento = formatofecha.format(array_citas.get(i).getFecha()) + tabula + formatohora.format(array_citas.get(i).getFecha());
