@@ -25,7 +25,7 @@ public class Receta implements Serializable{
 
     private Medico Medi;
     private Paciente Paci;
-    private Set <MedicamentoRecetado> MedicamentosRecetados = new HashSet<MedicamentoRecetado>(0);
+    private Set <MedicamentoRecetado> MedicamentosRecetados = null;//new HashSet<MedicamentoRecetado>(0);
 
     public Receta() {
     }
@@ -40,7 +40,6 @@ public class Receta implements Serializable{
         this.Instrucciones = Ins;
         this.Fecha = F;
     }
-
 
     public Date getFecha() {
         return Fecha;
@@ -67,7 +66,10 @@ public class Receta implements Serializable{
     }
 
     public Set<MedicamentoRecetado > getMedicamentosRecetados() {
+        if(MedicamentosRecetados.isEmpty())
+            return null;
         return MedicamentosRecetados;
+        
     }
 
     public void setFecha(Date Fecha) {

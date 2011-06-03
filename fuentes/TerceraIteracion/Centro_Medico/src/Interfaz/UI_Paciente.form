@@ -174,7 +174,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
                       <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="756" max="32767" attributes="0"/>
+                      <EmptySpace pref="755" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -217,7 +217,7 @@
                                           <Component id="jButtonConsultarRecetas" min="-2" pref="194" max="-2" attributes="1"/>
                                           <Component id="jButtonGestionarCitass" min="-2" pref="194" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="16" max="32767" attributes="0"/>
+                                      <EmptySpace pref="15" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
@@ -1445,23 +1445,16 @@
                                                       <Component id="jButtonVolverReceta" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
-                                                      <EmptySpace max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                          <Group type="102" alignment="0" attributes="0">
-                                                              <Component id="jTextFieldNombreMedicoReceta" min="-2" pref="189" max="-2" attributes="0"/>
-                                                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                                          </Group>
+                                                          <Component id="jTextFieldNombreMedicoReceta" alignment="0" min="-2" pref="189" max="-2" attributes="0"/>
                                                           <Group type="102" alignment="0" attributes="1">
                                                               <EmptySpace min="68" pref="68" max="68" attributes="0"/>
                                                               <Component id="jLabelNombreMedicoReceta" min="-2" max="-2" attributes="0"/>
-                                                              <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
+                                                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Group type="102" alignment="0" attributes="0">
-                                                              <EmptySpace max="-2" attributes="0"/>
-                                                              <Component id="jTextFieldTelefonoMedicoReceta" min="-2" pref="95" max="-2" attributes="0"/>
-                                                          </Group>
+                                                          <Component id="jTextFieldTelefonoMedicoReceta" alignment="0" min="-2" pref="95" max="-2" attributes="0"/>
                                                           <Group type="102" alignment="0" attributes="0">
                                                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                                               <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
@@ -1521,7 +1514,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="105" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1545,11 +1538,11 @@
                           </Group>
                           <Group type="102" attributes="1">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane5" pref="98" max="32767" attributes="0"/>
+                              <Component id="jScrollPane5" pref="25" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane6" pref="98" max="32767" attributes="0"/>
+                              <Component id="jScrollPane6" pref="25" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>

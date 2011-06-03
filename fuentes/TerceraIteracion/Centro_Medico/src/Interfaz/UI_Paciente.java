@@ -2495,6 +2495,19 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jTextFieldNombreMedicoReceta.setText(receta.getMedi().getNombre() + " " + receta.getMedi().getApellidos());
                 jTextFieldTelefonoMedicoReceta.setText(receta.getMedi().getTelefono());
                 jTextFieldEmailMedicoReceta.setText(receta.getMedi().getEmail());
+
+                DefaultListModel modelo = new DefaultListModel();
+                modelo.addElement("");//Inicializando la lista vacia
+                jList8.setModel(modelo);
+                Set<MedicamentoRecetado> medicamentos = receta.getMedicamentosRecetados();
+                if(!medicamentos.isEmpty()){
+                    for(Iterator<MedicamentoRecetado> it = medicamentos.iterator(); it.hasNext();){
+                        modelo.addElement(it.next().getMedicamento().getNombre());
+                    }
+                }else{
+                    modelo.addElement("No hay medicamentos");
+                }
+ 
                 mostrarPanel("ConsultarReceta");
             }
             catch(SQLException ex){
