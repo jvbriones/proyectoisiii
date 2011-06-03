@@ -273,7 +273,7 @@
                                   <Component id="jTextFieldLimiteInf" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabelLimInf" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="36" max="32767" attributes="0"/>
+                              <EmptySpace pref="75" max="32767" attributes="0"/>
                               <Component id="jButtonGuardarAtributo" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                           </Group>
@@ -416,102 +416,94 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="256" pref="256" max="256" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="1" pref="1" max="1" attributes="0"/>
-                              <Component id="jLabelGestionarPaciente4" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="157" pref="157" max="157" attributes="0"/>
-                      <Component id="jLabelNombrePersonal" min="-2" pref="80" max="-2" attributes="0"/>
-                      <EmptySpace min="170" pref="170" max="170" attributes="0"/>
-                      <Component id="jLabelApellidosPersonal" min="-2" pref="80" max="-2" attributes="0"/>
-                      <EmptySpace min="270" pref="270" max="270" attributes="0"/>
-                      <Component id="jLabelDNIPersonal" min="-2" pref="40" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="157" pref="157" max="157" attributes="0"/>
-                      <Component id="jTextFieldNombrePersonal" min="-2" pref="210" max="-2" attributes="0"/>
-                      <EmptySpace min="40" pref="40" max="40" attributes="0"/>
-                      <Component id="jTextFieldApellidosPersonal" min="-2" pref="290" max="-2" attributes="0"/>
-                      <EmptySpace min="60" pref="60" max="60" attributes="0"/>
-                      <Component id="jTextFieldDNIPersonal" min="-2" pref="95" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="157" pref="157" max="157" attributes="0"/>
-                      <Component id="jLabelDireccionPersonal" min="-2" pref="80" max="-2" attributes="0"/>
-                      <EmptySpace min="330" pref="330" max="330" attributes="0"/>
-                      <Component id="jLabelEmailPersonal" min="-2" pref="80" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="157" pref="157" max="157" attributes="0"/>
-                      <Component id="jTextFieldDireccionPersonal" min="-2" pref="370" max="-2" attributes="0"/>
-                      <EmptySpace min="40" pref="40" max="40" attributes="0"/>
-                      <Component id="jTextFieldEmailPersonal" min="-2" pref="289" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="157" pref="157" max="157" attributes="0"/>
-                      <Component id="jLabelTelefonoPersonal" min="-2" pref="70" max="-2" attributes="0"/>
-                      <EmptySpace min="123" pref="123" max="123" attributes="0"/>
-                      <Component id="jLabelLugarNacimientoPersonal" min="-2" pref="140" max="-2" attributes="0"/>
-                      <EmptySpace min="239" pref="239" max="239" attributes="0"/>
-                      <Component id="jLabelContraseniaPersonal" min="-2" pref="100" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="157" pref="157" max="157" attributes="0"/>
-                      <Component id="jTextFieldTelefonoPersonal" min="-2" pref="130" max="-2" attributes="0"/>
-                      <EmptySpace min="63" pref="63" max="63" attributes="0"/>
-                      <Component id="jTextFieldLugarNacimientoPersonal" min="-2" pref="300" max="-2" attributes="0"/>
-                      <EmptySpace min="79" pref="79" max="79" attributes="0"/>
-                      <Component id="jTextFieldContraseniaPersonal" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="157" pref="157" max="157" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabelFechaNacimientoPersonal" min="-2" pref="140" max="-2" attributes="0"/>
-                          <Component id="dateChooserCombo2" min="-2" max="-2" attributes="0"/>
-                      </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
-                              <Component id="jButtonGuardar" min="-2" pref="130" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                              <EmptySpace min="256" pref="256" max="256" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel8" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                                  <Component id="jRadioButtonMedico" min="-2" pref="110" max="-2" attributes="0"/>
-                                  <Component id="jRadioButtonFarmaceutico" min="-2" pref="130" max="-2" attributes="0"/>
-                                  <Component id="jRadioButtonRadiologo" min="-2" pref="120" max="-2" attributes="0"/>
-                                  <Component id="jRadioButtonAnalista" min="-2" pref="100" max="-2" attributes="0"/>
+                                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="1" pref="1" max="1" attributes="0"/>
+                                      <Component id="jLabelGestionarPaciente4" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
-                      </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                              <EmptySpace min="157" pref="157" max="157" attributes="0"/>
+                              <Component id="jLabelNombrePersonal" min="-2" pref="80" max="-2" attributes="0"/>
+                              <EmptySpace min="170" pref="170" max="170" attributes="0"/>
+                              <Component id="jLabelApellidosPersonal" min="-2" pref="80" max="-2" attributes="0"/>
+                              <EmptySpace min="270" pref="270" max="270" attributes="0"/>
+                              <Component id="jLabelDNIPersonal" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="157" pref="157" max="157" attributes="0"/>
+                              <Component id="jTextFieldNombrePersonal" min="-2" pref="210" max="-2" attributes="0"/>
+                              <EmptySpace min="40" pref="40" max="40" attributes="0"/>
+                              <Component id="jTextFieldApellidosPersonal" min="-2" pref="290" max="-2" attributes="0"/>
+                              <EmptySpace min="60" pref="60" max="60" attributes="0"/>
+                              <Component id="jTextFieldDNIPersonal" min="-2" pref="95" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="157" pref="157" max="157" attributes="0"/>
+                              <Component id="jLabelDireccionPersonal" min="-2" pref="80" max="-2" attributes="0"/>
+                              <EmptySpace min="330" pref="330" max="330" attributes="0"/>
+                              <Component id="jLabelEmailPersonal" min="-2" pref="80" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="157" pref="157" max="157" attributes="0"/>
+                              <Component id="jTextFieldDireccionPersonal" min="-2" pref="370" max="-2" attributes="0"/>
+                              <EmptySpace min="40" pref="40" max="40" attributes="0"/>
+                              <Component id="jTextFieldEmailPersonal" min="-2" pref="289" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="157" pref="157" max="157" attributes="0"/>
+                              <Component id="jLabelTelefonoPersonal" min="-2" pref="70" max="-2" attributes="0"/>
+                              <EmptySpace min="123" pref="123" max="123" attributes="0"/>
+                              <Component id="jLabelLugarNacimientoPersonal" min="-2" pref="140" max="-2" attributes="0"/>
+                              <EmptySpace min="239" pref="239" max="239" attributes="0"/>
+                              <Component id="jLabelContraseniaPersonal" min="-2" pref="100" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="jButtonFotoPersonal" min="-2" pref="120" max="-2" attributes="0"/>
-                                      <EmptySpace min="10" pref="10" max="10" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabelFechaNacimientoPersonal" min="-2" pref="140" max="-2" attributes="0"/>
+                                          <Component id="dateChooserCombo2" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
+                                              <Component id="jButtonGuardar" min="-2" pref="130" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jLabel8" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                                                  <Component id="jRadioButtonMedico" min="-2" pref="110" max="-2" attributes="0"/>
+                                                  <Component id="jRadioButtonFarmaceutico" min="-2" pref="130" max="-2" attributes="0"/>
+                                                  <Component id="jRadioButtonRadiologo" min="-2" pref="120" max="-2" attributes="0"/>
+                                                  <Component id="jRadioButtonAnalista" min="-2" pref="100" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="jLabelFotoPersonal" min="-2" pref="150" max="-2" attributes="0"/>
+                                          <Component id="jLabelFotografiaersonal" min="-2" pref="100" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabelFotografiaersonal" min="-2" pref="100" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldTelefonoPersonal" min="-2" pref="130" max="-2" attributes="0"/>
+                                      <EmptySpace min="63" pref="63" max="63" attributes="0"/>
+                                      <Component id="jTextFieldLugarNacimientoPersonal" min="-2" pref="300" max="-2" attributes="0"/>
+                                      <EmptySpace min="79" pref="79" max="79" attributes="0"/>
+                                      <Component id="jTextFieldContraseniaPersonal" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                              <Component id="jLabelInfoFotoPersonal" min="-2" max="-2" attributes="0"/>
-                          </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Component id="jLabelFotoPersonal" min="-2" pref="150" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -567,10 +559,6 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="dateChooserCombo2" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="13" pref="13" max="13" attributes="0"/>
-                              <Component id="jLabelFotoPersonal" min="-2" pref="150" max="-2" attributes="0"/>
-                          </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="13" pref="13" max="13" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -596,15 +584,15 @@
                                       <Component id="jButtonGuardar" min="-2" pref="39" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                                       <Component id="jLabelFotografiaersonal" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jButtonFotoPersonal" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jLabelInfoFotoPersonal" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jLabelFotoPersonal" min="-2" pref="150" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                       </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -732,23 +720,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonGuardarActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButtonFotoPersonal">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="A&#xf1;adir foto"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonFotoPersonalMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonFotoPersonalActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabelInfoFotoPersonal">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Lucida Grande" size="10" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Tama&#xf1;o m&#xe1;x. 150x150 p&#xed;xeles"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel8">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Tipo personal"/>
@@ -852,7 +823,7 @@
                               <Component id="jLabelAlamcenarResultados" min="-2" pref="162" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="167" max="32767" attributes="0"/>
+                      <EmptySpace pref="172" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -861,8 +832,8 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButtonConsultarDatosPersonales" max="32767" attributes="1"/>
-                          <Component id="jButtonConsultarTurno" max="32767" attributes="1"/>
+                          <Component id="jButtonConsultarDatosPersonales" pref="148" max="32767" attributes="1"/>
+                          <Component id="jButtonConsultarTurno" pref="148" max="32767" attributes="1"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -998,11 +969,11 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="273" max="-2" attributes="0"/>
                       <Component id="jLabelGestionarPaciente6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="193" max="32767" attributes="0"/>
+                      <EmptySpace pref="214" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="0" pref="60" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="40" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="120" pref="120" max="120" attributes="0"/>
@@ -1064,7 +1035,7 @@
                                   <Component id="jRadioButtonNoche" min="-2" pref="150" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="0" pref="61" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="40" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -1074,11 +1045,11 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                       <Component id="jLabelGestionarPaciente6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="409" max="32767" attributes="0"/>
+                      <EmptySpace pref="404" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="50" pref="113" max="32767" attributes="0"/>
+                          <EmptySpace min="50" pref="121" max="32767" attributes="0"/>
                           <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="24" pref="24" max="24" attributes="0"/>
                           <Component id="jScrollPane4" min="-2" pref="120" max="-2" attributes="0"/>
@@ -1128,7 +1099,7 @@
                               <Component id="jButtonMenosAnioFechaFinTurno" min="-2" pref="40" max="-2" attributes="0"/>
                               <Component id="jRadioButtonNoche" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="64" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="73" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -1488,7 +1459,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="scrollPaneComentarios" pref="92" max="32767" attributes="0"/>
+                              <Component id="scrollPaneComentarios" pref="115" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jButtonAlmacenarResultadoRadiologo" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
@@ -1733,7 +1704,7 @@
                               <Component id="jLabelError2" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="27" max="32767" attributes="0"/>
+                      <EmptySpace pref="58" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
