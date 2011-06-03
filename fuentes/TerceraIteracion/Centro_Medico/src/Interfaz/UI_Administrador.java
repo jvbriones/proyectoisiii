@@ -2229,11 +2229,19 @@ public class UI_Administrador extends javax.swing.JFrame {
         
         /**Comprobamos que no se teclee un número*/
         char teclaPresionada = evt.getKeyChar();
-        if(Character.isDigit(teclaPresionada) == false)
-            evt.consume();
+        if(jTextFieldTelefonoPaciente.getText().length() < 9)
+            if(Character.isDigit(teclaPresionada) == false)
+                evt.consume();
 
-        /**Limitamos la longitud*/
-        if(jTextFieldTelefonoPaciente.getText().length() > 20)
+        if(jTextFieldTelefonoPaciente.getText().length() == 9){
+            if(Character.isDigit(teclaPresionada) == true){
+                evt.consume();
+            }else{
+                evt.consume();
+            }
+        }
+
+        if(jTextFieldTelefonoPaciente.getText().length() > 9)
             evt.consume();
     }//GEN-LAST:event_jTextFieldTelefonoPacienteKeyTyped
 
@@ -2268,19 +2276,11 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         /**Limitamos a que el DNI siempre sea correcto sintácticamente*/
         char teclaPresionada = evt.getKeyChar();
-
-        if(jTextFieldDNIPaciente.getText().length() < 8)
+        if(jTextFieldTelefonoPaciente.getText().length() < 9)
             if(Character.isDigit(teclaPresionada) == false)
                 evt.consume();
 
-        if(jTextFieldDNIPaciente.getText().length() == 8)
-            if(Character.isDigit(teclaPresionada) == true){
-                evt.consume();
-                }else if(Character.isLowerCase(teclaPresionada)){
-                    jTextFieldDNIPaciente.setText(jTextFieldDNIPaciente.getText().toUpperCase());
-                }
-
-        if(jTextFieldDNIPaciente.getText().length() > 8)
+        if(jTextFieldTelefonoPaciente.getText().length() >= 9)
             evt.consume();
             
     }//GEN-LAST:event_jTextFieldDNIPacienteKeyTyped
@@ -2356,11 +2356,11 @@ public class UI_Administrador extends javax.swing.JFrame {
 
         /**Comprobamos que no se teclee una letra*/
         char teclaPresionada = evt.getKeyChar();
-        if(Character.isDigit(teclaPresionada) == false)
-            evt.consume();
+        if(jTextFieldTelefonoPersonal.getText().length() < 9)
+            if(Character.isDigit(teclaPresionada) == false)
+                evt.consume();
 
-        /**Limitamos la longitud*/
-        if(jTextFieldTelefonoPersonal.getText().length() > 20)
+        if(jTextFieldTelefonoPersonal.getText().length() >= 9)
             evt.consume();
     }//GEN-LAST:event_jTextFieldTelefonoPersonalKeyTyped
 

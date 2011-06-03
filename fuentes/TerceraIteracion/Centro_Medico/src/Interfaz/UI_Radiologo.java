@@ -1144,15 +1144,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
             if(Character.isDigit(teclaPresionada) == false)
                 evt.consume();
 
-        if(jTextFieldTelefonoPersonal.getText().length() == 9){
-            if(Character.isDigit(teclaPresionada) == true){
-                evt.consume();
-            }else{
-                evt.consume();
-            }
-        }
-
-        if(jTextFieldTelefonoPersonal.getText().length() > 9)
+        if(jTextFieldTelefonoPersonal.getText().length() >= 9)
             evt.consume();
     }//GEN-LAST:event_jTextFieldTelefonoPersonalKeyTyped
 
