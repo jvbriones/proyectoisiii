@@ -2422,31 +2422,33 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void jButtonConsultarRecetasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarRecetasMouseClicked
         // TODO add your handling code here:
 
-        mostrarPanel("VerRecetas");
-        String dni = user.getDNI();
-
-        //Vaciar el panel
-        String elemento, tabula = "                                     ";
+    //Vaciar el panel
+        String elemento, espacio = "             ";
         DefaultListModel modelo = new DefaultListModel();
         modelo.addElement("");//Inicializando la lista vacia
-//        jList2.setModel(modelo);
+
+        jList3.setModel(modelo);
+     
 
         try{            
-            Set<Receta> set_receta = gstpac.obtenerRecetas(dni);
+            ArrayList<Receta> set_receta = gstpac.obtenerRecetas(user.getDNI());
             if(!set_receta.isEmpty()){
                 Receta recet;
 
-                for(Iterator<Receta> it = set_receta.iterator(); it.hasNext();){
-                    recet = it.next();
-                    elemento = "    " + recet.getFecha().toString() + tabula + recet.getMedi().getNombre() + " " + recet.getMedi().getApellidos();
-                    modelo.addElement(elemento);
-                }
-            }else{
-                JOptionPane.showMessageDialog(null, "¡No tiene recetas disponibles!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
+                    for ( Iterator it = set_receta.iterator(); it.hasNext();){
+                        recet = (Receta)it.next();
+                        String total="";
+                        total=recet.getFecha()+espacio+recet.getMedi()+espacio+recet.getId();
+                          modelo.addElement(total);
+                    }
+                    
+                      jList3.setModel(modelo);
             }
+            mostrarPanel("VerRecetas");
         }catch(SQLException ex){
             System.err.println(ex.getStackTrace());
         }
+        
 
     }//GEN-LAST:event_jButtonConsultarRecetasMouseClicked
 
