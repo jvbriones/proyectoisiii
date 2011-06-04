@@ -3365,6 +3365,7 @@ MedicamentoBD meBD = new MedicamentoBD();
             jLabelInicio.setVisible(false);
             jLabelIconoInicio.setVisible(false);
             jLabelDNIPac.setForeground(Color.black);
+            
             /**Hacemos visible el panel seleccionado*/
             jLabelErrorDatos.setVisible(false);
             jPanelConsultarDatosPersonales.setVisible(false);
@@ -3386,9 +3387,10 @@ MedicamentoBD meBD = new MedicamentoBD();
             jPanelModEnfer.setVisible(false);
             jPanelAddEnfer.setVisible(false);
             jPanelConsInfHisPaciente.setVisible(false);
-            jPanelHistorialPac.setVisible(false);
+            jPanelHistorialPac.setVisible(false)
+            jPanelAccessPaciente.setVisible(false);
             
-
+            
             /** Pintamos en negro todos los campos para evitar errores anteriores */
             jLabelDNIPac.setForeground(Color.black);
             
@@ -3405,7 +3407,7 @@ MedicamentoBD meBD = new MedicamentoBD();
             jPanelAddEnfer.setBorder(null);
             jPanelConsInfHisPaciente.setBorder(null);
             jPanelHistorialPac.setBorder(null);
-
+            jPanelAccessPaciente.setBorder(null);
         }
 
         if(panel.equals("GestionarPersonal")){
