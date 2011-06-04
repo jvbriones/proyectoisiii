@@ -245,22 +245,6 @@ public class UI_Paciente extends javax.swing.JFrame {
         jLabelFecha2 = new javax.swing.JLabel();
         jTextFieldDNIMedico = new javax.swing.JTextField();
         jTextFieldDNIPacienteCita = new javax.swing.JTextField();
-        jPanelGestionarCitaOnline1 = new javax.swing.JPanel();
-        jLabelGestionarPaciente6 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jTextAreaInfo2 = new javax.swing.JTextArea();
-        jPanelAltaCita1 = new javax.swing.JPanel();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jButtonAceptarCita1 = new javax.swing.JButton();
-        jPanelBotones1 = new javax.swing.JPanel();
-        jButtonConsultarCita2 = new javax.swing.JButton();
-        jButtonPedirAltaCita1 = new javax.swing.JButton();
         jPanelGestionarPaciente = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         jLabelGestionarPaciente4 = new javax.swing.JLabel();
@@ -387,7 +371,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jLabelCentroMedico.setText("Centro Médico");
         getContentPane().add(jLabelCentroMedico);
-        jLabelCentroMedico.setBounds(177, 68, 110, 18);
+        jLabelCentroMedico.setBounds(177, 68, 110, 14);
 
         jLabelIconoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Inicio-Desactivado.png"))); // NOI18N
         jLabelIconoInicio.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -406,7 +390,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jLabelInicio.setText("Inicio");
         getContentPane().add(jLabelInicio);
-        jLabelInicio.setBounds(420, 120, 44, 18);
+        jLabelInicio.setBounds(420, 120, 44, 14);
 
         jLabelIconoAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Ayuda-Desactivado.png"))); // NOI18N
         jLabelIconoAyuda.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -440,11 +424,11 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jLabelAyuda.setText("Ayuda");
         getContentPane().add(jLabelAyuda);
-        jLabelAyuda.setBounds(500, 120, 44, 18);
+        jLabelAyuda.setBounds(500, 120, 44, 14);
 
         jLabelSalir.setText("Salir");
         getContentPane().add(jLabelSalir);
-        jLabelSalir.setBounds(590, 120, 40, 18);
+        jLabelSalir.setBounds(590, 120, 40, 14);
 
         jLabelIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Intro/Logo-Centro-Medico.png"))); // NOI18N
         getContentPane().add(jLabelIcono);
@@ -549,7 +533,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             .add(jPanelPrincipalLayout.createSequentialGroup()
                 .add(87, 87, 87)
                 .add(jLabel11)
-                .addContainerGap(729, Short.MAX_VALUE))
+                .addContainerGap(755, Short.MAX_VALUE))
             .add(jPanelPrincipalLayout.createSequentialGroup()
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelPrincipalLayout.createSequentialGroup()
@@ -565,7 +549,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                     .add(jPanelPrincipalLayout.createSequentialGroup()
                         .add(40, 40, 40)
                         .add(jLabelGestionarCita1)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 192, Short.MAX_VALUE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 249, Short.MAX_VALUE)
                         .add(jLabel9)
                         .add(87, 87, 87))
                     .add(jPanelPrincipalLayout.createSequentialGroup()
@@ -582,7 +566,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
                                     .add(jButtonConsultarRecetas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                     .add(jButtonGestionarCitass, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap(15, Short.MAX_VALUE))
                             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelPrincipalLayout.createSequentialGroup()
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                                 .add(jLabel45)
@@ -593,7 +577,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             .add(jPanelPrincipalLayout.createSequentialGroup()
                 .add(28, 28, 28)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jButtonConsultarRecetas, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                    .add(jButtonConsultarRecetas, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .add(jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .add(18, 18, 18)
@@ -686,7 +670,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                         .add(jPanelConsultarHistorialLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(jScrollPane10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 201, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(jLabel26))))
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
         jPanelConsultarHistorialLayout.setVerticalGroup(
             jPanelConsultarHistorialLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -701,7 +685,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                     .add(jLabel23))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jScrollPane10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 199, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 35, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 33, Short.MAX_VALUE)
                 .add(jPanelConsultarHistorialLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jButtonConsReceta)
                     .add(jButtonConsPrueba))
@@ -757,7 +741,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jPanelVerPruebasLayout.setHorizontalGroup(
             jPanelVerPruebasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelVerPruebasLayout.createSequentialGroup()
-                .addContainerGap(329, Short.MAX_VALUE)
+                .addContainerGap(325, Short.MAX_VALUE)
                 .add(jLabel19)
                 .add(294, 294, 294))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelVerPruebasLayout.createSequentialGroup()
@@ -767,7 +751,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(jButton1)
                 .add(270, 270, 270))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelVerPruebasLayout.createSequentialGroup()
-                .addContainerGap(385, Short.MAX_VALUE)
+                .addContainerGap(388, Short.MAX_VALUE)
                 .add(jLabel20)
                 .add(353, 353, 353))
             .add(jPanelVerPruebasLayout.createSequentialGroup()
@@ -784,7 +768,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                         .add(332, 332, 332))
                     .add(jPanelVerPruebasLayout.createSequentialGroup()
                         .add(jSeparator2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(551, Short.MAX_VALUE))))
+                        .addContainerGap(555, Short.MAX_VALUE))))
         );
         jPanelVerPruebasLayout.setVerticalGroup(
             jPanelVerPruebasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -863,7 +847,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(jPanelAltaCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelAltaCitaLayout.createSequentialGroup()
                         .add(jPanelAltaCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jScrollPane3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 516, Short.MAX_VALUE)
+                            .add(jScrollPane3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 520, Short.MAX_VALUE)
                             .add(jPanelAltaCitaLayout.createSequentialGroup()
                                 .add(jLabel1)
                                 .add(81, 81, 81)
@@ -931,7 +915,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jPanelGestionarCitaOnline.add(jPanelBotones, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 580, 60));
 
-        jPanelGestionarCitaOnline.setBounds(0, 0, 901, 531);
+        jPanelGestionarCitaOnline.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelGestionarCitaOnline, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelConsultarCitaOnline.setMinimumSize(new java.awt.Dimension(901, 510));
@@ -1174,81 +1158,8 @@ public class UI_Paciente extends javax.swing.JFrame {
         });
         jPanelConsultarCitaOnline.add(jTextFieldDNIPacienteCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 90, -1));
 
-        jPanelConsultarCitaOnline.setBounds(0, 0, 901, 531);
+        jPanelConsultarCitaOnline.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelConsultarCitaOnline, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        jPanelGestionarCitaOnline1.setMinimumSize(new java.awt.Dimension(901, 510));
-        jPanelGestionarCitaOnline1.setPreferredSize(new java.awt.Dimension(901, 531));
-        jPanelGestionarCitaOnline1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabelGestionarPaciente6.setFont(new java.awt.Font("Lucida Grande", 1, 48));
-        jLabelGestionarPaciente6.setText("Gestionar Cita Online");
-        jPanelGestionarCitaOnline1.add(jLabelGestionarPaciente6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, -1, -1));
-
-        jLabel8.setText("_____________________________________________________________________________");
-        jPanelGestionarCitaOnline1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, -1, -1));
-
-        jTextAreaInfo2.setBackground(new java.awt.Color(255, 204, 102));
-        jTextAreaInfo2.setColumns(17);
-        jTextAreaInfo2.setEditable(false);
-        jTextAreaInfo2.setFont(new java.awt.Font("Lucida Grande", 0, 18));
-        jTextAreaInfo2.setRows(3);
-        jTextAreaInfo2.setText("Tiene 2 opciones para realizar con la cita online: \nPara solicitar una cita, pulsar \"Alta\". \nPara consultar una cita, pulsar \"Consultar\".");
-        jScrollPane4.setViewportView(jTextAreaInfo2);
-
-        jPanelGestionarCitaOnline1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 780, 90));
-
-        jList2.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane5.setViewportView(jList2);
-
-        jPanelAltaCita1.add(jScrollPane5);
-
-        jLabel3.setText("Fecha");
-        jPanelAltaCita1.add(jLabel3);
-
-        jLabel10.setText("Hora");
-        jPanelAltaCita1.add(jLabel10);
-
-        jLabel13.setText("DNI Médico");
-        jPanelAltaCita1.add(jLabel13);
-
-        jLabel14.setText("DNI Paciente");
-        jPanelAltaCita1.add(jLabel14);
-
-        jButtonAceptarCita1.setText("Aceptar");
-        jButtonAceptarCita1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonAceptarCitaMouseClicked(evt);
-            }
-        });
-        jPanelAltaCita1.add(jButtonAceptarCita1);
-
-        jPanelGestionarCitaOnline1.add(jPanelAltaCita1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, 540, 200));
-
-        jButtonConsultarCita2.setText("Consultar");
-        jButtonConsultarCita2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonConsultarCita1MouseClicked(evt);
-            }
-        });
-        jPanelBotones1.add(jButtonConsultarCita2);
-
-        jButtonPedirAltaCita1.setText("Alta");
-        jButtonPedirAltaCita1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButtonPedirAltaCitaMouseClicked(evt);
-            }
-        });
-        jPanelBotones1.add(jButtonPedirAltaCita1);
-
-        jPanelGestionarCitaOnline1.add(jPanelBotones1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 580, 60));
-
-        jPanelGestionarCitaOnline1.setBounds(0, 0, 901, 531);
-        ZonaTrabajo.add(jPanelGestionarCitaOnline1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarPaciente.setPreferredSize(new java.awt.Dimension(901, 531));
 
@@ -1341,7 +1252,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jPanelGestionarPacienteLayout.setHorizontalGroup(
             jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelGestionarPacienteLayout.createSequentialGroup()
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(21, Short.MAX_VALUE)
                 .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelGestionarPacienteLayout.createSequentialGroup()
                         .add(10, 10, 10)
@@ -1520,7 +1431,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                     .add(jPanelVerRecetasLayout.createSequentialGroup()
                         .add(391, 391, 391)
                         .add(jLabelListaRecetas)))
-                .addContainerGap(261, Short.MAX_VALUE))
+                .addContainerGap(291, Short.MAX_VALUE))
         );
         jPanelVerRecetasLayout.setVerticalGroup(
             jPanelVerRecetasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1537,7 +1448,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(jScrollPane6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 174, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(38, 38, 38)
                 .add(jButtonConsultarReceta)
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addContainerGap(99, Short.MAX_VALUE))
         );
 
         jPanelVerRecetas.setBounds(1, 0, 900, 530);
@@ -1675,10 +1586,10 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelConsultarRecetaLayout.createSequentialGroup()
                         .add(jScrollPane8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 58, Short.MAX_VALUE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 74, Short.MAX_VALUE)
                         .add(jLabel46))
-                    .add(jTextFieldFechaReceta, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
-                    .add(jScrollPane7, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE))
+                    .add(jTextFieldFechaReceta, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+                    .add(jScrollPane7, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE))
                 .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelConsultarRecetaLayout.createSequentialGroup()
                         .add(33, 33, 33)
@@ -1820,14 +1731,14 @@ public class UI_Paciente extends javax.swing.JFrame {
                             .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .add(jLabel36))
                         .add(org.jdesktop.layout.GroupLayout.LEADING, jScrollPane13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 191, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(360, Short.MAX_VALUE))
+                .addContainerGap(362, Short.MAX_VALUE))
         );
         jPanelVerCitaLayout.setVerticalGroup(
             jPanelVerCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanelVerCitaLayout.createSequentialGroup()
                 .add(69, 69, 69)
                 .add(jSeparator5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(455, Short.MAX_VALUE))
+                .addContainerGap(459, Short.MAX_VALUE))
             .add(jPanelVerCitaLayout.createSequentialGroup()
                 .add(53, 53, 53)
                 .add(jLabel35)
@@ -1931,17 +1842,17 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jLabelUsuario.setText("Usuario:");
         jPanelUsuario.add(jLabelUsuario);
-        jLabelUsuario.setBounds(80, 10, 80, 18);
+        jLabelUsuario.setBounds(80, 10, 80, 14);
 
         jLabelTipoUsuario.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelTipoUsuario.setText("Tipo Usuario");
         jPanelUsuario.add(jLabelTipoUsuario);
-        jLabelTipoUsuario.setBounds(90, 40, 120, 17);
+        jLabelTipoUsuario.setBounds(90, 40, 120, 18);
 
         jLabelNombreUsuario.setFont(new java.awt.Font("Lucida Grande", 1, 13));
         jLabelNombreUsuario.setText("Nombre");
         jPanelUsuario.add(jLabelNombreUsuario);
-        jLabelNombreUsuario.setBounds(90, 60, 120, 17);
+        jLabelNombreUsuario.setBounds(90, 60, 120, 18);
         jPanelUsuario.add(jLabelTipoUsuarioIdentificado);
         jLabelTipoUsuarioIdentificado.setBounds(10, 10, 70, 70);
 
@@ -2247,7 +2158,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void jButtonPedirAltaCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonPedirAltaCitaMouseClicked
         // TODO add your handling code here:
-        GestorCitas gtcts = new GestorCitas();
+         GestorCitas gtcts = new GestorCitas();
         /*try{
             if(gtcts.ObtenerCita(user.getDNI()) != null){
                 JOptionPane.showMessageDialog(null, "Ya tiene una cita asignada", "Alta cita",JOptionPane.WARNING_MESSAGE);
@@ -2258,6 +2169,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         }catch(SQLException ex){
             System.err.println(ex.getMessage());
         }*/
+
     }//GEN-LAST:event_jButtonPedirAltaCitaMouseClicked
 
     private void jTextFieldTelefonoPacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldTelefonoPacienteKeyTyped
@@ -2399,8 +2311,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void jButtonConsultarCita1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarCita1MouseClicked
         // TODO add your handling code here:
-
-/*        try{
+        /*        try{
             GestorCitas gtcts = new GestorCitas();
             Cita ct = gtcts.ObtenerCita(user.getDNI());
 
@@ -2462,7 +2373,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void jButtonConsultarRecetaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarRecetaMouseClicked
         // TODO add your handling code here:
-        int receta_id = jList2.getSelectedIndex();
+        /*int receta_id = jList2.getSelectedIndex();
         if(receta_id > 0){
             try{
                 Receta receta = gstpac.seleccionarReceta(receta_id);
@@ -2495,7 +2406,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             }
         }else{
             JOptionPane.showMessageDialog(null, "No seleccionó ninguna receta", "Selección receta",JOptionPane.INFORMATION_MESSAGE);
-        }
+        }*/
 
     }//GEN-LAST:event_jButtonConsultarRecetaMouseClicked
 
@@ -2518,7 +2429,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         String elemento, tabula = "                                     ";
         DefaultListModel modelo = new DefaultListModel();
         modelo.addElement("");//Inicializando la lista vacia
-        jList2.setModel(modelo);
+//        jList2.setModel(modelo);
 
         try{            
             Set<Receta> set_receta = gstpac.obtenerRecetas(dni);
@@ -3275,13 +3186,11 @@ public class UI_Paciente extends javax.swing.JFrame {
     private datechooser.beans.DateChooserCombo dateChooserCombo2;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonAceptarCita;
-    private javax.swing.JButton jButtonAceptarCita1;
     private javax.swing.JButton jButtonCancelar;
     private javax.swing.JButton jButtonConsCita;
     private javax.swing.JButton jButtonConsPrueba;
     private javax.swing.JButton jButtonConsReceta;
     private javax.swing.JButton jButtonConsultarCita1;
-    private javax.swing.JButton jButtonConsultarCita2;
     private javax.swing.JButton jButtonConsultarPruebas;
     private javax.swing.JButton jButtonConsultarReceta;
     private javax.swing.JButton jButtonConsultarRecetas;
@@ -3302,16 +3211,12 @@ public class UI_Paciente extends javax.swing.JFrame {
     private javax.swing.JButton jButtonModificarCitaOnline;
     private javax.swing.JButton jButtonModificarPaciente;
     private javax.swing.JButton jButtonPedirAltaCita;
-    private javax.swing.JButton jButtonPedirAltaCita1;
     private javax.swing.JButton jButtonVerPrueba;
     private javax.swing.JButton jButtonVolver;
     private javax.swing.JButton jButtonVolverReceta;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel18FechaReceta;
@@ -3327,7 +3232,6 @@ public class UI_Paciente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
@@ -3354,7 +3258,6 @@ public class UI_Paciente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelApellidosPaciente;
     private javax.swing.JLabel jLabelAyuda;
@@ -3377,7 +3280,6 @@ public class UI_Paciente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelGestionarPaciente3;
     private javax.swing.JLabel jLabelGestionarPaciente4;
     private javax.swing.JLabel jLabelGestionarPaciente5;
-    private javax.swing.JLabel jLabelGestionarPaciente6;
     private javax.swing.JLabel jLabelGestionarPaciente7;
     private javax.swing.JLabel jLabelHoraCita;
     private javax.swing.JLabel jLabelIcono;
@@ -3401,7 +3303,6 @@ public class UI_Paciente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelTipoUsuarioIdentificado;
     private javax.swing.JLabel jLabelUsuario;
     private javax.swing.JList jList1;
-    private javax.swing.JList jList2;
     private javax.swing.JList jList3;
     private javax.swing.JList jList4;
     private javax.swing.JList jList5;
@@ -3410,15 +3311,12 @@ public class UI_Paciente extends javax.swing.JFrame {
     private javax.swing.JList jList8;
     private javax.swing.JList jList9;
     private javax.swing.JPanel jPanelAltaCita;
-    private javax.swing.JPanel jPanelAltaCita1;
     private javax.swing.JPanel jPanelBotones;
-    private javax.swing.JPanel jPanelBotones1;
     private javax.swing.JPanel jPanelConsultarCitaOnline;
     private javax.swing.JPanel jPanelConsultarHistorial;
     private javax.swing.JPanel jPanelConsultarReceta;
     private javax.swing.JPanel jPanelDetalleCita;
     private javax.swing.JPanel jPanelGestionarCitaOnline;
-    private javax.swing.JPanel jPanelGestionarCitaOnline1;
     private javax.swing.JPanel jPanelGestionarPaciente;
     private javax.swing.JPanel jPanelPrincipal;
     private javax.swing.JPanel jPanelPruebaAnalista;
@@ -3443,8 +3341,6 @@ public class UI_Paciente extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane21;
     private javax.swing.JScrollPane jScrollPane22;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
@@ -3456,7 +3352,6 @@ public class UI_Paciente extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JTextArea jTextAreaInfo;
     private javax.swing.JTextArea jTextAreaInfo1;
-    private javax.swing.JTextArea jTextAreaInfo2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
