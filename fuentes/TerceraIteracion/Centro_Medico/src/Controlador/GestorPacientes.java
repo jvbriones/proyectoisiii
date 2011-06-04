@@ -21,6 +21,8 @@ import CentroMedico.Paciente;
 import CentroMedico.PruebaAnalisis;
 import CentroMedico.PruebaRadiologia;
 import CentroMedico.Receta;
+import Interfaz.InformacionError;
+import Interfaz.InformacionExito;
 import java.sql.SQLException;
 import java.util.*;
 
@@ -99,9 +101,9 @@ public class GestorPacientes {
        boolean existe=PacBD.existePaciente(DNIPaciente);
        String mensaje="";
        if (!existe) {
-            mensaje="No existe el Paciente con ese DNI";
             System.out.println(mensaje);
             enf=null;
+          new InformacionError().setVisible(true);
        }
        else{
        

@@ -546,7 +546,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             .add(jPanelPrincipalLayout.createSequentialGroup()
                 .add(87, 87, 87)
                 .add(jLabel11)
-                .addContainerGap(756, Short.MAX_VALUE))
+                .addContainerGap(755, Short.MAX_VALUE))
             .add(jPanelPrincipalLayout.createSequentialGroup()
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelPrincipalLayout.createSequentialGroup()
@@ -579,7 +579,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
                                     .add(jButtonConsultarRecetas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                     .add(jButtonGestionarCitass, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(16, Short.MAX_VALUE))
+                                .addContainerGap(15, Short.MAX_VALUE))
                             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelPrincipalLayout.createSequentialGroup()
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                                 .add(jLabel45)
@@ -738,7 +738,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jPanelGestionarCitaOnline.add(jPanelBotones, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 580, 60));
 
-        jPanelGestionarCitaOnline.setBounds(0, 0, -1, -1);
+        jPanelGestionarCitaOnline.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelGestionarCitaOnline, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelConsultarCitaOnline.setMinimumSize(new java.awt.Dimension(901, 510));
@@ -981,7 +981,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         });
         jPanelConsultarCitaOnline.add(jTextFieldDNIPacienteCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 90, -1));
 
-        jPanelConsultarCitaOnline.setBounds(0, 0, -1, -1);
+        jPanelConsultarCitaOnline.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelConsultarCitaOnline, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarCitaOnline1.setMinimumSize(new java.awt.Dimension(901, 510));
@@ -1054,7 +1054,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jPanelGestionarCitaOnline1.add(jPanelBotones1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 580, 60));
 
-        jPanelGestionarCitaOnline1.setBounds(0, 0, -1, -1);
+        jPanelGestionarCitaOnline1.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelGestionarCitaOnline1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarPaciente.setPreferredSize(new java.awt.Dimension(901, 531));
@@ -1284,7 +1284,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jLabelGestionarPaciente7.setFont(new java.awt.Font("Lucida Grande", 1, 48));
         jLabelGestionarPaciente7.setText("Ver Recetas");
 
-        jLabelListaRecetas.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabelListaRecetas.setFont(new java.awt.Font("Tahoma", 0, 18));
         jLabelListaRecetas.setText("Lista Recetas");
 
         jLabelMedico.setText("Medico");
@@ -1352,7 +1352,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jPanelConsultarReceta.setPreferredSize(new java.awt.Dimension(901, 531));
 
-        jLabelInformacionDetalladaReceta.setFont(new java.awt.Font("Lucida Grande", 1, 48)); // NOI18N
+        jLabelInformacionDetalladaReceta.setFont(new java.awt.Font("Lucida Grande", 1, 48));
         jLabelInformacionDetalladaReceta.setText("Información detallada de la receta");
 
         jLabelInstruccionReceta.setText("Instrucciones");
@@ -1466,7 +1466,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                     .add(jPanelConsultarRecetaLayout.createSequentialGroup()
                         .add(20, 20, 20)
                         .add(jLabelInformacionDetalladaReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 839, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelConsultarRecetaLayout.setVerticalGroup(
             jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1482,10 +1482,10 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelConsultarRecetaLayout.createSequentialGroup()
                         .add(jScrollPane8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 75, Short.MAX_VALUE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 74, Short.MAX_VALUE)
                         .add(jLabel46))
-                    .add(jTextFieldFechaReceta, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
-                    .add(jScrollPane7, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE))
+                    .add(jTextFieldFechaReceta, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+                    .add(jScrollPane7, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE))
                 .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelConsultarRecetaLayout.createSequentialGroup()
                         .add(33, 33, 33)
@@ -1521,10 +1521,10 @@ public class UI_Paciente extends javax.swing.JFrame {
         jLabel20.setFont(new java.awt.Font("Ubuntu", 0, 22));
         jLabel20.setText("Lista de pruebas");
 
-        jLabel21.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
+        jLabel21.setFont(new java.awt.Font("Ubuntu", 0, 12));
         jLabel21.setText("Tipo Prueba");
 
-        jLabel22.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
+        jLabel22.setFont(new java.awt.Font("Ubuntu", 0, 12));
         jLabel22.setText("id Prueba");
 
         jList4.setModel(new javax.swing.AbstractListModel() {
@@ -1604,19 +1604,24 @@ public class UI_Paciente extends javax.swing.JFrame {
         jPanelConsultarHistorial.setMinimumSize(new java.awt.Dimension(900, 530));
         jPanelConsultarHistorial.setPreferredSize(new java.awt.Dimension(900, 530));
 
-        jLabel23.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
+        jLabel23.setFont(new java.awt.Font("Ubuntu", 0, 12));
         jLabel23.setText("Fecha detección");
 
         jLabel24.setFont(new java.awt.Font("Ubuntu", 1, 48));
         jLabel24.setText("Consultar Información Clínica");
 
-        jLabel25.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
+        jLabel25.setFont(new java.awt.Font("Ubuntu", 0, 12));
         jLabel25.setText("Nombre");
 
         jLabel26.setFont(new java.awt.Font("Ubuntu", 0, 22));
         jLabel26.setText("Lista de enfermedades");
 
         jButtonConsPrueba.setText("Consultar Prueba");
+        jButtonConsPrueba.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonConsPruebaMouseClicked(evt);
+            }
+        });
         jButtonConsPrueba.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonConsPruebaActionPerformed(evt);
@@ -1656,7 +1661,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                         .add(jPanelConsultarHistorialLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(jScrollPane10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 201, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(jLabel26))))
-                .addContainerGap(288, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
         jPanelConsultarHistorialLayout.setVerticalGroup(
             jPanelConsultarHistorialLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -2546,6 +2551,37 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void jButtonGestionarHistorialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGestionarHistorialMouseClicked
         // TODO add your handling code here:
+        
+            ArrayList<Enfermedad> enf;
+        try {
+            enf = gstpac.consultarInfoClinicaPaciente(user.getDNI());
+        
+        
+          if (enf!=null){
+              DefaultListModel modeloEnfermedades = new DefaultListModel();
+              String espacio = "            ";
+              Enfermedad enfermedad= null;
+              
+              for ( Iterator it = enf.iterator(); it.hasNext();){
+                enfermedad = (Enfermedad)it.next();
+                String total="";
+                total=enfermedad.getNombre()+espacio+enfermedad.getFechaDet();
+                  modeloEnfermedades.addElement(total);
+                  
+                  
+              }
+          
+           
+              jList5.setModel(modeloEnfermedades);
+             mostrarPanel("ConsHistorial");
+          }
+        } catch (SQLException ex) {
+            Logger.getLogger(UI_Medico.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        
+        
         mostrarPanel("ConsultarHistorial");
     }//GEN-LAST:event_jButtonGestionarHistorialMouseClicked
 
@@ -2657,6 +2693,56 @@ public class UI_Paciente extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "No seleccionó ninguna cita", "Selección cita",JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_jButtonConsCitaMouseClicked
+
+    private void jButtonConsPruebaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsPruebaMouseClicked
+        try {
+            // TODO add your handling code here:
+            
+            
+            
+            ArrayList  <ArrayList<String>> pruebas=gstpac.obtenerPruebas(user.getDNI());
+            boolean analisis=true;
+            PruebaAnalisis pa;
+            PruebaRadiologia pr;
+            ArrayList finales =null;
+            DefaultListModel modeloPruebas = new DefaultListModel();
+            if(pruebas!=null){
+                System.out.println("Pruebas no es nulo y contiene tantos arrays como: ");
+                System.out.println(pruebas.size());
+            }
+            for(Iterator it = pruebas.iterator(); it.hasNext();){
+                finales=(ArrayList)it.next();
+                if(finales!=null){
+                    System.out.println("Finales no es nulo");
+                    System.out.println(finales.size());
+                }
+                for(Iterator itPrueba= finales.iterator(); itPrueba.hasNext();){
+                    if(analisis){
+                    System.out.println("Estamos en pruebas de analisis");
+                    pa=(PruebaAnalisis)itPrueba.next();
+                    //System.out.println("Identificacion de la prueba: "+pa.getId());
+                    modeloPruebas.addElement("Analisis                              "+String.valueOf(pa.getId()));
+                }
+                    else{
+                        System.out.println("Estamos en pruebas de Radiologia");
+                        pr=(PruebaRadiologia)itPrueba.next();
+                      //  System.out.println("Identificacion de la prueba: "+pr.getId());
+                        modeloPruebas.addElement("Radiologia                              "+String.valueOf(pr.getId()));
+                    }
+               
+               
+            }
+                 analisis=false;
+   }   
+        } 
+     
+        catch (SQLException ex) {
+            Logger.getLogger(UI_Paciente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
+        mostrarPanel("VerPruebas");
+        
+    }//GEN-LAST:event_jButtonConsPruebaMouseClicked
 
 
     /*Comprueba que la fecha introducida es correcta

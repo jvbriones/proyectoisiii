@@ -3185,13 +3185,16 @@ MedicamentoBD meBD = new MedicamentoBD();
         }//GEN-LAST:event_jButtonModEnfermedMouseClicked
 
         private void jButtonBusquedaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonBusquedaMouseClicked
-        try {
+   
             // TODO add your handling code here:
         
             
-            ArrayList<Enfermedad> enf=gestorpacientes.consultarInfoClinicaPaciente(jTextPane1.getText());
+            ArrayList<Enfermedad> enf;
+        try {
+            enf = gestorpacientes.consultarInfoClinicaPaciente(jTextPane1.getText());
         
-          
+        
+          if (enf!=null){
              jTextPane2.setText(jTextPane1.getText());
               DefaultListModel modeloEnfermedades = new DefaultListModel();
               String espacio = "                                   ";
@@ -3209,10 +3212,11 @@ MedicamentoBD meBD = new MedicamentoBD();
            
               jList1.setModel(modeloEnfermedades);
              mostrarPanel("ConsHistorial");
-
-             } catch (SQLException ex) {
+          }
+        } catch (SQLException ex) {
             Logger.getLogger(UI_Medico.class.getName()).log(Level.SEVERE, null, ex);
         }
+            
         }//GEN-LAST:event_jButtonBusquedaMouseClicked
 
         private void jButtonConsPrueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsPrueMouseClicked
