@@ -25,6 +25,7 @@ import Interfaz.InformacionError;
 import Interfaz.InformacionExito;
 import java.sql.SQLException;
 import java.util.*;
+import javax.swing.DefaultListModel;
 
 
 /**
@@ -125,9 +126,10 @@ public class GestorPacientes {
            
        }
    
-   public Set<Receta> obtenerRecetas(String dni) throws SQLException{
-       Set<Receta> recetas = null;
+   public ArrayList<Receta> obtenerRecetas(String dni) throws SQLException{
+       ArrayList<Receta> recetas = null;
        RecetaBD receta = new RecetaBD();
+  
        
         recetas = receta.obtenerRecetas(dni);
      
