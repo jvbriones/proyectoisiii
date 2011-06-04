@@ -214,13 +214,13 @@ public class GestorFarmacia {
 
     }
 
-    public Set<Receta> consultarResumenRecetas(String Dni) throws SQLException{
+    public ArrayList<Receta> consultarResumenRecetas(String Dni) throws SQLException{
         ArrayList resumenRecetas = new ArrayList();
         GestorPacientes pacien = new GestorPacientes();
         Paciente pac = new Paciente();
         RecetaBD recetas = new RecetaBD();
         Receta rec = null;
-        Set<Receta> almacenRecetas = null;
+        ArrayList<Receta> almacenRecetas = null;
         boolean fin = false;
         Medico doc = null;
 
