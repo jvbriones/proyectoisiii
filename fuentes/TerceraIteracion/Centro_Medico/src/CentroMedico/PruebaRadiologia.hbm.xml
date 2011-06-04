@@ -7,8 +7,8 @@
     </id>
     <property name="Comentario"/>
     <property name="Acceso"/>
-    <many-to-one name="Paciente" class="CentroMedico.Paciente" column="DNI_PACIENTE" cascade="all" lazy="false"/>
-    <many-to-one name="Radiologo" class="CentroMedico.Radiologo" column="DNI_RADIOLOGO" cascade="all" lazy="false"/>
+    <many-to-one name="Paciente" class="CentroMedico.Paciente" column="DNI_PACIENTE" cascade="all"  unique="true"/>
+    <many-to-one name="Radiologo" class="CentroMedico.Radiologo" column="DNI_RADIOLOGO" cascade="all"  unique="true"/>
     <joined-subclass name="CentroMedico.Resonancia">
       <key column="ID_RESONANCIA"/>
       <set cascade="all" name="Resonancias">

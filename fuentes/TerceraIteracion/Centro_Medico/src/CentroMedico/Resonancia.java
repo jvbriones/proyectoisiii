@@ -20,7 +20,7 @@ public class Resonancia extends PruebaRadiologia{
     public Resonancia() {
     }
 
-    public Resonancia(String Comentario, Paciente Pac, Radiologo Rad) {
+    public Resonancia(String Comentario, Paciente Pac, PersonalMedico Rad) {
         super(Comentario, Pac, Rad);
     }
 

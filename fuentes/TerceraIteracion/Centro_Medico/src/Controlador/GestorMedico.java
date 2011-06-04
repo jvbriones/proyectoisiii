@@ -5,21 +5,9 @@
 
 package Controlador;
 
-import BaseDatos.CitaBD;
-import BaseDatos.EnfermedadBD;
-import BaseDatos.PacienteBD;
-import BaseDatos.PruebaAnalisisBD;
-import BaseDatos.PruebaRadiologiaBD;
-import BaseDatos.RecetaBD;
-import CentroMedico.Cita;
-import CentroMedico.Enfermedad;
-import CentroMedico.Medicamento;
-import CentroMedico.MedicamentoRecetado;
-import CentroMedico.Paciente;
-import CentroMedico.PersonalMedico;
-import CentroMedico.PruebaAnalisis;
-import CentroMedico.PruebaRadiologia;
-import CentroMedico.Receta;
+import BaseDatos.*;
+
+import CentroMedico.*;
 import java.lang.String;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -59,9 +47,19 @@ public class GestorMedico {
      *
      */
 
-    public boolean realizarReceta(String Instrucciones, String JuicioDiagnostico,Set<Medicamento> medica, String Posologia, int Duracion, Date FechaFin){
+    public boolean realizarReceta(String Instrucciones, String JuicioDiagnostico,Set<Medicamento> medica, String Posologia, int Duracion, Date FechaFin, String paci, String medi) throws SQLException{
         Date fecha = new Date();
-        re = new Receta(Instrucciones,JuicioDiagnostico, fecha);
+        PacienteBD pac = new PacienteBD();
+        Paciente pacien;
+        MedicoBD medBD = new MedicoBD();
+        PersonalMedicoBD pm = new PersonalMedicoBD();
+        Medico medic;
+        pacien = pac.obtener(paci);
+       // medic = medBD.obtener(medi);
+        PersonalMedico m;
+        m = pm.obtener(medi);
+       // medic = (Medico)us.obtener(medi);
+        re = new Receta(Instrucciones,JuicioDiagnostico, fecha, pacien, m);
 
         ArrayList medicamentos;
         Set<MedicamentoRecetado> medRec;
@@ -69,7 +67,7 @@ public class GestorMedico {
         Medicamento med = null;
         boolean exito;
         RecetaBD rBD = new RecetaBD();
-        MedicamentoRecetado me;
+        MedicamentoRecetado me=null;
 
 
 
@@ -78,8 +76,9 @@ public class GestorMedico {
 	    med = (Medicamento)it.next();
             System.out.println(med.getNombre());
             me = this.recetarMedicamento(med, Posologia, Duracion, FechaFin);
+            System.out.println("+1");
         }
-        
+
         rBD.almacenar(re);
 
 
@@ -87,8 +86,10 @@ public class GestorMedico {
 
     }
 
-    public MedicamentoRecetado recetarMedicamento(Medicamento medica, String Posologia, int Duracion, Date FechaFin){
-        MedicamentoRecetado me = new MedicamentoRecetado(medica, Posologia, Duracion, FechaFin, true);
+   public MedicamentoRecetado recetarMedicamento(Medicamento medica, String Posologia, int Duracion, Date FechaFin){
+        MedicamentoRecetado me = new MedicamentoRecetado(medica, Posologia, Duracion, FechaFin, false);
+        System.out.println("Medicamento recetado: "+me.getMedicamento().getNombre());
+        boolean fin;
         re.getMedicamentosRecetados().add(me);
 
         return me;

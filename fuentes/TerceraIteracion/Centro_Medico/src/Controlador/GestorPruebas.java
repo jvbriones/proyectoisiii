@@ -122,9 +122,9 @@ public class GestorPruebas {
 
     public boolean almacenarResultadosAnalisis(String DniPaciente, ArrayList<String> listaAtributos, ArrayList<String> listaResultados, String Comentario, String TipoAnalisis, String DniAnalista) throws SQLException{
 
-        Paciente paciente = null;
+       Paciente paciente = null;
         GestorPacientes gP = new GestorPacientes();
-        
+
         AtributoSangre atributoS = null;
         AtributoOrina atributoO = null;
         AtributoOrinaBD atribOBD = new AtributoOrinaBD();
@@ -136,6 +136,9 @@ public class GestorPruebas {
         PruebaSangreBD pSBD = new PruebaSangreBD();
         PruebaOrinaBD pOBD = new PruebaOrinaBD();
 
+         PersonalMedicoBD pm_BD=new PersonalMedicoBD();
+         PersonalMedico pm=null;
+
         paciente = gP.obtenerPaciente(DniPaciente);
 
         if(paciente == null){
@@ -143,11 +146,11 @@ public class GestorPruebas {
             return false;
         }
 
-        analista = aBD.obtener(DniAnalista);
+        pm = pm_BD.obtener(DniAnalista);
 
         if(TipoAnalisis.equals("sangre")){
 
-            PruebaSangre pruebaS = new PruebaSangre(Comentario,paciente, analista);
+            PruebaSangre pruebaS = new PruebaSangre(Comentario,paciente, pm);
 
             Iterator itRes = listaResultados.iterator();
             for( Iterator it = listaAtributos.iterator(); it.hasNext();) {
@@ -164,7 +167,7 @@ public class GestorPruebas {
         }
 
         if(TipoAnalisis.equals("orina")){
-            PruebaOrina pruebaO = new PruebaOrina(Comentario, paciente, analista);
+            PruebaOrina pruebaO = new PruebaOrina(Comentario, paciente, pm);
 
             Iterator itRes = listaResultados.iterator();
             for( Iterator it = listaAtributos.iterator(); it.hasNext();) {
@@ -182,20 +185,22 @@ public class GestorPruebas {
 
         return true;
     }
-   
+
+
     public boolean almacenarResultadoRadiologia(String DNIPaciente, ArrayList<Imagen> imag, String Comentario, String TipoPrueba, String DNIRadiologo) throws SQLException{
 
-        //No concuerda el diagrama de secuencia con el de clases
         PacienteBD pBD = new PacienteBD();
         RadiologoBD radiologoBD = new RadiologoBD();
+        PersonalMedicoBD pm_BD=new PersonalMedicoBD();
+        PersonalMedico pm=null;
 
         Paciente paciente = null;
         Radiologo radiologo = null;
         Imagen aux;
-        System.out.println(TipoPrueba);
+        //System.out.println(TipoPrueba);
 
         paciente = pBD.obtener(DNIPaciente);
-        radiologo = radiologoBD.obtener(DNIRadiologo);
+        pm = pm_BD.obtener(DNIRadiologo);
         if(paciente == null){
             System.out.println("No existe el paciente con ese DNI");
             return false;
@@ -203,7 +208,7 @@ public class GestorPruebas {
 
         if(TipoPrueba == "Radiografia"){
 
-            Radiografia prueba = new Radiografia(Comentario, paciente, radiologo);
+            Radiografia prueba = new Radiografia(Comentario, paciente, pm);
             RadiografiaBD rBD = new RadiografiaBD();
 
 
@@ -216,8 +221,8 @@ public class GestorPruebas {
 
         }
 
-        if(TipoPrueba.equals("Resonancia")){
-            Resonancia prueba = new Resonancia(Comentario,paciente, radiologo);
+        if(TipoPrueba == "Resonancia"){
+            Resonancia prueba = new Resonancia(Comentario,paciente, pm);
             ResonanciaBD rBD = new ResonanciaBD();
 
             for( Iterator it = imag.iterator(); it.hasNext();) {
@@ -229,6 +234,9 @@ public class GestorPruebas {
 
         }
         return true;
+
+
+     
 
 
      }

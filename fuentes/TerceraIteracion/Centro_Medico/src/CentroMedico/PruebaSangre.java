@@ -20,7 +20,7 @@ public class PruebaSangre extends PruebaAnalisis{
     public PruebaSangre() {
     }
 
-    public PruebaSangre(String com, Paciente pac, Analista an){
+    public PruebaSangre(String com, Paciente pac, PersonalMedico an){
         super(com, pac, an);
     }
 

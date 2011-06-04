@@ -16,6 +16,7 @@ import java.util.Date;
 import java.util.Set;
 import java.util.HashSet;
 import java.io.Serializable;
+import java.sql.SQLException;
 
 public class Receta implements Serializable{
     private int Id;
@@ -23,9 +24,9 @@ public class Receta implements Serializable{
     private String JuicioDiagnostico;
     private Date Fecha;
 
-    private Medico Medi;
+    private PersonalMedico Medi;
     private Paciente Paci;
-    private Set <MedicamentoRecetado> MedicamentosRecetados = null;//new HashSet<MedicamentoRecetado>(0);
+    private Set <MedicamentoRecetado> MedicamentosRecetados = new HashSet<MedicamentoRecetado>(0);
 
     public Receta() {
     }
@@ -34,12 +35,18 @@ public class Receta implements Serializable{
         this.Instrucciones = Instrucciones;
     }
 
-    public Receta(String Ins, String JD, Date F){
-        
+     public Receta(String Ins, String JD, Date F, Paciente pa, PersonalMedico pm ) throws SQLException{
+
         this.JuicioDiagnostico = JD;
         this.Instrucciones = Ins;
         this.Fecha = F;
+        this.Paci = pa;
+        this.Medi = pm;
+        //medi = medBD.obtener(me);
+
+
     }
+
 
     public Date getFecha() {
         return Fecha;
@@ -57,7 +64,7 @@ public class Receta implements Serializable{
         return JuicioDiagnostico;
     }
 
-    public Medico getMedi() {
+    public PersonalMedico getMedi() {
         return Medi;
     }
 
@@ -66,8 +73,7 @@ public class Receta implements Serializable{
     }
 
     public Set<MedicamentoRecetado > getMedicamentosRecetados() {
-        if(MedicamentosRecetados.isEmpty())
-            return null;
+     
         return MedicamentosRecetados;
         
     }

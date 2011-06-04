@@ -38,6 +38,8 @@ import javax.swing.JFileChooser;
  */
 public class UI_Radiologo extends javax.swing.JFrame {
 
+    GestorPruebas gp = new GestorPruebas();
+    GestorPersonal gesPer = new GestorPersonal();
     /** Creates new form Principal_Administrador */
     public UI_Radiologo() {
         initComponents();
@@ -1207,7 +1209,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
     private void jButtonGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarMouseClicked
         // TODO add your handling code here:
          if(compruebaFormulario("GestionarPersonal")){
-            GestorPersonal gesPer = new GestorPersonal();
+           
             Date fechaNacimiento = null;                        //HAY QUE PROCESARLA LEYÉNDOLA DEL FORMULARIOOOO
             //byte[] urlFoto = null;                              //HAY QUE GUARDAR LA FOTO Y PASAR LA RUTA DE DONDE ESTA
             boolean exito;
@@ -1562,7 +1564,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
          System.out.println("dentro almacenar");
        jLabelError.setVisible(false);
        jLabelErrorDNI.setVisible(false);
-       GestorPruebas gp = new GestorPruebas();
+       
 
        String tipo = null;
        boolean dev;
