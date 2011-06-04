@@ -3431,17 +3431,17 @@ MedicamentoBD meBD = new MedicamentoBD();
             jPanelConsultarTurno.setVisible(false);
             jPanelAtenderPaciente.setVisible(false);
             jPanelAtenderPacienteIntermedio.setVisible(false);
-          
             jPanelSolicitarPrueba.setVisible(false);
             jPanelConsultarDatosPersonales.setVisible(true);
             jScrollPane6.setVisible(false);
-            
+
             jPanelInformacionClinic.setVisible(false);
             jPanelConsInformacionClinic.setVisible(false);
             jPanelModEnfer.setVisible(false);
             jPanelAddEnfer.setVisible(false);
             jPanelConsInfHisPaciente.setVisible(false);
             jPanelHistorialPac.setVisible(false);
+            jPanelAccessPaciente.setVisible(false);
 
 
 
@@ -3459,11 +3459,11 @@ MedicamentoBD meBD = new MedicamentoBD();
             jPanelAddEnfer.setBorder(null);
             jPanelConsInfHisPaciente.setBorder(null);
             jPanelHistorialPac.setBorder(null);
+            jPanelAccessPaciente.setBorder(null);
         }
 
 
         if(panel.equals("GestionarTurno")){
-
             /**Limpiamos posibles datos introducidos anteriormente*/
             limpiarFormulario("GestionarTurno");
 
@@ -3486,7 +3486,7 @@ MedicamentoBD meBD = new MedicamentoBD();
             jPanelAddEnfer.setVisible(false);
             jPanelConsInfHisPaciente.setVisible(false);
             jPanelHistorialPac.setVisible(false);
-
+            jPanelAccessPaciente.setVisible(false);
 
 
             /**Activamos el marco*/
@@ -3502,15 +3502,10 @@ MedicamentoBD meBD = new MedicamentoBD();
             jPanelAddEnfer.setBorder(null);
             jPanelConsInfHisPaciente.setBorder(null);
             jPanelHistorialPac.setBorder(null);
-         
-
+            jPanelAccessPaciente.setBorder(null);
         }
 
          if(panel.equals("AtenderPaciente")){
-
-            /**Limpiamos posibles datos introducidos anteriormente*/
-
-
             /**Hacemos visible el botón jLabelIconoInicio*/
             jLabelInicio.setVisible(true);
             jLabelIconoInicio.setVisible(true);
@@ -3530,7 +3525,7 @@ MedicamentoBD meBD = new MedicamentoBD();
             jPanelAddEnfer.setVisible(false);
             jPanelConsInfHisPaciente.setVisible(false);
             jPanelHistorialPac.setVisible(false);
-
+            jPanelAccessPaciente.setVisible(false);
 
 
             /**Activamos el marco*/
@@ -3546,14 +3541,10 @@ MedicamentoBD meBD = new MedicamentoBD();
             jPanelAddEnfer.setBorder(null);
             jPanelConsInfHisPaciente.setBorder(null);
             jPanelHistorialPac.setBorder(null);
-        
+            jPanelAccessPaciente.setBorder(null);
         }
 
          if(panel.equals("AtenderPacienteIntermedio")){
-
-            /**Limpiamos posibles datos introducidos anteriormente*/
-
-
             /**Hacemos visible el botón jLabelIconoInicio*/
             jLabelInicio.setVisible(true);
             jLabelIconoInicio.setVisible(true);
@@ -3563,7 +3554,6 @@ MedicamentoBD meBD = new MedicamentoBD();
             jPanelConsultarDatosPersonales.setVisible(false);
             jPanelConsultarTurno.setVisible(false);
             jPanelSolicitarPrueba.setVisible(false);
-  
             jPanelAtenderPaciente.setVisible(false);
             jPanelAtenderPacienteIntermedio.setVisible(true);
             scrollPane1.setVisible(false);
@@ -3574,7 +3564,7 @@ MedicamentoBD meBD = new MedicamentoBD();
             jPanelAddEnfer.setVisible(false);
             jPanelConsInfHisPaciente.setVisible(false);
             jPanelHistorialPac.setVisible(false);
-
+            jPanelAccessPaciente.setVisible(false);
 
             /**Activamos el marco*/
             jPanelPrincipal.setBorder(null);
@@ -3589,8 +3579,7 @@ MedicamentoBD meBD = new MedicamentoBD();
             jPanelAddEnfer.setBorder(null);
             jPanelConsInfHisPaciente.setBorder(null);
             jPanelHistorialPac.setBorder(null);
-            
-
+            jPanelAccessPaciente.setBorder(null);
         }
 
          if(panel.equals("RealizarReceta")){
