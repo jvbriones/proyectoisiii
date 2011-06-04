@@ -3045,10 +3045,8 @@ public class UI_Administrador extends javax.swing.JFrame {
                 exito = gesPac.altaPaciente(jTextFieldDNIPaciente.getText(), jTextFieldNombrePaciente.getText(), jTextFieldApellidosPaciente.getText(), jTextFieldDireccionPaciente.getText(), jTextFieldEmailPaciente.getText(), jTextFieldTelefonoPaciente.getText(), fechaNacimiento, jTextFieldLugarNacimientoPaciente.getText(), sfotografia, "Paciente");
                 if(!exito){
                     JOptionPane.showMessageDialog(null, "Su operacion se ha realizado con exito", "Alta paciente",JOptionPane.INFORMATION_MESSAGE);
-                    //new InformacionExito().setVisible(true);
                 }else{
                     JOptionPane.showMessageDialog(null, "No se pudo realizar la operacion", "Aviso",JOptionPane.ERROR_MESSAGE);
-                    //new InformacionError().setVisible(true);
                 }
             }catch (SQLException ex) {
                 Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
