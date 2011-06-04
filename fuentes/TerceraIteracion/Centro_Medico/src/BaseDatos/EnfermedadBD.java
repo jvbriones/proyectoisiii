@@ -41,7 +41,7 @@ public class EnfermedadBD{
             session.beginTransaction ();
             try{
                 session.update(enfmd);
-                System.out.println("Cita actualizada correctamente.");
+                System.out.println("Enfermedad actualizada correctamente.");
             }catch(HibernateException ex){
                 System.err.println(ex.getMessage());
             }

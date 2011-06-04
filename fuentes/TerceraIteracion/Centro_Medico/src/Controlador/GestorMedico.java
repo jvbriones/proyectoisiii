@@ -6,6 +6,7 @@
 package Controlador;
 
 import BaseDatos.CitaBD;
+import BaseDatos.EnfermedadBD;
 import BaseDatos.PacienteBD;
 import BaseDatos.PruebaAnalisisBD;
 import BaseDatos.PruebaRadiologiaBD;
@@ -106,16 +107,23 @@ public class GestorMedico {
     }
     public boolean modificarEnfermedad(Enfermedad enfe,Paciente paciente){
 
+        /*
           Set<Enfermedad> enfermedades= paciente.getEnfermedades();
           PacienteBD pac_BD = new PacienteBD();
       for( Iterator it = enfermedades.iterator(); it.hasNext();){
           Enfermedad aux= (Enfermedad)it.next();
           if( aux.getId() == enfe.getId())
+            
                 aux=enfe;
+            enfermedades.add(aux);
+                System.out.println(aux.getNombre() + " y "+enfe.getNombre() );
+                
       }
-
-      pac_BD.actualizar(paciente);
-
+    
+      */
+      //pac_BD.actualizar(paciente);
+        EnfermedadBD enferbd=new EnfermedadBD();
+        enferbd.actualizar(enfe);
       return true; 
         
     }

@@ -66,4 +66,11 @@ public class Paciente extends Usuario {
     public void anadirEnfermedad(Enfermedad enfermedad){
         Enfermedades.add(enfermedad);
     }
+    
+    public void nuevasEnfermedades(Set<Enfermedad> enfermedades){
+        
+        this.Enfermedades.clear();
+        
+        this.Enfermedades=enfermedades;
+    }
 }
