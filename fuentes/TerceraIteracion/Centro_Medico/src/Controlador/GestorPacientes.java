@@ -185,5 +185,35 @@ public class GestorPacientes {
        return receta;
            
        }
+   
+   public ArrayList<ArrayList > obtenerPruebas2(String dni) throws SQLException{
+   
+   
+      PruebaAnalisisBD pabd=new PruebaAnalisisBD();
+        PruebaRadiologiaBD prbd=new PruebaRadiologiaBD();
+        ArrayList<PruebaAnalisis> pan=pabd.obtenerPruebasAnalisis(dni);
+        ArrayList<PruebaRadiologia> pra=prbd.obtenerPruebasRadiologia(dni);
+        ArrayList<ArrayList> pruebas=new ArrayList<ArrayList>();
+        ArrayList pruebasAnalisis=new ArrayList();
+        ArrayList pruebasRadiologia=new ArrayList();
+        PruebaAnalisis pa;
+        PruebaRadiologia pr;
+        int id;
+        for(Iterator itPan=pan.iterator();itPan.hasNext();){
+            pa=(PruebaAnalisis) itPan.next();
+            id=pa.getId();
+            pruebasAnalisis.add(pa);
+        }
+        pruebas.add(pruebasAnalisis);
+         for(Iterator itPra=pra.iterator();itPra.hasNext();){
+            pr=(PruebaRadiologia) itPra.next();
+            id=pr.getId();
+            pruebasRadiologia.add(pr);
+        }
+        pruebas.add(pruebasRadiologia);
+        return pruebas;
+   
+   
+   }
 
 }
