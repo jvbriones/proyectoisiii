@@ -49,15 +49,15 @@ public class RecetaBD {
         session.getTransaction().commit();
     }
 
-    public Set<Receta> obtenerRecetas (String dni){
+    public ArrayList<Receta> obtenerRecetas (String dni){
+        
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction ();
-        List<Receta> result = (List<Receta>)session.createQuery("from Receta").list();
-//        List<Receta> result = (List<Receta>)session.createQuery("from Receta where DNI_PACIENTE='"+dni+"'").list();
-        
-        Set<Receta> recetas = new HashSet<Receta>(result);
+        List<Receta> result = (List<Receta>)session.createQuery("from Receta where DNI_PACIENTE='" + dni + "'").list();
+        ArrayList<Receta> receta = new ArrayList<Receta>(result);
         session.getTransaction().commit();
-        return recetas;
+
+        return receta;
     }
 
 }
