@@ -157,7 +157,7 @@ public class GestorPacientes {
                pruebasAnalisis.add("Analisis");
            }
        }
-       if(!pruebasAnalisis.isEmpty())
+       //if(!pruebasAnalisis.isEmpty())
         Pruebas.add(pruebasAnalisis);
 
        ArrayList<String> pruebasRadiologia = new ArrayList<String>();
@@ -168,11 +168,11 @@ public class GestorPacientes {
            if(pr.isAcceso()){
                int id = pr.getId();
                pruebasRadiologia.add(String.valueOf(id));
-               pruebasRadiologia.add("Radiologia");
+               //pruebasRadiologia.add("Radiologia");
            }
        }
 
-      if(!pruebasRadiologia.isEmpty())
+     // if(!pruebasRadiologia.isEmpty())
         Pruebas.add(pruebasRadiologia);
 
        return Pruebas;

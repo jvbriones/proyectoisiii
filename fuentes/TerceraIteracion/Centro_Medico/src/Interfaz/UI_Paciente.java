@@ -2630,17 +2630,17 @@ public class UI_Paciente extends javax.swing.JFrame {
         try {
             // TODO add your handling code here:
             
-            
-            ArrayList  <ArrayList> pruebas=gstpac.obtenerPruebas2(user.getDNI());
+            String dato=null;
+            ArrayList  <ArrayList<String>> pruebas=gstpac.obtenerPruebas(user.getDNI());
             boolean analisis=true;
             PruebaAnalisis pa;
             PruebaRadiologia pr;
             ArrayList finales =null;
             DefaultListModel modeloPruebas = new DefaultListModel();
-            if(pruebas!=null){
+            if(pruebas.size()!=0){
                 System.out.println("Pruebas no es nulo y contiene tantos arrays como: ");
                 System.out.println(pruebas.size());
-            }
+            
             for(Iterator it = pruebas.iterator(); it.hasNext();){
                 finales=(ArrayList)it.next();
                 if(finales!=null){
@@ -2656,9 +2656,10 @@ public class UI_Paciente extends javax.swing.JFrame {
                 }
                     else{
                         System.out.println("Estamos en pruebas de Radiologia");
-                        pr=(PruebaRadiologia)itPrueba.next();
+                       dato=(String)itPrueba.next();
+                        // pr=(PruebaRadiologia)itPrueba.next();
                       //  System.out.println("Identificacion de la prueba: "+pr.getId());
-                        modeloPruebas.addElement("Radiologia                              "+String.valueOf(pr.getId()));
+                        modeloPruebas.addElement("Radiologia                              "+dato);
                     }
                
                
@@ -2666,6 +2667,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                  analisis=false;
    }     
             jList4.setModel(modeloPruebas);
+        }
         } 
      
         catch (SQLException ex) {
