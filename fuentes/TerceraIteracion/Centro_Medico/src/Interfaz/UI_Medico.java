@@ -3387,7 +3387,7 @@ MedicamentoBD meBD = new MedicamentoBD();
             jPanelModEnfer.setVisible(false);
             jPanelAddEnfer.setVisible(false);
             jPanelConsInfHisPaciente.setVisible(false);
-            jPanelHistorialPac.setVisible(false)
+            jPanelHistorialPac.setVisible(false);
             jPanelAccessPaciente.setVisible(false);
             
             
@@ -3412,16 +3412,18 @@ MedicamentoBD meBD = new MedicamentoBD();
 
         if(panel.equals("GestionarPersonal")){
 
-            /**Hacemos visible el botón jLabelIconoInicio*/
-            jLabelInicio.setVisible(true);
+            /**Hacemos visible el botón jLabelIconoInicio*/           
+              jLabelInicio.setVisible(true);
             jLabelIconoInicio.setVisible(true);
 
             jRadioButtonAnalista.setEnabled(false);
              jRadioButtonRadiologo.setEnabled(false);
              jRadioButtonFarmaceutico.setEnabled(false);
              jRadioButtonMedico.setSelected(true);
+             
+             
             /**Insertamos icono de foto anónima*/
-            //jLabelFotoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
+            jLabelFotoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
 
 
             /**Hacemos visible el panel seleccionado*/
