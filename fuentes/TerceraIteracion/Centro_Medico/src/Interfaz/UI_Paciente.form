@@ -1047,6 +1047,8 @@
                   <AbsoluteConstraints x="170" y="310" width="540" height="200"/>
                 </Constraint>
               </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
               <SubComponents>
                 <Container class="javax.swing.JScrollPane" name="jScrollPane5">
                   <AuxValues>
@@ -1106,6 +1108,8 @@
                   <AbsoluteConstraints x="130" y="210" width="580" height="60"/>
                 </Constraint>
               </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
               <SubComponents>
                 <Component class="javax.swing.JButton" name="jButtonConsultarCita2">
                   <Properties>
@@ -1646,7 +1650,7 @@
                               <Component id="jLabelInformacionDetalladaReceta" min="-2" pref="839" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="145" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1665,11 +1669,11 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <Component id="jScrollPane8" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="75" max="32767" attributes="0"/>
+                              <EmptySpace pref="74" max="32767" attributes="0"/>
                               <Component id="jLabel46" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jTextFieldFechaReceta" pref="111" max="32767" attributes="1"/>
-                          <Component id="jScrollPane7" alignment="0" pref="111" max="32767" attributes="1"/>
+                          <Component id="jTextFieldFechaReceta" pref="110" max="32767" attributes="1"/>
+                          <Component id="jScrollPane7" alignment="0" pref="110" max="32767" attributes="1"/>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
@@ -2012,7 +2016,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="288" max="32767" attributes="0"/>
+                      <EmptySpace pref="52" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2121,6 +2125,8 @@
               <JLayeredPaneConstraints x="1" y="0" width="900" height="530" layer="0" position="-1"/>
             </Constraint>
           </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel27">
               <Properties>
@@ -2199,6 +2205,8 @@
               <JLayeredPaneConstraints x="1" y="0" width="900" height="530" layer="0" position="-1"/>
             </Constraint>
           </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
           <SubComponents>
             <Component class="javax.swing.JSeparator" name="jSeparator4">
             </Component>
@@ -2388,6 +2396,8 @@
               <JLayeredPaneConstraints x="1" y="0" width="900" height="530" layer="0" position="-1"/>
             </Constraint>
           </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel38">
               <Properties>

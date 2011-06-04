@@ -1,4 +1,5 @@
 package BaseDatos;
+
 import CentroMedico.Analista;
 import java.sql.SQLException;
 import org.hibernate.Session;
@@ -11,6 +12,7 @@ import java.util.List;
  *  Clase para el almacenamiento, actualización, borrado, y obtención de objetos de la clase Analista en la base de datos.
  */
 public class AnalistaBD {
+
     public void almacenar(Analista analista){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
@@ -18,7 +20,6 @@ public class AnalistaBD {
         session.save ( analista );
         session.getTransaction().commit();
     }
-
 
     public void actualizar ( Analista analista){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
@@ -59,9 +60,6 @@ public class AnalistaBD {
         else return false;
     }
 
-    /*
-     * existePaciente
-     */
     public boolean existeAnalista(String Dni) throws SQLException {
         Analista analista = obtener(Dni);
 
@@ -74,7 +72,6 @@ public class AnalistaBD {
            return false;
        }
     }
-
 
     public Set<Analista> obtenerListaAnalistas(){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();

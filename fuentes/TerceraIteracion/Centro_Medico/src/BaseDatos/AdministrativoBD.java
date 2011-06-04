@@ -1,7 +1,6 @@
 package BaseDatos;
 import CentroMedico.*;
 import org.hibernate.Session;
-import java.sql.*;
 
 /**
  *  @author Juan Carlos Bermúdez

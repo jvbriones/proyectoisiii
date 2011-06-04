@@ -2486,8 +2486,8 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void jButtonConsultarRecetasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarRecetasMouseClicked
         // TODO add your handling code here:
-        mostrarPanel("ConsultarReceta");
-/*        mostrarPanel("VerRecetas");
+
+        mostrarPanel("VerRecetas");
         String dni = user.getDNI();
 
         //Vaciar el panel
@@ -2511,7 +2511,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             }
         }catch(SQLException ex){
             System.err.println(ex.getStackTrace());
-        }*/
+        }
 
     }//GEN-LAST:event_jButtonConsultarRecetasMouseClicked
 
