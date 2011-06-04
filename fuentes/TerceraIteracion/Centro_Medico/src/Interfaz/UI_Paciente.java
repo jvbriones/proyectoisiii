@@ -224,8 +224,24 @@ public class UI_Paciente extends javax.swing.JFrame {
         jLabelFecha2 = new javax.swing.JLabel();
         jTextFieldDNIMedico = new javax.swing.JTextField();
         jTextFieldDNIPacienteCita = new javax.swing.JTextField();
-        jPanelGestionarPaciente = new javax.swing.JPanel();
+        jPanelGestionarCitaOnline1 = new javax.swing.JPanel();
+        jLabelGestionarPaciente6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextAreaInfo2 = new javax.swing.JTextArea();
+        jPanelAltaCita1 = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList();
         jLabel3 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jButtonAceptarCita1 = new javax.swing.JButton();
+        jPanelBotones1 = new javax.swing.JPanel();
+        jButtonConsultarCita2 = new javax.swing.JButton();
+        jButtonPedirAltaCita1 = new javax.swing.JButton();
+        jPanelGestionarPaciente = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
         jLabelGestionarPaciente4 = new javax.swing.JLabel();
         jTextFieldNombrePaciente = new javax.swing.JTextField();
         jLabelFotoPaciente = new javax.swing.JLabel();
@@ -249,16 +265,16 @@ public class UI_Paciente extends javax.swing.JFrame {
         dateChooserCombo2 = new datechooser.beans.DateChooserCombo();
         jButtonModificarPaciente = new javax.swing.JButton();
         jPanelVerRecetas = new javax.swing.JPanel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList();
-        jLabel8 = new javax.swing.JLabel();
-        jLabelGestionarPaciente6 = new javax.swing.JLabel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jList3 = new javax.swing.JList();
+        jLabel16 = new javax.swing.JLabel();
+        jLabelGestionarPaciente7 = new javax.swing.JLabel();
         jLabelListaRecetas = new javax.swing.JLabel();
         jLabelMedico = new javax.swing.JLabel();
         jLabelFechaReceta = new javax.swing.JLabel();
         jButtonConsultarReceta = new javax.swing.JButton();
         jPanelConsultarReceta = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
         jLabelInformacionDetalladaReceta = new javax.swing.JLabel();
         jLabelInstruccionReceta = new javax.swing.JLabel();
         jButtonVolverReceta = new javax.swing.JButton();
@@ -266,7 +282,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jLabelMedicoReceta = new javax.swing.JLabel();
         jLabelDNIMedicoReceta = new javax.swing.JLabel();
         jLabelNombreMedicoReceta = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
         jLabelEmailMedicoReceta = new javax.swing.JLabel();
         jLabel18FechaReceta = new javax.swing.JLabel();
         jTextFieldDNIMedicoReceta = new javax.swing.JTextField();
@@ -274,88 +290,88 @@ public class UI_Paciente extends javax.swing.JFrame {
         jTextFieldTelefonoMedicoReceta = new javax.swing.JTextField();
         jTextFieldEmailMedicoReceta = new javax.swing.JTextField();
         jTextFieldFechaReceta = new javax.swing.JTextField();
-        jScrollPane5 = new javax.swing.JScrollPane();
+        jScrollPane7 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
-        jScrollPane6 = new javax.swing.JScrollPane();
+        jScrollPane8 = new javax.swing.JScrollPane();
         jTextPane2 = new javax.swing.JTextPane();
         jScrollPane20 = new javax.swing.JScrollPane();
         jList8 = new javax.swing.JList();
         jLabel46 = new javax.swing.JLabel();
         jPanelVerPruebas = new javax.swing.JPanel();
-        jLabel18 = new javax.swing.JLabel();
-        jSeparator2 = new javax.swing.JSeparator();
         jLabel19 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
-        jScrollPane8 = new javax.swing.JScrollPane();
+        jLabel22 = new javax.swing.JLabel();
+        jScrollPane9 = new javax.swing.JScrollPane();
         jList4 = new javax.swing.JList();
         jButtonVerPrueba = new javax.swing.JButton();
         jPanelConsultarHistorial = new javax.swing.JPanel();
-        jLabel13 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        jList3 = new javax.swing.JList();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        jList5 = new javax.swing.JList();
         jButtonConsPrueba = new javax.swing.JButton();
         jButtonConsReceta = new javax.swing.JButton();
         jPanelPruebaRadiologia = new javax.swing.JPanel();
-        jLabel22 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jScrollPane9 = new javax.swing.JScrollPane();
-        jList5 = new javax.swing.JList();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        jList6 = new javax.swing.JList();
         jLabel39 = new javax.swing.JLabel();
         jPanelPruebaAnalista = new javax.swing.JPanel();
         jSeparator4 = new javax.swing.JSeparator();
-        jLabel27 = new javax.swing.JLabel();
-        jScrollPane10 = new javax.swing.JScrollPane();
-        jList6 = new javax.swing.JList();
-        jLabel26 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jScrollPane12 = new javax.swing.JScrollPane();
+        jList7 = new javax.swing.JList();
+        jLabel32 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel40 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
-        jLabel29 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
-        jLabel28 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
         jPanelVerCita = new javax.swing.JPanel();
-        jLabel30 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
         jSeparator5 = new javax.swing.JSeparator();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
-        jScrollPane11 = new javax.swing.JScrollPane();
-        jList7 = new javax.swing.JList();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jScrollPane13 = new javax.swing.JScrollPane();
+        jList9 = new javax.swing.JList();
         jButtonConsCita = new javax.swing.JButton();
         jPanelDetalleCita = new javax.swing.JPanel();
-        jLabel35 = new javax.swing.JLabel();
-        jSeparator6 = new javax.swing.JSeparator();
-        jLabel36 = new javax.swing.JLabel();
-        jScrollPane13 = new javax.swing.JScrollPane();
-        jTextPane3 = new javax.swing.JTextPane();
-        jLabel37 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
+        jSeparator6 = new javax.swing.JSeparator();
         jLabel41 = new javax.swing.JLabel();
         jScrollPane14 = new javax.swing.JScrollPane();
-        jTextPane4 = new javax.swing.JTextPane();
-        jScrollPane15 = new javax.swing.JScrollPane();
-        jTextPane5 = new javax.swing.JTextPane();
-        jScrollPane16 = new javax.swing.JScrollPane();
-        jTextPane6 = new javax.swing.JTextPane();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
+        jTextPane3 = new javax.swing.JTextPane();
         jLabel42 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
-        jScrollPane12 = new javax.swing.JScrollPane();
-        jTextPane7 = new javax.swing.JTextPane();
+        jScrollPane15 = new javax.swing.JScrollPane();
+        jTextPane4 = new javax.swing.JTextPane();
+        jScrollPane16 = new javax.swing.JScrollPane();
+        jTextPane5 = new javax.swing.JTextPane();
         jScrollPane17 = new javax.swing.JScrollPane();
-        jTextPane8 = new javax.swing.JTextPane();
+        jTextPane6 = new javax.swing.JTextPane();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
         jScrollPane18 = new javax.swing.JScrollPane();
-        jTextPane9 = new javax.swing.JTextPane();
+        jTextPane7 = new javax.swing.JTextPane();
         jScrollPane19 = new javax.swing.JScrollPane();
+        jTextPane8 = new javax.swing.JTextPane();
+        jScrollPane21 = new javax.swing.JScrollPane();
+        jTextPane9 = new javax.swing.JTextPane();
+        jScrollPane22 = new javax.swing.JScrollPane();
         jTextPane10 = new javax.swing.JTextPane();
         jPanelUsuario = new javax.swing.JPanel();
         jLabelUsuario = new javax.swing.JLabel();
@@ -578,7 +594,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(28, 28, 28)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jButtonConsultarRecetas, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButtonGestionarCita, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .add(jButtonGestionarPaciente, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .add(18, 18, 18)
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
@@ -725,7 +741,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jPanelGestionarCitaOnline.add(jPanelBotones, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 580, 60));
 
-        jPanelGestionarCitaOnline.setBounds(0, 0, 901, 531);
+        jPanelGestionarCitaOnline.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelGestionarCitaOnline, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelConsultarCitaOnline.setMinimumSize(new java.awt.Dimension(901, 510));
@@ -968,12 +984,85 @@ public class UI_Paciente extends javax.swing.JFrame {
         });
         jPanelConsultarCitaOnline.add(jTextFieldDNIPacienteCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 90, -1));
 
-        jPanelConsultarCitaOnline.setBounds(0, 0, 901, 531);
+        jPanelConsultarCitaOnline.setBounds(0, 0, -1, -1);
         ZonaTrabajo.add(jPanelConsultarCitaOnline, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        jPanelGestionarCitaOnline1.setMinimumSize(new java.awt.Dimension(901, 510));
+        jPanelGestionarCitaOnline1.setPreferredSize(new java.awt.Dimension(901, 531));
+        jPanelGestionarCitaOnline1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelGestionarPaciente6.setFont(new java.awt.Font("Lucida Grande", 1, 48));
+        jLabelGestionarPaciente6.setText("Gestionar Cita Online");
+        jPanelGestionarCitaOnline1.add(jLabelGestionarPaciente6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, -1, -1));
+
+        jLabel8.setText("_____________________________________________________________________________");
+        jPanelGestionarCitaOnline1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, -1, -1));
+
+        jTextAreaInfo2.setBackground(new java.awt.Color(255, 204, 102));
+        jTextAreaInfo2.setColumns(17);
+        jTextAreaInfo2.setEditable(false);
+        jTextAreaInfo2.setFont(new java.awt.Font("Lucida Grande", 0, 18));
+        jTextAreaInfo2.setRows(3);
+        jTextAreaInfo2.setText("Tiene 2 opciones para realizar con la cita online: \nPara solicitar una cita, pulsar \"Alta\". \nPara consultar una cita, pulsar \"Consultar\".");
+        jScrollPane4.setViewportView(jTextAreaInfo2);
+
+        jPanelGestionarCitaOnline1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 780, 90));
+
+        jList2.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane5.setViewportView(jList2);
+
+        jPanelAltaCita1.add(jScrollPane5);
+
+        jLabel3.setText("Fecha");
+        jPanelAltaCita1.add(jLabel3);
+
+        jLabel10.setText("Hora");
+        jPanelAltaCita1.add(jLabel10);
+
+        jLabel13.setText("DNI Médico");
+        jPanelAltaCita1.add(jLabel13);
+
+        jLabel14.setText("DNI Paciente");
+        jPanelAltaCita1.add(jLabel14);
+
+        jButtonAceptarCita1.setText("Aceptar");
+        jButtonAceptarCita1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonAceptarCitaMouseClicked(evt);
+            }
+        });
+        jPanelAltaCita1.add(jButtonAceptarCita1);
+
+        jPanelGestionarCitaOnline1.add(jPanelAltaCita1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, 540, 200));
+
+        jButtonConsultarCita2.setText("Consultar");
+        jButtonConsultarCita2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonConsultarCita1MouseClicked(evt);
+            }
+        });
+        jPanelBotones1.add(jButtonConsultarCita2);
+
+        jButtonPedirAltaCita1.setText("Alta");
+        jButtonPedirAltaCita1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonPedirAltaCitaMouseClicked(evt);
+            }
+        });
+        jPanelBotones1.add(jButtonPedirAltaCita1);
+
+        jPanelGestionarCitaOnline1.add(jPanelBotones1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 580, 60));
+
+        jPanelGestionarCitaOnline1.setBounds(0, 0, -1, -1);
+        ZonaTrabajo.add(jPanelGestionarCitaOnline1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarPaciente.setPreferredSize(new java.awt.Dimension(901, 531));
 
-        jLabel3.setText("______________________________________________________________________________________________");
+        jLabel15.setText("______________________________________________________________________________________________");
 
         jLabelGestionarPaciente4.setFont(new java.awt.Font("Lucida Grande", 1, 48));
         jLabelGestionarPaciente4.setText("Consulta Datos Paciente");
@@ -1101,7 +1190,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                                 .add(jPanelGestionarPacienteLayout.createSequentialGroup()
                                     .add(100, 100, 100)
                                     .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                        .add(jLabel3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 578, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .add(jLabel15, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 578, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                         .add(jLabelGestionarPaciente4))))
                             .add(90, 90, 90))
                         .add(jPanelGestionarPacienteLayout.createSequentialGroup()
@@ -1160,7 +1249,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                             .add(jTextFieldContraseniaPaciente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                     .add(jPanelGestionarPacienteLayout.createSequentialGroup()
                         .add(39, 39, 39)
-                        .add(jLabel3)))
+                        .add(jLabel15)))
                 .add(jPanelGestionarPacienteLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelGestionarPacienteLayout.createSequentialGroup()
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
@@ -1188,23 +1277,30 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jPanelVerRecetas.setPreferredSize(new java.awt.Dimension(901, 531));
 
-        jList2.setModel(new javax.swing.AbstractListModel() {
+        jList3.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Receta 1      Doctor 1", "Receta 2        Doctor 2", "Receta 3        Doctor 3", "Receta 4        Doctor 4", "Receta 5\t\t\t        Doctor 5" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane4.setViewportView(jList2);
+        jScrollPane6.setViewportView(jList3);
 
-        jLabel8.setText("________________________________________");
+        jPanelVerRecetas.add(jScrollPane6);
 
-        jLabelGestionarPaciente6.setFont(new java.awt.Font("Lucida Grande", 1, 48));
-        jLabelGestionarPaciente6.setText("Ver Recetas");
+        jLabel16.setText("________________________________________");
+        jPanelVerRecetas.add(jLabel16);
+
+        jLabelGestionarPaciente7.setFont(new java.awt.Font("Lucida Grande", 1, 48));
+        jLabelGestionarPaciente7.setText("Ver Recetas");
+        jPanelVerRecetas.add(jLabelGestionarPaciente7);
 
         jLabelListaRecetas.setText("Lista Recetas");
+        jPanelVerRecetas.add(jLabelListaRecetas);
 
         jLabelMedico.setText("Medico");
+        jPanelVerRecetas.add(jLabelMedico);
 
         jLabelFechaReceta.setText("Fecha");
+        jPanelVerRecetas.add(jLabelFechaReceta);
 
         jButtonConsultarReceta.setText("Consultar");
         jButtonConsultarReceta.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1217,66 +1313,22 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonConsultarRecetaActionPerformed(evt);
             }
         });
-
-        org.jdesktop.layout.GroupLayout jPanelVerRecetasLayout = new org.jdesktop.layout.GroupLayout(jPanelVerRecetas);
-        jPanelVerRecetas.setLayout(jPanelVerRecetasLayout);
-        jPanelVerRecetasLayout.setHorizontalGroup(
-            jPanelVerRecetasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelVerRecetasLayout.createSequentialGroup()
-                .add(jPanelVerRecetasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanelVerRecetasLayout.createSequentialGroup()
-                        .add(312, 312, 312)
-                        .add(jPanelVerRecetasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jPanelVerRecetasLayout.createSequentialGroup()
-                                .add(jLabelFechaReceta)
-                                .add(187, 187, 187)
-                                .add(jLabelMedico))
-                            .add(jLabelGestionarPaciente6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 294, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jLabel8)))
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelVerRecetasLayout.createSequentialGroup()
-                        .addContainerGap(260, Short.MAX_VALUE)
-                        .add(jScrollPane4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 376, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(264, Short.MAX_VALUE))
-            .add(jPanelVerRecetasLayout.createSequentialGroup()
-                .add(407, 407, 407)
-                .add(jButtonConsultarReceta)
-                .addContainerGap(414, Short.MAX_VALUE))
-            .add(jPanelVerRecetasLayout.createSequentialGroup()
-                .add(402, 402, 402)
-                .add(jLabelListaRecetas)
-                .addContainerGap(434, Short.MAX_VALUE))
-        );
-        jPanelVerRecetasLayout.setVerticalGroup(
-            jPanelVerRecetasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelVerRecetasLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(jPanelVerRecetasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel8)
-                    .add(jLabelGestionarPaciente6))
-                .add(64, 64, 64)
-                .add(jLabelListaRecetas)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jPanelVerRecetasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabelFechaReceta)
-                    .add(jLabelMedico))
-                .add(18, 18, 18)
-                .add(jScrollPane4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 121, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jButtonConsultarReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 45, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(164, Short.MAX_VALUE))
-        );
+        jPanelVerRecetas.add(jButtonConsultarReceta);
 
         jPanelVerRecetas.setBounds(1, 0, 900, 530);
         ZonaTrabajo.add(jPanelVerRecetas, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelConsultarReceta.setPreferredSize(new java.awt.Dimension(901, 531));
 
-        jLabel10.setText("____________________________________________________________________________________________________________________________");
+        jLabel17.setText("____________________________________________________________________________________________________________________________");
+        jPanelConsultarReceta.add(jLabel17);
 
         jLabelInformacionDetalladaReceta.setFont(new java.awt.Font("Lucida Grande", 1, 48));
         jLabelInformacionDetalladaReceta.setText("Información detallada de la receta");
+        jPanelConsultarReceta.add(jLabelInformacionDetalladaReceta);
 
         jLabelInstruccionReceta.setText("Instrucciones");
+        jPanelConsultarReceta.add(jLabelInstruccionReceta);
 
         jButtonVolverReceta.setText("Ver Recetas");
         jButtonVolverReceta.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1284,36 +1336,53 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonVolverRecetaMouseClicked(evt);
             }
         });
+        jPanelConsultarReceta.add(jButtonVolverReceta);
 
         jLabelJuicioReceta.setText("Juicio Diagnóstico");
+        jPanelConsultarReceta.add(jLabelJuicioReceta);
 
         jLabelMedicoReceta.setText("Médico");
+        jPanelConsultarReceta.add(jLabelMedicoReceta);
 
         jLabelDNIMedicoReceta.setText("DNI");
+        jPanelConsultarReceta.add(jLabelDNIMedicoReceta);
 
         jLabelNombreMedicoReceta.setText("Nombre");
+        jPanelConsultarReceta.add(jLabelNombreMedicoReceta);
 
-        jLabel16.setText("Teléfono");
+        jLabel18.setText("Teléfono");
+        jPanelConsultarReceta.add(jLabel18);
 
         jLabelEmailMedicoReceta.setText("Email");
+        jPanelConsultarReceta.add(jLabelEmailMedicoReceta);
 
         jLabel18FechaReceta.setText("Fecha");
+        jPanelConsultarReceta.add(jLabel18FechaReceta);
 
         jTextFieldDNIMedicoReceta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldDNIMedicoRecetaActionPerformed(evt);
             }
         });
+        jPanelConsultarReceta.add(jTextFieldDNIMedicoReceta);
+        jPanelConsultarReceta.add(jTextFieldNombreMedicoReceta);
+        jPanelConsultarReceta.add(jTextFieldTelefonoMedicoReceta);
 
         jTextFieldEmailMedicoReceta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldEmailMedicoRecetaActionPerformed(evt);
             }
         });
+        jPanelConsultarReceta.add(jTextFieldEmailMedicoReceta);
+        jPanelConsultarReceta.add(jTextFieldFechaReceta);
 
-        jScrollPane5.setViewportView(jTextPane1);
+        jScrollPane7.setViewportView(jTextPane1);
 
-        jScrollPane6.setViewportView(jTextPane2);
+        jPanelConsultarReceta.add(jScrollPane7);
+
+        jScrollPane8.setViewportView(jTextPane2);
+
+        jPanelConsultarReceta.add(jScrollPane8);
 
         jList8.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -1322,137 +1391,10 @@ public class UI_Paciente extends javax.swing.JFrame {
         });
         jScrollPane20.setViewportView(jList8);
 
-        jLabel46.setText("Medicamentos recetados");
+        jPanelConsultarReceta.add(jScrollPane20);
 
-        org.jdesktop.layout.GroupLayout jPanelConsultarRecetaLayout = new org.jdesktop.layout.GroupLayout(jPanelConsultarReceta);
-        jPanelConsultarReceta.setLayout(jPanelConsultarRecetaLayout);
-        jPanelConsultarRecetaLayout.setHorizontalGroup(
-            jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                    .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                            .add(org.jdesktop.layout.GroupLayout.LEADING, jLabelInformacionDetalladaReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 781, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(org.jdesktop.layout.GroupLayout.LEADING, jPanelConsultarRecetaLayout.createSequentialGroup()
-                                .add(10, 10, 10)
-                                .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                    .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                                        .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                                            .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                                                .add(jButtonVolverReceta)
-                                                .add(146, 146, 146))
-                                            .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                                                .add(jLabelMedicoReceta)
-                                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                                .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                                    .add(jTextFieldDNIMedicoReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 89, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                                    .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                                                        .add(39, 39, 39)
-                                                        .add(jLabelDNIMedicoReceta)))
-                                                .add(6, 6, 6)
-                                                .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                                                    .add(jTextFieldNombreMedicoReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 189, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                                    .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                                                        .add(68, 68, 68)
-                                                        .add(jLabelNombreMedicoReceta)))
-                                                .add(6, 6, 6)
-                                                .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                                    .add(jTextFieldTelefonoMedicoReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 95, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                                    .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                                                        .add(27, 27, 27)
-                                                        .add(jLabel16)))
-                                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                                .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                                    .add(jTextFieldEmailMedicoReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 147, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                                    .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                                                        .add(56, 56, 56)
-                                                        .add(jLabelEmailMedicoReceta)))
-                                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)))
-                                        .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                            .add(jScrollPane20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 152, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                            .add(jLabel46, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 191, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                                    .add(jLabel10, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                    .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                        .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                                .add(48, 48, 48)
-                                .add(jScrollPane5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 209, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                            .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                                .add(115, 115, 115)
-                                .add(jLabelInstruccionReceta)))
-                        .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                                .add(111, 111, 111)
-                                .add(jLabelJuicioReceta))
-                            .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                                .add(47, 47, 47)
-                                .add(jScrollPane6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 224, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                                .add(92, 92, 92)
-                                .add(jLabel18FechaReceta))
-                            .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                                .add(28, 28, 28)
-                                .add(jTextFieldFechaReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanelConsultarRecetaLayout.setVerticalGroup(
-            jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelConsultarRecetaLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(jLabelInformacionDetalladaReceta)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jLabel10)
-                .add(58, 58, 58)
-                .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(jLabelInstruccionReceta)
-                    .add(jLabelJuicioReceta)
-                    .add(jLabel18FechaReceta))
-                .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                        .add(11, 11, 11)
-                        .add(jTextFieldFechaReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jScrollPane5, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE))
-                    .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jScrollPane6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 67, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                        .add(jLabel46)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(jScrollPane20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 190, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelConsultarRecetaLayout.createSequentialGroup()
-                        .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                            .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                                .add(25, 25, 25)
-                                .add(jLabelMedicoReceta))
-                            .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                                .add(jLabelEmailMedicoReceta)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                                .add(jTextFieldEmailMedicoReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                            .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                                .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                                    .add(jLabelDNIMedicoReceta)
-                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                                    .add(jTextFieldDNIMedicoReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                .add(jPanelConsultarRecetaLayout.createSequentialGroup()
-                                    .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                                        .add(jLabel16)
-                                        .add(jLabelNombreMedicoReceta))
-                                    .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                                    .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                                        .add(jTextFieldNombreMedicoReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                        .add(jTextFieldTelefonoMedicoReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))
-                        .add(55, 55, 55)
-                        .add(jButtonVolverReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 45, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(9, 9, 9)))
-                .add(172, 172, 172))
-        );
+        jLabel46.setText("Medicamentos recetados");
+        jPanelConsultarReceta.add(jLabel46);
 
         jPanelConsultarReceta.setBounds(1, 0, 800, 530);
         ZonaTrabajo.add(jPanelConsultarReceta, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -1460,24 +1402,31 @@ public class UI_Paciente extends javax.swing.JFrame {
         jPanelVerPruebas.setMinimumSize(new java.awt.Dimension(900, 530));
         jPanelVerPruebas.setPreferredSize(new java.awt.Dimension(900, 530));
 
-        jLabel18.setFont(new java.awt.Font("Ubuntu", 1, 48));
-        jLabel18.setText("Consultar Prueba");
+        jLabel19.setFont(new java.awt.Font("Ubuntu", 1, 48));
+        jLabel19.setText("Consultar Prueba");
+        jPanelVerPruebas.add(jLabel19);
+        jPanelVerPruebas.add(jSeparator2);
 
-        jLabel19.setFont(new java.awt.Font("Ubuntu", 0, 22));
-        jLabel19.setText("Lista de pruebas");
-
-        jLabel20.setFont(new java.awt.Font("Ubuntu", 1, 15));
-        jLabel20.setText("Tipo de prueba");
+        jLabel20.setFont(new java.awt.Font("Ubuntu", 0, 22));
+        jLabel20.setText("Lista de pruebas");
+        jPanelVerPruebas.add(jLabel20);
 
         jLabel21.setFont(new java.awt.Font("Ubuntu", 1, 15));
-        jLabel21.setText("id prueba");
+        jLabel21.setText("Tipo de prueba");
+        jPanelVerPruebas.add(jLabel21);
+
+        jLabel22.setFont(new java.awt.Font("Ubuntu", 1, 15));
+        jLabel22.setText("id prueba");
+        jPanelVerPruebas.add(jLabel22);
 
         jList4.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane8.setViewportView(jList4);
+        jScrollPane9.setViewportView(jList4);
+
+        jPanelVerPruebas.add(jScrollPane9);
 
         jButtonVerPrueba.setText("Consultar Prueba");
         jButtonVerPrueba.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1490,54 +1439,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonVerPruebaActionPerformed(evt);
             }
         });
-
-        org.jdesktop.layout.GroupLayout jPanelVerPruebasLayout = new org.jdesktop.layout.GroupLayout(jPanelVerPruebas);
-        jPanelVerPruebas.setLayout(jPanelVerPruebasLayout);
-        jPanelVerPruebasLayout.setHorizontalGroup(
-            jPanelVerPruebasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelVerPruebasLayout.createSequentialGroup()
-                .add(jPanelVerPruebasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanelVerPruebasLayout.createSequentialGroup()
-                        .add(290, 290, 290)
-                        .add(jLabel21)
-                        .add(153, 153, 153)
-                        .add(jLabel20))
-                    .add(jPanelVerPruebasLayout.createSequentialGroup()
-                        .addContainerGap(218, Short.MAX_VALUE)
-                        .add(jPanelVerPruebasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                            .add(jScrollPane8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 376, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jPanelVerPruebasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                                .add(org.jdesktop.layout.GroupLayout.LEADING, jSeparator2)
-                                .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel18, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .add(446, 446, 446))
-            .add(jPanelVerPruebasLayout.createSequentialGroup()
-                .add(353, 353, 353)
-                .add(jLabel19)
-                .addContainerGap(388, Short.MAX_VALUE))
-            .add(jPanelVerPruebasLayout.createSequentialGroup()
-                .add(378, 378, 378)
-                .add(jButtonVerPrueba)
-                .addContainerGap(407, Short.MAX_VALUE))
-        );
-        jPanelVerPruebasLayout.setVerticalGroup(
-            jPanelVerPruebasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelVerPruebasLayout.createSequentialGroup()
-                .add(40, 40, 40)
-                .add(jLabel18)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jSeparator2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(37, 37, 37)
-                .add(jLabel19)
-                .add(18, 18, 18)
-                .add(jPanelVerPruebasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(jLabel21)
-                    .add(jLabel20))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jScrollPane8, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
-                .add(26, 26, 26)
-                .add(jButtonVerPrueba)
-                .add(79, 79, 79))
-        );
+        jPanelVerPruebas.add(jButtonVerPrueba);
 
         jPanelVerPruebas.setBounds(1, 0, 900, 530);
         ZonaTrabajo.add(jPanelVerPruebas, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -1545,24 +1447,31 @@ public class UI_Paciente extends javax.swing.JFrame {
         jPanelConsultarHistorial.setMinimumSize(new java.awt.Dimension(900, 530));
         jPanelConsultarHistorial.setPreferredSize(new java.awt.Dimension(900, 530));
 
-        jLabel13.setFont(new java.awt.Font("Ubuntu", 1, 15));
-        jLabel13.setText("Fecha detección");
+        jLabel23.setFont(new java.awt.Font("Ubuntu", 1, 15));
+        jLabel23.setText("Fecha detección");
+        jPanelConsultarHistorial.add(jLabel23);
+        jPanelConsultarHistorial.add(jSeparator1);
 
-        jLabel14.setFont(new java.awt.Font("Ubuntu", 1, 48));
-        jLabel14.setText("Historial Clínico");
+        jLabel24.setFont(new java.awt.Font("Ubuntu", 1, 48));
+        jLabel24.setText("Historial Clínico");
+        jPanelConsultarHistorial.add(jLabel24);
 
-        jLabel15.setFont(new java.awt.Font("Ubuntu", 1, 15));
-        jLabel15.setText("Nombre");
+        jLabel25.setFont(new java.awt.Font("Ubuntu", 1, 15));
+        jLabel25.setText("Nombre");
+        jPanelConsultarHistorial.add(jLabel25);
 
-        jLabel17.setFont(new java.awt.Font("Ubuntu", 0, 22));
-        jLabel17.setText("Lista de enfermedades");
+        jLabel26.setFont(new java.awt.Font("Ubuntu", 0, 22));
+        jLabel26.setText("Lista de enfermedades");
+        jPanelConsultarHistorial.add(jLabel26);
 
-        jList3.setModel(new javax.swing.AbstractListModel() {
+        jList5.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane7.setViewportView(jList3);
+        jScrollPane10.setViewportView(jList5);
+
+        jPanelConsultarHistorial.add(jScrollPane10);
 
         jButtonConsPrueba.setText("Consultar Prueba");
         jButtonConsPrueba.addActionListener(new java.awt.event.ActionListener() {
@@ -1570,233 +1479,107 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonConsPruebaActionPerformed(evt);
             }
         });
+        jPanelConsultarHistorial.add(jButtonConsPrueba);
 
         jButtonConsReceta.setText("Consultar Receta");
-
-        org.jdesktop.layout.GroupLayout jPanelConsultarHistorialLayout = new org.jdesktop.layout.GroupLayout(jPanelConsultarHistorial);
-        jPanelConsultarHistorial.setLayout(jPanelConsultarHistorialLayout);
-        jPanelConsultarHistorialLayout.setHorizontalGroup(
-            jPanelConsultarHistorialLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelConsultarHistorialLayout.createSequentialGroup()
-                .add(337, 337, 337)
-                .add(jLabel17)
-                .addContainerGap(343, Short.MAX_VALUE))
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelConsultarHistorialLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(jPanelConsultarHistorialLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel14, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jSeparator1)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jPanelConsultarHistorialLayout.createSequentialGroup()
-                        .add(44, 44, 44)
-                        .add(jLabel15)
-                        .add(125, 125, 125)
-                        .add(jLabel13)))
-                .add(275, 275, 275))
-            .add(jPanelConsultarHistorialLayout.createSequentialGroup()
-                .add(jPanelConsultarHistorialLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jPanelConsultarHistorialLayout.createSequentialGroup()
-                        .add(266, 266, 266)
-                        .add(jButtonConsPrueba)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .add(jButtonConsReceta))
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jPanelConsultarHistorialLayout.createSequentialGroup()
-                        .add(257, 257, 257)
-                        .add(jScrollPane7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 383, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(260, Short.MAX_VALUE))
-        );
-        jPanelConsultarHistorialLayout.setVerticalGroup(
-            jPanelConsultarHistorialLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelConsultarHistorialLayout.createSequentialGroup()
-                .add(33, 33, 33)
-                .add(jLabel14)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jSeparator1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(18, 18, 18)
-                .add(jLabel17)
-                .add(39, 39, 39)
-                .add(jPanelConsultarHistorialLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel15)
-                    .add(jLabel13))
-                .add(18, 18, 18)
-                .add(jScrollPane7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 183, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(33, 33, 33)
-                .add(jPanelConsultarHistorialLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jButtonConsPrueba)
-                    .add(jButtonConsReceta))
-                .addContainerGap(56, Short.MAX_VALUE))
-        );
+        jPanelConsultarHistorial.add(jButtonConsReceta);
 
         jPanelConsultarHistorial.setBounds(1, 0, 900, 530);
         ZonaTrabajo.add(jPanelConsultarHistorial, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelPruebaRadiologia.setMinimumSize(new java.awt.Dimension(900, 530));
 
-        jLabel22.setFont(new java.awt.Font("Ubuntu", 0, 22));
-        jLabel22.setText("Lista de pruebas");
+        jLabel27.setFont(new java.awt.Font("Ubuntu", 0, 22));
+        jLabel27.setText("Lista de pruebas");
+        jPanelPruebaRadiologia.add(jLabel27);
+        jPanelPruebaRadiologia.add(jSeparator3);
 
-        jLabel23.setFont(new java.awt.Font("Ubuntu", 1, 48));
-        jLabel23.setText("Consultar Prueba del Radiólogo");
+        jLabel28.setFont(new java.awt.Font("Ubuntu", 1, 48));
+        jLabel28.setText("Consultar Prueba del Radiólogo");
+        jPanelPruebaRadiologia.add(jLabel28);
 
-        jLabel24.setFont(new java.awt.Font("Ubuntu", 1, 15));
-        jLabel24.setText("Tipo de prueba");
+        jLabel29.setFont(new java.awt.Font("Ubuntu", 1, 15));
+        jLabel29.setText("Tipo de prueba");
+        jPanelPruebaRadiologia.add(jLabel29);
 
-        jLabel25.setFont(new java.awt.Font("Ubuntu", 1, 15));
-        jLabel25.setText("Imagen");
-
-        jList5.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane9.setViewportView(jList5);
-
-        jLabel39.setFont(new java.awt.Font("Ubuntu", 1, 15));
-        jLabel39.setText("Analista");
-
-        org.jdesktop.layout.GroupLayout jPanelPruebaRadiologiaLayout = new org.jdesktop.layout.GroupLayout(jPanelPruebaRadiologia);
-        jPanelPruebaRadiologia.setLayout(jPanelPruebaRadiologiaLayout);
-        jPanelPruebaRadiologiaLayout.setHorizontalGroup(
-            jPanelPruebaRadiologiaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelPruebaRadiologiaLayout.createSequentialGroup()
-                .add(97, 97, 97)
-                .add(jPanelPruebaRadiologiaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                    .add(jSeparator3)
-                    .add(jLabel23, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(75, Short.MAX_VALUE))
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelPruebaRadiologiaLayout.createSequentialGroup()
-                .addContainerGap(353, Short.MAX_VALUE)
-                .add(jLabel22)
-                .add(388, 388, 388))
-            .add(jPanelPruebaRadiologiaLayout.createSequentialGroup()
-                .add(238, 238, 238)
-                .add(jLabel24)
-                .add(121, 121, 121)
-                .add(jLabel25)
-                .add(153, 153, 153)
-                .add(jLabel39)
-                .addContainerGap(174, Short.MAX_VALUE))
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelPruebaRadiologiaLayout.createSequentialGroup()
-                .addContainerGap(213, Short.MAX_VALUE)
-                .add(jScrollPane9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 553, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(134, 134, 134))
-        );
-        jPanelPruebaRadiologiaLayout.setVerticalGroup(
-            jPanelPruebaRadiologiaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelPruebaRadiologiaLayout.createSequentialGroup()
-                .add(40, 40, 40)
-                .add(jLabel23)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jSeparator3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 18, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jLabel22)
-                .add(60, 60, 60)
-                .add(jPanelPruebaRadiologiaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel24)
-                    .add(jLabel25)
-                    .add(jLabel39))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jScrollPane9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(148, Short.MAX_VALUE))
-        );
-
-        jPanelPruebaRadiologia.setBounds(1, 0, 900, 530);
-        ZonaTrabajo.add(jPanelPruebaRadiologia, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        jPanelPruebaAnalista.setMinimumSize(new java.awt.Dimension(900, 530));
-        jPanelPruebaAnalista.setPreferredSize(new java.awt.Dimension(949, 530));
-
-        jLabel27.setFont(new java.awt.Font("Ubuntu", 1, 48));
-        jLabel27.setText("Consultar Prueba del Analista");
+        jLabel30.setFont(new java.awt.Font("Ubuntu", 1, 15));
+        jLabel30.setText("Imagen");
+        jPanelPruebaRadiologia.add(jLabel30);
 
         jList6.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane10.setViewportView(jList6);
+        jScrollPane11.setViewportView(jList6);
 
-        jLabel26.setText("Tipo de Prueba");
+        jPanelPruebaRadiologia.add(jScrollPane11);
 
-        jLabel40.setText("Analista");
+        jLabel39.setFont(new java.awt.Font("Ubuntu", 1, 15));
+        jLabel39.setText("Analista");
+        jPanelPruebaRadiologia.add(jLabel39);
 
-        jLabel29.setText("Id Prueba");
+        jPanelPruebaRadiologia.setBounds(1, 0, 900, 530);
+        ZonaTrabajo.add(jPanelPruebaRadiologia, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jLabel28.setText("Imágenes");
+        jPanelPruebaAnalista.setMinimumSize(new java.awt.Dimension(900, 530));
+        jPanelPruebaAnalista.setPreferredSize(new java.awt.Dimension(949, 530));
+        jPanelPruebaAnalista.add(jSeparator4);
 
-        org.jdesktop.layout.GroupLayout jPanelPruebaAnalistaLayout = new org.jdesktop.layout.GroupLayout(jPanelPruebaAnalista);
-        jPanelPruebaAnalista.setLayout(jPanelPruebaAnalistaLayout);
-        jPanelPruebaAnalistaLayout.setHorizontalGroup(
-            jPanelPruebaAnalistaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelPruebaAnalistaLayout.createSequentialGroup()
-                .add(jPanelPruebaAnalistaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanelPruebaAnalistaLayout.createSequentialGroup()
-                        .add(119, 119, 119)
-                        .add(jPanelPruebaAnalistaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                            .add(org.jdesktop.layout.GroupLayout.LEADING, jSeparator4)
-                            .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel27, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .add(jPanelPruebaAnalistaLayout.createSequentialGroup()
-                        .add(262, 262, 262)
-                        .add(jScrollPane10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 367, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanelPruebaAnalistaLayout.createSequentialGroup()
-                        .add(149, 149, 149)
-                        .add(jLabel26)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 100, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(43, 43, 43)
-                        .add(jLabel40)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jPanelPruebaAnalistaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jLabel28)
-                            .add(jPanelPruebaAnalistaLayout.createSequentialGroup()
-                                .add(jTextField2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 119, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .add(45, 45, 45)
-                                .add(jLabel29)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(jTextField3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 38, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(101, Short.MAX_VALUE))
-        );
-        jPanelPruebaAnalistaLayout.setVerticalGroup(
-            jPanelPruebaAnalistaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelPruebaAnalistaLayout.createSequentialGroup()
-                .add(35, 35, 35)
-                .add(jLabel27)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jSeparator4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 35, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(58, 58, 58)
-                .add(jPanelPruebaAnalistaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel26)
-                    .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel40)
-                    .add(jTextField2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel29)
-                    .add(jTextField3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(24, 24, 24)
-                .add(jLabel28)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jScrollPane10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 171, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(94, Short.MAX_VALUE))
-        );
-
-        jPanelPruebaAnalista.setBounds(1, 0, 900, 530);
-        ZonaTrabajo.add(jPanelPruebaAnalista, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        jPanelVerCita.setMinimumSize(new java.awt.Dimension(900, 530));
-
-        jLabel30.setFont(new java.awt.Font("Ubuntu", 1, 48));
-        jLabel30.setText("Ver Citas");
-
-        jLabel31.setFont(new java.awt.Font("Ubuntu", 1, 15));
-        jLabel31.setText("Hora");
-
-        jLabel32.setFont(new java.awt.Font("Ubuntu", 1, 15));
-        jLabel32.setText("Fecha");
+        jLabel31.setFont(new java.awt.Font("Ubuntu", 1, 48));
+        jLabel31.setText("Consultar Prueba del Analista");
+        jPanelPruebaAnalista.add(jLabel31);
 
         jList7.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane11.setViewportView(jList7);
+        jScrollPane12.setViewportView(jList7);
+
+        jPanelPruebaAnalista.add(jScrollPane12);
+
+        jLabel32.setText("Tipo de Prueba");
+        jPanelPruebaAnalista.add(jLabel32);
+        jPanelPruebaAnalista.add(jTextField1);
+
+        jLabel40.setText("Analista");
+        jPanelPruebaAnalista.add(jLabel40);
+        jPanelPruebaAnalista.add(jTextField2);
+
+        jLabel33.setText("Id Prueba");
+        jPanelPruebaAnalista.add(jLabel33);
+        jPanelPruebaAnalista.add(jTextField3);
+
+        jLabel34.setText("Imágenes");
+        jPanelPruebaAnalista.add(jLabel34);
+
+        jPanelPruebaAnalista.setBounds(1, 0, 900, 530);
+        ZonaTrabajo.add(jPanelPruebaAnalista, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        jPanelVerCita.setMinimumSize(new java.awt.Dimension(900, 530));
+
+        jLabel35.setFont(new java.awt.Font("Ubuntu", 1, 48));
+        jLabel35.setText("Ver Citas");
+        jPanelVerCita.add(jLabel35);
+        jPanelVerCita.add(jSeparator5);
+
+        jLabel36.setFont(new java.awt.Font("Ubuntu", 1, 15));
+        jLabel36.setText("Hora");
+        jPanelVerCita.add(jLabel36);
+
+        jLabel37.setFont(new java.awt.Font("Ubuntu", 1, 15));
+        jLabel37.setText("Fecha");
+        jPanelVerCita.add(jLabel37);
+
+        jList9.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane13.setViewportView(jList9);
+
+        jPanelVerCita.add(jScrollPane13);
 
         jButtonConsCita.setText("Consultar");
         jButtonConsCita.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1804,194 +1587,85 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jButtonConsCitaMouseClicked(evt);
             }
         });
-
-        org.jdesktop.layout.GroupLayout jPanelVerCitaLayout = new org.jdesktop.layout.GroupLayout(jPanelVerCita);
-        jPanelVerCita.setLayout(jPanelVerCitaLayout);
-        jPanelVerCitaLayout.setHorizontalGroup(
-            jPanelVerCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelVerCitaLayout.createSequentialGroup()
-                .add(322, 322, 322)
-                .add(jSeparator5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(578, Short.MAX_VALUE))
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelVerCitaLayout.createSequentialGroup()
-                .addContainerGap(330, Short.MAX_VALUE)
-                .add(jPanelVerCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanelVerCitaLayout.createSequentialGroup()
-                        .add(32, 32, 32)
-                        .add(jLabel32)
-                        .add(110, 110, 110)
-                        .add(jLabel31))
-                    .add(jPanelVerCitaLayout.createSequentialGroup()
-                        .add(81, 81, 81)
-                        .add(jButtonConsCita))
-                    .add(jScrollPane11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 267, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(303, 303, 303))
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelVerCitaLayout.createSequentialGroup()
-                .add(353, 353, 353)
-                .add(jLabel30, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(338, 338, 338))
-        );
-        jPanelVerCitaLayout.setVerticalGroup(
-            jPanelVerCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelVerCitaLayout.createSequentialGroup()
-                .add(32, 32, 32)
-                .add(jLabel30)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jSeparator5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(29, 29, 29)
-                .add(jPanelVerCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel32)
-                    .add(jLabel31))
-                .add(18, 18, 18)
-                .add(jScrollPane11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 212, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(18, 18, 18)
-                .add(jButtonConsCita)
-                .add(101, 101, 101))
-        );
+        jPanelVerCita.add(jButtonConsCita);
 
         jPanelVerCita.setBounds(1, 0, 900, 530);
         ZonaTrabajo.add(jPanelVerCita, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelDetalleCita.setMinimumSize(new java.awt.Dimension(900, 530));
 
-        jLabel35.setFont(new java.awt.Font("Ubuntu", 1, 18));
-        jLabel35.setText("Fecha");
-
-        jLabel36.setFont(new java.awt.Font("Ubuntu", 1, 48));
-        jLabel36.setText("Información Detallada de la Cita");
-
-        jScrollPane13.setViewportView(jTextPane3);
-
-        jLabel37.setFont(new java.awt.Font("Ubuntu", 1, 18));
-        jLabel37.setText("Hora");
-
         jLabel38.setFont(new java.awt.Font("Ubuntu", 1, 18));
-        jLabel38.setText("Tipo de Cita");
+        jLabel38.setText("Fecha");
+        jPanelDetalleCita.add(jLabel38);
+        jPanelDetalleCita.add(jSeparator6);
 
-        jLabel41.setFont(new java.awt.Font("Ubuntu", 1, 18));
-        jLabel41.setText("Estado");
+        jLabel41.setFont(new java.awt.Font("Ubuntu", 1, 48));
+        jLabel41.setText("Información Detallada de la Cita");
+        jPanelDetalleCita.add(jLabel41);
 
-        jScrollPane14.setViewportView(jTextPane4);
+        jScrollPane14.setViewportView(jTextPane3);
 
-        jScrollPane15.setViewportView(jTextPane5);
-
-        jScrollPane16.setViewportView(jTextPane6);
-
-        jLabel33.setFont(new java.awt.Font("Ubuntu", 1, 18));
-        jLabel33.setText("Paciente");
-
-        jLabel34.setFont(new java.awt.Font("Ubuntu", 1, 18));
-        jLabel34.setText("DNI");
+        jPanelDetalleCita.add(jScrollPane14);
 
         jLabel42.setFont(new java.awt.Font("Ubuntu", 1, 18));
-        jLabel42.setText("Nombre");
+        jLabel42.setText("Hora");
+        jPanelDetalleCita.add(jLabel42);
 
         jLabel43.setFont(new java.awt.Font("Ubuntu", 1, 18));
-        jLabel43.setText("Email");
+        jLabel43.setText("Tipo de Cita");
+        jPanelDetalleCita.add(jLabel43);
 
         jLabel44.setFont(new java.awt.Font("Ubuntu", 1, 18));
-        jLabel44.setText("Teléfono");
+        jLabel44.setText("Estado");
+        jPanelDetalleCita.add(jLabel44);
 
-        jScrollPane12.setViewportView(jTextPane7);
+        jScrollPane15.setViewportView(jTextPane4);
 
-        jScrollPane17.setViewportView(jTextPane8);
+        jPanelDetalleCita.add(jScrollPane15);
 
-        jScrollPane18.setViewportView(jTextPane9);
+        jScrollPane16.setViewportView(jTextPane5);
 
-        jScrollPane19.setViewportView(jTextPane10);
+        jPanelDetalleCita.add(jScrollPane16);
 
-        org.jdesktop.layout.GroupLayout jPanelDetalleCitaLayout = new org.jdesktop.layout.GroupLayout(jPanelDetalleCita);
-        jPanelDetalleCita.setLayout(jPanelDetalleCitaLayout);
-        jPanelDetalleCitaLayout.setHorizontalGroup(
-            jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelDetalleCitaLayout.createSequentialGroup()
-                .add(87, 87, 87)
-                .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jSeparator6, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 727, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jLabel36, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .add(185, 185, 185))
-            .add(jPanelDetalleCitaLayout.createSequentialGroup()
-                .add(95, 95, 95)
-                .add(jLabel33)
-                .add(26, 26, 26)
-                .add(jScrollPane12, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 110, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jScrollPane17, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 131, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jScrollPane18, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 151, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jScrollPane19, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 237, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(56, Short.MAX_VALUE))
-            .add(jPanelDetalleCitaLayout.createSequentialGroup()
-                .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jPanelDetalleCitaLayout.createSequentialGroup()
-                        .add(231, 231, 231)
-                        .add(jLabel34)
-                        .add(66, 66, 66)
-                        .add(jLabel42)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .add(jLabel44))
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, jPanelDetalleCitaLayout.createSequentialGroup()
-                        .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jPanelDetalleCitaLayout.createSequentialGroup()
-                                .add(121, 121, 121)
-                                .add(jLabel35)
-                                .add(119, 119, 119)
-                                .add(jLabel37))
-                            .add(jPanelDetalleCitaLayout.createSequentialGroup()
-                                .add(108, 108, 108)
-                                .add(jScrollPane13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 80, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .add(80, 80, 80)
-                                .add(jScrollPane16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 80, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                        .add(106, 106, 106)
-                        .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                            .add(org.jdesktop.layout.GroupLayout.TRAILING, jScrollPane15)
-                            .add(org.jdesktop.layout.GroupLayout.TRAILING, jLabel38, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanelDetalleCitaLayout.createSequentialGroup()
-                        .add(124, 124, 124)
-                        .add(jLabel41))
-                    .add(jPanelDetalleCitaLayout.createSequentialGroup()
-                        .add(114, 114, 114)
-                        .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jLabel43)
-                            .add(jScrollPane14, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 80, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(148, Short.MAX_VALUE))
-        );
-        jPanelDetalleCitaLayout.setVerticalGroup(
-            jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelDetalleCitaLayout.createSequentialGroup()
-                .add(25, 25, 25)
-                .add(jLabel36)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jSeparator6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(82, 82, 82)
-                .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel38)
-                    .add(jLabel41)
-                    .add(jLabel37)
-                    .add(jLabel35))
-                .add(18, 18, 18)
-                .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jScrollPane13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jScrollPane16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jScrollPane15, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jScrollPane14, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(86, 86, 86)
-                .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel34)
-                    .add(jLabel42)
-                    .add(jLabel44)
-                    .add(jLabel43))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(jLabel33)
-                    .add(jScrollPane12, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jScrollPane17, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jScrollPane18, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jScrollPane19, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(154, 154, 154))
-        );
+        jScrollPane17.setViewportView(jTextPane6);
+
+        jPanelDetalleCita.add(jScrollPane17);
+
+        jLabel47.setFont(new java.awt.Font("Ubuntu", 1, 18));
+        jLabel47.setText("Paciente");
+        jPanelDetalleCita.add(jLabel47);
+
+        jLabel48.setFont(new java.awt.Font("Ubuntu", 1, 18));
+        jLabel48.setText("DNI");
+        jPanelDetalleCita.add(jLabel48);
+
+        jLabel49.setFont(new java.awt.Font("Ubuntu", 1, 18));
+        jLabel49.setText("Nombre");
+        jPanelDetalleCita.add(jLabel49);
+
+        jLabel50.setFont(new java.awt.Font("Ubuntu", 1, 18));
+        jLabel50.setText("Email");
+        jPanelDetalleCita.add(jLabel50);
+
+        jLabel51.setFont(new java.awt.Font("Ubuntu", 1, 18));
+        jLabel51.setText("Teléfono");
+        jPanelDetalleCita.add(jLabel51);
+
+        jScrollPane18.setViewportView(jTextPane7);
+
+        jPanelDetalleCita.add(jScrollPane18);
+
+        jScrollPane19.setViewportView(jTextPane8);
+
+        jPanelDetalleCita.add(jScrollPane19);
+
+        jScrollPane21.setViewportView(jTextPane9);
+
+        jPanelDetalleCita.add(jScrollPane21);
+
+        jScrollPane22.setViewportView(jTextPane10);
+
+        jPanelDetalleCita.add(jScrollPane22);
 
         jPanelDetalleCita.setBounds(1, 0, 900, 530);
         ZonaTrabajo.add(jPanelDetalleCita, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -2207,6 +1881,29 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void jButtonGestionarCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGestionarCitaMouseClicked
         // TODO add your handling code here:
         mostrarPanel("GestionarCitaOnline");
+
+        SimpleDateFormat formatofecha = new SimpleDateFormat("dd.MM.yyyy");
+        SimpleDateFormat formatohora = new SimpleDateFormat("hh:mm");
+        String elemento, tabula = "                                     ";
+        DefaultListModel modelo = new DefaultListModel();
+        modelo.addElement("");//Inicializando la lista vacia
+        jList7.setModel(modelo);
+        String dni = user.getDNI();
+        try{
+            ArrayList<Cita> array_citas = new ArrayList();
+            array_citas = gstcit.VerCitas(dni);
+            if(!array_citas.isEmpty()){
+                for(int i = 0; i < array_citas.size(); i++){
+                    elemento = formatofecha.format(array_citas.get(i).getFecha()) + tabula + formatohora.format(array_citas.get(i).getFecha());
+                    modelo.addElement(elemento);
+                }
+            }else{
+                JOptionPane.showMessageDialog(null, "¡No tiene citas disponibles!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
+            }
+        }catch(SQLException ex){
+            System.err.println(ex.getStackTrace());
+            JOptionPane.showMessageDialog(null, "¡Se produjo un error!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
+        }
     }//GEN-LAST:event_jButtonGestionarCitaMouseClicked
 
     private void jButtonMasHoraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMasHoraMouseClicked
@@ -2450,7 +2147,7 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void jButtonConsultarCita1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarCita1MouseClicked
         // TODO add your handling code here:
 
-        /*try{
+/*        try{
             GestorCitas gtcts = new GestorCitas();
             Cita ct = gtcts.ObtenerCita(user.getDNI());
 
@@ -2475,8 +2172,8 @@ public class UI_Paciente extends javax.swing.JFrame {
         }catch(SQLException ex){
             System.err.println(ex.getMessage());
             jTextAreaInfo1.setText("¡Se produjo un error!\n\tPerdone las molestias");
-        }
-         */
+        }*/
+         
 
     }//GEN-LAST:event_jButtonConsultarCita1MouseClicked
 
@@ -2686,7 +2383,6 @@ public class UI_Paciente extends javax.swing.JFrame {
             System.err.println(ex.getStackTrace());
             JOptionPane.showMessageDialog(null, "¡Se produjo un error!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
         }
-
 
     }//GEN-LAST:event_jButtonGestionarCitassMouseClicked
 
@@ -3229,11 +2925,13 @@ public class UI_Paciente extends javax.swing.JFrame {
     private javax.swing.JLayeredPane ZonaTrabajo;
     private datechooser.beans.DateChooserCombo dateChooserCombo2;
     private javax.swing.JButton jButtonAceptarCita;
+    private javax.swing.JButton jButtonAceptarCita1;
     private javax.swing.JButton jButtonCancelar;
     private javax.swing.JButton jButtonConsCita;
     private javax.swing.JButton jButtonConsPrueba;
     private javax.swing.JButton jButtonConsReceta;
     private javax.swing.JButton jButtonConsultarCita1;
+    private javax.swing.JButton jButtonConsultarCita2;
     private javax.swing.JButton jButtonConsultarPruebas;
     private javax.swing.JButton jButtonConsultarReceta;
     private javax.swing.JButton jButtonConsultarRecetas;
@@ -3254,6 +2952,7 @@ public class UI_Paciente extends javax.swing.JFrame {
     private javax.swing.JButton jButtonModificarCitaOnline;
     private javax.swing.JButton jButtonModificarPaciente;
     private javax.swing.JButton jButtonPedirAltaCita;
+    private javax.swing.JButton jButtonPedirAltaCita1;
     private javax.swing.JButton jButtonVerPrueba;
     private javax.swing.JButton jButtonVolver;
     private javax.swing.JButton jButtonVolverReceta;
@@ -3299,7 +2998,12 @@ public class UI_Paciente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -3326,6 +3030,7 @@ public class UI_Paciente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelGestionarPaciente4;
     private javax.swing.JLabel jLabelGestionarPaciente5;
     private javax.swing.JLabel jLabelGestionarPaciente6;
+    private javax.swing.JLabel jLabelGestionarPaciente7;
     private javax.swing.JLabel jLabelHoraCita;
     private javax.swing.JLabel jLabelIcono;
     private javax.swing.JLabel jLabelIconoAyuda;
@@ -3355,13 +3060,17 @@ public class UI_Paciente extends javax.swing.JFrame {
     private javax.swing.JList jList6;
     private javax.swing.JList jList7;
     private javax.swing.JList jList8;
+    private javax.swing.JList jList9;
     private javax.swing.JPanel jPanelAltaCita;
+    private javax.swing.JPanel jPanelAltaCita1;
     private javax.swing.JPanel jPanelBotones;
+    private javax.swing.JPanel jPanelBotones1;
     private javax.swing.JPanel jPanelConsultarCitaOnline;
     private javax.swing.JPanel jPanelConsultarHistorial;
     private javax.swing.JPanel jPanelConsultarReceta;
     private javax.swing.JPanel jPanelDetalleCita;
     private javax.swing.JPanel jPanelGestionarCitaOnline;
+    private javax.swing.JPanel jPanelGestionarCitaOnline1;
     private javax.swing.JPanel jPanelGestionarPaciente;
     private javax.swing.JPanel jPanelPrincipal;
     private javax.swing.JPanel jPanelPruebaAnalista;
@@ -3383,6 +3092,8 @@ public class UI_Paciente extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane19;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane20;
+    private javax.swing.JScrollPane jScrollPane21;
+    private javax.swing.JScrollPane jScrollPane22;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
@@ -3398,6 +3109,7 @@ public class UI_Paciente extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JTextArea jTextAreaInfo;
     private javax.swing.JTextArea jTextAreaInfo1;
+    private javax.swing.JTextArea jTextAreaInfo2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
