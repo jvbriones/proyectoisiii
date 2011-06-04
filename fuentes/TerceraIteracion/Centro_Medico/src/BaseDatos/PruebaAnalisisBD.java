@@ -47,16 +47,15 @@ public class PruebaAnalisisBD {
         return prueba;
     }
 
-    public ArrayList obtenerPruebasAnalisis(String dniPaciente)throws SQLException{
+    public ArrayList<PruebaAnalisis> obtenerPruebasAnalisis(String dniPaciente)throws SQLException{
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 
         session.beginTransaction ();
-        List<PruebaAnalisis> result = (List<PruebaAnalisis>)session.createQuery("from PruebaAnalisis").list();
-//        List<PruebaAnalisis> result = (List<PruebaAnalisis>)session.createQuery("from PruebaAnalisis where DNI_PACIENTE='" + dniPaciente + "'").list();
+        List<PruebaAnalisis> result = (List<PruebaAnalisis>)session.createQuery("from PruebaAnalisis where DNI_PACIENTE='" + dniPaciente + "'").list();
         ArrayList<PruebaAnalisis> analisis = new ArrayList<PruebaAnalisis>(result);
         session.getTransaction().commit();
 
         return analisis;
     }
-    
+
 }
