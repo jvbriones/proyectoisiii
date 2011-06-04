@@ -138,10 +138,10 @@ public class GestorPacientes {
    public ArrayList<ArrayList<String> > obtenerPruebas(String dni) throws SQLException{
 
        PruebaAnalisisBD pruebaAnaBD = new PruebaAnalisisBD();
-       ArrayList pan = pruebaAnaBD.obtenerPruebasAnalisis(dni);
+       ArrayList<PruebaAnalisis> pan = pruebaAnaBD.obtenerPruebasAnalisis(dni);
 
        PruebaRadiologiaBD pruebaRadioBD = new PruebaRadiologiaBD();
-       ArrayList pra = pruebaRadioBD.obtenerPruebasRadiologia(dni);
+       ArrayList<PruebaRadiologia> pra = pruebaRadioBD.obtenerPruebasRadiologia(dni);
        
        ArrayList< ArrayList<String> > Pruebas = new ArrayList<ArrayList<String> >();
        ArrayList<String> pruebasAnalisis = new ArrayList<String>();
