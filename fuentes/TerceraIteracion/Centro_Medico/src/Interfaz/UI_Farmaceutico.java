@@ -38,7 +38,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
     Medicamento Me = new Medicamento ();
     LoteMedicamento Lo = new LoteMedicamento();
-    Set<Receta> resumenRecetas;
+    ArrayList<Receta> resumenRecetas;
     Set<MedicamentoRecetado> smR;
     Set<String> ListaCodBarras = new HashSet<String>(0);
     Receta recetag = null;
