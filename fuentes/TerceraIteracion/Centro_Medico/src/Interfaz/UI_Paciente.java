@@ -43,6 +43,7 @@ public class UI_Paciente extends javax.swing.JFrame {
     /** Creates new form Principal_Administrador */
     public UI_Paciente() {
         initComponents();
+        pasoAtras = false;
         gstpac = new GestorPacientes();
     }
 
@@ -52,6 +53,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         //Iniciar el objeto usuario y gestores
         user = usu;
         gstpac = new GestorPacientes();
+        pasoAtras=false;
 
         /**Ponemos las etiquetas del usuario que ha entrado*/
         jLabelNombreUsuario.setText(usu.getNombre());
@@ -197,6 +199,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jScrollPane9 = new javax.swing.JScrollPane();
         jList4 = new javax.swing.JList();
         jButtonVerPrueba = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jPanelGestionarCitaOnline = new javax.swing.JPanel();
         jLabelGestionarPaciente5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -674,7 +677,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                         .add(42, 42, 42)
                         .add(jLabel23))
                     .add(jPanelConsultarHistorialLayout.createSequentialGroup()
-                        .add(287, 287, 287)
+                        .add(227, 227, 227)
                         .add(jButtonConsPrueba)
                         .add(39, 39, 39)
                         .add(jButtonConsReceta))
@@ -742,6 +745,13 @@ public class UI_Paciente extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("Atrás");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+
         org.jdesktop.layout.GroupLayout jPanelVerPruebasLayout = new org.jdesktop.layout.GroupLayout(jPanelVerPruebas);
         jPanelVerPruebas.setLayout(jPanelVerPruebasLayout);
         jPanelVerPruebasLayout.setHorizontalGroup(
@@ -751,9 +761,11 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(jLabel19)
                 .add(294, 294, 294))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelVerPruebasLayout.createSequentialGroup()
-                .addContainerGap(380, Short.MAX_VALUE)
+                .addContainerGap(404, Short.MAX_VALUE)
                 .add(jButtonVerPrueba)
-                .add(387, 387, 387))
+                .add(45, 45, 45)
+                .add(jButton1)
+                .add(270, 270, 270))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelVerPruebasLayout.createSequentialGroup()
                 .addContainerGap(385, Short.MAX_VALUE)
                 .add(jLabel20)
@@ -790,7 +802,9 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jScrollPane9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 256, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(26, 26, 26)
-                .add(jButtonVerPrueba)
+                .add(jPanelVerPruebasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jButtonVerPrueba)
+                    .add(jButton1))
                 .add(50, 50, 50))
         );
 
@@ -2744,7 +2758,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         catch (SQLException ex) {
             Logger.getLogger(UI_Paciente.class.getName()).log(Level.SEVERE, null, ex);
         }
-      
+        pasoAtras=true;
         mostrarPanel("VerPruebas");
         
     }//GEN-LAST:event_jButtonConsPruebaMouseClicked
@@ -2753,6 +2767,14 @@ public class UI_Paciente extends javax.swing.JFrame {
         // TODO add your handling code here:
         mostrarPanel("VerRecetas");
     }//GEN-LAST:event_jButtonConsRecetaMouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        if(pasoAtras)
+            mostrarPanel("ConsultarHistorial");
+        else
+            mostrarPanel("Principal");
+    }//GEN-LAST:event_jButton1MouseClicked
 
 
     /*Comprueba que la fecha introducida es correcta
@@ -3246,11 +3268,12 @@ public class UI_Paciente extends javax.swing.JFrame {
         });
     }
 */
- 
+    Boolean pasoAtras;
     byte[] sfotografia;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLayeredPane ZonaTrabajo;
     private datechooser.beans.DateChooserCombo dateChooserCombo2;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonAceptarCita;
     private javax.swing.JButton jButtonAceptarCita1;
     private javax.swing.JButton jButtonCancelar;
