@@ -3196,8 +3196,7 @@ MedicamentoBD meBD = new MedicamentoBD();
           
            
               jList1.setModel(modeloEnfermedades);
-             jPanelInformacionClinic.setVisible(false);
-             jPanelConsInformacionClinic.setVisible(true);
+             mostrarPanel("ConsHistorial");
 
              } catch (SQLException ex) {
             Logger.getLogger(UI_Medico.class.getName()).log(Level.SEVERE, null, ex);
@@ -3723,6 +3722,49 @@ MedicamentoBD meBD = new MedicamentoBD();
             
             jPanelInformacionClinic.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
             jPanelConsInformacionClinic.setBorder(null);
+            jPanelModEnfer.setBorder(null);
+            jPanelAddEnfer.setBorder(null);
+            jPanelConsInfHisPaciente.setBorder(null);
+            jPanelHistorialPac.setBorder(null);
+            
+        }
+        if(panel.equals("ConsHistorial")){
+            /**Hacemos visible el botón jLabelIconoInicio*/
+            jLabelInicio.setVisible(true);
+            jLabelIconoInicio.setVisible(true);
+
+            /**Insertamos icono de foto anónima*/
+            //jLabelFotoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
+
+
+            /**Hacemos visible el panel seleccionado*/
+            jPanelPrincipal.setVisible(false);
+            jPanelConsultarDatosPersonales.setVisible(false);
+            jPanelConsultarTurno.setVisible(false);
+            jPanelAtenderPaciente.setVisible(false);
+            jPanelAtenderPacienteIntermedio.setVisible(false);
+            jPanelSolicitarPrueba.setVisible(false);
+            scrollPane1.setVisible(false);
+            
+            jPanelInformacionClinic.setVisible(false);
+            jPanelConsInformacionClinic.setVisible(false);
+            jPanelModEnfer.setVisible(false);
+            jPanelAddEnfer.setVisible(false);
+            jPanelConsInfHisPaciente.setVisible(true);
+            jPanelHistorialPac.setVisible(false);
+
+
+            /**Activamos el marco*/
+            jPanelPrincipal.setBorder(null);
+            jPanelConsultarDatosPersonales.setBorder(null);
+            jPanelConsultarTurno.setBorder(null);
+            jPanelAtenderPaciente.setBorder(null);
+            jPanelRealizarReceta1.setBorder(null);
+            jPanelSolicitarPrueba.setBorder(null);
+            jPanelAtenderPacienteIntermedio.setBorder(null);
+            
+            jPanelInformacionClinic.setBorder(null);
+            jPanelConsInformacionClinic.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
             jPanelModEnfer.setBorder(null);
             jPanelAddEnfer.setBorder(null);
             jPanelConsInfHisPaciente.setBorder(null);
