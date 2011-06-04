@@ -2916,9 +2916,6 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void mostrarPanel(String panel){
 
         if(panel.equals("Principal")){
-            
-            
-
             /**Hacemos visible el botón jLabelIconoInicio*/
             jLabelInicio.setVisible(false);
             jLabelIconoInicio.setVisible(false);
@@ -2932,6 +2929,10 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelConsultarReceta.setVisible(false);
             jPanelVerPruebas.setVisible(false);
             jPanelVerCita.setVisible(false);
+            jPanelConsultarHistorial.setVisible(false);
+            jPanelPruebaRadiologia.setVisible(false);
+            jPanelPruebaAnalista.setVisible(false);
+            jPanelDetalleCita.setVisible(false);
 
 
             /**Activamos el marco*/
@@ -2939,6 +2940,10 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelGestionarPaciente.setBorder(null);
             jPanelGestionarCitaOnline.setBorder(null);
             jPanelConsultarCitaOnline.setBorder(null);
+            jPanelConsultarHistorial.setBorder(null);
+            jPanelPruebaRadiologia.setBorder(null);
+            jPanelPruebaAnalista.setBorder(null);
+            jPanelDetalleCita.setBorder(null);
         }
 
         if(panel.equals("GestionarPaciente")){
@@ -2960,6 +2965,10 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelConsultarReceta.setVisible(false);
             jPanelVerPruebas.setVisible(false);
             jPanelVerCita.setVisible(false);
+            jPanelConsultarHistorial.setVisible(false);
+            jPanelPruebaRadiologia.setVisible(false);
+            jPanelPruebaAnalista.setVisible(false);
+            jPanelDetalleCita.setVisible(false);
 
 
             /**Activamos el marco*/
@@ -2967,6 +2976,10 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelGestionarPaciente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
             jPanelGestionarCitaOnline.setBorder(null);
             jPanelConsultarCitaOnline.setBorder(null);
+            jPanelConsultarHistorial.setBorder(null);
+            jPanelPruebaRadiologia.setBorder(null);
+            jPanelPruebaAnalista.setBorder(null);
+            jPanelDetalleCita.setBorder(null);
 
         }
 
@@ -2988,6 +3001,10 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelConsultarReceta.setVisible(false);
             jPanelVerPruebas.setVisible(false);
             jPanelVerCita.setVisible(false);
+            jPanelConsultarHistorial.setVisible(false);
+            jPanelPruebaRadiologia.setVisible(false);
+            jPanelPruebaAnalista.setVisible(false);
+            jPanelDetalleCita.setVisible(false);
 
 
             /**Activamos el marco*/
@@ -2995,6 +3012,10 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelGestionarPaciente.setBorder(null);
             jPanelGestionarCitaOnline.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
             jPanelConsultarCitaOnline.setBorder(null);
+            jPanelConsultarHistorial.setBorder(null);
+            jPanelPruebaRadiologia.setBorder(null);
+            jPanelPruebaAnalista.setBorder(null);
+            jPanelDetalleCita.setBorder(null);
         
         }
 
@@ -3017,6 +3038,10 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelConsultarReceta.setVisible(false);
             jPanelVerPruebas.setVisible(false);
             jPanelVerCita.setVisible(false);
+            jPanelConsultarHistorial.setVisible(false);
+            jPanelPruebaRadiologia.setVisible(false);
+            jPanelPruebaAnalista.setVisible(false);
+            jPanelDetalleCita.setVisible(false);
 
             jTextFieldAnioCita.setEditable(false);
 
@@ -3025,6 +3050,10 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelGestionarPaciente.setBorder(null);
             jPanelGestionarCitaOnline.setBorder(null);
             jPanelConsultarCitaOnline.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+            jPanelConsultarHistorial.setBorder(null);
+            jPanelPruebaRadiologia.setBorder(null);
+            jPanelPruebaAnalista.setBorder(null);
+            jPanelDetalleCita.setBorder(null);
         }
 
 
@@ -3043,6 +3072,10 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelConsultarReceta.setVisible(false);
             jPanelVerPruebas.setVisible(false);
             jPanelVerCita.setVisible(false);
+            jPanelConsultarHistorial.setVisible(false);
+            jPanelPruebaRadiologia.setVisible(false);
+            jPanelPruebaAnalista.setVisible(false);
+            jPanelDetalleCita.setVisible(false);
 
 
             /**Activamos el marco*/
@@ -3051,6 +3084,10 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelGestionarCitaOnline.setBorder(null);
             jPanelConsultarCitaOnline.setBorder(null);
             jPanelVerRecetas.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+            jPanelConsultarHistorial.setBorder(null);
+            jPanelPruebaRadiologia.setBorder(null);
+            jPanelPruebaAnalista.setBorder(null);
+            jPanelDetalleCita.setBorder(null);
 
         }
 
@@ -3069,6 +3106,10 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelConsultarReceta.setVisible(true);
             jPanelVerPruebas.setVisible(false);
             jPanelVerCita.setVisible(false);
+            jPanelConsultarHistorial.setVisible(false);
+            jPanelPruebaRadiologia.setVisible(false);
+            jPanelPruebaAnalista.setVisible(false);
+            jPanelDetalleCita.setVisible(false);
 
             /** Bloquear campos texto **/
             jTextPane2.setEditable(false);
@@ -3086,7 +3127,10 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelGestionarCitaOnline.setBorder(null);
             jPanelConsultarCitaOnline.setBorder(null);
             jPanelVerRecetas.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-
+            jPanelConsultarHistorial.setBorder(null);
+            jPanelPruebaRadiologia.setBorder(null);
+            jPanelPruebaAnalista.setBorder(null);
+            jPanelDetalleCita.setBorder(null);
         }
 
         if(panel.equals("VerPruebas")){
@@ -3104,6 +3148,10 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelConsultarReceta.setVisible(false);
             jPanelVerPruebas.setVisible(true);
             jPanelVerCita.setVisible(false);
+            jPanelConsultarHistorial.setVisible(false);
+            jPanelPruebaRadiologia.setVisible(false);
+            jPanelPruebaAnalista.setVisible(false);
+            jPanelDetalleCita.setVisible(false);
 
             
             /**Activamos el marco*/
@@ -3114,6 +3162,10 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelVerRecetas.setBorder(null);
             jPanelVerPruebas.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
             jPanelVerCita.setBorder(null);
+            jPanelConsultarHistorial.setBorder(null);
+            jPanelPruebaRadiologia.setBorder(null);
+            jPanelPruebaAnalista.setBorder(null);
+            jPanelDetalleCita.setBorder(null);
 
         }
 
@@ -3135,6 +3187,10 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelPruebaRadiologia.setVisible(false);
             jPanelPruebaAnalista.setVisible(false);
             jPanelVerCita.setVisible(true);
+            jPanelConsultarHistorial.setVisible(false);
+            jPanelPruebaRadiologia.setVisible(false);
+            jPanelPruebaAnalista.setVisible(false);
+            jPanelDetalleCita.setVisible(false);
 
 
             /**Activamos el marco*/
@@ -3148,6 +3204,10 @@ public class UI_Paciente extends javax.swing.JFrame {
             jPanelConsultarHistorial.setBorder(null);
             jPanelPruebaRadiologia.setBorder(null);
             jPanelPruebaAnalista.setBorder(null);
+            jPanelConsultarHistorial.setBorder(null);
+            jPanelPruebaRadiologia.setBorder(null);
+            jPanelPruebaAnalista.setBorder(null);
+            jPanelDetalleCita.setBorder(null);
             jPanelVerCita.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         }
