@@ -43,6 +43,7 @@ public class UI_Medico extends javax.swing.JFrame {
       private GestorFarmacia gstFar;
       private GestorPersonal gstPer;
       private Enfermedad enf = null;
+      private GestorPruebas gestorpruebas=new GestorPruebas();
       private Usuario user;
 
     /** Creates new form Principal_Administrador */
@@ -3334,11 +3335,16 @@ MedicamentoBD meBD = new MedicamentoBD();
             
            
                 int id=Integer.valueOf(jTextField3.getText());
-                if( jTextField2.getText().equals("Radiologia")){
+                boolean acceso=false;
+                boolean exito;
+                if(jRadioButton1.isSelected()) acceso=true;
+                if(jRadioButton2.isSelected()) acceso=false;
+                exito=gestorpruebas.accederPacientePrueba(acceso,jTextField2.getText(),id);
+                /*if( jTextField2.getText().equals("Radiologia")){
                     PruebaRadiologiaBD prBD=new PruebaRadiologiaBD();
                     PruebaRadiologia pr;
                     pr=prBD.obtener(id);
-                     if(jRadioButton1.isSelected()) pr.setAcceso(true);
+                    if(jRadioButton1.isSelected()) pr.setAcceso(true);
                     if(jRadioButton2.isSelected())  pr.setAcceso(false);
                     prBD.actualizar(pr);
                 }
@@ -3346,11 +3352,15 @@ MedicamentoBD meBD = new MedicamentoBD();
                     PruebaAnalisisBD paBD=new PruebaAnalisisBD();
                     PruebaAnalisis pa;
                     pa=paBD.obtener(id);
-                       if(jRadioButton1.isSelected()) pa.setAcceso(true);
+                    if(jRadioButton1.isSelected()) pa.setAcceso(true);
                     if(jRadioButton2.isSelected())  pa.setAcceso(false);
                     paBD.actualizar(pa);
-                }
+                }*/
+                if (exito)
                 new InformacionExito().setVisible(true);
+                else
+                new InformacionError().setVisible(true);
+
         
            
         }//GEN-LAST:event_jButtonSaveAccessPruebaMouseClicked
