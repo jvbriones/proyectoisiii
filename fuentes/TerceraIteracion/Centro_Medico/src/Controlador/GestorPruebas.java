@@ -186,7 +186,6 @@ public class GestorPruebas {
         return true;
     }
 
-
     public boolean almacenarResultadoRadiologia(String DNIPaciente, ArrayList<Imagen> imag, String Comentario, String TipoPrueba, String DNIRadiologo) throws SQLException{
 
         PacienteBD pBD = new PacienteBD();
@@ -234,22 +233,18 @@ public class GestorPruebas {
 
         }
         return true;
-
-
-     
-
-
+        
      }
 
-    public ArrayList<String > ConsultarPruebaAnalisis(int idPrueba, String tipo){
+    public ArrayList<String> ConsultarPruebaAnalisis(int idPrueba, String tipo){
 
         ArrayList<String> Resultados = new ArrayList<String>();
         PruebaSangreBD psBD = new PruebaSangreBD();
 
-        Resultados.add(psBD.obtener(idPrueba).getComentario());
         Resultados.add(psBD.obtener(idPrueba).getAnalista().getNombre() + " " + psBD.obtener(idPrueba).getAnalista().getApellidos());
+        //Resultados.add(psBD.obtener(idPrueba).getComentario());
 
-      /*  if(psBD.obtener(idPrueba).getTipo().equals("Sangre")){ //No EXISTE EL ATRIBUTO TIPO
+        if(tipo.equals("Sangre")){
             PruebaSangre ps = psBD.obtener(idPrueba);
             Set<ResultadoSangre> resulSangre = ps.getResultadosSangre();
             for(Iterator<ResultadoSangre> it = resulSangre.iterator(); it.hasNext();){
@@ -258,7 +253,7 @@ public class GestorPruebas {
                 Resultados.add(resultado);
             }
         }else
-            if(psBD.obtener(idPrueba).getTipo().equals("Orina")){
+            if(tipo.equals("Orina")){
                 PruebaOrinaBD poBD = new PruebaOrinaBD();
                 PruebaOrina o = poBD.obtener(idPrueba);
                 Set<ResultadoOrina> resulOri = o.getResultadosOrina();
@@ -267,9 +262,10 @@ public class GestorPruebas {
                     String resultado = ori.getResultado();
                     Resultados.add(resultado);
                 }
-            }*/
+            }
 
         return Resultados;
+
     }
 
     public ArrayList<String > ConsultarPruebaRadiologia(int idPrueba, String tipo){
@@ -278,11 +274,10 @@ public class GestorPruebas {
         PruebaRadiologiaBD prBD = new PruebaRadiologiaBD();
         PruebaRadiologia pru = prBD.obtener(idPrueba);
 
-        Resultados.add(pru.getComentario());
-        Resultados.add(pru.getPaciente().getNombre());
-        Resultados.add(pru.getPaciente().getApellidos());
+        //Resultados.add(pru.getComentario());
+        Resultados.add(pru.getRadiologo().getNombre() + " " + pru.getRadiologo().getApellidos());
 
-        /*if(pru.getTipo().equals("Resonancia")){ //No EXISTE EL ATRIBUTO TIPO
+        if(tipo.equals("Resonancia")){
             ResonanciaBD resoBD = new ResonanciaBD();
             Resonancia res = resoBD.obtener(idPrueba);
             Set<Imagen> im = res.getResonancias();
@@ -293,7 +288,7 @@ public class GestorPruebas {
                 Resultados.add(ruta);
             }
         }else
-            if(pru.getTipo().equals("Radiografia")){
+            if(tipo.equals("Radiografia")){
                 RadiografiaBD radioBD = new RadiografiaBD();
                 Radiografia rad = radioBD.obtener(idPrueba);
                 Set<Imagen> im = rad.getRadiografias();
@@ -303,7 +298,7 @@ public class GestorPruebas {
                     String ruta = imag.getRuta();
                     Resultados.add(ruta);
                 }
-            }*/
+            }
 
         return Resultados;
     }

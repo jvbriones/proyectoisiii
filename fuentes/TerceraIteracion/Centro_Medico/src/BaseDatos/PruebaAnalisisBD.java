@@ -53,7 +53,6 @@ public class PruebaAnalisisBD {
         session.beginTransaction ();
         List<PruebaAnalisis> result = (List<PruebaAnalisis>)session.createQuery("from PruebaAnalisis where DNI_PACIENTE='" + dniPaciente + "'").list();
 
- 
         ArrayList<PruebaAnalisis> analisis = new ArrayList<PruebaAnalisis>(result);
         session.getTransaction().commit();
 

@@ -10,6 +10,7 @@ import java.awt.Image;
 import javax.swing.*;
 import Controlador.*;
 import CentroMedico.*;
+import BaseDatos.*;
 import java.awt.Color;
 import java.util.Calendar.*;
 import java.util.Calendar;
@@ -2540,12 +2541,28 @@ public class UI_Paciente extends javax.swing.JFrame {
         try{
             ArrayList<ArrayList<String> > Pruebas = gstPac.obtenerPruebas(dni);
             if(!Pruebas.isEmpty()){
-                ArrayList<String> pruebas;
-                for(Iterator<ArrayList <String>> it = Pruebas.iterator(); it.hasNext(); ){
-                    pruebas = it.next();
-                    elemento = "        " + pruebas.get(0) + tabula + pruebas.get(1);
-                    modelo.addElement(elemento);
+                ArrayList<String> pruebas = Pruebas.get(0); //Pruebas de Análisis
+                if(!pruebas.isEmpty()){
+                    for(int i = 0; i < pruebas.size(); i++){
+                        elemento = "        " + pruebas.get(i) + tabula + "Análisis";
+                        modelo.addElement(elemento);
+                    }
                 }
+
+                pruebas.clear();
+                pruebas = Pruebas.get(1);   //Pruebas de Radiologia
+                if(!pruebas.isEmpty()){
+                    for(int i = 0; i < pruebas.size(); i++){
+                        elemento = "        " + pruebas.get(i) + tabula + "Radiología";
+                        modelo.addElement(elemento);
+                    }
+                }
+
+                /*for(Iterator<ArrayList <String>> it = Pruebas.iterator(); it.hasNext(); ){
+                    pruebas = it.next();
+                    elemento = "        " + pruebas.get(0) + tabula + "Análisis";
+                    modelo.addElement(elemento);
+                }*/
             }else{
                 JOptionPane.showMessageDialog(null, "¡No tiene pruebas disponibles!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
             }
@@ -2595,28 +2612,46 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void jButtonVerPruebaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonVerPruebaMouseClicked
         // TODO add your handling code here:
-        ListModel model = jList4.getModel();
-        int idPrueba = 0, prueba_index = jList4.getSelectedIndex();
+        
+        int idPrueba = jList4.getSelectedIndex();
         String tipo = "";
 
-        if(prueba_index > 0){
-            String seleccion = (String) model.getElementAt(jList4.getSelectedIndex());
+        if(idPrueba > 0){
+            PruebaAnalisisBD paBD = new PruebaAnalisisBD();
+            PruebaAnalisis pa = paBD.obtener(idPrueba);
+            tipo = pa.getClass().getName();
+            System.out.println("\n***********\nTipo: " + tipo);
+
+            String seleccion = (String) modelo.getElementAt(jList4.getSelectedIndex());
+
+            ArrayList<String> Resultados = new ArrayList<String>();
             if(seleccion.contains("Analisis")){
-                ArrayList<String> resultado = gstPru.ConsultarPruebaAnalisis(idPrueba, tipo);
-            }else
+                Resultados = gstPru.ConsultarPruebaAnalisis(idPrueba, tipo);
+            } else
                 if(seleccion.contains("Radiologia")){
-                    ArrayList<String> resultado = gstPru.ConsultarPruebaRadiologia(idPrueba, tipo);
+                    Resultados = gstPru.ConsultarPruebaRadiologia(idPrueba, tipo);
                 }
 
-
-            //PONER DATOS
             jTextField1.setText(tipo);
-            //jTextField2   Analista
+            jTextField2.setText(Resultados.get(0));
             jTextField3.setText(String.valueOf(idPrueba));
-            //jList6.       Imagenes
-        }else{
+
+            if(seleccion.contains("Analisis")){
+                modelo.clear();
+                jList7.setModel(modelo);
+                for(int i = 0; i < Resultados.size(); i++){
+                    modelo.addElement(Resultados.get(i));
+                }
+            }else
+                if(seleccion.contains("Radiologia")){
+                    modelo.clear();
+                    jList6.setModel(modelo);
+                    for(int i = 0; i < Resultados.size(); i++)
+                        modelo.addElement(Resultados.get(i));
+                }
+        }else
             JOptionPane.showMessageDialog(null, "No seleccionó ninguna prueba", "Selección prueba",JOptionPane.INFORMATION_MESSAGE);
-        }
+        
 
     }//GEN-LAST:event_jButtonVerPruebaMouseClicked
 

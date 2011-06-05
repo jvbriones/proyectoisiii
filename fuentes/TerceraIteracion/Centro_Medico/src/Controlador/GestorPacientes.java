@@ -141,36 +141,34 @@ public class GestorPacientes {
 
        PruebaRadiologiaBD pruebaRadioBD = new PruebaRadiologiaBD();
        ArrayList<PruebaRadiologia> pra = pruebaRadioBD.obtenerPruebasRadiologia(dni);
-       
+
        ArrayList< ArrayList<String> > Pruebas = new ArrayList<ArrayList<String> >();
        ArrayList<String> pruebasAnalisis = new ArrayList<String>();
-
        PruebaAnalisis pa;
+
        for(int i = 0; i < pan.size(); i++){
            pa = (PruebaAnalisis) pan.get(i);
            if(pa.isAcceso()){
                int id = pa.getId();
                pruebasAnalisis.add(String.valueOf(id));
-               pruebasAnalisis.add("Analisis");
            }
        }
-       //if(!pruebasAnalisis.isEmpty())
-        Pruebas.add(pruebasAnalisis);
+       if(!pruebasAnalisis.isEmpty())
+           Pruebas.add(pruebasAnalisis);
 
        ArrayList<String> pruebasRadiologia = new ArrayList<String>();
-
        PruebaRadiologia pr;
+       
        for(int i = 0; i < pra.size(); i++){
            pr = (PruebaRadiologia) pra.get(i);
            if(pr.isAcceso()){
                int id = pr.getId();
                pruebasRadiologia.add(String.valueOf(id));
-               //pruebasRadiologia.add("Radiologia");
            }
        }
 
-     // if(!pruebasRadiologia.isEmpty())
-        Pruebas.add(pruebasRadiologia);
+      if(!pruebasRadiologia.isEmpty())
+          Pruebas.add(pruebasRadiologia);
 
        return Pruebas;
    }
