@@ -2047,7 +2047,7 @@ public class UI_Analista extends javax.swing.JFrame {
             jLabelIconoInicio.setVisible(true);
 
             /**Insertamos icono de foto anónima*/
-            jLabelFotoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
+            //jLabelFotoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
 
 
             /**Hacemos visible el panel seleccionado*/
