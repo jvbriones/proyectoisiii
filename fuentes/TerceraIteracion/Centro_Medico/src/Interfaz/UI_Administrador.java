@@ -2411,7 +2411,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 jTextFieldNombrePaciente.setText(elusuario.getNombre());
                 jTextFieldApellidosPaciente.setText(elusuario.getApellidos());
                 jTextFieldDireccionPaciente.setText(elusuario.getDireccion());
-                jTextFieldContraseniaPaciente.setText(elusuario.getContrasenia());
+                jTextFieldContraseniaPaciente.setText(AES.decrypt(elusuario.getContrasenia()));
                 jTextFieldEmailPaciente.setText(elusuario.getEmail());
                 jTextFieldTelefonoPaciente.setText(elusuario.getTelefono());
                 jTextFieldLugarNacimientoPaciente.setText(elusuario.getLugarNac());
@@ -2475,7 +2475,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                         jTextFieldNombrePersonal.setText(elusuario.getNombre());
                 jTextFieldApellidosPersonal.setText(elusuario.getApellidos());
                 jTextFieldDireccionPersonal.setText(elusuario.getDireccion());
-                jTextFieldContraseniaPersonal.setText(elusuario.getContrasenia());
+                jTextFieldContraseniaPersonal.setText(AES.decrypt(elusuario.getContrasenia()));
                 jTextFieldEmailPersonal.setText(elusuario.getEmail());
                 jTextFieldTelefonoPersonal.setText(elusuario.getTelefono());
                 jTextFieldLugarNacimientoPersonal.setText(elusuario.getLugarNac());
@@ -3034,9 +3034,11 @@ public class UI_Administrador extends javax.swing.JFrame {
                 else
                     JOptionPane.showMessageDialog(null, "Su operación no pudo realizarse", "Confirmación",JOptionPane.ERROR_MESSAGE);
 
-            } catch (SQLException ex) {
+            } catch (Exception ex) {
                 Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            } //catch (SQLException ex) {
+                //Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+           // }
         }
         else
              JOptionPane.showMessageDialog(null, "Corriga los campos", "Error",JOptionPane.ERROR_MESSAGE);
@@ -3058,9 +3060,11 @@ public class UI_Administrador extends javax.swing.JFrame {
                 }else{
                     JOptionPane.showMessageDialog(null, "No se pudo realizar la operacion", "Error",JOptionPane.ERROR_MESSAGE);
                 }
-            }catch (SQLException ex) {
+            } catch (Exception ex) {
                 Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            }//catch (SQLException ex) {
+               // Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+           // }
         }
         else
              JOptionPane.showMessageDialog(null, "Comprueba el formulario", "Error",JOptionPane.ERROR_MESSAGE);
@@ -3084,9 +3088,11 @@ public class UI_Administrador extends javax.swing.JFrame {
 
                             JOptionPane.showMessageDialog(null, "No se ha podido modificar al paciente", "Error",JOptionPane.ERROR_MESSAGE);
                     }
-                }catch (SQLException ex) {
-                    Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                } catch (Exception ex) {
+                Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+            }//catch (SQLException ex) {
+                    //Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+                //}
 
             }
         else
@@ -3130,9 +3136,11 @@ public class UI_Administrador extends javax.swing.JFrame {
 
 
 
-            } catch (SQLException ex) {
+            } catch (Exception ex) {
                 Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            } //catch (SQLException ex) {
+                //Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+           // }
         }
         else
             JOptionPane.showMessageDialog(null, "Compruebe el formulario", "Error",JOptionPane.ERROR_MESSAGE);
