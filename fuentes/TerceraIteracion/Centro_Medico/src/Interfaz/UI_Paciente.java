@@ -2445,8 +2445,8 @@ public class UI_Paciente extends javax.swing.JFrame {
                     recet = (Receta)it.next();
                     String total="";
                     String fecha=recet.getFecha().toString();
-                    Usuario unmedico= gstUsu.obtenerUsuario(recet.getMedi().getDNI()); 
-                    String medico = unmedico.getNombre();
+                   String medico= recet.getMedi().getNombre();
+                  
                     String id_string= String.valueOf(recet.getId());
                     total=fecha+espacio+medico+espacio+id_string;
                     modelo.addElement(total);
