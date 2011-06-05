@@ -2416,7 +2416,16 @@ public class UI_Administrador extends javax.swing.JFrame {
                 jTextFieldTelefonoPaciente.setText(elusuario.getTelefono());
                 jTextFieldLugarNacimientoPaciente.setText(elusuario.getLugarNac());
                   jTextFieldFechaNacimiento.setText(elusuario.getFecNac().toString());
-
+                   try{
+            
+            ImageIcon icono = new ImageIcon(elusuario.getFoto());
+            Image imagen = icono.getImage();
+            ImageIcon aescala = new ImageIcon(imagen.getScaledInstance(150,150,Image.SCALE_SMOOTH));
+            jLabelFotoPaciente.setIcon(aescala); // NOI18N
+        }
+        catch(Exception ex){
+            System.err.print("Error al leer el archivo");
+        }
                 jButtonGuardarPaciente.setVisible(true);
                 jButtonAltaPaciente.setVisible(false);
 
@@ -2472,6 +2481,17 @@ public class UI_Administrador extends javax.swing.JFrame {
                 jTextFieldLugarNacimientoPersonal.setText(elusuario.getLugarNac());
                 jTextFieldTelefonoPersonal1.setText(elusuario.getFecNac().toString());
 
+                try{
+            
+            ImageIcon icono = new ImageIcon(elusuario.getFoto());
+            Image imagen = icono.getImage();
+            ImageIcon aescala = new ImageIcon(imagen.getScaledInstance(150,150,Image.SCALE_SMOOTH));
+            jLabelFotoPersonal.setIcon(aescala); // NOI18N
+        }
+        catch(Exception ex){
+            System.err.print("Error al leer el archivo");
+        }
+                
                 if(elusuario.getTipo().equals("Analista"))
                     jRadioButtonAnalista.setSelected(true);
                 else if(elusuario.getTipo().equals("Medico"))
@@ -4147,7 +4167,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                     inp = fil;
                     BufferedImage im = javax.imageio.ImageIO.read(inp);
                     if(im.getHeight()<=150 && im.getWidth()<=150){
-                        ImageIcon aescala = new ImageIcon(imagen.getScaledInstance(130,150,Image.SCALE_SMOOTH));
+                        ImageIcon aescala = new ImageIcon(imagen.getScaledInstance(150,150,Image.SCALE_SMOOTH));
                         jLabelFotoPersonal.setIcon(aescala); // NOI18N
                         File file = new File(laurl);
                         byte[] bFile = new byte[(int) file.length()];
