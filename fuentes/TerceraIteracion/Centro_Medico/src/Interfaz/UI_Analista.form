@@ -1060,8 +1060,16 @@
                           <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                           <Component id="jRadioButtonTarde1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="2" pref="2" max="2" attributes="0"/>
-                          <Component id="jRadioButtonNoche" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="17" pref="90" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jButtonMenosDiaFechaInicioTurno" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="jButtonMenosMesFechaInicioTurno" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="jButtonMenosAnioFechaInicioTurno" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="jButtonMenosDiaFechaFinTurno" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="jButtonMenosMesFechaFinTurno" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="jButtonMenosAnioFechaFinTurno" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="jRadioButtonNoche" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="0" pref="73" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
