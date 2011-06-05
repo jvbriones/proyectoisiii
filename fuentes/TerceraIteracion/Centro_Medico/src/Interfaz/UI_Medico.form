@@ -2191,6 +2191,7 @@
             <Component class="javax.swing.JRadioButton" name="jRadioButtonFarmaceutico">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Farmac&#xe9;utico"/>
+                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonFarmaceuticoActionPerformed"/>
@@ -2204,6 +2205,7 @@
             <Component class="javax.swing.JRadioButton" name="jRadioButtonAnalista">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Analista"/>
+                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -2214,6 +2216,7 @@
             <Component class="javax.swing.JRadioButton" name="jRadioButtonRadiologo">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Radi&#xf3;logo"/>
+                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonRadiologoActionPerformed"/>

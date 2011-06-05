@@ -1128,7 +1128,7 @@
                               <Component id="jLabelConsultarTurno" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="58" max="32767" attributes="0"/>
+                      <EmptySpace pref="67" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1517,6 +1517,7 @@
             <Component class="javax.swing.JRadioButton" name="jRadioButtonAnalista">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Analista"/>
+                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -1527,6 +1528,7 @@
             <Component class="javax.swing.JRadioButton" name="jRadioButtonRadiologo">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Radi&#xf3;logo"/>
+                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonRadiologoActionPerformed"/>
@@ -1540,6 +1542,7 @@
             <Component class="javax.swing.JRadioButton" name="jRadioButtonMedico">
               <Properties>
                 <Property name="text" type="java.lang.String" value="M&#xe9;dico"/>
+                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonMedicoActionPerformed"/>
@@ -1590,11 +1593,11 @@
                               <Component id="jTextFieldFinTurno" min="-2" pref="97" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="255" max="32767" attributes="0"/>
+                      <EmptySpace pref="214" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="0" pref="60" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="40" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="120" pref="120" max="120" attributes="0"/>
@@ -1629,7 +1632,7 @@
                                   <Component id="jRadioButtonNoche" min="-2" pref="150" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="0" pref="61" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="40" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>

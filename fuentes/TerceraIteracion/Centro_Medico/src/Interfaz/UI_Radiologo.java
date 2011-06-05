@@ -481,6 +481,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
         jLabel8.setBounds(390, 330, 110, 14);
 
         jRadioButtonFarmaceutico.setText("Farmacéutico");
+        jRadioButtonFarmaceutico.setEnabled(false);
         jRadioButtonFarmaceutico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButtonFarmaceuticoActionPerformed(evt);
@@ -490,6 +491,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
         jRadioButtonFarmaceutico.setBounds(390, 370, 130, 23);
 
         jRadioButtonAnalista.setText("Analista");
+        jRadioButtonAnalista.setEnabled(false);
         jPanelConsultarDatosPersonales.add(jRadioButtonAnalista);
         jRadioButtonAnalista.setBounds(390, 350, 100, 23);
 
@@ -503,6 +505,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
         jRadioButtonRadiologo.setBounds(390, 410, 120, 23);
 
         jRadioButtonMedico.setText("Médico");
+        jRadioButtonMedico.setEnabled(false);
         jRadioButtonMedico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButtonMedicoActionPerformed(evt);
@@ -585,18 +588,18 @@ public class UI_Radiologo extends javax.swing.JFrame {
                         .add(jTextFieldInicioTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 132, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(119, 119, 119)
                         .add(jTextFieldFinTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 126, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(255, Short.MAX_VALUE))
+                .addContainerGap(214, Short.MAX_VALUE))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelConsultarTurnoLayout.createSequentialGroup()
                 .add(149, 149, 149)
                 .add(jLabelFechaInicioTurno)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 191, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 150, Short.MAX_VALUE)
                 .add(jLabelFechaFinTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 74, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(143, 143, 143)
                 .add(jLabelTurnoTrabajo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 110, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(179, 179, 179))
             .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(jPanelConsultarTurnoLayout.createSequentialGroup()
-                    .add(0, 60, Short.MAX_VALUE)
+                    .add(0, 40, Short.MAX_VALUE)
                     .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                         .add(jPanelConsultarTurnoLayout.createSequentialGroup()
                             .add(120, 120, 120)
@@ -617,7 +620,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
                         .add(jPanelConsultarTurnoLayout.createSequentialGroup()
                             .add(540, 540, 540)
                             .add(jRadioButtonNoche, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                    .add(0, 61, Short.MAX_VALUE)))
+                    .add(0, 40, Short.MAX_VALUE)))
         );
         jPanelConsultarTurnoLayout.setVerticalGroup(
             jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)

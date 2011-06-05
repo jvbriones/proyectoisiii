@@ -2523,7 +2523,7 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void jButtonConsultarPruebasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarPruebasMouseClicked
         // TODO add your handling code here:
         String dni = user.getDNI();
-        mostrarPanel("VerPruebas");
+        
 
         //Vaciar el panel
         String elemento, tabula = "                                         ";
@@ -2556,7 +2556,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         }catch(SQLException ex){
             System.err.println(ex.getStackTrace());
         }
-        
+        mostrarPanel("VerPruebas");
     }//GEN-LAST:event_jButtonConsultarPruebasMouseClicked
 
     private void jButtonConsultarPruebasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultarPruebasActionPerformed

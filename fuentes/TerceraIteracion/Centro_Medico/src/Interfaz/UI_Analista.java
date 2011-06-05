@@ -529,6 +529,7 @@ public class UI_Analista extends javax.swing.JFrame {
         jLabel8.setText("Tipo personal");
 
         jRadioButtonFarmaceutico.setText("Farmacéutico");
+        jRadioButtonFarmaceutico.setEnabled(false);
         jRadioButtonFarmaceutico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButtonFarmaceuticoActionPerformed(evt);
@@ -538,6 +539,7 @@ public class UI_Analista extends javax.swing.JFrame {
         jRadioButtonAnalista.setText("Analista");
 
         jRadioButtonRadiologo.setText("Radiólogo");
+        jRadioButtonRadiologo.setEnabled(false);
         jRadioButtonRadiologo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButtonRadiologoActionPerformed(evt);
@@ -545,6 +547,7 @@ public class UI_Analista extends javax.swing.JFrame {
         });
 
         jRadioButtonMedico.setText("Médico");
+        jRadioButtonMedico.setEnabled(false);
         jRadioButtonMedico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButtonMedicoActionPerformed(evt);
@@ -838,12 +841,14 @@ public class UI_Analista extends javax.swing.JFrame {
         jPanelConsultarTurno.setPreferredSize(new java.awt.Dimension(901, 531));
 
         jLabelDNITurno.setText("DNI");
+        jPanelConsultarTurno.add(jLabelDNITurno);
 
         jTextFieldDNIGestionarTurno.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldDNIGestionarTurnoKeyTyped(evt);
             }
         });
+        jPanelConsultarTurno.add(jTextFieldDNIGestionarTurno);
 
         jTextAreaInfoConsultaTurno.setBackground(new java.awt.Color(255, 204, 102));
         jTextAreaInfoConsultaTurno.setColumns(17);
@@ -853,22 +858,32 @@ public class UI_Analista extends javax.swing.JFrame {
         jTextAreaInfoConsultaTurno.setText("Introduce el DNI del personal, una fecha y las horas que trabaja el personal para guardar\nsu turno. Si introduces un DNI y pulsas consultar se sabe el turno del DNI.");
         jScrollPane4.setViewportView(jTextAreaInfoConsultaTurno);
 
+        jPanelConsultarTurno.add(jScrollPane4);
+
         jLabelGestionarPaciente6.setFont(new java.awt.Font("Lucida Grande", 1, 48));
         jLabelGestionarPaciente6.setText("Consultar Turno");
+        jPanelConsultarTurno.add(jLabelGestionarPaciente6);
 
         jTextFieldInicioTurno.setEditable(false);
+        jPanelConsultarTurno.add(jTextFieldInicioTurno);
 
         jLabelFechaInicioTurno.setText("Fecha inicio");
+        jPanelConsultarTurno.add(jLabelFechaInicioTurno);
 
         jLabel9.setText("_____________________________________________________________________________");
+        jPanelConsultarTurno.add(jLabel9);
 
         jTextFieldFinTurno.setEditable(false);
+        jPanelConsultarTurno.add(jTextFieldFinTurno);
 
         jLabelFechaFinTurno.setText("Fecha fin");
+        jPanelConsultarTurno.add(jLabelFechaFinTurno);
 
         jLabelTurnoTrabajo.setText("Turno de trabajo");
+        jPanelConsultarTurno.add(jLabelTurnoTrabajo);
 
         jRadioButtonManiana.setText("Mañana (8h-16h)");
+        jPanelConsultarTurno.add(jRadioButtonManiana);
 
         jRadioButtonTarde1.setText("Tarde (16h-24h)");
         jRadioButtonTarde1.addActionListener(new java.awt.event.ActionListener() {
@@ -876,91 +891,10 @@ public class UI_Analista extends javax.swing.JFrame {
                 jRadioButtonTarde1ActionPerformed(evt);
             }
         });
+        jPanelConsultarTurno.add(jRadioButtonTarde1);
 
         jRadioButtonNoche.setText("Noche (24h-8h)");
-
-        org.jdesktop.layout.GroupLayout jPanelConsultarTurnoLayout = new org.jdesktop.layout.GroupLayout(jPanelConsultarTurno);
-        jPanelConsultarTurno.setLayout(jPanelConsultarTurnoLayout);
-        jPanelConsultarTurnoLayout.setHorizontalGroup(
-            jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelConsultarTurnoLayout.createSequentialGroup()
-                .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanelConsultarTurnoLayout.createSequentialGroup()
-                        .add(273, 273, 273)
-                        .add(jLabelGestionarPaciente6))
-                    .add(jPanelConsultarTurnoLayout.createSequentialGroup()
-                        .add(110, 110, 110)
-                        .add(jTextFieldInicioTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 118, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(79, 79, 79)
-                        .add(jTextFieldFinTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 123, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanelConsultarTurnoLayout.createSequentialGroup()
-                        .add(346, 346, 346)
-                        .add(jLabelFechaFinTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 74, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanelConsultarTurnoLayout.createSequentialGroup()
-                        .add(379, 379, 379)
-                        .add(jTextFieldDNIGestionarTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 95, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(255, Short.MAX_VALUE))
-            .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                .add(jPanelConsultarTurnoLayout.createSequentialGroup()
-                    .add(0, 60, Short.MAX_VALUE)
-                    .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                        .add(jPanelConsultarTurnoLayout.createSequentialGroup()
-                            .add(120, 120, 120)
-                            .add(jLabel9))
-                        .add(jScrollPane4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 780, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(jPanelConsultarTurnoLayout.createSequentialGroup()
-                            .add(290, 290, 290)
-                            .add(jLabelDNITurno))
-                        .add(jPanelConsultarTurnoLayout.createSequentialGroup()
-                            .add(80, 80, 80)
-                            .add(jLabelFechaInicioTurno)
-                            .add(395, 395, 395)
-                            .add(jLabelTurnoTrabajo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 110, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .add(jPanelConsultarTurnoLayout.createSequentialGroup()
-                            .add(540, 540, 540)
-                            .add(jRadioButtonManiana, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .add(jPanelConsultarTurnoLayout.createSequentialGroup()
-                            .add(540, 540, 540)
-                            .add(jRadioButtonTarde1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .add(jPanelConsultarTurnoLayout.createSequentialGroup()
-                            .add(540, 540, 540)
-                            .add(jRadioButtonNoche, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                    .add(0, 61, Short.MAX_VALUE)))
-        );
-        jPanelConsultarTurnoLayout.setVerticalGroup(
-            jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelConsultarTurnoLayout.createSequentialGroup()
-                .add(65, 65, 65)
-                .add(jLabelGestionarPaciente6)
-                .add(177, 177, 177)
-                .add(jTextFieldDNIGestionarTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jLabelFechaFinTurno)
-                .add(15, 15, 15)
-                .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jTextFieldInicioTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jTextFieldFinTurno, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(147, Short.MAX_VALUE))
-            .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                .add(jPanelConsultarTurnoLayout.createSequentialGroup()
-                    .add(50, 121, Short.MAX_VALUE)
-                    .add(jLabel9)
-                    .add(24, 24, 24)
-                    .add(jScrollPane4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(30, 30, 30)
-                    .add(jLabelDNITurno)
-                    .add(12, 12, 12)
-                    .add(jPanelConsultarTurnoLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                        .add(jLabelFechaInicioTurno)
-                        .add(jLabelTurnoTrabajo))
-                    .add(14, 14, 14)
-                    .add(jRadioButtonManiana)
-                    .add(7, 7, 7)
-                    .add(jRadioButtonTarde1)
-                    .add(2, 2, 2)
-                    .add(jRadioButtonNoche)
-                    .add(17, 90, Short.MAX_VALUE)))
-        );
+        jPanelConsultarTurno.add(jRadioButtonNoche);
 
         jPanelConsultarTurno.setBounds(0, 0, 860, -1);
         ZonaTrabajo.add(jPanelConsultarTurno, javax.swing.JLayeredPane.DEFAULT_LAYER);
