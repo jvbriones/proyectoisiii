@@ -11,7 +11,6 @@
 
 package CentroMedico;
 
-import java.sql.SQLException;
 import java.util.*;
 
 
@@ -48,6 +47,7 @@ public class Paciente extends Usuario {
             String Contrasenia, String Telefono, Date FecNac, String LugarNac, byte[] Foto){
         super(Dni, Nombre, Apellidos, Direccion, Email, Contrasenia, Telefono, FecNac, LugarNac, Foto, "Paciente");
     }
+
     public void actualizar(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
             String Contrasenia, String Telefono, Date FecNac, String LugarNac, byte[] Foto){
           setDNI(Dni);
@@ -63,6 +63,7 @@ public class Paciente extends Usuario {
 
     
     }
+
     public void anadirEnfermedad(Enfermedad enfermedad){
         Enfermedades.add(enfermedad);
     }

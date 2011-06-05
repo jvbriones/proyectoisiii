@@ -47,7 +47,7 @@ public class GestorMedico {
      *
      */
 
-    public boolean realizarReceta(String Instrucciones, String JuicioDiagnostico,Set<Medicamento> medica, String Posologia, int Duracion, Date FechaFin, String paci, String medi) throws SQLException{
+   public boolean realizarReceta(String Instrucciones, String JuicioDiagnostico,Set<Medicamento> medica, String Posologia, int Duracion, Date FechaFin, String paci, String medi) throws SQLException{
         Date fecha = new Date();
         PacienteBD pac = new PacienteBD();
         Paciente pacien;
@@ -95,18 +95,18 @@ public class GestorMedico {
         return me;
 
     }
-    public boolean anadirEnfermedad(String Nombre,String Tipo, Date FechaDet,String Descripcion,String Volante,Paciente Paci){
 
-        
-        PacienteBD pac=new PacienteBD();
+   public boolean anadirEnfermedad(String Nombre,String Tipo, Date FechaDet,String Descripcion,String Volante,Paciente Paci){
+
+        PacienteBD pac = new PacienteBD();
         Enfermedad enfe = new Enfermedad(Nombre,Tipo,FechaDet,Descripcion,Volante);
         Paci.anadirEnfermedad(enfe);
-        System.out.println("Nombre paciente:"+Paci.getNombre());
         pac.actualizar(Paci);
         return true;
 
     }
-    public boolean modificarEnfermedad(Enfermedad enfe,Paciente paciente){
+
+   public boolean modificarEnfermedad(Enfermedad enfe,Paciente paciente){
 
         /*
           Set<Enfermedad> enfermedades= paciente.getEnfermedades();
@@ -128,7 +128,8 @@ public class GestorMedico {
       return true; 
         
     }
-    public HashMap<String,ArrayList<String>> consultarHistorialPacientes(String dniMedico) throws SQLException{
+
+   public HashMap<String,ArrayList<String>> consultarHistorialPacientes(String dniMedico) throws SQLException{
         HashMap<String,ArrayList<String>> histo= new HashMap<String,ArrayList<String>>();
      /*   ArrayList<String> Atributos=new ArrayList<String>();
         CitaBD citabd=new CitaBD();
@@ -156,7 +157,8 @@ public class GestorMedico {
         return histo;
 
     }
-    public ArrayList<ArrayList> consultarHistorialPruebasPaciente( String dniPaciente) throws SQLException{
+
+   public ArrayList<ArrayList> consultarHistorialPruebasPaciente( String dniPaciente) throws SQLException{
         PruebaAnalisisBD pabd=new PruebaAnalisisBD();
         PruebaRadiologiaBD prbd=new PruebaRadiologiaBD();
         ArrayList<PruebaAnalisis> pan=pabd.obtenerPruebasAnalisis(dniPaciente);
@@ -167,6 +169,7 @@ public class GestorMedico {
         PruebaAnalisis pa;
         PruebaRadiologia pr;
         int id;
+        
         for(Iterator itPan=pan.iterator();itPan.hasNext();){
             pa=(PruebaAnalisis) itPan.next();
             id=pa.getId();

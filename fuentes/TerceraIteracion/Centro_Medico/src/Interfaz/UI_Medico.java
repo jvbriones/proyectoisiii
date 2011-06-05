@@ -3088,17 +3088,18 @@ MedicamentoBD meBD = new MedicamentoBD();
         
         try {
             datos=gstMed.consultarHistorialPacientes(user.getDNI());
-        } catch (SQLException ex) {
+        }
+        catch (SQLException ex) {
             Logger.getLogger(UI_Medico.class.getName()).log(Level.SEVERE, null, ex);
         }
         //Solo falta escribir la informacion en el taxt area.
-        System.out.println("Todo arreglado");
+
        // Set<String> claves=datos.keySet();
     }//GEN-LAST:event_jButtonConsHistorialPacientesMouseClicked
 
     private void jButtonInforClinicaPacMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonInforClinicaPacMouseClicked
         // TODO add your handling code here:
-      
+        
         mostrarPanel("HistorialClinico");
     }//GEN-LAST:event_jButtonInforClinicaPacMouseClicked
 
@@ -3123,10 +3124,10 @@ MedicamentoBD meBD = new MedicamentoBD();
     
         private void jButtonSaveEnferMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonSaveEnferMouseClicked
             // TODO add your handling code here:
-        System.out.println("El juanmi es un cabron");
-        PacienteBD paci=new PacienteBD();
+
+        PacienteBD paci = new PacienteBD();
         Paciente paciente=paci.obtener(jTextPane3.getText());
-        if(paciente !=null){
+        if(paciente != null){
              String tipo="";
             if (jRadioButton6.isSelected()) tipo="Alergia";
              if (jRadioButton7.isSelected()) tipo="Enfermedad cronica";
@@ -3134,16 +3135,13 @@ MedicamentoBD meBD = new MedicamentoBD();
             Date fechaDet = null;
             fechaDet = dateChooserCombo3.getSelectedDate().getTime();
             
-            
             Enfermedad nueva=new Enfermedad(jTextPane4.getText(),tipo,fechaDet,jTextArea1.getText(),jTextArea2.getText());
             
-
             int numero=enf.getId();
             
             nueva.setId(numero);
             gstMed.modificarEnfermedad(nueva,paciente);
-            System.out.println("Lo hace");
-    }
+        }
         }//GEN-LAST:event_jButtonSaveEnferMouseClicked
 
         private void jButtonAddEnferMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAddEnferMouseClicked
@@ -3200,42 +3198,38 @@ MedicamentoBD meBD = new MedicamentoBD();
         }//GEN-LAST:event_jButtonModEnfermedMouseClicked
 
         private void jButtonBusquedaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonBusquedaMouseClicked
-   
-            // TODO add your handling code here:
-        
+
+            // TODO add your handling code here:        
             
             ArrayList<Enfermedad> enf;
-        try {
-            enf = gstPac.consultarInfoClinicaPaciente(jTextPane1.getText());
-        
-        
-          if (enf!=null){
-             jTextPane2.setText(jTextPane1.getText());
-              DefaultListModel modeloEnfermedades = new DefaultListModel();
-              String espacio = "                                   ";
-              Enfermedad enfermedad= null;
+            try {
+                enf = gstPac.consultarInfoClinicaPaciente(jTextPane1.getText());
+                if (enf!=null){
+                    jTextPane2.setText(jTextPane1.getText());
+                    DefaultListModel modeloEnfermedades = new DefaultListModel();
+                    String espacio = "                                   ";
+                    Enfermedad enfermedad= null;
               
-              for ( Iterator it = enf.iterator(); it.hasNext();){
-                enfermedad = (Enfermedad)it.next();
-                String total="";
-                total=enfermedad.getNombre()+espacio+enfermedad.getFechaDet();
-                  modeloEnfermedades.addElement(total);
-                  
-                  
-              }
+                    for ( Iterator it = enf.iterator(); it.hasNext();){
+                        enfermedad = (Enfermedad)it.next();
+                        String total="";
+                        total=enfermedad.getNombre()+espacio+enfermedad.getFechaDet();
+                        modeloEnfermedades.addElement(total);
+                    }
           
-           
-              jList1.setModel(modeloEnfermedades);
-             mostrarPanel("ConsHistorial");
-          }
-        } catch (SQLException ex) {
-            Logger.getLogger(UI_Medico.class.getName()).log(Level.SEVERE, null, ex);
-        }
-            
+                    jList1.setModel(modeloEnfermedades);
+                    mostrarPanel("ConsHistorial");
+                }
+            }
+            catch (SQLException ex) {
+                Logger.getLogger(UI_Medico.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
         }//GEN-LAST:event_jButtonBusquedaMouseClicked
 
         private void jButtonConsPrueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsPrueMouseClicked
             // TODO add your handling code here:
+
             boolean analisis=true;
             PruebaAnalisis pa;
             PruebaRadiologia pr;
@@ -3243,44 +3237,31 @@ MedicamentoBD meBD = new MedicamentoBD();
             ArrayList<ArrayList> pruebas =null;
             ArrayList finales =null;
             DefaultListModel modeloPruebas = new DefaultListModel();
-        try {
-            pruebas = gstMed.consultarHistorialPruebasPaciente(jTextFieldDNI.getText());
-        } catch (SQLException ex) {
-            Logger.getLogger(UI_Medico.class.getName()).log(Level.SEVERE, null, ex);
-        }
-            if(pruebas!=null){
-                System.out.println("Pruebas no es nulo y contiene tantos arrays como: ");
-                System.out.println(pruebas.size());
+            
+            try {
+                pruebas = gstMed.consultarHistorialPruebasPaciente(jTextFieldDNI.getText());
             }
+            catch (SQLException ex) {
+                Logger.getLogger(UI_Medico.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
             for(Iterator it = pruebas.iterator(); it.hasNext();){
                 finales=(ArrayList)it.next();
-                if(finales!=null){
-                    System.out.println("Finales no es nulo");
-                    System.out.println(finales.size());
-                }
                 for(Iterator itPrueba= finales.iterator(); itPrueba.hasNext();){
                     if(analisis){
-                    System.out.println("Esamos en pruebas de analisis");
-                    pa=(PruebaAnalisis)itPrueba.next();
-                    //System.out.println("Identificacion de la prueba: "+pa.getId());
-                    modeloPruebas.addElement("Analisis                              "+String.valueOf(pa.getId()));
-                }
+                        pa=(PruebaAnalisis)itPrueba.next();
+                        modeloPruebas.addElement("Analisis                              "+String.valueOf(pa.getId()));
+                    }
                     else{
-                        System.out.println("Esamos en pruebas de Radiologia");
                         pr=(PruebaRadiologia)itPrueba.next();
-                      //  System.out.println("Identificacion de la prueba: "+pr.getId());
                         modeloPruebas.addElement("Radiologia                              "+String.valueOf(pr.getId()));
                     }
-               
-               
-            }
+                }
                  analisis=false;
-   }
-             jList2.setModel(modeloPruebas);
+            }
+            jList2.setModel(modeloPruebas);
             mostrarPanel("MostrarPruebas");
-
-
-
+            
         }//GEN-LAST:event_jButtonConsPrueMouseClicked
 
         private void jTextPane1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextPane1KeyTyped
@@ -3308,48 +3289,44 @@ MedicamentoBD meBD = new MedicamentoBD();
 
         private void jButtonConsultarHisMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarHisMouseClicked
             // TODO add your handling code here:
-            String prueba=(String) jList2.getSelectedValue();
-            System.out.println("La prueba seleccionada es : "+prueba);
-            String valores="";
-            String numero="";
-            boolean si=false;
-            boolean tipo=false;
+
+            String prueba=(String) jList2.getSelectedValue(),
+                   valores="",
+                   numero="";
+            boolean si=false,
+                    tipo=false;
             jTextField1.setText(jTextFieldDNI.getText());
             for(int i=0;i<prueba.length();i++){
                 if(prueba.charAt(i)!=' '){
                     if ( !si)  valores+=prueba.charAt(i);
                     else numero+=prueba.charAt(i);
-                }
-                else{
+                }else
                   si=true;
-                    }
-                }
+            }
             
             jTextField2.setText(valores);
             jTextField3.setText(numero);
              int id=Integer.valueOf(jTextField3.getText());
-                if( jTextField2.getText().equals("Radiologia")){
-                    PruebaRadiologiaBD prBD=new PruebaRadiologiaBD();
+                if(jTextField2.getText().equals("Radiologia")){
+                    PruebaRadiologiaBD prBD = new PruebaRadiologiaBD();
                     PruebaRadiologia pr;
-                    pr=prBD.obtener(id);
-                    if(pr.isAcceso()){
-                     jRadioButton1.setSelected(true);
-                    }
-                    else jRadioButton2.setSelected(true);
+                    pr = prBD.obtener(id);
+                    if(pr.isAcceso())
+                        jRadioButton1.setSelected(true);
+                    else
+                        jRadioButton2.setSelected(true);
                 }
                 else{
                     PruebaAnalisisBD paBD=new PruebaAnalisisBD();
                     PruebaAnalisis pa;
                     pa=paBD.obtener(id);
-                   if(pa.isAcceso()){
-                     jRadioButton1.setSelected(true);
-                   }
-                   else jRadioButton2.setSelected(true);
+                   if(pa.isAcceso())
+                       jRadioButton1.setSelected(true);
+                   else
+                       jRadioButton2.setSelected(true);
                 }
-                
-        
-            
             mostrarPanel("AccesoPaciente");
+            
         }//GEN-LAST:event_jButtonConsultarHisMouseClicked
 
         private void jButtonSaveAccessPruebaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonSaveAccessPruebaMouseClicked

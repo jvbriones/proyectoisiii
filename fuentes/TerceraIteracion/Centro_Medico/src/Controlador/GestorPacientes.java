@@ -22,10 +22,8 @@ import CentroMedico.PruebaAnalisis;
 import CentroMedico.PruebaRadiologia;
 import CentroMedico.Receta;
 import Interfaz.InformacionError;
-import Interfaz.InformacionExito;
 import java.sql.SQLException;
 import java.util.*;
-import javax.swing.DefaultListModel;
 
 
 /**
@@ -97,24 +95,23 @@ public class GestorPacientes {
 
    public ArrayList<Enfermedad> consultarInfoClinicaPaciente(String DNIPaciente) throws SQLException{
        PacienteBD PacBD = new PacienteBD();
-         ArrayList<Enfermedad> enf=null;
+       ArrayList<Enfermedad> enf=null;
            
        boolean existe=PacBD.existePaciente(DNIPaciente);
        String mensaje="";
+
        if (!existe) {
-            System.out.println(mensaje);
-            enf=null;
-          new InformacionError().setVisible(true);
+            enf = null;
+            new InformacionError().setVisible(true);    //Esto debe hacerlo la interfaz
        }
        else{
-       
            EnfermedadBD enfermedad = new EnfermedadBD();
-         
-          enf= enfermedad.ObtenerEnfermedades(DNIPaciente);
+           enf= enfermedad.ObtenerEnfermedades(DNIPaciente);
        }
+
        return enf;
            
-       }
+   }
           
    public Set<Enfermedad> consultarInformacionClinica(String DNIPaciente) throws SQLException{
        Set<Enfermedad> enf=null;
