@@ -47,14 +47,10 @@ public class PacienteBD {
     public boolean existePaciente(String Dni) throws SQLException {
         Paciente Pac = obtener(Dni);
 
-        if (Pac != null){
-            System.out.print("ExistePaciente: Existe el paciente");
+        if (Pac != null)
            return true;
-       }
-       else{
-           System.out.print( "ExistePaciente: No existe el paciente\n");
-           return false;
-       }
+       return false;
+
     }
 
 }

@@ -2586,11 +2586,10 @@ public class UI_Paciente extends javax.swing.JFrame {
                tabula = "                                     ",
                dni = user.getDNI();
         modelo.clear();//Inicializando la lista vacia
-        jList7.setModel(modelo);
+        jList9.setModel(modelo);
         
         try{
-            ArrayList<Cita> array_citas = new ArrayList();
-            array_citas = gstCit.VerCitas(dni);
+            ArrayList<Cita> array_citas = gstCit.VerCitas(dni);
             if(!array_citas.isEmpty()){
                 for(int i = 0; i < array_citas.size(); i++){
                     elemento = formatofecha.format(array_citas.get(i).getFecha()) + tabula + formatohora.format(array_citas.get(i).getFecha());
@@ -2600,7 +2599,6 @@ public class UI_Paciente extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "¡No tiene citas disponibles!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
             }
         }catch(SQLException ex){
-            JOptionPane.showMessageDialog(null, "¡Se produjo un error!", "Aviso",JOptionPane.ERROR_MESSAGE);
             System.err.println(ex.getStackTrace());
         }
 

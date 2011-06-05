@@ -31,11 +31,6 @@ public class GestorCitas {
 
     public GestorCitas(){}
 
-    /*
-     * Obtener Cita ~ ConsultarCita
-     * @param dni, Identificacion del paciente del que se obtiene la cita.
-     * @return Objeto 'Cita', si no existe la cita devuelve un objeto 'null'
-     */
     public Cita ObtenerCita(int id) throws SQLException{
         GestorPacientes gstpac = new GestorPacientes();
         CitaBD cita = new CitaBD();
@@ -43,54 +38,35 @@ public class GestorCitas {
         return cita.obtener(id);
     }
 
-
-    /*
-     * Cancelar cita ~~ Cancelar cita online
-     * @param dni, Identificacion del paciente que quiere cancelar la cita
-     */
     public void CancelarCita(String dni)throws SQLException{
 
         CitaBD citabd = new CitaBD();
         //citabd.Eliminar(this.ObtenerCita(dni));
     }
 
-
-    /*  ¿¿¿¿DONDE ESTAN LOS ARGUMENTOS????
-     * ObtenerListaCitasAnalista
-     */
     public ArrayList ObtenerListaCitasAnalista() throws SQLException{
         return new ArrayList();
     }
 
-    /*  ¿¿¿¿¿DONDE ESTAN LOS ARGUMENTOS?????
-     * ObtenerListaCitasRadiologo
-     */
     public ArrayList ObtenerListaCitasRadiologo() throws SQLException{
         return new ArrayList();
     }
 
-
-    /*
-     * VerCitas
-     */
     public ArrayList<Cita> VerCitas(String dnipac) throws SQLException{
 
         PacienteBD pacBD = new PacienteBD();        
         Paciente pac = pacBD.obtener(dnipac);
-        CitaBD citaBD = new CitaBD();
-        
+        CitaBD citaBD = new CitaBD();        
         ArrayList<Cita> citas = citaBD.VerCitas(pac);
 
-        if(citas.isEmpty())
-            return new ArrayList<Cita>();
-
         return citas;
+
     }
 
 
-    /** DE AQUI HACIA ABAJO NO SE VA A IMPLEMENTAR NADA **/
+    /** DE AQUI HACIA ABAJO NO SE HAN IMPLEMENTADO LOS METODOS **/
 
-    /* FUNCION SIN TERMINAR */
+
     public String AltaCita(String Dni) throws SQLException{
     /*
         CitasBD citasbd = new CitasBD();
@@ -115,12 +91,10 @@ public class GestorCitas {
         return "datos";
     }
 
-    /*  FUNCION SIN TERMINAR */
     public String AltaCitaOnline(String Dni) throws SQLException{
         return "";
     }
 
-    //Este metodo no hará falta
     public String CancelarCitaOnline(Usuario usu) throws SQLException{
     /*
         CitasBD bd_citas=new CitasBD();
@@ -156,12 +130,10 @@ public class GestorCitas {
         return "";
     }
 
-    /* HAY QUE MODIFICARLO */
     public boolean ExisteCita(Date fecha){
         return true;
     }
 
-    // SI tenemos ObtenerCita para qué este método?
     public String ConsultarCita(String Dni) throws SQLException{
     /*
         citasBD bd_citas=new citasBD();
