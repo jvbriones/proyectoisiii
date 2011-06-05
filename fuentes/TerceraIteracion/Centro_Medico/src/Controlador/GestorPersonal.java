@@ -11,9 +11,11 @@
 
 package Controlador;
 
+import BaseDatos.AnalistaBD;
 import BaseDatos.FarmaceuticoBD;
 import BaseDatos.PersonalMedicoBD;
 import BaseDatos.UsuarioBD;
+import CentroMedico.Analista;
 import CentroMedico.Farmaceutico;
 import CentroMedico.PersonalMedico;
 import CentroMedico.Turno;
@@ -34,12 +36,20 @@ public class GestorPersonal {
         PersonalMedicoBD bd_personal=new PersonalMedicoBD();
         String Datos=new String();
 
+
         existe=bd_personal.existePersonal(Dni);
 
         if(!existe) {
              System.out.println("vamos a Introducirlo");
-            String pas=new String();
+             String pas=new String();
             pas=generarContraseña();
+            /*if(TipoUsuario=="Analista"){
+                Analista personal=new Analista(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto);
+                Turno tur=null;
+                personal.setTurno(tur);
+                AnalistaBD ana=new AnalistaBD();
+                ana.almacenar(personal);
+            }*/
             PersonalMedico personal=new PersonalMedico(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto, TipoUsuario);
             Turno tur=null;
             personal.setTurno(tur);
