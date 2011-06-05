@@ -54,7 +54,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="177" y="68" width="100" height="-1"/>
+          <AbsoluteConstraints x="177" y="68" width="130" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -217,7 +217,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="90" y="0" width="80" height="-1"/>
+              <AbsoluteConstraints x="80" y="10" width="80" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -230,7 +230,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="90" y="30" width="120" height="-1"/>
+              <AbsoluteConstraints x="90" y="40" width="120" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -629,13 +629,13 @@
                   <Group type="102" alignment="0" attributes="1">
                       <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
                       <Component id="jLabelEstadCitas1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
                       <Component id="jLabelEstadPersFecha1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
+                      <EmptySpace pref="101" max="32767" attributes="0"/>
                       <Component id="jLabelEstadPersTipo1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="175" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
                       <Component id="jLabelGestionarCita1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
@@ -650,9 +650,9 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                               <Component id="jLabelGestionarPaciente3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
                               <Component id="jLabelGestionarPersonal1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
                               <Component id="jLabelGestionarTurno1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -665,7 +665,7 @@
                               <Component id="jButtonGestionarCita" min="-2" pref="194" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="41" max="32767" attributes="0"/>
+                      <EmptySpace pref="32" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -674,10 +674,10 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jButtonGestionarCita" alignment="0" pref="148" max="32767" attributes="1"/>
-                          <Component id="jButtonEstadPersTipo" alignment="0" pref="148" max="32767" attributes="1"/>
-                          <Component id="jButtonEstadCitas" alignment="0" pref="148" max="32767" attributes="1"/>
-                          <Component id="jButtonEstadPersFecha" alignment="0" pref="148" max="32767" attributes="1"/>
+                          <Component id="jButtonGestionarCita" alignment="0" pref="144" max="32767" attributes="1"/>
+                          <Component id="jButtonEstadPersTipo" alignment="0" pref="144" max="32767" attributes="1"/>
+                          <Component id="jButtonEstadCitas" alignment="0" pref="144" max="32767" attributes="1"/>
+                          <Component id="jButtonEstadPersFecha" alignment="0" pref="144" max="32767" attributes="1"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -688,15 +688,15 @@
                       </Group>
                       <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButtonGestionarTurno" alignment="0" pref="148" max="32767" attributes="1"/>
-                          <Component id="jButtonGestionarPaciente" alignment="0" pref="148" max="32767" attributes="1"/>
-                          <Component id="jButtonGestionarPersonal" alignment="0" pref="148" max="32767" attributes="1"/>
+                          <Component id="jButtonGestionarTurno" alignment="0" pref="143" max="32767" attributes="1"/>
+                          <Component id="jButtonGestionarPaciente" alignment="0" pref="143" max="32767" attributes="1"/>
+                          <Component id="jButtonGestionarPersonal" alignment="0" pref="143" max="32767" attributes="1"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabelGestionarPaciente3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelGestionarTurno1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelGestionarPersonal1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelGestionarTurno1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
                   </Group>
@@ -1382,7 +1382,7 @@
             <Property name="alignmentX" type="float" value="-0.5"/>
             <Property name="alignmentY" type="float" value="-0.5"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor predeterminado"/>
+              <Color id="Default Cursor"/>
             </Property>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[901, 531]"/>
@@ -1422,7 +1422,7 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jScrollPane9" alignment="0" pref="420" max="32767" attributes="0"/>
+                              <Component id="jScrollPane9" alignment="0" pref="416" max="32767" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="jLabelGestionarCitaAltaFecha" min="-2" pref="53" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -1441,7 +1441,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="26" max="32767" attributes="0"/>
+                          <EmptySpace pref="21" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabelGestionarCitaAltaHora" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabelGestionarCitaAltaFecha" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1567,7 +1567,7 @@
                               <Component id="jButtonMenosMesFechaCita" min="-2" pref="40" max="-2" attributes="0"/>
                               <Component id="jButtonMenosAnioFechaCita" min="-2" pref="40" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="20" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1720,7 +1720,7 @@
                               <Component id="jButtonMenosHoraCita" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                               <Component id="jButtonMenosMinutoCita" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="29" max="32767" attributes="0"/>
+                          <EmptySpace pref="16" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>

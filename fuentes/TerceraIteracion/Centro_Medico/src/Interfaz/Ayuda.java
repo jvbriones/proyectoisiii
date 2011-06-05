@@ -65,15 +65,15 @@ public class Ayuda extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Ubuntu", 1, 15));
         jLabel4.setText("Licencia:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(210, 160, 80, 20);
+        jLabel4.setBounds(210, 160, 80, 18);
 
         jLabel5.setText("La aplicación es software libre, ha sido desarrollada por ");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(190, 190, 420, 14);
+        jLabel5.setBounds(190, 190, 420, 18);
 
         jLabel6.setText("la empresa ProyectoISIII  bajo la licencia GNU GPL v.3");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(200, 220, 370, 14);
+        jLabel6.setBounds(190, 220, 390, 18);
         getContentPane().add(jSeparator1);
         jSeparator1.setBounds(170, 140, 440, 10);
 
