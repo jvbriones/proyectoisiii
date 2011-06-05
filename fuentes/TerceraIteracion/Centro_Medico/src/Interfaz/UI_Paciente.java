@@ -2065,7 +2065,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             }
         }catch(SQLException ex){
             System.err.println(ex.getStackTrace());
-            JOptionPane.showMessageDialog(null, "¡Se produjo un error!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "¡Se produjo un error!", "Aviso",JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButtonGestionarCitaMouseClicked
 
@@ -2354,14 +2354,11 @@ public class UI_Paciente extends javax.swing.JFrame {
             try {
                 exito = gesPac.modificarPaciente(jTextFieldDNIPaciente.getText(), jTextFieldNombrePaciente.getText(), jTextFieldApellidosPaciente.getText(), jTextFieldDireccionPaciente.getText(), jTextFieldEmailPaciente.getText(),jTextFieldContraseniaPaciente.getText(), jTextFieldTelefonoPaciente.getText(), fechaNacimiento, jTextFieldLugarNacimientoPaciente.getText(), sfotografia);
 
-                if(exito){
-                    new InformacionExito().setVisible(true);
-                    }
-                else{
-
-                    System.out.println( "exito!!");
-                        new InformacionError().setVisible(true);
-                }
+                if(exito)
+                    JOptionPane.showMessageDialog(null, "Su operación se realizó", "Éxito",JOptionPane.INFORMATION_MESSAGE);
+                else
+                    JOptionPane.showMessageDialog(null, "Se produjo un error", "Error",JOptionPane.ERROR_MESSAGE);
+                
             }catch (SQLException ex) {
                 Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -2561,7 +2558,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "¡No tiene citas disponibles!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
             }
         }catch(SQLException ex){
-            JOptionPane.showMessageDialog(null, "¡Se produjo un error!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "¡Se produjo un error!", "Aviso",JOptionPane.ERROR_MESSAGE);
             System.err.println(ex.getStackTrace());
         }
 

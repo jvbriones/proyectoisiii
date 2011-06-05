@@ -174,7 +174,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
                       <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="756" max="32767" attributes="0"/>
+                      <EmptySpace pref="755" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -217,7 +217,7 @@
                                           <Component id="jButtonConsultarRecetas" min="-2" pref="194" max="-2" attributes="1"/>
                                           <Component id="jButtonGestionarCitass" min="-2" pref="194" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="16" max="32767" attributes="0"/>
+                                      <EmptySpace pref="15" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
@@ -1792,7 +1792,7 @@
                               <Component id="jLabelInformacionDetalladaReceta" min="-2" pref="839" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="42" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1811,11 +1811,11 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <Component id="jScrollPane8" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="74" max="32767" attributes="0"/>
+                              <EmptySpace pref="73" max="32767" attributes="0"/>
                               <Component id="jLabel46" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jTextFieldFechaReceta" pref="110" max="32767" attributes="1"/>
-                          <Component id="jScrollPane7" alignment="0" pref="110" max="32767" attributes="1"/>
+                          <Component id="jTextFieldFechaReceta" pref="109" max="32767" attributes="1"/>
+                          <Component id="jScrollPane7" alignment="0" pref="109" max="32767" attributes="1"/>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
