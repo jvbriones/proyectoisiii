@@ -36,7 +36,6 @@ public class UI_Paciente extends javax.swing.JFrame {
     private GestorCitas gstCit;
     private GestorUsuarios gstUsu;
     private DefaultListModel modelo = new DefaultListModel();
-    
 
     /** Creates new form Principal_Administrador */
     public UI_Paciente() {
@@ -2060,8 +2059,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         SimpleDateFormat formatofecha = new SimpleDateFormat("dd.MM.yyyy");
         SimpleDateFormat formatohora = new SimpleDateFormat("hh:mm");
         String elemento, tabula = "                                     ";
-        DefaultListModel modelo = new DefaultListModel();
-        modelo.addElement("");//Inicializando la lista vacia
+        modelo.clear();
         jList7.setModel(modelo);
         String dni = user.getDNI();
         try{
@@ -2093,8 +2091,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 hora = 0;
             }
 
-        String numString;
-        numString = String.valueOf(hora);
+        String numString = String.valueOf(hora);
         jTextFieldHoraCita.setText(numString);
     }//GEN-LAST:event_jButtonMasHoraMouseClicked
 
@@ -2169,9 +2166,9 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void jButtonPedirAltaCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonPedirAltaCitaMouseClicked
         // TODO add your handling code here:
-         GestorCitas gtcts = new GestorCitas();
+       
         /*try{
-            if(gtcts.ObtenerCita(user.getDNI()) != null){
+            if(gstCit.ObtenerCita(user.getDNI()) != null){
                 JOptionPane.showMessageDialog(null, "Ya tiene una cita asignada", "Alta cita",JOptionPane.WARNING_MESSAGE);
             }else{
                 jPanelAltaCita.setVisible(true);
@@ -2199,7 +2196,7 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void jTextFieldNombrePacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldNombrePacienteKeyTyped
         // TODO add your handling code here:
 
-        /**Comprobamos que no se teclee un número*/
+        /** Comprobamos que no se teclee un número **/
         char teclaPresionada = evt.getKeyChar();
         if(Character.isDigit(teclaPresionada) == true)
             evt.consume();
@@ -2208,7 +2205,7 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void jTextFieldDNIPacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldDNIPacienteKeyTyped
         // TODO add your handling code here:
 
-        /**Limitamos a que el DNI siempre sea correcto sintácticamente*/
+        /** Limitamos a que el DNI siempre sea correcto sintácticamente **/
         char teclaPresionada = evt.getKeyChar();
 
         if(jTextFieldDNIPaciente.getText().length() < 8)
@@ -2229,7 +2226,7 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void jTextFieldApellidosPacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldApellidosPacienteKeyTyped
         // TODO add your handling code here:
 
-        /**Comprobamos que no se teclee un número*/
+        /** Comprobamos que no se teclee un número **/
         char teclaPresionada = evt.getKeyChar();
         if(Character.isDigit(teclaPresionada) == true)
             evt.consume();
@@ -2246,7 +2243,7 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void jTextFieldLugarNacimientoPacienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldLugarNacimientoPacienteKeyTyped
         // TODO add your handling code here:
 
-        /**Comprobamos que no se teclee un número*/
+        /** Comprobamos que no se teclee un número **/
         char teclaPresionada = evt.getKeyChar();
         if(Character.isDigit(teclaPresionada) == true)
             evt.consume();
@@ -2256,16 +2253,15 @@ public class UI_Paciente extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(1 != JOptionPane.showOptionDialog(null, "¿Cancelar la cita?", "Confirmación", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null)){
 
-            GestorCitas gtcts = new GestorCitas();
-            //try{
-                //gtcts.cancelarCita(user.getDNI()); //Hasta que "obtenercita" no funcione bien, no puedo funcionar "cancelarcita"
+            try{
+                gstCit.CancelarCita(user.getDNI()); //Hasta que "obtenercita" no funcione bien, no puedo funcionar "cancelarcita"
                 limpiarFormulario("ConsultarCitaOnline");
                 JOptionPane.showMessageDialog(null, "Ha cancelado la cita", "Salir",JOptionPane.INFORMATION_MESSAGE);
                 mostrarPanel("GestionarCitaOnline");
-            /*}catch(SQLException ex){
+            }catch(SQLException ex){
                 System.err.print(ex.getMessage());
                 JOptionPane.showMessageDialog(null, "No fue posible cancelar la cita", "Error",JOptionPane.ERROR);
-            }*/
+            }
 
         }
     }//GEN-LAST:event_jButtonCancelarMouseClicked
@@ -2298,7 +2294,7 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void jTextFieldDNIMedicoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldDNIMedicoKeyTyped
         // TODO add your handling code here:
 
-        /**Limitamos a que el DNI siempre sea correcto sintácticamente*/
+        /** Limitamos a que el DNI siempre sea correcto sintácticamente **/
         char teclaPresionada = evt.getKeyChar();
 
         if(jTextFieldDNIMedico.getText().length() < 8)
@@ -2321,6 +2317,7 @@ public class UI_Paciente extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonAceptarCitaMouseClicked
 
     private void jButtonConsultarCita1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarCita1MouseClicked
+
         // TODO add your handling code here:
         /*        try{
             GestorCitas gtcts = new GestorCitas();
@@ -2348,16 +2345,16 @@ public class UI_Paciente extends javax.swing.JFrame {
             System.err.println(ex.getMessage());
             jTextAreaInfo1.setText("¡Se produjo un error!\n\tPerdone las molestias");
         }*/
-         
 
     }//GEN-LAST:event_jButtonConsultarCita1MouseClicked
 
     private void jButtonModificarPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonModificarPacienteMouseClicked
+
         // TODO add your handling code here:
          if(compruebaFormulario("GestionarPaciente")){
             GestorPacientes gesPac = new GestorPacientes();
-            Date fechaNacimiento = null;                        //HAY QUE PROCESARLA LEYÉNDOLA DEL FORMULARIOOOO
-            byte[] urlFoto = null;                              //HAY QUE GUARDAR LA FOTO Y PASAR LA RUTA DE DONDE ESTA
+            Date fechaNacimiento = null;                        
+            byte[] urlFoto = null;                             
             boolean exito;
             String url=null;
 
@@ -2391,7 +2388,6 @@ public class UI_Paciente extends javax.swing.JFrame {
         char espacio=' ';
         boolean ya=false;
         
-        System.out.println("linea:"+receta_string);
         for ( int i=receta_string.length()-1; i>0 && !ya; i--){
             if ( receta_string.charAt(i)!= espacio){
                 receta_id+=String.valueOf(receta_string.charAt(i));
@@ -2399,13 +2395,11 @@ public class UI_Paciente extends javax.swing.JFrame {
             else ya=true;
             
         }
-        System.out.println("El id de la receta es: "+receta_id);
         
        
            
                 Receta receta = gstPac.seleccionarReceta(Integer.valueOf(receta_id));
 
-                if (receta==null) System.out.println("No nos hemos traido bien la receta");
                 //Mostrar los datos de la receta
                 jTextPane2.setText(receta.getJuicioDiagnostico());
                 jTextPane1.setText(receta.getInstrucciones());
@@ -2431,8 +2425,6 @@ public class UI_Paciente extends javax.swing.JFrame {
                 }else{
                     modelo.addElement("No hay medicamentos");
                 }
-                
-               // modelo.addElement("No hay medicamentos porque falla, mirar codigo 2424 en UI_paciente");
  
                 mostrarPanel("ConsultarReceta");
             }
@@ -2454,7 +2446,7 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void jButtonConsultarRecetasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarRecetasMouseClicked
         // TODO add your handling code here:
 
-    //Vaciar el panel
+        //Vaciar el panel
         String espacio = "             ";
         modelo.clear();
         jList3.setModel(modelo);
@@ -2467,11 +2459,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                     recet = (Receta)it.next();
                     String total="";
                     String fecha=recet.getFecha().toString();
-                    System.out.println("nombre medico"+recet.getMedi());
                     Usuario unmedico= gstUsu.obtenerUsuario(recet.getMedi().getDNI()); 
-                   // String medico=recet.getMedi();
-                    //String Nombre_Medico=recet.getMedi().getNombre();
-                    
                     String medico = unmedico.getNombre();
                     String id_string= String.valueOf(recet.getId());
                     total=fecha+espacio+medico+espacio+id_string;
@@ -2636,8 +2624,6 @@ public class UI_Paciente extends javax.swing.JFrame {
             PruebaAnalisisBD paBD = new PruebaAnalisisBD();
             PruebaAnalisis pa = paBD.obtener(idPrueba);
             tipo = pa.getClass().getName();
-            System.out.println("\n***********\nTipo: " + tipo);
-
             String seleccion = (String) modelo.getElementAt(jList4.getSelectedIndex());
 
             ArrayList<String> Resultados = new ArrayList<String>();
@@ -2681,6 +2667,7 @@ public class UI_Paciente extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonConsCitaMouseClicked
 
     private void jButtonConsPruebaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsPruebaMouseClicked
+
         try {
             // TODO add your handling code here:
             
@@ -2691,39 +2678,26 @@ public class UI_Paciente extends javax.swing.JFrame {
             PruebaRadiologia pr;
             ArrayList finales =null;
             DefaultListModel modeloPruebas = new DefaultListModel();
-            if(pruebas.size()!=0){
-                System.out.println("Pruebas no es nulo y contiene tantos arrays como: ");
-                System.out.println(pruebas.size());
-            
-            for(Iterator it = pruebas.iterator(); it.hasNext();){
-                finales=(ArrayList)it.next();
-                if(finales!=null){
-                    System.out.println("Finales no es nulo");
-                    System.out.println(finales.size());
-                }
-                for(Iterator itPrueba= finales.iterator(); itPrueba.hasNext();){
-                    if(analisis){
-                    System.out.println("Estamos en pruebas de analisis");
-                    pa=(PruebaAnalisis)itPrueba.next();
-                    //System.out.println("Identificacion de la prueba: "+pa.getId());
-                    modeloPruebas.addElement("Analisis                              "+String.valueOf(pa.getId()));
-                }
-                    else{
-                        System.out.println("Estamos en pruebas de Radiologia");
-                       dato=(String)itPrueba.next();
-                        // pr=(PruebaRadiologia)itPrueba.next();
-                      //  System.out.println("Identificacion de la prueba: "+pr.getId());
-                        modeloPruebas.addElement("Radiologia                              "+dato);
+            if(pruebas.size()!=0){            
+                for(Iterator it = pruebas.iterator(); it.hasNext();){
+                    finales=(ArrayList)it.next();
+                    if(finales!=null){
                     }
-               
-               
+                    for(Iterator itPrueba= finales.iterator(); itPrueba.hasNext();){
+                        if(analisis){
+                            pa=(PruebaAnalisis)itPrueba.next();
+                            modeloPruebas.addElement("Analisis                              "+String.valueOf(pa.getId()));
+                        }
+                        else{
+                            dato=(String)itPrueba.next();
+                            modeloPruebas.addElement("Radiologia                              "+dato);
+                        }
+                    }
+                    analisis=false;
+                }
+                jList4.setModel(modeloPruebas);
             }
-                 analisis=false;
-   }     
-            jList4.setModel(modeloPruebas);
-        }
         } 
-     
         catch (SQLException ex) {
             Logger.getLogger(UI_Paciente.class.getName()).log(Level.SEVERE, null, ex);
         }
