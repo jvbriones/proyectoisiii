@@ -50,46 +50,50 @@ public class UI_Analista extends javax.swing.JFrame {
     }
 
     public UI_Analista(Usuario usu, String tipoUsuario) throws SQLException{
-        initComponents();
+        try {
+            initComponents();
 
-        /**Ponemos las etiquetas del usuario que ha entrado*/
-        jLabelNombreUsuario.setText(usu.getNombre());
-        jLabelTipoUsuario.setText(tipoUsuario);
-        jLabelError.setVisible(false);
-        jLabelError1.setVisible(false);
-        jLabelError2.setVisible(false);
-        /**Mostramos el panel Principal*/
-        mostrarPanel("Principal");
-        mostrarDatosPerso(usu);
+            /**Ponemos las etiquetas del usuario que ha entrado*/
+            jLabelNombreUsuario.setText(usu.getNombre());
+            jLabelTipoUsuario.setText(tipoUsuario);
+            jLabelError.setVisible(false);
+            jLabelError1.setVisible(false);
+            jLabelError2.setVisible(false);
+            /**Mostramos el panel Principal*/
+            mostrarPanel("Principal");
+            mostrarDatosPerso(usu);
 
 
-        /**Cargamos la foto de login*/
-        jLabelTipoUsuarioIdentificado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo-Usuario-Personal.png"))); // NOI18N
+            /**Cargamos la foto de login*/
+            jLabelTipoUsuarioIdentificado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo-Usuario-Personal.png"))); // NOI18N
 
-        /**Enlazamos grupo botones de GestionarPersonal y ConsultarTurno*/
+            /**Enlazamos grupo botones de GestionarPersonal y ConsultarTurno*/
 
-        buttonGroup1.add(jRadioButtonManiana);
-        buttonGroup1.add(jRadioButtonTarde1);
-        buttonGroup1.add(jRadioButtonNoche);
-        jRadioButtonManiana.setSelected(true);
+            buttonGroup1.add(jRadioButtonManiana);
+            buttonGroup1.add(jRadioButtonTarde1);
+            buttonGroup1.add(jRadioButtonNoche);
+            jRadioButtonManiana.setSelected(true);
 
-        buttonGroup2.add(jRadioButtonAnalista);
-        buttonGroup2.add(jRadioButtonFarmaceutico);
-        buttonGroup2.add(jRadioButtonMedico);
-        buttonGroup2.add(jRadioButtonRadiologo);
-        jRadioButtonAnalista.setSelected(true);
+            buttonGroup2.add(jRadioButtonAnalista);
+            buttonGroup2.add(jRadioButtonFarmaceutico);
+            buttonGroup2.add(jRadioButtonMedico);
+            buttonGroup2.add(jRadioButtonRadiologo);
+            jRadioButtonAnalista.setSelected(true);
 
-        buttonGroup3.add(jRadioButtonSangre);
-        buttonGroup3.add(jRadioButtonOrina);
-        jRadioButtonSangre.setSelected(true);
+            buttonGroup3.add(jRadioButtonSangre);
+            buttonGroup3.add(jRadioButtonOrina);
+            jRadioButtonSangre.setSelected(true);
 
-        buttonGroup4.add(jRadioButtonSangre1);
-        buttonGroup4.add(jRadioButtonOrina1);
-        jRadioButtonSangre1.setSelected(true);
+            buttonGroup4.add(jRadioButtonSangre1);
+            buttonGroup4.add(jRadioButtonOrina1);
+            jRadioButtonSangre1.setSelected(true);
 
-        buttonGroup5.add(jRadioButtonSangre2);
-        buttonGroup5.add(jRadioButtonOrina2);
-        jRadioButtonSangre2.setSelected(true);
+            buttonGroup5.add(jRadioButtonSangre2);
+            buttonGroup5.add(jRadioButtonOrina2);
+            jRadioButtonSangre2.setSelected(true);
+        } catch (Exception ex) {
+            Logger.getLogger(UI_Analista.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /** This method is called from within the constructor to
@@ -1476,9 +1480,11 @@ public class UI_Analista extends javax.swing.JFrame {
              JOptionPane.showMessageDialog(null, "Analista No Modificado", "Error",JOptionPane.ERROR_MESSAGE);
 
 
-            } catch (SQLException ex) {
-                Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            } catch (Exception ex) {
+                Logger.getLogger(UI_Analista.class.getName()).log(Level.SEVERE, null, ex);
+            } //catch (SQLException ex) {
+               // Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+            //}
         }
 
 }//GEN-LAST:event_jButtonGuardarMouseClicked
@@ -2197,7 +2203,7 @@ public class UI_Analista extends javax.swing.JFrame {
 
     }
     
-    private void mostrarDatosPerso(Usuario usu) throws SQLException{
+    private void mostrarDatosPerso(Usuario usu) throws SQLException,Exception {
 
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(usu.getFecNac());
@@ -2225,7 +2231,7 @@ public class UI_Analista extends javax.swing.JFrame {
         }
 
         jTextFieldNombrePersonal.setText(usu.getNombre());
-        jTextFieldContraseniaPersonal.setText(usu.getContrasenia());
+        jTextFieldContraseniaPersonal.setText(AES.decrypt(usu.getContrasenia()));
         jTextFieldDNIPersonal.setText(usu.getDNI());
         jTextFieldApellidosPersonal.setText(usu.getApellidos());
         jTextFieldTelefonoPersonal.setText(usu.getTelefono());

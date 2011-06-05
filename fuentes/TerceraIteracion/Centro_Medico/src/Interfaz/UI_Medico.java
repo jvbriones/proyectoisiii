@@ -4119,7 +4119,7 @@ MedicamentoBD meBD = new MedicamentoBD();
 
  
  */
-    private void mostrarDatosPerso(Usuario usu) throws SQLException{
+    private void mostrarDatosPerso(Usuario usu) throws SQLException,Exception{
 
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(usu.getFecNac());
@@ -4151,7 +4151,7 @@ MedicamentoBD meBD = new MedicamentoBD();
   //      jTextFieldFechaNacimientoDiaPersonal.setText(num_dia);
     //    jTextFieldFechaNacimientoMesersonal.setText(num_mes);
         jTextFieldNombrePersonal.setText(usu.getNombre());
-        jTextFieldContraseniaPersonal.setText(usu.getContrasenia());
+        jTextFieldContraseniaPersonal.setText(AES.decrypt(usu.getContrasenia()));
         jTextFieldDNIPersonal.setText(usu.getDNI());
         jTextFieldApellidosPersonal.setText(usu.getApellidos());
         jTextFieldTelefonoPersonal.setText(usu.getTelefono());
