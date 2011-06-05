@@ -9,6 +9,7 @@ import javax.crypto.*;
 import javax.crypto.spec.*;
 import java.io.*;
 import java.security.*;
+import javax.swing.JOptionPane;
 
 /**
  * Clase para encriptar/desencriptar string mediante el algoritmo AES de 128 bits
@@ -26,6 +27,7 @@ public class AES {
 	if (f.exists()) {
 	  new FileInputStream(f).read(bytes);
 	} else {
+           JOptionPane.showMessageDialog(null, "La clave secreta se ha cambiado, hablar con Esteban para tener la clave secreta original.", "Nueva clave secreta",JOptionPane.ERROR_MESSAGE);
 	   KeyGenerator kgen = KeyGenerator.getInstance("AES");
 	   kgen.init(128);
 	   key = kgen.generateKey();
