@@ -202,4 +202,12 @@ public class GestorMedico {
         }
     }
 */
+   public Cita seleccionarCita(int idCita){
+       Cita cita;
+       CitaBD citabd=new CitaBD();
+       cita=citabd.obtener(idCita);
+       return cita;
+
+   }
+   
 }
