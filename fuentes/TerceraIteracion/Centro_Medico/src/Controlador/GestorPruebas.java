@@ -307,5 +307,27 @@ public class GestorPruebas {
 
         return Resultados;
     }
+    public boolean accederPacientePrueba(boolean acceso,String TipoPrueba,int idPrueba){
+        boolean exito=false;
+        if( TipoPrueba.equals("Radiologia")){
+                    PruebaRadiologiaBD prBD=new PruebaRadiologiaBD();
+                    PruebaRadiologia pr;
+                    pr=prBD.obtener(idPrueba);
+                    if(acceso==true) pr.setAcceso(true);
+                    if(acceso==false)  pr.setAcceso(false);
+                    prBD.actualizar(pr);
+                    exito=true;
+                }
+                else{
+                    PruebaAnalisisBD paBD=new PruebaAnalisisBD();
+                    PruebaAnalisis pa;
+                    pa=paBD.obtener(idPrueba);
+                    if(acceso==true) pa.setAcceso(true);
+                    if(acceso==false)  pa.setAcceso(false);
+                    paBD.actualizar(pa);
+                    exito=true;
+                }
+        return exito;
+    }
 
 }
