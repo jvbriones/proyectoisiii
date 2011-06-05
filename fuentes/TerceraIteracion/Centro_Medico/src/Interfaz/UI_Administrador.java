@@ -2422,12 +2422,11 @@ public class UI_Administrador extends javax.swing.JFrame {
 
                 jLabelContraseniaPaciente.setVisible(true);
                 jTextFieldContraseniaPaciente.setVisible(true);
-                System.out.println("He mostrado el paciente");
                 }
                 else{
-                    System.out.println("No es paciente");
+                    JOptionPane.showMessageDialog(null, "No existe el personal", "Consulta",JOptionPane.INFORMATION_MESSAGE);
                     jLabelErrorPaciente.setVisible(true);
-                    }
+                }
             }catch(Exception E){}
         }
         else
@@ -2459,7 +2458,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
                 //datos = gestUsu.consultarDatosPersonalesAdmin(jTextFieldDNIPersonal.getText());
                 if(elusuario ==null || elusuario.getTipo().equals("Paciente") || elusuario.getTipo().equals("Administrativo")){
-                    System.out.println("No es paciente");
+                    JOptionPane.showMessageDialog(null, "No es paciente", "Consultar",JOptionPane.INFORMATION_MESSAGE);
                     jLabelErrorPersonal.setVisible(true);
 
                  }
@@ -3001,28 +3000,28 @@ public class UI_Administrador extends javax.swing.JFrame {
             boolean exito;
 
            fechaNacimiento = dateChooserCombo2.getSelectedDate().getTime();
-            String tipoPersonal = "Analista";
-            if(jRadioButtonAnalista.isSelected())
+           String tipoPersonal = "Analista";
+           if(jRadioButtonAnalista.isSelected())
                 tipoPersonal = "Analista";
-            else if(jRadioButtonMedico.isSelected())
+           else if(jRadioButtonMedico.isSelected())
                 tipoPersonal = "Medico";
-            else if(jRadioButtonRadiologo.isSelected())
+           else if(jRadioButtonRadiologo.isSelected())
                 tipoPersonal = "Radiologo";
-            else if(jRadioButtonFarmaceutico.isSelected())
+           else if(jRadioButtonFarmaceutico.isSelected())
                 tipoPersonal = "Farmaceutico";
 
-       
+
             try {
                 if(tipoPersonal!="Farmaceutico")
                     exito = gesPer.altaPersonal(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(), jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), sfotografia, tipoPersonal);
                 else
                     exito = gesPer.altaFarmaceutico(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(), jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), sfotografia, tipoPersonal);
                 if(!exito){
-                    new InformacionExito().setVisible(true);
+                    JOptionPane.showMessageDialog(null, "Su operación se ha realizado con éxito", "Confirmación",JOptionPane.INFORMATION_MESSAGE);
                     limpiarFormulario("GestionarPersonal");
                     }
                 else
-                    new InformacionError().setVisible(true);
+                    JOptionPane.showMessageDialog(null, "Su operación no pudo realizarse", "Confirmación",JOptionPane.ERROR_MESSAGE);
 
             } catch (SQLException ex) {
                 Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
@@ -3046,7 +3045,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 if(!exito){
                     JOptionPane.showMessageDialog(null, "Su operacion se ha realizado con exito", "Alta paciente",JOptionPane.INFORMATION_MESSAGE);
                 }else{
-                    JOptionPane.showMessageDialog(null, "No se pudo realizar la operacion", "Aviso",JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "No se pudo realizar la operacion", "Error",JOptionPane.ERROR_MESSAGE);
                 }
             }catch (SQLException ex) {
                 Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
