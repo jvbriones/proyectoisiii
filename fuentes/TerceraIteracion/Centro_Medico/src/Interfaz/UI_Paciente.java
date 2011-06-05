@@ -34,7 +34,9 @@ public class UI_Paciente extends javax.swing.JFrame {
     private GestorPacientes gstPac;
     private GestorPruebas gstPru;
     private GestorCitas gstCit;
+    private GestorUsuarios gstUsu;
     private DefaultListModel modelo = new DefaultListModel();
+    
 
     /** Creates new form Principal_Administrador */
     public UI_Paciente() {
@@ -43,6 +45,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         gstPac = new GestorPacientes();
         gstPru = new GestorPruebas();
         gstCit = new GestorCitas();
+        gstUsu = new GestorUsuarios();
     }
 
     public UI_Paciente(Usuario usu, String tipoUsuario) throws SQLException{
@@ -53,6 +56,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         gstPac = new GestorPacientes();
         gstPru = new GestorPruebas();
         gstCit = new GestorCitas();
+        gstUsu = new GestorUsuarios();
         pasoAtras=false;
 
         /**Ponemos las etiquetas del usuario que ha entrado*/
@@ -2406,23 +2410,29 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jTextPane2.setText(receta.getJuicioDiagnostico());
                 jTextPane1.setText(receta.getInstrucciones());
                 jTextFieldFechaReceta.setText(receta.getFecha().toString());
-                //jTextFieldDNIMedicoReceta.setText(receta.getMedi().getDNI());
-                //jTextFieldNombreMedicoReceta.setText(receta.getMedi().getNombre() + " " + receta.getMedi().getApellidos());
-                //jTextFieldTelefonoMedicoReceta.setText(receta.getMedi().getTelefono());
-                //jTextFieldEmailMedicoReceta.setText(receta.getMedi().getEmail());
-
+                /*jTextFieldDNIMedicoReceta.setText(receta.getMedi().getDNI());
+                jTextFieldNombreMedicoReceta.setText(receta.getMedi().getNombre() + " " + receta.getMedi().getApellidos());
+                jTextFieldTelefonoMedicoReceta.setText(receta.getMedi().getTelefono());
+                jTextFieldEmailMedicoReceta.setText(receta.getMedi().getEmail());
+                 */
+                
+                jTextFieldDNIMedicoReceta.setText("no funciona receta.getMedi()");
+                jTextFieldNombreMedicoReceta.setText("no funciona receta.getMedi()");
+                jTextFieldTelefonoMedicoReceta.setText("no funciona receta.getMedi()");
+                jTextFieldEmailMedicoReceta.setText("no funciona receta.getMedi()");
+                        
                 modelo.clear();
                 jList8.setModel(modelo);
                 Set<MedicamentoRecetado> medicamentos = receta.getMedicamentosRecetados();
-/*                if( !(medicamentos.isEmpty() ) ){
+                if( !(medicamentos.isEmpty() ) ){
                     for(Iterator<MedicamentoRecetado> it = medicamentos.iterator(); it.hasNext();){
                         modelo.addElement(it.next().getMedicamento().getNombre());
                     }
                 }else{
                     modelo.addElement("No hay medicamentos");
-                }*/
+                }
                 
-                modelo.addElement("No hay medicamentos porque falla, mirar codigo 2424 en UI_paciente");
+               // modelo.addElement("No hay medicamentos porque falla, mirar codigo 2424 en UI_paciente");
  
                 mostrarPanel("ConsultarReceta");
             }
@@ -2456,7 +2466,15 @@ public class UI_Paciente extends javax.swing.JFrame {
                 for(Iterator it = set_receta.iterator(); it.hasNext();){
                     recet = (Receta)it.next();
                     String total="";
-                    total=recet.getFecha()+espacio+recet.getMedi()+espacio+recet.getId();
+                    String fecha=recet.getFecha().toString();
+                    System.out.println("nombre medico"+recet.getMedi());
+                    Usuario unmedico= gstUsu.obtenerUsuario(recet.getMedi().getDNI()); 
+                   // String medico=recet.getMedi();
+                    //String Nombre_Medico=recet.getMedi().getNombre();
+                    
+                    String medico = unmedico.getNombre();
+                    String id_string= String.valueOf(recet.getId());
+                    total=fecha+espacio+medico+espacio+id_string;
                     modelo.addElement(total);
                 }    
                 jList3.setModel(modelo);

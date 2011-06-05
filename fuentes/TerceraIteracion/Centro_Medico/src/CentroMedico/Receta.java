@@ -42,7 +42,6 @@ public class Receta implements Serializable{
         this.Fecha = F;
         this.Paci = pa;
         this.Medi = pm;
-        //medi = medBD.obtener(me);
 
 
     }

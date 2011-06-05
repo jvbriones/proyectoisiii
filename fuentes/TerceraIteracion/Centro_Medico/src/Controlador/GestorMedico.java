@@ -60,6 +60,7 @@ public class GestorMedico {
         m = pm.obtener(medi);
        // medic = (Medico)us.obtener(medi);
         re = new Receta(Instrucciones,JuicioDiagnostico, fecha, pacien, m);
+        System.out.println(" nombre_medico"+m.getNombre());
 
         ArrayList medicamentos;
         Set<MedicamentoRecetado> medRec;

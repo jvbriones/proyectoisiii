@@ -2533,16 +2533,15 @@ public class UI_Administrador extends javax.swing.JFrame {
             fechainiciomostrar1.setText(personal.getTurno().getHoraInicio().toString());
             fechainiciomostrar2.setText(personal.getTurno().getHoraFin().toString());
             fechainiciomostrar3.setText(personal.getTurno().getTipo());
-            new InformacionExito().setVisible(true);
             }
                 else{
                     System.out.println("Este personal medico no tiene turno asignado");
-                    new InformacionError().setVisible(true);
+                     JOptionPane.showMessageDialog(null, "Este personal no tiene turno asignado", "Error",JOptionPane.ERROR_MESSAGE);
                 }
             }
             else{
                                 System.out.println("El DNI NO Es de un PersonalMedico");
-                new InformacionError().setVisible(true);
+                JOptionPane.showMessageDialog(null, "El DNI no es de un PersonalMedico", "Error",JOptionPane.ERROR_MESSAGE);
             }
             
        
@@ -2583,18 +2582,14 @@ public class UI_Administrador extends javax.swing.JFrame {
                   personal.setTurno(tur);
                 personalbd.actualizar(personal);
 
-                     new InformacionExito().setVisible(true);
+                    JOptionPane.showMessageDialog(null, "Turno Añadido con exito", "Exito",JOptionPane.INFORMATION_MESSAGE);
                    }
                 
                 else{
-                      System.out.println("El dni NO corresponde a un PersonalMedico");
-                        new InformacionError().setVisible(true);
+                         JOptionPane.showMessageDialog(null, "El dni NO corresponde a un PersonalMedico", "Error",JOptionPane.ERROR_MESSAGE);
                    }
         }
           
-
-
-
 
 
     }//GEN-LAST:event_jButtonAltaTurnoMouseClicked
@@ -2972,9 +2967,9 @@ public class UI_Administrador extends javax.swing.JFrame {
             personal.setTurno(tur);
             
            personalbd.actualizar(personal);
-            new InformacionExito().setVisible(true);
+           JOptionPane.showMessageDialog(null, "Turno dado de Baja con Exito", "Exito",JOptionPane.INFORMATION_MESSAGE);
         }
-        else new InformacionError().setVisible(true);
+        else  JOptionPane.showMessageDialog(null, "Este personal no Existe", "Error",JOptionPane.ERROR_MESSAGE);
         
         
          
@@ -3028,7 +3023,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         }
         else
-            jLabelErrorPersonal.setVisible(true);
+             JOptionPane.showMessageDialog(null, "Corriga los campos", "Error",JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_jButtonAltaPersonalMouseClicked
 
     private void jButtonAltaPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAltaPacienteMouseClicked
@@ -3052,7 +3047,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         }
         else
-            jLabelErrorPaciente.setVisible(true);
+             JOptionPane.showMessageDialog(null, "Comprueba el formulario", "Error",JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_jButtonAltaPacienteMouseClicked
 
     private void jButtonGuardarPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarPacienteMouseClicked
@@ -3067,12 +3062,11 @@ public class UI_Administrador extends javax.swing.JFrame {
                     exito=gesPac.modificarPaciente(jTextFieldDNIPaciente.getText(), jTextFieldNombrePaciente.getText(), jTextFieldApellidosPaciente.getText(), jTextFieldDireccionPaciente.getText(), jTextFieldEmailPaciente.getText(), jTextFieldContraseniaPaciente.getText(),jTextFieldTelefonoPaciente.getText(), fechaNacimiento, jTextFieldLugarNacimientoPaciente.getText(), sfotografia);
 
                     if(exito){
-                        new InformacionExito().setVisible(true);
+                         JOptionPane.showMessageDialog(null, "Paciente modificado con exito", "Exito",JOptionPane.INFORMATION_MESSAGE);
                         }
                     else{
 
-                        System.out.println( "exito!!");
-                            new InformacionError().setVisible(true);
+                            JOptionPane.showMessageDialog(null, "No se ha podido modificar al paciente", "Error",JOptionPane.ERROR_MESSAGE);
                     }
                 }catch (SQLException ex) {
                     Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
@@ -3080,7 +3074,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
             }
         else
-            jLabelErrorPaciente.setVisible(true);
+             JOptionPane.showMessageDialog(null, "Compruebe el formulario", "Error",JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_jButtonGuardarPacienteMouseClicked
 
     private void jButtonGuardarPersonalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarPersonalMouseClicked
@@ -3111,11 +3105,13 @@ public class UI_Administrador extends javax.swing.JFrame {
                          exito = gesPer.modificarPersonalFarmacia(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(), jTextFieldContraseniaPersonal.getText(),jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), sfotografia, tipoPersonal);
 
                 if(exito){
-                        new InformacionExito().setVisible(true);
-                    //limpiarFormulario("GestionarPersonal");
+                      JOptionPane.showMessageDialog(null, "Personal modificado con exito", "Exito",JOptionPane.INFORMATION_MESSAGE);
+
+                  
                     }
                     else
-                        new InformacionError().setVisible(true);
+                JOptionPane.showMessageDialog(null, "No se ha podido modificar al Personal", "Error",JOptionPane.ERROR_MESSAGE);
+
 
 
             } catch (SQLException ex) {
@@ -3123,7 +3119,8 @@ public class UI_Administrador extends javax.swing.JFrame {
             }
         }
         else
-            jLabelErrorPersonal.setVisible(true);
+            JOptionPane.showMessageDialog(null, "Compruebe el formulario", "Error",JOptionPane.ERROR_MESSAGE);
+
     }//GEN-LAST:event_jButtonGuardarPersonalMouseClicked
 
     private void jTextFieldApellidosPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldApellidosPacienteActionPerformed
