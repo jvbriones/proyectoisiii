@@ -113,11 +113,11 @@ public class GestorPacientes {
            
    }
           
-   public Set<Enfermedad> consultarInformacionClinica(String DNIPaciente) throws SQLException{
-       Set<Enfermedad> enf=null;
+   public ArrayList<Enfermedad> consultarInformacionClinica(String DNIPaciente) throws SQLException{
+       ArrayList<Enfermedad> enf=null;
        
         EnfermedadBD enfermedad = new EnfermedadBD();
-          // enf= enfermedad.ObtenerEnfermedades(DNIPaciente);
+        enf= enfermedad.ObtenerEnfermedades(DNIPaciente);
      
        return enf;
            

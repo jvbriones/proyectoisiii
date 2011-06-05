@@ -276,6 +276,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jLabelMedico = new javax.swing.JLabel();
         jLabelFechaReceta = new javax.swing.JLabel();
         jButtonConsultarReceta = new javax.swing.JButton();
+        jLabelMedico1 = new javax.swing.JLabel();
         jPanelConsultarReceta = new javax.swing.JPanel();
         jLabelInformacionDetalladaReceta = new javax.swing.JLabel();
         jLabelInstruccionReceta = new javax.swing.JLabel();
@@ -914,7 +915,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jPanelGestionarCitaOnline.add(jPanelBotones, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 580, 60));
 
-        jPanelGestionarCitaOnline.setBounds(0, 0, -1, -1);
+        jPanelGestionarCitaOnline.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelGestionarCitaOnline, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelConsultarCitaOnline.setMinimumSize(new java.awt.Dimension(901, 510));
@@ -1157,7 +1158,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         });
         jPanelConsultarCitaOnline.add(jTextFieldDNIPacienteCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 90, -1));
 
-        jPanelConsultarCitaOnline.setBounds(0, 0, -1, -1);
+        jPanelConsultarCitaOnline.setBounds(0, 0, 901, 531);
         ZonaTrabajo.add(jPanelConsultarCitaOnline, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jPanelGestionarPaciente.setPreferredSize(new java.awt.Dimension(901, 531));
@@ -1406,6 +1407,8 @@ public class UI_Paciente extends javax.swing.JFrame {
             }
         });
 
+        jLabelMedico1.setText("Id");
+
         org.jdesktop.layout.GroupLayout jPanelVerRecetasLayout = new org.jdesktop.layout.GroupLayout(jPanelVerRecetas);
         jPanelVerRecetas.setLayout(jPanelVerRecetasLayout);
         jPanelVerRecetasLayout.setHorizontalGroup(
@@ -1414,12 +1417,15 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(jPanelVerRecetasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelVerRecetasLayout.createSequentialGroup()
                         .add(282, 282, 282)
-                        .add(jPanelVerRecetasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(jPanelVerRecetasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                             .add(jPanelVerRecetasLayout.createSequentialGroup()
-                                .add(49, 49, 49)
+                                .add(20, 20, 20)
                                 .add(jLabelFechaReceta)
-                                .add(140, 140, 140)
-                                .add(jLabelMedico))
+                                .add(86, 86, 86)
+                                .add(jLabelMedico)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .add(jLabelMedico1)
+                                .add(43, 43, 43))
                             .add(jPanelVerRecetasLayout.createSequentialGroup()
                                 .add(110, 110, 110)
                                 .add(jButtonConsultarReceta))
@@ -1430,7 +1436,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                     .add(jPanelVerRecetasLayout.createSequentialGroup()
                         .add(391, 391, 391)
                         .add(jLabelListaRecetas)))
-                .addContainerGap(291, Short.MAX_VALUE))
+                .addContainerGap(292, Short.MAX_VALUE))
         );
         jPanelVerRecetasLayout.setVerticalGroup(
             jPanelVerRecetasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1439,15 +1445,16 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(jLabelGestionarPaciente7)
                 .add(50, 50, 50)
                 .add(jLabelListaRecetas)
-                .add(31, 31, 31)
+                .add(26, 26, 26)
                 .add(jPanelVerRecetasLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabelMedico)
+                    .add(jLabelMedico1)
                     .add(jLabelFechaReceta))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jScrollPane6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 174, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(38, 38, 38)
                 .add(jButtonConsultarReceta)
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
 
         jPanelVerRecetas.setBounds(1, 0, 900, 530);
@@ -1569,7 +1576,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                     .add(jPanelConsultarRecetaLayout.createSequentialGroup()
                         .add(20, 20, 20)
                         .add(jLabelInformacionDetalladaReceta, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 839, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         jPanelConsultarRecetaLayout.setVerticalGroup(
             jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1585,10 +1592,10 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelConsultarRecetaLayout.createSequentialGroup()
                         .add(jScrollPane8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 74, Short.MAX_VALUE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 73, Short.MAX_VALUE)
                         .add(jLabel46))
-                    .add(jTextFieldFechaReceta, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-                    .add(jScrollPane7, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE))
+                    .add(jTextFieldFechaReceta, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
+                    .add(jScrollPane7, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE))
                 .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelConsultarRecetaLayout.createSequentialGroup()
                         .add(33, 33, 33)
@@ -1609,7 +1616,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                     .add(jPanelConsultarRecetaLayout.createSequentialGroup()
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                         .add(jScrollPane20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 167, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .add(110, 110, 110))
+                .add(112, 112, 112))
         );
 
         jPanelConsultarReceta.setBounds(1, 0, 800, 530);
@@ -3275,6 +3282,7 @@ public class UI_Paciente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelListaRecetas;
     private javax.swing.JLabel jLabelLugarNacimientoPaciente;
     private javax.swing.JLabel jLabelMedico;
+    private javax.swing.JLabel jLabelMedico1;
     private javax.swing.JLabel jLabelMedicoReceta;
     private javax.swing.JLabel jLabelNombreMedicoReceta;
     private javax.swing.JLabel jLabelNombrePaciente;
