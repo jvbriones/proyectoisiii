@@ -828,7 +828,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             jButtonAltaPersonalMouseClicked(evt);
         }
     });
-    jPanelGestionarPersonal.add(jButtonAltaPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 460, 93, 39));
+    jPanelGestionarPersonal.add(jButtonAltaPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 460, 80, 39));
 
     jTextFieldApellidosPersonal.addKeyListener(new java.awt.event.KeyAdapter() {
         public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -921,7 +921,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             jButtonConsultarPersonalActionPerformed(evt);
         }
     });
-    jPanelGestionarPersonal.add(jButtonConsultarPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 460, 93, 39));
+    jPanelGestionarPersonal.add(jButtonConsultarPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 460, 120, 39));
 
     jLabel1.setText("Tipo personal");
     jPanelGestionarPersonal.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 321, -1, -1));
