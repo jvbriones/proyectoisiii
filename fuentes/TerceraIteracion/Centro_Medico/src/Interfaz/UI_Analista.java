@@ -29,6 +29,7 @@ import javax.swing.DefaultListModel;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 
 
 
@@ -1533,11 +1534,13 @@ public class UI_Analista extends javax.swing.JFrame {
             try {
                 exito = gesPer.modificarPersonal(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(),jTextFieldContraseniaPersonal.getText(), jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), sfotografia, tipoPersonal);
                 if(exito){
-                    new InformacionExito().setVisible(true);
+             JOptionPane.showMessageDialog(null, "Analista Modificado con exito", "Exito",JOptionPane.INFORMATION_MESSAGE);
+
                     limpiarFormulario("GestionarPersonal");
                     }
                 else
-                    new InformacionError().setVisible(true);
+             JOptionPane.showMessageDialog(null, "Analista No Modificado", "Error",JOptionPane.ERROR_MESSAGE);
+
 
             } catch (SQLException ex) {
                 Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
@@ -1651,12 +1654,13 @@ public class UI_Analista extends javax.swing.JFrame {
              if(!exito){
                  System.out.println("El atributo "+jTextFieldNombreAtributo.getText()+" ya existe");
                  jLabelErrorRepe.setVisible(true);
-                 new InformacionError().setVisible(true);
+                  JOptionPane.showMessageDialog(null, "Atributo No guardado", "Error",JOptionPane.ERROR_MESSAGE);
+
              }
 
              else{
-                 System.out.println("Operación realizada con éxito");
-                 new InformacionExito().setVisible(true);
+                JOptionPane.showMessageDialog(null, "Atributo guardado con Exito", "Exito",JOptionPane.INFORMATION_MESSAGE);
+
                  mostrarPanel("Principal");
              }
          }
@@ -1667,18 +1671,19 @@ public class UI_Analista extends javax.swing.JFrame {
 
              exito = gp.agregarAtributoOrina(jTextFieldNombreAtributo.getText(),limSup,limInf,medida);
              if(!exito){
-                 System.out.println("El atributo "+jTextFieldNombreAtributo.getText()+" ya existe");
-                 new InformacionError().setVisible(true);
+            JOptionPane.showMessageDialog(null, "El Atributo ya existe", "Error",JOptionPane.ERROR_MESSAGE);
+
              }
 
              else{
-                 System.out.println("Operación realizada con éxito");
-                 new InformacionExito().setVisible(true);
+              JOptionPane.showMessageDialog(null, "El Atributo ha sido guardado", "Exito",JOptionPane.INFORMATION_MESSAGE);
+
              }
          }
         }
          else
-               jLabelError1.setVisible(true);
+       JOptionPane.showMessageDialog(null, "Compruebe el formulario", "Error",JOptionPane.ERROR_MESSAGE);
+
     }//GEN-LAST:event_jButtonGuardarAtributoMouseClicked
 
     private void jButtonGuardarAtributo1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarAtributo1MouseClicked
@@ -1690,26 +1695,22 @@ public class UI_Analista extends javax.swing.JFrame {
          if(jRadioButtonSangre2.isSelected()){
              exito = gp.eliminarAtributoSangre(jTextFieldNombreAtributo1.getText());
              if(exito){
-                 System.out.println("El atributo "+jTextFieldNombreAtributo1.getText()+" fue eliminado");
-                 new InformacionExito().setVisible(true);
-             }
+                JOptionPane.showMessageDialog(null, "El Atributo fue eliminado con exito", "Exito",JOptionPane.INFORMATION_MESSAGE);
+            }
 
              else{
-                 System.out.println("Error");
-                 new InformacionError().setVisible(true);
+                  JOptionPane.showMessageDialog(null, "El Atributo NO fue eliminado con exito", "Error",JOptionPane.ERROR_MESSAGE);
              }
          }
 
          if(jRadioButtonOrina2.isSelected()){
              exito = gp.eliminarAtributoOrina(jTextFieldNombreAtributo1.getText());
              if(exito){
-                 System.out.println("El atributo "+jTextFieldNombreAtributo1.getText()+" fue eliminado");
-                 new InformacionExito().setVisible(true);
-             }
+                JOptionPane.showMessageDialog(null, "El Atributo fue eliminado con exito", "Exito",JOptionPane.INFORMATION_MESSAGE);
+            }
 
              else{
-                 System.out.println("Operación realizada con éxito");
-                 new InformacionError().setVisible(true);
+                  JOptionPane.showMessageDialog(null, "El Atributo NO fue eliminado con exito", "Error",JOptionPane.ERROR_MESSAGE);
              }
          }
         }
@@ -1755,7 +1756,8 @@ public class UI_Analista extends javax.swing.JFrame {
 
         }
         else
-            jLabelError.setVisible(true);
+            JOptionPane.showMessageDialog(null, "Compruebe el formulario", "Error",JOptionPane.ERROR_MESSAGE);
+
      
     
     }//GEN-LAST:event_jButtonAlmacenarResultadoRadiologoMouseClicked
@@ -1783,15 +1785,6 @@ public class UI_Analista extends javax.swing.JFrame {
 
     private void jTextFieldValorLinfocitosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldValorLinfocitosKeyTyped
         // TODO add your handling code here:
-
-        /**Comprobamos que no se teclee un número*/
-      /**  char teclaPresionada = evt.getKeyChar();
-        if(Character.isDigit(teclaPresionada) == false)
-            evt.consume();
-
-        /**Limitamos la longitud*/
-        /**if(jTextFieldValorLinfocitos.getText().length() > 4)
-            evt.consume();*/
     }//GEN-LAST:event_jTextFieldValorLinfocitosKeyTyped
 
     private void jTextFieldLimiteSupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldLimiteSupActionPerformed
@@ -1819,7 +1812,6 @@ public class UI_Analista extends javax.swing.JFrame {
             jListAtributos.setModel(aux);
         }
         jTextFieldValorLinfocitos.setText("");
-            System.out.println("Cambio a sangre");
     }//GEN-LAST:event_jRadioButtonSangreItemStateChanged
 
     private void jRadioButtonOrinaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jRadioButtonOrinaItemStateChanged
@@ -1926,7 +1918,6 @@ public class UI_Analista extends javax.swing.JFrame {
                     jLabelErrorLimite.setVisible(false);
                     jLabelErrorLimite1.setVisible(false);
                 }
-                System.out.println("index "+ jListAtributos.getSelectedIndex()+"valor " +jTextFieldValorLinfocitos.getText());
 
         }
 
@@ -2264,29 +2255,14 @@ public class UI_Analista extends javax.swing.JFrame {
                     jLabelFotoPersonal.setIcon(aescala); // NOI18N
                 }
                 catch(Exception ex){
-                    System.err.print("Error al leer el archivo");
+              JOptionPane.showMessageDialog(null, "Error al cargar la foto", "Error",JOptionPane.ERROR_MESSAGE);
+
                 }
             }
         }
 
     }
-
-    /* Comentado por Nicolás
-    private void identificarPersonal( String nombreUsuario) throws SQLException{
-
-        //trabajar con personal no se puede, ya que su BD está mal
-
-        Usuario perso=null;
-        usuarioBD usu_bd=new usuarioBD ();
-        perso=usu_bd.obtenerUsuario(nombreUsuario);
-
-        mostrarDatosPerso(perso);
-
-    }
-     */
-
     
-
     private void mostrarDatosPerso(Usuario usu) throws SQLException{
 
         Calendar calendar = Calendar.getInstance();
@@ -2314,9 +2290,6 @@ public class UI_Analista extends javax.swing.JFrame {
             System.err.print("Error al leer el archivo");
         }
 
-        //jTextFieldFechaNacimientoAnioPersonal.setText(num_anio);
-        //jTextFieldFechaNacimientoDiaPersonal.setText(num_dia);
-        //jTextFieldFechaNacimientoMesersonal.setText(num_mes);
         jTextFieldNombrePersonal.setText(usu.getNombre());
         jTextFieldContraseniaPersonal.setText(usu.getContrasenia());
         jTextFieldDNIPersonal.setText(usu.getDNI());
@@ -2456,15 +2429,7 @@ public class UI_Analista extends javax.swing.JFrame {
         return true;
     }
     // @param args the command line arguments
-    
-/*    public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new UI_Paciente("Paciente", "paciente").setVisible(true);
-            }
-        });
-    }
-*/
+
  
     byte[] sfotografia;
     // Variables declaration - do not modify//GEN-BEGIN:variables
