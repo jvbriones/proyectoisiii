@@ -40,7 +40,6 @@ public class CitaBD {
         session.beginTransaction ();
         try{
             session.update(Cita);
-            System.out.println("Cita actualizada correctamente.");
         }catch(HibernateException ex){
             System.err.println(ex.getMessage());
         }

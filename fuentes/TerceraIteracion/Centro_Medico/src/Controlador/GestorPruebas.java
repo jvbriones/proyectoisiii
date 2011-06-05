@@ -302,6 +302,7 @@ public class GestorPruebas {
 
         return Resultados;
     }
+
     public boolean accederPacientePrueba(boolean acceso,String TipoPrueba,int idPrueba){
         boolean exito=false;
         if( TipoPrueba.equals("Radiologia")){

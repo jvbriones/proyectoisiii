@@ -536,7 +536,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             .add(jPanelPrincipalLayout.createSequentialGroup()
                 .add(87, 87, 87)
                 .add(jLabel11)
-                .addContainerGap(755, Short.MAX_VALUE))
+                .addContainerGap(756, Short.MAX_VALUE))
             .add(jPanelPrincipalLayout.createSequentialGroup()
                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelPrincipalLayout.createSequentialGroup()
@@ -569,7 +569,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                                 .add(jPanelPrincipalLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
                                     .add(jButtonConsultarRecetas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                     .add(jButtonGestionarCitass, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(15, Short.MAX_VALUE))
+                                .addContainerGap(16, Short.MAX_VALUE))
                             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelPrincipalLayout.createSequentialGroup()
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                                 .add(jLabel45)
@@ -1723,30 +1723,31 @@ public class UI_Paciente extends javax.swing.JFrame {
                     .add(jPanelVerCitaLayout.createSequentialGroup()
                         .add(55, 55, 55)
                         .add(jButtonConsCita))
-                    .add(jPanelVerCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                        .add(jPanelVerCitaLayout.createSequentialGroup()
-                            .add(jLabel37)
-                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .add(jLabel36))
-                        .add(org.jdesktop.layout.GroupLayout.LEADING, jScrollPane13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 191, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(362, Short.MAX_VALUE))
+                    .add(jPanelVerCitaLayout.createSequentialGroup()
+                        .add(jLabel37)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 184, Short.MAX_VALUE)
+                        .add(jLabel36))
+                    .add(jScrollPane13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 261, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(315, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
         jPanelVerCitaLayout.setVerticalGroup(
             jPanelVerCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanelVerCitaLayout.createSequentialGroup()
-                .add(69, 69, 69)
-                .add(jSeparator5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(459, Short.MAX_VALUE))
-            .add(jPanelVerCitaLayout.createSequentialGroup()
-                .add(53, 53, 53)
-                .add(jLabel35)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 51, Short.MAX_VALUE)
-                .add(jPanelVerCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel36)
-                    .add(jLabel37))
+                .add(jPanelVerCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jPanelVerCitaLayout.createSequentialGroup()
+                        .add(69, 69, 69)
+                        .add(jSeparator5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(126, 126, 126))
+                    .add(jPanelVerCitaLayout.createSequentialGroup()
+                        .add(53, 53, 53)
+                        .add(jLabel35)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 62, Short.MAX_VALUE)
+                        .add(jPanelVerCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(jLabel36)
+                            .add(jLabel37))))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jScrollPane13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 185, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(41, 41, 41)
+                .add(30, 30, 30)
                 .add(jButtonConsCita)
                 .add(84, 84, 84))
         );
@@ -2365,22 +2366,21 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void jButtonConsultarRecetaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarRecetaMouseClicked
         // TODO add your handling code here:
          try{
-             
-        String receta_string = (String)jList3.getSelectedValue(),
-        valores="",
-                   numero="";
-        
-        String receta_id="";
-        char espacio=' ';
-        boolean ya=false;
-        
-        for ( int i=receta_string.length()-1; i>0 && !ya; i--){
-            if ( receta_string.charAt(i)!= espacio){
-                receta_id+=String.valueOf(receta_string.charAt(i));
+            String receta_string = (String)jList3.getSelectedValue(),
+            valores="",
+                       numero="";
+
+            String receta_id="";
+            char espacio=' ';
+            boolean ya=false;
+
+            for ( int i=receta_string.length()-1; i>0 && !ya; i--){
+                if (receta_string.charAt(i)!= espacio){
+                    receta_id+=String.valueOf(receta_string.charAt(i));
+                }
+                else ya=true;
+
             }
-            else ya=true;
-            
-        }
         
        
            
@@ -2550,11 +2550,6 @@ public class UI_Paciente extends javax.swing.JFrame {
                     }
                 }
 
-                /*for(Iterator<ArrayList <String>> it = Pruebas.iterator(); it.hasNext(); ){
-                    pruebas = it.next();
-                    elemento = "        " + pruebas.get(0) + tabula + "Análisis";
-                    modelo.addElement(elemento);
-                }*/
             }else{
                 JOptionPane.showMessageDialog(null, "¡No tiene pruebas disponibles!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
             }
@@ -2579,7 +2574,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                dni = user.getDNI();
         modelo.clear();//Inicializando la lista vacia
         jList9.setModel(modelo);
-        
+
         try{
             ArrayList<Cita> array_citas = gstCit.VerCitas(dni);
             if(!array_citas.isEmpty()){
@@ -2588,7 +2583,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                     modelo.addElement(elemento);
                 }
             }else{
-                JOptionPane.showMessageDialog(null, "¡No tiene citas disponibles!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "¡No tiene citas disponibles!", "Aviso", JOptionPane.INFORMATION_MESSAGE);
             }
         }catch(SQLException ex){
             System.err.println(ex.getStackTrace());
@@ -2603,14 +2598,16 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void jButtonVerPruebaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonVerPruebaMouseClicked
         // TODO add your handling code here:
         
-        int idPrueba = jList4.getSelectedIndex();
+        int index = jList4.getSelectedIndex() + 1, idPrueba = 0;
         String tipo = "";
 
-        if(idPrueba > 0){
+        if(index > 0){
             PruebaAnalisisBD paBD = new PruebaAnalisisBD();
             PruebaAnalisis pa = paBD.obtener(idPrueba);
             tipo = pa.getClass().getName();
             String seleccion = (String) modelo.getElementAt(jList4.getSelectedIndex());
+            seleccion.charAt(index);
+
 
             ArrayList<String> Resultados = new ArrayList<String>();
             if(seleccion.contains("Analisis")){
