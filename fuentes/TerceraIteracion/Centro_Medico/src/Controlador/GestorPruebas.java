@@ -244,7 +244,7 @@ public class GestorPruebas {
         Resultados.add(psBD.obtener(idPrueba).getAnalista().getNombre() + " " + psBD.obtener(idPrueba).getAnalista().getApellidos());
         //Resultados.add(psBD.obtener(idPrueba).getComentario());
 
-        if(tipo.equals("Sangre")){
+        if(tipo.contains("Sangre")){
             PruebaSangre ps = psBD.obtener(idPrueba);
             Set<ResultadoSangre> resulSangre = ps.getResultadosSangre();
             for(Iterator<ResultadoSangre> it = resulSangre.iterator(); it.hasNext();){
@@ -253,7 +253,7 @@ public class GestorPruebas {
                 Resultados.add(resultado);
             }
         }else
-            if(tipo.equals("Orina")){
+            if(tipo.contains("Orina")){
                 PruebaOrinaBD poBD = new PruebaOrinaBD();
                 PruebaOrina o = poBD.obtener(idPrueba);
                 Set<ResultadoOrina> resulOri = o.getResultadosOrina();
@@ -277,7 +277,7 @@ public class GestorPruebas {
         //Resultados.add(pru.getComentario());
         Resultados.add(pru.getRadiologo().getNombre() + " " + pru.getRadiologo().getApellidos());
 
-        if(tipo.equals("Resonancia")){
+        if(tipo.contains("Resonancia")){
             ResonanciaBD resoBD = new ResonanciaBD();
             Resonancia res = resoBD.obtener(idPrueba);
             Set<Imagen> im = res.getResonancias();
@@ -288,7 +288,7 @@ public class GestorPruebas {
                 Resultados.add(ruta);
             }
         }else
-            if(tipo.equals("Radiografia")){
+            if(tipo.contains("Radiografia")){
                 RadiografiaBD radioBD = new RadiografiaBD();
                 Radiografia rad = radioBD.obtener(idPrueba);
                 Set<Imagen> im = rad.getRadiografias();

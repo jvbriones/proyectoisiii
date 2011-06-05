@@ -2062,7 +2062,6 @@ public class UI_Paciente extends javax.swing.JFrame {
             }
         }catch(SQLException ex){
             System.err.println(ex.getStackTrace());
-            JOptionPane.showMessageDialog(null, "¡Se produjo un error!", "Aviso",JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButtonGestionarCitaMouseClicked
 
@@ -2597,24 +2596,31 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void jButtonVerPruebaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonVerPruebaMouseClicked
         // TODO add your handling code here:
-        
-        int index = jList4.getSelectedIndex() + 1, idPrueba = 0;
-        String tipo = "";
+
+        int index = jList4.getSelectedIndex() + 1;
+        String idPrueba = "",
+               tipo = "";
+        char espacio = ' ';
+        String seleccion = (String) modelo.getElementAt(jList4.getSelectedIndex());
 
         if(index > 0){
+            for(int i = 0; i < seleccion.length(); i++){
+                if(seleccion.charAt(i) != espacio){
+                    idPrueba += String.valueOf(seleccion.charAt(i));
+                    if(seleccion.charAt(i+1) == espacio)
+                        i = seleccion.length();
+                }
+            }
+
             PruebaAnalisisBD paBD = new PruebaAnalisisBD();
-            PruebaAnalisis pa = paBD.obtener(idPrueba);
-            tipo = pa.getClass().getName();
-            String seleccion = (String) modelo.getElementAt(jList4.getSelectedIndex());
-            seleccion.charAt(index);
-
-
+            PruebaAnalisis pa = paBD.obtener(Integer.valueOf(idPrueba));
+            tipo = pa.getClass().toString();
             ArrayList<String> Resultados = new ArrayList<String>();
             if(seleccion.contains("Analisis")){
-                Resultados = gstPru.ConsultarPruebaAnalisis(idPrueba, tipo);
+                Resultados = gstPru.ConsultarPruebaAnalisis(Integer.valueOf(idPrueba), tipo);
             } else
                 if(seleccion.contains("Radiologia")){
-                    Resultados = gstPru.ConsultarPruebaRadiologia(idPrueba, tipo);
+                    Resultados = gstPru.ConsultarPruebaRadiologia(Integer.valueOf(idPrueba), tipo);
                 }
 
             jTextField1.setText(tipo);
