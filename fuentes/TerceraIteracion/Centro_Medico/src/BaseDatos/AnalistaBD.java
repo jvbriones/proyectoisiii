@@ -64,11 +64,9 @@ public class AnalistaBD {
         Analista analista = obtener(Dni);
 
         if (analista != null){
-            System.out.print("existeAnalista: Existe el analista");
            return true;
        }
        else{
-           System.out.print( "existeAnalista: No existe el analista\n");
            return false;
        }
     }

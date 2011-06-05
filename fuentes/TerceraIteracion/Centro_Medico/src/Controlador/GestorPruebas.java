@@ -275,7 +275,10 @@ public class GestorPruebas {
         PruebaRadiologia pru = prBD.obtener(idPrueba);
 
         //Resultados.add(pru.getComentario());
-        Resultados.add(pru.getRadiologo().getNombre() + " " + pru.getRadiologo().getApellidos());
+        //Resultados.add(pru.getRadiologo().getNombre() + " " + pru.getRadiologo().getApellidos());
+
+        RadiologoBD radioloBD = new RadiologoBD();
+        Resultados.add(radioloBD.obtener(pru.getRadiologo().getDNI()).getNombre() + " " + radioloBD.obtener(pru.getRadiologo().getDNI()).getApellidos());
 
         if(tipo.contains("Resonancia")){
             ResonanciaBD resoBD = new ResonanciaBD();

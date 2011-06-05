@@ -26,6 +26,7 @@ public class UsuarioBD {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction ();
         Usuario User = (Usuario) session.get(Usuario.class, Dni);
+        session.getTransaction().commit();
         if(User !=null)
         return true;
         else return false;

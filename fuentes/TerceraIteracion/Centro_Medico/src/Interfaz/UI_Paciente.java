@@ -360,6 +360,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jTextPane9 = new javax.swing.JTextPane();
         jScrollPane22 = new javax.swing.JScrollPane();
         jTextPane10 = new javax.swing.JTextPane();
+        jButton1 = new javax.swing.JButton();
         jPanelUsuario = new javax.swing.JPanel();
         jLabelUsuario = new javax.swing.JLabel();
         jLabelTipoUsuario = new javax.swing.JLabel();
@@ -1584,10 +1585,10 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelConsultarRecetaLayout.createSequentialGroup()
                         .add(jScrollPane8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 71, Short.MAX_VALUE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 70, Short.MAX_VALUE)
                         .add(jLabel46))
-                    .add(jTextFieldFechaReceta, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
-                    .add(jScrollPane7, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE))
+                    .add(jTextFieldFechaReceta, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
+                    .add(jScrollPane7, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE))
                 .add(jPanelConsultarRecetaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanelConsultarRecetaLayout.createSequentialGroup()
                         .add(33, 33, 33)
@@ -1608,7 +1609,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                     .add(jPanelConsultarRecetaLayout.createSequentialGroup()
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                         .add(jScrollPane20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 167, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .add(113, 113, 113))
+                .add(114, 114, 114))
         );
 
         jPanelConsultarReceta.setBounds(1, 0, 800, 530);
@@ -1759,76 +1760,165 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jLabel38.setFont(new java.awt.Font("Ubuntu", 1, 18));
         jLabel38.setText("Fecha");
-        jPanelDetalleCita.add(jLabel38);
-        jPanelDetalleCita.add(jSeparator6);
 
         jLabel41.setFont(new java.awt.Font("Ubuntu", 1, 48));
         jLabel41.setText("Información Detallada de la Cita");
-        jPanelDetalleCita.add(jLabel41);
 
         jScrollPane14.setViewportView(jTextPane3);
 
-        jPanelDetalleCita.add(jScrollPane14);
-
         jLabel42.setFont(new java.awt.Font("Ubuntu", 1, 18));
         jLabel42.setText("Hora");
-        jPanelDetalleCita.add(jLabel42);
 
         jLabel43.setFont(new java.awt.Font("Ubuntu", 1, 18));
         jLabel43.setText("Tipo de Cita");
-        jPanelDetalleCita.add(jLabel43);
 
         jLabel44.setFont(new java.awt.Font("Ubuntu", 1, 18));
         jLabel44.setText("Estado");
-        jPanelDetalleCita.add(jLabel44);
 
         jScrollPane15.setViewportView(jTextPane4);
 
-        jPanelDetalleCita.add(jScrollPane15);
-
         jScrollPane16.setViewportView(jTextPane5);
-
-        jPanelDetalleCita.add(jScrollPane16);
 
         jScrollPane17.setViewportView(jTextPane6);
 
-        jPanelDetalleCita.add(jScrollPane17);
-
         jLabel47.setFont(new java.awt.Font("Ubuntu", 1, 18));
         jLabel47.setText("Paciente");
-        jPanelDetalleCita.add(jLabel47);
 
         jLabel48.setFont(new java.awt.Font("Ubuntu", 1, 18));
         jLabel48.setText("DNI");
-        jPanelDetalleCita.add(jLabel48);
 
         jLabel49.setFont(new java.awt.Font("Ubuntu", 1, 18));
         jLabel49.setText("Nombre");
-        jPanelDetalleCita.add(jLabel49);
 
         jLabel50.setFont(new java.awt.Font("Ubuntu", 1, 18));
         jLabel50.setText("Email");
-        jPanelDetalleCita.add(jLabel50);
 
         jLabel51.setFont(new java.awt.Font("Ubuntu", 1, 18));
         jLabel51.setText("Teléfono");
-        jPanelDetalleCita.add(jLabel51);
 
         jScrollPane18.setViewportView(jTextPane7);
 
-        jPanelDetalleCita.add(jScrollPane18);
-
         jScrollPane19.setViewportView(jTextPane8);
-
-        jPanelDetalleCita.add(jScrollPane19);
 
         jScrollPane21.setViewportView(jTextPane9);
 
-        jPanelDetalleCita.add(jScrollPane21);
-
         jScrollPane22.setViewportView(jTextPane10);
 
-        jPanelDetalleCita.add(jScrollPane22);
+        jButton1.setText("Ver citas");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+
+        org.jdesktop.layout.GroupLayout jPanelDetalleCitaLayout = new org.jdesktop.layout.GroupLayout(jPanelDetalleCita);
+        jPanelDetalleCita.setLayout(jPanelDetalleCitaLayout);
+        jPanelDetalleCitaLayout.setHorizontalGroup(
+            jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanelDetalleCitaLayout.createSequentialGroup()
+                .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jPanelDetalleCitaLayout.createSequentialGroup()
+                        .add(63, 63, 63)
+                        .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jPanelDetalleCitaLayout.createSequentialGroup()
+                                .add(jSeparator6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(5, 5, 5)
+                                .add(jLabel41))
+                            .add(jPanelDetalleCitaLayout.createSequentialGroup()
+                                .add(jLabel47)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                                .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(jPanelDetalleCitaLayout.createSequentialGroup()
+                                        .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                            .add(jPanelDetalleCitaLayout.createSequentialGroup()
+                                                .add(23, 23, 23)
+                                                .add(jLabel38))
+                                            .add(jScrollPane14, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 99, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                        .add(18, 18, 18)
+                                        .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                            .add(jScrollPane15, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 89, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                            .add(jPanelDetalleCitaLayout.createSequentialGroup()
+                                                .add(23, 23, 23)
+                                                .add(jLabel42)))
+                                        .add(18, 18, 18)
+                                        .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                            .add(jScrollPane16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 117, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                            .add(jLabel43))
+                                        .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                            .add(jPanelDetalleCitaLayout.createSequentialGroup()
+                                                .add(18, 18, 18)
+                                                .add(jScrollPane17, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 88, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                            .add(jPanelDetalleCitaLayout.createSequentialGroup()
+                                                .add(31, 31, 31)
+                                                .add(jLabel44))))
+                                    .add(jPanelDetalleCitaLayout.createSequentialGroup()
+                                        .add(jScrollPane18, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 103, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                        .add(jScrollPane19, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 183, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                        .add(jScrollPane21, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 114, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                        .add(jScrollPane22, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 118, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))))
+                    .add(jPanelDetalleCitaLayout.createSequentialGroup()
+                        .add(179, 179, 179)
+                        .add(jLabel48)
+                        .add(89, 89, 89)
+                        .add(jLabel49)
+                        .add(83, 83, 83)
+                        .add(jLabel51)
+                        .add(49, 49, 49)
+                        .add(jLabel50))
+                    .add(jPanelDetalleCitaLayout.createSequentialGroup()
+                        .add(354, 354, 354)
+                        .add(jButton1)))
+                .addContainerGap(105, Short.MAX_VALUE))
+        );
+        jPanelDetalleCitaLayout.setVerticalGroup(
+            jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanelDetalleCitaLayout.createSequentialGroup()
+                .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jPanelDetalleCitaLayout.createSequentialGroup()
+                        .add(35, 35, 35)
+                        .add(jSeparator6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jPanelDetalleCitaLayout.createSequentialGroup()
+                        .add(5, 5, 5)
+                        .add(jLabel41)))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                    .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, jPanelDetalleCitaLayout.createSequentialGroup()
+                            .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                .add(jLabel38)
+                                .add(jLabel43))
+                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                            .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                                .add(jScrollPane14, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(jScrollPane16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, jPanelDetalleCitaLayout.createSequentialGroup()
+                            .add(jLabel42)
+                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                            .add(jScrollPane15, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                    .add(jPanelDetalleCitaLayout.createSequentialGroup()
+                        .add(jLabel44)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .add(jScrollPane17, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .add(46, 46, 46)
+                .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jLabel48)
+                    .add(jLabel49)
+                    .add(jLabel51)
+                    .add(jLabel50))
+                .add(11, 11, 11)
+                .add(jPanelDetalleCitaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jLabel47)
+                    .add(jScrollPane18, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jScrollPane19, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jScrollPane21, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jScrollPane22, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(117, 117, 117)
+                .add(jButton1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 32, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(151, Short.MAX_VALUE))
+        );
 
         jPanelDetalleCita.setBounds(1, 0, 900, 530);
         ZonaTrabajo.add(jPanelDetalleCita, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -2451,8 +2541,10 @@ public class UI_Paciente extends javax.swing.JFrame {
                     modelo.addElement(total);
                 }    
                 jList3.setModel(modelo);
-            }
-            mostrarPanel("VerRecetas");
+                mostrarPanel("VerRecetas");
+            }else
+                JOptionPane.showMessageDialog(null, "¡No tiene recetas disponibles!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
+
         }
         catch(SQLException ex){
             System.err.println(ex.getStackTrace());
@@ -2522,23 +2614,22 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void jButtonConsultarPruebasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarPruebasMouseClicked
         // TODO add your handling code here:
         String dni = user.getDNI();
-        
+        boolean noAnalisis = false, noPruebas = false;
 
-        //Vaciar el panel
         String elemento, tabula = "                                         ";
         modelo.clear();//Inicializando la lista vacia
         jList4.setModel(modelo);
 
         try{
             ArrayList<ArrayList<String> > Pruebas = gstPac.obtenerPruebas(dni);
-            if(!Pruebas.isEmpty()){
                 ArrayList<String> pruebas = Pruebas.get(0); //Pruebas de Análisis
                 if(!pruebas.isEmpty()){
                     for(int i = 0; i < pruebas.size(); i++){
                         elemento = "        " + pruebas.get(i) + tabula + "Análisis";
                         modelo.addElement(elemento);
                     }
-                }
+                }else
+                    noAnalisis = true;
 
                 pruebas.clear();
                 pruebas = Pruebas.get(1);   //Pruebas de Radiologia
@@ -2547,15 +2638,17 @@ public class UI_Paciente extends javax.swing.JFrame {
                         elemento = "        " + pruebas.get(i) + tabula + "Radiología";
                         modelo.addElement(elemento);
                     }
-                }
-
-            }else{
-                JOptionPane.showMessageDialog(null, "¡No tiene pruebas disponibles!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
-            }
+                }else
+                    noPruebas = true;
+                                
         }catch(SQLException ex){
             System.err.println(ex.getStackTrace());
         }
-        mostrarPanel("VerPruebas");
+
+        if(noAnalisis && noPruebas)
+                    JOptionPane.showMessageDialog(null, "¡No tiene pruebas disponibles!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
+        else
+            mostrarPanel("VerPruebas");
     }//GEN-LAST:event_jButtonConsultarPruebasMouseClicked
 
     private void jButtonConsultarPruebasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultarPruebasActionPerformed
@@ -2565,11 +2658,10 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void jButtonGestionarCitassMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGestionarCitassMouseClicked
         // TODO add your handling code here:
 
-        mostrarPanel("VerCitas");
         SimpleDateFormat formatofecha = new SimpleDateFormat("dd.MM.yyyy"),
                          formatohora = new SimpleDateFormat("hh:mm");
         String elemento, 
-               tabula = "                                     ",
+               tabula = "                                                    ",
                dni = user.getDNI();
         modelo.clear();//Inicializando la lista vacia
         jList9.setModel(modelo);
@@ -2581,6 +2673,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                     elemento = formatofecha.format(array_citas.get(i).getFecha()) + tabula + formatohora.format(array_citas.get(i).getFecha());
                     modelo.addElement(elemento);
                 }
+                mostrarPanel("VerCitas");
             }else{
                 JOptionPane.showMessageDialog(null, "¡No tiene citas disponibles!", "Aviso", JOptionPane.INFORMATION_MESSAGE);
             }
@@ -2597,13 +2690,13 @@ public class UI_Paciente extends javax.swing.JFrame {
     private void jButtonVerPruebaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonVerPruebaMouseClicked
         // TODO add your handling code here:
 
-        int index = jList4.getSelectedIndex() + 1;
+        int index = jList4.getSelectedIndex();
         String idPrueba = "",
                tipo = "";
         char espacio = ' ';
         String seleccion = (String) modelo.getElementAt(jList4.getSelectedIndex());
 
-        if(index > 0){
+        if(index > -1){
             for(int i = 0; i < seleccion.length(); i++){
                 if(seleccion.charAt(i) != espacio){
                     idPrueba += String.valueOf(seleccion.charAt(i));
@@ -2616,39 +2709,76 @@ public class UI_Paciente extends javax.swing.JFrame {
             PruebaAnalisis pa = paBD.obtener(Integer.valueOf(idPrueba));
             tipo = pa.getClass().toString();
             ArrayList<String> Resultados = new ArrayList<String>();
-            if(seleccion.contains("Analisis")){
+            if(seleccion.contains("Análisis")){
                 Resultados = gstPru.ConsultarPruebaAnalisis(Integer.valueOf(idPrueba), tipo);
             } else
-                if(seleccion.contains("Radiologia")){
+                if(seleccion.contains("Radiología")){
                     Resultados = gstPru.ConsultarPruebaRadiologia(Integer.valueOf(idPrueba), tipo);
                 }
 
-            jTextField1.setText(tipo);
-            jTextField2.setText(Resultados.get(0));
+            if(tipo.contains("Orina")){
+                jTextField1.setText("Orina");
+            } else
+                if(tipo.contains("Sangre")){
+                    jTextField1.setText("Orina");
+                } else
+                    if(tipo.contains("Radiografia")){
+                        jTextField1.setText("Radiografia");
+                    } else
+                        if(tipo.contains("Resonancia"))
+                            jTextField1.setText("Resonancia");
+            if(!Resultados.isEmpty())
+                jTextField2.setText(Resultados.get(0));
+            else
+                jTextField2.setText("No hay resultados disponibles");
             jTextField3.setText(String.valueOf(idPrueba));
 
-            if(seleccion.contains("Analisis")){
+            if(seleccion.contains("Análisis")){
                 modelo.clear();
                 jList7.setModel(modelo);
-                for(int i = 0; i < Resultados.size(); i++){
+                for(int i = 0; i < Resultados.size(); i++)
                     modelo.addElement(Resultados.get(i));
-                }
+                mostrarPanel("PruebaAnalista");
             }else
-                if(seleccion.contains("Radiologia")){
+                if(seleccion.contains("Radiología")){
                     modelo.clear();
                     jList6.setModel(modelo);
                     for(int i = 0; i < Resultados.size(); i++)
                         modelo.addElement(Resultados.get(i));
+                    mostrarPanel("PruebaRadiologia");
                 }
         }else
             JOptionPane.showMessageDialog(null, "No seleccionó ninguna prueba", "Selección prueba",JOptionPane.INFORMATION_MESSAGE);
         
-
     }//GEN-LAST:event_jButtonVerPruebaMouseClicked
 
     private void jButtonConsCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsCitaMouseClicked
         // TODO add your handling code here:
-        if(jList7.getSelectedIndex() > 0){
+        int index = jList9.getSelectedIndex();
+        if(index > -1){
+            try{
+                ArrayList<Cita> array_cita = gstCit.VerCitas(user.getDNI());
+                SimpleDateFormat formatofecha = new SimpleDateFormat("dd.MM.yyyy"),
+                                 formatohora = new SimpleDateFormat("hh:mm");
+                jTextPane3.setText(formatofecha.format(array_cita.get(index).getFecha()));
+                jTextPane4.setText(formatohora.format(array_cita.get(index).getFecha()));
+                jTextPane5.setText(array_cita.get(index).getTipo());
+                if(array_cita.get(index).isEstado())
+                    jTextPane6.setText("Pendiente");
+                else
+                    jTextPane6.setText("Realizada");
+                jTextPane7.setText(array_cita.get(index).getDNIPaciente());
+                jTextPane8.setText(user.getNombre() + " " + user.getApellidos());
+                jTextPane9.setText(user.getTelefono());
+                jTextPane10.setText(user.getEmail());
+            }
+            catch(SQLException ex){
+                System.err.println(ex.getStackTrace());
+            }
+
+
+            mostrarPanel("DetalleCita");
+
 
         }else{
             JOptionPane.showMessageDialog(null, "No seleccionó ninguna cita", "Selección cita",JOptionPane.INFORMATION_MESSAGE);
@@ -2699,6 +2829,11 @@ public class UI_Paciente extends javax.swing.JFrame {
         // TODO add your handling code here:
         mostrarPanel("VerRecetas");
     }//GEN-LAST:event_jButtonConsRecetaMouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        mostrarPanel("VerCitas");
+    }//GEN-LAST:event_jButton1MouseClicked
 
 
     /*Comprueba que la fecha introducida es correcta
@@ -3126,7 +3261,15 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         if(panel.equals("DetalleCita")){
 
-                        /**Hacemos visible el botón jLabelIconoInicio*/
+            jTextPane3.setEditable(false);
+            jTextPane4.setEditable(false);
+            jTextPane5.setEditable(false);
+            jTextPane6.setEditable(false);
+            jTextPane7.setEditable(false);
+            jTextPane8.setEditable(false);
+            jTextPane9.setEditable(false);
+            jTextPane10.setEditable(false);
+            /**Hacemos visible el botón jLabelIconoInicio*/
             jLabelInicio.setVisible(true);
             jLabelIconoInicio.setVisible(true);
 
@@ -3141,15 +3284,41 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         if(panel.equals("ConsultarHistorial")){
 
-            System.out.println("llegamos aqui");
             /**Hacemos visible el botón jLabelIconoInicio*/
             jLabelInicio.setVisible(true);
             jLabelIconoInicio.setVisible(true);
 
             /**Hacemos visible el panel seleccionado*/
             jPanelConsultarHistorial.setVisible(true);
+            
             /**Activamos el marco*/
             jPanelConsultarHistorial.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        }
+
+         if(panel.equals("PruebaAnalista")){
+
+            /**Hacemos visible el botón jLabelIconoInicio*/
+            jLabelInicio.setVisible(true);
+            jLabelIconoInicio.setVisible(true);
+
+            /**Hacemos visible el panel seleccionado*/
+            jPanelPruebaAnalista.setVisible(true);
+            /**Activamos el marco*/
+            jPanelPruebaAnalista.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        }
+
+        if(panel.equals("PruebaRadiologia")){
+
+            /**Hacemos visible el botón jLabelIconoInicio*/
+            jLabelInicio.setVisible(true);
+            jLabelIconoInicio.setVisible(true);
+
+            /**Hacemos visible el panel seleccionado*/
+            jPanelPruebaRadiologia.setVisible(true);
+            /**Activamos el marco*/
+            jPanelPruebaRadiologia.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         }
 
@@ -3197,6 +3366,7 @@ public class UI_Paciente extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLayeredPane ZonaTrabajo;
     private datechooser.beans.DateChooserCombo dateChooserCombo2;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonAceptarCita;
     private javax.swing.JButton jButtonCancelar;
     private javax.swing.JButton jButtonConsCita;

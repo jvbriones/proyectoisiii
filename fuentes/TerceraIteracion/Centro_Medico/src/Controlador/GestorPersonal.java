@@ -44,7 +44,6 @@ public class GestorPersonal {
         existe=bd_personal.existePersonal(Dni);
 
         if(!existe) {
-             System.out.println("vamos a Introducirlo");
              String pas=new String();
             pas=generarContraseña();
             if(TipoUsuario=="Analista"){
@@ -90,7 +89,6 @@ public class GestorPersonal {
         existe=bd_farmaceutico.existe(Dni);
 
         if(!existe) {
-             System.out.println("vamos a Introducirlo");
             String pas=new String();
             pas=generarContraseña();
             Farmaceutico personal=new Farmaceutico(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto);
