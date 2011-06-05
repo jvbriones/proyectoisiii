@@ -13,11 +13,15 @@ package Controlador;
 
 import BaseDatos.AnalistaBD;
 import BaseDatos.FarmaceuticoBD;
+import BaseDatos.MedicoBD;
 import BaseDatos.PersonalMedicoBD;
+import BaseDatos.RadiologoBD;
 import BaseDatos.UsuarioBD;
 import CentroMedico.Analista;
 import CentroMedico.Farmaceutico;
+import CentroMedico.Medico;
 import CentroMedico.PersonalMedico;
+import CentroMedico.Radiologo;
 import CentroMedico.Turno;
 import CentroMedico.Usuario;
 import java.sql.SQLException;
@@ -43,17 +47,30 @@ public class GestorPersonal {
              System.out.println("vamos a Introducirlo");
              String pas=new String();
             pas=generarContraseña();
-            /*if(TipoUsuario=="Analista"){
+            if(TipoUsuario=="Analista"){
                 Analista personal=new Analista(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto);
                 Turno tur=null;
                 personal.setTurno(tur);
                 AnalistaBD ana=new AnalistaBD();
                 ana.almacenar(personal);
-            }*/
-            PersonalMedico personal=new PersonalMedico(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto, TipoUsuario);
-            Turno tur=null;
-            personal.setTurno(tur);
-            bd_personal.almacenar(personal);
+            }
+            if(TipoUsuario=="Medico"){
+                Medico personal=new Medico(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto);
+                Turno tur=null;
+                personal.setTurno(tur);
+                MedicoBD medi=new MedicoBD();
+                medi.almacenar(personal);
+            }
+            if(TipoUsuario=="Radiologo"){
+                Radiologo personal=new Radiologo(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto);
+                Turno tur=null;
+                personal.setTurno(tur);
+                RadiologoBD radi=new RadiologoBD();
+                radi.almacenar(personal);
+            }
+            
+            
+           
 
             Datos="Usuario Introducido con Éxito";
         }
