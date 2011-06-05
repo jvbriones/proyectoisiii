@@ -2543,11 +2543,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                                 System.out.println("El DNI NO Es de un PersonalMedico");
                 JOptionPane.showMessageDialog(null, "El DNI no es de un PersonalMedico", "Error",JOptionPane.ERROR_MESSAGE);
             }
-            
-       
-        
-    
-        
+
     }//GEN-LAST:event_jButtonConsultarTurnoMouseClicked
 
     private void jButtonAltaTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAltaTurnoMouseClicked

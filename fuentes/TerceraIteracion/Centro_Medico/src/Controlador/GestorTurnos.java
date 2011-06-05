@@ -19,14 +19,13 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
-
 /**
  * @version     1.1     16/04/2011
  * @author      Sub_Equipo2
  */
 
 public class GestorTurnos {
-    
+
     public boolean altaTurno(String dni,String tipo,Date inicio,Date fin)throws SQLException {
         // MIguel.  Tipo es " mañana" "tarde " o "noche"
 
@@ -77,7 +76,7 @@ public class GestorTurnos {
     // ESTA FUNCION NO FUNCIONA, YA QUE "existeTurno" EN "turnoBD" SOLO
     // ESTA IMPLEMENTADA PARA PASARLE UN "tipo" DE TURNO, Y AQUI, LE
     // ESTAMOS PASANDO UN DNI   MIguel. Ya si!
-    
+
     public String bajaTurno(String Dni)throws SQLException {
         boolean existe;
         String existeSalida=new String();

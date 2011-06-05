@@ -80,7 +80,7 @@ public class GestorUsuarios {
        return "Operacion Realizada con Exito";
     }
 
-      public String modificarDatosPersonales(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
+   public String modificarDatosPersonales(String Dni, String Nombre, String Apellidos, String Direccion,String Email,
             String Contrasena, String Telefono, Date FecNac, String LugarNac, byte[] Fotografia) throws SQLException{
 
        UsuarioBD usuario_bd = new UsuarioBD();
@@ -106,7 +106,7 @@ public class GestorUsuarios {
        return "Operacion Realizada con Exito";
     }
 
-    public String consultarDatosPersonalesAdmin(String DNI) throws SQLException{
+   public String consultarDatosPersonalesAdmin(String DNI) throws SQLException{
 
         UsuarioBD usuario_bd = new UsuarioBD();
         boolean Existe=usuario_bd.existeUsuario(DNI);
@@ -136,7 +136,7 @@ public class GestorUsuarios {
 
     }
 
-    public String consultarDatosPersonales() throws SQLException{
+   public String consultarDatosPersonales() throws SQLException{
 
         String dni=user.getDNI();
         String nombre=user.getNombre();
@@ -155,7 +155,7 @@ public class GestorUsuarios {
 
     }
 
-    public Usuario consultarDatos(String Dni) throws SQLException{
+   public Usuario consultarDatos(String Dni) throws SQLException{
         UsuarioBD usuario_bd = new UsuarioBD();
         boolean Existe=usuario_bd.existeUsuario(Dni);
          Usuario userAux=null;

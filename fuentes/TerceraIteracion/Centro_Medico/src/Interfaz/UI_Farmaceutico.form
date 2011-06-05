@@ -1577,9 +1577,19 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="273" max="-2" attributes="0"/>
-                      <Component id="jLabelGestionarPaciente6" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="273" max="-2" attributes="0"/>
+                              <Component id="jLabelGestionarPaciente6" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
+                              <Component id="jTextFieldInicioTurno" min="-2" pref="107" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
+                              <Component id="jTextFieldFinTurno" min="-2" pref="97" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                       <EmptySpace pref="255" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
@@ -1607,43 +1617,15 @@
                                   <Component id="jLabelTurnoTrabajo" min="-2" pref="110" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
-                                  <EmptySpace min="40" pref="40" max="40" attributes="0"/>
-                                  <Component id="jButtonMasDiaFechaInicioTurno" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <Component id="jButtonMasMesFechaInicioTurno" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <Component id="jButtonMasAnioFechaInicioTurno" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <EmptySpace min="110" pref="110" max="110" attributes="0"/>
-                                  <Component id="jButtonMasDiaFechaFinTurno" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <Component id="jButtonMasMesFechaFinTurno" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <Component id="jButtonMasAnioFechaFinTurno" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <EmptySpace min="90" pref="90" max="90" attributes="0"/>
+                                  <EmptySpace min="-2" pref="540" max="-2" attributes="0"/>
                                   <Component id="jRadioButtonManiana" min="-2" pref="150" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
-                                  <EmptySpace min="50" pref="50" max="50" attributes="0"/>
-                                  <Component id="jTextFieldDiaInicioTurno" min="-2" pref="33" max="-2" attributes="0"/>
-                                  <EmptySpace min="17" pref="17" max="17" attributes="0"/>
-                                  <Component id="jTextFieldMesInicioTurno" min="-2" pref="33" max="-2" attributes="0"/>
-                                  <EmptySpace min="7" pref="7" max="7" attributes="0"/>
-                                  <Component id="jTextFieldAnioInicioTurno" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <EmptySpace min="120" pref="120" max="120" attributes="0"/>
-                                  <Component id="jTextFieldDiaFinTurno" min="-2" pref="33" max="-2" attributes="0"/>
-                                  <EmptySpace min="17" pref="17" max="17" attributes="0"/>
-                                  <Component id="jTextFieldMesFinTurno" min="-2" pref="33" max="-2" attributes="0"/>
-                                  <EmptySpace min="7" pref="7" max="7" attributes="0"/>
-                                  <Component id="jTextFieldAnioFinTurno" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <EmptySpace min="90" pref="90" max="90" attributes="0"/>
+                                  <EmptySpace min="-2" pref="540" max="-2" attributes="0"/>
                                   <Component id="jRadioButtonTarde1" min="-2" pref="150" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
-                                  <EmptySpace min="40" pref="40" max="40" attributes="0"/>
-                                  <Component id="jButtonMenosDiaFechaInicioTurno" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <Component id="jButtonMenosMesFechaInicioTurno" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <Component id="jButtonMenosAnioFechaInicioTurno" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <EmptySpace min="110" pref="110" max="110" attributes="0"/>
-                                  <Component id="jButtonMenosDiaFechaFinTurno" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <Component id="jButtonMenosMesFechaFinTurno" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <Component id="jButtonMenosAnioFechaFinTurno" min="-2" pref="50" max="-2" attributes="0"/>
-                                  <EmptySpace min="90" pref="90" max="90" attributes="0"/>
+                                  <EmptySpace min="-2" pref="540" max="-2" attributes="0"/>
                                   <Component id="jRadioButtonNoche" min="-2" pref="150" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -1657,7 +1639,12 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                       <Component id="jLabelGestionarPaciente6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="404" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="235" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jTextFieldInicioTurno" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldFinTurno" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="149" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
@@ -1682,63 +1669,19 @@
                               <Component id="jLabelFechaFinTurno" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabelTurnoTrabajo" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="4" pref="4" max="4" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButtonMasDiaFechaInicioTurno" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButtonMasMesFechaInicioTurno" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButtonMasAnioFechaInicioTurno" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButtonMasDiaFechaFinTurno" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButtonMasMesFechaFinTurno" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButtonMasAnioFechaFinTurno" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="10" pref="10" max="10" attributes="0"/>
-                                  <Component id="jRadioButtonManiana" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTextFieldDiaInicioTurno" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextFieldMesInicioTurno" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextFieldAnioInicioTurno" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextFieldDiaFinTurno" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextFieldMesFinTurno" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextFieldAnioFinTurno" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButtonTarde1" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                          <Component id="jRadioButtonManiana" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                          <Component id="jRadioButtonTarde1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="2" pref="2" max="2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButtonMenosDiaFechaInicioTurno" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButtonMenosMesFechaInicioTurno" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButtonMenosAnioFechaInicioTurno" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButtonMenosDiaFechaFinTurno" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButtonMenosMesFechaFinTurno" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jButtonMenosAnioFechaFinTurno" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="jRadioButtonNoche" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="0" pref="73" max="32767" attributes="0"/>
+                          <Component id="jRadioButtonNoche" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="17" pref="90" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="jButtonMenosDiaFechaInicioTurno">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="-"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonMenosDiaFechaInicioTurnoMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMenosDiaFechaInicioTurnoActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonMenosMesFechaInicioTurno">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="-"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonMenosMesFechaInicioTurnoMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMenosMesFechaInicioTurnoActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabelDNITurno">
               <Properties>
                 <Property name="text" type="java.lang.String" value="DNI"/>
@@ -1772,15 +1715,6 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="jButtonMenosAnioFechaInicioTurno">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="-"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonMenosAnioFechaInicioTurnoMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMenosAnioFechaInicioTurnoActionPerformed"/>
-              </Events>
-            </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane5">
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -1804,33 +1738,6 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JTextField" name="jTextFieldMesInicioTurno">
-              <Properties>
-                <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="1"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldMesInicioTurnoActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextFieldAnioInicioTurno">
-              <Properties>
-                <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="1950"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldAnioInicioTurnoActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonMasAnioFechaInicioTurno">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="+"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonMasAnioFechaInicioTurnoMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMasAnioFechaInicioTurnoActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabelGestionarPaciente6">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -1839,7 +1746,7 @@
                 <Property name="text" type="java.lang.String" value="Consultar Turno"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextFieldDiaInicioTurno">
+            <Component class="javax.swing.JTextField" name="jTextFieldInicioTurno">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1850,84 +1757,12 @@
                 <Property name="text" type="java.lang.String" value="Fecha inicio"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButtonMasDiaFechaInicioTurno">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="+"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonMasDiaFechaInicioTurnoMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMasDiaFechaInicioTurnoActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel9">
               <Properties>
                 <Property name="text" type="java.lang.String" value="_____________________________________________________________________________"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButtonMasMesFechaInicioTurno">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="+"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonMasMesFechaInicioTurnoMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMasMesFechaInicioTurnoActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonMenosDiaFechaFinTurno">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="-"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonMenosDiaFechaFinTurnoMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMenosDiaFechaFinTurnoActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonMenosMesFechaFinTurno">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="-"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonMenosMesFechaFinTurnoMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMenosMesFechaFinTurnoActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonMenosAnioFechaFinTurno">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="-"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonMenosAnioFechaFinTurnoMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMenosAnioFechaFinTurnoActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextFieldMesFinTurno">
-              <Properties>
-                <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="1"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldMesFinTurnoActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextFieldAnioFinTurno">
-              <Properties>
-                <Property name="editable" type="boolean" value="false"/>
-                <Property name="text" type="java.lang.String" value="1950"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldAnioFinTurnoActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonMasAnioFechaFinTurno">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="+"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonMasAnioFechaFinTurnoMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMasAnioFechaFinTurnoActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextFieldDiaFinTurno">
+            <Component class="javax.swing.JTextField" name="jTextFieldFinTurno">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="text" type="java.lang.String" value="1"/>
@@ -1937,24 +1772,6 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Fecha fin"/>
               </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonMasDiaFechaFinTurno">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="+"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonMasDiaFechaFinTurnoMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMasDiaFechaFinTurnoActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButtonMasMesFechaFinTurno">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="+"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonMasMesFechaFinTurnoMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMasMesFechaFinTurnoActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelTurnoTrabajo">
               <Properties>
