@@ -908,7 +908,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             jButtonLimpiarPersonalActionPerformed(evt);
         }
     });
-    jPanelGestionarPersonal.add(jButtonLimpiarPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 460, -1, 39));
+    jPanelGestionarPersonal.add(jButtonLimpiarPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 460, 90, 39));
 
     jButtonConsultarPersonal.setText("Consultar");
     jButtonConsultarPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1015,7 +1015,7 @@ public class UI_Administrador extends javax.swing.JFrame {
     jLabelErrorPersonal.setForeground(new java.awt.Color(255, 0, 0));
     jLabelErrorPersonal.setText(" Los campos con * son obligatorios");
     jLabelErrorPersonal.setName("jLabelErrorPersonal"); // NOI18N
-    jPanelGestionarPersonal.add(jLabelErrorPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, 270, 20));
+    jPanelGestionarPersonal.add(jLabelErrorPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 430, 290, 20));
     jPanelGestionarPersonal.add(dateChooserCombo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 350, -1, -1));
 
     jTextFieldTelefonoPersonal1.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -2008,7 +2008,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             jButtonAltaPacienteActionPerformed(evt);
         }
     });
-    jPanelGestionarPaciente.add(jButtonAltaPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 450, 93, 39));
+    jPanelGestionarPaciente.add(jButtonAltaPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 450, 80, 39));
 
     jLabelEmailPaciente.setText("Email");
     jPanelGestionarPaciente.add(jLabelEmailPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(509, 172, -1, -1));
@@ -2042,7 +2042,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             jButtonConsultarPacienteActionPerformed(evt);
         }
     });
-    jPanelGestionarPaciente.add(jButtonConsultarPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 450, 93, 39));
+    jPanelGestionarPaciente.add(jButtonConsultarPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 450, 110, 39));
 
     jButtonLimpiarPaciente.setText("Limpiar");
     jButtonLimpiarPaciente.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -2055,7 +2055,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             jButtonLimpiarPacienteActionPerformed(evt);
         }
     });
-    jPanelGestionarPaciente.add(jButtonLimpiarPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 450, -1, 39));
+    jPanelGestionarPaciente.add(jButtonLimpiarPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 450, 90, 39));
 
     jButtonGuardarPaciente.setText("Guardar");
     jButtonGuardarPaciente.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -2113,7 +2113,7 @@ public class UI_Administrador extends javax.swing.JFrame {
     jLabel34.setFont(new java.awt.Font("Tahoma", 1, 14));
     jLabel34.setForeground(new java.awt.Color(255, 0, 0));
     jLabel34.setText(" Los campos con * son obligatorios");
-    jPanelGestionarPaciente.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 420, 270, -1));
+    jPanelGestionarPaciente.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 420, 300, -1));
 
     try {
         dateChooserCombo1.setDefaultPeriods(new datechooser.model.multiple.PeriodSet(new datechooser.model.multiple.Period(new java.util.GregorianCalendar(2011, 5, 1),
