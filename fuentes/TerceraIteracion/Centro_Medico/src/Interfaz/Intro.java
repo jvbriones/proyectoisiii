@@ -306,7 +306,6 @@ public class Intro extends javax.swing.JFrame {
                     }
                     if(tipo.equals("Paciente")){
                             UI_Paciente ui = new UI_Paciente(usu,"Paciente");
-                            System.out.println(usu.getNombre());
                             ui.setVisible(true);
                             this.setVisible(false);
                     }
