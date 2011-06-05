@@ -7,27 +7,20 @@
 package Interfaz;
 
 import java.awt.Image;
-import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
 import javax.swing.*;
 import Controlador.*;
 import CentroMedico.*;
-import BaseDatos.*;
 import java.awt.Color;
 import java.util.Calendar.*;
 import java.util.Calendar;
 import java.sql.SQLException;
 import java.util.Date;
-import java.util.Set;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.lang.reflect.Array;
 import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import javax.swing.ImageIcon;
-import javax.swing.JFileChooser;
 
 /**
  * @author Nicolas_Sanchez
@@ -36,15 +29,17 @@ import javax.swing.JFileChooser;
 public class UI_Paciente extends javax.swing.JFrame {
 
     private Usuario user;
-    private GestorPacientes gstpac;
-    private GestorPruebas gstpru;
-    private GestorCitas gstcit;
+    private GestorPacientes gstPac;
+    private GestorPruebas gstPru;
+    private GestorCitas gstCit;
 
     /** Creates new form Principal_Administrador */
     public UI_Paciente() {
         initComponents();
         pasoAtras = false;
-        gstpac = new GestorPacientes();
+        gstPac = new GestorPacientes();
+        gstPru = new GestorPruebas();
+        gstCit = new GestorCitas();
     }
 
     public UI_Paciente(Usuario usu, String tipoUsuario) throws SQLException{
@@ -52,7 +47,9 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         //Iniciar el objeto usuario y gestores
         user = usu;
-        gstpac = new GestorPacientes();
+        gstPac = new GestorPacientes();
+        gstPru = new GestorPruebas();
+        gstCit = new GestorCitas();
         pasoAtras=false;
 
         /**Ponemos las etiquetas del usuario que ha entrado*/
@@ -2055,7 +2052,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         String dni = user.getDNI();
         try{
             ArrayList<Cita> array_citas = new ArrayList();
-            array_citas = gstcit.VerCitas(dni);
+            array_citas = gstCit.VerCitas(dni);
             if(!array_citas.isEmpty()){
                 for(int i = 0; i < array_citas.size(); i++){
                     elemento = formatofecha.format(array_citas.get(i).getFecha()) + tabula + formatohora.format(array_citas.get(i).getFecha());
@@ -2431,7 +2428,7 @@ public class UI_Paciente extends javax.swing.JFrame {
      
 
         try{            
-            ArrayList<Receta> set_receta = gstpac.obtenerRecetas(user.getDNI());
+            ArrayList<Receta> set_receta = gstPac.obtenerRecetas(user.getDNI());
             if(!set_receta.isEmpty()){
                 Receta recet;
 
@@ -2486,7 +2483,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         
             ArrayList<Enfermedad> enf;
         try {
-            enf = gstpac.consultarInfoClinicaPaciente(user.getDNI());
+            enf = gstPac.consultarInfoClinicaPaciente(user.getDNI());
         
         
           if (enf!=null){
@@ -2533,7 +2530,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jList4.setModel(modelo);
 
         try{
-            ArrayList<ArrayList<String> > Pruebas = gstpac.obtenerPruebas(dni);
+            ArrayList<ArrayList<String> > Pruebas = gstPac.obtenerPruebas(dni);
             if(!Pruebas.isEmpty()){
                 ArrayList<String> pruebas;
                 int i = 0;
@@ -2568,7 +2565,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         String dni = user.getDNI();
         try{
             ArrayList<Cita> array_citas = new ArrayList();
-            array_citas = gstcit.VerCitas(dni);
+            array_citas = gstCit.VerCitas(dni);
             if(!array_citas.isEmpty()){
                 for(int i = 0; i < array_citas.size(); i++){
                     elemento = formatofecha.format(array_citas.get(i).getFecha()) + tabula + formatohora.format(array_citas.get(i).getFecha());
@@ -2598,10 +2595,10 @@ public class UI_Paciente extends javax.swing.JFrame {
             String seleccion = (String) model.getElementAt(jList4.getSelectedIndex());
             System.out.println("seleccion: " + seleccion);
             if(seleccion.contains("Analisis")){
-                ArrayList<String> resultado = gstpru.ConsultarPruebaAnalisis(idPrueba, tipo);
+                ArrayList<String> resultado = gstPru.ConsultarPruebaAnalisis(idPrueba, tipo);
             }else
                 if(seleccion.contains("Radiologia")){
-                    ArrayList<String> resultado = gstpru.ConsultarPruebaRadiologia(idPrueba, tipo);
+                    ArrayList<String> resultado = gstPru.ConsultarPruebaRadiologia(idPrueba, tipo);
                 }
 
 
@@ -2631,7 +2628,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             // TODO add your handling code here:
             
             String dato=null;
-            ArrayList  <ArrayList<String>> pruebas=gstpac.obtenerPruebas(user.getDNI());
+            ArrayList  <ArrayList<String>> pruebas=gstPac.obtenerPruebas(user.getDNI());
             boolean analisis=true;
             PruebaAnalisis pa;
             PruebaRadiologia pr;

@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /*
  * Principal_Administrador.java
@@ -13,24 +9,23 @@
 package Interfaz;
 
 import java.awt.Image;
-import java.util.*;
-
-import javax.swing.*;
-import Controlador.*;
-import CentroMedico.*;
-import BaseDatos.*;
 import java.awt.Color;
-import java.util.Calendar.*;
-import java.util.Calendar;
+import javax.swing.*;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
 import java.sql.SQLException;
+import java.util.*;
 import java.util.Date;
 import java.util.Set;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import Controlador.*;
+import CentroMedico.*;
+import BaseDatos.*;
 
-import javax.swing.ImageIcon;
-import javax.swing.JFileChooser;
+
+
 
 
 /**
@@ -41,30 +36,39 @@ import javax.swing.JFileChooser;
  */
 public class UI_Medico extends javax.swing.JFrame {
 
-      DefaultListModel modeloNombres=new DefaultListModel();
-      Set<Medicamento> meRe = new HashSet<Medicamento>(0);
-      GestorMedico gestormedico=new GestorMedico();
-      GestorPacientes gestorpacientes=new GestorPacientes();
-      GestorFarmacia gesFar = new GestorFarmacia();
-      GestorPersonal gesPer = new GestorPersonal();
-      Paciente paciente;
-      Enfermedad enf = null;
+      private DefaultListModel modeloNombres = new DefaultListModel();
+      private Set<Medicamento> meRe = new HashSet<Medicamento>(0);
+      private GestorMedico gstMed;
+      private GestorPacientes gstPac;
+      private GestorFarmacia gstFar;
+      private GestorPersonal gstPer;
+      private Enfermedad enf = null;
+      private Usuario user;
+
     /** Creates new form Principal_Administrador */
     public UI_Medico() {
         initComponents();
+        gstMed = new GestorMedico();
+        gstPac = new GestorPacientes();
+        gstFar = new GestorFarmacia();
+        gstPer = new GestorPersonal();
+
     }
 
     public UI_Medico(Usuario usu, String tipoUsuario) throws SQLException{
         initComponents();
-        yomismo=usu;
+        user = usu;
         /**Ponemos las etiquetas del usuario que ha entrado*/
         jLabelNombreUsuario.setText(usu.getNombre());
         jLabelTipoUsuario.setText(tipoUsuario);
+        gstMed = new GestorMedico();
+        gstPac = new GestorPacientes();
+        gstFar = new GestorFarmacia();
+        gstPer = new GestorPersonal();
 
         /**Mostramos el panel Principal*/
         mostrarPanel("Principal");
         mostrarDatosPerso(usu);
-
 
         /**Cargamos la foto de login*/
         jLabelTipoUsuarioIdentificado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo-Usuario-Personal.png"))); // NOI18N
@@ -2552,7 +2556,7 @@ public class UI_Medico extends javax.swing.JFrame {
             String tipoPersonal = "Medico";
 
             try {
-                exito = gesPer.modificarPersonal(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(),jTextFieldContraseniaPersonal.getText(), jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), sfotografia, tipoPersonal);
+                exito = gstPer.modificarPersonal(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(),jTextFieldContraseniaPersonal.getText(), jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), sfotografia, tipoPersonal);
                 if(exito){
                     new InformacionExito().setVisible(true);
                     limpiarFormulario("GestionarPersonal");
@@ -2915,12 +2919,12 @@ public class UI_Medico extends javax.swing.JFrame {
         
           Paciente pac = new Paciente();
         try {
-            pac = gestorpacientes.obtenerPaciente(jTextFieldDNIAtenderPaciente.getText());
+            pac = gstPac.obtenerPaciente(jTextFieldDNIAtenderPaciente.getText());
         } catch (SQLException ex) {
             Logger.getLogger(UI_Medico.class.getName()).log(Level.SEVERE, null, ex);
         }
         try {
-            gestormedico.atenderPaciente(jTextFieldDNIAtenderPaciente.getText());
+            gstMed.atenderPaciente(jTextFieldDNIAtenderPaciente.getText());
         } catch (SQLException ex) {
             Logger.getLogger(UI_Medico.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -2962,7 +2966,7 @@ MedicamentoBD meBD = new MedicamentoBD();
         DefaultListModel modelo = new DefaultListModel();
         ArrayList li = new ArrayList();
         String nombreMedica=new String();
-        li= gesFar.buscarMedicamento(Nombre); // esta funcion está incompleta.
+        li= gstFar.buscarMedicamento(Nombre); // esta funcion está incompleta.
         Medicamento Medica = new Medicamento();
         ArrayList aux = new ArrayList();
         int i = 0;
@@ -2988,7 +2992,6 @@ MedicamentoBD meBD = new MedicamentoBD();
        jListMedicamentosRecetados.setModel(modeloNombres);
        nombreMedica= (String)jListMedicamentos1.getSelectedValue();
        modeloNombres.addElement(nombreMedica);
-       //System.out.println("estoy añadiennndo" + nombreMedica);
        meRe.add(meBD.obtener(nombreMedica));
 
     }//GEN-LAST:event_jButtonRecetarOtroMedicamento1ActionPerformed
@@ -3020,8 +3023,9 @@ MedicamentoBD meBD = new MedicamentoBD();
         System.out.println("personal: "+ jTextFieldDNIPersonal.getText());
         boolean exito = false;
             try {
-                exito = gestormedico.realizarReceta(ins, jD, meRe, poso, durac, dateFin, jTextFieldDNIAtenderPaciente.getText(), jTextFieldDNIPersonal.getText());
-            } catch (SQLException ex) {
+                exito = gstMed.realizarReceta(ins, jD, meRe, poso, durac, dateFin, jTextFieldDNIAtenderPaciente.getText(), jTextFieldDNIPersonal.getText());
+            }
+            catch (SQLException ex) {
                 Logger.getLogger(UI_Medico.class.getName()).log(Level.SEVERE, null, ex);
             }
 
@@ -3083,7 +3087,7 @@ MedicamentoBD meBD = new MedicamentoBD();
         mostrarPanel("HistorialPacientes");
         
         try {
-            datos=gestormedico.consultarHistorialPacientes(yomismo.getDNI());
+            datos=gstMed.consultarHistorialPacientes(user.getDNI());
         } catch (SQLException ex) {
             Logger.getLogger(UI_Medico.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -3100,17 +3104,17 @@ MedicamentoBD meBD = new MedicamentoBD();
 
     private void jButtonAddEnfermaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAddEnfermaMouseClicked
         // TODO add your handling code here:
-        System.out.println("El juanmi es un cabron");
-        PacienteBD paci=new PacienteBD();
-        Paciente paciente=paci.obtener(jTextField4.getText());
-        if(paciente !=null){  
+
+        PacienteBD paci = new PacienteBD();
+        Paciente paciente = paci.obtener(jTextField4.getText());
+        if(paciente != null){
             Date fechaDet = null;
             fechaDet = dateChooserCombo4.getSelectedDate().getTime();
             String tipo="";
-            if (jRadioButton3.isSelected()) tipo="Alergia";
-             if (jRadioButton4.isSelected()) tipo="Enfermedad cronica";
-              if (jRadioButton5.isSelected()) tipo="Otros";
-            gestormedico.anadirEnfermedad(jTextField5.getText(),tipo,fechaDet,jTextArea3.getText(),jTextArea4.getText(),paciente);
+            if (jRadioButton3.isSelected()) tipo = "Alergia";
+             if (jRadioButton4.isSelected()) tipo = "Enfermedad cronica";
+              if (jRadioButton5.isSelected()) tipo = "Otros";
+            gstMed.anadirEnfermedad(jTextField5.getText(),tipo,fechaDet,jTextArea3.getText(),jTextArea4.getText(),paciente);
             
             new InformacionExito().setVisible(true);
     }//GEN-LAST:event_jButtonAddEnfermaMouseClicked
@@ -3137,7 +3141,7 @@ MedicamentoBD meBD = new MedicamentoBD();
             int numero=enf.getId();
             
             nueva.setId(numero);
-            gestormedico.modificarEnfermedad(nueva,paciente);
+            gstMed.modificarEnfermedad(nueva,paciente);
             System.out.println("Lo hace");
     }
         }//GEN-LAST:event_jButtonSaveEnferMouseClicked
@@ -3202,7 +3206,7 @@ MedicamentoBD meBD = new MedicamentoBD();
             
             ArrayList<Enfermedad> enf;
         try {
-            enf = gestorpacientes.consultarInfoClinicaPaciente(jTextPane1.getText());
+            enf = gstPac.consultarInfoClinicaPaciente(jTextPane1.getText());
         
         
           if (enf!=null){
@@ -3240,7 +3244,7 @@ MedicamentoBD meBD = new MedicamentoBD();
             ArrayList finales =null;
             DefaultListModel modeloPruebas = new DefaultListModel();
         try {
-            pruebas = gestormedico.consultarHistorialPruebasPaciente(jTextFieldDNI.getText());
+            pruebas = gstMed.consultarHistorialPruebasPaciente(jTextFieldDNI.getText());
         } catch (SQLException ex) {
             Logger.getLogger(UI_Medico.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -4340,7 +4344,6 @@ MedicamentoBD meBD = new MedicamentoBD();
         });
     }
 */
-    Usuario yomismo=null;
      byte[] sfotografia;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLayeredPane ZonaTrabajo;
