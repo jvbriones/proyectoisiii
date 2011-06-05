@@ -45,7 +45,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
         initComponents();
     }
 
-    public UI_Radiologo(Usuario usu, String tipoUsuario) throws SQLException{
+    public UI_Radiologo(Usuario usu, String tipoUsuario) throws SQLException,Exception{
         initComponents();
 
         /**Ponemos las etiquetas del usuario que ha entrado*/
@@ -1035,9 +1035,11 @@ public class UI_Radiologo extends javax.swing.JFrame {
                 else
                     new InformacionError().setVisible(true);
 
-            } catch (SQLException ex) {
-                Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            } catch (Exception ex) {
+                Logger.getLogger(UI_Radiologo.class.getName()).log(Level.SEVERE, null, ex);
+            } //catch (SQLException ex) {
+              //  Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+            //}
         }
 }//GEN-LAST:event_jButtonGuardarMouseClicked
 
@@ -1456,7 +1458,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
 
     }
 */
-    private void mostrarDatosPerso(Usuario usu) throws SQLException{
+    private void mostrarDatosPerso(Usuario usu) throws SQLException,Exception{
 
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(usu.getFecNac());
@@ -1487,7 +1489,7 @@ public class UI_Radiologo extends javax.swing.JFrame {
   //      jTextFieldFechaNacimientoDiaPersonal.setText(num_dia);
     //    jTextFieldFechaNacimientoMesersonal.setText(num_mes);
         jTextFieldNombrePersonal.setText(usu.getNombre());
-        jTextFieldContraseniaPersonal.setText(usu.getContrasenia());
+        jTextFieldContraseniaPersonal.setText(AES.decrypt(usu.getContrasenia()));
         jTextFieldDNIPersonal.setText(usu.getDNI());
         jTextFieldApellidosPersonal.setText(usu.getApellidos());
         jTextFieldTelefonoPersonal.setText(usu.getTelefono());

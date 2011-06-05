@@ -56,7 +56,7 @@ public class UI_Medico extends javax.swing.JFrame {
 
     }
 
-    public UI_Medico(Usuario usu, String tipoUsuario) throws SQLException{
+    public UI_Medico(Usuario usu, String tipoUsuario) throws SQLException,Exception{
         initComponents();
         user = usu;
         /**Ponemos las etiquetas del usuario que ha entrado*/
@@ -2568,9 +2568,11 @@ public class UI_Medico extends javax.swing.JFrame {
                 else
                     new InformacionError().setVisible(true);
 
-            } catch (SQLException ex) {
-                Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            } catch (Exception ex) {
+                Logger.getLogger(UI_Medico.class.getName()).log(Level.SEVERE, null, ex);
+            } //catch (SQLException ex) {
+               /// Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+            //}
         }
 
 
