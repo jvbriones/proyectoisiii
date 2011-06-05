@@ -2376,41 +2376,59 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void jButtonConsultarRecetaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarRecetaMouseClicked
         // TODO add your handling code here:
+         try{
+             
+        String receta_string = (String)jList3.getSelectedValue(),
+        valores="",
+                   numero="";
         
-        int receta_id = jList3.getSelectedIndex();
-        if(receta_id > 0){
-            try{
-                Receta receta = gstPac.seleccionarReceta(receta_id);
+        String receta_id="";
+        char espacio=' ';
+        boolean ya=false;
+        
+        System.out.println("linea:"+receta_string);
+        for ( int i=receta_string.length()-1; i>0 && !ya; i--){
+            if ( receta_string.charAt(i)!= espacio){
+                receta_id+=String.valueOf(receta_string.charAt(i));
+            }
+            else ya=true;
+            
+        }
+        System.out.println("El id de la receta es: "+receta_id);
+        
+       
+           
+                Receta receta = gstPac.seleccionarReceta(Integer.valueOf(receta_id));
 
+                if (receta==null) System.out.println("No nos hemos traido bien la receta");
                 //Mostrar los datos de la receta
                 jTextPane2.setText(receta.getJuicioDiagnostico());
                 jTextPane1.setText(receta.getInstrucciones());
                 jTextFieldFechaReceta.setText(receta.getFecha().toString());
-                jTextFieldDNIMedicoReceta.setText(receta.getMedi().getDNI());
-                jTextFieldNombreMedicoReceta.setText(receta.getMedi().getNombre() + " " + receta.getMedi().getApellidos());
-                jTextFieldTelefonoMedicoReceta.setText(receta.getMedi().getTelefono());
-                jTextFieldEmailMedicoReceta.setText(receta.getMedi().getEmail());
+                //jTextFieldDNIMedicoReceta.setText(receta.getMedi().getDNI());
+                //jTextFieldNombreMedicoReceta.setText(receta.getMedi().getNombre() + " " + receta.getMedi().getApellidos());
+                //jTextFieldTelefonoMedicoReceta.setText(receta.getMedi().getTelefono());
+                //jTextFieldEmailMedicoReceta.setText(receta.getMedi().getEmail());
 
                 modelo.clear();
                 jList8.setModel(modelo);
                 Set<MedicamentoRecetado> medicamentos = receta.getMedicamentosRecetados();
-                if(!medicamentos.isEmpty()){
+/*                if( !(medicamentos.isEmpty() ) ){
                     for(Iterator<MedicamentoRecetado> it = medicamentos.iterator(); it.hasNext();){
                         modelo.addElement(it.next().getMedicamento().getNombre());
                     }
                 }else{
                     modelo.addElement("No hay medicamentos");
-                }
+                }*/
+                
+                modelo.addElement("No hay medicamentos porque falla, mirar codigo 2424 en UI_paciente");
  
                 mostrarPanel("ConsultarReceta");
             }
             catch(SQLException ex){
                 System.err.println(ex.getStackTrace());
             }
-        }else{
-            JOptionPane.showMessageDialog(null, "No seleccionó ninguna receta", "Selección receta",JOptionPane.INFORMATION_MESSAGE);
-        }
-
+    
     }//GEN-LAST:event_jButtonConsultarRecetaMouseClicked
 
     private void jButtonConsultarRecetasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultarRecetasActionPerformed

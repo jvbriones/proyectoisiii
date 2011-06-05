@@ -1623,7 +1623,7 @@
                               <Component id="jLabelListaRecetas" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="292" max="32767" attributes="0"/>
+                      <EmptySpace pref="291" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1644,7 +1644,7 @@
                       <Component id="jScrollPane6" min="-2" pref="174" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       <Component id="jButtonConsultarReceta" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="100" max="32767" attributes="0"/>
+                      <EmptySpace pref="99" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1820,11 +1820,11 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <Component id="jScrollPane8" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="73" max="32767" attributes="0"/>
+                              <EmptySpace pref="72" max="32767" attributes="0"/>
                               <Component id="jLabel46" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jTextFieldFechaReceta" pref="109" max="32767" attributes="1"/>
-                          <Component id="jScrollPane7" alignment="0" pref="109" max="32767" attributes="1"/>
+                          <Component id="jTextFieldFechaReceta" pref="108" max="32767" attributes="1"/>
+                          <Component id="jScrollPane7" alignment="0" pref="108" max="32767" attributes="1"/>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
