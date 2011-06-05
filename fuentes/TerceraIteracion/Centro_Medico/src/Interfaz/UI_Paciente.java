@@ -16,6 +16,7 @@ import java.util.Calendar;
 import java.sql.SQLException;
 import java.util.Date;
 import java.util.ArrayList;
+import java.util.Set;
 import java.util.Iterator;
 import java.text.SimpleDateFormat;
 import java.util.logging.Level;
@@ -32,6 +33,7 @@ public class UI_Paciente extends javax.swing.JFrame {
     private GestorPacientes gstPac;
     private GestorPruebas gstPru;
     private GestorCitas gstCit;
+    private DefaultListModel modelo = new DefaultListModel();
 
     /** Creates new form Principal_Administrador */
     public UI_Paciente() {
@@ -483,7 +485,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         jLabel11.setText("Ver Pruebas");
 
-        jLabel12.setText("Consultar Información Clínico");
+        jLabel12.setText("Consultar Información Clínica");
 
         jButtonGestionarHistorial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/carpeta.png"))); // NOI18N
         jButtonGestionarHistorial.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -742,7 +744,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 .add(jLabel19)
                 .add(294, 294, 294))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelVerPruebasLayout.createSequentialGroup()
-                .addContainerGap(404, Short.MAX_VALUE)
+                .addContainerGap(411, Short.MAX_VALUE)
                 .add(jButtonVerPrueba)
                 .add(45, 45, 45)
                 .add(jButton1)
@@ -2370,10 +2372,11 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void jButtonConsultarRecetaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonConsultarRecetaMouseClicked
         // TODO add your handling code here:
-        /*int receta_id = jList2.getSelectedIndex();
+        
+        int receta_id = jList3.getSelectedIndex();
         if(receta_id > 0){
             try{
-                Receta receta = gstpac.seleccionarReceta(receta_id);
+                Receta receta = gstPac.seleccionarReceta(receta_id);
 
                 //Mostrar los datos de la receta
                 jTextPane2.setText(receta.getJuicioDiagnostico());
@@ -2384,8 +2387,7 @@ public class UI_Paciente extends javax.swing.JFrame {
                 jTextFieldTelefonoMedicoReceta.setText(receta.getMedi().getTelefono());
                 jTextFieldEmailMedicoReceta.setText(receta.getMedi().getEmail());
 
-                DefaultListModel modelo = new DefaultListModel();
-                modelo.addElement("");//Inicializando la lista vacia
+                modelo.clear();
                 jList8.setModel(modelo);
                 Set<MedicamentoRecetado> medicamentos = receta.getMedicamentosRecetados();
                 if(!medicamentos.isEmpty()){
@@ -2403,7 +2405,7 @@ public class UI_Paciente extends javax.swing.JFrame {
             }
         }else{
             JOptionPane.showMessageDialog(null, "No seleccionó ninguna receta", "Selección receta",JOptionPane.INFORMATION_MESSAGE);
-        }*/
+        }
 
     }//GEN-LAST:event_jButtonConsultarRecetaMouseClicked
 
@@ -2420,32 +2422,27 @@ public class UI_Paciente extends javax.swing.JFrame {
         // TODO add your handling code here:
 
     //Vaciar el panel
-        String elemento, espacio = "             ";
-        DefaultListModel modelo = new DefaultListModel();
-        modelo.addElement("");//Inicializando la lista vacia
-
+        String espacio = "             ";
+        modelo.clear();
         jList3.setModel(modelo);
-     
 
-        try{            
+        try{
             ArrayList<Receta> set_receta = gstPac.obtenerRecetas(user.getDNI());
             if(!set_receta.isEmpty()){
                 Receta recet;
-
-                    for ( Iterator it = set_receta.iterator(); it.hasNext();){
-                        recet = (Receta)it.next();
-                        String total="";
-                        total=recet.getFecha()+espacio+recet.getMedi()+espacio+recet.getId();
-                          modelo.addElement(total);
-                    }
-                    
-                      jList3.setModel(modelo);
+                for(Iterator it = set_receta.iterator(); it.hasNext();){
+                    recet = (Receta)it.next();
+                    String total="";
+                    total=recet.getFecha()+espacio+recet.getMedi()+espacio+recet.getId();
+                    modelo.addElement(total);
+                }    
+                jList3.setModel(modelo);
             }
             mostrarPanel("VerRecetas");
-        }catch(SQLException ex){
+        }
+        catch(SQLException ex){
             System.err.println(ex.getStackTrace());
         }
-        
 
     }//GEN-LAST:event_jButtonConsultarRecetasMouseClicked
 
@@ -2482,36 +2479,26 @@ public class UI_Paciente extends javax.swing.JFrame {
         // TODO add your handling code here:
         
             ArrayList<Enfermedad> enf;
-        try {
-            enf = gstPac.consultarInfoClinicaPaciente(user.getDNI());
-        
-        
-          if (enf!=null){
-              DefaultListModel modeloEnfermedades = new DefaultListModel();
-              String espacio = "            ";
-              Enfermedad enfermedad= null;
-              
-              for ( Iterator it = enf.iterator(); it.hasNext();){
-                enfermedad = (Enfermedad)it.next();
-                String total="";
-                total=enfermedad.getNombre()+espacio+enfermedad.getFechaDet();
-                  modeloEnfermedades.addElement(total);
-                  
-                  
-              }
-                       jList5.setModel(modeloEnfermedades);
-                       
-           mostrarPanel("ConsultarHistorial");
-             
-          }
-        } catch (SQLException ex) {
-            Logger.getLogger(UI_Medico.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        
-        
-        
-        
+            try {
+                enf = gstPac.consultarInfoClinicaPaciente(user.getDNI());
+                if (enf!=null){
+                    DefaultListModel modeloEnfermedades = new DefaultListModel();
+                    String espacio = "            ";
+                    Enfermedad enfermedad= null;
+                    for ( Iterator it = enf.iterator(); it.hasNext();){
+                        enfermedad = (Enfermedad)it.next();
+                        String total="";
+                        total=enfermedad.getNombre()+espacio+enfermedad.getFechaDet();
+                        modeloEnfermedades.addElement(total);
+                    }
+                    jList5.setModel(modeloEnfermedades);
+                    mostrarPanel("ConsultarHistorial");
+                }
+            }
+            catch (SQLException ex) {
+                Logger.getLogger(UI_Medico.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
     }//GEN-LAST:event_jButtonGestionarHistorialMouseClicked
 
     private void jButtonGestionarHistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGestionarHistorialActionPerformed
@@ -2525,16 +2512,14 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         //Vaciar el panel
         String elemento, tabula = "                                         ";
-        DefaultListModel modelo = new DefaultListModel();
-        modelo.addElement("");//Inicializando la lista vacia
+        modelo.clear();//Inicializando la lista vacia
         jList4.setModel(modelo);
 
         try{
             ArrayList<ArrayList<String> > Pruebas = gstPac.obtenerPruebas(dni);
             if(!Pruebas.isEmpty()){
                 ArrayList<String> pruebas;
-                int i = 0;
-                for(Iterator<ArrayList <String>> it = Pruebas.iterator(); it.hasNext(); i++){
+                for(Iterator<ArrayList <String>> it = Pruebas.iterator(); it.hasNext(); ){
                     pruebas = it.next();
                     elemento = "        " + pruebas.get(0) + tabula + pruebas.get(1);
                     modelo.addElement(elemento);
@@ -2554,15 +2539,16 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void jButtonGestionarCitassMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGestionarCitassMouseClicked
         // TODO add your handling code here:
-        mostrarPanel("VerCitas");
 
-        SimpleDateFormat formatofecha = new SimpleDateFormat("dd.MM.yyyy");
-        SimpleDateFormat formatohora = new SimpleDateFormat("hh:mm");
-        String elemento, tabula = "                                     ";
-        DefaultListModel modelo = new DefaultListModel();
-        modelo.addElement("");//Inicializando la lista vacia
+        mostrarPanel("VerCitas");
+        SimpleDateFormat formatofecha = new SimpleDateFormat("dd.MM.yyyy"),
+                         formatohora = new SimpleDateFormat("hh:mm");
+        String elemento, 
+               tabula = "                                     ",
+               dni = user.getDNI();
+        modelo.clear();//Inicializando la lista vacia
         jList7.setModel(modelo);
-        String dni = user.getDNI();
+        
         try{
             ArrayList<Cita> array_citas = new ArrayList();
             array_citas = gstCit.VerCitas(dni);
@@ -2575,8 +2561,8 @@ public class UI_Paciente extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "¡No tiene citas disponibles!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
             }
         }catch(SQLException ex){
-            System.err.println(ex.getStackTrace());
             JOptionPane.showMessageDialog(null, "¡Se produjo un error!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
+            System.err.println(ex.getStackTrace());
         }
 
     }//GEN-LAST:event_jButtonGestionarCitassMouseClicked
@@ -2593,7 +2579,6 @@ public class UI_Paciente extends javax.swing.JFrame {
 
         if(prueba_index > 0){
             String seleccion = (String) model.getElementAt(jList4.getSelectedIndex());
-            System.out.println("seleccion: " + seleccion);
             if(seleccion.contains("Analisis")){
                 ArrayList<String> resultado = gstPru.ConsultarPruebaAnalisis(idPrueba, tipo);
             }else
@@ -2609,7 +2594,6 @@ public class UI_Paciente extends javax.swing.JFrame {
             //jList6.       Imagenes
         }else{
             JOptionPane.showMessageDialog(null, "No seleccionó ninguna prueba", "Selección prueba",JOptionPane.INFORMATION_MESSAGE);
-
         }
 
     }//GEN-LAST:event_jButtonVerPruebaMouseClicked
