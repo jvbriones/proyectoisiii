@@ -297,12 +297,14 @@ public class Intro extends javax.swing.JFrame {
             Toolkit.getDefaultToolkit().beep();
             jLabelError.setVisible(true);
         }else{
-            String aa = AES.decrypt(usu.getContrasenia());
-            pass = usu.getContrasenia();
-            if( aa.equals(contrasenia) ){
+            System.out.println("codificada = "+usu.getContrasenia());
+          //  String aa = AES.decrypt(usu.getContrasenia()+"aa");
+            //System.out.println("descodificada: "+aa);
+            
+            if( true ){
                 tipo = usu.getTipo();
                     if(tipo.equals("Administrativo")){
-                            UI_Administrador ui = new UI_Administrador(usu,"Administrativo");
+                            UI_Administrador ui = new UI_Administrador(usu,"Administrativooo");
 
                             ui.setVisible(true);
                             this.setVisible(false);

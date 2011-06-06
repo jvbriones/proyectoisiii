@@ -3753,6 +3753,7 @@ public class UI_Administrador extends javax.swing.JFrame {
             jLabelLugarNacimientoPaciente.setBackground(Color.black);
             jLabelFechaNacimientoPaciente.setBackground(Color.black);
             jLabelFotoPaciente.setIcon(null);
+            jTextFieldFechaNacimiento.setText("");
         }
 
         if(formulario.equals("GestionarPersonal")){

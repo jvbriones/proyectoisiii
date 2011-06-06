@@ -13,9 +13,9 @@ public class a{
 
 
 		String mode = "encrypt";
-		String text = "as";
+		String text = "admi";
 		//String cadena = "XxO5RiI4J883iEFsiiYnHQ==";
-		System.out.print("\nCadena encriptar: "+text+"\nCadena codificada: "+AES.encrypt(text)+"\n");
+		System.out.print("\nCadena encriptar: "+"nCadena codificada: "+AES.encrypt(text)+"\n");
 		//System.out.print("\nCadena desencriptar: "+cadena+"\nCadena decodificada: "+as.decrypt(cadena)+"\n");
 		//as.decrypt(cadena);
 	}
