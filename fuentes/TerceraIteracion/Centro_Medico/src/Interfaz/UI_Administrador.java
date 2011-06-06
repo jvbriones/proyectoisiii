@@ -3027,8 +3027,10 @@ public class UI_Administrador extends javax.swing.JFrame {
                     exito = gesPer.altaPersonal(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(), jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), sfotografia, tipoPersonal);
                 else
                     exito = gesPer.altaFarmaceutico(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(), jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), sfotografia, tipoPersonal);
+                GestorUsuarios gestUsu = new GestorUsuarios();
+                Usuario elusuario=gestUsu.obtenerUsuario(jTextFieldDNIPersonal.getText());
                 if(!exito){
-                    JOptionPane.showMessageDialog(null, "Su operación se ha realizado con éxito", "Confirmación",JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Su contrasenia es: "+elusuario.getContrasenia()+"\t y dado de alta.", "Alta Personal",JOptionPane.INFORMATION_MESSAGE);
                     limpiarFormulario("GestionarPersonal");
                     }
                 else
