@@ -2411,7 +2411,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 jTextFieldNombrePaciente.setText(elusuario.getNombre());
                 jTextFieldApellidosPaciente.setText(elusuario.getApellidos());
                 jTextFieldDireccionPaciente.setText(elusuario.getDireccion());
-                jTextFieldContraseniaPaciente.setText(AES.decrypt(elusuario.getContrasenia()));
+                jTextFieldContraseniaPaciente.setText(elusuario.getContrasenia());
                 jTextFieldEmailPaciente.setText(elusuario.getEmail());
                 jTextFieldTelefonoPaciente.setText(elusuario.getTelefono());
                 jTextFieldLugarNacimientoPaciente.setText(elusuario.getLugarNac());
@@ -2475,7 +2475,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                         jTextFieldNombrePersonal.setText(elusuario.getNombre());
                 jTextFieldApellidosPersonal.setText(elusuario.getApellidos());
                 jTextFieldDireccionPersonal.setText(elusuario.getDireccion());
-                jTextFieldContraseniaPersonal.setText(AES.decrypt(elusuario.getContrasenia()));
+                jTextFieldContraseniaPersonal.setText(elusuario.getContrasenia());
                 jTextFieldEmailPersonal.setText(elusuario.getEmail());
                 jTextFieldTelefonoPersonal.setText(elusuario.getTelefono());
                 jTextFieldLugarNacimientoPersonal.setText(elusuario.getLugarNac());
@@ -3034,11 +3034,9 @@ public class UI_Administrador extends javax.swing.JFrame {
                 else
                     JOptionPane.showMessageDialog(null, "Su operación no pudo realizarse", "Confirmación",JOptionPane.ERROR_MESSAGE);
 
-            } catch (Exception ex) {
+            } catch (SQLException ex) {
                 Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-            } //catch (SQLException ex) {
-                //Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-           // }
+            }
         }
         else
              JOptionPane.showMessageDialog(null, "Corriga los campos", "Error",JOptionPane.ERROR_MESSAGE);
@@ -3055,16 +3053,15 @@ public class UI_Administrador extends javax.swing.JFrame {
             fechaNacimiento = dateChooserCombo1.getSelectedDate().getTime();
             try {
                 exito = gesPac.altaPaciente(jTextFieldDNIPaciente.getText(), jTextFieldNombrePaciente.getText(), jTextFieldApellidosPaciente.getText(), jTextFieldDireccionPaciente.getText(), jTextFieldEmailPaciente.getText(), jTextFieldTelefonoPaciente.getText(), fechaNacimiento, jTextFieldLugarNacimientoPaciente.getText(), sfotografia, "Paciente");
+                Paciente pac = gesPac.obtenerPaciente(jTextFieldDNIPaciente.getText());
                 if(!exito){
-                    JOptionPane.showMessageDialog(null, "Su operacion se ha realizado con exito", "Alta paciente",JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Su contrasenia es: "+pac.getContrasenia()+"\t y dado de alta.", "Alta paciente",JOptionPane.INFORMATION_MESSAGE);
                 }else{
                     JOptionPane.showMessageDialog(null, "No se pudo realizar la operacion", "Error",JOptionPane.ERROR_MESSAGE);
                 }
-            } catch (Exception ex) {
+            }catch (SQLException ex) {
                 Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-            }//catch (SQLException ex) {
-               // Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-           // }
+            }
         }
         else
              JOptionPane.showMessageDialog(null, "Comprueba el formulario", "Error",JOptionPane.ERROR_MESSAGE);
@@ -3088,11 +3085,9 @@ public class UI_Administrador extends javax.swing.JFrame {
 
                             JOptionPane.showMessageDialog(null, "No se ha podido modificar al paciente", "Error",JOptionPane.ERROR_MESSAGE);
                     }
-                } catch (Exception ex) {
-                Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-            }//catch (SQLException ex) {
-                    //Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-                //}
+                }catch (SQLException ex) {
+                    Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+                }
 
             }
         else
@@ -3136,11 +3131,9 @@ public class UI_Administrador extends javax.swing.JFrame {
 
 
 
-            } catch (Exception ex) {
+            } catch (SQLException ex) {
                 Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-            } //catch (SQLException ex) {
-                //Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-           // }
+            }
         }
         else
             JOptionPane.showMessageDialog(null, "Compruebe el formulario", "Error",JOptionPane.ERROR_MESSAGE);
@@ -3753,7 +3746,6 @@ public class UI_Administrador extends javax.swing.JFrame {
             jLabelLugarNacimientoPaciente.setBackground(Color.black);
             jLabelFechaNacimientoPaciente.setBackground(Color.black);
             jLabelFotoPaciente.setIcon(null);
-            jTextFieldFechaNacimiento.setText("");
         }
 
         if(formulario.equals("GestionarPersonal")){

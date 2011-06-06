@@ -47,7 +47,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         gstUsu = new GestorUsuarios();
     }
 
-    public UI_Paciente(Usuario usu, String tipoUsuario) throws SQLException,Exception{
+    public UI_Paciente(Usuario usu, String tipoUsuario) throws SQLException{
         initComponents();
 
         //Iniciar el objeto usuario y gestores
@@ -72,7 +72,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jLabelTipoUsuarioIdentificado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo-Usuario-Paciente.png"))); // NOI18N
     }
 
-    private void mostrarDatosPaciente(Usuario usu) throws SQLException,Exception{
+    private void mostrarDatosPaciente(Usuario usu) throws SQLException{
 
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(usu.getFecNac());
@@ -99,9 +99,12 @@ public class UI_Paciente extends javax.swing.JFrame {
         }
         System.out.println("Esto entra y poque fala..");
         
-      
+        
+        //jTextFieldFechaNacimientoAnioPaciente.setText(num_anio);
+        //jTextFieldFechaNacimientoDiaPaciente.setText(num_dia);
+        //jTextFieldFechaNacimientoMesPaciente.setText(num_mes);
         jTextFieldNombrePaciente.setText(usu.getNombre());
-        jTextFieldContraseniaPaciente.setText(AES.decrypt(usu.getContrasenia()));
+        jTextFieldContraseniaPaciente.setText(usu.getContrasenia());
         jTextFieldDNIPaciente.setText(usu.getDNI());
         jTextFieldApellidosPaciente.setText(usu.getApellidos());
         jTextFieldTelefonoPaciente.setText(usu.getTelefono());
@@ -2441,11 +2444,9 @@ public class UI_Paciente extends javax.swing.JFrame {
                 else
                     JOptionPane.showMessageDialog(null, "Se produjo un error", "Error",JOptionPane.ERROR_MESSAGE);
                 
-            } catch (Exception ex) {
-                Logger.getLogger(UI_Paciente.class.getName()).log(Level.SEVERE, null, ex);
-            }//catch (SQLException ex) {
-               // Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-           // }
+            }catch (SQLException ex) {
+                Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+            }
 
         }
         
@@ -2492,18 +2493,13 @@ public class UI_Paciente extends javax.swing.JFrame {
                 modelo.clear();
                 jList8.setModel(modelo);
                 Set<MedicamentoRecetado> medicamentos = receta.getMedicamentosRecetados();
-               /* if( !(medicamentos.isEmpty() ) ){
+                if( !(medicamentos.isEmpty() ) ){
                     for(Iterator<MedicamentoRecetado> it = medicamentos.iterator(); it.hasNext();){
                         modelo.addElement(it.next().getMedicamento().getNombre());
                     }
                 }else{
                     modelo.addElement("No hay medicamentos");
                 }
-                 * */
-                
-                 modelo.addElement("Mirar linea 2504(parche)");
-                 modelo.addElement("No es error nuestro");
-                 
  
                 mostrarPanel("ConsultarReceta");
             }
@@ -2538,10 +2534,10 @@ public class UI_Paciente extends javax.swing.JFrame {
                     recet = (Receta)it.next();
                     String total="";
                     String fecha=recet.getFecha().toString();
-                   //String medico= recet.getMedi().getNombre();
-                  String medico_parche ="no aparece(parche)";
+                   String medico= recet.getMedi().getNombre();
+                  
                     String id_string= String.valueOf(recet.getId());
-                    total=fecha+espacio+medico_parche+espacio+id_string;
+                    total=fecha+espacio+medico+espacio+id_string;
                     modelo.addElement(total);
                 }    
                 jList3.setModel(modelo);
@@ -2562,36 +2558,7 @@ public class UI_Paciente extends javax.swing.JFrame {
 
     private void jButtonVolverRecetaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonVolverRecetaMouseClicked
         // TODO add your handling code here:
-         String espacio = "             ";
-        modelo.clear();
-        jList3.setModel(modelo);
-
-        try{
-            ArrayList<Receta> set_receta = gstPac.obtenerRecetas(user.getDNI());
-            if(!set_receta.isEmpty()){
-                Receta recet;
-                for(Iterator it = set_receta.iterator(); it.hasNext();){
-                    recet = (Receta)it.next();
-                    String total="";
-                    String fecha=recet.getFecha().toString();
-                   //String medico= recet.getMedi().getNombre();
-                  String medico_parche ="no aparece(parche)";
-                    String id_string= String.valueOf(recet.getId());
-                    total=fecha+espacio+medico_parche+espacio+id_string;
-                    modelo.addElement(total);
-                }    
-                jList3.setModel(modelo);
-                mostrarPanel("VerRecetas");
-            }else
-                JOptionPane.showMessageDialog(null, "¡No tiene recetas disponibles!", "Aviso",JOptionPane.INFORMATION_MESSAGE);
-
-        }
-        catch(SQLException ex){
-            System.err.println(ex.getStackTrace());
-        }
-
-                
-    
+        mostrarPanel("VerRecetas");
     }//GEN-LAST:event_jButtonVolverRecetaMouseClicked
 
     private void jTextFieldDNIMedicoRecetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDNIMedicoRecetaActionPerformed

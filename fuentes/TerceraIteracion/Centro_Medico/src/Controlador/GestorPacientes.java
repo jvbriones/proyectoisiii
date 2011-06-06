@@ -21,7 +21,6 @@ import CentroMedico.Paciente;
 import CentroMedico.PruebaAnalisis;
 import CentroMedico.PruebaRadiologia;
 import CentroMedico.Receta;
-import CentroMedico.*;
 import Interfaz.InformacionError;
 import java.sql.SQLException;
 import java.util.*;
@@ -34,7 +33,7 @@ import java.util.*;
 
 public class GestorPacientes {
 
-   public boolean altaPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, byte[] Foto, String TipoUsuario) throws SQLException, Exception {
+   public boolean altaPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, byte[] Foto, String TipoUsuario) throws SQLException {
         boolean existe;
         PacienteBD bd_paciente = new PacienteBD();
         String Datos = new String();
@@ -43,7 +42,7 @@ public class GestorPacientes {
 
         if(!existe) {
             String pas=new String();
-            pas= AES.encrypt(generarContraseña());
+            pas=generarContraseña();
             Paciente paciente=new Paciente(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto);
             bd_paciente.almacenar(paciente);
 
@@ -85,16 +84,12 @@ public class GestorPacientes {
         
     }
 
-   public boolean modificarPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Pass,String Telefono, Date FecNac, String LugarNac, byte[] Foto ) throws SQLException, Exception {
+   public boolean modificarPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Pass,String Telefono, Date FecNac, String LugarNac, byte[] Foto ) throws SQLException {
         boolean exito;
-        String pas=new String();
-                pas= AES.encrypt(Pass);
         PacienteBD bd_paciente=new PacienteBD();
         Paciente paciente=bd_paciente.obtener(Dni);
-        paciente.actualizar(Dni, Nombre, Apellidos, Direccion, Email,pas,Telefono, FecNac, LugarNac, Foto);
+        paciente.actualizar(Dni, Nombre, Apellidos, Direccion, Email,Pass,Telefono, FecNac, LugarNac, Foto);
         bd_paciente.actualizar(paciente);
-        
-        
         return true;
 }
 

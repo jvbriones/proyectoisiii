@@ -52,46 +52,42 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
     }
 
     public UI_Farmaceutico(Usuario usu, String tipoUsuario) throws SQLException{
-        try {
-            initComponents();
+        initComponents();
 
 
 
 
-            /**Ponemos las etiquetas del usuario que ha entrado*/
-            jLabelNombreUsuario.setText(usu.getNombre());
-            jLabelTipoUsuario.setText(tipoUsuario);
+        /**Ponemos las etiquetas del usuario que ha entrado*/
+        jLabelNombreUsuario.setText(usu.getNombre());
+        jLabelTipoUsuario.setText(tipoUsuario);
 
-            /**Mostramos el panel Principal*/
-            mostrarPanel("Principal");
-            mostrarDatosPerso(usu);
-        
+        /**Mostramos el panel Principal*/
+        mostrarPanel("Principal");
+        mostrarDatosPerso(usu);
+    
 
-            /**Cargamos la foto de login*/
-            jLabelTipoUsuarioIdentificado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo-Usuario-Personal.png"))); // NOI18N
+        /**Cargamos la foto de login*/
+        jLabelTipoUsuarioIdentificado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo-Usuario-Personal.png"))); // NOI18N
 
-            /**Enlazamos grupo botones de GestionarPersonal y ConsultarTurno*/
+        /**Enlazamos grupo botones de GestionarPersonal y ConsultarTurno*/
 
-            buttonGroup1.add(jRadioButtonManiana);
-            buttonGroup1.add(jRadioButtonTarde1);
-            buttonGroup1.add(jRadioButtonNoche);
-            jRadioButtonManiana.setSelected(true);
+        buttonGroup1.add(jRadioButtonManiana);
+        buttonGroup1.add(jRadioButtonTarde1);
+        buttonGroup1.add(jRadioButtonNoche);
+        jRadioButtonManiana.setSelected(true);
 
-            buttonGroup2.add(jRadioButtonAnalista);
-            buttonGroup2.add(jRadioButtonFarmaceutico);
-            buttonGroup2.add(jRadioButtonMedico);
-            buttonGroup2.add(jRadioButtonRadiologo);
-            jRadioButtonRadiologo.setSelected(true);
+        buttonGroup2.add(jRadioButtonAnalista);
+        buttonGroup2.add(jRadioButtonFarmaceutico);
+        buttonGroup2.add(jRadioButtonMedico);
+        buttonGroup2.add(jRadioButtonRadiologo);
+        jRadioButtonRadiologo.setSelected(true);
 
-          
-           jLabelErrorRepe.setVisible(false);
-           jLabelError2.setVisible(false);
-           jLabelError3.setVisible(false);
-           jLabelError4.setVisible(false);
-           jLabelError5.setVisible(false);
-        } catch (Exception ex) {
-            Logger.getLogger(UI_Farmaceutico.class.getName()).log(Level.SEVERE, null, ex);
-        }
+      
+       jLabelErrorRepe.setVisible(false);
+       jLabelError2.setVisible(false);
+       jLabelError3.setVisible(false);
+       jLabelError4.setVisible(false);
+       jLabelError5.setVisible(false);
 
     }
 
@@ -1931,11 +1927,9 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                 else
                     new InformacionError().setVisible(true);
 
-            } catch (Exception ex) {
-                Logger.getLogger(UI_Farmaceutico.class.getName()).log(Level.SEVERE, null, ex);
-            } //catch (SQLException ex) {
-                //Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-            //}
+            } catch (SQLException ex) {
+                Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
 
 
@@ -3175,7 +3169,7 @@ private boolean compruebaFecha(String persona){
 
     }
 
-    private void identificarPersonal( String nombreUsuario) throws SQLException,Exception{
+    private void identificarPersonal( String nombreUsuario) throws SQLException{
 
         //trabajar con personal no se puede, ya que su BD está mal
 
@@ -3187,7 +3181,7 @@ private boolean compruebaFecha(String persona){
 
     }
 
-    private void mostrarDatosPerso(Usuario usu) throws SQLException,Exception{
+    private void mostrarDatosPerso(Usuario usu) throws SQLException{
 
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(usu.getFecNac());
@@ -3217,7 +3211,7 @@ private boolean compruebaFecha(String persona){
   //      jTextFieldFechaNacimientoDiaPersonal.setText(num_dia);
     //    jTextFieldFechaNacimientoMesersonal.setText(num_mes);
         jTextFieldNombrePersonal.setText(usu.getNombre());
-        jTextFieldContraseniaPersonal.setText(AES.decrypt(usu.getContrasenia()));
+        jTextFieldContraseniaPersonal.setText(usu.getContrasenia());
         jTextFieldDNIPersonal.setText(usu.getDNI());
         jTextFieldApellidosPersonal.setText(usu.getApellidos());
         jTextFieldTelefonoPersonal.setText(usu.getTelefono());
