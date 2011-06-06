@@ -3674,11 +3674,9 @@ MedicamentoBD meBD = new MedicamentoBD();
             System.err.print("Error al leer el archivo");
         }
 
-//        jTextFieldFechaNacimientoAnioPersonal.setText(num_anio);
-  //      jTextFieldFechaNacimientoDiaPersonal.setText(num_dia);
-    //    jTextFieldFechaNacimientoMesersonal.setText(num_mes);
+//     
         jTextFieldNombrePersonal.setText(usu.getNombre());
-       // jTextFieldContraseniaPersonal.setText(AES.decrypt(usu.getContrasenia()));
+        jTextFieldContraseniaPersonal.setText(AES.decrypt(usu.getContrasenia()));
         jTextFieldDNIPersonal.setText(usu.getDNI());
         jTextFieldApellidosPersonal.setText(usu.getApellidos());
         jTextFieldTelefonoPersonal.setText(usu.getTelefono());
