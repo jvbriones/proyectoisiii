@@ -298,10 +298,10 @@ public class Intro extends javax.swing.JFrame {
             jLabelError.setVisible(true);
         }else{
             System.out.println("codificada = "+usu.getContrasenia());
-          //  String aa = AES.decrypt(usu.getContrasenia()+"aa");
-            //System.out.println("descodificada: "+aa);
+            String aa = AES.decrypt(usu.getContrasenia());
+            System.out.println(aa);
             
-            if( true ){
+            if( aa.equals(contrasenia) ){
                 tipo = usu.getTipo();
                     if(tipo.equals("Administrativo")){
                             UI_Administrador ui = new UI_Administrador(usu,"Administrativooo");
