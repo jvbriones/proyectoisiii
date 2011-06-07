@@ -3503,7 +3503,7 @@ MedicamentoBD meBD = new MedicamentoBD();
              
              
             /**Insertamos icono de foto anónima*/
-            jLabelFotoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
+            //jLabelFotoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
 
 
             /**Hacemos visible el panel seleccionado*/
@@ -3670,7 +3670,7 @@ MedicamentoBD meBD = new MedicamentoBD();
             jLabelIconoInicio.setVisible(true);
 
             /**Insertamos icono de foto anónima*/
-            jLabelFotoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
+           // jLabelFotoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
 
 
             /**Hacemos visible el panel seleccionado*/
@@ -3714,7 +3714,7 @@ MedicamentoBD meBD = new MedicamentoBD();
             jLabelIconoInicio.setVisible(true);
 
             /**Insertamos icono de foto anónima*/
-            jLabelFotoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
+            //jLabelFotoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
 
 
             /**Hacemos visible el panel seleccionado*/
@@ -3758,7 +3758,7 @@ MedicamentoBD meBD = new MedicamentoBD();
             jLabelIconoInicio.setVisible(true);
 
             /**Insertamos icono de foto anónima*/
-            jLabelFotoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
+            //jLabelFotoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
 
 
             /**Hacemos visible el panel seleccionado*/
@@ -3802,7 +3802,7 @@ MedicamentoBD meBD = new MedicamentoBD();
             jLabelIconoInicio.setVisible(true);
 
             /**Insertamos icono de foto anónima*/
-            jLabelFotoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
+            //jLabelFotoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Foto-Anonima.png"))); // NOI18N
 
 
             /**Hacemos visible el panel seleccionado*/
