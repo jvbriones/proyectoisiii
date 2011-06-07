@@ -56,7 +56,7 @@ public class UI_Medico extends javax.swing.JFrame {
 
     }
 
-    public UI_Medico(Usuario usu, String tipoUsuario) throws SQLException{
+    public UI_Medico(Usuario usu, String tipoUsuario) throws Exception, SQLException{
         initComponents();
         user = usu;
         /**Ponemos las etiquetas del usuario que ha entrado*/
@@ -2568,9 +2568,9 @@ public class UI_Medico extends javax.swing.JFrame {
                 else
                     new InformacionError().setVisible(true);
 
-            } catch (SQLException ex) {
-                Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            } catch (Exception ex) {
+                Logger.getLogger(UI_Medico.class.getName()).log(Level.SEVERE, null, ex);
+            } 
         }
 
 
@@ -4119,7 +4119,7 @@ MedicamentoBD meBD = new MedicamentoBD();
 
  
  */
-    private void mostrarDatosPerso(Usuario usu) throws SQLException{
+    private void mostrarDatosPerso(Usuario usu) throws Exception, SQLException{
 
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(usu.getFecNac());
@@ -4151,13 +4151,14 @@ MedicamentoBD meBD = new MedicamentoBD();
   //      jTextFieldFechaNacimientoDiaPersonal.setText(num_dia);
     //    jTextFieldFechaNacimientoMesersonal.setText(num_mes);
         jTextFieldNombrePersonal.setText(usu.getNombre());
-        jTextFieldContraseniaPersonal.setText(usu.getContrasenia());
+        //jTextFieldContraseniaPersonal.setText(usu.getContrasenia());
         jTextFieldDNIPersonal.setText(usu.getDNI());
         jTextFieldApellidosPersonal.setText(usu.getApellidos());
         jTextFieldTelefonoPersonal.setText(usu.getTelefono());
         jTextFieldDireccionPersonal.setText(usu.getDireccion());
         jTextFieldEmailPersonal.setText(usu.getEmail());
         jTextFieldLugarNacimientoPersonal.setText(usu.getLugarNac());
+        jTextFieldContraseniaPersonal.setText(AES.decrypt(usu.getContrasenia()));
     }
 
     private boolean compruebaFormulario(String formulario){

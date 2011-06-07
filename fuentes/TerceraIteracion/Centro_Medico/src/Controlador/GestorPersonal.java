@@ -11,31 +11,20 @@
 
 package Controlador;
 
-import BaseDatos.AnalistaBD;
-import BaseDatos.FarmaceuticoBD;
-import BaseDatos.MedicoBD;
-import BaseDatos.PersonalMedicoBD;
-import BaseDatos.RadiologoBD;
-import BaseDatos.UsuarioBD;
-import CentroMedico.Analista;
-import CentroMedico.Farmaceutico;
-import CentroMedico.Medico;
-import CentroMedico.PersonalMedico;
-import CentroMedico.Radiologo;
-import CentroMedico.Turno;
-import CentroMedico.Usuario;
+import BaseDatos.*;
+import CentroMedico.*;
 import java.sql.SQLException;
 import java.util.Date;
 
 
 /**
  * @version     1.1     16/04/2011
- * @author      Sub_Equipo2
+ * @author      Sub_Equipo2, Sub_Equipo3
  */
 
 public class GestorPersonal {
 
-    public boolean altaPersonal(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, byte[] Foto, String TipoUsuario) throws SQLException {
+    public boolean altaPersonal(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, byte[] Foto, String TipoUsuario) throws Exception, SQLException {
         boolean existe;
         PersonalMedicoBD bd_personal=new PersonalMedicoBD();
         String Datos=new String();
@@ -46,6 +35,9 @@ public class GestorPersonal {
         if(!existe) {
              String pas=new String();
             pas=generarContraseña();
+            String n=new String();
+            n = AES.encrypt(pas);
+            pas=LimpiarString(n);
             if(TipoUsuario=="Analista"){
                 Analista personal=new Analista(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto);
                 Turno tur=null;
@@ -80,8 +72,17 @@ public class GestorPersonal {
         return existe;
 
     }
+    
+    private String LimpiarString(String s){
+       String a= new String();
+       for (int x=0; x < s.length(); x++) {
+            if (s.charAt(x) != '\n')
+                a += s.charAt(x);
+        }
+       return a;
+   }
 
-    public boolean altaFarmaceutico(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, byte[] Foto, String TipoUsuario) throws SQLException {
+    public boolean altaFarmaceutico(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, byte[] Foto, String TipoUsuario) throws Exception, SQLException {
         boolean existe;
         FarmaceuticoBD bd_farmaceutico=new FarmaceuticoBD();
         String Datos=new String();
@@ -91,6 +92,9 @@ public class GestorPersonal {
         if(!existe) {
             String pas=new String();
             pas=generarContraseña();
+            String n=new String();
+            n = AES.encrypt(pas);
+            pas=LimpiarString(n);
             Farmaceutico personal=new Farmaceutico(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto);
             bd_farmaceutico.almacenar(personal);
 
@@ -126,20 +130,28 @@ public class GestorPersonal {
         return existe;
     }
 
-    public boolean modificarPersonal(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Pass,String Telefono, Date FecNac, String LugarNac, byte[] Foto,String Tipo) throws SQLException {
+    public boolean modificarPersonal(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Pass,String Telefono, Date FecNac, String LugarNac, byte[] Foto,String Tipo) throws Exception, SQLException {
         boolean exito;
         PersonalMedicoBD bd_personal=new PersonalMedicoBD();
         PersonalMedico personal=bd_personal.obtener(Dni);
-        personal.actualizar(Dni, Nombre, Apellidos, Direccion, Email,Pass,Telefono, FecNac, LugarNac, Foto,Tipo);
+        String n=new String();
+        String m=new String();
+            n = AES.encrypt(Pass);
+            m=LimpiarString(n);
+        personal.actualizar(Dni, Nombre, Apellidos, Direccion, Email,m,Telefono, FecNac, LugarNac, Foto,Tipo);
         bd_personal.actualizar(personal);
         return true;
 }
 
-    public boolean modificarPersonalFarmacia(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Pass,String Telefono, Date FecNac, String LugarNac, byte[] Foto,String Tipo) throws SQLException {
+    public boolean modificarPersonalFarmacia(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Pass,String Telefono, Date FecNac, String LugarNac, byte[] Foto,String Tipo) throws Exception, SQLException {
         boolean exito;
         FarmaceuticoBD bd_personal=new FarmaceuticoBD();
         Farmaceutico personal=bd_personal.obtener(Dni);
-        personal.actualizar(Dni, Nombre, Apellidos, Direccion, Email,Pass,Telefono, FecNac, LugarNac, Foto,Tipo);
+        String n=new String();
+        String m=new String();
+            n = AES.encrypt(Pass);
+            m=LimpiarString(n);
+        personal.actualizar(Dni, Nombre, Apellidos, Direccion, Email,m,Telefono, FecNac, LugarNac, Foto,Tipo);
         bd_personal.actualizar(personal);
         return true;
 }

@@ -47,7 +47,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         gstUsu = new GestorUsuarios();
     }
 
-    public UI_Paciente(Usuario usu, String tipoUsuario) throws SQLException{
+    public UI_Paciente(Usuario usu, String tipoUsuario) throws Exception, SQLException{
         initComponents();
 
         //Iniciar el objeto usuario y gestores
@@ -72,7 +72,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         jLabelTipoUsuarioIdentificado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Principal/Tipo-Usuario-Paciente.png"))); // NOI18N
     }
 
-    private void mostrarDatosPaciente(Usuario usu) throws SQLException{
+    private void mostrarDatosPaciente(Usuario usu) throws Exception, SQLException{
 
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(usu.getFecNac());
@@ -104,7 +104,7 @@ public class UI_Paciente extends javax.swing.JFrame {
         //jTextFieldFechaNacimientoDiaPaciente.setText(num_dia);
         //jTextFieldFechaNacimientoMesPaciente.setText(num_mes);
         jTextFieldNombrePaciente.setText(usu.getNombre());
-        jTextFieldContraseniaPaciente.setText(usu.getContrasenia());
+        //jTextFieldContraseniaPaciente.setText(usu.getContrasenia());
         jTextFieldDNIPaciente.setText(usu.getDNI());
         jTextFieldApellidosPaciente.setText(usu.getApellidos());
         jTextFieldTelefonoPaciente.setText(usu.getTelefono());
@@ -112,6 +112,10 @@ public class UI_Paciente extends javax.swing.JFrame {
         jTextFieldEmailPaciente.setText(usu.getEmail());
         jTextFieldLugarNacimientoPaciente.setText(usu.getLugarNac());
         jTextFieldDNIPaciente.setEditable(false);
+        
+        jTextFieldContraseniaPaciente.setText(AES.decrypt(usu.getContrasenia()));
+        
+        
     }
 
     private void cargarDatosCitaPaciente( Usuario usu )throws SQLException{
@@ -2444,8 +2448,8 @@ public class UI_Paciente extends javax.swing.JFrame {
                 else
                     JOptionPane.showMessageDialog(null, "Se produjo un error", "Error",JOptionPane.ERROR_MESSAGE);
                 
-            }catch (SQLException ex) {
-                Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (Exception ex) {
+                Logger.getLogger(UI_Paciente.class.getName()).log(Level.SEVERE, null, ex);
             }
 
         }

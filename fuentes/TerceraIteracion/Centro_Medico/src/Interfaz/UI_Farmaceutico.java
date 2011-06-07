@@ -51,7 +51,7 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
 
     }
 
-    public UI_Farmaceutico(Usuario usu, String tipoUsuario) throws SQLException{
+    public UI_Farmaceutico(Usuario usu, String tipoUsuario) throws Exception, SQLException{
         initComponents();
 
 
@@ -1927,9 +1927,9 @@ public class UI_Farmaceutico extends javax.swing.JFrame {
                 else
                     new InformacionError().setVisible(true);
 
-            } catch (SQLException ex) {
-                Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            } catch (Exception ex) {
+                Logger.getLogger(UI_Farmaceutico.class.getName()).log(Level.SEVERE, null, ex);
+            } 
         }
 
 
@@ -3169,7 +3169,7 @@ private boolean compruebaFecha(String persona){
 
     }
 
-    private void identificarPersonal( String nombreUsuario) throws SQLException{
+    private void identificarPersonal( String nombreUsuario) throws Exception, SQLException{
 
         //trabajar con personal no se puede, ya que su BD está mal
 
@@ -3181,7 +3181,7 @@ private boolean compruebaFecha(String persona){
 
     }
 
-    private void mostrarDatosPerso(Usuario usu) throws SQLException{
+    private void mostrarDatosPerso(Usuario usu) throws Exception, SQLException{
 
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(usu.getFecNac());
@@ -3211,7 +3211,7 @@ private boolean compruebaFecha(String persona){
   //      jTextFieldFechaNacimientoDiaPersonal.setText(num_dia);
     //    jTextFieldFechaNacimientoMesersonal.setText(num_mes);
         jTextFieldNombrePersonal.setText(usu.getNombre());
-        jTextFieldContraseniaPersonal.setText(usu.getContrasenia());
+        //jTextFieldContraseniaPersonal.setText(usu.getContrasenia());
         jTextFieldDNIPersonal.setText(usu.getDNI());
         jTextFieldApellidosPersonal.setText(usu.getApellidos());
         jTextFieldTelefonoPersonal.setText(usu.getTelefono());
@@ -3219,6 +3219,7 @@ private boolean compruebaFecha(String persona){
         jTextFieldEmailPersonal.setText(usu.getEmail());
         jTextFieldLugarNacimientoPersonal.setText(usu.getLugarNac());
         jTextFieldDNIPersonal.setEditable(false);
+        jTextFieldContraseniaPersonal.setText(AES.decrypt(usu.getContrasenia()));
     }
 
 

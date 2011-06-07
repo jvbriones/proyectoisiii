@@ -16,6 +16,7 @@ import BaseDatos.PacienteBD;
 import BaseDatos.RecetaBD;
 import BaseDatos.PruebaAnalisisBD;
 import BaseDatos.PruebaRadiologiaBD;
+import CentroMedico.AES;
 import CentroMedico.Enfermedad;
 import CentroMedico.Paciente;
 import CentroMedico.PruebaAnalisis;
@@ -33,7 +34,7 @@ import java.util.*;
 
 public class GestorPacientes {
 
-   public boolean altaPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, byte[] Foto, String TipoUsuario) throws SQLException {
+   public boolean altaPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Telefono, Date FecNac, String LugarNac, byte[] Foto, String TipoUsuario) throws Exception, SQLException {
         boolean existe;
         PacienteBD bd_paciente = new PacienteBD();
         String Datos = new String();
@@ -43,6 +44,9 @@ public class GestorPacientes {
         if(!existe) {
             String pas=new String();
             pas=generarContraseña();
+            String n=new String();
+            n = AES.encrypt(pas);
+            pas=LimpiarString(n);
             Paciente paciente=new Paciente(Dni, Nombre, Apellidos, Direccion, Email, pas, Telefono, FecNac, LugarNac, Foto);
             bd_paciente.almacenar(paciente);
 
@@ -55,6 +59,15 @@ public class GestorPacientes {
         return existe;
 
     }
+   
+   private String LimpiarString(String s){
+       String a= new String();
+       for (int x=0; x < s.length(); x++) {
+            if (s.charAt(x) != '\n')
+                a += s.charAt(x);
+        }
+       return a;
+   }
 
    private String generarContraseña() {
         String numeros = "0123456789";
@@ -84,11 +97,15 @@ public class GestorPacientes {
         
     }
 
-   public boolean modificarPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Pass,String Telefono, Date FecNac, String LugarNac, byte[] Foto ) throws SQLException {
+   public boolean modificarPaciente(String Dni, String Nombre, String Apellidos, String Direccion,String Email, String Pass,String Telefono, Date FecNac, String LugarNac, byte[] Foto ) throws Exception, SQLException {
         boolean exito;
         PacienteBD bd_paciente=new PacienteBD();
         Paciente paciente=bd_paciente.obtener(Dni);
-        paciente.actualizar(Dni, Nombre, Apellidos, Direccion, Email,Pass,Telefono, FecNac, LugarNac, Foto);
+        String n=new String();
+        String m=new String();
+            n = AES.encrypt(Pass);
+            m=LimpiarString(n);
+        paciente.actualizar(Dni, Nombre, Apellidos, Direccion, Email,m,Telefono, FecNac, LugarNac, Foto);
         bd_paciente.actualizar(paciente);
         return true;
 }

@@ -198,11 +198,13 @@ public class Intro extends javax.swing.JFrame {
     private void jPasswordField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyPressed
         // TODO add your handling code here:
         if(evt.getKeyCode()== java.awt.event.KeyEvent.VK_ENTER){
-            try {
-                ComprobarAcceso();
-            } catch (SQLException ex) {
-                Logger.getLogger(Intro.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            
+                try {
+                    ComprobarAcceso();
+                } catch (Exception ex) {
+                    Logger.getLogger(Intro.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            
         }
     }//GEN-LAST:event_jPasswordField1KeyPressed
 
@@ -241,13 +243,14 @@ public class Intro extends javax.swing.JFrame {
 }//GEN-LAST:event_jLabelIconoSalirMouseEntered
 
     private void jButton1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseReleased
-         try {
+         
+            try {
+                ComprobarAcceso();
+            } catch (Exception ex) {
+                Logger.getLogger(Intro.class.getName()).log(Level.SEVERE, null, ex);
+            }
 
-         ComprobarAcceso();
-
-        } catch (SQLException ex) {
-            Logger.getLogger(Intro.class.getName()).log(Level.SEVERE, null, ex);
-        }
+       
     }//GEN-LAST:event_jButton1MouseReleased
 
     private void jTextFieldUsuarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldUsuarioKeyTyped
@@ -276,7 +279,7 @@ public class Intro extends javax.swing.JFrame {
      * @author Juan Carlos
      * Esta función era de la primera iteración pero se ha cambiado para que sea coherente con la nueva implementación.
      */
-    private void ComprobarAcceso() throws SQLException{
+    private void ComprobarAcceso() throws Exception, SQLException{
         String dni = jTextFieldUsuario.getText(); //El usuario de login siempre es un dni.
         String contrasenia = new String(jPasswordField1.getPassword());
         GestorUsuarios gesUsu = new GestorUsuarios();
@@ -295,8 +298,8 @@ public class Intro extends javax.swing.JFrame {
             Toolkit.getDefaultToolkit().beep();
             jLabelError.setVisible(true);
         }else{
-            pass = usu.getContrasenia();
-            if( pass.equals(contrasenia) ){
+            pass = AES.decrypt(usu.getContrasenia());
+            if( pass.equals(contrasenia)){
                 tipo = usu.getTipo();
                     if(tipo.equals("Administrativo")){
                             UI_Administrador ui = new UI_Administrador(usu,"Administrativo");

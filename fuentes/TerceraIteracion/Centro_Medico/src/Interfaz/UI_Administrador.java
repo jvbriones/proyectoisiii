@@ -2411,11 +2411,17 @@ public class UI_Administrador extends javax.swing.JFrame {
                 jTextFieldNombrePaciente.setText(elusuario.getNombre());
                 jTextFieldApellidosPaciente.setText(elusuario.getApellidos());
                 jTextFieldDireccionPaciente.setText(elusuario.getDireccion());
-                jTextFieldContraseniaPaciente.setText(elusuario.getContrasenia());
+                //jTextFieldContraseniaPaciente.setText(elusuario.getContrasenia());
                 jTextFieldEmailPaciente.setText(elusuario.getEmail());
                 jTextFieldTelefonoPaciente.setText(elusuario.getTelefono());
                 jTextFieldLugarNacimientoPaciente.setText(elusuario.getLugarNac());
                   jTextFieldFechaNacimiento.setText(elusuario.getFecNac().toString());
+                  
+                  String s=new String();
+                s=AES.decrypt(elusuario.getContrasenia());
+                jTextFieldContraseniaPaciente.setText(s);
+                  
+                  
                    try{
             
             ImageIcon icono = new ImageIcon(elusuario.getFoto());
@@ -2475,12 +2481,17 @@ public class UI_Administrador extends javax.swing.JFrame {
                         jTextFieldNombrePersonal.setText(elusuario.getNombre());
                 jTextFieldApellidosPersonal.setText(elusuario.getApellidos());
                 jTextFieldDireccionPersonal.setText(elusuario.getDireccion());
-                jTextFieldContraseniaPersonal.setText(elusuario.getContrasenia());
+                //jTextFieldContraseniaPersonal.setText(elusuario.getContrasenia());
                 jTextFieldEmailPersonal.setText(elusuario.getEmail());
                 jTextFieldTelefonoPersonal.setText(elusuario.getTelefono());
                 jTextFieldLugarNacimientoPersonal.setText(elusuario.getLugarNac());
                 jTextFieldTelefonoPersonal1.setText(elusuario.getFecNac().toString());
 
+                String s=new String();
+                s=AES.decrypt(elusuario.getContrasenia());
+                jTextFieldContraseniaPersonal.setText(s);
+                
+                
                 try{
             
             ImageIcon icono = new ImageIcon(elusuario.getFoto());
@@ -3029,16 +3040,19 @@ public class UI_Administrador extends javax.swing.JFrame {
                     exito = gesPer.altaFarmaceutico(jTextFieldDNIPersonal.getText(), jTextFieldNombrePersonal.getText(), jTextFieldApellidosPersonal.getText(), jTextFieldDireccionPersonal.getText(), jTextFieldEmailPersonal.getText(), jTextFieldTelefonoPersonal.getText(), fechaNacimiento, jTextFieldLugarNacimientoPersonal.getText(), sfotografia, tipoPersonal);
                 GestorUsuarios gestUsu = new GestorUsuarios();
                 Usuario elusuario=gestUsu.obtenerUsuario(jTextFieldDNIPersonal.getText());
+                String s = new String();
+                s=AES.decrypt(elusuario.getContrasenia());
+                
                 if(!exito){
-                    JOptionPane.showMessageDialog(null, "Su contrasenia es: "+elusuario.getContrasenia()+"\t y dado de alta.", "Alta Personal",JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Su contrasenia es: "+s+"\t y dado de alta.", "Alta Personal",JOptionPane.INFORMATION_MESSAGE);
                     limpiarFormulario("GestionarPersonal");
                     }
                 else
                     JOptionPane.showMessageDialog(null, "Su operación no pudo realizarse", "Confirmación",JOptionPane.ERROR_MESSAGE);
 
-            } catch (SQLException ex) {
+            } catch (Exception ex) {
                 Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            } 
         }
         else
              JOptionPane.showMessageDialog(null, "Corriga los campos", "Error",JOptionPane.ERROR_MESSAGE);
@@ -3061,7 +3075,7 @@ public class UI_Administrador extends javax.swing.JFrame {
                 }else{
                     JOptionPane.showMessageDialog(null, "No se pudo realizar la operacion", "Error",JOptionPane.ERROR_MESSAGE);
                 }
-            }catch (SQLException ex) {
+            } catch (Exception ex) {
                 Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
@@ -3087,9 +3101,9 @@ public class UI_Administrador extends javax.swing.JFrame {
 
                             JOptionPane.showMessageDialog(null, "No se ha podido modificar al paciente", "Error",JOptionPane.ERROR_MESSAGE);
                     }
-                }catch (SQLException ex) {
-                    Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                } catch (Exception ex) {
+                Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+            }
 
             }
         else
@@ -3133,9 +3147,9 @@ public class UI_Administrador extends javax.swing.JFrame {
 
 
 
-            } catch (SQLException ex) {
+            } catch (Exception ex) {
                 Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            } 
         }
         else
             JOptionPane.showMessageDialog(null, "Compruebe el formulario", "Error",JOptionPane.ERROR_MESSAGE);
