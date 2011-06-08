@@ -2585,6 +2585,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
             PersonalMedicoBD personalbd=new PersonalMedicoBD();
             PersonalMedico personal=new PersonalMedico();
+            GestorTurnos gstTur= new GestorTurnos();
            
            
             Date fechaInicio = dateChooserCombo3.getSelectedDate().getTime();                       //HAY QUE PROCESARLA LEYÉNDOLA DEL FORMULARIOOOO
@@ -2597,28 +2598,23 @@ public class UI_Administrador extends javax.swing.JFrame {
              if (jRadioButtonTarde.isSelected()) tip="Tarde";
              if (jRadioButtonNoche.isSelected()) tip="Noche";
 
-              
-                   personal=personalbd.obtener(jTextFieldDNIGestionarTurno.getText());
-                  if (personal!=null){ 
-                  Turno tur=new Turno();;
-                  tur.setDNI(jTextFieldDNIGestionarTurno.getText());
-                  tur.setHoraFin(fechaFin);
-                  tur.setHoraInicio(fechaInicio);
-                  tur.setTipo(tip);
-                  
-                  personal.setTurno(tur);
-                personalbd.actualizar(personal);
-
-                    JOptionPane.showMessageDialog(null, "Turno Añadido con exito", "Exito",JOptionPane.INFORMATION_MESSAGE);
-                   }
+              boolean bien;
+            try {
+                bien = gstTur.altaTurno(jTextFieldDNIGestionarTurno.getText(), tip, fechaInicio, fechaFin);
+           
                 
+
+                  if ( bien==true)  JOptionPane.showMessageDialog(null, "Turno Añadido con exito", "Exito",JOptionPane.INFORMATION_MESSAGE);
+          
+    
                 else{
                          JOptionPane.showMessageDialog(null, "El dni NO corresponde a un PersonalMedico", "Error",JOptionPane.ERROR_MESSAGE);
                    }
-        }
-          
-
-
+         } catch (SQLException ex) {
+                Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+         }
+        else JOptionPane.showMessageDialog(null, "Compruebe el formulario", "Error",JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_jButtonAltaTurnoMouseClicked
 
     private void jButtonGuardarTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarTurnoMouseClicked
@@ -3041,8 +3037,10 @@ public class UI_Administrador extends javax.swing.JFrame {
                 GestorUsuarios gestUsu = new GestorUsuarios();
                 Usuario elusuario=gestUsu.obtenerUsuario(jTextFieldDNIPersonal.getText());
                 String s = new String();
-                s=AES.decrypt(elusuario.getContrasenia());
-                
+               
+                //s=AES.decrypt(elusuario.getContrasenia());
+               
+                s="el esteba es tonto";
                 if(!exito){
                     JOptionPane.showMessageDialog(null, "Su contrasenia es: "+s+"\t y dado de alta.", "Alta Personal",JOptionPane.INFORMATION_MESSAGE);
                     limpiarFormulario("GestionarPersonal");
