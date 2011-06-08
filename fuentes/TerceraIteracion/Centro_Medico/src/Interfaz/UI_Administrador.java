@@ -40,6 +40,8 @@ import javax.swing.DefaultListModel;
  */
 public class UI_Administrador extends javax.swing.JFrame {
 
+    private GestorTurnos gstTur= new GestorTurnos();
+    
     /** Creates new form Principal_Administrador */
     public UI_Administrador() {
         initComponents();
@@ -2548,32 +2550,24 @@ public class UI_Administrador extends javax.swing.JFrame {
         jRadioButtonManiana.setVisible(false);
         jRadioButtonTarde.setVisible(false);
         jRadioButtonNoche.setVisible(false);
+        try {
+            Turno tur= gstTur.consultarTurnoPersonal(jTextFieldDNIGestionarTurno.getText());
         
         
-        TurnoBD turbd= new TurnoBD();
-        PersonalMedicoBD personalbd= new PersonalMedicoBD();
-        PersonalMedico personal= new PersonalMedico();
-        
-     
-            personal=personalbd.obtener(jTextFieldDNIGestionarTurno.getText());
-            
-            if ( personal!=null ){
-                System.out.println("El DNI Es de un PersonalMedico");
-
-                if ( personal.getTurno()!=null){
-            fechainiciomostrar1.setText(personal.getTurno().getHoraInicio().toString());
-            fechainiciomostrar2.setText(personal.getTurno().getHoraFin().toString());
-            fechainiciomostrar3.setText(personal.getTurno().getTipo());
+    
+                if ( tur!=null){
+            fechainiciomostrar1.setText(tur.getHoraInicio().toString());
+            fechainiciomostrar2.setText(tur.getHoraFin().toString());
+            fechainiciomostrar3.setText(tur.getTipo());
             }
                 else{
                     System.out.println("Este personal medico no tiene turno asignado");
                      JOptionPane.showMessageDialog(null, "Este personal no tiene turno asignado", "Error",JOptionPane.ERROR_MESSAGE);
                 }
-            }
-            else{
-                                System.out.println("El DNI NO Es de un PersonalMedico");
-                JOptionPane.showMessageDialog(null, "El DNI no es de un PersonalMedico", "Error",JOptionPane.ERROR_MESSAGE);
-            }
+            } catch (SQLException ex) {
+            Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         
 
     }//GEN-LAST:event_jButtonConsultarTurnoMouseClicked
 
@@ -2585,7 +2579,7 @@ public class UI_Administrador extends javax.swing.JFrame {
 
             PersonalMedicoBD personalbd=new PersonalMedicoBD();
             PersonalMedico personal=new PersonalMedico();
-            GestorTurnos gstTur= new GestorTurnos();
+           
            
            
             Date fechaInicio = dateChooserCombo3.getSelectedDate().getTime();                       //HAY QUE PROCESARLA LEYÉNDOLA DEL FORMULARIOOOO
