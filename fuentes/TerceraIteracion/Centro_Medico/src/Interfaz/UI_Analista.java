@@ -2225,7 +2225,7 @@ public class UI_Analista extends javax.swing.JFrame {
         }
 
         jTextFieldNombrePersonal.setText(usu.getNombre());
-        //jTextFieldContraseniaPersonal.setText(usu.getContrasenia());
+        //jTextFieldContraseniaPersonal.setText(AES.decrypt(usu.getContrasenia()));
         jTextFieldDNIPersonal.setText(usu.getDNI());
         jTextFieldApellidosPersonal.setText(usu.getApellidos());
         jTextFieldTelefonoPersonal.setText(usu.getTelefono());
