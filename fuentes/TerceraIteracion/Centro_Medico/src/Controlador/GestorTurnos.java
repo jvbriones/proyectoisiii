@@ -29,7 +29,7 @@ public class GestorTurnos {
     public boolean altaTurno(String dni,String tipo,Date inicio,Date fin)throws SQLException {
         // MIguel.  Tipo es " mañana" "tarde " o "noche"
 
-        String exito=new String();
+  
         PersonalMedicoBD personal= new PersonalMedicoBD();
         
         TurnoBD turbd = new TurnoBD();
@@ -44,13 +44,11 @@ public class GestorTurnos {
 
             if (existe_turno || !existe_personal){
                 bien=false;
-                exito="Ya existe un Turno del tipo "+tipo;
                 
             }
              
            else{
              
-                System.out.println("no existe el turno y existe el personal");
                 PersonalMedico personalmed = new PersonalMedico();
                 personalmed=personal.obtener(dni);
                 
@@ -65,7 +63,6 @@ public class GestorTurnos {
                 
                 personal.actualizar(personalmed);
                 
-                exito="Se creó un Turno de tipo "+tipo;
                 bien=true;
                 }
         
@@ -145,40 +142,24 @@ public class GestorTurnos {
         return exito;
     }
 
-    public String consultarTurnoPersonal(String Dni) throws SQLException{
-        String exito=new String();
-        GestorPersonal gestorPers=new GestorPersonal();
-        boolean existe;
-
-        existe=gestorPers.existePersonal(Dni);
-
-        if(existe){
-            TurnoBD bd_turno=new TurnoBD();
-            boolean existe2;
-
-            existe2=bd_turno.existeTurno(Dni);
-
-            if(existe2){
-                Turno turno;
-                SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
-                
-                turno=bd_turno.obtener(Dni);
-//                String fechaI=new String(sdf.format(turno.getFechaInicio()));
-  //              String tipo=new String(turno.getTipoTurno());
-    //            String fechaF=new String(sdf.format(turno.getFechaFin()));
-
-       //         exito="El turno es desde el día "+fechaI+" hasta "+fechaF;
-         //       exito+=", del tipo "+tipo;
-            }
-            else{
-                exito="El usuario "+Dni+" no tiene ningun turno asignado";
-            }
-        }
-        else{
-            exito="No existe ningún usuario con dni "+Dni;
-        }
+    public Turno consultarTurnoPersonal(String Dni) throws SQLException{
+      Turno tur=null;
+        PersonalMedicoBD personalbd= new PersonalMedicoBD();
+        PersonalMedico personal= new PersonalMedico();
         
-        return exito;
+     
+            personal=personalbd.obtener(Dni);
+            
+            if ( personal!=null ){
+                System.out.println("El DNI Es de un PersonalMedico");
+
+                if ( personal.getTurno()!=null){
+                    tur=personal.getTurno();
+                }
+                
+            }
+            return tur;
+            
     }
 
     //public ArrayList EstadisticasPersonalFecha(fecha){}
