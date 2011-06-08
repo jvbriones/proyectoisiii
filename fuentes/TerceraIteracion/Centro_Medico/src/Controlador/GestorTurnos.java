@@ -119,26 +119,30 @@ public class GestorTurnos {
         return exito;
     }
 
-    public String modificarTurnoPersonal(String Dni,Date fechaInicio,Date fechaFin,String tipo) throws SQLException{
-        String exito=new String();
-        GestorPersonal gestorPers=new GestorPersonal();
-        boolean existe;
-
-        existe=gestorPers.existePersonal(Dni);
-
-        if(existe){
-            TurnoBD bd_turno=new TurnoBD();
-            // Esta variable es necesario tenerla para convertir tipo "Date" a String
-            SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
-
-          // Miguel. Falta Este bd_turno.modificaTurno(Dni,fechaInicio,fechaFin,tipo);
-            exito="El turno asignado al usuario "+Dni+" es "+tipo+" con esta fecha ";
-            exito+=sdf.format(fechaInicio);
-        }
-        else{
-            exito="No existe ningún usuario con dni "+Dni;
-        }
-
+    public boolean modificarTurnoPersonal(String Dni,Date fechaInicio,Date fechaFin,String tipo) throws SQLException{
+       boolean exito=false;
+        
+            PersonalMedico personal=new PersonalMedico();
+        PersonalMedicoBD personalbd= new PersonalMedicoBD();
+    
+          
+        personal=personalbd.obtener(Dni);
+        
+        if ( personal!= null){
+            
+        
+            Turno tur=new Turno();
+            tur.setDNI(Dni);
+            tur.setHoraInicio(null);
+            tur.setHoraFin(null);
+            tur.setTipo(tipo);
+        
+            personal.setTurno(tur);
+            
+           personalbd.actualizar(personal);
+        exito=true;
+    }
+        else exito=false;
         return exito;
     }
 
