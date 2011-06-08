@@ -2966,28 +2966,18 @@ public class UI_Administrador extends javax.swing.JFrame {
     private void jButtonBajaTurnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonBajaTurnoMouseClicked
       
         
-        PersonalMedico personal=new PersonalMedico();
-        PersonalMedicoBD personalbd= new PersonalMedicoBD();
-    
-          
-        personal=personalbd.obtener(jTextFieldDNIGestionarTurno.getText());
+       boolean exito;
+        try {
+            exito = gstTur.modificarTurnoPersonal(jTextFieldDNIGestionarTurno.getText(), null, null, fechainiciomostrar3.getText());
+     
+   
+           if (exito)
+           JOptionPane.showMessageDialog(null, "Turno Modficado con Exito", "Exito",JOptionPane.INFORMATION_MESSAGE);
         
-        if ( personal!= null){
-            
-        
-            Turno tur=new Turno();
-            tur.setDNI(jTextFieldDNIGestionarTurno.getText());
-            tur.setHoraInicio(null);
-            tur.setHoraFin(null);
-            tur.setTipo(fechainiciomostrar3.getText());
-        
-            personal.setTurno(tur);
-            
-           personalbd.actualizar(personal);
-           JOptionPane.showMessageDialog(null, "Turno dado de Baja con Exito", "Exito",JOptionPane.INFORMATION_MESSAGE);
+        else  JOptionPane.showMessageDialog(null, "El Turno no se ha podido modificar", "Error",JOptionPane.ERROR_MESSAGE);
+           } catch (SQLException ex) {
+            Logger.getLogger(UI_Administrador.class.getName()).log(Level.SEVERE, null, ex);
         }
-        else  JOptionPane.showMessageDialog(null, "Este personal no Existe", "Error",JOptionPane.ERROR_MESSAGE);
-        
         
          
         
